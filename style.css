@@ -1,0 +1,90 @@
+html{
+	background-color: #212121;
+	color: #f47fff;
+	font-family: "Ubuntu Mono";
+	overflow: scroll;
+	overflow-x: hidden;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	margin: 0px;
+}
+a{
+	color: #f47fff;
+	transition: color 0.3s, background-color 0.3s;
+}
+a:hover{
+	color: #212121;
+	background-color: #f47fff;
+}
+::-webkit-scrollbar {
+    width: 0px;
+}
+::selection{
+	color: #212121;
+	background-color: #f47fff;
+}
+::-moz-selection{
+	color: #212121;
+	background-color: #f47fff;
+}
+#topbar{
+	margin: 0;
+	left: 0px;
+	width: 100%;
+	min-height: 24px;
+}
+#topbar a{
+	padding-right: 10px;
+	text-decoration: none;
+}
+#topbar p{
+	float: left;
+	font-size: 18px;
+	font-weight: bold;
+	margin-top: 0px;
+	transition: background-color 0.3s;
+}
+#topbar-links{
+	float: right;
+}
+.topbar-link{
+	float: left;
+	width: 180px;
+	font-size: 18px;
+	font-weight: bold;
+	margin-top: 0px;
+	transition: background-color 0.3s;
+}
+#topbar .topbar-path{
+	color: #212121;
+	transition: background-color 0.3s;
+}
+#content{
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 700px;
+}
+#content h1{
+	padding-top: 32px;
+	padding-bottom: 32px;
+	text-align: center;
+}
+#content p{
+	margin-left: 24px;
+	margin-right: 24px;
+	font-size: 24px;
+	max-width: 640px;
+}
+a:hover + .topbar-path{
+	background-color: #f47fff;
+}
+#botbar{
+	padding-top: 32px;
+	width: 100%;
+	height: 24px;
+}
+#botbar p{
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+}
