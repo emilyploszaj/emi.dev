@@ -18,14 +18,20 @@
 	</div>
 	<div id="content">
 		<h1>Hi, I'm Emily!</h1>
-		<p>I'm a software engineer and I make <a href="/projects">stuff</a>! I like challenging myself, creativity, and pastel colors.</p>
+		<p>I'm a software engineer and I make <a href="/projects">stuff</a>! I like computers, creativity, and <span style="cursor:pointer;" onclick="pastelColors()">pastel colors</span>.</p>
 		<h1>Current Projects</h1>
 		<p><a href="https://github.com/emilyploszaj/discor.d">discor.d</a> - An implementation of the Discord websocket and REST API for D. Built to be easy to use but flexible to application.</p>
+		<p><a href="https://github.com/emilyploszaj/shenzhen-solitaire-gbc">Shenzhen Solitaire GBC</a> - An implementation of the solitaire game in Shenzhen I/O by <a href="http://www.zachtronics.com/">Zachtronics</a> written in C for the Gameboy Color.</p>
 		<p><a href="https://github.com/emilyploszaj/scrabble-sweeper">Scrabble Sweeper</a> - Imagine a simple game of Scrabble, but hidden inside is Minesweeper. Scrabble Sweeper is a twist on the age old word game with online gameplay in mind.</p>
-		<p><a href="https://github.com/emilyploszaj/midi-mapper">MIDI Mapper</a> - A simple, configurable translator from midi combinations to keyboard presses. Includes a simple, web-based midi display. Created with live, gimmicky gameplay streaming in mind.</p>
+		<p>See my <a href="./projects">projects</a> for a more complete list of the stuff I'm working on and have worked on.</p>
 	</div>
 	<div id="botbar">
-		<p id="copyright">&copy; Emily Ploszaj</p>
+		<p id="copyright">&copy; Emily Ploszaj ❤</p>
 	</div>
+<script>
+function pastelColors() {
+	document.documentElement.style.setProperty("--text-color", "hsl(" + (Math.random() * 360) + ", 100%, " + (Math.floor(Math.random() * 16) + 75) + "%)");
+}
+</script>
 </body>
 </html>

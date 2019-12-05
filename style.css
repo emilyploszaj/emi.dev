@@ -1,6 +1,9 @@
+:root{
+	--text-color: #f47fff;
+}
 html{
 	background-color: #212121;
-	color: #f47fff;
+	color: var(--text-color);
 	font-family: "Ubuntu Mono";
 	overflow: scroll;
 	overflow-x: hidden;
@@ -8,24 +11,29 @@ html{
 	scrollbar-width: none;
 	margin: 0px;
 }
+p, h1{
+	transition: color 0.3s, background-color 0.3s;
+}
 a{
-	color: #f47fff;
+	color: var(--text-color);
 	transition: color 0.3s, background-color 0.3s;
 }
 a:hover{
 	color: #212121;
-	background-color: #f47fff;
+	background-color: var(--text-color);
 }
 ::-webkit-scrollbar {
     width: 0px;
 }
 ::selection{
 	color: #212121;
-	background-color: #f47fff;
+	background-color: var(--text-color);
+	transition: color 0.3s, background-color 0.3s;
 }
 ::-moz-selection{
 	color: #212121;
-	background-color: #f47fff;
+	background-color: var(--text-color);
+	transition: color 0.3s, background-color 0.3s;
 }
 #topbar{
 	margin: 0;
@@ -76,7 +84,7 @@ a:hover{
 	max-width: 640px;
 }
 a:hover + .topbar-path{
-	background-color: #f47fff;
+	background-color: var(--text-color);
 }
 #botbar{
 	padding-top: 32px;
