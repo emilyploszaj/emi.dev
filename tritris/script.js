@@ -1,5 +1,5 @@
 // I C L J S Z
-const COLORS = ["#00CCCC", "#CC00CC", "#CCCC00", "#0000CC", "#00CC00", "#CC0000"];
+const COLORS = ["#00CCCC", "#CC00CC", "#CC8800", "#0000CC", "#00CC00", "#CC0000"];
 const START_X = [3, 4, 3, 3, 3, 3];
 const START_Y = [-2, -1, -2, -2, -2, -2];
 const SHAPES = [
@@ -150,17 +150,17 @@ document.onkeydown = function(event) {
 document.onkeyup = function(event) {
 	var key = event.keyCode;
 	var i = -1;
-	if (key == 38) {
+	if (key == keys[0]) {
 		i = 0;
-	} else if (key == 40) {
+	} else if (key == keys[1]) {
 		i = 1;
-	} else if (key == 65) {
+	} else if (key == keys[2]) {
 		i = 2;
-	} else if (key == 68) {
+	} else if (key == keys[3]) {
 		i = 3;
-	} else if (key == 83) {
+	} else if (key == keys[4]) {
 		i = 4;
-	} else if (key == 87) {
+	} else if (key == keys[5]) {
 		i = 5;
 	}
 	if (i != -1) {
