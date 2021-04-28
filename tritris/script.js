@@ -1,5 +1,5 @@
 // I C L J S Z
-const COLORS = ["#00FFFF", "#FF00FF", "#FFAA00", "#0000FF", "#00FF00", "#FF0000"];
+const COLORS = ["#00CCCC", "#CC00CC", "#CCCC00", "#0000CC", "#00CC00", "#CC0000"];
 const START_X = [3, 4, 3, 3, 3, 3];
 const START_Y = [-2, -1, -2, -2, -2, -2];
 const SHAPES = [
@@ -59,6 +59,8 @@ const KICKS = [
 var initialDelay = 200;
 var repeatDelay = 50;
 
+var keys = [38, 40, 65, 68, 83, 87];
+
 var board;
 var ctx;
 var piece = {x: 0, y: 0, color: 0, rot: 0};
@@ -111,27 +113,35 @@ function clearBoard() {
 	newPiece();
 }
 
+function bind(index, event) {
+	keys[index] = event.keyCode;
+	var box = document.getElementById("bind" + index);
+	localStorage.setItem("bind" + index, event.keyCode);
+	box.value = event.key;
+	event.stopPropagation();
+}
+
 document.onkeydown = function(event) {
 	if (event.repeat) {
 		return;
 	}
 	var key = event.keyCode;
-	if (key == 38) {
+	if (key == keys[0]) {
 		rotClockwise();
 		keyTimeouts[0] = setTimeout(rotClockwise, initialDelay);
-	} else if (key == 40) {
+	} else if (key == keys[1]) {
 		rotAntiClockwise();
 		keyTimeouts[1] = setTimeout(rotAntiClockwise, initialDelay);
-	} else if (key == 65) {
+	} else if (key == keys[2]) {
 		keyLeft();
 		keyTimeouts[2] = setTimeout(keyLeft, initialDelay);
-	} else if (key == 68) {
+	} else if (key == keys[3]) {
 		keyRight();
 		keyTimeouts[3] = setTimeout(keyRight, initialDelay);
-	} else if (key == 83) {
+	} else if (key == keys[4]) {
 		softDrop();
 		keyTimeouts[4] = setTimeout(softDrop, initialDelay);
-	} else if (key == 87) {
+	} else if (key == keys[5]) {
 		hardDrop();
 		keyTimeouts[5] = setTimeout(hardDrop, initialDelay);
 	}
@@ -312,7 +322,7 @@ function render() {
 	ctx = canvas.getContext('2d');
 	ctx.strokeStyle = "rgb(0, 0, 0)";
 	ctx.lineWidth = 2;
-	ctx.fillStyle = "#EEEEEE";
+	ctx.fillStyle = "#555566";
 	ctx.fillRect(0, 0, 1000, 1000);
 	for (i = 0; i < 5; i++) {
 		var x = piece.x + shape[i][0];
@@ -362,3 +372,10 @@ document.getElementById("repeat").value = repeatDelay;
 clearBoard();
 newPiece();
 tick();
+
+for (var i = 0; i < 6; i++) {
+	var n = "bind" + i;
+	if (localStorage.getItem(n)) {
+		keys[i] = localStorage.getItem(n);
+	}
+}

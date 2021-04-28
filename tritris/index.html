@@ -10,6 +10,35 @@
 	<br>
 	<label for="repeat">Repeat delay</label>
 	<input id="repeat" onchange="delayChange()" type="number">
+	<br>
+	<label for="bind0">Bind Rotate Clockwise</label>
+	<input id="bind0" onkeydown="bind(0, event)" type="text" readonly="readonly">
+	<br>
+	<label for="bind1">Bind Rotate Anticlockwise</label>
+	<input id="bind1" onkeydown="bind(1, event)" type="text" readonly="readonly">
+	<br>
+	<label for="bind2">Bind Left</label>
+	<input id="bind2" onkeydown="bind(2, event)" type="text" readonly="readonly">
+	<br>
+	<label for="bind3">Bind Right</label>
+	<input id="bind3" onkeydown="bind(3, event)" type="text" readonly="readonly">
+	<br>
+	<label for="bind4">Bind Soft Drop</label>
+	<input id="bind4" onkeydown="bind(4, event)" type="text" readonly="readonly">
+	<br>
+	<label for="bind5">Bind Hard Drop</label>
+	<input id="bind5" onkeydown="bind(5, event)" type="text" readonly="readonly">
 </body>
 </html>
+<style>
+* {
+	color: white;
+}
+body {
+	background-color: #333333;
+}
+input {
+	background-color: #444444;
+}
+</style>
 <script src="./script.js"></script>
