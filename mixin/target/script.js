@@ -52,11 +52,6 @@ function submitValue() {
 		ret += "<td>" + properParts[i] + "</td>";
 	}
 	ret += "</tr></table>";
-	//if (properSignature == value) {
-	//	output.innerHTML = properSignature + "\n<div class='right'>" + value + "</div>";
-	//} else {
-	//	output.innerHTML = properSignature + "\n<div class='wrong'>" + value + "</div>";
-	//}
 	output.innerHTML = ret;
 	input.value = "";
 }
@@ -80,6 +75,11 @@ function generateMethod() {
 	var allowUnmapped = document.getElementById("allow_unmapped").checked;
 	for (var v = 0; v < 1000; v++) {
 		var method = methods[Math.floor(Math.random() * methods.length)];
+
+		if (!method.includes("[")) {
+			continue;
+		}
+
 		var parts = method.split('\t');
 		if (parts[4] == parts[5] && !allowUnmapped) {
 			continue;
@@ -99,14 +99,14 @@ function generateMethod() {
 		var params = getParams(sigParts[0].substring(1));
 		var paramNames = getParamNames(clazz, params);
 	
-		var disp = "<span class='keyword'>void</span> <span class='func'>func</span>(<span class='type'>"
+		var disp = "<span class='keyword'>public</span> <span class='type'>void</span> <span class='func'>func</span>(<span class='type'>"
 			+ clazz + "</span> <span class='var'>" + paramNames[0] + "</span>";
 		for (var i = 0; i < params.length; i++) {
 			disp += ", <span class='type'>" + params[i] + "</span> <span class='var'>" + paramNames[i + 1] + "</span>";
 		}
 		disp += ") {\n\t";
 		if (sigParts[1] != "V") {
-			disp += "<span class='type'>" + getTypeName(sigParts[1], true) + "</span> <span class='var'>ret</span> = ";
+			disp += "<span class='type'>" + getTypeName(sigParts[1], true, true) + "</span> <span class='var'>ret</span> = ";
 		}
 		disp += "<span class='var'>" + paramNames[0] + "</span>.<span class='func'>" + parts[5] + "</span>(";
 		for (var i = 0; i < params.length; i++) {
@@ -131,20 +131,28 @@ function getParamNames(base, params) {
 }
 
 function getParamNameBase(c) {
+	var postfix = "";
+	if (c.includes("[")) {
+		postfix = "Arr";
+	}
+	c = c.replace(/\[|\]/g, "");
 	var def = paramDefaults.get(c);
 	if (def != undefined) {
-		return def;
+		return def + postfix;
 	}
 	var parts = c.split(".");
 	c = parts[parts.length - 1];
-	return c.substring(0, 1).toLowerCase() + c.substring(1); 
+	return c.substring(0, 1).toLowerCase() + c.substring(1) + postfix; 
 }
 
 function getParams(signature) {
 	var ret = [];
+	var array = 0;
 	signature = remapSignature(signature);
 	for (var i = 0; i < signature.length; i++) {
-		if (signature[i] == "L") {
+		if (signature[i] == "[") {
+			array++;
+		} else if (signature[i] == "L") {
 			var start = i;
 			while (signature[i] != ";") {
 				i++;
@@ -154,9 +162,11 @@ function getParams(signature) {
 			if (mapped != undefined) {
 				raw = mapped;
 			}
-			ret.push(getTypeName(raw));
+			ret.push(getTypeName(raw) + "[]".repeat(array));
+			array = 0;
 		} else {
-			ret.push(getTypeName(signature[i]));
+			ret.push(getTypeName(signature[i]) + "[]".repeat(array));
+			array = 0;
 		}
 	}
 	return ret;
@@ -183,17 +193,35 @@ function remapSignature(signature) {
 	return ret;
 }
 
-function getTypeName(raw, remap = false) {
+function getTypeName(raw, remap = false, arrays = false) {
+	var arrCount = 0;
+	if (arrays) {
+		while (raw.length > 0) {
+			if (raw[0] == '[') {
+				arrCount++;
+				raw = raw.substring(1);
+			} else {
+				break;
+			}
+		}
+	}
+	var arrEnd = "[]".repeat(arrCount);
 	if (raw == "F") {
-		return "float";
+		return "float" + arrEnd;
 	} else if (raw == "I") {
-		return "int";
+		return "int" + arrEnd;
 	} else if (raw == "Z") {
-		return "boolean";
+		return "boolean" + arrEnd;
 	} else if (raw == "D") {
-		return "double";
+		return "double" + arrEnd;
 	} else if (raw == "B") {
-		return "byte";
+		return "byte" + arrEnd;
+	} else if (raw == "C") {
+		return "char" + arrEnd;
+	} else if (raw == "S") {
+		return "short" + arrEnd;
+	} else if (raw == "J") {
+		return "long" + arrEnd;
 	} else if (raw.startsWith("L")) {
 		if (remap) {
 			var mapped = classes.get(raw.substring(1, raw.length - 1));
@@ -206,7 +234,7 @@ function getTypeName(raw, remap = false) {
 		if (parts.length == 0) {
 			name = name.substring(1);
 		}
-		return name.substring(0, name.length - 1).replace("$", ".");
+		return name.substring(0, name.length - 1).replace("$", ".") + arrEnd;
 	}
-	return "?";
+	return "?" + arrEnd;
 }
