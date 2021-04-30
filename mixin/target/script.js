@@ -27,6 +27,17 @@ fetch("./yarn.tiny")
 		generateMethod();
 	});
 
+function inputKey(event) {
+	console.log(event);
+	if (event.keyCode == 13) {
+		if (event.shiftKey) {
+			generateMethod();
+		} else {
+			submitValue();
+		}
+	}
+}
+
 function submitValue() {
 	var input = document.getElementById("response");
 	var output = document.getElementById("corrections");
