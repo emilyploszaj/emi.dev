@@ -1,0 +1,58 @@
+body {
+	padding-left: 20px;
+	background-color: #1e1e1e;
+	color: white;
+	font-family: "Ubuntu Mono", "Lucida Console", monospace;
+}
+
+#method {
+	min-height: 60px;
+}
+
+#corrections {
+	min-height: 40px;
+}
+
+#response {
+	width: 800px;
+}
+
+input {
+	margin-bottom: 20px;
+	background-color: #2b2b2b;
+	color: white;
+	border: none;
+	padding: 4px;
+	font-size: 16px;
+}
+
+code, input, pre {
+	font-family: "Ubuntu Mono", "Lucida Console";
+}
+
+.keyword {
+	color: #569cd6;
+}
+
+.var {
+	color: #9cdcfe;
+}
+
+.type {
+	color: #4ec9b0;
+}
+
+.func {
+	color: #dcdcaa;
+}
+
+.string, #response {
+	color: #ce9178;
+}
+
+.wrong {
+	background-color: #681616;
+}
+.right {
+	background-color: #174217;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Yarn Targets</title>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+		<p>Redirect the method call</p>
+		<pre><code lang="java" id="method"></code></pre>
+		<pre id="corrections">
+
+		</pre>
+		<div>
+			@<span class='type'>Inject</span>(<span class='func'>at</span>
+			= @<span class='type'>At</span>(<span class='func'>value</span> = <span class='string'>"INVOKE"</span>,
+			<span class='func'>target</span>
+			= <span class='string'>"<input id="response" type="text">"</span>),
+			<span class='func'>method</span>
+			= <span class='string'>"func"</span>)</div>
+		<input id="submit_button" type="button" onclick="submitValue()" value="Submit">
+		<input id="next_button" type="button" onclick="generateMethod()" value="Next">
+		<br>
+		<label for="package">Package prefix: </label><input id="package" type="text"><br>
+		<label for="allow_unmapped">Allow unmapped: </label><input id="allow_unmapped" type="checkbox">
+</body>
+</html>
+<script src="./script.js"></script>
