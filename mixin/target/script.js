@@ -75,11 +75,6 @@ function generateMethod() {
 	var allowUnmapped = document.getElementById("allow_unmapped").checked;
 	for (var v = 0; v < 1000; v++) {
 		var method = methods[Math.floor(Math.random() * methods.length)];
-
-		if (!method.includes("[")) {
-			continue;
-		}
-
 		var parts = method.split('\t');
 		if (parts[4] == parts[5] && !allowUnmapped) {
 			continue;
