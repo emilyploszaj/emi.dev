@@ -8,7 +8,6 @@ html{
 	overflow: scroll;
 	overflow-x: hidden;
 	-ms-overflow-style: none;
-	scrollbar-width: none;
 	margin: 0px;
 }
 p, h1, h2{
@@ -21,9 +20,6 @@ a{
 a:hover{
 	color: #212121;
 	background-color: var(--text-color);
-}
-::-webkit-scrollbar {
-    width: 0px;
 }
 ::selection{
 	color: #212121;
