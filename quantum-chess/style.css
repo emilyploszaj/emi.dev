@@ -1,0 +1,325 @@
+:root {
+	--white: white;
+	--light: #f0d9b5;
+	--dark: #508d88;
+	--bg: #191717;
+	--bg-dark: #111010;
+	--target: rgba(89, 236, 155, 0.7);
+	--border: var(--bg-dark);
+	font-family: 'Courier New', Courier, monospace;
+	font-weight: bolder;
+	font-size: 16px;
+}
+
+body {
+	display: flex;
+	flex-wrap: wrap;
+	background-color: var(--bg);
+	justify-content: center;
+	margin-top: 30px;
+}
+
+h1 {
+	text-align: center;
+}
+
+p {
+	color: var(--white);
+}
+
+button {
+	margin: 5px;
+	margin-bottom: 40px;
+	width: 150px;
+	height: 30px;
+	font-size: larger;
+}
+
+input {
+	width: 200px;
+	height: 30px;
+	font-size: larger;
+}
+
+#overlay, #help-menu {
+	position: fixed;
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	top: 0px;
+	padding: 0px;
+	overflow-y: scroll;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+#help-menu {
+	display: none;
+	cursor: pointer;
+	line-height: 175%;
+	text-shadow: 4px 4px 4px black;
+}
+
+#help-info {
+	display: block;
+	max-width: 640px;
+	margin: auto;
+	margin-top: 100px;
+	margin-bottom: 100px;
+	color: var(--white);
+	overflow-y: scroll;
+}
+
+#options {
+	padding-top: 100px;
+	max-width: 400px;
+	margin: auto;
+}
+
+#sidebar {
+	min-height: 512px;
+	max-height: 512px;
+	min-width: 384px;
+	display: block;
+	overflow-y: scroll;
+	border-style: solid;
+	border-width: 4px;
+	border-color: var(--border);
+	margin-top: 40px;
+}
+
+#help {
+	position: relative;
+	top: 0px;
+	right: 0px;
+	float: right;
+	width: 32px;
+	height: 32px;
+	background-color: var(--bg-dark);
+	border-radius: 16px;
+	text-align: center;
+	font-size: 28px;
+	cursor: pointer;
+}
+
+#help p {
+	margin: 0px;
+	margin-top: 2px;
+	user-select: none;
+}
+
+#outer-history {
+	border-spacing: 0px;
+}
+
+#history {
+	color: var(--white);
+}
+
+td {
+	height: 30px;
+}
+
+#history td:nth-child(3n+1) {
+	width: 40px;
+	text-align: right;
+}
+
+#history td:nth-child(3n+2), #history td:nth-child(3n+3) {
+	width: 170px;
+}
+
+tr:nth-child(odd) {
+	background-color: var(--bg-dark);
+}
+
+tr:nth-child(even) {
+	background-color: var(--bg);
+}
+
+#dragged {
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	pointer-events: none;
+	z-index: 20;
+	display: none;
+}
+
+#board-area {
+	user-select: none;
+	width: 512px;
+	height: 512px;
+	margin-left: 200px;
+	margin-right: 200px;
+	margin-top: 40px;
+}
+
+#board {
+	display: flexbox;
+}
+
+#black-promotion, #white-promotion {
+	position: absolute;
+	width: 64px;
+	height: 256px;
+	z-index: 5;
+}
+
+#white-promotion {
+	padding-top: 0px;
+}
+
+#black-promotion {
+	padding-top: 256px;
+}
+
+.promotion {
+	width: 64px;
+	height: 64px;
+	background-color: rgba(0, 0, 0, 0.8);
+	border-radius: 24px;
+}
+
+.row {
+	display: flex;
+}
+
+.square {
+	width: 64px;
+	height: 64px;
+}
+
+.row:nth-child(odd) .square:nth-child(odd), .row:nth-child(even) .square:nth-child(even) {
+	background-color: var(--light);
+}
+
+.row:nth-child(odd) .square:nth-child(even), .row:nth-child(even) .square:nth-child(odd)  {
+	background-color: var(--dark);
+}
+
+.previous {
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	background-color: rgba(170, 222, 101, 0.8);
+}
+
+.target ~ .previous {
+	background-color: transparent;
+}
+
+.target {
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	z-index: 1;
+}
+
+.square:hover .target {
+	width: 64px !important;
+	height: 64px !important;
+	border-radius: 0px !important;
+	margin: 0px !important;
+}
+
+.destination {
+	background-color: var(--target);
+	border-radius: 12px;
+	width: 24px;
+	height: 24px;
+	margin: 20px;
+}
+
+.targeted {
+	background: radial-gradient(transparent 0%, transparent 75%, var(--target) 76%);
+}
+
+.square:hover .targeted {
+	background: var(--target) !important;
+}
+
+.queued {
+	background: radial-gradient(transparent 0%, transparent 75%, rgba(255, 13, 223, 0.8) 76%);
+}
+
+.square:hover .queued {
+	background: rgba(255, 13, 223, 0.8) !important;
+}
+
+.confirm {
+	background-color: rgba(96, 28, 224, 0.8);
+	border-radius: 12px;
+}
+
+.rank, .file {
+	position: relative;
+	color: var(--dark);
+	margin-right: 1px;
+	height: 0px;
+	z-index: 1;
+	pointer-events: none;
+	user-select: none;
+}
+
+.rank {
+	text-align: right;
+}
+
+.file {
+	position: absolute;
+	margin-top: 46px;
+	margin-left: 1px;
+}
+
+#h8 .rank, #h6 .rank, #h4 .rank, #h2 .rank, #a1 .file, #c1 .file, #e1 .file, #g1 .file {
+	color: var(--light);
+}
+
+.hover-faded .piece {
+	opacity: 50%;
+}
+
+.piece {
+	position: relative;
+	background-image: url(assets.png);
+	background-size: 1024px;
+	image-rendering: pixelated;
+	width: 64px;
+	height: 64px;
+	z-index: 2;
+}
+
+.black {
+	background-position-y: 0px;
+}
+
+.white {
+	background-position-y: -64px;
+}
+
+.pawn {
+	background-position-x: 0px;
+}
+
+.rook {
+	background-position-x: -64px;
+}
+
+.knight {
+	background-position-x: -128px;
+}
+
+.bishop {
+	background-position-x: -192px;
+}
+
+.queen {
+	background-position-x: -256px;
+}
+
+.king {
+	background-position-x: -320px;
+}

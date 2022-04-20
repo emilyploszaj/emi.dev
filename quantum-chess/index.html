@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div id="overlay">
+			<div id="options">
+				<p id="loading">Loading...</p>
+				<div id="connection" style="display:none;">
+					<button id="create">Create</button>
+					<br>
+					<button id="join">Join</button>
+					<input type="text" id="game-id"></input>
+					<br>
+					<button id="spectate">Spectate</button>
+					<input type="text" id="spectate-id"></input>
+				</div>
+				<button id="play-local">Play Local</button>
+			</div>
+		</div>
+		<div id="help-menu">
+			<div id="help-info">
+				<h1>Quantum Chess</h1>
+				<p>Welcome to Quantum Chess! The rules are simple, I promise.</p>
+				<p>First off, all the pieces move like regular chess. Rooks move down a rank or file, bishops on the diagonals, horsies move in Ls, you get the idea.</p>
+				<p>However, there is an additional rule. When moving a piece, you can choose to either move it to a position it can travel to, <b>or</b> you may elect to capture an arbitrary amount of available captures (or castles). This can be performed by clicking targets instead of dragging a piece to them.</p>
+				<p>That is, instead of performing Rc4 <b>or</b> Rh4, you can perform Rc4&h4. However, doing so will put your piece into quantum uncertainty. All independent parts can operate on their own, but once a piece is "observed", its wave function will collapse.</p>
+				<p>This means if a piece is captured, its alternate positions will be proven to have just been captured, if a king is checked, unchecked kings will be proven to not exist, and if a pawn promotes, the matching pawns on the board will be proven to not exist.</p>
+				<p>Pieces can split multiple times, in one turn or over several. Checkmate occurs when a player is unable to remove one of their kings from danger on their turn.</p>
+			</div>
+		</div>
+		<div id="dragged"></div>
+		<div id="board-area">
+			<div id="black-promotion" style="display:none;">
+				<div class="promotion piece black bishop" id="to-black-bishop"></div>
+				<div class="promotion piece black rook" id="to-black-rook"></div>
+				<div class="promotion piece black knight" id="to-black-knight"></div>
+				<div class="promotion piece black queen" id="to-black-queen"></div>
+			</div>
+			<div id="white-promotion" style="display:none;">
+				<div class="promotion piece white queen" id="to-white-queen"></div>
+				<div class="promotion piece white knight" id="to-white-knight"></div>
+				<div class="promotion piece white rook" id="to-white-rook"></div>
+				<div class="promotion piece white bishop" id="to-white-bishop"></div>
+			</div>
+			<div id="board">
+				<div class="row" id="8">
+					<div class="square" id="a8"><div class="piece-storage"></div></div>
+					<div class="square" id="b8"><div class="piece-storage"></div></div>
+					<div class="square" id="c8"><div class="piece-storage"></div></div>
+					<div class="square" id="d8"><div class="piece-storage"></div></div>
+					<div class="square" id="e8"><div class="piece-storage"></div></div>
+					<div class="square" id="f8"><div class="piece-storage"></div></div>
+					<div class="square" id="g8"><div class="piece-storage"></div></div>
+					<div class="square" id="h8"><div class="rank">8</div><div class="piece-storage"></div></div>
+				</div>
+				<div class="row" id="7">
+					<div class="square" id="a7"><div class="piece-storage"></div></div>
+					<div class="square" id="b7"><div class="piece-storage"></div></div>
+					<div class="square" id="c7"><div class="piece-storage"></div></div>
+					<div class="square" id="d7"><div class="piece-storage"></div></div>
+					<div class="square" id="e7"><div class="piece-storage"></div></div>
+					<div class="square" id="f7"><div class="piece-storage"></div></div>
+					<div class="square" id="g7"><div class="piece-storage"></div></div>
+					<div class="square" id="h7"><div class="rank">7</div><div class="piece-storage"></div></div>
+				</div>
+				<div class="row" id="6">
+					<div class="square" id="a6"><div class="piece-storage"></div></div>
+					<div class="square" id="b6"><div class="piece-storage"></div></div>
+					<div class="square" id="c6"><div class="piece-storage"></div></div>
+					<div class="square" id="d6"><div class="piece-storage"></div></div>
+					<div class="square" id="e6"><div class="piece-storage"></div></div>
+					<div class="square" id="f6"><div class="piece-storage"></div></div>
+					<div class="square" id="g6"><div class="piece-storage"></div></div>
+					<div class="square" id="h6"><div class="rank">6</div><div class="piece-storage"></div></div>
+				</div>
+				<div class="row" id="5">
+					<div class="square" id="a5"><div class="piece-storage"></div></div>
+					<div class="square" id="b5"><div class="piece-storage"></div></div>
+					<div class="square" id="c5"><div class="piece-storage"></div></div>
+					<div class="square" id="d5"><div class="piece-storage"></div></div>
+					<div class="square" id="e5"><div class="piece-storage"></div></div>
+					<div class="square" id="f5"><div class="piece-storage"></div></div>
+					<div class="square" id="g5"><div class="piece-storage"></div></div>
+					<div class="square" id="h5"><div class="rank">5</div><div class="piece-storage"></div></div>
+				</div>
+				<div class="row" id="4">
+					<div class="square" id="a4"><div class="piece-storage"></div></div>
+					<div class="square" id="b4"><div class="piece-storage"></div></div>
+					<div class="square" id="c4"><div class="piece-storage"></div></div>
+					<div class="square" id="d4"><div class="piece-storage"></div></div>
+					<div class="square" id="e4"><div class="piece-storage"></div></div>
+					<div class="square" id="f4"><div class="piece-storage"></div></div>
+					<div class="square" id="g4"><div class="piece-storage"></div></div>
+					<div class="square" id="h4"><div class="rank">4</div><div class="piece-storage"></div></div>
+				</div>
+				<div class="row" id="3">
+					<div class="square" id="a3"><div class="piece-storage"></div></div>
+					<div class="square" id="b3"><div class="piece-storage"></div></div>
+					<div class="square" id="c3"><div class="piece-storage"></div></div>
+					<div class="square" id="d3"><div class="piece-storage"></div></div>
+					<div class="square" id="e3"><div class="piece-storage"></div></div>
+					<div class="square" id="f3"><div class="piece-storage"></div></div>
+					<div class="square" id="g3"><div class="piece-storage"></div></div>
+					<div class="square" id="h3"><div class="rank">3</div><div class="piece-storage"></div></div>
+				</div>
+				<div class="row" id="2">
+					<div class="square" id="a2"><div class="piece-storage"></div></div>
+					<div class="square" id="b2"><div class="piece-storage"></div></div>
+					<div class="square" id="c2"><div class="piece-storage"></div></div>
+					<div class="square" id="d2"><div class="piece-storage"></div></div>
+					<div class="square" id="e2"><div class="piece-storage"></div></div>
+					<div class="square" id="f2"><div class="piece-storage"></div></div>
+					<div class="square" id="g2"><div class="piece-storage"></div></div>
+					<div class="square" id="h2"><div class="rank">2</div><div class="piece-storage"></div></div>
+				</div>
+				<div class="row" id="1">
+					<div class="square" id="a1"><div class="file">a</div><div class="piece-storage"></div></div>
+					<div class="square" id="b1"><div class="file">b</div><div class="piece-storage"></div></div>
+					<div class="square" id="c1"><div class="file">c</div><div class="piece-storage"></div></div>
+					<div class="square" id="d1"><div class="file">d</div><div class="piece-storage"></div></div>
+					<div class="square" id="e1"><div class="file">e</div><div class="piece-storage"></div></div>
+					<div class="square" id="f1"><div class="file">f</div><div class="piece-storage"></div></div>
+					<div class="square" id="g1"><div class="file">g</div><div class="piece-storage"></div></div>
+					<div class="square" id="h1"><div class="file">h</div><div class="rank">1</div><div class="piece-storage"></div></div>
+				</div>
+			</div>
+		</div>
+		<div id="sidebar">
+			<div id="help"><p>?</p></div>
+			<p id="display-id">Game Id:</p>
+			<p id="display-color">Piece Color:</p>
+			<table id="outer-history">
+				<tbody id="history">
+					<tr>
+						<td></td>
+						<td>White</td>
+						<td>Black</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</body>
+	<script src="script.js"></script>
+</html>
