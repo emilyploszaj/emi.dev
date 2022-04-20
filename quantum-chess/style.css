@@ -67,7 +67,6 @@ input {
 	margin-top: 100px;
 	margin-bottom: 100px;
 	color: var(--white);
-	overflow-y: scroll;
 }
 
 #options {
