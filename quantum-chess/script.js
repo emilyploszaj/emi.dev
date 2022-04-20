@@ -877,7 +877,7 @@ document.getElementById("play-local").onclick = function(event) {
 	socket.close();
 }
 
-let socket = new WebSocket("ws://scrabblesweeper.net:9928");
+let socket = new WebSocket("wss://scrabblesweeper.net:9928");
 
 socket.onopen = function(e) {
 	socket.send(JSON.stringify({t: "ping"}));
