@@ -902,7 +902,7 @@ socket.onmessage = function(e) {
 	} else if (j.t == "player") {
 		socket.send(JSON.stringify({t: "start"}));
 	} else if (j.t == "start") {
-		this.started = true;
+		started = true;
 	} else if (j.t == "play") {
 		if (turn != myColor) {
 			parseMove(j);
