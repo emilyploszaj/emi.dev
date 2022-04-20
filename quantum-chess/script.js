@@ -899,6 +899,8 @@ socket.onmessage = function(e) {
 		document.getElementById("display-id").innerHTML = "Game Id: " + j.id;
 		document.getElementById("display-color").innerHTML = "Piece Color: Spectating";
 		startGame(-2);
+	} else if (j.t == "player") {
+		socket.send(JSON.stringify({t: "start"}));
 	} else if (j.t == "start") {
 		this.started = true;
 	} else if (j.t == "play") {
