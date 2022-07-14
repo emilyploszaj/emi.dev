@@ -33,6 +33,16 @@
             "type": "dark"
         },
         {
+            "accuracy": 100,
+            "extra": [
+                "Enemy trainers only"
+            ],
+            "name": "hp-bug",
+            "power": 70,
+            "pp": 15,
+            "type": "bug"
+        },
+        {
             "accuracy": 90,
             "extra": [],
             "name": "rain-dance",
@@ -124,11 +134,13 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
-            "name": "belly-drum",
-            "power": 0,
-            "pp": 1,
-            "type": "normal"
+            "extra": [
+                "Enemy trainers only"
+            ],
+            "name": "hp-rock",
+            "power": 70,
+            "pp": 15,
+            "type": "rock"
         },
         {
             "accuracy": 100,
@@ -157,9 +169,9 @@
         {
             "accuracy": 100,
             "extra": [],
-            "name": "extremespeed",
-            "power": 100,
-            "pp": 8,
+            "name": "belly-drum",
+            "power": 0,
+            "pp": 1,
             "type": "normal"
         },
         {
@@ -169,6 +181,14 @@
             "power": 0,
             "pp": 5,
             "type": "fire"
+        },
+        {
+            "accuracy": 100,
+            "extra": [],
+            "name": "extremespeed",
+            "power": 100,
+            "pp": 8,
+            "type": "normal"
         },
         {
             "accuracy": 100,
@@ -367,18 +387,18 @@
         {
             "accuracy": 100,
             "extra": [],
-            "name": "teleport",
-            "power": 0,
-            "pp": 1,
-            "type": "psychic"
-        },
-        {
-            "accuracy": 100,
-            "extra": [],
             "name": "acid",
             "power": 40,
             "pp": 30,
             "type": "poison"
+        },
+        {
+            "accuracy": 100,
+            "extra": [],
+            "name": "teleport",
+            "power": 0,
+            "pp": 1,
+            "type": "psychic"
         },
         {
             "accuracy": 100,
@@ -829,18 +849,20 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
-            "name": "comet-punch",
-            "power": 18,
+            "extra": [
+                "Enemy trainers only"
+            ],
+            "name": "hp-ghost",
+            "power": 70,
             "pp": 15,
-            "type": "normal"
+            "type": "ghost"
         },
         {
             "accuracy": 100,
             "extra": [],
-            "name": "stomp",
-            "power": 65,
-            "pp": 20,
+            "name": "comet-punch",
+            "power": 18,
+            "pp": 15,
             "type": "normal"
         },
         {
@@ -854,10 +876,10 @@
         {
             "accuracy": 100,
             "extra": [],
-            "name": "drill-peck",
-            "power": 80,
+            "name": "stomp",
+            "power": 65,
             "pp": 20,
-            "type": "flying"
+            "type": "normal"
         },
         {
             "accuracy": 100,
@@ -866,6 +888,14 @@
             "power": 10,
             "pp": 10,
             "type": "fighting"
+        },
+        {
+            "accuracy": 100,
+            "extra": [],
+            "name": "drill-peck",
+            "power": 80,
+            "pp": 20,
+            "type": "flying"
         },
         {
             "accuracy": 100,
@@ -882,6 +912,16 @@
             "power": 0,
             "pp": 2,
             "type": "poison"
+        },
+        {
+            "accuracy": 100,
+            "extra": [
+                "Enemy trainers only"
+            ],
+            "name": "hp-fighting",
+            "power": 70,
+            "pp": 15,
+            "type": "fighting"
         },
         {
             "accuracy": 100,
@@ -1181,11 +1221,31 @@
         },
         {
             "accuracy": 100,
+            "extra": [
+                "Enemy trainers only"
+            ],
+            "name": "hp-ground",
+            "power": 70,
+            "pp": 15,
+            "type": "ground"
+        },
+        {
+            "accuracy": 100,
             "extra": [],
             "name": "bonemerang",
             "power": 50,
             "pp": 10,
             "type": "ground"
+        },
+        {
+            "accuracy": 100,
+            "extra": [
+                "Enemy trainers only"
+            ],
+            "name": "hp-ice",
+            "power": 70,
+            "pp": 15,
+            "type": "ice"
         },
         {
             "accuracy": 100,
@@ -1352,12 +1412,50 @@
             "type": "normal"
         },
         {
+            "accuracy": 100,
+            "extra": [
+                "Enemy trainers only"
+            ],
+            "name": "hp-poison",
+            "power": 70,
+            "pp": 15,
+            "type": "poison"
+        },
+        {
             "accuracy": 75,
             "extra": [],
             "name": "slam",
             "power": 80,
             "pp": 20,
             "type": "normal"
+        },
+        {
+            "accuracy": 100,
+            "extra": [
+                "Enemy trainers only"
+            ],
+            "name": "hp-flying",
+            "power": 70,
+            "pp": 15,
+            "type": "flying"
+        },
+        {
+            "accuracy": 100,
+            "extra": [
+                "Enemy trainers only"
+            ],
+            "name": "hp-grass",
+            "power": 70,
+            "pp": 15,
+            "type": "grass"
+        },
+        {
+            "accuracy": 100,
+            "extra": [],
+            "name": "fire-spin",
+            "power": 15,
+            "pp": 15,
+            "type": "fire"
         },
         {
             "accuracy": 55,
@@ -1374,14 +1472,6 @@
             "power": 20,
             "pp": 30,
             "type": "water"
-        },
-        {
-            "accuracy": 100,
-            "extra": [],
-            "name": "fire-spin",
-            "power": 15,
-            "pp": 15,
-            "type": "fire"
         },
         {
             "accuracy": 50,
@@ -1458,14 +1548,6 @@
         {
             "accuracy": 100,
             "extra": [],
-            "name": "dig",
-            "power": 60,
-            "pp": 10,
-            "type": "ground"
-        },
-        {
-            "accuracy": 100,
-            "extra": [],
             "name": "counter",
             "power": 1,
             "pp": 20,
@@ -1478,6 +1560,14 @@
             "power": 0,
             "pp": 3,
             "type": "grass"
+        },
+        {
+            "accuracy": 100,
+            "extra": [],
+            "name": "dig",
+            "power": 60,
+            "pp": 10,
+            "type": "ground"
         },
         {
             "accuracy": 100,
@@ -1542,6 +1632,16 @@
             "power": 0,
             "pp": 20,
             "type": "normal"
+        },
+        {
+            "accuracy": 100,
+            "extra": [
+                "Enemy trainers only"
+            ],
+            "name": "hp-dragon",
+            "power": 70,
+            "pp": 15,
+            "type": "dragon"
         },
         {
             "accuracy": 100,
@@ -1675,11 +1775,13 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
-            "name": "growl",
-            "power": 0,
-            "pp": 2,
-            "type": "normal"
+            "extra": [
+                "Enemy trainers only"
+            ],
+            "name": "hp-psychic",
+            "power": 70,
+            "pp": 15,
+            "type": "psychic"
         },
         {
             "accuracy": 100,
@@ -1700,6 +1802,14 @@
         {
             "accuracy": 100,
             "extra": [],
+            "name": "growl",
+            "power": 0,
+            "pp": 2,
+            "type": "normal"
+        },
+        {
+            "accuracy": 100,
+            "extra": [],
             "name": "jump-kick",
             "power": 70,
             "pp": 25,
@@ -1712,6 +1822,16 @@
             "power": 0,
             "pp": 2,
             "type": "normal"
+        },
+        {
+            "accuracy": 100,
+            "extra": [
+                "Enemy trainers only"
+            ],
+            "name": "hp-fire",
+            "power": 70,
+            "pp": 15,
+            "type": "fire"
         },
         {
             "accuracy": 100,
@@ -1749,11 +1869,13 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
-            "name": "destiny-bond",
-            "power": 0,
-            "pp": 5,
-            "type": "ghost"
+            "extra": [
+                "Enemy trainers only"
+            ],
+            "name": "hp-electric",
+            "power": 70,
+            "pp": 15,
+            "type": "electric"
         },
         {
             "accuracy": 100,
@@ -1775,6 +1897,16 @@
         },
         {
             "accuracy": 100,
+            "extra": [
+                "Enemy trainers only"
+            ],
+            "name": "hp-dark",
+            "power": 70,
+            "pp": 15,
+            "type": "dark"
+        },
+        {
+            "accuracy": 100,
             "extra": [],
             "name": "future-sight",
             "power": 80,
@@ -1784,10 +1916,28 @@
         {
             "accuracy": 100,
             "extra": [],
+            "name": "destiny-bond",
+            "power": 0,
+            "pp": 5,
+            "type": "ghost"
+        },
+        {
+            "accuracy": 100,
+            "extra": [],
             "name": "fury-cutter",
             "power": 20,
             "pp": 20,
             "type": "bug"
+        },
+        {
+            "accuracy": 100,
+            "extra": [
+                "Enemy trainers only"
+            ],
+            "name": "hp-steel",
+            "power": 70,
+            "pp": 15,
+            "type": "steel"
         },
         {
             "accuracy": 100,
@@ -1937,11 +2087,13 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
-            "name": "hidden-power",
-            "power": 1,
+            "extra": [
+                "Enemy trainers only"
+            ],
+            "name": "hp-water",
+            "power": 70,
             "pp": 15,
-            "type": "normal"
+            "type": "water"
         },
         {
             "accuracy": 100,
@@ -1967,6 +2119,14 @@
             "name": "conversion2",
             "power": 0,
             "pp": 3,
+            "type": "normal"
+        },
+        {
+            "accuracy": 100,
+            "extra": [],
+            "name": "hidden-power",
+            "power": 1,
+            "pp": 15,
             "type": "normal"
         },
         {
@@ -15297,7 +15457,7 @@
                     "moves": [
                         "shadow-ball",
                         "body-slam",
-                        "hidden-power-(flying)"
+                        "hp-flying"
                     ],
                     "name": "aipom"
                 },
@@ -15996,7 +16156,7 @@
                     "level": 33,
                     "moves": [
                         "metal-claw",
-                        "hidden-power-(bug)",
+                        "hp-bug",
                         "reversal"
                     ],
                     "name": "scizor"
@@ -16064,7 +16224,7 @@
                     "level": 33,
                     "moves": [
                         "metal-claw",
-                        "hidden-power-(bug)",
+                        "hp-bug",
                         "reversal"
                     ],
                     "name": "scizor"
@@ -16130,7 +16290,7 @@
                     "level": 33,
                     "moves": [
                         "metal-claw",
-                        "hidden-power-(bug)",
+                        "hp-bug",
                         "reversal"
                     ],
                     "name": "scizor"
@@ -16178,7 +16338,7 @@
                     "level": 35,
                     "moves": [
                         "thunderbolt",
-                        "hidden-power-(ice)",
+                        "hp-ice",
                         "bite"
                     ],
                     "name": "jolteon"
@@ -16209,7 +16369,7 @@
                     "level": 35,
                     "moves": [
                         "psychic-m",
-                        "hidden-power-(fire)",
+                        "hp-fire",
                         "sing",
                         "shadow-ball"
                     ],
@@ -16258,7 +16418,7 @@
                     "level": 38,
                     "moves": [
                         "psychic-m",
-                        "hidden-power-(fighting)",
+                        "hp-fighting",
                         "shadow-ball"
                     ],
                     "name": "unown"
@@ -16616,7 +16776,7 @@
                     "moves": [
                         "petal-dance",
                         "sludge-bomb",
-                        "hidden-power-(fire)",
+                        "hp-fire",
                         "synthesis"
                     ],
                     "name": "vileplume"
@@ -16676,7 +16836,7 @@
                     "moves": [
                         "wing-attack",
                         "steel-wing",
-                        "hidden-power-(fighting)",
+                        "hp-fighting",
                         "shadow-ball"
                     ],
                     "name": "murkrow"
@@ -17402,7 +17562,7 @@
                     "level": 42,
                     "moves": [
                         "flamethrower",
-                        "hidden-power-(grass)",
+                        "hp-grass",
                         "rest",
                         "body-slam"
                     ],
@@ -17564,7 +17724,7 @@
                         "sky-attack",
                         "pursuit",
                         "steel-wing",
-                        "hidden-power-(ground)"
+                        "hp-ground"
                     ],
                     "name": "murkrow"
                 },
@@ -17737,7 +17897,7 @@
                     "moves": [
                         "thunderbolt",
                         "explosion",
-                        "hidden-power-(grass)"
+                        "hp-grass"
                     ],
                     "name": "electrode"
                 },
@@ -17781,7 +17941,7 @@
                     "item": "Miracleberry",
                     "level": 45,
                     "moves": [
-                        "hidden-power-(steel)",
+                        "hp-steel",
                         "explosion",
                         "spikes"
                     ],
@@ -17831,7 +17991,7 @@
                         "earthquake",
                         "sludge-bomb",
                         "ancientpower",
-                        "hidden-power-(fighting)"
+                        "hp-fighting"
                     ],
                     "name": "dugtrio"
                 }
@@ -17897,7 +18057,7 @@
                     "level": 48,
                     "moves": [
                         "sky-attack",
-                        "hidden-power-(grass)",
+                        "hp-grass",
                         "double-edge",
                         "quick-attack"
                     ],
@@ -18086,7 +18246,7 @@
                     "item": "Leftovers",
                     "level": 99,
                     "moves": [
-                        "hidden-power-(bug)"
+                        "hp-bug"
                     ],
                     "name": "caterpie"
                 }
@@ -18139,7 +18299,7 @@
                     "level": 49,
                     "moves": [
                         "double-edge",
-                        "hidden-power-(flying)",
+                        "hp-flying",
                         "waterfall"
                     ],
                     "name": "gyarados"
@@ -18215,7 +18375,7 @@
                     "level": 49,
                     "moves": [
                         "double-edge",
-                        "hidden-power-(water)",
+                        "hp-water",
                         "shadow-ball",
                         "iron-tail"
                     ],
@@ -18285,7 +18445,7 @@
                     "item": "Sharp Beak",
                     "level": 48,
                     "moves": [
-                        "hidden-power-(flying)",
+                        "hp-flying",
                         "double-edge",
                         "waterfall",
                         "thunderbolt"
@@ -18299,7 +18459,7 @@
                         "ancientpower",
                         "quick-attack",
                         "wing-attack",
-                        "hidden-power-(bug)"
+                        "hp-bug"
                     ],
                     "name": "yanma"
                 },
@@ -18326,7 +18486,7 @@
                     "moves": [
                         "selfdestruct",
                         "thunderbolt",
-                        "hidden-power-(ice)"
+                        "hp-ice"
                     ],
                     "name": "electrode"
                 },
@@ -18361,7 +18521,7 @@
                     "level": 45,
                     "moves": [
                         "selfdestruct",
-                        "hidden-power-(steel)",
+                        "hp-steel",
                         "earthquake",
                         "body-slam"
                     ],
@@ -18387,7 +18547,7 @@
                     "level": 49,
                     "moves": [
                         "thunderbolt",
-                        "hidden-power-(water)",
+                        "hp-water",
                         "thunder-wave",
                         "explosion"
                     ],
@@ -18465,7 +18625,7 @@
                         "crunch",
                         "toxic",
                         "moonlight",
-                        "hidden-power-(fire)"
+                        "hp-fire"
                     ],
                     "name": "umbreon"
                 },
@@ -18474,7 +18634,7 @@
                     "level": 50,
                     "moves": [
                         "psychic-m",
-                        "hidden-power-(fire)",
+                        "hp-fire",
                         "growth"
                     ],
                     "name": "espeon"
@@ -18530,7 +18690,7 @@
                     "moves": [
                         "giga-drain",
                         "psychic-m",
-                        "hidden-power-(fire)",
+                        "hp-fire",
                         "drill-peck"
                     ],
                     "name": "xatu"
@@ -18542,7 +18702,7 @@
                         "earthquake",
                         "sludge-bomb",
                         "megahorn",
-                        "hidden-power-(fighting)"
+                        "hp-fighting"
                     ],
                     "name": "nidoking"
                 },
@@ -18566,7 +18726,7 @@
                     "moves": [
                         "giga-drain",
                         "sludge-bomb",
-                        "hidden-power-(fire)",
+                        "hp-fire",
                         "sleep-powder"
                     ],
                     "name": "vileplume"
@@ -18690,7 +18850,7 @@
                     "moves": [
                         "flamethrower",
                         "crunch",
-                        "hidden-power-(electric)",
+                        "hp-electric",
                         "iron-tail"
                     ],
                     "name": "houndoom"
@@ -18761,7 +18921,7 @@
                         "sing",
                         "psychic-m",
                         "psywave",
-                        "hidden-power-(fire)"
+                        "hp-fire"
                     ],
                     "name": "espeon"
                 },
@@ -18940,7 +19100,7 @@
                         "fire-blast",
                         "extremespeed",
                         "crunch",
-                        "hidden-power-(grass)"
+                        "hp-grass"
                     ],
                     "name": "arcanine"
                 },
@@ -19007,7 +19167,7 @@
                     "item": "Leftovers",
                     "level": 55,
                     "moves": [
-                        "hidden-power-(electric)",
+                        "hp-electric",
                         "ice-beam",
                         "waterfall",
                         "icy-wind"
@@ -19020,7 +19180,7 @@
                     "moves": [
                         "sky-attack",
                         "ice-beam",
-                        "hidden-power-(grass)",
+                        "hp-grass",
                         "psychic-m"
                     ],
                     "name": "articuno"
@@ -19060,7 +19220,7 @@
                         "thunderbolt",
                         "extremespeed",
                         "surf",
-                        "hidden-power-(fire)"
+                        "hp-fire"
                     ],
                     "name": "raichu"
                 }
@@ -19085,7 +19245,7 @@
                     "level": 54,
                     "moves": [
                         "psychic-m",
-                        "hidden-power-(fire)",
+                        "hp-fire",
                         "shadow-ball",
                         "morning-sun"
                     ],
@@ -19134,7 +19294,7 @@
                     "level": 54,
                     "moves": [
                         "quick-attack",
-                        "hidden-power-(flying)",
+                        "hp-flying",
                         "frustration",
                         "steel-wing"
                     ],
@@ -19168,7 +19328,7 @@
                         "drill-peck",
                         "frustration",
                         "steel-wing",
-                        "hidden-power-(ground)"
+                        "hp-ground"
                     ],
                     "name": "fearow"
                 }
@@ -19209,7 +19369,7 @@
                     "moves": [
                         "softboiled",
                         "tri-attack",
-                        "hidden-power-(flying)",
+                        "hp-flying",
                         "flamethrower"
                     ],
                     "name": "togetic"
@@ -19351,7 +19511,7 @@
                         "reflect",
                         "thunderbolt",
                         "fire-punch",
-                        "hidden-power-(grass)"
+                        "hp-grass"
                     ],
                     "name": "ampharos"
                 },
@@ -19384,7 +19544,7 @@
                         "light-screen",
                         "metal-claw",
                         "double-edge",
-                        "hidden-power-(bug)"
+                        "hp-bug"
                     ],
                     "name": "scizor"
                 },
@@ -19430,7 +19590,7 @@
                     "item": "Leftovers",
                     "level": 63,
                     "moves": [
-                        "hidden-power-(flying)",
+                        "hp-flying",
                         "sludge-bomb",
                         "confuse-ray",
                         "giga-drain"
@@ -19444,7 +19604,7 @@
                         "thunderbolt",
                         "surf",
                         "extremespeed",
-                        "hidden-power-(fire)"
+                        "hp-fire"
                     ],
                     "name": "raichu"
                 },
@@ -19489,7 +19649,7 @@
                     "moves": [
                         "explosion",
                         "earthquake",
-                        "hidden-power-(steel)",
+                        "hp-steel",
                         "leech-life"
                     ],
                     "name": "forretress"
@@ -19498,7 +19658,7 @@
                     "item": "Miracleberry",
                     "level": 61,
                     "moves": [
-                        "hidden-power-(flying)",
+                        "hp-flying",
                         "hydro-pump",
                         "ice-beam",
                         "earthquake"
@@ -19518,7 +19678,7 @@
                         "sleep-powder",
                         "giga-drain",
                         "sludge-bomb",
-                        "hidden-power-(fire)"
+                        "hp-fire"
                     ],
                     "name": "victreebel"
                 },
@@ -19556,7 +19716,7 @@
                         "flamethrower",
                         "pursuit",
                         "crunch",
-                        "hidden-power-(electric)"
+                        "hp-electric"
                     ],
                     "name": "houndoom"
                 },
@@ -19605,7 +19765,7 @@
                         "metal-claw",
                         "leech-life",
                         "quick-attack",
-                        "hidden-power-(ground)"
+                        "hp-ground"
                     ],
                     "name": "scizor"
                 },
@@ -19627,7 +19787,7 @@
                         "submission",
                         "earthquake",
                         "rock-slide",
-                        "hidden-power-(ghost)"
+                        "hp-ghost"
                     ],
                     "name": "machamp"
                 },
@@ -19677,7 +19837,7 @@
                         "thunderbolt",
                         "bite",
                         "thunder-wave",
-                        "hidden-power-(ice)"
+                        "hp-ice"
                     ],
                     "name": "jolteon"
                 }
@@ -19743,7 +19903,7 @@
                         "drill-peck",
                         "metal-claw",
                         "rock-slide",
-                        "hidden-power-(ground)"
+                        "hp-ground"
                     ],
                     "name": "skarmory"
                 },
@@ -19789,7 +19949,7 @@
                     "level": 59,
                     "moves": [
                         "explosion",
-                        "hidden-power-(grass)",
+                        "hp-grass",
                         "thunderbolt",
                         "light-screen"
                     ],
@@ -19872,7 +20032,7 @@
                     "moves": [
                         "waterfall",
                         "ice-beam",
-                        "hidden-power-(electric)",
+                        "hp-electric",
                         "toxic"
                     ],
                     "name": "mantine"
@@ -19933,7 +20093,7 @@
                     "moves": [
                         "thunderbolt",
                         "explosion",
-                        "hidden-power-(grass)",
+                        "hp-grass",
                         "thunder-wave"
                     ],
                     "name": "magneton"
@@ -19972,7 +20132,7 @@
                         "sky-attack",
                         "double-edge",
                         "steel-wing",
-                        "hidden-power-(ground)"
+                        "hp-ground"
                     ],
                     "name": "dodrio"
                 },
@@ -19983,7 +20143,7 @@
                         "flamethrower",
                         "extremespeed",
                         "morning-sun",
-                        "hidden-power-(grass)"
+                        "hp-grass"
                     ],
                     "name": "arcanine"
                 },
@@ -20005,7 +20165,7 @@
                         "synthesis",
                         "ancientpower",
                         "giga-drain",
-                        "hidden-power-(fire)"
+                        "hp-fire"
                     ],
                     "name": "meganium"
                 }
@@ -20043,7 +20203,7 @@
                         "sky-attack",
                         "double-edge",
                         "steel-wing",
-                        "hidden-power-(ground)"
+                        "hp-ground"
                     ],
                     "name": "dodrio"
                 },
@@ -20092,7 +20252,7 @@
                         "thunderbolt",
                         "psychic-m",
                         "cross-chop",
-                        "hidden-power-(grass)"
+                        "hp-grass"
                     ],
                     "name": "electabuzz"
                 },
@@ -20114,7 +20274,7 @@
                         "sky-attack",
                         "double-edge",
                         "steel-wing",
-                        "hidden-power-(ground)"
+                        "hp-ground"
                     ],
                     "name": "dodrio"
                 },
@@ -20125,7 +20285,7 @@
                         "flamethrower",
                         "extremespeed",
                         "morning-sun",
-                        "hidden-power-(grass)"
+                        "hp-grass"
                     ],
                     "name": "arcanine"
                 },
@@ -20173,7 +20333,7 @@
                     "moves": [
                         "flamethrower",
                         "psychic-m",
-                        "hidden-power-(grass)",
+                        "hp-grass",
                         "iron-tail"
                     ],
                     "name": "ninetales"
@@ -20184,7 +20344,7 @@
                     "moves": [
                         "earthquake",
                         "rock-slide",
-                        "hidden-power-(bug)",
+                        "hp-bug",
                         "submission"
                     ],
                     "name": "pinsir"
@@ -20212,7 +20372,7 @@
                     "moves": [
                         "flamethrower",
                         "megahorn",
-                        "hidden-power-(grass)",
+                        "hp-grass",
                         "double-edge"
                     ],
                     "name": "rapidash"
@@ -20262,7 +20422,7 @@
                         "megahorn",
                         "earthquake",
                         "frustration",
-                        "hidden-power-(ghost)"
+                        "hp-ghost"
                     ],
                     "name": "heracross"
                 },
@@ -20323,7 +20483,7 @@
                         "sludge-bomb",
                         "wing-attack",
                         "giga-drain",
-                        "hidden-power-(ground)"
+                        "hp-ground"
                     ],
                     "name": "crobat"
                 }
@@ -20361,7 +20521,7 @@
                     "moves": [
                         "psychic-m",
                         "pursuit",
-                        "hidden-power-(fire)",
+                        "hp-fire",
                         "crunch"
                     ],
                     "name": "umbreon"
@@ -20389,7 +20549,7 @@
                         "psychic-m",
                         "drill-peck",
                         "giga-drain",
-                        "hidden-power-(fire)"
+                        "hp-fire"
                     ],
                     "name": "xatu"
                 },
@@ -20399,7 +20559,7 @@
                     "moves": [
                         "rock-slide",
                         "earthquake",
-                        "hidden-power-(flying)",
+                        "hp-flying",
                         "fire-blast"
                     ],
                     "name": "aerodactyl"
@@ -20422,7 +20582,7 @@
                         "thunderbolt",
                         "surf",
                         "extremespeed",
-                        "hidden-power-(fire)"
+                        "hp-fire"
                     ],
                     "name": "raichu"
                 }
@@ -20507,7 +20667,7 @@
                     "level": 64,
                     "moves": [
                         "psychic-m",
-                        "hidden-power-(fire)",
+                        "hp-fire",
                         "crunch",
                         "moonlight"
                     ],
@@ -20613,7 +20773,7 @@
                         "sky-attack",
                         "sludge-bomb",
                         "giga-drain",
-                        "hidden-power-(fire)"
+                        "hp-fire"
                     ],
                     "name": "crobat"
                 },
@@ -20740,7 +20900,7 @@
                     "level": 64,
                     "moves": [
                         "extremespeed",
-                        "hidden-power-(flying)",
+                        "hp-flying",
                         "flamethrower",
                         "thunderbolt"
                     ],
@@ -20792,7 +20952,7 @@
                         "waterfall",
                         "ice-beam",
                         "growth",
-                        "hidden-power-(grass)"
+                        "hp-grass"
                     ],
                     "name": "vaporeon"
                 }
@@ -20852,7 +21012,7 @@
                         "psychic-m",
                         "sleep-powder",
                         "giga-drain",
-                        "hidden-power-(fire)"
+                        "hp-fire"
                     ],
                     "name": "exeggutor"
                 },
@@ -20863,7 +21023,7 @@
                         "psychic-m",
                         "sing",
                         "morning-sun",
-                        "hidden-power-(fire)"
+                        "hp-fire"
                     ],
                     "name": "espeon"
                 }
@@ -20879,7 +21039,7 @@
                         "protect",
                         "drill-peck",
                         "metal-claw",
-                        "hidden-power-(ground)"
+                        "hp-ground"
                     ],
                     "name": "skarmory"
                 },
@@ -20937,7 +21097,7 @@
                     "moves": [
                         "flamethrower",
                         "waterfall",
-                        "hidden-power-(grass)",
+                        "hp-grass",
                         "ice-beam"
                     ],
                     "name": "octillery"
@@ -20974,7 +21134,7 @@
                     "level": 64,
                     "moves": [
                         "thunderbolt",
-                        "hidden-power-(water)",
+                        "hp-water",
                         "bite",
                         "thunder-wave"
                     ],
@@ -20987,7 +21147,7 @@
                         "submission",
                         "earthquake",
                         "rock-slide",
-                        "hidden-power-(ghost)"
+                        "hp-ghost"
                     ],
                     "name": "machamp"
                 },
@@ -21013,7 +21173,7 @@
                     "level": 63,
                     "moves": [
                         "megahorn",
-                        "hidden-power-(ghost)",
+                        "hp-ghost",
                         "earthquake",
                         "submission"
                     ],
@@ -21036,7 +21196,7 @@
                     "moves": [
                         "thunderbolt",
                         "fire-punch",
-                        "hidden-power-(water)",
+                        "hp-water",
                         "thunder-wave"
                     ],
                     "name": "ampharos"
@@ -21087,7 +21247,7 @@
                         "synthesis",
                         "leech-seed",
                         "giga-drain",
-                        "hidden-power-(fire)"
+                        "hp-fire"
                     ],
                     "name": "meganium"
                 },
@@ -21108,7 +21268,7 @@
                     "moves": [
                         "rock-slide",
                         "earthquake",
-                        "hidden-power-(flying)",
+                        "hp-flying",
                         "frustration"
                     ],
                     "name": "aerodactyl"
@@ -21134,7 +21294,7 @@
                     "item": "Leftovers",
                     "level": 64,
                     "moves": [
-                        "hidden-power-(flying)",
+                        "hp-flying",
                         "hydro-pump",
                         "ice-beam",
                         "double-edge"
@@ -21147,7 +21307,7 @@
                     "moves": [
                         "rock-slide",
                         "earthquake",
-                        "hidden-power-(flying)",
+                        "hp-flying",
                         "frustration"
                     ],
                     "name": "aerodactyl"
@@ -21186,7 +21346,7 @@
                         "thunderbolt",
                         "thunder-wave",
                         "double-kick",
-                        "hidden-power-(water)"
+                        "hp-water"
                     ],
                     "name": "jolteon"
                 },
@@ -21244,7 +21404,7 @@
                     "level": 66,
                     "moves": [
                         "sky-attack",
-                        "hidden-power-(grass)",
+                        "hp-grass",
                         "flamethrower",
                         "earthquake"
                     ],
@@ -21266,7 +21426,7 @@
                     "level": 67,
                     "moves": [
                         "octazooka",
-                        "hidden-power-(grass)",
+                        "hp-grass",
                         "ice-beam",
                         "return"
                     ],
@@ -21307,7 +21467,7 @@
                         "wing-attack",
                         "leech-life",
                         "steel-wing",
-                        "hidden-power-(ground)"
+                        "hp-ground"
                     ],
                     "name": "scyther"
                 },
@@ -21334,7 +21494,7 @@
                         "earthquake",
                         "rock-slide",
                         "sludge-bomb",
-                        "hidden-power-(ghost)"
+                        "hp-ghost"
                     ],
                     "name": "dugtrio"
                 },
@@ -21345,7 +21505,7 @@
                         "hydro-pump",
                         "ice-beam",
                         "double-edge",
-                        "hidden-power-(grass)"
+                        "hp-grass"
                     ],
                     "name": "azumarill"
                 },
@@ -21383,7 +21543,7 @@
                         "submission",
                         "earthquake",
                         "rock-slide",
-                        "hidden-power-(ghost)"
+                        "hp-ghost"
                     ],
                     "name": "machamp"
                 },
@@ -21432,7 +21592,7 @@
                         "morning-sun",
                         "flamethrower",
                         "extremespeed",
-                        "hidden-power-(grass)"
+                        "hp-grass"
                     ],
                     "name": "arcanine"
                 },
@@ -21442,7 +21602,7 @@
                     "moves": [
                         "leech-life",
                         "metal-claw",
-                        "hidden-power-(ground)",
+                        "hp-ground",
                         "swords-dance"
                     ],
                     "name": "scizor"
@@ -21454,7 +21614,7 @@
                         "faint-attack",
                         "pursuit",
                         "sky-attack",
-                        "hidden-power-(fire)"
+                        "hp-fire"
                     ],
                     "name": "murkrow"
                 }
@@ -21493,7 +21653,7 @@
                         "lovely-kiss",
                         "ice-beam",
                         "psychic-m",
-                        "hidden-power-(fire)"
+                        "hp-fire"
                     ],
                     "name": "jynx"
                 },
@@ -21504,7 +21664,7 @@
                         "hydro-pump",
                         "ancientpower",
                         "ice-beam",
-                        "hidden-power-(grass)"
+                        "hp-grass"
                     ],
                     "name": "omastar"
                 },
@@ -21532,7 +21692,7 @@
                         "explosion",
                         "earthquake",
                         "rock-slide",
-                        "hidden-power-(ghost)"
+                        "hp-ghost"
                     ],
                     "name": "golem"
                 },
@@ -21543,7 +21703,7 @@
                         "explosion",
                         "earthquake",
                         "leech-life",
-                        "hidden-power-(steel)"
+                        "hp-steel"
                     ],
                     "name": "forretress"
                 },
@@ -21564,7 +21724,7 @@
                     "moves": [
                         "fire-blast",
                         "morning-sun",
-                        "hidden-power-(electric)",
+                        "hp-electric",
                         "toxic"
                     ],
                     "name": "rapidash"
@@ -21581,7 +21741,7 @@
                     "moves": [
                         "synthesis",
                         "giga-drain",
-                        "hidden-power-(flying)",
+                        "hp-flying",
                         "leech-seed"
                     ],
                     "name": "jumpluff"
@@ -21604,7 +21764,7 @@
                         "thunderbolt",
                         "thunder-wave",
                         "fire-punch",
-                        "hidden-power-(water)"
+                        "hp-water"
                     ],
                     "name": "ampharos"
                 },
@@ -21685,7 +21845,7 @@
                         "bubblebeam",
                         "double-edge",
                         "thunderbolt",
-                        "hidden-power-(fire)"
+                        "hp-fire"
                     ],
                     "name": "persian"
                 }
@@ -21700,7 +21860,7 @@
                     "level": 69,
                     "moves": [
                         "octazooka",
-                        "hidden-power-(dragon)",
+                        "hp-dragon",
                         "ice-beam",
                         "body-slam"
                     ],
@@ -21712,7 +21872,7 @@
                     "moves": [
                         "earthquake",
                         "ancientpower",
-                        "hidden-power-(ghost)",
+                        "hp-ghost",
                         "explosion"
                     ],
                     "name": "steelix"
@@ -21724,7 +21884,7 @@
                         "earthquake",
                         "hydro-pump",
                         "ice-beam",
-                        "hidden-power-(flying)"
+                        "hp-flying"
                     ],
                     "name": "gyarados"
                 }
@@ -21795,7 +21955,7 @@
                         "explosion",
                         "thunderbolt",
                         "tri-attack",
-                        "hidden-power-(water)"
+                        "hp-water"
                     ],
                     "name": "electrode"
                 }
@@ -21906,7 +22066,7 @@
                     "level": 75,
                     "moves": [
                         "aeroblast",
-                        "hidden-power-(ground)",
+                        "hp-ground",
                         "steel-wing",
                         "swords-dance"
                     ],
@@ -21935,7 +22095,7 @@
                         "explosion",
                         "waterfall",
                         "ice-beam",
-                        "hidden-power-(fire)"
+                        "hp-fire"
                     ],
                     "name": "cloyster"
                 },
@@ -21957,7 +22117,7 @@
                         "double-edge",
                         "bubblebeam",
                         "thunderbolt",
-                        "hidden-power-(fire)"
+                        "hp-fire"
                     ],
                     "name": "persian"
                 }
@@ -21985,7 +22145,7 @@
                         "lovely-kiss",
                         "ice-beam",
                         "psychic-m",
-                        "hidden-power-(fire)"
+                        "hp-fire"
                     ],
                     "name": "jynx"
                 },
@@ -21996,7 +22156,7 @@
                         "sleep-powder",
                         "sludge-bomb",
                         "giga-drain",
-                        "hidden-power-(fire)"
+                        "hp-fire"
                     ],
                     "name": "victreebel"
                 },
@@ -22006,7 +22166,7 @@
                     "moves": [
                         "rest",
                         "sleep-talk",
-                        "hidden-power-(ground)",
+                        "hp-ground",
                         "drill-peck"
                     ],
                     "name": "skarmory"
@@ -22095,7 +22255,7 @@
                         "lovely-kiss",
                         "ice-beam",
                         "psychic-m",
-                        "hidden-power-(fire)"
+                        "hp-fire"
                     ],
                     "name": "jynx"
                 },
@@ -22123,7 +22283,7 @@
                         "thunder-wave",
                         "thunderbolt",
                         "tri-attack",
-                        "hidden-power-(fire)"
+                        "hp-fire"
                     ],
                     "name": "magneton"
                 },
@@ -22144,7 +22304,7 @@
                     "moves": [
                         "thunderbolt",
                         "psychic-m",
-                        "hidden-power-(fire)",
+                        "hp-fire",
                         "hypnosis"
                     ],
                     "name": "misdreavus"
@@ -22167,7 +22327,7 @@
                         "sleep-powder",
                         "giga-drain",
                         "psychic-m",
-                        "hidden-power-(fire)"
+                        "hp-fire"
                     ],
                     "name": "exeggutor"
                 },
@@ -22244,7 +22404,7 @@
                     "moves": [
                         "waterfall",
                         "ice-beam",
-                        "hidden-power-(grass)",
+                        "hp-grass",
                         "toxic"
                     ],
                     "name": "vaporeon"
@@ -22254,7 +22414,7 @@
                     "level": 71,
                     "moves": [
                         "explosion",
-                        "hidden-power-(steel)",
+                        "hp-steel",
                         "leech-life",
                         "earthquake"
                     ],
@@ -22267,7 +22427,7 @@
                         "thunderbolt",
                         "surf",
                         "extremespeed",
-                        "hidden-power-(fire)"
+                        "hp-fire"
                     ],
                     "name": "raichu"
                 },
@@ -22276,7 +22436,7 @@
                     "level": 71,
                     "moves": [
                         "flamethrower",
-                        "hidden-power-(flying)",
+                        "hp-flying",
                         "earthquake",
                         "ancientpower"
                     ],
@@ -22304,7 +22464,7 @@
                     "moves": [
                         "explosion",
                         "thunderbolt",
-                        "hidden-power-(grass)",
+                        "hp-grass",
                         "thunder-wave"
                     ],
                     "name": "electrode"
@@ -22315,7 +22475,7 @@
                     "moves": [
                         "earthquake",
                         "rock-slide",
-                        "hidden-power-(ghost)",
+                        "hp-ghost",
                         "cross-chop"
                     ],
                     "name": "machamp"
@@ -22349,7 +22509,7 @@
                         "quick-attack",
                         "metal-claw",
                         "leech-life",
-                        "hidden-power-(ground)"
+                        "hp-ground"
                     ],
                     "name": "scizor"
                 },
@@ -22360,7 +22520,7 @@
                         "rock-slide",
                         "fly",
                         "earthquake",
-                        "hidden-power-(ghost)"
+                        "hp-ghost"
                     ],
                     "name": "aerodactyl"
                 }
@@ -22375,7 +22535,7 @@
                     "level": 70,
                     "moves": [
                         "sing",
-                        "hidden-power-(fire)",
+                        "hp-fire",
                         "psywave",
                         "morning-sun"
                     ],
@@ -22416,7 +22576,7 @@
                         "thunderbolt",
                         "thunder-wave",
                         "fire-punch",
-                        "hidden-power-(water)"
+                        "hp-water"
                     ],
                     "name": "ampharos"
                 },
@@ -22459,7 +22619,7 @@
                         "synthesis",
                         "ancientpower",
                         "giga-drain",
-                        "hidden-power-(fire)"
+                        "hp-fire"
                     ],
                     "name": "meganium"
                 },
@@ -22486,7 +22646,7 @@
                         "thunderbolt",
                         "thunder-wave",
                         "fire-punch",
-                        "hidden-power-(water)"
+                        "hp-water"
                     ],
                     "name": "ampharos"
                 },
@@ -22529,7 +22689,7 @@
                         "synthesis",
                         "leech-seed",
                         "giga-drain",
-                        "hidden-power-(fire)"
+                        "hp-fire"
                     ],
                     "name": "meganium"
                 },
@@ -22556,7 +22716,7 @@
                         "thunderbolt",
                         "thunder-wave",
                         "fire-punch",
-                        "hidden-power-(water)"
+                        "hp-water"
                     ],
                     "name": "ampharos"
                 },
@@ -22599,7 +22759,7 @@
                         "synthesis",
                         "leech-seed",
                         "giga-drain",
-                        "hidden-power-(fire)"
+                        "hp-fire"
                     ],
                     "name": "meganium"
                 },
@@ -22626,7 +22786,7 @@
                     "moves": [
                         "psywave",
                         "psychic-m",
-                        "hidden-power-(fire)",
+                        "hp-fire",
                         "morning-sun"
                     ],
                     "name": "espeon"
@@ -22646,7 +22806,7 @@
                     "item": "Quick Claw",
                     "level": 72,
                     "moves": [
-                        "hidden-power-(fire)",
+                        "hp-fire",
                         "psychic-m",
                         "giga-drain",
                         "ancientpower"
@@ -22709,7 +22869,7 @@
                         "giga-drain",
                         "ancientpower",
                         "leech-seed",
-                        "hidden-power-(fire)"
+                        "hp-fire"
                     ],
                     "name": "meganium"
                 },
@@ -22741,7 +22901,7 @@
                     "moves": [
                         "wing-attack",
                         "reversal",
-                        "hidden-power-(bug)",
+                        "hp-bug",
                         "metal-claw"
                     ],
                     "name": "scyther"
@@ -22751,7 +22911,7 @@
                     "level": 73,
                     "moves": [
                         "sky-attack",
-                        "hidden-power-(ground)",
+                        "hp-ground",
                         "hypnosis",
                         "giga-drain"
                     ],
@@ -22769,7 +22929,7 @@
                         "waterfall",
                         "ice-beam",
                         "earthquake",
-                        "hidden-power-(electric)"
+                        "hp-electric"
                     ],
                     "name": "blastoise"
                 },
@@ -22840,7 +23000,7 @@
                         "fire-punch",
                         "thunderbolt",
                         "ice-punch",
-                        "hidden-power-(water)"
+                        "hp-water"
                     ],
                     "name": "gengar"
                 },
@@ -22873,7 +23033,7 @@
                         "flamethrower",
                         "crunch",
                         "iron-tail",
-                        "hidden-power-(grass)"
+                        "hp-grass"
                     ],
                     "name": "houndoom"
                 },
@@ -22930,7 +23090,7 @@
                     "item": "Miracleberry",
                     "level": 74,
                     "moves": [
-                        "hidden-power-(flying)",
+                        "hp-flying",
                         "earthquake",
                         "hydro-pump",
                         "ice-beam"
@@ -26326,7 +26486,7 @@
                         "sleep-powder",
                         "double-team",
                         "giga-drain",
-                        "hidden-power-(ice)"
+                        "hp-ice"
                     ],
                     "name": "bellossom"
                 },
@@ -26348,7 +26508,7 @@
                         "fire-blast",
                         "iron-tail",
                         "double-edge",
-                        "hidden-power-(rock)"
+                        "hp-rock"
                     ],
                     "name": "rapidash"
                 }

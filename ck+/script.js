@@ -71,6 +71,14 @@ var typeEnhancements = new Map([
 	["metal coat", "steel"]
 ]);
 
+var multiHitMoves = new Set([
+	"barrage", "bone-rush", "comet-punch", "doubleslap",
+	"fury-attack", "fury-swipes", "pin-missile", "spike-cannon"
+]);
+var doubleHitMoves = new Set([
+	"bonemerang", "double-hit", "double-kick"
+])
+
 fetch("./data.json")
 	.then(response => response.text())
 	.then(text => {
@@ -259,7 +267,11 @@ function getTinyPokemonDisplay(tp, extra = "") {
 		if (i < tp.moves.length) {
 			var color = "#ffffff";
 			if (movesByName.has(tp.moves[i])) {
-				color = typeColors.get(movesByName.get(tp.moves[i]).type);
+				var type = movesByName.get(tp.moves[i]).type
+				if (tp.moves[i] == "hidden-power") {
+					type = getHiddenPower(tp).type;
+				}
+				color = typeColors.get(type);
 			}
 			v += '<td><span class="move-emblem" style="background-color:' + color
 				+ ';"></span>' + getMoveName(tp.moves[i]) + '</td>';
@@ -381,19 +393,52 @@ function getEmptyStages() {
 	}
 }
 
+function getHiddenPower(poke) {
+	function mod4(stat) {
+		return (getDv(poke, stat) & 0b11);
+	}
+	function mSig(stat) {
+		return (getDv(poke, stat) & 0b1000) >> 3;
+	}
+	var t = (mod4("atk") << 2) | mod4("def");
+	var types = [
+		"fighting", "flying", "poison", "ground",
+		"rock", "bug", "ghost", "steel",
+		"fire", "water", "grass", "electric",
+		"psychic", "ice", "dragon", "dark"
+	];
+	var ty = types[t];
+	var po = ((mSig("spa") + 2 * mSig("spe") + 4 * mSig("def") + 8 * mSig("atk")) * 5 + mod4("spa")) / 2 + 31;
+	return {type: ty, power: po};
+}
+
 function getDamage(attacker, defender, attackerStages, defenderStages, move, player, crit, low) {
 	if (defender == undefined) {
 		return 0;
 	}
-	if (move.power <= 1) {
+	var power = move.power;
+	var type = move.type;
+	if (move.name == "magnitude") {
+		if (low) {
+			power = 10;
+		} else {
+			power = 150;
+		}
+	}
+	if (move.name == "hidden-power") {
+		var hp = getHiddenPower(attacker);
+		power = hp.power;
+		type = hp.type;
+	}
+	if (power == 0) {
 		return 0;
 	}
 	var ap = pokemonByName.get(attacker.name);
 	var dp = pokemonByName.get(defender.name);
 	var v = parseInt(attacker.level * 2 / 5) + 2;
-	v *= move.power;
+	v *= power;
 	
-	var special = specialTypes.has(move.type);
+	var special = specialTypes.has(type);
 	var statOff = 0;
 	if (special) {
 		statOff = 1;
@@ -447,7 +492,7 @@ function getDamage(attacker, defender, attackerStages, defenderStages, move, pla
 		v *= 2;
 	}
 	var ni = attacker.item.toLowerCase();
-	if (typeEnhancements.has(ni) && typeEnhancements.get(ni) == move.type) {
+	if (typeEnhancements.has(ni) && typeEnhancements.get(ni) == type) {
 		v *= 1.1;
 		v = parseInt(v);
 	}
@@ -455,31 +500,54 @@ function getDamage(attacker, defender, attackerStages, defenderStages, move, pla
 
 	// TODO if (weather)
 
-	if (badgeTypes.has(move.type) && badgeTypes.get(move.type) <= badges) {
+	if (badgeTypes.has(type) && badgeTypes.get(type) <= badges) {
 		v = parseInt(v * 1.125);
 	}
 
 	// STAB
-	if (move.type == ap.types[0] || (ap.types.length > 1 && move.type == ap.types[1])) {
+	if (type == ap.types[0] || (ap.types.length > 1 && type == ap.types[1])) {
 		v = parseInt(v * 1.5);
 	}
 
 	var eff = 1;
-	eff *= getMatchup(move.type, dp.types[0]);
+	eff *= getMatchup(type, dp.types[0]);
 	if (dp.types.length > 1) {
-		eff *= getMatchup(move.type, dp.types[1]);
+		eff *= getMatchup(type, dp.types[1]);
 	}
 	if (eff == 0) {
 		return 0;
 	}
 	v *= eff;
 
+	if (move.name == "dragon rage") {
+		return 40;
+	} else if (move.name == "sonic boom") {
+		return 20;
+	} if (move.name == "seismic toss" || move.name == "night shade" || move.name == "psywave") {
+		return attacker.level;
+	}
+	// Unhandled special move
+	if (power == 1) {
+		return -1;
+	}
+
 	var r = 255;
 	if (low) {
 		r = 217;
 	}
 	v = parseInt(v * r / 255);
-	return Math.max(1, v);
+
+	var times = 1;
+	if (doubleHitMoves.has(move.name)) {
+		times = 2;
+	} else if (multiHitMoves.has(move.name)) {
+		if (low) {
+			times = 2;
+		} else {
+			times = 5;
+		}
+	}
+	return Math.max(1, v) * times;
 }
 
 function getMatchup(attackType, defenseType) {
@@ -551,7 +619,7 @@ function setTab(name) {
 			copyEditedMoves = true;
 			clearEdits();
 		} else {
-			copyEditedMoves = true;
+			copyEditedMoves = false;
 		}
 		updateEdit();
 	}
@@ -812,5 +880,21 @@ function clearEnemyStages() {
 if (localStorage.getItem("box")) {
 	box = JSON.parse(localStorage.getItem("box"));
 }
+
+if (localStorage.getItem("badges")) {
+	badges = parseInt(localStorage.getItem("badges"));
+}
+
+function updateBadges() {
+	this.badges = parseInt(document.getElementById("badges").value);
+	localStorage.setItem("badges", badges);
+	updateCalc();
+}
+
+document.getElementById("badges").oninput = function(event) {
+	updateBadges();
+}
+
+document.getElementById("badges").value = badges;
 
 updateSearch(document.getElementById("search-box").value);
