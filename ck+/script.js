@@ -519,11 +519,11 @@ function getDamage(attacker, defender, attackerStages, defenderStages, move, pla
 	}
 	v *= eff;
 
-	if (move.name == "dragon rage") {
+	if (move.name == "dragon-rage") {
 		return 40;
-	} else if (move.name == "sonic boom") {
+	} else if (move.name == "sonic-boom") {
 		return 20;
-	} if (move.name == "seismic toss" || move.name == "night shade" || move.name == "psywave") {
+	} if (move.name == "seismic-toss" || move.name == "night-shade" || move.name == "psywave") {
 		return attacker.level;
 	}
 	// Unhandled special move
