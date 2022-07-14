@@ -602,10 +602,6 @@ function updateSearch(v) {
 	document.getElementById("search-suggestions").innerHTML = res;
 }
 
-document.getElementById("main-poke").onclick = function(event) {
-	displayPokemon(document.getElementById("main-poke"), parseInt(Math.random() * 251));
-}
-
 document.getElementById("search-box").oninput = function(event) {
 	var v = event.target.value;
 	updateSearch(v);
