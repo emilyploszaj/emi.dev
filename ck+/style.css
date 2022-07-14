@@ -1,0 +1,317 @@
+:root {
+	--background: #222222;
+	--grouping-background: #111111;
+	--box-background: #333333;
+	--highlighted: #49adff;
+	--text: #eeeeee;
+	--crit-text: #e59393;
+
+	--ohko: #d84a4a;
+	--thko: #c3d84a;
+
+	--search-suggestion: #181818;
+	--search-suggestion-hover: #282828;
+
+	--stat-bar-back: #444444;
+	--stat-bar-fill-terrible: #ec6868;
+	--stat-bar-fill-mediocre: #ecb768;
+	--stat-bar-fill-decent: #98ec68;
+	--stat-bar-fill-great: #3cf57a;
+	--stat-bar-fill-amazing: #3c86f5;
+}
+
+html {
+	background-color: var(--background);
+	color: var(--text);
+	font-family: "Ubuntu Mono";
+	font-size: 24px;
+}
+
+body {
+	padding-left: calc(50% - 500px);
+	padding-right: calc(50% - 500px);
+}
+
+img {
+	display: block;
+}
+
+button {
+	padding: 2px;
+	font-family: "Ubuntu Mono";
+	font-size: 16px;
+	color: var(--text);
+	background-color: var(--box-background);
+	border-style: solid;
+	border-color: var(--grouping-background);
+	cursor: pointer;
+}
+
+button:hover {
+	color: var(--highlighted);
+}
+
+#tab-selection {
+	margin-bottom: 10px;
+}
+
+#tab-selection button {
+	font-size: 24px;
+}
+
+input {
+	font-family: "Ubuntu Mono";
+	font-size: 20px;
+	color: var(--text);
+	background-color: var(--box-background);
+	border-style: solid;
+	border-color: var(--grouping-background);
+}
+
+input[type=number] {
+	width:50px;
+}
+
+.type {
+	text-align: center !important;
+	font-weight: bold;
+	color: #eeeeee;
+	width: 110px;
+	padding: 4px !important;
+	margin: 4px !important;
+	text-shadow: 2px 2px black;
+}
+
+.move-table td {
+	padding: 0px 30px;
+}
+
+.move-emblem {
+	display: inline-block;
+	min-width: 14px;
+	min-height: 14px;
+	margin-right: 4px;
+}
+
+#search {
+	position: relative;
+	margin: 30px;
+}
+
+#search-box {
+	width: 100%;
+	height: 40px;
+	font-size: 24px;
+	color: var(--text);
+	background-color: var(--box-background);
+}
+
+#search-box:focus ~ #search-suggestions {
+	display: block;
+}
+
+#search-suggestions {
+	display: none;
+	position: absolute;
+	width: 100%;
+}
+
+.search-suggestion {
+	height: 40px;
+	background-color: var(--search-suggestion);
+	cursor: pointer;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+.search-suggestion:hover {
+	background-color: var(--search-suggestion-hover);
+}
+
+.stat-bar {
+	width: 300px;
+	height: 20px;
+	background-color: var(--stat-bar-back);
+}
+
+.full-stat-bar {
+	width: 40%;
+	height: 100%;
+	padding: 0px;
+	margin: 0px !important;
+}
+
+.tab {
+	display: none;
+}
+
+.pokemon-display {
+	padding: 20px;
+	background-color: var(--box-background);
+}
+
+.pokemon-display div {
+	display: block;
+	margin: 5px;
+}
+
+.poke-icon img {
+	image-rendering: pixelated;
+	width: 224px;
+	height: 224px;
+	min-width: 224px;
+	min-height: 224px;
+}
+
+.poke-stats table td {
+	padding: 0px;
+	min-width: 46px;
+}
+
+.poke-stats table {
+	border-spacing: 0px;
+}
+
+#box-pokes {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 10px;
+}
+
+#box-pokes .tiny-poke {
+	margin: 10px;
+}
+
+#trainers {
+	overflow-y: scroll;
+	height: 100vh;
+}
+
+.trainer {
+	background-color: var(--grouping-background);
+	margin: 10px 0px;
+	padding: 4px;
+}
+
+.trainer-pokes {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 4px;
+}
+
+.trainer-pokes .tiny-poke {
+	margin: 10px;
+}
+
+#tiny-pokes {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 10px;
+}
+
+#tiny-pokes .tiny-poke {
+	margin: 10px;
+}
+
+.tiny-poke {
+	width: 450px;
+	display: flex;
+	padding: 4px;
+	background-color: var(--box-background);
+}
+
+.tiny-poke-icon img {
+	image-rendering: pixelated;
+	width: 112px;
+	height: 112px;
+	min-width: 112px;
+	min-height: 112px;
+	margin-right: 10px;
+}
+
+.tiny-poke-info {
+	display: block;
+	font-size: 20px;
+}
+
+.tiny-poke-info table {
+	margin-top: 4px;
+}
+
+.tiny-poke-info td {
+	min-width: 10px;
+}
+
+#calc {
+	overflow: auto;
+}
+
+#player, #opponent, #edited-poke, #edit-fields {
+	width: 450px;
+	padding: 20px;
+	background-color: var(--box-background);
+}
+
+#player img, #edited-poke img {
+	transform: scaleX(-1);
+}
+
+#player {
+	float: left;
+}
+
+#opponent {
+	float: right;
+}
+
+#opponent div {
+	float: right;
+	clear: both;
+}
+
+.calc-stats table td {
+	padding: 0px 10px;
+}
+
+.calc-stats table {
+	border-spacing: 5px;
+	padding: 10px;
+}
+
+.move-calcs {
+	text-align: center;
+}
+
+.move-calcs td {
+	padding: 0px 10px;
+	border-width: 3px;
+	border-style: dashed;
+	border-color: transparent;
+}
+
+rt {
+	font-size: 16px;
+	border-width: 3px;
+}
+
+.crit {
+	color: var(--crit-text);
+}
+
+.thko {
+	border-color: var(--thko) !important;
+}
+
+.ohko {
+	border-color: var(--ohko) !important;
+}
+
+.calc-team {
+	display: flex;
+}
+
+.calc-team div {
+	background-color: var(--background);
+	padding: 8px;
+	margin: 2px;
+}

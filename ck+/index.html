@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta property="og:title" content="Emi's Crystal Kaizo+ Calc and Index">
+		<meta property="og:site_name" content="emi.dev">
+		<meta name="theme-color" content="#dc9eff">
+		<title>Crystal Kaizo</title>
+		<link rel="stylesheet" href="https://fonts.bunny.net/css?family=Ubuntu+Mono">
+		<link rel="stylesheet" type="text/css" href="./style.css">
+	</head>
+	<body>
+		<h1>Pokemon Crystal Kaizo</h1>
+		<h6>Please note this is a new tool and may be lacking mechanics or miscalculate damage</h3>
+		<div id="search" style="z-index: 100;">
+			<input id="search-box" type="search">
+			<div id="search-suggestions">
+				<div class="search-suggestion">Test response</div>
+				<div class="search-suggestion">Test 2</div>
+			</div>
+		</div>
+		<div id="tab-selection">
+			<button class="tab-select" onclick="setTab('calc')">Calc</button>
+			<button class="tab-select" onclick="setTab('box')">Box</button>
+			<button class="tab-select" onclick="setTab('trainers')">Trainers</button>
+		</div>
+		<div id="trainers" class="tab">
+		</div>
+		<div id="box" class="tab">
+			<button onclick="setTab('edit')">Add</button>
+			<div id="box-pokes"></div>
+		</div>
+		<div id="edit" class="tab">
+			<div style="display:flex;justify-content:space-between;">
+				<div id="edited-poke">
+					<div>
+						<span class="poke-name"></span>
+						<span> - </span>
+						<span class="poke-level"></span>
+						<span> - </span>
+						<span class="poke-item"></span>
+					</div>
+					<div style="display:flex;">
+						<div class="poke-icon"></div>
+						<div>
+							<div class="calc-stats">
+								<table>
+									<tr class="calc-hp"><td>HP</td><td><div class="stat-num"></div></td></tr>
+									<tr class="calc-atk"><td>Atk</td><td><div class="stat-num"></div></td></tr>
+									<tr class="calc-def"><td>Def</td><td><div class="stat-num"></div></td></tr>
+									<tr class="calc-spa"><td>SpA</td><td><div class="stat-num"></div></td></tr>
+									<tr class="calc-spd"><td>SpD</td><td><div class="stat-num"></div></td></tr>
+									<tr class="calc-spe"><td>Spe</td><td><div class="stat-num"></div></td></tr>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div>
+						<span class="poke-types"></span>
+					</div>
+					<div class="calc-moves"></div>
+				</div>
+				<div id="edit-fields">
+					<button id="add-poke" onclick="addEditedPoke()">Add to Box</button>
+					<button id="save-poke" onclick="saveEdited()">Save</button>
+					<table>
+						<tr><td>Name</td><td><input class="poke-edit-input" type="text" id="edit-name"></td></tr>
+						<tr><td>Item</td><td><input class="poke-edit-input" type="text" id="edit-item"></td></tr>
+						<tr><td>Lvl</td><td><input class="poke-edit-input" type="number" value="5" min="1" max="100" id="edit-lvl"></td></tr>
+						<tr><td></td></tr>
+						<tr><td>Move</td><td><input class="poke-edit-input" type="text" id="edit-move-1"></td></tr>
+						<tr><td>Move</td><td><input class="poke-edit-input" type="text" id="edit-move-2"></td></tr>
+						<tr><td>Move</td><td><input class="poke-edit-input" type="text" id="edit-move-3"></td></tr>
+						<tr><td>Move</td><td><input class="poke-edit-input" type="text" id="edit-move-4"></td></tr>
+						<tr><td></td></tr>
+						<tr><td>HP</td><td><input class="poke-edit-input" type="number" value="0" min="0" max="15" id="edit-hp"></td></tr>
+						<tr><td>Atk</td><td><input class="poke-edit-input" type="number" value="0" min="0" max="15" id="edit-atk"></td></tr>
+						<tr><td>Def</td><td><input class="poke-edit-input" type="number" value="0" min="0" max="15" id="edit-def"></td></tr>
+						<tr><td>SpA</td><td><input class="poke-edit-input" type="number" value="0" min="0" max="15" id="edit-spa"></td></tr>
+						<tr><td>SpD</td><td><input class="poke-edit-input" type="number" value="0" min="0" max="15" id="edit-spd"></td></tr>
+						<tr><td>Spe</td><td><input class="poke-edit-input" type="number" value="0" min="0" max="15" id="edit-spe"></td></tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div id="calc" class="tab">
+			<div id="player">
+				<div>
+					<span class="poke-name"></span>
+					<span> - </span>
+					<span class="poke-level"></span>
+					<span> - </span>
+					<span class="poke-item"></span>
+				</div>
+				<div style="display:flex;">
+					<div class="poke-icon"></div>
+					<div>
+						<div class="calc-stats">
+							<table>
+								<tr class="calc-hp"><td>HP</td><td><div class="stat-num"></div></td><td><button onclick="clearPlayerStages()">Clear</button></td></tr>
+								<tr class="calc-atk"><td>Atk</td><td><div class="stat-num"></div></td><td><input class="player-stages" type="number" value="0" min="-6" max="6" oninput="updateCalc()"></td></tr>
+								<tr class="calc-def"><td>Def</td><td><div class="stat-num"></div></td><td><input class="player-stages" type="number" value="0" min="-6" max="6"></td></tr>
+								<tr class="calc-spa"><td>SpA</td><td><div class="stat-num"></div></td><td><input class="player-stages" type="number" value="0" min="-6" max="6"></td></tr>
+								<tr class="calc-spd"><td>SpD</td><td><div class="stat-num"></div></td><td><input class="player-stages" type="number" value="0" min="-6" max="6"></td></tr>
+								<tr class="calc-spe"><td>Spe</td><td><div class="stat-num"></div></td><td><input class="player-stages" type="number" value="0" min="-6" max="6"></td></tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div>
+					<span class="poke-types"></span>
+				</div>
+				<div class="calc-moves"></div>
+				<div class="calc-team"></div>
+			</div>
+			<div id="opponent">
+				<div style="text-align:right;">
+					<span class="poke-item"></span>
+					<span> - </span>
+					<span class="poke-level"></span>
+					<span> - </span>
+					<span class="poke-name"></span>
+				</div>
+				<div style="display:flex;float:right;">
+					<div>
+						<div class="calc-stats">
+							<table>
+								<tr class="calc-hp"><td><button onclick="clearEnemyStages()">Clear</button></td><td><div class="stat-num"></div></td><td>HP</td></tr>
+								<tr class="calc-atk"><td><input class="enemy-stages" type="number" value="0" min="-6" max="6"></td><td><div class="stat-num"></div></td><td>Atk</td</tr>
+								<tr class="calc-def"><td><input class="enemy-stages" type="number" value="0" min="-6" max="6"></td><td><div class="stat-num"></div></td><td>Def</td</tr>
+								<tr class="calc-spa"><td><input class="enemy-stages" type="number" value="0" min="-6" max="6"></td><td><div class="stat-num"></div></td><td>SpA</td</tr>
+								<tr class="calc-spd"><td><input class="enemy-stages" type="number" value="0" min="-6" max="6"></td><td><div class="stat-num"></div></td><td>SpD</td</tr>
+								<tr class="calc-spe"><td><input class="enemy-stages" type="number" value="0" min="-6" max="6"></td><td><div class="stat-num"></div></td><td>Spe</td</tr>
+							</table>
+						</div>
+					</div>
+					<div class="poke-icon"></div>
+				</div>
+				<div>
+					<span class="poke-types"></span>
+				</div>
+				<div class="calc-moves"></div>
+				<div class="calc-team"></div>
+				<br style="clear:both;"/>
+			</div>
+		</div>
+		<div id="full-poke" class="tab">
+			<div id="main-poke" class="pokemon-display">
+				<div>
+					<span class="poke-dex-num"></span>
+					<span> - </span>
+					<span class="poke-name"></span>
+				</div>
+				<div style="display:flex;">
+					<div class="poke-icon"></div>
+					<div>
+						<div class="poke-stats">
+							<table>
+								<tr class="poke-hp"><td>HP</td><td><div class="stat-num"></div></td><td><div class="stat-bar"><div class="full-stat-bar"></div></div></td><td></tr>
+								<tr class="poke-atk"><td>Atk</td><td><div class="stat-num"></div></td><td><div class="stat-bar"><div class="full-stat-bar"></div></div></td><td></tr>
+								<tr class="poke-def"><td>Def</td><td><div class="stat-num"></div></td><td><div class="stat-bar"><div class="full-stat-bar"></div></div></td><td></tr>
+								<tr class="poke-spa"><td>SpA</td><td><div class="stat-num"></div></td><td><div class="stat-bar"><div class="full-stat-bar"></div></div></td><td></tr>
+								<tr class="poke-spd"><td>SpD</td><td><div class="stat-num"></div></td><td><div class="stat-bar"><div class="full-stat-bar"></div></div></td><td></tr>
+								<tr class="poke-spe"><td>Spe</td><td><div class="stat-num"></div></td><td><div class="stat-bar"><div class="full-stat-bar"></div></div></td><td></tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div>
+					<span class="poke-types"></span>
+				</div>
+				<div class="learnset"></div>
+			</div>
+		</div>
+	</body>
+	<script src="script.js"></script>
+</html>
