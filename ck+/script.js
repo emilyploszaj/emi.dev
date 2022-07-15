@@ -291,7 +291,17 @@ function getTinyPokemonDisplay(tp, extra = "") {
 	//v += "<tr><td>Atk</td><td>" + p.stats.atk + "</td><td> </td><td>SpD</td><td>" + p.stats.spd + "</td></tr>";
 	//v += "<tr><td>Def</td><td>" + p.stats.atk + "</td><td> </td><td>Spe</td><td>" + p.stats.spe + "</td></tr>";
 	v += "</table>";
-	v += "<div>Spe: " + getPokeStat(tp, "spe") + "</div>"
+	v += "<div>Spe: " + getPokeStat(tp, "spe");
+	if (tp.dvs) {
+		v += " DVs: ";
+		v += tp.dvs.hp + " "
+		v += tp.dvs.atk + "/"
+		v += tp.dvs.def + " "
+		v += tp.dvs.spa + "/"
+		v += tp.dvs.spd + " "
+		v += tp.dvs.spe
+	}
+	v += "</div>"
 	v += extra;
 	v += "</div></div>";
 	return v;
