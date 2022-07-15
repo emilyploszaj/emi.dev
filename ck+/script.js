@@ -957,7 +957,19 @@ function readFile(file) {
 				pokemon = pokemon.concat(readPokemonList(bytes, 0x6000 + i * 0x450, 20, 32));
 			}
 			box = pokemon;
-			console.log(pokemon);
+			var badgeMask = (bytes[0x23e5] << 8) | bytes[0x23e6];
+			badges = 0;
+			for (var i = 0; i < 16; i++) {
+				if ((badgeMask & 1) == 1) {
+					badges++;
+				}
+				badgeMask >>= 1;
+			}
+			document.getElementById("badges").value = badges;
+			updateBadges();
+			if (box.length > 0) {
+				myPoke = box[0];
+			}
 			updateBox();
 		}
 	};
