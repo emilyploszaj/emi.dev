@@ -28,7 +28,9 @@ var specialTypes = new Set([
 var typeMatchups = new Map();
 var searchResults = new Map();
 var pokemonByName = new Map();
+var pokemonByPokedex = new Map();
 var movesByName = new Map();
+var movesByIndex = new Map();
 var myPoke;
 var theirPoke;
 var box = [];
@@ -86,11 +88,15 @@ fetch("./data.json")
 		for (let i in j.pokemon) {
 			var p = j.pokemon[i];
 			pokemonByName.set(p.name, p);
+			pokemonByPokedex.set(p.pokedex, p);
 			searchResults.set(p.name, 'focusPokemon(' + (p.pokedex) + ')');
 		}
 		for (let i in j.moves) {
 			var m = j.moves[i];
 			movesByName.set(m.name, m);
+			if (m.index) {
+				movesByIndex.set(m.index, m);
+			}
 		}
 		for (let i in j.type_matchups) {
 			var m = j.type_matchups[i];
@@ -885,6 +891,90 @@ function updateBadges() {
 	this.badges = parseInt(document.getElementById("badges").value);
 	localStorage.setItem("badges", badges);
 	updateCalc();
+}
+
+function readPokemonList(bytes, start, capacity, increment) {
+	var count = bytes[start];
+	var p = start + 1;
+	var species = [];
+	for (var i = 0; i < count; i++) {
+		species.push(bytes[p + i]);
+	}
+	if (bytes[p + count] != 0xff) {
+		return;
+	}
+	p += capacity + 1;
+	var pokemon = [];
+	for (var i = 0; i < count; i++) {
+		species[i].level = bytes[p + 0x1f];
+		if (bytes[p] != species[i] && species[i] != 0xfd) {
+			return;
+		}
+		var atk = (bytes[p + 0x15] & 0xf0) >> 4;
+		var def = (bytes[p + 0x15] & 0x0f);
+		var spe = (bytes[p + 0x16] & 0xf0) >> 4;
+		var spa = (bytes[p + 0x16] & 0x0f);
+		var spd = spa
+		var hp = 8 * (atk & 0b1) + 4 * (def & 0b1) + 2 * (spe & 0b1) + (spa & 0b1);
+		var moves = [];
+		for (var j = 0; j < 4; j++) {
+			var move = bytes[p + 0x02 + j];
+			if (movesByIndex.has(move)) {
+				moves.push(movesByIndex.get(move).name);
+			}
+		}
+		pokemon.push({
+			name: pokemonByPokedex.get(species[i]).name,
+			level: bytes[p + 0x1f],
+			dvs: {
+				"hp": hp,
+				"atk": atk,
+				"def": def,
+				"spa": spa,
+				"spd": spd,
+				"spe": spe
+			},
+			"moves": moves,
+			"item": ""
+		})
+		p += increment;
+	}
+	return pokemon;
+}
+
+function readFile(file) {
+	var reader = new FileReader();
+	reader.onload = function(e) {
+		var bytes = new Uint8Array(e.target.result);
+		if (bytes.length > 32000) {
+			pokemon = [];
+			pokemon = pokemon.concat(readPokemonList(bytes, 0x2865, 6, 48));
+			for (var i = 0; i < 7; i++) {
+				pokemon = pokemon.concat(readPokemonList(bytes, 0x4000 + i * 0x450, 20, 32));
+			}
+			// Ignore death box
+			for (var i = 0; i < 6; i++) {
+				pokemon = pokemon.concat(readPokemonList(bytes, 0x6000 + i * 0x450, 20, 32));
+			}
+			box = pokemon;
+			console.log(pokemon);
+			updateBox();
+		}
+	};
+	reader.readAsArrayBuffer(file);
+}
+
+document.ondrop = function(event) {
+	if (event.dataTransfer.files) {
+		console.log(event.dataTransfer.files);
+		var file = event.dataTransfer.files[0];
+		readFile(file);
+	}
+	event.preventDefault();
+}
+
+document.ondragover = function(event) {
+	event.preventDefault();
 }
 
 document.getElementById("badges").oninput = function(event) {

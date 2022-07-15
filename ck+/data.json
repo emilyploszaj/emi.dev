@@ -3,6 +3,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 119,
             "name": "mirror-move",
             "power": 0,
             "pp": 20,
@@ -11,6 +12,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 185,
             "name": "faint-attack",
             "power": 60,
             "pp": 20,
@@ -19,6 +21,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 109,
             "name": "confuse-ray",
             "power": 0,
             "pp": 10,
@@ -27,6 +30,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 228,
             "name": "pursuit",
             "power": 40,
             "pp": 20,
@@ -45,6 +49,7 @@
         {
             "accuracy": 90,
             "extra": [],
+            "index": 240,
             "name": "rain-dance",
             "power": 0,
             "pp": 5,
@@ -53,6 +58,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 42,
             "name": "pin-missile",
             "power": 20,
             "pp": 20,
@@ -61,6 +67,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 108,
             "name": "smokescreen",
             "power": 0,
             "pp": 3,
@@ -69,6 +76,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 153,
             "name": "explosion",
             "power": 250,
             "pp": 1,
@@ -77,6 +85,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 27,
             "name": "rolling-kick",
             "power": 60,
             "pp": 15,
@@ -85,6 +94,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 208,
             "name": "milk-drink",
             "power": 0,
             "pp": 10,
@@ -95,6 +105,7 @@
             "extra": [
                 "25% recoil damage"
             ],
+            "index": 143,
             "name": "sky-attack",
             "power": 120,
             "pp": 5,
@@ -103,6 +114,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 170,
             "name": "mind-reader",
             "power": 0,
             "pp": 5,
@@ -111,6 +123,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 9,
             "name": "thunderpunch",
             "power": 75,
             "pp": 15,
@@ -119,6 +132,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 179,
             "name": "reversal",
             "power": 1,
             "pp": 15,
@@ -127,6 +141,7 @@
         {
             "accuracy": 85,
             "extra": [],
+            "index": 56,
             "name": "hydro-pump",
             "power": 120,
             "pp": 8,
@@ -145,6 +160,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 29,
             "name": "headbutt",
             "power": 70,
             "pp": 15,
@@ -153,6 +169,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 31,
             "name": "fury-attack",
             "power": 15,
             "pp": 20,
@@ -161,6 +178,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 249,
             "name": "rock-smash",
             "power": 40,
             "pp": 15,
@@ -169,6 +187,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 187,
             "name": "belly-drum",
             "power": 0,
             "pp": 1,
@@ -177,6 +196,7 @@
         {
             "accuracy": 90,
             "extra": [],
+            "index": 241,
             "name": "sunny-day",
             "power": 0,
             "pp": 5,
@@ -185,6 +205,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 245,
             "name": "extremespeed",
             "power": 100,
             "pp": 8,
@@ -193,6 +214,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 214,
             "name": "sleep-talk",
             "power": 0,
             "pp": 10,
@@ -203,6 +225,7 @@
             "extra": [
                 "Softboiled effect"
             ],
+            "index": 234,
             "name": "morning-sun",
             "power": 0,
             "pp": 10,
@@ -211,6 +234,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 30,
             "name": "horn-attack",
             "power": 65,
             "pp": 25,
@@ -219,6 +243,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 122,
             "name": "lick",
             "power": 20,
             "pp": 30,
@@ -227,6 +252,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 93,
             "name": "confusion",
             "power": 50,
             "pp": 25,
@@ -235,6 +261,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 139,
             "name": "poison-gas",
             "power": 0,
             "pp": 3,
@@ -243,6 +270,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 163,
             "name": "slash",
             "power": 70,
             "pp": 20,
@@ -251,6 +279,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 117,
             "name": "bide",
             "power": 0,
             "pp": 10,
@@ -259,6 +288,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 101,
             "name": "night-shade",
             "power": 1,
             "pp": 15,
@@ -267,6 +297,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 14,
             "name": "swords-dance",
             "power": 0,
             "pp": 2,
@@ -275,6 +306,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 164,
             "name": "substitute",
             "power": 0,
             "pp": 10,
@@ -283,6 +315,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 19,
             "name": "fly",
             "power": 70,
             "pp": 15,
@@ -291,6 +324,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 121,
             "name": "egg-bomb",
             "power": 100,
             "pp": 10,
@@ -299,6 +333,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 112,
             "name": "barrier",
             "power": 0,
             "pp": 3,
@@ -307,6 +342,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 186,
             "name": "sweet-kiss",
             "power": 0,
             "pp": 10,
@@ -315,6 +351,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 161,
             "name": "tri-attack",
             "power": 80,
             "pp": 10,
@@ -323,6 +360,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 168,
             "name": "thief",
             "power": 40,
             "pp": 10,
@@ -331,6 +369,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 193,
             "name": "foresight",
             "power": 0,
             "pp": 2,
@@ -339,6 +378,7 @@
         {
             "accuracy": 90,
             "extra": [],
+            "index": 158,
             "name": "hyper-fang",
             "power": 80,
             "pp": 15,
@@ -347,6 +387,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 134,
             "name": "kinesis",
             "power": 0,
             "pp": 3,
@@ -355,6 +396,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 116,
             "name": "focus-energy",
             "power": 0,
             "pp": 3,
@@ -363,6 +405,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 15,
             "name": "cut",
             "power": 50,
             "pp": 30,
@@ -371,6 +414,7 @@
         {
             "accuracy": 30,
             "extra": [],
+            "index": 12,
             "name": "guillotine",
             "power": 0,
             "pp": 5,
@@ -379,6 +423,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 127,
             "name": "waterfall",
             "power": 95,
             "pp": 15,
@@ -387,6 +432,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 51,
             "name": "acid",
             "power": 40,
             "pp": 30,
@@ -395,6 +441,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 100,
             "name": "teleport",
             "power": 0,
             "pp": 1,
@@ -403,6 +450,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 204,
             "name": "charm",
             "power": 0,
             "pp": 3,
@@ -411,6 +459,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 136,
             "name": "hi-jump-kick",
             "power": 110,
             "pp": 20,
@@ -419,6 +468,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 97,
             "name": "agility",
             "power": 0,
             "pp": 2,
@@ -427,6 +477,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 251,
             "name": "beat-up",
             "power": 10,
             "pp": 10,
@@ -435,6 +486,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 55,
             "name": "water-gun",
             "power": 40,
             "pp": 25,
@@ -443,6 +495,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 178,
             "name": "cotton-spore",
             "power": 0,
             "pp": 15,
@@ -451,6 +504,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 70,
             "name": "strength",
             "power": 80,
             "pp": 15,
@@ -459,6 +513,7 @@
         {
             "accuracy": 70,
             "extra": [],
+            "index": 59,
             "name": "blizzard",
             "power": 120,
             "pp": 8,
@@ -467,6 +522,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 77,
             "name": "poisonpowder",
             "power": 0,
             "pp": 3,
@@ -475,6 +531,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 138,
             "name": "dream-eater",
             "power": 100,
             "pp": 15,
@@ -483,6 +540,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 106,
             "name": "harden",
             "power": 0,
             "pp": 5,
@@ -491,6 +549,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 154,
             "name": "fury-swipes",
             "power": 18,
             "pp": 15,
@@ -499,6 +558,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 180,
             "name": "spite",
             "power": 0,
             "pp": 10,
@@ -509,6 +569,7 @@
             "extra": [
                 "6.67% chance for each tri attack effect"
             ],
+            "index": 177,
             "name": "aeroblast",
             "power": 120,
             "pp": 8,
@@ -517,6 +578,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 38,
             "name": "double-edge",
             "power": 120,
             "pp": 15,
@@ -525,6 +587,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 44,
             "name": "bite",
             "power": 60,
             "pp": 25,
@@ -533,6 +596,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 110,
             "name": "withdraw",
             "power": 0,
             "pp": 3,
@@ -541,6 +605,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 76,
             "name": "solarbeam",
             "power": 120,
             "pp": 10,
@@ -549,6 +614,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 135,
             "name": "softboiled",
             "power": 0,
             "pp": 10,
@@ -557,6 +623,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 156,
             "name": "rest",
             "power": 0,
             "pp": 10,
@@ -565,6 +632,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 73,
             "name": "leech-seed",
             "power": 0,
             "pp": 10,
@@ -573,6 +641,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 71,
             "name": "absorb",
             "power": 20,
             "pp": 20,
@@ -581,6 +650,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 244,
             "name": "psych-up",
             "power": 0,
             "pp": 1,
@@ -589,6 +659,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 81,
             "name": "string-shot",
             "power": 0,
             "pp": 3,
@@ -597,6 +668,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 17,
             "name": "wing-attack",
             "power": 60,
             "pp": 35,
@@ -605,6 +677,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 37,
             "name": "thrash",
             "power": 90,
             "pp": 20,
@@ -613,6 +686,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 111,
             "name": "defense-curl",
             "power": 0,
             "pp": 3,
@@ -621,6 +695,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 129,
             "name": "swift",
             "power": 60,
             "pp": 20,
@@ -629,6 +704,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 160,
             "name": "conversion",
             "power": 0,
             "pp": 3,
@@ -637,6 +713,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 220,
             "name": "pain-split",
             "power": 0,
             "pp": 20,
@@ -645,6 +722,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 233,
             "name": "vital-throw",
             "power": 70,
             "pp": 10,
@@ -653,6 +731,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 52,
             "name": "ember",
             "power": 40,
             "pp": 25,
@@ -661,6 +740,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 165,
             "name": "struggle",
             "power": 50,
             "pp": 1,
@@ -669,6 +749,7 @@
         {
             "accuracy": 85,
             "extra": [],
+            "index": 36,
             "name": "take-down",
             "power": 90,
             "pp": 20,
@@ -677,6 +758,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 96,
             "name": "meditate",
             "power": 0,
             "pp": 2,
@@ -685,6 +767,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 174,
             "name": "curse",
             "power": 0,
             "pp": 3,
@@ -693,6 +776,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 199,
             "name": "lock-on",
             "power": 0,
             "pp": 5,
@@ -701,6 +785,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 28,
             "name": "sand-attack",
             "power": 0,
             "pp": 5,
@@ -709,6 +794,7 @@
         {
             "accuracy": 30,
             "extra": [],
+            "index": 32,
             "name": "horn-drill",
             "power": 1,
             "pp": 5,
@@ -719,6 +805,7 @@
             "extra": [
                 "No happiness scaling effect"
             ],
+            "index": 218,
             "name": "frustration",
             "power": 102,
             "pp": 20,
@@ -727,6 +814,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 46,
             "name": "roar",
             "power": 0,
             "pp": 2,
@@ -735,6 +823,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 125,
             "name": "bone-club",
             "power": 65,
             "pp": 20,
@@ -743,6 +832,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 69,
             "name": "seismic-toss",
             "power": 1,
             "pp": 20,
@@ -751,6 +841,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 35,
             "name": "wrap",
             "power": 15,
             "pp": 20,
@@ -762,6 +853,7 @@
                 "Damage = to user’s level",
                 "No typing"
             ],
+            "index": 149,
             "name": "psywave",
             "power": 1,
             "pp": 15,
@@ -770,6 +862,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 115,
             "name": "reflect",
             "power": 0,
             "pp": 3,
@@ -778,6 +871,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 20,
             "name": "bind",
             "power": 15,
             "pp": 20,
@@ -786,6 +880,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 226,
             "name": "baton-pass",
             "power": 0,
             "pp": 1,
@@ -794,6 +889,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 8,
             "name": "ice-punch",
             "power": 75,
             "pp": 15,
@@ -802,6 +898,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 171,
             "name": "nightmare",
             "power": 0,
             "pp": 15,
@@ -810,6 +907,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 219,
             "name": "safeguard",
             "power": 0,
             "pp": 25,
@@ -818,6 +916,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 60,
             "name": "psybeam",
             "power": 65,
             "pp": 20,
@@ -826,6 +925,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 144,
             "name": "transform",
             "power": 0,
             "pp": 10,
@@ -834,6 +934,7 @@
         {
             "accuracy": 90,
             "extra": [],
+            "index": 224,
             "name": "megahorn",
             "power": 120,
             "pp": 10,
@@ -842,6 +943,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 84,
             "name": "thundershock",
             "power": 40,
             "pp": 30,
@@ -860,6 +962,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 4,
             "name": "comet-punch",
             "power": 18,
             "pp": 15,
@@ -868,6 +971,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 82,
             "name": "dragon-rage",
             "power": 40,
             "pp": 10,
@@ -876,6 +980,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 23,
             "name": "stomp",
             "power": 65,
             "pp": 20,
@@ -884,6 +989,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 167,
             "name": "triple-kick",
             "power": 10,
             "pp": 10,
@@ -892,6 +998,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 65,
             "name": "drill-peck",
             "power": 80,
             "pp": 20,
@@ -900,6 +1007,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 230,
             "name": "sweet-scent",
             "power": 0,
             "pp": 20,
@@ -908,6 +1016,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 151,
             "name": "acid-armor",
             "power": 0,
             "pp": 2,
@@ -926,6 +1035,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 198,
             "name": "bone-rush",
             "power": 25,
             "pp": 10,
@@ -934,6 +1044,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 205,
             "name": "rollout",
             "power": 30,
             "pp": 1,
@@ -942,6 +1053,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 98,
             "name": "quick-attack",
             "power": 40,
             "pp": 30,
@@ -950,6 +1062,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 221,
             "name": "sacred-fire",
             "power": 120,
             "pp": 10,
@@ -958,6 +1071,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 72,
             "name": "mega-drain",
             "power": 40,
             "pp": 10,
@@ -966,6 +1080,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 99,
             "name": "rage",
             "power": 20,
             "pp": 20,
@@ -974,6 +1089,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 50,
             "name": "disable",
             "power": 0,
             "pp": 5,
@@ -982,6 +1098,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 3,
             "name": "doubleslap",
             "power": 15,
             "pp": 10,
@@ -990,6 +1107,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 124,
             "name": "sludge",
             "power": 65,
             "pp": 20,
@@ -998,6 +1116,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 62,
             "name": "aurora-beam",
             "power": 65,
             "pp": 20,
@@ -1006,6 +1125,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 24,
             "name": "double-kick",
             "power": 30,
             "pp": 30,
@@ -1014,6 +1134,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 162,
             "name": "super-fang",
             "power": 1,
             "pp": 10,
@@ -1022,6 +1143,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 39,
             "name": "tail-whip",
             "power": 0,
             "pp": 3,
@@ -1030,6 +1152,7 @@
         {
             "accuracy": 90,
             "extra": [],
+            "index": 217,
             "name": "present",
             "power": 1,
             "pp": 15,
@@ -1038,6 +1161,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 92,
             "name": "toxic",
             "power": 0,
             "pp": 10,
@@ -1046,6 +1170,7 @@
         {
             "accuracy": 90,
             "extra": [],
+            "index": 231,
             "name": "iron-tail",
             "power": 100,
             "pp": 15,
@@ -1054,6 +1179,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 120,
             "name": "selfdestruct",
             "power": 200,
             "pp": 1,
@@ -1062,6 +1188,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 7,
             "name": "fire-punch",
             "power": 75,
             "pp": 15,
@@ -1070,6 +1197,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 67,
             "name": "low-kick",
             "power": 50,
             "pp": 20,
@@ -1078,6 +1206,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 88,
             "name": "rock-throw",
             "power": 50,
             "pp": 15,
@@ -1086,6 +1215,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 146,
             "name": "dizzy-punch",
             "power": 70,
             "pp": 10,
@@ -1094,6 +1224,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 102,
             "name": "mimic",
             "power": 0,
             "pp": 10,
@@ -1102,6 +1233,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 147,
             "name": "spore",
             "power": 0,
             "pp": 15,
@@ -1110,6 +1242,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 169,
             "name": "spider-web",
             "power": 0,
             "pp": 10,
@@ -1118,6 +1251,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 229,
             "name": "rapid-spin",
             "power": 20,
             "pp": 40,
@@ -1126,6 +1260,7 @@
         {
             "accuracy": 85,
             "extra": [],
+            "index": 126,
             "name": "fire-blast",
             "power": 120,
             "pp": 8,
@@ -1134,6 +1269,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 181,
             "name": "powder-snow",
             "power": 40,
             "pp": 25,
@@ -1142,6 +1278,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 173,
             "name": "snore",
             "power": 60,
             "pp": 15,
@@ -1150,6 +1287,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 222,
             "name": "magnitude",
             "power": 1,
             "pp": 30,
@@ -1158,6 +1296,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 227,
             "name": "encore",
             "power": 0,
             "pp": 2,
@@ -1166,6 +1305,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 131,
             "name": "spike-cannon",
             "power": 20,
             "pp": 15,
@@ -1174,6 +1314,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 54,
             "name": "mist",
             "power": 0,
             "pp": 30,
@@ -1182,6 +1323,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 243,
             "name": "mirror-coat",
             "power": 1,
             "pp": 20,
@@ -1190,6 +1332,7 @@
         {
             "accuracy": 90,
             "extra": [],
+            "index": 142,
             "name": "lovely-kiss",
             "power": 0,
             "pp": 10,
@@ -1198,6 +1341,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 141,
             "name": "leech-life",
             "power": 40,
             "pp": 15,
@@ -1206,6 +1350,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 159,
             "name": "sharpen",
             "power": 0,
             "pp": 1,
@@ -1214,6 +1359,7 @@
         {
             "accuracy": 80,
             "extra": [],
+            "index": 148,
             "name": "flash",
             "power": 0,
             "pp": 5,
@@ -1232,6 +1378,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 155,
             "name": "bonemerang",
             "power": 50,
             "pp": 10,
@@ -1250,6 +1397,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 152,
             "name": "crabhammer",
             "power": 120,
             "pp": 10,
@@ -1258,6 +1406,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 6,
             "name": "pay-day",
             "power": 40,
             "pp": 20,
@@ -1266,6 +1415,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 213,
             "name": "attract",
             "power": 0,
             "pp": 5,
@@ -1276,6 +1426,7 @@
             "extra": [
                 "Fly effect"
             ],
+            "index": 13,
             "name": "razor-wind",
             "power": 80,
             "pp": 10,
@@ -1284,6 +1435,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 118,
             "name": "metronome",
             "power": 0,
             "pp": 10,
@@ -1292,6 +1444,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 182,
             "name": "protect",
             "power": 0,
             "pp": 10,
@@ -1300,6 +1453,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 242,
             "name": "crunch",
             "power": 80,
             "pp": 15,
@@ -1308,6 +1462,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 86,
             "name": "thunder-wave",
             "power": 0,
             "pp": 20,
@@ -1316,6 +1471,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 104,
             "name": "double-team",
             "power": 0,
             "pp": 3,
@@ -1324,6 +1480,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 250,
             "name": "whirlpool",
             "power": 35,
             "pp": 15,
@@ -1332,6 +1489,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 85,
             "name": "thunderbolt",
             "power": 95,
             "pp": 15,
@@ -1340,6 +1498,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 53,
             "name": "flamethrower",
             "power": 95,
             "pp": 15,
@@ -1348,6 +1507,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 130,
             "name": "skull-bash",
             "power": 100,
             "pp": 15,
@@ -1358,6 +1518,7 @@
             "extra": [
                 "Softboiled effect"
             ],
+            "index": 236,
             "name": "moonlight",
             "power": 0,
             "pp": 5,
@@ -1366,6 +1527,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 22,
             "name": "vine-whip",
             "power": 35,
             "pp": 10,
@@ -1374,6 +1536,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 113,
             "name": "light-screen",
             "power": 0,
             "pp": 3,
@@ -1382,6 +1545,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 206,
             "name": "false-swipe",
             "power": 40,
             "pp": 40,
@@ -1390,6 +1554,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 103,
             "name": "screech",
             "power": 0,
             "pp": 2,
@@ -1398,6 +1563,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 201,
             "name": "sandstorm",
             "power": 0,
             "pp": 10,
@@ -1406,6 +1572,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 166,
             "name": "sketch",
             "power": 0,
             "pp": 1,
@@ -1424,6 +1591,7 @@
         {
             "accuracy": 75,
             "extra": [],
+            "index": 21,
             "name": "slam",
             "power": 80,
             "pp": 20,
@@ -1452,6 +1620,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 83,
             "name": "fire-spin",
             "power": 15,
             "pp": 15,
@@ -1460,6 +1629,7 @@
         {
             "accuracy": 55,
             "extra": [],
+            "index": 48,
             "name": "supersonic",
             "power": 0,
             "pp": 20,
@@ -1468,6 +1638,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 145,
             "name": "bubble",
             "power": 20,
             "pp": 30,
@@ -1476,6 +1647,7 @@
         {
             "accuracy": 50,
             "extra": [],
+            "index": 223,
             "name": "dynamicpunch",
             "power": 100,
             "pp": 5,
@@ -1484,6 +1656,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 140,
             "name": "barrage",
             "power": 15,
             "pp": 20,
@@ -1492,6 +1665,7 @@
         {
             "accuracy": 70,
             "extra": [],
+            "index": 47,
             "name": "sing",
             "power": 0,
             "pp": 5,
@@ -1500,6 +1674,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 41,
             "name": "twineedle",
             "power": 25,
             "pp": 20,
@@ -1508,6 +1683,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 107,
             "name": "minimize",
             "power": 0,
             "pp": 3,
@@ -1516,6 +1692,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 49,
             "name": "sonicboom",
             "power": 20,
             "pp": 20,
@@ -1524,6 +1701,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 202,
             "name": "giga-drain",
             "power": 75,
             "pp": 10,
@@ -1532,6 +1710,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 238,
             "name": "cross-chop",
             "power": 100,
             "pp": 8,
@@ -1540,6 +1719,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 63,
             "name": "hyper-beam",
             "power": 150,
             "pp": 5,
@@ -1548,6 +1728,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 68,
             "name": "counter",
             "power": 1,
             "pp": 20,
@@ -1556,6 +1737,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 78,
             "name": "stun-spore",
             "power": 0,
             "pp": 3,
@@ -1564,6 +1746,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 91,
             "name": "dig",
             "power": 60,
             "pp": 10,
@@ -1572,6 +1755,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 61,
             "name": "bubblebeam",
             "power": 65,
             "pp": 20,
@@ -1580,6 +1764,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 57,
             "name": "surf",
             "power": 80,
             "pp": 15,
@@ -1588,6 +1773,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 75,
             "name": "razor-leaf",
             "power": 55,
             "pp": 25,
@@ -1596,6 +1782,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 209,
             "name": "spark",
             "power": 65,
             "pp": 20,
@@ -1604,6 +1791,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 246,
             "name": "ancientpower",
             "power": 100,
             "pp": 8,
@@ -1612,6 +1800,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 114,
             "name": "haze",
             "power": 0,
             "pp": 3,
@@ -1620,6 +1809,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 157,
             "name": "rock-slide",
             "power": 75,
             "pp": 10,
@@ -1628,6 +1818,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 18,
             "name": "whirlwind",
             "power": 0,
             "pp": 20,
@@ -1646,6 +1837,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 172,
             "name": "flame-wheel",
             "power": 60,
             "pp": 25,
@@ -1654,6 +1846,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 132,
             "name": "constrict",
             "power": 10,
             "pp": 35,
@@ -1664,6 +1857,7 @@
             "extra": [
                 "Lowers defense instead of special defense"
             ],
+            "index": 247,
             "name": "shadow-ball",
             "power": 80,
             "pp": 15,
@@ -1672,6 +1866,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 191,
             "name": "spikes",
             "power": 0,
             "pp": 1,
@@ -1680,6 +1875,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 40,
             "name": "poison-sting",
             "power": 15,
             "pp": 35,
@@ -1688,6 +1884,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 74,
             "name": "growth",
             "power": 0,
             "pp": 3,
@@ -1696,6 +1893,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 43,
             "name": "leer",
             "power": 0,
             "pp": 2,
@@ -1704,6 +1902,7 @@
         {
             "accuracy": 30,
             "extra": [],
+            "index": 90,
             "name": "fissure",
             "power": 1,
             "pp": 5,
@@ -1712,6 +1911,7 @@
         {
             "accuracy": 50,
             "extra": [],
+            "index": 192,
             "name": "zap-cannon",
             "power": 100,
             "pp": 5,
@@ -1720,6 +1920,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 188,
             "name": "sludge-bomb",
             "power": 90,
             "pp": 10,
@@ -1728,6 +1929,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 196,
             "name": "icy-wind",
             "power": 55,
             "pp": 15,
@@ -1736,6 +1938,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 133,
             "name": "amnesia",
             "power": 0,
             "pp": 2,
@@ -1744,6 +1947,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 1,
             "name": "pound",
             "power": 40,
             "pp": 35,
@@ -1752,6 +1956,7 @@
         {
             "accuracy": 75,
             "extra": [],
+            "index": 79,
             "name": "sleep-powder",
             "power": 0,
             "pp": 3,
@@ -1760,6 +1965,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 10,
             "name": "scratch",
             "power": 40,
             "pp": 35,
@@ -1768,6 +1974,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 137,
             "name": "glare",
             "power": 0,
             "pp": 3,
@@ -1786,6 +1993,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 16,
             "name": "gust",
             "power": 40,
             "pp": 35,
@@ -1794,6 +2002,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 190,
             "name": "octazooka",
             "power": 95,
             "pp": 10,
@@ -1802,6 +2011,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 45,
             "name": "growl",
             "power": 0,
             "pp": 2,
@@ -1810,6 +2020,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 26,
             "name": "jump-kick",
             "power": 70,
             "pp": 25,
@@ -1818,6 +2029,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 184,
             "name": "scary-face",
             "power": 0,
             "pp": 2,
@@ -1838,6 +2050,7 @@
             "extra": [
                 "Softboiled effect"
             ],
+            "index": 235,
             "name": "synthesis",
             "power": 0,
             "pp": 10,
@@ -1846,6 +2059,7 @@
         {
             "accuracy": 75,
             "extra": [],
+            "index": 25,
             "name": "mega-kick",
             "power": 120,
             "pp": 5,
@@ -1854,6 +2068,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 197,
             "name": "detect",
             "power": 0,
             "pp": 5,
@@ -1862,6 +2077,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 207,
             "name": "swagger",
             "power": 0,
             "pp": 15,
@@ -1880,6 +2096,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 189,
             "name": "mud-slap",
             "power": 20,
             "pp": 10,
@@ -1890,6 +2107,7 @@
             "extra": [
                 "No recoil"
             ],
+            "index": 66,
             "name": "submission",
             "power": 80,
             "pp": 25,
@@ -1908,6 +2126,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 248,
             "name": "future-sight",
             "power": 80,
             "pp": 15,
@@ -1916,6 +2135,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 194,
             "name": "destiny-bond",
             "power": 0,
             "pp": 5,
@@ -1924,6 +2144,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 210,
             "name": "fury-cutter",
             "power": 20,
             "pp": 20,
@@ -1942,6 +2163,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 175,
             "name": "flail",
             "power": 1,
             "pp": 15,
@@ -1950,6 +2172,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 203,
             "name": "endure",
             "power": 0,
             "pp": 10,
@@ -1960,6 +2183,7 @@
             "extra": [
                 "10% chance to confuse opponent"
             ],
+            "index": 80,
             "name": "petal-dance",
             "power": 90,
             "pp": 20,
@@ -1968,6 +2192,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 128,
             "name": "clamp",
             "power": 35,
             "pp": 10,
@@ -1976,6 +2201,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 212,
             "name": "mean-look",
             "power": 0,
             "pp": 5,
@@ -1984,6 +2210,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 2,
             "name": "karate-chop",
             "power": 50,
             "pp": 25,
@@ -1992,6 +2219,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 94,
             "name": "psychic-m",
             "power": 90,
             "pp": 10,
@@ -2000,6 +2228,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 150,
             "name": "splash",
             "power": 0,
             "pp": 5,
@@ -2008,6 +2237,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 11,
             "name": "vicegrip",
             "power": 55,
             "pp": 30,
@@ -2016,6 +2246,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 58,
             "name": "ice-beam",
             "power": 95,
             "pp": 10,
@@ -2024,6 +2255,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 195,
             "name": "perish-song",
             "power": 0,
             "pp": 5,
@@ -2032,6 +2264,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 211,
             "name": "steel-wing",
             "power": 80,
             "pp": 25,
@@ -2040,6 +2273,7 @@
         {
             "accuracy": 85,
             "extra": [],
+            "index": 5,
             "name": "mega-punch",
             "power": 80,
             "pp": 20,
@@ -2048,6 +2282,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 33,
             "name": "tackle",
             "power": 35,
             "pp": 35,
@@ -2056,6 +2291,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 225,
             "name": "dragonbreath",
             "power": 60,
             "pp": 20,
@@ -2064,6 +2300,7 @@
         {
             "accuracy": 70,
             "extra": [],
+            "index": 95,
             "name": "hypnosis",
             "power": 0,
             "pp": 20,
@@ -2072,6 +2309,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 123,
             "name": "smog",
             "power": 20,
             "pp": 20,
@@ -2080,6 +2318,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 89,
             "name": "earthquake",
             "power": 100,
             "pp": 10,
@@ -2100,6 +2339,7 @@
             "extra": [
                 "No happiness scaling effect"
             ],
+            "index": 216,
             "name": "return",
             "power": 102,
             "pp": 20,
@@ -2108,6 +2348,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 183,
             "name": "mach-punch",
             "power": 40,
             "pp": 30,
@@ -2116,6 +2357,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 176,
             "name": "conversion2",
             "power": 0,
             "pp": 3,
@@ -2124,6 +2366,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 237,
             "name": "hidden-power",
             "power": 1,
             "pp": 15,
@@ -2132,6 +2375,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 64,
             "name": "peck",
             "power": 35,
             "pp": 35,
@@ -2140,6 +2384,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 239,
             "name": "twister",
             "power": 40,
             "pp": 20,
@@ -2148,6 +2393,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 215,
             "name": "heal-bell",
             "power": 0,
             "pp": 5,
@@ -2156,6 +2402,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 200,
             "name": "outrage",
             "power": 90,
             "pp": 15,
@@ -2164,6 +2411,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 232,
             "name": "metal-claw",
             "power": 100,
             "pp": 10,
@@ -2172,6 +2420,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 105,
             "name": "recover",
             "power": 0,
             "pp": 20,
@@ -2180,6 +2429,7 @@
         {
             "accuracy": 100,
             "extra": [],
+            "index": 34,
             "name": "body-slam",
             "power": 85,
             "pp": 15,
@@ -2188,6 +2438,7 @@
         {
             "accuracy": 70,
             "extra": [],
+            "index": 87,
             "name": "thunder",
             "power": 120,
             "pp": 10,
