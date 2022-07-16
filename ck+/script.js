@@ -506,7 +506,7 @@ function padNumber(s) {
 }
 
 function fullCapitalize(s) {
-	return s.replaceAll("-", " ").replaceAll(/\w\S*/g, (word) => (word.replace(/^\w/, (c) => c.toUpperCase())));
+	return s.replace(/-/g, " ").replace(/\w\S*/g, (word) => (word.replace(/^\w/, (c) => c.toUpperCase())));
 }
 
 function getEmptyStages() {
