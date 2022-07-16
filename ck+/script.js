@@ -31,6 +31,9 @@ var pokemonByName = new Map();
 var pokemonByPokedex = new Map();
 var movesByName = new Map();
 var movesByIndex = new Map();
+var fishingPools = new Map();
+var headbuttPools = new Map();
+var rockPools = new Map();
 var myPoke;
 var theirPoke;
 var box = [];
@@ -106,6 +109,22 @@ fetch("./data.json")
 			var map = typeMatchups.get(m.attacker);
 			map.set(m.defender, m.multiplier);
 		}
+		for (let i in j.encounters) {
+			var e = j.encounters[i];
+			searchResults.set(e.area.replace("-", " "), 'focusEncounter(' + i + ')');
+		}
+		for (let i in j.encounter_pools.fishing) {
+			var p = j.encounter_pools.fishing[i];
+			fishingPools.set(p.area, p);
+		}
+		for (let i in j.encounter_pools.headbutt) {
+			var p = j.encounter_pools.headbutt[i];
+			headbuttPools.set(p.area, p);
+		}
+		for (let i in j.encounter_pools.rock) {
+			var p = j.encounter_pools.rock[i];
+			rockPools.set(p.area, p);
+		}
 		enemyTeam = j.trainers[17].team;
 		if (localStorage.getItem("last-trainer")) {
 			var lt = localStorage.getItem("last-trainer");
@@ -129,6 +148,8 @@ fetch("./data.json")
 		} else {
 			setTab("box");
 		}
+		document.getElementById("full-encounter").innerHTML = getEncounterDisplay(data.encounters[20]);
+		setTab("full-encounter");
 	});
 
 function displayTrainers() {
@@ -150,6 +171,17 @@ function displayTrainers() {
 	document.getElementById("trainers").innerHTML = v;
 }
 
+function focusEncounter(i) {
+	document.getElementById("search-box").value = "";
+	updateSearch("");
+	document.getElementById("full-encounter").innerHTML = getEncounterDisplay(data.encounters[i]);
+	setTab("full-encounter");
+}
+
+function focusPokeByName(name) {
+	focusPokemon(pokemonByName.get(name).pokedex);
+}
+
 function focusPokemon(i) {
 	document.getElementById("search-box").value = "";
 	updateSearch("");
@@ -169,7 +201,7 @@ function displayCalcPokemon(root, poke, opponent, right) {
 	var player = !right;
 	var p = pokemonByName.get(poke.name);
 
-	root.getElementsByClassName("poke-name")[0].innerHTML = fullCapitalize(p.name);
+	root.getElementsByClassName("poke-name")[0].innerHTML = pokeLink(p);
 	root.getElementsByClassName("poke-level")[0].innerHTML = "Lvl " + poke.level;
 	root.getElementsByClassName("poke-item")[0].innerHTML = poke.item;
 	root.getElementsByClassName("poke-icon")[0].innerHTML = '<img src="https://img.pokemondb.net/sprites/crystal/normal/' + p.name + '.png">';
@@ -261,7 +293,7 @@ function getTinyPokemonDisplay(tp, extra = "") {
 	var v = '<div class="tiny-poke">';
 	v += '<div class="tiny-poke-icon"><img src="https://img.pokemondb.net/sprites/crystal/normal/' + p.name + '.png"></div>';
 	v += '<div class="tiny-poke-info">';
-	v += '<div>' + fullCapitalize(p.name) + ' - Lvl ' + tp.level + ' @ ' + tp.item + '</div>';
+	v += '<div>' + pokeLink(p.name) + ' - Lvl ' + tp.level + ' @ ' + tp.item + '</div>';
 	v += "<table><tr>";
 	for (var i = 0; i < 4; i++) {
 		if (i == 2) {
@@ -309,7 +341,7 @@ function getTinyPokemonDisplay(tp, extra = "") {
 
 function displayPokemon(root, i) {
 	var p = data.pokemon[i];
-	root.getElementsByClassName("poke-name")[0].innerHTML = fullCapitalize(p.name);
+	root.getElementsByClassName("poke-name")[0].innerHTML = pokeLink(p);
 	root.getElementsByClassName("poke-dex-num")[0].innerHTML = "#" + padNumber(p.pokedex);
 	root.getElementsByClassName("poke-icon")[0].innerHTML = '<img src="https://img.pokemondb.net/sprites/crystal/normal/' + p.name + '.png">';
 	var types = '<div style="display:flex">' + prettyType(p.types[0]);
@@ -324,6 +356,24 @@ function displayPokemon(root, i) {
 	displayStat(root.getElementsByClassName("poke-spa")[0], p.stats.spa);
 	displayStat(root.getElementsByClassName("poke-spd")[0], p.stats.spd);
 	displayStat(root.getElementsByClassName("poke-spe")[0], p.stats.spe);
+	var evo = "";
+	if (p.evolutions) {
+		evo += "<div>Evolutions:</div>"
+		for (var i = 0; i < p.evolutions.length; i++) {
+			var evolution = p.evolutions[i];
+			var before;
+			if (evolution.method == "item") {
+				before = evolution.item;
+			} else if (evolution.method == "level") {
+				before = "Level " + evolution.level;
+			} else {
+				before = evolution.method;
+			}
+			evo += "<div>" + before + " -> " + pokeLink(evolution.into) + "</div>"
+		}
+		evo += "<br>"
+	}
+	root.getElementsByClassName("poke-evolution")[0].innerHTML = evo;
 	var l = "";
 	l += '<div>Learnset:</div><table class="move-table">';
 	for (let mi in p.learnset) {
@@ -352,6 +402,56 @@ function displayStat(div, stat) {
 		rating = "great"
 	}
 	full.style.backgroundColor = "var(--stat-bar-fill-" + rating + ")";
+}
+
+function getEncounterDisplay(pools) {
+	var v = "";
+	v += "<h3>" + fullCapitalize(pools.area) + "</h3>"
+	if (pools.normal) {
+		v += "<p>Walking (Lvl " + pools.normal.day[0].level + "):</p>";
+		v += getEncounterPoolDisplay(pools.normal.day, "day");
+		v += getEncounterPoolDisplay(pools.normal.night, "night");
+		v += getEncounterPoolDisplay(pools.normal.morning, "morning");
+	}
+	if (pools.headbutt) {
+		var pool = headbuttPools.get(pools.headbutt);
+		v += "<p>Headbutt (Lvl " + pool.headbutt[0].level + "):</p>";
+		v += getEncounterPoolDisplay(pool.headbutt, "day");
+	}
+	if (pools.fishing) {
+		var pool = fishingPools.get(pools.fishing);
+		v += "<p>Old Rod (Lvl " + pool.old.day[0].level + ":</p>";
+		v += getEncounterPoolDisplay(pool.old.day, "day");
+		v += getEncounterPoolDisplay(pool.old.night, "night");
+		v += "<p>Good Rod (Lvl " + pool.good.day[0].level + ":</p>";
+		v += getEncounterPoolDisplay(pool.good.day, "day");
+		v += getEncounterPoolDisplay(pool.good.night, "night");
+		v += "<p>Super Rod (Lvl " + pool.super.day[0].level + ":</p>";
+		v += getEncounterPoolDisplay(pool.super.day, "day");
+		v += getEncounterPoolDisplay(pool.super.night, "night");
+	}
+	if (pools.rock) {
+		var pool = rockPools.get(pools.rock);
+		v += "<p>Rock Smash (Lvl " + pool.rock[0].level + "):</p>";
+		v += getEncounterPoolDisplay(pool.rock, "day");
+	}
+	return v;
+}
+
+function getEncounterPoolDisplay(pool, time) {
+	var v = "";
+	v += '<div class="encounter-pool ' + time + '-pool">';
+	v += '<div style="display:flex">';
+	for (var i = 0; i < pool.length; i++) {
+		v += '<div class="encounter-poke">';
+		v += '<div>' + pool[i].chance + '%</div>';
+		v += '<img style="cursor:pointer;" onclick="focusPokeByName(\'' + pool[i].pokemon
+			+'\')" src="https://img.pokemondb.net/sprites/crystal/normal/' + pool[i].pokemon + '.png">';
+		v += '</div>';
+	}
+	v += '</div>';
+	v += '</div>';
+	return v;
 }
 
 function prettyType(t) {
@@ -400,7 +500,7 @@ function padNumber(s) {
 }
 
 function fullCapitalize(s) {
-	return s.replace(/\w\S*/g, (word) => (word.replace(/^\w/, (c) => c.toUpperCase())));
+	return s.replaceAll("-", " ").replaceAll(/\w\S*/g, (word) => (word.replace(/^\w/, (c) => c.toUpperCase())));
 }
 
 function getEmptyStages() {
@@ -607,7 +707,7 @@ function updateSearch(v) {
 	if (v.length > 0) {
 		for (const n of searchResults.entries()) {
 			if (n[0].includes(v)) {
-				res += '<div class="search-suggestion" onmousedown="' + n[1] + '">' + n[0] + '</div>';
+				res += '<div class="search-suggestion" onmousedown="' + n[1] + '">' + fullCapitalize(n[0]) + '</div>';
 				amount++;
 				if (amount >= 8) {
 					break;
@@ -950,6 +1050,14 @@ function readPokemonList(bytes, start, capacity, increment) {
 		p += increment;
 	}
 	return pokemon;
+}
+
+function pokeLink(p) {
+	var name = p;
+	if (p.name) {
+		name = p.name;
+	}
+	return '<span class="poke-link" onclick="focusPokeByName(\'' + name + '\')">' + fullCapitalize(name) + '</span>'
 }
 
 function readFile(file) {

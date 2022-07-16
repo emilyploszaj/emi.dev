@@ -28,8 +28,8 @@ html {
 }
 
 body {
-	padding-left: calc(50% - 500px);
-	padding-right: calc(50% - 500px);
+	padding-left: calc(50% - 520px);
+	padding-right: calc(50% - 520px);
 }
 
 img {
@@ -59,6 +59,10 @@ button:hover {
 	font-size: 24px;
 }
 
+img {
+	image-rendering: pixelated;
+}
+
 input {
 	font-family: "Ubuntu Mono";
 	font-size: 20px;
@@ -70,6 +74,11 @@ input {
 
 input[type=number] {
 	width:50px;
+}
+
+.poke-link:hover {
+	cursor: pointer;
+	color: var(--highlighted);
 }
 
 .type {
@@ -145,6 +154,42 @@ input[type=number] {
 	display: none;
 }
 
+#full-encounter {
+	padding: 10px;
+	background-color: var(--box-background);
+}
+
+.encounter-poke {
+	background-color: var(--grouping-background);
+	padding: 10px;
+	width: 112px;
+	text-align: center;
+	margin: 2px;
+}
+
+.encounter-poke img {
+	width: 112px;
+	height: 112px;
+	margin-right: 20px;
+}
+
+.encounter-pool {
+	padding: 8px;
+	width: min-content;
+}
+
+.day-pool {
+	background-color: #61b1d6;
+}
+
+.night-pool {
+	background-color: #432f70;
+}
+
+.morning-pool {
+	background-color: #d3c264;
+}
+
 .pokemon-display {
 	padding: 20px;
 	background-color: var(--box-background);
@@ -156,7 +201,6 @@ input[type=number] {
 }
 
 .poke-icon img {
-	image-rendering: pixelated;
 	width: 224px;
 	height: 224px;
 	min-width: 224px;
@@ -247,7 +291,7 @@ input[type=number] {
 }
 
 #player, #opponent, #edited-poke, #edit-fields {
-	width: 450px;
+	width: 470px;
 	padding: 20px;
 	background-color: var(--box-background);
 }
