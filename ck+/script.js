@@ -148,8 +148,6 @@ fetch("./data.json")
 		} else {
 			setTab("box");
 		}
-		document.getElementById("full-encounter").innerHTML = getEncounterDisplay(data.encounters[20]);
-		setTab("full-encounter");
 	});
 
 function displayTrainers() {
@@ -382,6 +380,14 @@ function displayPokemon(root, i) {
 	}
 	l += "</table>";
 	root.getElementsByClassName("learnset")[0].innerHTML = l;
+	l = "";
+	l += '<div>TM/HM:</div><table class="move-table">';
+	for (let mi in p.tmhm) {
+		var m = p.tmhm[mi];
+		l += getMoveDisplay(movesByName.get(m));
+	}
+	l += "</table>";
+	root.getElementsByClassName("tmhm")[0].innerHTML = l;
 }
 
 function displayStat(div, stat) {
