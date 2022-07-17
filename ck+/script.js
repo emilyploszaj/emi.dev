@@ -203,7 +203,14 @@ function displayCalcPokemon(root, poke, opponent, right) {
 	root.getElementsByClassName("poke-level")[0].innerHTML = "Lvl " + poke.level;
 	root.getElementsByClassName("poke-item")[0].innerHTML = poke.item;
 	root.getElementsByClassName("poke-icon")[0].innerHTML = '<img src="https://img.pokemondb.net/sprites/crystal/normal/' + p.name + '.png">';
-
+	if (root.getElementsByClassName("experience").length > 0) {
+		var exp = p.base_experience;
+		exp = parseInt(exp * 1.5); // Trainer
+		exp = parseInt(exp * opponent.level);
+		exp = parseInt(exp / 7);
+		root.getElementsByClassName("experience")[0].innerHTML = " (" + exp + " exp)";
+	}
+	
 	displayCalcStat(root.getElementsByClassName("calc-hp")[0], poke, "hp");
 	displayCalcStat(root.getElementsByClassName("calc-atk")[0], poke, "atk");
 	displayCalcStat(root.getElementsByClassName("calc-def")[0], poke, "def");
