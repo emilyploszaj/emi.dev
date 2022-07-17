@@ -15919,9 +15919,7 @@
                 "spd": 20,
                 "spe": 45
             },
-            "tmhm": [
-                ";-end"
-            ],
+            "tmhm": [],
             "types": [
                 "bug"
             ]
@@ -15955,9 +15953,7 @@
                 "spd": 25,
                 "spe": 30
             },
-            "tmhm": [
-                ";-end"
-            ],
+            "tmhm": [],
             "types": [
                 "bug"
             ]
@@ -16070,9 +16066,7 @@
                 "spd": 20,
                 "spe": 50
             },
-            "tmhm": [
-                ";-end"
-            ],
+            "tmhm": [],
             "types": [
                 "bug",
                 "poison"
@@ -16107,9 +16101,7 @@
                 "spd": 25,
                 "spe": 35
             },
-            "tmhm": [
-                ";-end"
-            ],
+            "tmhm": [],
             "types": [
                 "bug",
                 "poison"
@@ -24868,9 +24860,7 @@
                 "spd": 20,
                 "spe": 80
             },
-            "tmhm": [
-                ";-end"
-            ],
+            "tmhm": [],
             "types": [
                 "water"
             ]
@@ -25070,9 +25060,7 @@
                 "spd": 100,
                 "spe": 100
             },
-            "tmhm": [
-                ";-end"
-            ],
+            "tmhm": [],
             "types": [
                 "normal"
             ]
@@ -30483,9 +30471,7 @@
                 "spd": 48,
                 "spe": 48
             },
-            "tmhm": [
-                ";-end"
-            ],
+            "tmhm": [],
             "types": [
                 "psychic"
             ]
@@ -30524,9 +30510,7 @@
                 "spd": 58,
                 "spe": 33
             },
-            "tmhm": [
-                ";-end"
-            ],
+            "tmhm": [],
             "types": [
                 "psychic"
             ]
@@ -33211,9 +33195,7 @@
                 "spd": 55,
                 "spe": 75
             },
-            "tmhm": [
-                ";-end"
-            ],
+            "tmhm": [],
             "types": [
                 "normal"
             ]
