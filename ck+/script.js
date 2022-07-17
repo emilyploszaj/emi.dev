@@ -1047,7 +1047,7 @@ function readPokemonList(bytes, start, capacity, increment) {
 			}
 		}
 		pokemon.push({
-			name: pokemonByPokedex.get(species[i]).name,
+			name: pokemonByPokedex.get(bytes[p]).name,
 			level: bytes[p + 0x1f],
 			dvs: {
 				"hp": hp,
