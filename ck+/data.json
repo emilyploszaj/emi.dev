@@ -3605,7 +3605,24 @@
                         "pokemon": "omanyte"
                     }
                 ]
-            }
+            },
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 30,
+                    "pokemon": "kabuto"
+                },
+                {
+                    "chance": 30,
+                    "level": 30,
+                    "pokemon": "omanyte"
+                },
+                {
+                    "chance": 10,
+                    "level": 30,
+                    "pokemon": "corsola"
+                }
+            ]
         },
         {
             "area": "ruins-of-alph-inner-chamber",
@@ -3839,7 +3856,24 @@
                         "pokemon": "grimer"
                     }
                 ]
-            }
+            },
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 34,
+                    "pokemon": "wooper"
+                },
+                {
+                    "chance": 30,
+                    "level": 34,
+                    "pokemon": "gyarados"
+                },
+                {
+                    "chance": 10,
+                    "level": 34,
+                    "pokemon": "quagsire"
+                }
+            ]
         },
         {
             "area": "union-cave-b1f",
@@ -3956,7 +3990,24 @@
                         "pokemon": "voltorb"
                     }
                 ]
-            }
+            },
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 34,
+                    "pokemon": "seaking"
+                },
+                {
+                    "chance": 30,
+                    "level": 34,
+                    "pokemon": "gyarados"
+                },
+                {
+                    "chance": 10,
+                    "level": 34,
+                    "pokemon": "quagsire"
+                }
+            ]
         },
         {
             "area": "union-cave-b2f",
@@ -4073,7 +4124,24 @@
                         "pokemon": "wobbuffet"
                     }
                 ]
-            }
+            },
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 60,
+                    "pokemon": "qwilfish"
+                },
+                {
+                    "chance": 30,
+                    "level": 60,
+                    "pokemon": "quagsire"
+                },
+                {
+                    "chance": 10,
+                    "level": 60,
+                    "pokemon": "cloyster"
+                }
+            ]
         },
         {
             "area": "slowpoke-well-b1f",
@@ -4191,7 +4259,24 @@
                     }
                 ]
             },
-            "rock": "rock"
+            "rock": "rock",
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 34,
+                    "pokemon": "wooper"
+                },
+                {
+                    "chance": 30,
+                    "level": 34,
+                    "pokemon": "quagsire"
+                },
+                {
+                    "chance": 10,
+                    "level": 34,
+                    "pokemon": "quagsire"
+                }
+            ]
         },
         {
             "area": "slowpoke-well-b2f",
@@ -4308,7 +4393,24 @@
                         "pokemon": "slowbro"
                     }
                 ]
-            }
+            },
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 34,
+                    "pokemon": "seaking"
+                },
+                {
+                    "chance": 30,
+                    "level": 34,
+                    "pokemon": "gyarados"
+                },
+                {
+                    "chance": 10,
+                    "level": 34,
+                    "pokemon": "quagsire"
+                }
+            ]
         },
         {
             "area": "ilex-forest",
@@ -4426,7 +4528,24 @@
                         "pokemon": "ekans"
                     }
                 ]
-            }
+            },
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 34,
+                    "pokemon": "psyduck"
+                },
+                {
+                    "chance": 30,
+                    "level": 34,
+                    "pokemon": "poliwhirl"
+                },
+                {
+                    "chance": 10,
+                    "level": 34,
+                    "pokemon": "golduck"
+                }
+            ]
         },
         {
             "area": "mount-mortar-1f-outside",
@@ -4543,7 +4662,24 @@
                         "pokemon": "raticate"
                     }
                 ]
-            }
+            },
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 40,
+                    "pokemon": "qwilfish"
+                },
+                {
+                    "chance": 30,
+                    "level": 40,
+                    "pokemon": "golbat"
+                },
+                {
+                    "chance": 10,
+                    "level": 40,
+                    "pokemon": "lanturn"
+                }
+            ]
         },
         {
             "area": "mount-mortar-1f-inside",
@@ -4777,7 +4913,24 @@
                         "pokemon": "muk"
                     }
                 ]
-            }
+            },
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 43,
+                    "pokemon": "haunter"
+                },
+                {
+                    "chance": 30,
+                    "level": 43,
+                    "pokemon": "mantine"
+                },
+                {
+                    "chance": 10,
+                    "level": 43,
+                    "pokemon": "qwilfish"
+                }
+            ]
         },
         {
             "area": "mount-mortar-b1f",
@@ -4894,7 +5047,24 @@
                         "pokemon": "wigglytuff"
                     }
                 ]
-            }
+            },
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 40,
+                    "pokemon": "qwilfish"
+                },
+                {
+                    "chance": 30,
+                    "level": 40,
+                    "pokemon": "quagsire"
+                },
+                {
+                    "chance": 10,
+                    "level": 40,
+                    "pokemon": "mantine"
+                }
+            ]
         },
         {
             "area": "ice-path-1f",
@@ -5830,7 +6000,24 @@
                         "pokemon": "rhydon"
                     }
                 ]
-            }
+            },
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 61,
+                    "pokemon": "seadra"
+                },
+                {
+                    "chance": 30,
+                    "level": 61,
+                    "pokemon": "dewgong"
+                },
+                {
+                    "chance": 10,
+                    "level": 61,
+                    "pokemon": "golbat"
+                }
+            ]
         },
         {
             "area": "whirl-island-cave",
@@ -6298,7 +6485,24 @@
                         "pokemon": "golem"
                     }
                 ]
-            }
+            },
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 62,
+                    "pokemon": "cloyster"
+                },
+                {
+                    "chance": 30,
+                    "level": 62,
+                    "pokemon": "tentacruel"
+                },
+                {
+                    "chance": 10,
+                    "level": 62,
+                    "pokemon": "kingdra"
+                }
+            ]
         },
         {
             "area": "whirl-island-lugia-chamber",
@@ -6415,7 +6619,24 @@
                         "pokemon": "clefable"
                     }
                 ]
-            }
+            },
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 62,
+                    "pokemon": "crobat"
+                },
+                {
+                    "chance": 30,
+                    "level": 62,
+                    "pokemon": "starmie"
+                },
+                {
+                    "chance": 10,
+                    "level": 62,
+                    "pokemon": "kingdra"
+                }
+            ]
         },
         {
             "area": "silver-cave-room-1",
@@ -6649,7 +6870,24 @@
                         "pokemon": "weedle"
                     }
                 ]
-            }
+            },
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 5,
+                    "pokemon": "weedle"
+                },
+                {
+                    "chance": 30,
+                    "level": 5,
+                    "pokemon": "weedle"
+                },
+                {
+                    "chance": 10,
+                    "level": 5,
+                    "pokemon": "weedle"
+                }
+            ]
         },
         {
             "area": "silver-cave-room-3",
@@ -7001,7 +7239,24 @@
                     }
                 ]
             },
-            "rock": "rock"
+            "rock": "rock",
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 55,
+                    "pokemon": "qwilfish"
+                },
+                {
+                    "chance": 30,
+                    "level": 55,
+                    "pokemon": "quagsire"
+                },
+                {
+                    "chance": 10,
+                    "level": 55,
+                    "pokemon": "mantine"
+                }
+            ]
         },
         {
             "area": "dark-cave-blackthorn-entrance",
@@ -7118,7 +7373,24 @@
                         "pokemon": "sneasel"
                     }
                 ]
-            }
+            },
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 55,
+                    "pokemon": "qwilfish"
+                },
+                {
+                    "chance": 30,
+                    "level": 55,
+                    "pokemon": "quagsire"
+                },
+                {
+                    "chance": 10,
+                    "level": 55,
+                    "pokemon": "mantine"
+                }
+            ]
         },
         {
             "area": "route-29",
@@ -7354,7 +7626,24 @@
                         "pokemon": "meowth"
                     }
                 ]
-            }
+            },
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 20,
+                    "pokemon": "poliwag"
+                },
+                {
+                    "chance": 30,
+                    "level": 15,
+                    "pokemon": "poliwag"
+                },
+                {
+                    "chance": 10,
+                    "level": 20,
+                    "pokemon": "poliwhirl"
+                }
+            ]
         },
         {
             "area": "route-31",
@@ -7472,7 +7761,24 @@
                         "pokemon": "houndour"
                     }
                 ]
-            }
+            },
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 20,
+                    "pokemon": "poliwag"
+                },
+                {
+                    "chance": 30,
+                    "level": 15,
+                    "pokemon": "poliwag"
+                },
+                {
+                    "chance": 10,
+                    "level": 20,
+                    "pokemon": "poliwhirl"
+                }
+            ]
         },
         {
             "area": "route-32",
@@ -7590,7 +7896,24 @@
                         "pokemon": "houndour"
                     }
                 ]
-            }
+            },
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 15,
+                    "pokemon": "tentacool"
+                },
+                {
+                    "chance": 30,
+                    "level": 20,
+                    "pokemon": "quagsire"
+                },
+                {
+                    "chance": 10,
+                    "level": 20,
+                    "pokemon": "tentacruel"
+                }
+            ]
         },
         {
             "area": "route-33",
@@ -7826,7 +8149,24 @@
                         "pokemon": "ditto"
                     }
                 ]
-            }
+            },
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 20,
+                    "pokemon": "tentacool"
+                },
+                {
+                    "chance": 30,
+                    "level": 15,
+                    "pokemon": "tentacool"
+                },
+                {
+                    "chance": 10,
+                    "level": 20,
+                    "pokemon": "tentacruel"
+                }
+            ]
         },
         {
             "area": "route-35",
@@ -7944,7 +8284,24 @@
                         "pokemon": "yanma"
                     }
                 ]
-            }
+            },
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 20,
+                    "pokemon": "psyduck"
+                },
+                {
+                    "chance": 30,
+                    "level": 15,
+                    "pokemon": "psyduck"
+                },
+                {
+                    "chance": 10,
+                    "level": 20,
+                    "pokemon": "golduck"
+                }
+            ]
         },
         {
             "area": "route-36",
@@ -8534,7 +8891,24 @@
                         "pokemon": "golbat"
                     }
                 ]
-            }
+            },
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 30,
+                    "pokemon": "wartortle"
+                },
+                {
+                    "chance": 30,
+                    "level": 30,
+                    "pokemon": "croconaw"
+                },
+                {
+                    "chance": 10,
+                    "level": 30,
+                    "pokemon": "croconaw"
+                }
+            ]
         },
         {
             "area": "route-43",
@@ -8652,7 +9026,24 @@
                         "pokemon": "houndour"
                     }
                 ]
-            }
+            },
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 44,
+                    "pokemon": "croconaw"
+                },
+                {
+                    "chance": 30,
+                    "level": 44,
+                    "pokemon": "wartortle"
+                },
+                {
+                    "chance": 10,
+                    "level": 44,
+                    "pokemon": "wartortle"
+                }
+            ]
         },
         {
             "area": "route-44",
@@ -8770,7 +9161,24 @@
                         "pokemon": "magmar"
                     }
                 ]
-            }
+            },
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 44,
+                    "pokemon": "golduck"
+                },
+                {
+                    "chance": 30,
+                    "level": 44,
+                    "pokemon": "poliwhirl"
+                },
+                {
+                    "chance": 10,
+                    "level": 44,
+                    "pokemon": "slowpoke"
+                }
+            ]
         },
         {
             "area": "route-45",
@@ -8888,7 +9296,24 @@
                         "pokemon": "gligar"
                     }
                 ]
-            }
+            },
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 60,
+                    "pokemon": "magikarp"
+                },
+                {
+                    "chance": 30,
+                    "level": 60,
+                    "pokemon": "magikarp"
+                },
+                {
+                    "chance": 10,
+                    "level": 60,
+                    "pokemon": "magikarp"
+                }
+            ]
         },
         {
             "area": "route-46",
@@ -9124,7 +9549,24 @@
                         "pokemon": "weedle"
                     }
                 ]
-            }
+            },
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 100,
+                    "pokemon": "weedle"
+                },
+                {
+                    "chance": 30,
+                    "level": 100,
+                    "pokemon": "weedle"
+                },
+                {
+                    "chance": 10,
+                    "level": 100,
+                    "pokemon": "weedle"
+                }
+            ]
         },
         {
             "area": "digletts-cave",
@@ -9826,7 +10268,24 @@
                         "pokemon": "snubbull"
                     }
                 ]
-            }
+            },
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 30,
+                    "pokemon": "horsea"
+                },
+                {
+                    "chance": 30,
+                    "level": 30,
+                    "pokemon": "slowpoke"
+                },
+                {
+                    "chance": 10,
+                    "level": 30,
+                    "pokemon": "staryu"
+                }
+            ]
         },
         {
             "area": "route-1",
@@ -10293,7 +10752,24 @@
                         "pokemon": "weedle"
                     }
                 ]
-            }
+            },
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 5,
+                    "pokemon": "weedle"
+                },
+                {
+                    "chance": 30,
+                    "level": 5,
+                    "pokemon": "weedle"
+                },
+                {
+                    "chance": 10,
+                    "level": 5,
+                    "pokemon": "weedle"
+                }
+            ]
         },
         {
             "area": "route-5",
@@ -10527,7 +11003,24 @@
                         "pokemon": "weedle"
                     }
                 ]
-            }
+            },
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 5,
+                    "pokemon": "weedle"
+                },
+                {
+                    "chance": 30,
+                    "level": 5,
+                    "pokemon": "weedle"
+                },
+                {
+                    "chance": 10,
+                    "level": 5,
+                    "pokemon": "weedle"
+                }
+            ]
         },
         {
             "area": "route-7",
@@ -10878,7 +11371,24 @@
                         "pokemon": "weedle"
                     }
                 ]
-            }
+            },
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 5,
+                    "pokemon": "weedle"
+                },
+                {
+                    "chance": 30,
+                    "level": 5,
+                    "pokemon": "weedle"
+                },
+                {
+                    "chance": 10,
+                    "level": 5,
+                    "pokemon": "weedle"
+                }
+            ]
         },
         {
             "area": "route-10-north",
@@ -10995,7 +11505,24 @@
                         "pokemon": "weedle"
                     }
                 ]
-            }
+            },
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 5,
+                    "pokemon": "weedle"
+                },
+                {
+                    "chance": 30,
+                    "level": 5,
+                    "pokemon": "weedle"
+                },
+                {
+                    "chance": 10,
+                    "level": 5,
+                    "pokemon": "weedle"
+                }
+            ]
         },
         {
             "area": "route-11",
@@ -11229,7 +11756,24 @@
                         "pokemon": "weedle"
                     }
                 ]
-            }
+            },
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 5,
+                    "pokemon": "weedle"
+                },
+                {
+                    "chance": 30,
+                    "level": 5,
+                    "pokemon": "weedle"
+                },
+                {
+                    "chance": 10,
+                    "level": 5,
+                    "pokemon": "weedle"
+                }
+            ]
         },
         {
             "area": "route-14",
@@ -11930,7 +12474,24 @@
                         "pokemon": "weedle"
                     }
                 ]
-            }
+            },
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 5,
+                    "pokemon": "weedle"
+                },
+                {
+                    "chance": 30,
+                    "level": 5,
+                    "pokemon": "weedle"
+                },
+                {
+                    "chance": 10,
+                    "level": 5,
+                    "pokemon": "weedle"
+                }
+            ]
         },
         {
             "area": "route-22",
@@ -12047,7 +12608,24 @@
                         "pokemon": "weedle"
                     }
                 ]
-            }
+            },
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 5,
+                    "pokemon": "weedle"
+                },
+                {
+                    "chance": 30,
+                    "level": 5,
+                    "pokemon": "weedle"
+                },
+                {
+                    "chance": 10,
+                    "level": 5,
+                    "pokemon": "weedle"
+                }
+            ]
         },
         {
             "area": "route-24",
@@ -12164,7 +12742,24 @@
                         "pokemon": "weedle"
                     }
                 ]
-            }
+            },
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 5,
+                    "pokemon": "weedle"
+                },
+                {
+                    "chance": 30,
+                    "level": 5,
+                    "pokemon": "weedle"
+                },
+                {
+                    "chance": 10,
+                    "level": 5,
+                    "pokemon": "weedle"
+                }
+            ]
         },
         {
             "area": "route-25",
@@ -12281,7 +12876,24 @@
                         "pokemon": "weedle"
                     }
                 ]
-            }
+            },
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 5,
+                    "pokemon": "weedle"
+                },
+                {
+                    "chance": 30,
+                    "level": 5,
+                    "pokemon": "weedle"
+                },
+                {
+                    "chance": 10,
+                    "level": 5,
+                    "pokemon": "weedle"
+                }
+            ]
         },
         {
             "area": "route-26",
@@ -12399,7 +13011,24 @@
                         "pokemon": "weedle"
                     }
                 ]
-            }
+            },
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 5,
+                    "pokemon": "weedle"
+                },
+                {
+                    "chance": 30,
+                    "level": 5,
+                    "pokemon": "weedle"
+                },
+                {
+                    "chance": 10,
+                    "level": 5,
+                    "pokemon": "weedle"
+                }
+            ]
         },
         {
             "area": "route-27",
@@ -12517,7 +13146,24 @@
                         "pokemon": "weedle"
                     }
                 ]
-            }
+            },
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 5,
+                    "pokemon": "weedle"
+                },
+                {
+                    "chance": 30,
+                    "level": 5,
+                    "pokemon": "weedle"
+                },
+                {
+                    "chance": 10,
+                    "level": 5,
+                    "pokemon": "weedle"
+                }
+            ]
         },
         {
             "area": "route-28",
@@ -12635,109 +13281,517 @@
                         "pokemon": "weedle"
                     }
                 ]
-            }
+            },
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 5,
+                    "pokemon": "weedle"
+                },
+                {
+                    "chance": 30,
+                    "level": 5,
+                    "pokemon": "weedle"
+                },
+                {
+                    "chance": 10,
+                    "level": 5,
+                    "pokemon": "weedle"
+                }
+            ]
         },
         {
             "area": "olivine-port",
-            "fishing": "ocean"
+            "fishing": "ocean",
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 34,
+                    "pokemon": "shellder"
+                },
+                {
+                    "chance": 30,
+                    "level": 34,
+                    "pokemon": "chinchou"
+                },
+                {
+                    "chance": 10,
+                    "level": 34,
+                    "pokemon": "remoraid"
+                }
+            ]
         },
         {
             "area": "olivine-city",
             "fishing": "shore",
-            "headbutt": "town"
+            "headbutt": "town",
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 30,
+                    "pokemon": "kingler"
+                },
+                {
+                    "chance": 30,
+                    "level": 30,
+                    "pokemon": "corsola"
+                },
+                {
+                    "chance": 10,
+                    "level": 30,
+                    "pokemon": "seaking"
+                }
+            ]
         },
         {
             "area": "new-bark-town",
             "fishing": "ocean",
-            "headbutt": "town"
+            "headbutt": "town",
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 34,
+                    "pokemon": "seaking"
+                },
+                {
+                    "chance": 30,
+                    "level": 34,
+                    "pokemon": "tentacool"
+                },
+                {
+                    "chance": 10,
+                    "level": 34,
+                    "pokemon": "octillery"
+                }
+            ]
         },
         {
             "area": "ecruteak-city",
             "fishing": "pond",
-            "headbutt": "town"
+            "headbutt": "town",
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 30,
+                    "pokemon": "krabby"
+                },
+                {
+                    "chance": 30,
+                    "level": 30,
+                    "pokemon": "goldeen"
+                },
+                {
+                    "chance": 10,
+                    "level": 30,
+                    "pokemon": "magikarp"
+                }
+            ]
         },
         {
             "area": "viridian-city",
-            "fishing": "pond"
+            "fishing": "pond",
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 80,
+                    "pokemon": "blastoise"
+                },
+                {
+                    "chance": 30,
+                    "level": 80,
+                    "pokemon": "feraligatr"
+                },
+                {
+                    "chance": 10,
+                    "level": 80,
+                    "pokemon": "dragonair"
+                }
+            ]
         },
         {
             "area": "vermilion-city",
-            "fishing": "ocean"
+            "fishing": "ocean",
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 63,
+                    "pokemon": "qwilfish"
+                },
+                {
+                    "chance": 30,
+                    "level": 63,
+                    "pokemon": "lanturn"
+                },
+                {
+                    "chance": 10,
+                    "level": 63,
+                    "pokemon": "tentacruel"
+                }
+            ]
         },
         {
             "area": "cherrygrove-city",
             "fishing": "shore",
-            "headbutt": "town"
+            "headbutt": "town",
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 32,
+                    "pokemon": "remoraid"
+                },
+                {
+                    "chance": 30,
+                    "level": 32,
+                    "pokemon": "seel"
+                },
+                {
+                    "chance": 10,
+                    "level": 32,
+                    "pokemon": "staryu"
+                }
+            ]
         },
         {
             "area": "fuchsia-city",
-            "fishing": "gyarados"
+            "fishing": "gyarados",
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 72,
+                    "pokemon": "mantine"
+                },
+                {
+                    "chance": 30,
+                    "level": 72,
+                    "pokemon": "qwilfish"
+                },
+                {
+                    "chance": 10,
+                    "level": 72,
+                    "pokemon": "kingler"
+                }
+            ]
         },
         {
             "area": "lake-of-rage",
             "fishing": "gyarados",
-            "headbutt": "town"
+            "headbutt": "town",
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 42,
+                    "pokemon": "gyarados"
+                },
+                {
+                    "chance": 30,
+                    "level": 43,
+                    "pokemon": "gyarados"
+                },
+                {
+                    "chance": 10,
+                    "level": 44,
+                    "pokemon": "gyarados"
+                }
+            ]
         },
         {
-            "area": "celadon-city"
+            "area": "celadon-city",
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 72,
+                    "pokemon": "muk"
+                },
+                {
+                    "chance": 30,
+                    "level": 72,
+                    "pokemon": "muk"
+                },
+                {
+                    "chance": 10,
+                    "level": 72,
+                    "pokemon": "grimer"
+                }
+            ]
         },
         {
             "area": "cianwood-city",
             "fishing": "shore",
             "headbutt": "town",
-            "rock": "rock"
+            "rock": "rock",
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 37,
+                    "pokemon": "qwilfish"
+                },
+                {
+                    "chance": 30,
+                    "level": 37,
+                    "pokemon": "mantine"
+                },
+                {
+                    "chance": 10,
+                    "level": 37,
+                    "pokemon": "lanturn"
+                }
+            ]
         },
         {
             "area": "route-19",
-            "fishing": "shore"
+            "fishing": "shore",
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 82,
+                    "pokemon": "qwilfish"
+                },
+                {
+                    "chance": 30,
+                    "level": 82,
+                    "pokemon": "lanturn"
+                },
+                {
+                    "chance": 10,
+                    "level": 82,
+                    "pokemon": "tentacruel"
+                }
+            ]
         },
         {
-            "area": "cerulean-city"
+            "area": "cerulean-city",
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 67,
+                    "pokemon": "qwilfish"
+                },
+                {
+                    "chance": 30,
+                    "level": 67,
+                    "pokemon": "golduck"
+                },
+                {
+                    "chance": 10,
+                    "level": 67,
+                    "pokemon": "seadra"
+                }
+            ]
         },
         {
             "area": "vermilion-port",
-            "fishing": "ocean"
+            "fishing": "ocean",
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 63,
+                    "pokemon": "shellder"
+                },
+                {
+                    "chance": 30,
+                    "level": 63,
+                    "pokemon": "staryu"
+                },
+                {
+                    "chance": 10,
+                    "level": 63,
+                    "pokemon": "lanturn"
+                }
+            ]
         },
         {
             "area": "dragons-den-b1f",
-            "fishing": "dratini"
+            "fishing": "dratini",
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 55,
+                    "pokemon": "dragonair"
+                },
+                {
+                    "chance": 30,
+                    "level": 55,
+                    "pokemon": "dragonair"
+                },
+                {
+                    "chance": 10,
+                    "level": 55,
+                    "pokemon": "dragonair"
+                }
+            ]
         },
         {
             "area": "route-40",
             "fishing": "shore",
             "headbutt": "town",
-            "rock": "rock"
+            "rock": "rock",
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 34,
+                    "pokemon": "mantine"
+                },
+                {
+                    "chance": 30,
+                    "level": 34,
+                    "pokemon": "qwilfish"
+                },
+                {
+                    "chance": 10,
+                    "level": 34,
+                    "pokemon": "lanturn"
+                }
+            ]
         },
         {
             "area": "route-20",
-            "fishing": "ocean"
+            "fishing": "ocean",
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 82,
+                    "pokemon": "qwilfish"
+                },
+                {
+                    "chance": 30,
+                    "level": 82,
+                    "pokemon": "quagsire"
+                },
+                {
+                    "chance": 10,
+                    "level": 82,
+                    "pokemon": "tentacruel"
+                }
+            ]
         },
         {
             "area": "violet-city",
             "fishing": "pond",
-            "headbutt": "town"
+            "headbutt": "town",
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 34,
+                    "pokemon": "poliwhirl"
+                },
+                {
+                    "chance": 30,
+                    "level": 34,
+                    "pokemon": "kingler"
+                },
+                {
+                    "chance": 10,
+                    "level": 34,
+                    "pokemon": "tentacool"
+                }
+            ]
         },
         {
             "area": "cinnabar-island",
-            "fishing": "ocean"
+            "fishing": "ocean",
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 81,
+                    "pokemon": "octillery"
+                },
+                {
+                    "chance": 30,
+                    "level": 81,
+                    "pokemon": "dewgong"
+                },
+                {
+                    "chance": 10,
+                    "level": 81,
+                    "pokemon": "tentacruel"
+                }
+            ]
         },
         {
             "area": "route-41",
             "fishing": "ocean",
-            "headbutt": "town"
+            "headbutt": "town",
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 35,
+                    "pokemon": "qwilfish"
+                },
+                {
+                    "chance": 30,
+                    "level": 35,
+                    "pokemon": "lanturn"
+                },
+                {
+                    "chance": 10,
+                    "level": 35,
+                    "pokemon": "mantine"
+                }
+            ]
         },
         {
             "area": "pallet-town",
-            "fishing": "ocean"
+            "fishing": "ocean",
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 80,
+                    "pokemon": "staryu"
+                },
+                {
+                    "chance": 30,
+                    "level": 80,
+                    "pokemon": "shellder"
+                },
+                {
+                    "chance": 10,
+                    "level": 80,
+                    "pokemon": "tentacruel"
+                }
+            ]
         },
         {
             "area": "blackthorn-city",
             "fishing": "pond",
-            "headbutt": "town"
+            "headbutt": "town",
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 50,
+                    "pokemon": "gyarados"
+                },
+                {
+                    "chance": 30,
+                    "level": 50,
+                    "pokemon": "gyarados"
+                },
+                {
+                    "chance": 10,
+                    "level": 50,
+                    "pokemon": "gyarados"
+                }
+            ]
         },
         {
             "area": "route-12",
-            "fishing": "qwilfish-noswarm"
+            "fishing": "qwilfish-noswarm",
+            "surf": [
+                {
+                    "chance": 60,
+                    "level": 69,
+                    "pokemon": "golduck"
+                },
+                {
+                    "chance": 30,
+                    "level": 69,
+                    "pokemon": "quagsire"
+                },
+                {
+                    "chance": 10,
+                    "level": 69,
+                    "pokemon": "tentacruel"
+                }
+            ]
         },
         {
             "area": "azalea-town",

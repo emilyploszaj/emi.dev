@@ -426,6 +426,10 @@ function getEncounterDisplay(pools) {
 		v += getEncounterPoolDisplay(pools.normal.night, "night");
 		v += getEncounterPoolDisplay(pools.normal.morning, "morning");
 	}
+	if (pools.surf) {
+		v += "<p>Surfing (Lvl " + pools.surf[0].level + "):</p>";
+		v += getEncounterPoolDisplay(pools.surf, "day");
+	}
 	if (pools.headbutt) {
 		var pool = headbuttPools.get(pools.headbutt);
 		v += "<p>Headbutt (Lvl " + pool.headbutt[0].level + "):</p>";
@@ -433,13 +437,13 @@ function getEncounterDisplay(pools) {
 	}
 	if (pools.fishing) {
 		var pool = fishingPools.get(pools.fishing);
-		v += "<p>Old Rod (Lvl " + pool.old.day[0].level + ":</p>";
+		v += "<p>Old Rod (Lvl " + pool.old.day[0].level + "):</p>";
 		v += getEncounterPoolDisplay(pool.old.day, "day");
 		v += getEncounterPoolDisplay(pool.old.night, "night");
-		v += "<p>Good Rod (Lvl " + pool.good.day[0].level + ":</p>";
+		v += "<p>Good Rod (Lvl " + pool.good.day[0].level + "):</p>";
 		v += getEncounterPoolDisplay(pool.good.day, "day");
 		v += getEncounterPoolDisplay(pool.good.night, "night");
-		v += "<p>Super Rod (Lvl " + pool.super.day[0].level + ":</p>";
+		v += "<p>Super Rod (Lvl " + pool.super.day[0].level + "):</p>";
 		v += getEncounterPoolDisplay(pool.super.day, "day");
 		v += getEncounterPoolDisplay(pool.super.night, "night");
 	}
