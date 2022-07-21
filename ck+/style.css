@@ -2,6 +2,7 @@
 	--background: #222222;
 	--grouping-background: #111111;
 	--box-background: #333333;
+	--dupe-background: #531414;
 	--highlighted: #49adff;
 	--text: #eeeeee;
 	--crit-text: #e59393;
@@ -165,6 +166,10 @@ input[type=number] {
 	width: 112px;
 	text-align: center;
 	margin: 2px;
+}
+
+.dupe-encounter {
+	background-color: var(--dupe-background) !important;
 }
 
 .encounter-poke img {

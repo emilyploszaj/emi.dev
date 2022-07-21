@@ -29,6 +29,7 @@ var typeMatchups = new Map();
 var searchResults = new Map();
 var pokemonByName = new Map();
 var pokemonByPokedex = new Map();
+var pokemonFamilies = new Map();
 var movesByName = new Map();
 var movesByIndex = new Map();
 var fishingPools = new Map();
@@ -37,6 +38,7 @@ var rockPools = new Map();
 var myPoke;
 var theirPoke;
 var box = [];
+var deadBox = [];
 var enemyTeam = [];
 var editing = -1;
 var copyEditedMoves = false;
@@ -94,6 +96,14 @@ fetch("./data.json")
 			pokemonByPokedex.set(p.pokedex, p);
 			searchResults.set(p.name, 'focusPokemon(' + (p.pokedex) + ')');
 		}
+		var family = 0;
+		for (let i in j.pokemon) {
+			var p = j.pokemon[i]
+			if (!pokemonFamilies.has(p.pokedex)) {
+				addToFamily(p, family);
+				family++;
+			}
+ 		}
 		for (let i in j.moves) {
 			var m = j.moves[i];
 			movesByName.set(m.name, m);
@@ -150,6 +160,27 @@ fetch("./data.json")
 		}
 	});
 
+function addToFamily(p, family) {
+	pokemonFamilies.set(p.pokedex, family);
+	for (let i in p.evolutions) {
+		addToFamily(pokemonByName.get(p.evolutions[i].into), family);
+	}
+}
+
+function hasFamily(family) {
+	for (let i in box) {
+		if (pokemonFamilies.get(pokemonByName.get(box[i].name).pokedex) == family) {
+			return true;
+		}
+	}
+	for (let i in deadBox) {
+		if (pokemonFamilies.get(pokemonByName.get(deadBox[i].name).pokedex) == family) {
+			return true;
+		}
+	}
+	return false;
+}
+
 function displayTrainers() {
 	var v = "";
 	for (var i = 0; i < data.trainers.length; i++) {
@@ -201,7 +232,7 @@ function displayCalcPokemon(root, poke, opponent, right) {
 
 	root.getElementsByClassName("poke-name")[0].innerHTML = pokeLink(p);
 	root.getElementsByClassName("poke-level")[0].innerHTML = "Lvl " + poke.level;
-	root.getElementsByClassName("poke-item")[0].innerHTML = poke.item;
+	root.getElementsByClassName("poke-item")[0].innerHTML = fullCapitalize(poke.item);
 	root.getElementsByClassName("poke-icon")[0].innerHTML = '<img src="https://img.pokemondb.net/sprites/crystal/normal/' + p.name + '.png">';
 	if (right && root.getElementsByClassName("experience").length > 0) {
 		var exp = p.base_experience;
@@ -298,7 +329,7 @@ function getTinyPokemonDisplay(tp, extra = "") {
 	var v = '<div class="tiny-poke">';
 	v += '<div class="tiny-poke-icon"><img src="https://img.pokemondb.net/sprites/crystal/normal/' + p.name + '.png"></div>';
 	v += '<div class="tiny-poke-info">';
-	v += '<div>' + pokeLink(p.name) + ' - Lvl ' + tp.level + ' @ ' + tp.item + '</div>';
+	v += '<div>' + pokeLink(p.name) + ' - Lvl ' + tp.level + ' @ ' + fullCapitalize(tp.item) + '</div>';
 	v += "<table><tr>";
 	for (var i = 0; i < 4; i++) {
 		if (i == 2) {
@@ -459,9 +490,25 @@ function getEncounterPoolDisplay(pool, time) {
 	var v = "";
 	v += '<div class="encounter-pool ' + time + '-pool">';
 	v += '<div style="display:flex">';
+	console.log(pool);
+	var totalWeight = 0;
 	for (var i = 0; i < pool.length; i++) {
-		v += '<div class="encounter-poke">';
-		v += '<div>' + pool[i].chance + '%</div>';
+		if (!hasFamily(pokemonFamilies.get(pokemonByName.get(pool[i].pokemon).pokedex))) {
+			totalWeight += pool[i].chance;
+		}
+	}
+	for (var i = 0; i < pool.length; i++) {
+		var family = hasFamily(pokemonFamilies.get(pokemonByName.get(pool[i].pokemon).pokedex));
+		var percent = parseInt(pool[i].chance / 100 * 10000) / 100;
+		var adjustedPercent = "Dupe";
+		if (family) {
+			v += '<div class="encounter-poke dupe-encounter">';
+		} else {
+			v += '<div class="encounter-poke">';
+			adjustedPercent = parseInt(pool[i].chance / totalWeight * 10000) / 100 + "%";
+		}
+		
+		v += '<div><ruby>' + percent + '%<rt>(' + adjustedPercent + ')</rt></ruby></div>';
 		v += '<img style="cursor:pointer;" onclick="focusPokeByName(\'' + pool[i].pokemon
 			+'\')" src="https://img.pokemondb.net/sprites/crystal/normal/' + pool[i].pokemon + '.png">';
 		v += '</div>';
@@ -804,6 +851,7 @@ function updateEdit() {
 
 function getEditedPoke() {
 	var name = document.getElementById("edit-name").value.toLowerCase().replace(" ", "-");
+	var item = document.getElementById("edit-item").value.toLowerCase().replace("-", " ");
 	var mvs = [];
 	if (movesByName.has(document.getElementById("edit-move-1").value.toLowerCase().replace(" ", "-"))) {
 		mvs.push(document.getElementById("edit-move-1").value.toLowerCase().replace(" ", "-"))
@@ -823,7 +871,7 @@ function getEditedPoke() {
 	if (pokemonByName.has(name)) {
 		var poke = {
 			name: name,
-			item: "",
+			item: item,
 			level: parseInt(document.getElementById("edit-lvl").value),
 			moves: mvs,
 			dvs: {
@@ -906,6 +954,7 @@ function updateBox() {
 				+ i + ')">Delete</button></div>');
 	}
 	localStorage.setItem("box", JSON.stringify(box));
+	localStorage.setItem("dead-box", JSON.stringify(deadBox));
 	updateCalc();
 }
 
@@ -940,6 +989,7 @@ function moveToBoxStart(i) {
 }
 
 function editBox(i) {
+	clearEdits();
 	editing = i;
 	var poke = box[i];
 	document.getElementById("edit-name").value = poke.name;
@@ -1008,6 +1058,10 @@ function clearEnemyStages() {
 
 if (localStorage.getItem("box")) {
 	box = JSON.parse(localStorage.getItem("box"));
+}
+
+if (localStorage.getItem("dead-box")) {
+	deadBox = JSON.parse(localStorage.getItem("dead-box"));
 }
 
 if (localStorage.getItem("badges")) {
@@ -1083,15 +1137,20 @@ function readFile(file) {
 		var bytes = new Uint8Array(e.target.result);
 		if (bytes.length > 32000) {
 			pokemon = [];
+			deadPokemon = [];
 			pokemon = pokemon.concat(readPokemonList(bytes, 0x2865, 6, 48));
 			for (var i = 0; i < 7; i++) {
 				pokemon = pokemon.concat(readPokemonList(bytes, 0x4000 + i * 0x450, 20, 32));
 			}
-			// Ignore death box
-			for (var i = 0; i < 6; i++) {
+			// Ignore death boxes
+			for (var i = 0; i < 5; i++) {
 				pokemon = pokemon.concat(readPokemonList(bytes, 0x6000 + i * 0x450, 20, 32));
 			}
+			for (var i = 5; i < 7; i++) {
+				deadPokemon = deadPokemon.concat(readPokemonList(bytes, 0x6000 + i * 0x450, 20, 32));
+			}
 			box = pokemon;
+			deadBox = deadPokemon;
 			var badgeMask = (bytes[0x23e5] << 8) | bytes[0x23e6];
 			badges = 0;
 			for (var i = 0; i < 16; i++) {
