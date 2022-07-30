@@ -121,7 +121,7 @@ fetch("./data.json")
 		}
 		for (let i in j.encounters) {
 			var e = j.encounters[i];
-			searchResults.set(e.area.replace("-", " "), 'focusEncounter(' + i + ')');
+			searchResults.set(e.area.replace(/-/g, " "), 'focusEncounter(' + i + ')');
 		}
 		for (let i in j.encounter_pools.fishing) {
 			var p = j.encounter_pools.fishing[i];
@@ -523,7 +523,7 @@ function prettyType(t) {
 }
 
 function getMoveName(move) {
-	return fullCapitalize(move.replace("-", " "));
+	return fullCapitalize(move.replace(/-/g, " "));
 }
 
 function getMoveDisplay(move, level = undefined) {
@@ -671,7 +671,7 @@ function getDamage(attacker, defender, attackerStages, defenderStages, move, pla
 	if (crit) {
 		v *= 2;
 	}
-	var ni = attacker.item.toLowerCase();
+	var ni = attacker.item.toLowerCase().replace(/ /g, "-");
 	if (typeEnhancements.has(ni) && typeEnhancements.get(ni) == type) {
 		v *= 1.1;
 		v = parseInt(v);
@@ -850,20 +850,20 @@ function updateEdit() {
 }
 
 function getEditedPoke() {
-	var name = document.getElementById("edit-name").value.toLowerCase().replace(" ", "-");
-	var item = document.getElementById("edit-item").value.toLowerCase().replace("-", " ");
+	var name = document.getElementById("edit-name").value.toLowerCase().replace(/ /g, "-");
+	var item = document.getElementById("edit-item").value.toLowerCase().replace(/-/g, " ");
 	var mvs = [];
-	if (movesByName.has(document.getElementById("edit-move-1").value.toLowerCase().replace(" ", "-"))) {
-		mvs.push(document.getElementById("edit-move-1").value.toLowerCase().replace(" ", "-"))
+	if (movesByName.has(document.getElementById("edit-move-1").value.toLowerCase().replace(/ /g, "-"))) {
+		mvs.push(document.getElementById("edit-move-1").value.toLowerCase().replace(/ /g, "-"))
 	}
-	if (movesByName.has(document.getElementById("edit-move-2").value.toLowerCase().replace(" ", "-"))) {
-		mvs.push(document.getElementById("edit-move-2").value.toLowerCase().replace(" ", "-"))
+	if (movesByName.has(document.getElementById("edit-move-2").value.toLowerCase().replace(/ /g, "-"))) {
+		mvs.push(document.getElementById("edit-move-2").value.toLowerCase().replace(/ /g, "-"))
 	}
-	if (movesByName.has(document.getElementById("edit-move-3").value.toLowerCase().replace(" ", "-"))) {
-		mvs.push(document.getElementById("edit-move-3").value.toLowerCase().replace(" ", "-"))
+	if (movesByName.has(document.getElementById("edit-move-3").value.toLowerCase().replace(/ /g, "-"))) {
+		mvs.push(document.getElementById("edit-move-3").value.toLowerCase().replace(/ /g, "-"))
 	}
-	if (movesByName.has(document.getElementById("edit-move-4").value.toLowerCase().replace(" ", "-"))) {
-		mvs.push(document.getElementById("edit-move-4").value.toLowerCase().replace(" ", "-"))
+	if (movesByName.has(document.getElementById("edit-move-4").value.toLowerCase().replace(/ /g, "-"))) {
+		mvs.push(document.getElementById("edit-move-4").value.toLowerCase().replace(/ /g, "-"))
 	}
 	if (isNaN(parseInt(document.getElementById("edit-lvl").value))) {
 		return null;

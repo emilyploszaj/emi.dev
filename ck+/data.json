@@ -12903,130 +12903,130 @@
                 "day": [
                     {
                         "chance": 30,
-                        "level": 5,
-                        "pokemon": "weedle"
+                        "level": 63,
+                        "pokemon": "xatu"
                     },
                     {
                         "chance": 30,
-                        "level": 5,
-                        "pokemon": "weedle"
+                        "level": 63,
+                        "pokemon": "raichu"
                     },
                     {
                         "chance": 20,
-                        "level": 5,
-                        "pokemon": "weedle"
+                        "level": 63,
+                        "pokemon": "poliwrath"
                     },
                     {
                         "chance": 10,
-                        "level": 5,
-                        "pokemon": "weedle"
+                        "level": 63,
+                        "pokemon": "scyther"
                     },
                     {
                         "chance": 5,
-                        "level": 5,
-                        "pokemon": "weedle"
+                        "level": 63,
+                        "pokemon": "yanma"
                     },
                     {
                         "chance": 4,
-                        "level": 5,
-                        "pokemon": "weedle"
+                        "level": 63,
+                        "pokemon": "typhlosion"
                     },
                     {
                         "chance": 1,
-                        "level": 5,
-                        "pokemon": "weedle"
+                        "level": 63,
+                        "pokemon": "nidoking"
                     }
                 ],
                 "morning": [
                     {
                         "chance": 30,
-                        "level": 5,
-                        "pokemon": "weedle"
+                        "level": 63,
+                        "pokemon": "jumpluff"
                     },
                     {
                         "chance": 30,
-                        "level": 5,
-                        "pokemon": "weedle"
+                        "level": 63,
+                        "pokemon": "flareon"
                     },
                     {
                         "chance": 20,
-                        "level": 5,
-                        "pokemon": "weedle"
+                        "level": 63,
+                        "pokemon": "politoed"
                     },
                     {
                         "chance": 10,
-                        "level": 5,
-                        "pokemon": "weedle"
+                        "level": 63,
+                        "pokemon": "raichu"
                     },
                     {
                         "chance": 5,
-                        "level": 5,
-                        "pokemon": "weedle"
+                        "level": 63,
+                        "pokemon": "arbok"
                     },
                     {
                         "chance": 4,
-                        "level": 5,
-                        "pokemon": "weedle"
+                        "level": 63,
+                        "pokemon": "blastoise"
                     },
                     {
                         "chance": 1,
-                        "level": 5,
-                        "pokemon": "weedle"
+                        "level": 63,
+                        "pokemon": "nidoqueen"
                     }
                 ],
                 "night": [
                     {
                         "chance": 30,
-                        "level": 5,
-                        "pokemon": "weedle"
+                        "level": 63,
+                        "pokemon": "dodrio"
                     },
                     {
                         "chance": 30,
-                        "level": 5,
-                        "pokemon": "weedle"
+                        "level": 63,
+                        "pokemon": "venomoth"
                     },
                     {
                         "chance": 20,
-                        "level": 5,
-                        "pokemon": "weedle"
+                        "level": 63,
+                        "pokemon": "electabuzz"
                     },
                     {
                         "chance": 10,
-                        "level": 5,
-                        "pokemon": "weedle"
+                        "level": 63,
+                        "pokemon": "granbull"
                     },
                     {
                         "chance": 5,
-                        "level": 5,
-                        "pokemon": "weedle"
+                        "level": 63,
+                        "pokemon": "pinsir"
                     },
                     {
                         "chance": 4,
-                        "level": 5,
-                        "pokemon": "weedle"
+                        "level": 63,
+                        "pokemon": "sandslash"
                     },
                     {
                         "chance": 1,
-                        "level": 5,
-                        "pokemon": "weedle"
+                        "level": 63,
+                        "pokemon": "houndoom"
                     }
                 ]
             },
             "surf": [
                 {
                     "chance": 60,
-                    "level": 5,
-                    "pokemon": "weedle"
+                    "level": 61,
+                    "pokemon": "qwilfish"
                 },
                 {
                     "chance": 30,
-                    "level": 5,
-                    "pokemon": "weedle"
+                    "level": 61,
+                    "pokemon": "lanturn"
                 },
                 {
                     "chance": 10,
-                    "level": 5,
-                    "pokemon": "weedle"
+                    "level": 61,
+                    "pokemon": "mantine"
                 }
             ]
         },
@@ -13038,130 +13038,130 @@
                 "day": [
                     {
                         "chance": 30,
-                        "level": 5,
-                        "pokemon": "weedle"
+                        "level": 63,
+                        "pokemon": "raichu"
                     },
                     {
                         "chance": 30,
-                        "level": 5,
-                        "pokemon": "weedle"
+                        "level": 63,
+                        "pokemon": "dodrio"
                     },
                     {
                         "chance": 20,
-                        "level": 5,
-                        "pokemon": "weedle"
+                        "level": 63,
+                        "pokemon": "victreebel"
                     },
                     {
                         "chance": 10,
-                        "level": 5,
-                        "pokemon": "weedle"
+                        "level": 63,
+                        "pokemon": "rapidash"
                     },
                     {
                         "chance": 5,
-                        "level": 5,
-                        "pokemon": "weedle"
+                        "level": 63,
+                        "pokemon": "wigglytuff"
                     },
                     {
                         "chance": 4,
-                        "level": 5,
-                        "pokemon": "weedle"
+                        "level": 63,
+                        "pokemon": "arbok"
                     },
                     {
                         "chance": 1,
-                        "level": 5,
-                        "pokemon": "weedle"
+                        "level": 63,
+                        "pokemon": "scizor"
                     }
                 ],
                 "morning": [
                     {
                         "chance": 30,
-                        "level": 5,
-                        "pokemon": "weedle"
+                        "level": 63,
+                        "pokemon": "ampharos"
                     },
                     {
                         "chance": 30,
-                        "level": 5,
-                        "pokemon": "weedle"
+                        "level": 63,
+                        "pokemon": "lickitung"
                     },
                     {
                         "chance": 20,
-                        "level": 5,
-                        "pokemon": "weedle"
+                        "level": 63,
+                        "pokemon": "bellossom"
                     },
                     {
                         "chance": 10,
-                        "level": 5,
-                        "pokemon": "weedle"
+                        "level": 63,
+                        "pokemon": "arcanine"
                     },
                     {
                         "chance": 5,
-                        "level": 5,
-                        "pokemon": "weedle"
+                        "level": 63,
+                        "pokemon": "hitmonlee"
                     },
                     {
                         "chance": 4,
-                        "level": 5,
-                        "pokemon": "weedle"
+                        "level": 63,
+                        "pokemon": "yanma"
                     },
                     {
                         "chance": 1,
-                        "level": 5,
-                        "pokemon": "weedle"
+                        "level": 63,
+                        "pokemon": "dodrio"
                     }
                 ],
                 "night": [
                     {
                         "chance": 30,
-                        "level": 5,
-                        "pokemon": "weedle"
+                        "level": 63,
+                        "pokemon": "magneton"
                     },
                     {
                         "chance": 30,
-                        "level": 5,
-                        "pokemon": "weedle"
+                        "level": 63,
+                        "pokemon": "xatu"
                     },
                     {
                         "chance": 20,
-                        "level": 5,
-                        "pokemon": "weedle"
+                        "level": 63,
+                        "pokemon": "vileplume"
                     },
                     {
                         "chance": 10,
-                        "level": 5,
-                        "pokemon": "weedle"
+                        "level": 63,
+                        "pokemon": "persian"
                     },
                     {
                         "chance": 5,
-                        "level": 5,
-                        "pokemon": "weedle"
+                        "level": 63,
+                        "pokemon": "sandslash"
                     },
                     {
                         "chance": 4,
-                        "level": 5,
-                        "pokemon": "weedle"
+                        "level": 63,
+                        "pokemon": "stantler"
                     },
                     {
                         "chance": 1,
-                        "level": 5,
-                        "pokemon": "weedle"
+                        "level": 63,
+                        "pokemon": "houndoom"
                     }
                 ]
             },
             "surf": [
                 {
                     "chance": 60,
-                    "level": 5,
-                    "pokemon": "weedle"
+                    "level": 32,
+                    "pokemon": "tentacool"
                 },
                 {
                     "chance": 30,
-                    "level": 5,
-                    "pokemon": "weedle"
+                    "level": 32,
+                    "pokemon": "seadra"
                 },
                 {
                     "chance": 10,
-                    "level": 5,
-                    "pokemon": "weedle"
+                    "level": 32,
+                    "pokemon": "seadra"
                 }
             ]
         },
@@ -13804,6 +13804,10 @@
         {
             "area": "mahogany-town",
             "headbutt": "town"
+        },
+        {
+            "area": "battle-tower-outside",
+            "headbutt": "route"
         }
     ],
     "moves": [
@@ -14286,7 +14290,7 @@
             "extra": [],
             "index": 251,
             "name": "beat-up",
-            "power": 10,
+            "power": 15,
             "pp": 10,
             "type": "dark"
         },
@@ -14523,7 +14527,7 @@
             "index": 220,
             "name": "pain-split",
             "power": 0,
-            "pp": 20,
+            "pp": 5,
             "type": "normal"
         },
         {
@@ -15043,7 +15047,7 @@
             "index": 147,
             "name": "spore",
             "power": 0,
-            "pp": 15,
+            "pp": 5,
             "type": "grass"
         },
         {
@@ -15142,7 +15146,7 @@
             "index": 142,
             "name": "lovely-kiss",
             "power": 0,
-            "pp": 10,
+            "pp": 5,
             "type": "normal"
         },
         {
@@ -15483,7 +15487,7 @@
             "extra": [],
             "index": 41,
             "name": "twineedle",
-            "power": 25,
+            "power": 35,
             "pp": 20,
             "type": "bug"
         },
@@ -15555,7 +15559,7 @@
             "extra": [],
             "index": 91,
             "name": "dig",
-            "power": 60,
+            "power": 90,
             "pp": 10,
             "type": "ground"
         },
@@ -15953,7 +15957,7 @@
             "extra": [],
             "index": 210,
             "name": "fury-cutter",
-            "power": 20,
+            "power": 15,
             "pp": 20,
             "type": "bug"
         },
@@ -16110,7 +16114,7 @@
             "index": 95,
             "name": "hypnosis",
             "power": 0,
-            "pp": 20,
+            "pp": 5,
             "type": "psychic"
         },
         {
@@ -16230,7 +16234,7 @@
             "index": 105,
             "name": "recover",
             "power": 0,
-            "pp": 20,
+            "pp": 10,
             "type": "normal"
         },
         {
@@ -17049,6 +17053,18 @@
                 },
                 {
                     "level": 29,
+                    "move": "morning-sun"
+                },
+                {
+                    "level": 34,
+                    "move": "sleep-powder"
+                },
+                {
+                    "level": 34,
+                    "move": "dream-eater"
+                },
+                {
+                    "level": 45,
                     "move": "whirlwind"
                 }
             ],
@@ -17166,7 +17182,7 @@
             "learnset": [
                 {
                     "level": 10,
-                    "move": "pin-missile"
+                    "move": "twineedle"
                 },
                 {
                     "level": 13,
@@ -17820,23 +17836,23 @@
                     "move": "sludge"
                 },
                 {
-                    "level": 26,
+                    "level": 25,
                     "move": "bite"
                 },
                 {
-                    "level": 33,
+                    "level": 31,
                     "move": "sludge-bomb"
                 },
                 {
-                    "level": 37,
+                    "level": 36,
                     "move": "giga-drain"
                 },
                 {
-                    "level": 44,
+                    "level": 41,
                     "move": "crunch"
                 },
                 {
-                    "level": 51,
+                    "level": 47,
                     "move": "earthquake"
                 }
             ],
@@ -19941,7 +19957,7 @@
                     "move": "sludge-bomb"
                 },
                 {
-                    "level": 51,
+                    "level": 60,
                     "move": "earthquake"
                 }
             ],
@@ -20823,15 +20839,11 @@
                 },
                 {
                     "level": 50,
-                    "move": "cross-chop"
-                },
-                {
-                    "level": 59,
                     "move": "hydro-pump"
                 },
                 {
-                    "level": 70,
-                    "move": "submission"
+                    "level": 57,
+                    "move": "cross-chop"
                 },
                 {
                     "level": 76,
@@ -25474,7 +25486,7 @@
                 },
                 {
                     "level": 14,
-                    "move": "fury-cutter"
+                    "move": "false-swipe"
                 },
                 {
                     "level": 24,
@@ -25494,7 +25506,7 @@
                 },
                 {
                     "level": 53,
-                    "move": "false-swipe"
+                    "move": "fury-cutter"
                 }
             ],
             "name": "scyther",
@@ -25816,6 +25828,10 @@
                     "move": "quick-attack"
                 },
                 {
+                    "level": 12,
+                    "move": "horn-attack"
+                },
+                {
                     "level": 20,
                     "move": "scary-face"
                 },
@@ -25824,15 +25840,15 @@
                     "move": "rage"
                 },
                 {
-                    "level": 43,
+                    "level": 63,
                     "move": "earthquake"
                 },
                 {
-                    "level": 55,
+                    "level": 70,
                     "move": "iron-tail"
                 },
                 {
-                    "level": 67,
+                    "level": 76,
                     "move": "double-edge"
                 }
             ],
@@ -28811,8 +28827,12 @@
                     "move": "giga-drain"
                 },
                 {
-                    "level": 27,
+                    "level": 25,
                     "move": "psychic-m"
+                },
+                {
+                    "level": 27,
+                    "move": "leech-life"
                 },
                 {
                     "level": 34,
@@ -28885,8 +28905,12 @@
                     "move": "giga-drain"
                 },
                 {
-                    "level": 27,
+                    "level": 25,
                     "move": "psychic-m"
+                },
+                {
+                    "level": 27,
+                    "move": "leech-life"
                 },
                 {
                     "level": 34,
@@ -30669,15 +30693,15 @@
                     "move": "submission"
                 },
                 {
-                    "level": 37,
+                    "level": 39,
                     "move": "return"
                 },
                 {
-                    "level": 43,
+                    "level": 45,
                     "move": "iron-tail"
                 },
                 {
-                    "level": 48,
+                    "level": 50,
                     "move": "shadow-ball"
                 }
             ],
@@ -30880,8 +30904,12 @@
                     "move": "toxic"
                 },
                 {
-                    "level": 34,
+                    "level": 32,
                     "move": "hidden-power"
+                },
+                {
+                    "level": 36,
+                    "move": "shadow-ball"
                 },
                 {
                     "level": 45,
@@ -31550,7 +31578,7 @@
                     "move": "encore"
                 },
                 {
-                    "level": 66,
+                    "level": 100,
                     "move": "safeguard"
                 }
             ],
@@ -32254,27 +32282,51 @@
             "learnset": [
                 {
                     "level": 1,
+                    "move": "water-gun"
+                },
+                {
+                    "level": 5,
+                    "move": "acid"
+                },
+                {
+                    "level": 12,
+                    "move": "twineedle"
+                },
+                {
+                    "level": 16,
+                    "move": "headbutt"
+                },
+                {
+                    "level": 20,
+                    "move": "bubblebeam"
+                },
+                {
+                    "level": 25,
+                    "move": "sludge"
+                },
+                {
+                    "level": 30,
                     "move": "waterfall"
                 },
                 {
-                    "level": 1,
+                    "level": 34,
                     "move": "sludge-bomb"
                 },
                 {
-                    "level": 1,
+                    "level": 40,
+                    "move": "toxic"
+                },
+                {
+                    "level": 47,
                     "move": "explosion"
                 },
                 {
-                    "level": 1,
-                    "move": "toxic"
+                    "level": 73,
+                    "move": "spikes"
                 },
                 {
                     "level": 90,
                     "move": "destiny-bond"
-                },
-                {
-                    "level": 100,
-                    "move": "spikes"
                 }
             ],
             "name": "qwilfish",
@@ -32344,7 +32396,7 @@
                 },
                 {
                     "level": 63,
-                    "move": "false-swipe"
+                    "move": "fury-cutter"
                 },
                 {
                     "level": 90,
@@ -33413,17 +33465,21 @@
                 {
                     "level": 48,
                     "move": "rapid-spin"
+                },
+                {
+                    "level": 57,
+                    "move": "spikes"
                 }
             ],
             "name": "delibird",
             "pokedex": 225,
             "stats": {
-                "atk": 55,
+                "atk": 90,
                 "def": 45,
                 "hp": 45,
-                "spa": 65,
+                "spa": 100,
                 "spd": 45,
-                "spe": 75
+                "spe": 85
             },
             "tmhm": [
                 "headbutt",
@@ -34140,15 +34196,15 @@
                     "move": "earthquake"
                 },
                 {
-                    "level": 41,
+                    "level": 40,
                     "move": "return"
                 },
                 {
-                    "level": 49,
+                    "level": 45,
                     "move": "hi-jump-kick"
                 },
                 {
-                    "level": 56,
+                    "level": 49,
                     "move": "double-edge"
                 }
             ],
@@ -45082,7 +45138,7 @@
                     "item": "Miracleberry",
                     "level": 72,
                     "moves": [
-                        "light-screen",
+                        "hp-grass",
                         "reflect",
                         "thunderbolt",
                         "explosion"
@@ -48634,7 +48690,7 @@
             "team": [
                 {
                     "item": "Berry Juice",
-                    "level": 32,
+                    "level": 34,
                     "moves": [
                         "aeroblast",
                         "extremespeed",
@@ -48645,7 +48701,7 @@
                 },
                 {
                     "item": "Berry Juice",
-                    "level": 32,
+                    "level": 34,
                     "moves": [
                         "sacred-fire",
                         "extremespeed",
