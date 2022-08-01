@@ -680,7 +680,7 @@ function getDamage(attacker, defender, attackerStages, defenderStages, move, pla
 
 	// TODO if (weather)
 
-	if (badgeTypes.has(type) && badgeTypes.get(type) <= badges) {
+	if (player && badgeTypes.has(type) && badgeTypes.get(type) <= badges) {
 		v = parseInt(v * 1.125);
 	}
 
