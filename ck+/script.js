@@ -270,6 +270,7 @@ function displayCalcPokemon(root, poke, opponent, right) {
 			var p1 = "<td>" + getMoveName(poke.moves[i]) + "</td>"
 			var min = getDamage(poke, opponent, getStages(myStages), getStages(theirStages), movesByName.get(poke.moves[i]), player, false, true);
 			var max = getDamage(poke, opponent, getStages(myStages), getStages(theirStages), movesByName.get(poke.moves[i]), player, false, false);
+			var rolls = getDamage(poke, opponent, getStages(myStages), getStages(theirStages), movesByName.get(poke.moves[i]), player, false, false, true);
 			var minPercent = Math.round(1000 * min / hp) / 10;
 			var maxPercent = Math.round(1000 * max / hp) / 10;
 			var extra = "";
@@ -279,12 +280,15 @@ function displayCalcPokemon(root, poke, opponent, right) {
 			if (minPercent >= 100 || (!player && maxPercent >= 100)) {
 				extra = ' ohko';
 			}
-			var p2 = '<td class="' + extra + '"><ruby>' + min + " - " + max + "<rt>" + minPercent + "% - " + maxPercent + "%</rt></ruby></td>";
+			var p2 = '<td class="' + extra + '"><ruby>' + min + " - " + max
+				+ "<rt>" + minPercent + "% - " + maxPercent + "%</rt></ruby>"
+				+ prettyRolls(rolls) + "</td>";
 			if (max == 0) {
-				p2 = "<td>-<ruby><rt></rt></ruby></td>";
+				p2 = '<td>-<ruby><rt></rt></ruby></td>';
 			}
 			var min = getDamage(poke, opponent, getStages(myStages), getStages(theirStages), movesByName.get(poke.moves[i]), player, true, true);
 			var max = getDamage(poke, opponent, getStages(myStages), getStages(theirStages), movesByName.get(poke.moves[i]), player, true, false);
+			var rolls = getDamage(poke, opponent, getStages(myStages), getStages(theirStages), movesByName.get(poke.moves[i]), player, true, false, true);
 			var minPercent = Math.round(1000 * min / hp) / 10;
 			var maxPercent = Math.round(1000 * max / hp) / 10;
 			var extra = "";
@@ -294,9 +298,11 @@ function displayCalcPokemon(root, poke, opponent, right) {
 			if (minPercent >= 100 || (!player && maxPercent >= 100)) {
 				extra = ' ohko';
 			}
-			var p3 = '<td class="crit' + extra + '"><ruby>' + min + " - " + max + "<rt>" + minPercent + "% - " + maxPercent + "%</rt></ruby></td>";
+			var p3 = '<td class="crit' + extra + '"><ruby>' + min + " - " + max
+				+ "<rt>" + minPercent + "% - " + maxPercent + "%</rt></ruby>"
+				+ prettyRolls(rolls) + "</td>";
 			if (max == 0) {
-				p3 = "<td>-<ruby><rt></rt></ruby></td>";
+				p3 = '<td>-<ruby><rt></rt></ruby></td>';
 			}
 			moves += "<tr>";
 			if (right) {
@@ -311,6 +317,40 @@ function displayCalcPokemon(root, poke, opponent, right) {
 	}
 	moves += "</table>"
 	root.getElementsByClassName("calc-moves")[0].innerHTML = moves;
+}
+
+function prettyRolls(rolls) {
+	if (!rolls.length) {
+		rolls = [rolls];
+	}
+	var v = '<div class="rolls">';
+	v += "<h1>Rolls:</h1>";
+	v += "<p>";
+	v += ("" + rolls).replace(/,/g, " ");
+	v += "</p>";
+	var map = new Map();
+	for (var i = 0; i < rolls.length; i++) {
+		var l = rolls[i];
+		if (map.has(l)) {
+			map.set(l, map.get(l) + 1);
+		} else {
+			map.set(l, 1);
+		}
+	}
+	v += "<table><tr>";
+	var counts = 0;
+	for (var [key, value] of map.entries()) {
+		var chance = parseInt(value / rolls.length * 10000) / 100;
+		v += "<td><p>" + key + ": " + chance + "%</p></td>";
+		counts++;
+		if (counts >= 3) {
+			v += "</tr><tr>";
+			counts = 0;
+		}
+	}
+	v += "</tr></table>"
+	v += "</div>";
+	return v;
 }
 
 function displayCalcStat(div, poke, stat, player = false) {
@@ -592,17 +632,21 @@ function getHiddenPower(poke) {
 	return {type: ty, power: po};
 }
 
-function getDamage(attacker, defender, attackerStages, defenderStages, move, player, crit, low) {
+function getDamage(attacker, defender, attackerStages, defenderStages, move, player, crit, low, giveAll = false) {
 	if (defender == undefined) {
 		return 0;
 	}
 	var power = move.power;
 	var type = move.type;
 	if (move.name == "magnitude") {
-		if (low) {
-			power = 10;
+		if (giveAll) {
+			power = 70
 		} else {
-			power = 150;
+			if (low) {
+				power = 10;
+			} else {
+				power = 150;
+			}
 		}
 	}
 	if (move.name == "hidden-power") {
@@ -709,6 +753,14 @@ function getDamage(attacker, defender, attackerStages, defenderStages, move, pla
 	// Unhandled special move
 	if (power == 1) {
 		return -1;
+	}
+
+	if (giveAll) {
+		var rolls = [];
+		for (var i = 217; i <= 255; i++) {
+			rolls.push(Math.max(1, parseInt(v * i / 255)));
+		}
+		return rolls;
 	}
 
 	var r = 255;

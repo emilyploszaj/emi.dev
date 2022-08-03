@@ -231,6 +231,35 @@ input[type=number] {
 	margin: 10px;
 }
 
+.rolls {
+	position: absolute;
+	left: calc(50% - 175px);
+	top: 200px;
+	width: 350px;
+	background-color: var(--box-background);
+	border-style: solid;
+	border-color: var(--grouping-background);
+	border-width: 4px;;
+	display: none;
+	pointer-events: none;
+	float: none !important;
+	color: var(--text);
+}
+
+.rolls h1 {
+	font-size: 24px;
+}
+
+.rolls p {
+	font-size: 16px;
+	margin-bottom: 4px;
+	margin-top: 0px;
+}
+
+td:hover .rolls {
+	display: block;
+}
+
 #trainers {
 	overflow-y: scroll;
 	height: 100vh;

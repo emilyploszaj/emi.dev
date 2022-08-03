@@ -37735,6 +37735,14 @@
                     "name": "chansey"
                 },
                 {
+                    "dvs": {
+                        "atk": 12,
+                        "def": 13,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Miracleberry",
                     "level": 29,
                     "moves": [
@@ -38435,6 +38443,14 @@
                     "name": "dragonair"
                 },
                 {
+                    "dvs": {
+                        "atk": 13,
+                        "def": 13,
+                        "hp": 15,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Miracleberry",
                     "level": 33,
                     "moves": [
@@ -38503,6 +38519,14 @@
                     "name": "octillery"
                 },
                 {
+                    "dvs": {
+                        "atk": 13,
+                        "def": 13,
+                        "hp": 15,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Miracleberry",
                     "level": 33,
                     "moves": [
@@ -38569,6 +38593,14 @@
                     "name": "dugtrio"
                 },
                 {
+                    "dvs": {
+                        "atk": 13,
+                        "def": 13,
+                        "hp": 15,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Miracleberry",
                     "level": 33,
                     "moves": [
@@ -38617,6 +38649,14 @@
             "name": "KimonoGirl KIMONO_GIRL (2) NAOKO",
             "team": [
                 {
+                    "dvs": {
+                        "atk": 15,
+                        "def": 13,
+                        "hp": 15,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Miracleberry",
                     "level": 35,
                     "moves": [
@@ -38648,6 +38688,14 @@
             "name": "KimonoGirl KIMONO_GIRL (4) ZUKI",
             "team": [
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Miracleberry",
                     "level": 35,
                     "moves": [
@@ -38697,6 +38745,14 @@
             "name": "Sage SAGE (6) PING",
             "team": [
                 {
+                    "dvs": {
+                        "atk": 12,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Focus Band",
                     "level": 38,
                     "moves": [
@@ -39054,6 +39110,14 @@
                     "name": "togetic"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Focus Band",
                     "level": 38,
                     "moves": [
@@ -39114,6 +39178,14 @@
                     "name": "pidgeot"
                 },
                 {
+                    "dvs": {
+                        "atk": 12,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Berserk Gene",
                     "level": 37,
                     "moves": [
@@ -39841,6 +39913,14 @@
                     "name": "jumpluff"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 14,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Mint Berry",
                     "level": 42,
                     "moves": [
@@ -40001,6 +40081,14 @@
             "name": "Blackbelt BLACKBELT_T (7) LUNG",
             "team": [
                 {
+                    "dvs": {
+                        "atk": 12,
+                        "def": 15,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Miracleberry",
                     "level": 42,
                     "moves": [
@@ -40175,6 +40263,14 @@
             "name": "SuperNerd SUPER_NERD (14) MARKUS",
             "team": [
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 14,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Miracleberry",
                     "level": 45,
                     "moves": [
@@ -40221,6 +40317,14 @@
                     "name": "weezing"
                 },
                 {
+                    "dvs": {
+                        "atk": 13,
+                        "def": 15,
+                        "hp": 15,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Miracleberry",
                     "level": 45,
                     "moves": [
@@ -40268,6 +40372,14 @@
                     "name": "crobat"
                 },
                 {
+                    "dvs": {
+                        "atk": 12,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Miracleberry",
                     "level": 47,
                     "moves": [
@@ -40336,6 +40448,14 @@
             "name": "Pokemaniac POKEMANIAC (5) BEN",
             "team": [
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 14,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Leftovers",
                     "level": 48,
                     "moves": [
@@ -40526,6 +40646,14 @@
                     "name": "togepi"
                 },
                 {
+                    "dvs": {
+                        "atk": 13,
+                        "def": 13,
+                        "hp": 15,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Leftovers",
                     "level": 99,
                     "moves": [
@@ -40578,6 +40706,14 @@
             "name": "Fisher FISHER (8) ANDRE",
             "team": [
                 {
+                    "dvs": {
+                        "atk": 12,
+                        "def": 13,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Miracleberry",
                     "level": 49,
                     "moves": [
@@ -40654,6 +40790,14 @@
                     "name": "gengar"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 13,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Miracleberry",
                     "level": 49,
                     "moves": [
@@ -40725,6 +40869,14 @@
                     "name": "rhydon"
                 },
                 {
+                    "dvs": {
+                        "atk": 12,
+                        "def": 13,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Sharp Beak",
                     "level": 48,
                     "moves": [
@@ -40736,6 +40888,14 @@
                     "name": "gyarados"
                 },
                 {
+                    "dvs": {
+                        "atk": 13,
+                        "def": 13,
+                        "hp": 15,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Miracle Seed",
                     "level": 48,
                     "moves": [
@@ -40764,6 +40924,14 @@
             "name": "GruntM GRUNTM (20) GRUNT",
             "team": [
                 {
+                    "dvs": {
+                        "atk": 15,
+                        "def": 13,
+                        "hp": 15,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Miracleberry",
                     "level": 46,
                     "moves": [
@@ -40800,6 +40968,14 @@
                     "name": "golem"
                 },
                 {
+                    "dvs": {
+                        "atk": 13,
+                        "def": 15,
+                        "hp": 15,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Quick Claw",
                     "level": 45,
                     "moves": [
@@ -40826,6 +41002,14 @@
             "name": "Scientist SCIENTIST (3) JED",
             "team": [
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 13,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Magnet",
                     "level": 49,
                     "moves": [
@@ -40902,6 +41086,14 @@
             "name": "GruntM GRUNTM (17) GRUNT",
             "team": [
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Leftovers",
                     "level": 50,
                     "moves": [
@@ -40913,6 +41105,14 @@
                     "name": "umbreon"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Miracleberry",
                     "level": 50,
                     "moves": [
@@ -40968,6 +41168,14 @@
             "name": "GruntM GRUNTM (28) GRUNT",
             "team": [
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Miracleberry",
                     "level": 51,
                     "moves": [
@@ -40979,6 +41187,14 @@
                     "name": "xatu"
                 },
                 {
+                    "dvs": {
+                        "atk": 12,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Miracleberry",
                     "level": 51,
                     "moves": [
@@ -41004,6 +41220,14 @@
             "name": "GruntF GRUNTF (5) GRUNT",
             "team": [
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Leftovers",
                     "level": 51,
                     "moves": [
@@ -41128,6 +41352,14 @@
                     "name": "misdreavus"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 15,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Magnet",
                     "level": 53,
                     "moves": [
@@ -41198,6 +41430,14 @@
                     "name": "donphan"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Miracleberry",
                     "level": 53,
                     "moves": [
@@ -41377,6 +41617,14 @@
                     "name": "golduck"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 14,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Leftovers",
                     "level": 53,
                     "moves": [
@@ -41447,6 +41695,14 @@
                     "name": "lapras"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 15,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Leftovers",
                     "level": 55,
                     "moves": [
@@ -41458,6 +41714,14 @@
                     "name": "dewgong"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 14,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Leftovers",
                     "level": 54,
                     "moves": [
@@ -41497,6 +41761,14 @@
                     "name": "poliwrath"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Pink Bow",
                     "level": 55,
                     "moves": [
@@ -41524,6 +41796,14 @@
                     "name": "qwilfish"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Miracleberry",
                     "level": 54,
                     "moves": [
@@ -41573,6 +41853,14 @@
                     "name": "noctowl"
                 },
                 {
+                    "dvs": {
+                        "atk": 12,
+                        "def": 13,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Pink Bow",
                     "level": 54,
                     "moves": [
@@ -41605,6 +41893,14 @@
                     "name": "golduck"
                 },
                 {
+                    "dvs": {
+                        "atk": 12,
+                        "def": 15,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Sharp Beak",
                     "level": 55,
                     "moves": [
@@ -41647,6 +41943,14 @@
             "name": "BirdKeeper BIRD_KEEPER (6) DENIS",
             "team": [
                 {
+                    "dvs": {
+                        "atk": 12,
+                        "def": 13,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Miracleberry",
                     "level": 55,
                     "moves": [
@@ -41788,6 +42092,14 @@
             "name": "Jasmine JASMINE (1) JASMINE",
             "team": [
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 14,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Quick Claw",
                     "level": 58,
                     "moves": [
@@ -41821,6 +42133,14 @@
                     "name": "porygon2"
                 },
                 {
+                    "dvs": {
+                        "atk": 13,
+                        "def": 13,
+                        "hp": 15,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Quick Claw",
                     "level": 58,
                     "moves": [
@@ -41870,6 +42190,14 @@
                     "name": "piloswine"
                 },
                 {
+                    "dvs": {
+                        "atk": 12,
+                        "def": 13,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Leftovers",
                     "level": 63,
                     "moves": [
@@ -41881,6 +42209,14 @@
                     "name": "crobat"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Miracleberry",
                     "level": 63,
                     "moves": [
@@ -41927,6 +42263,14 @@
                     "name": "weezing"
                 },
                 {
+                    "dvs": {
+                        "atk": 13,
+                        "def": 15,
+                        "hp": 15,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Quick Claw",
                     "level": 57,
                     "moves": [
@@ -41938,6 +42282,14 @@
                     "name": "forretress"
                 },
                 {
+                    "dvs": {
+                        "atk": 12,
+                        "def": 13,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Miracleberry",
                     "level": 61,
                     "moves": [
@@ -41955,6 +42307,14 @@
             "name": "GruntF GRUNTF (2) GRUNT",
             "team": [
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Miracleberry",
                     "level": 61,
                     "moves": [
@@ -41993,6 +42353,14 @@
             "name": "GruntM GRUNTM (4) GRUNT",
             "team": [
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 15,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Miracleberry",
                     "level": 63,
                     "moves": [
@@ -42042,6 +42410,14 @@
             "name": "GruntM GRUNTM (7) GRUNT",
             "team": [
                 {
+                    "dvs": {
+                        "atk": 12,
+                        "def": 15,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Quick Claw",
                     "level": 61,
                     "moves": [
@@ -42064,6 +42440,14 @@
                     "name": "kangaskhan"
                 },
                 {
+                    "dvs": {
+                        "atk": 13,
+                        "def": 14,
+                        "hp": 11,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Quick Claw",
                     "level": 61,
                     "moves": [
@@ -42114,6 +42498,14 @@
                     "name": "qwilfish"
                 },
                 {
+                    "dvs": {
+                        "atk": 15,
+                        "def": 13,
+                        "hp": 15,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Magnet",
                     "level": 61,
                     "moves": [
@@ -42180,6 +42572,14 @@
             "name": "Scientist SCIENTIST (5) RICH",
             "team": [
                 {
+                    "dvs": {
+                        "atk": 12,
+                        "def": 15,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Leftovers",
                     "level": 63,
                     "moves": [
@@ -42228,6 +42628,14 @@
             "name": "ExecutiveM EXECUTIVEM (3) EXECUTIVE",
             "team": [
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 14,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Scope Lens",
                     "level": 59,
                     "moves": [
@@ -42310,6 +42718,14 @@
                     "name": "rhydon"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 15,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Miracleberry",
                     "level": 63,
                     "moves": [
@@ -42371,6 +42787,14 @@
                     "name": "jynx"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 14,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Magnet",
                     "level": 62,
                     "moves": [
@@ -42409,6 +42833,14 @@
                     "name": "primeape"
                 },
                 {
+                    "dvs": {
+                        "atk": 12,
+                        "def": 15,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Pink Bow",
                     "level": 62,
                     "moves": [
@@ -42420,6 +42852,14 @@
                     "name": "dodrio"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 14,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Leftovers",
                     "level": 62,
                     "moves": [
@@ -42442,6 +42882,14 @@
                     "name": "politoed"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Leftovers",
                     "level": 62,
                     "moves": [
@@ -42480,6 +42928,14 @@
                     "name": "primeape"
                 },
                 {
+                    "dvs": {
+                        "atk": 12,
+                        "def": 15,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Pink Bow",
                     "level": 62,
                     "moves": [
@@ -42529,6 +42985,14 @@
             "name": "Rival1 RIVAL1 (12) ?",
             "team": [
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 14,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Magnet",
                     "level": 62,
                     "moves": [
@@ -42551,6 +43015,14 @@
                     "name": "primeape"
                 },
                 {
+                    "dvs": {
+                        "atk": 12,
+                        "def": 15,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Pink Bow",
                     "level": 62,
                     "moves": [
@@ -42562,6 +43034,14 @@
                     "name": "dodrio"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 14,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Leftovers",
                     "level": 62,
                     "moves": [
@@ -42611,6 +43091,14 @@
                     "name": "hitmonchan"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 14,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Leftovers",
                     "level": 62,
                     "moves": [
@@ -42622,6 +43110,14 @@
                     "name": "ninetales"
                 },
                 {
+                    "dvs": {
+                        "atk": 13,
+                        "def": 13,
+                        "hp": 15,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Miracleberry",
                     "level": 62,
                     "moves": [
@@ -42650,6 +43146,14 @@
             "name": "Burglar BURGLAR (2) EDDIE",
             "team": [
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 14,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Leftovers",
                     "level": 62,
                     "moves": [
@@ -42699,6 +43203,14 @@
             "name": "GruntM GRUNTM (24) GRUNT",
             "team": [
                 {
+                    "dvs": {
+                        "atk": 13,
+                        "def": 14,
+                        "hp": 11,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Miracleberry",
                     "level": 61,
                     "moves": [
@@ -42760,6 +43272,14 @@
                     "name": "quagsire"
                 },
                 {
+                    "dvs": {
+                        "atk": 12,
+                        "def": 15,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Poison Barb",
                     "level": 62,
                     "moves": [
@@ -42799,6 +43319,14 @@
                     "name": "dragonite"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Blackglasses",
                     "level": 62,
                     "moves": [
@@ -42826,6 +43354,14 @@
                     "name": "misdreavus"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Miracleberry",
                     "level": 63,
                     "moves": [
@@ -42837,6 +43373,14 @@
                     "name": "xatu"
                 },
                 {
+                    "dvs": {
+                        "atk": 12,
+                        "def": 13,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Hard Stone",
                     "level": 62,
                     "moves": [
@@ -42859,6 +43403,14 @@
                     "name": "rhydon"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Miracleberry",
                     "level": 63,
                     "moves": [
@@ -42946,6 +43498,14 @@
                     "name": "miltank"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Leftovers",
                     "level": 64,
                     "moves": [
@@ -43050,6 +43610,14 @@
                     "name": "tauros"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Brightpowder",
                     "level": 64,
                     "moves": [
@@ -43179,6 +43747,14 @@
             "name": "Sage SAGE (12) KOJI",
             "team": [
                 {
+                    "dvs": {
+                        "atk": 12,
+                        "def": 13,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Pink Bow",
                     "level": 64,
                     "moves": [
@@ -43229,6 +43805,14 @@
                     "name": "mantine"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 14,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Leftovers",
                     "level": 63,
                     "moves": [
@@ -43289,6 +43873,14 @@
                     "name": "girafarig"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Twistedspoon",
                     "level": 63,
                     "moves": [
@@ -43300,6 +43892,14 @@
                     "name": "exeggutor"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Twistedspoon",
                     "level": 63,
                     "moves": [
@@ -43316,6 +43916,14 @@
             "name": "BirdKeeper BIRD_KEEPER (7) VANCE",
             "team": [
                 {
+                    "dvs": {
+                        "atk": 12,
+                        "def": 15,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Leftovers",
                     "level": 63,
                     "moves": [
@@ -43375,6 +43983,14 @@
                     "name": "qwilfish"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 14,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Leftovers",
                     "level": 64,
                     "moves": [
@@ -43413,6 +44029,14 @@
             "name": "CooltrainerM COOLTRAINERM (19) ALLEN",
             "team": [
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 13,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Magnet",
                     "level": 64,
                     "moves": [
@@ -43424,6 +44048,14 @@
                     "name": "jolteon"
                 },
                 {
+                    "dvs": {
+                        "atk": 13,
+                        "def": 14,
+                        "hp": 11,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Miracleberry",
                     "level": 64,
                     "moves": [
@@ -43452,6 +44084,14 @@
             "name": "CooltrainerF COOLTRAINERF (16) CYBIL",
             "team": [
                 {
+                    "dvs": {
+                        "atk": 13,
+                        "def": 14,
+                        "hp": 11,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Miracleberry",
                     "level": 63,
                     "moves": [
@@ -43474,6 +44114,14 @@
                     "name": "typhlosion"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 13,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Leftovers",
                     "level": 63,
                     "moves": [
@@ -43524,6 +44172,14 @@
                     "name": "typhlosion"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Leftovers",
                     "level": 64,
                     "moves": [
@@ -43546,6 +44202,14 @@
                     "name": "dragonite"
                 },
                 {
+                    "dvs": {
+                        "atk": 12,
+                        "def": 13,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Hard Stone",
                     "level": 63,
                     "moves": [
@@ -43574,6 +44238,14 @@
                     "name": "dragonair"
                 },
                 {
+                    "dvs": {
+                        "atk": 12,
+                        "def": 13,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Leftovers",
                     "level": 64,
                     "moves": [
@@ -43585,6 +44257,14 @@
                     "name": "gyarados"
                 },
                 {
+                    "dvs": {
+                        "atk": 12,
+                        "def": 13,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Hard Stone",
                     "level": 63,
                     "moves": [
@@ -43623,6 +44303,14 @@
                     "name": "nidoking"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 13,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Magnet",
                     "level": 64,
                     "moves": [
@@ -43683,6 +44371,14 @@
                     "name": "dragonite"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 14,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Miracleberry",
                     "level": 66,
                     "moves": [
@@ -43705,6 +44401,14 @@
                     "name": "nidoking"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 14,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Leftovers",
                     "level": 67,
                     "moves": [
@@ -43744,6 +44448,14 @@
                     "name": "mr-mime"
                 },
                 {
+                    "dvs": {
+                        "atk": 12,
+                        "def": 15,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Silverpowder",
                     "level": 68,
                     "moves": [
@@ -43771,6 +44483,14 @@
             "name": "Hiker HIKER (20) PARRY",
             "team": [
                 {
+                    "dvs": {
+                        "atk": 13,
+                        "def": 14,
+                        "hp": 11,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Soft Sand",
                     "level": 66,
                     "moves": [
@@ -43782,6 +44502,14 @@
                     "name": "dugtrio"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 14,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Leftovers",
                     "level": 66,
                     "moves": [
@@ -43820,6 +44548,14 @@
             "name": "Blackbelt BLACKBELT_T (8) KENJI",
             "team": [
                 {
+                    "dvs": {
+                        "atk": 13,
+                        "def": 14,
+                        "hp": 11,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Focus Band",
                     "level": 67,
                     "moves": [
@@ -43869,6 +44605,14 @@
                     "name": "stantler"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 14,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Leftovers",
                     "level": 68,
                     "moves": [
@@ -43880,6 +44624,14 @@
                     "name": "arcanine"
                 },
                 {
+                    "dvs": {
+                        "atk": 12,
+                        "def": 15,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Miracleberry",
                     "level": 68,
                     "moves": [
@@ -43891,6 +44643,14 @@
                     "name": "scizor"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Blackglasses",
                     "level": 68,
                     "moves": [
@@ -43930,6 +44690,14 @@
                     "name": "venomoth"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Miracleberry",
                     "level": 68,
                     "moves": [
@@ -43941,6 +44709,14 @@
                     "name": "jynx"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 14,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Miracleberry",
                     "level": 68,
                     "moves": [
@@ -43969,6 +44745,14 @@
             "name": "Hiker HIKER (8) MICHAEL",
             "team": [
                 {
+                    "dvs": {
+                        "atk": 13,
+                        "def": 14,
+                        "hp": 11,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Miracleberry",
                     "level": 67,
                     "moves": [
@@ -43980,6 +44764,14 @@
                     "name": "golem"
                 },
                 {
+                    "dvs": {
+                        "atk": 13,
+                        "def": 15,
+                        "hp": 15,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Miracleberry",
                     "level": 67,
                     "moves": [
@@ -44002,6 +44794,14 @@
                     "name": "arbok"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 15,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Charcoal",
                     "level": 67,
                     "moves": [
@@ -44019,6 +44819,14 @@
             "name": "CooltrainerF COOLTRAINERF (7) KELLY",
             "team": [
                 {
+                    "dvs": {
+                        "atk": 12,
+                        "def": 13,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Leftovers",
                     "level": 68,
                     "moves": [
@@ -44041,6 +44849,14 @@
                     "name": "blastoise"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 13,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Leftovers",
                     "level": 68,
                     "moves": [
@@ -44122,6 +44938,14 @@
                     "name": "gligar"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Pink Bow",
                     "level": 69,
                     "moves": [
@@ -44139,6 +44963,14 @@
             "name": "CooltrainerM COOLTRAINERM (20) DARIN",
             "team": [
                 {
+                    "dvs": {
+                        "atk": 15,
+                        "def": 14,
+                        "hp": 11,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Miracleberry",
                     "level": 69,
                     "moves": [
@@ -44150,6 +44982,14 @@
                     "name": "kingdra"
                 },
                 {
+                    "dvs": {
+                        "atk": 13,
+                        "def": 14,
+                        "hp": 11,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Leftovers",
                     "level": 69,
                     "moves": [
@@ -44161,6 +45001,14 @@
                     "name": "steelix"
                 },
                 {
+                    "dvs": {
+                        "atk": 12,
+                        "def": 13,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Leftovers",
                     "level": 69,
                     "moves": [
@@ -44232,6 +45080,14 @@
                     "name": "tyranitar"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 13,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Pink Bow",
                     "level": 69,
                     "moves": [
@@ -44345,6 +45201,14 @@
             "name": "BirdKeeper BIRD_KEEPER (14) JOSE",
             "team": [
                 {
+                    "dvs": {
+                        "atk": 12,
+                        "def": 15,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Stick",
                     "level": 75,
                     "moves": [
@@ -44372,6 +45236,14 @@
                     "name": "flareon"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Focus Band",
                     "level": 69,
                     "moves": [
@@ -44394,6 +45266,14 @@
                     "name": "weezing"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Miracleberry",
                     "level": 69,
                     "moves": [
@@ -44422,6 +45302,14 @@
                     "name": "tyranitar"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Miracleberry",
                     "level": 69,
                     "moves": [
@@ -44433,6 +45321,14 @@
                     "name": "jynx"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Miracleberry",
                     "level": 69,
                     "moves": [
@@ -44444,6 +45340,14 @@
                     "name": "victreebel"
                 },
                 {
+                    "dvs": {
+                        "atk": 12,
+                        "def": 15,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Leftovers",
                     "level": 70,
                     "moves": [
@@ -44532,6 +45436,14 @@
                     "name": "slowbro"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Focus Band",
                     "level": 70,
                     "moves": [
@@ -44560,6 +45472,14 @@
             "name": "CooltrainerM COOLTRAINERM (9) JAKE",
             "team": [
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Miracleberry",
                     "level": 70,
                     "moves": [
@@ -44582,6 +45502,14 @@
                     "name": "politoed"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Focus Band",
                     "level": 70,
                     "moves": [
@@ -44604,6 +45532,14 @@
                     "name": "nidoking"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Quick Claw",
                     "level": 70,
                     "moves": [
@@ -44682,6 +45618,14 @@
                     "name": "nidoqueen"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 14,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Leftovers",
                     "level": 71,
                     "moves": [
@@ -44693,6 +45637,14 @@
                     "name": "vaporeon"
                 },
                 {
+                    "dvs": {
+                        "atk": 13,
+                        "def": 15,
+                        "hp": 15,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Quick Claw",
                     "level": 71,
                     "moves": [
@@ -44704,6 +45656,14 @@
                     "name": "forretress"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Magnet",
                     "level": 71,
                     "moves": [
@@ -44715,6 +45675,14 @@
                     "name": "raichu"
                 },
                 {
+                    "dvs": {
+                        "atk": 12,
+                        "def": 13,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Miracleberry",
                     "level": 71,
                     "moves": [
@@ -44742,6 +45710,14 @@
             "name": "CooltrainerM COOLTRAINERM (10) GAVEN",
             "team": [
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 14,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Berserk Gene",
                     "level": 68,
                     "moves": [
@@ -44753,6 +45729,14 @@
                     "name": "electrode"
                 },
                 {
+                    "dvs": {
+                        "atk": 13,
+                        "def": 14,
+                        "hp": 11,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Berserk Gene",
                     "level": 68,
                     "moves": [
@@ -44786,6 +45770,14 @@
                     "name": "quagsire"
                 },
                 {
+                    "dvs": {
+                        "atk": 12,
+                        "def": 15,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Berserk Gene",
                     "level": 68,
                     "moves": [
@@ -44797,6 +45789,14 @@
                     "name": "scizor"
                 },
                 {
+                    "dvs": {
+                        "atk": 13,
+                        "def": 14,
+                        "hp": 11,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Berserk Gene",
                     "level": 68,
                     "moves": [
@@ -44814,6 +45814,14 @@
             "name": "CooltrainerF COOLTRAINERF (9) BETH",
             "team": [
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Brightpowder",
                     "level": 70,
                     "moves": [
@@ -44853,6 +45861,14 @@
             "name": "Rival1 RIVAL1 (13) ?",
             "team": [
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 13,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Leftovers",
                     "level": 72,
                     "moves": [
@@ -44896,6 +45912,14 @@
                     "name": "marowak"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Leftovers",
                     "level": 72,
                     "moves": [
@@ -44923,6 +45947,14 @@
             "name": "Rival1 RIVAL1 (14) ?",
             "team": [
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 13,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Leftovers",
                     "level": 72,
                     "moves": [
@@ -44966,6 +45998,14 @@
                     "name": "marowak"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Leftovers",
                     "level": 72,
                     "moves": [
@@ -44993,6 +46033,14 @@
             "name": "Rival1 RIVAL1 (15) ?",
             "team": [
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 13,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Leftovers",
                     "level": 72,
                     "moves": [
@@ -45036,6 +46084,14 @@
                     "name": "marowak"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Leftovers",
                     "level": 72,
                     "moves": [
@@ -45064,6 +46120,14 @@
             "name": "Will WILL (1) WILL",
             "team": [
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Miracleberry",
                     "level": 73,
                     "moves": [
@@ -45086,6 +46150,14 @@
                     "name": "clefable"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Quick Claw",
                     "level": 72,
                     "moves": [
@@ -45135,6 +46207,14 @@
             "name": "Koga KOGA (1) KOGA",
             "team": [
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 14,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Miracleberry",
                     "level": 72,
                     "moves": [
@@ -45146,6 +46226,14 @@
                     "name": "electrode"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Leftovers",
                     "level": 73,
                     "moves": [
@@ -45179,6 +46267,14 @@
                     "name": "muk"
                 },
                 {
+                    "dvs": {
+                        "atk": 13,
+                        "def": 13,
+                        "hp": 15,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Sharp Beak",
                     "level": 73,
                     "moves": [
@@ -45190,6 +46286,14 @@
                     "name": "scyther"
                 },
                 {
+                    "dvs": {
+                        "atk": 12,
+                        "def": 15,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Leftovers",
                     "level": 73,
                     "moves": [
@@ -45206,6 +46310,14 @@
             "name": "Bruno BRUNO (1) BRUNO",
             "team": [
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 15,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Leftovers",
                     "level": 73,
                     "moves": [
@@ -45277,6 +46389,14 @@
             "name": "Karen KAREN (1) KAREN",
             "team": [
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 13,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Miracleberry",
                     "level": 72,
                     "moves": [
@@ -45310,6 +46430,14 @@
                     "name": "misdreavus"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 14,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Charcoal",
                     "level": 73,
                     "moves": [
@@ -45370,6 +46498,14 @@
                     "name": "aerodactyl"
                 },
                 {
+                    "dvs": {
+                        "atk": 12,
+                        "def": 13,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Miracleberry",
                     "level": 74,
                     "moves": [
@@ -48763,6 +49899,14 @@
                     "name": "sudowoodo"
                 },
                 {
+                    "dvs": {
+                        "atk": 15,
+                        "def": 13,
+                        "hp": 15,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Leftovers",
                     "level": 86,
                     "moves": [
@@ -48785,6 +49929,14 @@
                     "name": "wigglytuff"
                 },
                 {
+                    "dvs": {
+                        "atk": 13,
+                        "def": 12,
+                        "hp": 11,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Charcoal",
                     "level": 86,
                     "moves": [
