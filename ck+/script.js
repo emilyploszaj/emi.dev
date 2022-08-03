@@ -530,7 +530,6 @@ function getEncounterPoolDisplay(pool, time) {
 	var v = "";
 	v += '<div class="encounter-pool ' + time + '-pool">';
 	v += '<div style="display:flex">';
-	console.log(pool);
 	var totalWeight = 0;
 	for (var i = 0; i < pool.length; i++) {
 		if (!hasFamily(pokemonFamilies.get(pokemonByName.get(pool[i].pokemon).pokedex))) {
@@ -1224,7 +1223,6 @@ function readFile(file) {
 
 document.ondrop = function(event) {
 	if (event.dataTransfer.files) {
-		console.log(event.dataTransfer.files);
 		var file = event.dataTransfer.files[0];
 		readFile(file);
 	}
