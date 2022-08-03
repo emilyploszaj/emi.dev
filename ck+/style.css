@@ -386,6 +386,7 @@ rt {
 
 .calc-team {
 	display: flex;
+	flex-wrap: wrap;
 }
 
 .calc-team div {

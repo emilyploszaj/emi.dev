@@ -943,7 +943,7 @@ function updateCalc() {
 	displayCalcPokemon(document.getElementById("player"), myPoke, theirPoke, false);
 	displayCalcPokemon(document.getElementById("opponent"), theirPoke, myPoke, true);
 	var v = "";
-	for (var i = 0; i < 6 && i < box.length; i++) {
+	for (var i = 0; i < box.length && i < box.length; i++) {
 		var img = '<img src="https://img.pokemondb.net/sprites/crystal/normal/' + box[i].name + '.png">';
 		v += '<div onclick="setPlayer(' + i + ')">' + img + "</div>";
 	}
