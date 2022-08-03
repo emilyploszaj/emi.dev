@@ -302,7 +302,7 @@ function displayCalcPokemon(root, poke, opponent, right) {
 				+ "<rt>" + minPercent + "% - " + maxPercent + "%</rt></ruby>"
 				+ prettyRolls(rolls) + "</td>";
 			if (max == 0) {
-				p3 = '<td>-<ruby><rt></rt></ruby></td>';
+				p3 = '<td>-<ruby><rt>​</rt></ruby></td>';
 			}
 			moves += "<tr>";
 			if (right) {
@@ -312,7 +312,7 @@ function displayCalcPokemon(root, poke, opponent, right) {
 			}
 			moves += "</tr>";
 		} else {
-			moves += "<tr><td>-<ruby><rt></rt></ruby></td></tr>";
+			moves += "<tr><td>-<ruby><rt>​</rt></ruby></td></tr>";
 		}
 	}
 	moves += "</table>"
