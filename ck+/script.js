@@ -171,7 +171,7 @@ var multiHitMoves = new Set([
 	"fury-attack", "fury-swipes", "pin-missile", "spike-cannon"
 ]);
 var doubleHitMoves = new Set([
-	"bonemerang", "double-hit", "double-kick"
+	"bonemerang", "double-hit", "double-kick", "twineedle"
 ])
 
 fetch("./data.json")
