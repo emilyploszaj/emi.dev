@@ -2,18 +2,20 @@
 	--background: #222222;
 	--grouping-background: #111111;
 	--box-background: #333333;
-	--dupe-background: #531414;
-	--highlighted: #49adff;
 	--text: #eeeeee;
 	--crit-text: #e59393;
-
-	--ohko: #d84a4a;
-	--thko: #c3d84a;
 
 	--search-suggestion: #181818;
 	--search-suggestion-hover: #282828;
 
 	--stat-bar-back: #444444;
+
+	--ohko: #d84a4a;
+	--thko: #c3d84a;
+
+	--highlighted: #49adff;
+	--dupe-background: #531414;
+
 	--stat-bar-fill-terrible: #ec6868;
 	--stat-bar-fill-mediocre: #ecb768;
 	--stat-bar-fill-decent: #98ec68;

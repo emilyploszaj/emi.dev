@@ -59,23 +59,111 @@ const badgeTypes = new Map([
 	// TODO unreleased gym leader order
 ]);
 var typeEnhancements = new Map([
-	["pink bow", "normal"],
+	["pink-bow", "normal"],
 	["charcoal", "fire"],
-	["mystic water", "water"],
+	["mystic-water", "water"],
 	["magnet", "electric"],
-	["miracle seed", "grass"],
+	["miracle-seed", "grass"],
 	["nevermeltice", "ice"],
 	["blackbelt", "fighting"],
-	["poison barb", "poison"],
-	["soft sand", "ground"],
-	["sharp beak", "flying"],
+	["poison-barb", "poison"],
+	["soft-sand", "ground"],
+	["sharp-beak", "flying"],
 	["twistedspoon", "psychic"],
 	["silverpowder", "bug"],
-	["hard stone", "rock"],
-	["spell tag", "ghost"],
-	["dragon fang", "dragon"],
+	["hard-stone", "rock"],
+	["spell-tag", "ghost"],
+	["dragon-fang", "dragon"],
 	["blackglasses", "dark"],
-	["metal coat", "steel"]
+	["metal-coat", "steel"]
+]);
+var itemsById = new Map([
+	[0x03, "brightpowder"],
+	[0x1e, "lucky-punch"],
+	[0x23, "metal-powder"],
+	[0x39, "exp-share"],
+	[0x49, "quick-claw"],
+	[0x4a, "psncureberry"],
+	[0x4c, "soft-sand"],
+	[0x4d, "sharp-beak"],
+	[0x4e, "przcureberry"],
+	[0x4f, "burnt-berry"],
+	[0x50, "ice-berry"],
+	[0x51, "poison-barb"],
+	[0x52, "king's-rock"],
+	[0x53, "bitter-berry"],
+	[0x54, "mint-berry"],
+	[0x58, "silver-powder"],
+	[0x5b, "amulet-coin"],
+	[0x5f, "mystic-water"],
+	[0x60, "twistedspoon"],
+	[0x62, "blackbelt"],
+	[0x66, "blackglasses"],
+	[0x68, "pink-bow"],
+	[0x69, "stick"],
+	[0x6b, "nevermeltice"],
+	[0x6c, "magnet"],
+	[0x6d, "miracleberry"],
+	[0x70, "everstone"],
+	[0x75, "miracle-seed"],
+	[0x76, "thick-club"],
+	[0x77, "focus-band"],
+	[0x7d, "hard-stone"],
+	[0x7e, "lucky-egg"],
+	[0x8a, "charcoal"],
+	[0x8b, "berry-juice"],
+	[0x8c, "scope-lens"],
+	[0x8f, "metal-coat"],
+	[0x90, "dragon-fang"],
+	[0x92, "leftovers"],
+	[0x96, "mysteryberry"],
+	[0x97, "dragon-scale"],
+	[0x98, "beserk-gene"],
+	[0x98, "beserk-gene"],
+	[0xa3, "light-ball"],
+	[0xaa, "pokadot-bow"],
+	[0xad, "berry"],
+	[0xae, "gold-berry"],
+]);
+var trueNames = [
+	"ThunderPunch",
+	"ExtremeSpeed",
+	"PoisonPowder",
+	"ThunderShock",
+	"DoubleSlap",
+	"SelfDestruct",
+	"DynamicPunch",
+	"SonicBoom",
+	"AncientPower",
+	"DragonBreath",
+	"HP Normal",
+	"HP Fire",
+	"HP Water",
+	"HP Electric",
+	"HP Grass",
+	"HP Ice",
+	"HP Fighting",
+	"HP Poison",
+	"HP Ground",
+	"HP Flying",
+	"HP Psychic",
+	"HP Bug",
+	"HP Rock",
+	"HP Ghost",
+	"HP Dragon",
+	"HP Dark",
+	"HP Steel",
+	"BrightPowder",
+	"PSNCureBerry",
+	"PRZCureBerry",
+	"TwistedSpoon",
+	"BlackGlasses",
+	"NeverMeltIce",
+	"MiracleBerry",
+	"MysteryBerry",
+];
+var nameFormatting = new Map([
+	["psychic-m", "Psychic"]
 ]);
 
 var multiHitMoves = new Set([
@@ -89,6 +177,10 @@ var doubleHitMoves = new Set([
 fetch("./data.json")
 	.then(response => response.text())
 	.then(text => {
+		for (let i in trueNames) {
+			var lower = trueNames[i].toLowerCase().replace(/-/g, " ");
+			nameFormatting.set(lower, trueNames[i]);
+		}
 		var j = JSON.parse(text);
 		for (let i in j.pokemon) {
 			var p = j.pokemon[i];
@@ -603,6 +695,10 @@ function padNumber(s) {
 }
 
 function fullCapitalize(s) {
+	s = s.toLowerCase();
+	if (nameFormatting.has(s)) {
+		return nameFormatting.get(s);
+	}
 	return s.replace(/-/g, " ").replace(/\w\S*/g, (word) => (word.replace(/^\w/, (c) => c.toUpperCase())));
 }
 
@@ -698,14 +794,16 @@ function getDamage(attacker, defender, attackerStages, defenderStages, move, pla
 	}
 
 	// screens
+	var ni = attacker.item.toLowerCase().replace(/ /g, "-");
+	var ndi = defender.item.toLowerCase().replace(/ /g, "-");
 
-	if ((attacker.name == "cubone" || attacker.name == "marowak") && attacker.item == "Thick Club") {
+	if ((attacker.name == "cubone" || attacker.name == "marowak") && ni == "thick-club") {
 		a *= 2;
 	}
-	if (attacker.name == "pikachu" && attacker.item == "Light Ball" && special) {
+	if (attacker.name == "pikachu" && ni == "light-ball" && special) {
 		a *= 2;
 	}
-	if (defender.name == "ditto" && defender.item == "Metal Powder") {
+	if (defender.name == "ditto" && ndi == "metal-powder") {
 		d = d * 1.5;
 	}
 	v = parseInt(parseInt(v * a) / d);
@@ -714,7 +812,6 @@ function getDamage(attacker, defender, attackerStages, defenderStages, move, pla
 	if (crit) {
 		v *= 2;
 	}
-	var ni = attacker.item.toLowerCase().replace(/ /g, "-");
 	if (typeEnhancements.has(ni) && typeEnhancements.get(ni) == type) {
 		v *= 1.1;
 		v = parseInt(v);
@@ -1142,6 +1239,12 @@ function readPokemonList(bytes, start, capacity, increment) {
 		if (bytes[p] != species[i] && species[i] != 0xfd) {
 			return;
 		}
+		var item = bytes[p + 0x01];
+		if (itemsById.has(item)) {
+			item = itemsById.get(item);
+		} else {
+			item = "";
+		}
 		var atk = (bytes[p + 0x15] & 0xf0) >> 4;
 		var def = (bytes[p + 0x15] & 0x0f);
 		var spe = (bytes[p + 0x16] & 0xf0) >> 4;
@@ -1167,8 +1270,8 @@ function readPokemonList(bytes, start, capacity, increment) {
 				"spe": spe
 			},
 			"moves": moves,
-			"item": ""
-		})
+			"item": item
+		});
 		p += increment;
 	}
 	return pokemon;
