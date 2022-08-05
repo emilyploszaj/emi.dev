@@ -23,6 +23,22 @@
 	--stat-bar-fill-amazing: #3c86f5;
 }
 
+:root {
+	--background: #a7ddb7;
+	--grouping-background: #8db0d8;
+	--box-background: #d3ace2;
+	--text: #242424;
+	--crit-text: #c26c6c;
+	
+	--ohko: #d46f6f;
+	--thko: #e4e281;
+
+	--search-suggestion: #b8b8b8;
+	--search-suggestion-hover: #c8c8c8;
+
+	--stat-bar-back: #aaaaaa;
+}
+
 html {
 	background-color: var(--background);
 	color: var(--text);
