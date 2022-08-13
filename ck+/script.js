@@ -524,9 +524,29 @@ function displayPokemon(root, i) {
 	displayStat(root.getElementsByClassName("poke-spa")[0], p.stats.spa);
 	displayStat(root.getElementsByClassName("poke-spd")[0], p.stats.spd);
 	displayStat(root.getElementsByClassName("poke-spe")[0], p.stats.spe);
-	var evo = "";
+	var evo = "<div>Evolutions:</div>";
+	for (let index in data.pokemon) {
+		var v = data.pokemon[index];
+		if (!v.evolutions) {
+			continue;
+		}
+		for (var i = 0; i < v.evolutions.length; i++) {
+			var evolution = v.evolutions[i];
+			if (evolution.into != p.name) {
+				continue;
+			}
+			var before;
+			if (evolution.method == "item") {
+				before = evolution.item;
+			} else if (evolution.method == "level") {
+				before = "Level " + evolution.level;
+			} else {
+				before = evolution.method;
+			}
+			evo += "<div>"+ pokeLink(v.name) + " -> " + before  + "</div>"
+		}
+	}
 	if (p.evolutions) {
-		evo += "<div>Evolutions:</div>"
 		for (var i = 0; i < p.evolutions.length; i++) {
 			var evolution = p.evolutions[i];
 			var before;
@@ -539,9 +559,11 @@ function displayPokemon(root, i) {
 			}
 			evo += "<div>" + before + " -> " + pokeLink(evolution.into) + "</div>"
 		}
-		evo += "<br>"
 	}
-	root.getElementsByClassName("poke-evolution")[0].innerHTML = evo;
+	if (evo != "<div>Evolutions:</div>") {
+		evo += "<br>"
+		root.getElementsByClassName("poke-evolution")[0].innerHTML = evo;
+	}
 	var l = "";
 	l += '<div>Learnset:</div><table class="move-table">';
 	for (let mi in p.learnset) {
