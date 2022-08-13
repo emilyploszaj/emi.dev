@@ -21665,7 +21665,7 @@
                 "atk": 70,
                 "def": 65,
                 "hp": 80,
-                "spa": 110,
+                "spa": 100,
                 "spd": 120,
                 "spe": 100
             },
@@ -22402,12 +22402,12 @@
             "name": "farfetchd",
             "pokedex": 83,
             "stats": {
-                "atk": 65,
+                "atk": 90,
                 "def": 55,
                 "hp": 52,
                 "spa": 58,
                 "spd": 62,
-                "spe": 60
+                "spe": 70
             },
             "tmhm": [
                 "headbutt",
@@ -27010,7 +27010,7 @@
                 "atk": 85,
                 "def": 100,
                 "hp": 90,
-                "spa": 95,
+                "spa": 115,
                 "spd": 125,
                 "spe": 85
             },
@@ -31381,7 +31381,7 @@
                 "atk": 85,
                 "def": 42,
                 "hp": 60,
-                "spa": 85,
+                "spa": 105,
                 "spd": 42,
                 "spe": 91
             },
@@ -33518,12 +33518,12 @@
             "name": "delibird",
             "pokedex": 225,
             "stats": {
-                "atk": 55,
+                "atk": 90,
                 "def": 45,
                 "hp": 45,
-                "spa": 65,
+                "spa": 100,
                 "spd": 45,
-                "spe": 75
+                "spe": 85
             },
             "tmhm": [
                 "headbutt",
@@ -34260,7 +34260,7 @@
                 "hp": 75,
                 "spa": 85,
                 "spd": 75,
-                "spe": 75
+                "spe": 85
             },
             "tmhm": [
                 "headbutt",
