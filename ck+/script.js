@@ -55,8 +55,15 @@ const badgeTypes = new Map([
 	["fighting", 5],
 	["ice", 6],
 	["steel", 7],
-	["dragon", 8]
-	// TODO unreleased gym leader order
+	["dragon", 8],
+	["electric", 9],
+	["psychic", 10],
+	["poison", 11],
+	["grass", 12],
+	["rock", 13],
+	["water", 14],
+	["fire", 15],
+	["ground", 16],
 ]);
 var typeEnhancements = new Map([
 	["pink-bow", "normal"],
