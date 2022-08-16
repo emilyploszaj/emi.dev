@@ -15400,7 +15400,7 @@
             "type": "poison"
         },
         {
-            "accuracy": 75,
+            "accuracy": 100,
             "extra": [],
             "index": 21,
             "name": "slam",
@@ -16645,11 +16645,11 @@
                     "move": "wing-attack"
                 },
                 {
-                    "level": 43,
+                    "level": 42,
                     "move": "steel-wing"
                 },
                 {
-                    "level": 47,
+                    "level": 46,
                     "move": "flamethrower"
                 },
                 {
@@ -16741,7 +16741,7 @@
                 },
                 {
                     "level": 12,
-                    "move": "headbutt"
+                    "move": "slam"
                 },
                 {
                     "level": 16,
@@ -17764,19 +17764,19 @@
                 },
                 {
                     "level": 4,
-                    "move": "headbutt"
-                },
-                {
-                    "level": 9,
                     "move": "acid"
                 },
                 {
-                    "level": 13,
+                    "level": 9,
                     "move": "mega-drain"
                 },
                 {
-                    "level": 16,
+                    "level": 13,
                     "move": "wrap"
+                },
+                {
+                    "level": 16,
+                    "move": "slam"
                 },
                 {
                     "level": 19,
@@ -20392,11 +20392,11 @@
                     "move": "rock-slide"
                 },
                 {
-                    "level": 27,
+                    "level": 26,
                     "move": "body-slam"
                 },
                 {
-                    "level": 34,
+                    "level": 32,
                     "move": "submission"
                 }
             ],
@@ -20459,7 +20459,7 @@
                     "move": "body-slam"
                 },
                 {
-                    "level": 35,
+                    "level": 32,
                     "move": "submission"
                 },
                 {
@@ -25967,15 +25967,15 @@
                     "move": "dragon-rage"
                 },
                 {
-                    "level": 20,
+                    "level": 35,
                     "move": "waterfall"
                 },
                 {
-                    "level": 33,
+                    "level": 38,
                     "move": "thunderbolt"
                 },
                 {
-                    "level": 39,
+                    "level": 42,
                     "move": "ice-beam"
                 },
                 {
@@ -30331,14 +30331,14 @@
                 },
                 {
                     "level": 44,
-                    "move": "low-kick"
+                    "move": "hi-jump-kick"
                 },
                 {
                     "level": 54,
                     "move": "ancientpower"
                 },
                 {
-                    "level": 99,
+                    "level": 85,
                     "move": "explosion"
                 }
             ],
@@ -32912,7 +32912,7 @@
             "evolutions": [
                 {
                     "into": "magcargo",
-                    "level": 28,
+                    "level": 30,
                     "method": "level"
                 }
             ],
@@ -33487,7 +33487,7 @@
                     "move": "fury-swipes"
                 },
                 {
-                    "level": 16,
+                    "level": 18,
                     "move": "aurora-beam"
                 },
                 {
@@ -34446,11 +34446,15 @@
                 },
                 {
                     "level": 66,
-                    "move": "hi-jump-kick"
+                    "move": "jump-kick"
                 },
                 {
                     "level": 74,
                     "move": "counter"
+                },
+                {
+                    "level": 99,
+                    "move": "hi-jump-kick"
                 }
             ],
             "name": "hitmontop",
@@ -36283,7 +36287,7 @@
                 },
                 {
                     "item": "Berry",
-                    "level": 20,
+                    "level": 18,
                     "moves": [
                         "aurora-beam",
                         "wing-attack",
@@ -36406,7 +36410,7 @@
                     "item": "Berry Juice",
                     "level": 22,
                     "moves": [
-                        "hi-jump-kick",
+                        "jump-kick",
                         "rock-slide",
                         "earthquake",
                         "mach-punch"
@@ -36931,11 +36935,10 @@
                 },
                 {
                     "item": "Berry",
-                    "level": 23,
+                    "level": 21,
                     "moves": [
                         "aurora-beam",
                         "wing-attack",
-                        "bubblebeam",
                         "quick-attack"
                     ],
                     "name": "delibird"
@@ -37140,7 +37143,7 @@
                         "flame-wheel",
                         "iron-tail",
                         "double-kick",
-                        "jump-kick"
+                        "quick-attack"
                     ],
                     "name": "ponyta"
                 },
@@ -37283,7 +37286,7 @@
                     "item": "Berry Juice",
                     "level": 26,
                     "moves": [
-                        "magnitude",
+                        "dig",
                         "rock-slide",
                         "return",
                         "submission"
@@ -37770,7 +37773,7 @@
                 },
                 {
                     "item": "Gold Berry",
-                    "level": 30,
+                    "level": 31,
                     "moves": [
                         "attract",
                         "thunder-wave",
@@ -37820,8 +37823,8 @@
                     "name": "clefable"
                 },
                 {
-                    "item": "Berry Juice",
-                    "level": 31,
+                    "item": "Berry",
+                    "level": 30,
                     "moves": [
                         "attract",
                         "body-slam",
@@ -38228,7 +38231,7 @@
                     "moves": [
                         "flamethrower",
                         "take-down",
-                        "hi-jump-kick",
+                        "jump-kick",
                         "iron-tail"
                     ],
                     "name": "rapidash"
@@ -44424,11 +44427,19 @@
                     "name": "feraligatr"
                 },
                 {
+                    "dvs": {
+                        "atk": 12,
+                        "def": 13,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Pink Bow",
                     "level": 67,
                     "moves": [
                         "extremespeed",
-                        "wing-attack",
+                        "hp-flying",
                         "flamethrower",
                         "thunderbolt"
                     ],
@@ -45289,25 +45300,6 @@
             "name": "CooltrainerM COOLTRAINERM (11) BLAKE",
             "team": [
                 {
-                    "dvs": {
-                        "atk": 14,
-                        "def": 12,
-                        "hp": 3,
-                        "spa": 15,
-                        "spd": 15,
-                        "spe": 15
-                    },
-                    "item": "Focus Band",
-                    "level": 69,
-                    "moves": [
-                        "explosion",
-                        "waterfall",
-                        "ice-beam",
-                        "hp-fire"
-                    ],
-                    "name": "cloyster"
-                },
-                {
                     "item": "Quick Claw",
                     "level": 69,
                     "moves": [
@@ -45319,8 +45311,27 @@
                     "name": "flareon"
                 },
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
+                    "item": "Focus Band",
+                    "level": 67,
+                    "moves": [
+                        "explosion",
+                        "waterfall",
+                        "ice-beam",
+                        "hp-fire"
+                    ],
+                    "name": "cloyster"
+                },
+                {
                     "item": "Brightpowder",
-                    "level": 69,
+                    "level": 67,
                     "moves": [
                         "explosion",
                         "sludge-bomb",
@@ -45331,9 +45342,9 @@
                 },
                 {
                     "item": "Miracleberry",
-                    "level": 80,
+                    "level": 73,
                     "moves": [
-                        "double-edge",
+                        "body-slam",
                         "surf",
                         "thunderpunch",
                         "fire-punch"
@@ -45454,12 +45465,12 @@
                 },
                 {
                     "item": "Brightpowder",
-                    "level": 70,
+                    "level": 68,
                     "moves": [
                         "drill-peck",
                         "double-edge",
                         "steel-wing",
-                        "double-kick"
+                        "hi-jump-kick"
                     ],
                     "name": "dodrio"
                 }
@@ -45664,7 +45675,7 @@
             "team": [
                 {
                     "item": "Focus Band",
-                    "level": 71,
+                    "level": 70,
                     "moves": [
                         "earthquake",
                         "sludge-bomb",
@@ -45702,7 +45713,7 @@
                         "spe": 15
                     },
                     "item": "Quick Claw",
-                    "level": 71,
+                    "level": 69,
                     "moves": [
                         "explosion",
                         "hp-steel",
@@ -46544,7 +46555,7 @@
                 },
                 {
                     "item": "Miracleberry",
-                    "level": 73,
+                    "level": 74,
                     "moves": [
                         "sky-attack",
                         "earthquake",
@@ -47357,7 +47368,7 @@
                         "spe": 15
                     },
                     "item": "Sharp Beak",
-                    "level": 76,
+                    "level": 78,
                     "moves": [
                         "pursuit",
                         "sky-attack",
@@ -48295,7 +48306,7 @@
                     "moves": [
                         "drill-peck",
                         "return",
-                        "jump-kick",
+                        "hi-jump-kick",
                         "steel-wing"
                     ],
                     "name": "dodrio"
@@ -52654,15 +52665,23 @@
             "name": "Red RED (1) RED",
             "team": [
                 {
-                    "item": "Hard Stone",
-                    "level": 100,
+                    "dvs": {
+                        "atk": 15,
+                        "def": 13,
+                        "hp": 15,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
+                    "item": "Light Ball",
+                    "level": 115,
                     "moves": [
-                        "sky-attack",
-                        "ancientpower",
-                        "earthquake",
-                        "fire-blast"
+                        "surf",
+                        "thunderbolt",
+                        "petal-dance",
+                        "hp-ice"
                     ],
-                    "name": "aerodactyl"
+                    "name": "pikachu"
                 },
                 {
                     "dvs": {
@@ -52684,23 +52703,15 @@
                     "name": "ho-oh"
                 },
                 {
-                    "dvs": {
-                        "atk": 15,
-                        "def": 13,
-                        "hp": 15,
-                        "spa": 15,
-                        "spd": 15,
-                        "spe": 15
-                    },
-                    "item": "Light Ball",
-                    "level": 115,
+                    "item": "Hard Stone",
+                    "level": 100,
                     "moves": [
-                        "surf",
-                        "thunderbolt",
-                        "petal-dance",
-                        "hp-ice"
+                        "sky-attack",
+                        "ancientpower",
+                        "earthquake",
+                        "fire-blast"
                     ],
-                    "name": "pikachu"
+                    "name": "aerodactyl"
                 },
                 {
                     "item": "Leftovers",
@@ -52720,7 +52731,7 @@
                         "psychic-m",
                         "submission",
                         "flamethrower",
-                        "thunderbolt"
+                        "shadow-ball"
                     ],
                     "name": "mewtwo"
                 },
@@ -54922,7 +54933,7 @@
             "team": [
                 {
                     "item": "Focus Band",
-                    "level": 74,
+                    "level": 76,
                     "moves": [
                         "lovely-kiss",
                         "double-edge",
@@ -54933,7 +54944,7 @@
                 },
                 {
                     "item": "Leftovers",
-                    "level": 74,
+                    "level": 76,
                     "moves": [
                         "hydro-pump",
                         "blizzard",
@@ -54952,6 +54963,36 @@
                         "softboiled"
                     ],
                     "name": "clefable"
+                },
+                {
+                    "dvs": {
+                        "atk": 12,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
+                    "item": "Gold Berry",
+                    "level": 74,
+                    "moves": [
+                        "return",
+                        "psychic-m",
+                        "shadow-ball",
+                        "hp-fighting"
+                    ],
+                    "name": "girafarig"
+                },
+                {
+                    "item": "Miracleberry",
+                    "level": 74,
+                    "moves": [
+                        "waterfall",
+                        "ice-beam",
+                        "thunderbolt",
+                        "psychic-m"
+                    ],
+                    "name": "starmie"
                 }
             ]
         },
