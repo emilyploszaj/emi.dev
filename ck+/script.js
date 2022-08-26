@@ -809,17 +809,19 @@ function getDamage(attacker, defender, attackerStages, defenderStages, move, pla
 	// TODO burn?
 
 	// Badge boost
-	if (player && !special && badges >= attackBadges) {
-		a = parseInt(a * 1.125);
-	}
-	if (!player && !special && badges >= defenseBadges) {
-		d = parseInt(d * 1.125);
-	}
-	if (player && special && badges >= specialBadges) {
-		a = parseInt(a * 1.125);
-	}
-	if (!player && special && badges >= specialBadges) {
-		d = parseInt(d * 1.125);
+	if (!crit || defenderStages[defenseStat] < attackerStages[attackStat]) {
+		if (player && !special && badges >= attackBadges) {
+			a = parseInt(a * 1.125);
+		}
+		if (!player && !special && badges >= defenseBadges) {
+			d = parseInt(d * 1.125);
+		}
+		if (player && special && badges >= specialBadges) {
+			a = parseInt(a * 1.125);
+		}
+		if (!player && special && badges >= specialBadges) {
+			d = parseInt(d * 1.125);
+		}
 	}
 
 	// screens
