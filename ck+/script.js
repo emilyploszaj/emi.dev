@@ -30,6 +30,8 @@ var searchResults = new Map();
 var pokemonByName = new Map();
 var pokemonByPokedex = new Map();
 var pokemonFamilies = new Map();
+var encountersByName = new Map();
+var pokemonEncounters = new Map();
 var movesByName = new Map();
 var movesByIndex = new Map();
 var fishingPools = new Map();
@@ -220,6 +222,7 @@ fetch("./data.json")
 		}
 		for (let i in j.encounters) {
 			var e = j.encounters[i];
+			encountersByName.set(e.area, i);
 			searchResults.set(e.area.replace(/-/g, " "), 'focusEncounter(' + i + ')');
 		}
 		for (let i in j.encounter_pools.fishing) {
@@ -233,6 +236,9 @@ fetch("./data.json")
 		for (let i in j.encounter_pools.rock) {
 			var p = j.encounter_pools.rock[i];
 			rockPools.set(p.area, p);
+		}
+		for (let i in j.encounters) {
+			addPoolInfo(j.encounters[i]);
 		}
 		enemyTeam = j.trainers[17].team;
 		if (localStorage.getItem("last-trainer")) {
@@ -570,6 +576,29 @@ function displayPokemon(root, i) {
 	if (evo != "<div>Evolutions:</div>") {
 		evo += "<br>"
 		root.getElementsByClassName("poke-evolution")[0].innerHTML = evo;
+	} else {
+		root.getElementsByClassName("poke-evolution")[0].innerHTML = "";
+	}
+	var encounters = pokemonEncounters.get(p.name);
+	if (encounters) {
+		var e = "<div>Encounters:</div>";
+		for (const en of encounters.entries()) {
+			var area = en[0];
+			var parts = en[1];
+			e += "<div>";
+			e += "<span class=\"poke-link\" onclick=\"focusEncounter(" + encountersByName.get(area) + ")\">"
+				+ fullCapitalize(area) + "</span> - ";
+			for (var i = 0; i < parts.length; i++) {
+				var part = parts[i];
+				e += "<span>";
+				e += part.chance + "%";
+				e += "</span> ";
+			}
+			e += "</div>";
+		}
+		root.getElementsByClassName("encounters")[0].innerHTML = e + "<br>";
+	} else {
+		root.getElementsByClassName("encounters")[0].innerHTML = "";
 	}
 	var l = "";
 	l += '<div>Learnset:</div><table class="move-table">';
@@ -607,6 +636,50 @@ function displayStat(div, stat) {
 		rating = "great"
 	}
 	full.style.backgroundColor = "var(--stat-bar-fill-" + rating + ")";
+}
+
+function addPoolList(map, name, t, list) {
+	for (var i = 0; i < list.length; i++) {
+		var p = list[i];
+		var poke = p.pokemon;
+		if (!map.has(poke)) {
+			map.set(poke, new Map());
+		}
+		var areas = map.get(poke);
+		if (!areas.has(name)) {
+			areas.set(name, []);
+		}
+		areas.get(name).push({chance: p.chance, type: t});
+	}
+}
+
+function addPoolInfo(pools) {
+	var name = pools.area;
+	if (pools.normal) {
+		addPoolList(pokemonEncounters, name, "Walking", pools.normal.day);
+		addPoolList(pokemonEncounters, name, "Walking", pools.normal.night);
+		addPoolList(pokemonEncounters, name, "Walking", pools.normal.morning);
+	}
+	if (pools.surf) {
+		addPoolList(pokemonEncounters, name, "Surfing", pools.surf);
+	}
+	if (pools.headbutt) {
+		var pool = headbuttPools.get(pools.headbutt);
+		addPoolList(pokemonEncounters, name, "Headbutt", pool.headbutt);
+	}
+	if (pools.fishing) {
+		var pool = fishingPools.get(pools.fishing);
+		addPoolList(pokemonEncounters, name, "Old Rod", pool.old.day);
+		addPoolList(pokemonEncounters, name, "Old Rod", pool.old.night);
+		addPoolList(pokemonEncounters, name, "Good Rod", pool.good.day);
+		addPoolList(pokemonEncounters, name, "Good Rod", pool.good.night);
+		addPoolList(pokemonEncounters, name, "Super Rod", pool.super.day);
+		addPoolList(pokemonEncounters, name, "Super Rod", pool.super.night);
+	}
+	if (pools.rock) {
+		var pool = rockPools.get(pools.rock);
+		addPoolList(pokemonEncounters, name, "Rock Smash", pool.rock);
+	}
 }
 
 function getEncounterDisplay(pools) {
