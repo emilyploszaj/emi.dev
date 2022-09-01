@@ -13,6 +13,10 @@
 	--ohko: #d84a4a;
 	--thko: #c3d84a;
 
+	--speed-faster: #3cd9f5;
+	--speed-tied: #ecdf68;
+	--speed-slower: #d47070;
+
 	--highlighted: #49adff;
 	--dupe-background: #531414;
 
@@ -79,6 +83,11 @@ input[type=number] {
 	width:50px;
 }
 
+input[type=checkbox] {
+	width: 20px;
+	height: 20px;
+}
+
 .poke-link:hover {
 	cursor: pointer;
 	color: var(--highlighted);
@@ -92,6 +101,26 @@ input[type=number] {
 	padding: 4px !important;
 	margin: 4px !important;
 	text-shadow: 2px 2px black;
+}
+
+.speed-indicator {
+	text-align: center;
+	font-size: 40px;
+	font-weight: 900;
+}
+
+.speed-faster {
+    transform: rotate(90deg);
+	color: var(--speed-faster);
+}
+
+.speed-tied {
+	color: var(--speed-tied);
+}
+
+.speed-slower {
+    transform: rotate(90deg);
+	color: var(--speed-slower);
 }
 
 .move-table td {
@@ -234,6 +263,7 @@ input[type=number] {
 }
 
 .rolls {
+	z-index: 1000;
 	position: absolute;
 	left: calc(50% - 175px);
 	top: 200px;

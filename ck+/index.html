@@ -87,10 +87,11 @@
 			<div id="player">
 				<div>
 					<span class="poke-name"></span>
-					<span> - </span>
-					<span class="poke-level"></span>
-					<span> - </span>
+					<span> @ </span>
 					<span class="poke-item"></span>
+				</div>
+				<div>
+					<span class="poke-level"></span>
 				</div>
 				<div style="display:flex;">
 					<div class="poke-icon"></div>
@@ -102,7 +103,7 @@
 								<tr class="calc-def"><td>Def</td><td><div class="stat-num"></div></td><td><input class="player-stages" type="number" value="0" min="-6" max="6" oninput="updateCalc()"></td></tr>
 								<tr class="calc-spa"><td>SpA</td><td><div class="stat-num"></div></td><td><input class="player-stages" type="number" value="0" min="-6" max="6" oninput="updateCalc()"></td></tr>
 								<tr class="calc-spd"><td>SpD</td><td><div class="stat-num"></div></td><td><input class="player-stages" type="number" value="0" min="-6" max="6" oninput="updateCalc()"></td></tr>
-								<tr class="calc-spe"><td>Spe</td><td><div class="stat-num"></div></td><td><input class="player-stages" type="number" value="0" min="-6" max="6" oninput="updateCalc()"></td></tr>
+								<tr class="calc-spe"><td>Spe</td><td><div class="stat-num"></div></td><td><input class="player-stages" type="number" value="0" min="-6" max="6" oninput="updateCalc()"></td><td><div class="speed-indicator"></div></td></tr>
 							</table>
 						</div>
 					</div>
@@ -116,22 +117,23 @@
 			<div id="opponent">
 				<div style="text-align:right;">
 					<span class="poke-item"></span>
-					<span> - </span>
+					<span> @ </span>
+					<span class="poke-name"></span>
+				</div>
+				<div style="text-align:right;">
 					<span class="poke-level"></span>
 					<span class="experience"></span>
-					<span> - </span>
-					<span class="poke-name"></span>
 				</div>
 				<div style="display:flex;float:right;">
 					<div>
 						<div class="calc-stats">
 							<table>
-								<tr class="calc-hp"><td><button onclick="clearEnemyStages()">Clear</button></td><td><div class="stat-num"></div></td><td>HP</td></tr>
-								<tr class="calc-atk"><td><input class="enemy-stages" type="number" value="0" min="-6" max="6" oninput="updateCalc()"></td><td><div class="stat-num"></div></td><td>Atk</td</tr>
-								<tr class="calc-def"><td><input class="enemy-stages" type="number" value="0" min="-6" max="6" oninput="updateCalc()"></td><td><div class="stat-num"></div></td><td>Def</td</tr>
-								<tr class="calc-spa"><td><input class="enemy-stages" type="number" value="0" min="-6" max="6" oninput="updateCalc()"></td><td><div class="stat-num"></div></td><td>SpA</td</tr>
-								<tr class="calc-spd"><td><input class="enemy-stages" type="number" value="0" min="-6" max="6" oninput="updateCalc()"></td><td><div class="stat-num"></div></td><td>SpD</td</tr>
-								<tr class="calc-spe"><td><input class="enemy-stages" type="number" value="0" min="-6" max="6" oninput="updateCalc()"></td><td><div class="stat-num"></div></td><td>Spe</td</tr>
+								<tr class="calc-hp"><td></td><td><button onclick="clearEnemyStages()">Clear</button></td><td><div class="stat-num"></div></td><td>HP</td></tr>
+								<tr class="calc-atk"><td></td><td><input class="enemy-stages" type="number" value="0" min="-6" max="6" oninput="updateCalc()"></td><td><div class="stat-num"></div></td><td>Atk</td></tr>
+								<tr class="calc-def"><td></td><td><input class="enemy-stages" type="number" value="0" min="-6" max="6" oninput="updateCalc()"></td><td><div class="stat-num"></div></td><td>Def</td></tr>
+								<tr class="calc-spa"><td></td><td><input class="enemy-stages" type="number" value="0" min="-6" max="6" oninput="updateCalc()"></td><td><div class="stat-num"></div></td><td>SpA</td></tr>
+								<tr class="calc-spd"><td></td><td><input class="enemy-stages" type="number" value="0" min="-6" max="6" oninput="updateCalc()"></td><td><div class="stat-num"></div></td><td>SpD</td></tr>
+								<tr class="calc-spe"><td><div class="speed-indicator"></div></td><td><input class="enemy-stages" type="number" value="0" min="-6" max="6" oninput="updateCalc()"></td><td><div class="stat-num"></div></td><td>Spe</td></tr>
 							</table>
 						</div>
 					</div>

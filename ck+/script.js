@@ -353,6 +353,24 @@ function displayCalcPokemon(root, poke, opponent, right) {
 	displayCalcStat(root.getElementsByClassName("calc-spa")[0], poke, "spa");
 	displayCalcStat(root.getElementsByClassName("calc-spd")[0], poke, "spd");
 	displayCalcStat(root.getElementsByClassName("calc-spe")[0], poke, "spe", player);
+	if (opponent) {
+		var mySpe = getPokeStat(poke, "spe");
+		var theirSpe = getPokeStat(opponent, "spe");
+		if (badges >= speedBadges) {
+			if (player) {
+				mySpe = parseInt(mySpe * 1.125);
+			} else {
+				theirSpe = parseInt(theirSpe * 1.125);
+			}
+		}
+		if (mySpe > theirSpe) {
+			root.getElementsByClassName("speed-indicator")[0].innerHTML = '<div class="speed-faster">&laquo;</div>';
+		} else if (mySpe == theirSpe) {
+			root.getElementsByClassName("speed-indicator")[0].innerHTML = '<div class="speed-tied">-</div>';
+		} else {
+			root.getElementsByClassName("speed-indicator")[0].innerHTML = '<div class="speed-slower">&raquo;</div>';
+		}
+	}
 	var types = '<div style="display:flex">' + prettyType(p.types[0]);
 	if (p.types.length > 1) {
 		types += " " + prettyType(p.types[1]);
@@ -461,8 +479,10 @@ function prettyRolls(rolls) {
 function displayCalcStat(div, poke, stat, player = false) {
 	var s = getPokeStat(poke, stat);
 	var o = s;
-	if (player && badges >= speedBadges) {
-		s = parseInt(s * 1.125);
+	if (badges >= speedBadges && stat == "spe") {
+		if (player) {
+			s = parseInt(s * 1.125);
+		}
 		div.getElementsByClassName("stat-num")[0].innerHTML = "<ruby>" + s + "<rt>" + o + "</rt></ruby>";
 	} else {
 		div.getElementsByClassName("stat-num")[0].innerHTML = s;
@@ -504,7 +524,11 @@ function getTinyPokemonDisplay(tp, extra = "") {
 	//v += "<tr><td>Atk</td><td>" + p.stats.atk + "</td><td> </td><td>SpD</td><td>" + p.stats.spd + "</td></tr>";
 	//v += "<tr><td>Def</td><td>" + p.stats.atk + "</td><td> </td><td>Spe</td><td>" + p.stats.spe + "</td></tr>";
 	v += "</table>";
-	v += "<div>Spe: " + getPokeStat(tp, "spe");
+	var s = getPokeStat(tp, "spe");
+	if (extra != "" && badges >= speedBadges) {
+		s = parseInt(s * 1.125);
+	}
+	v += "<div>Spe: " + s;
 	if (tp.dvs) {
 		v += " DVs: ";
 		v += tp.dvs.hp + " "
@@ -1166,11 +1190,13 @@ function getDv(poke, stat) {
 
 function setPlayer(i) {
 	myPoke = box[i];
+	clearPlayerStages();
 	updateCalc();
 }
 
 function setEnemy(i) {
 	theirPoke = enemyTeam[i];
+	clearEnemyStages();
 	updateCalc();
 }
 
@@ -1213,14 +1239,12 @@ function updateBox() {
 function calcTrainer(i) {
 	localStorage.setItem("last-trainer", i);
 	enemyTeam = data.trainers[i].team;
-	theirPoke = enemyTeam[0];
-	updateCalc();
+	setEnemy(0);
 	setTab("calc");
 }
 
 function calcFromBox(i) {
-	myPoke = box[i];
-	updateCalc();
+	setPlayer(i);
 	setTab("calc");
 }
 
@@ -1324,6 +1348,7 @@ function updateBadges() {
 	this.badges = parseInt(document.getElementById("badges").value);
 	localStorage.setItem("badges", badges);
 	updateCalc();
+	updateBox();
 }
 
 function readPokemonList(bytes, start, capacity, increment) {
@@ -1420,7 +1445,7 @@ function readFile(file) {
 			document.getElementById("badges").value = badges;
 			updateBadges();
 			if (box.length > 0) {
-				myPoke = box[0];
+				setPlayer(0);
 			}
 			updateBox();
 		}
