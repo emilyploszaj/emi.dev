@@ -25,6 +25,11 @@
 	--stat-bar-fill-decent: #98ec68;
 	--stat-bar-fill-great: #3cf57a;
 	--stat-bar-fill-amazing: #3c86f5;
+
+	--any: #a2d891;
+	--day: #61b1d6;
+	--night: #432f70;
+	--morning: #d3c264;
 }
 
 html {
@@ -90,6 +95,11 @@ input[type=checkbox] {
 
 .poke-link:hover {
 	cursor: pointer;
+	color: var(--highlighted);
+}
+
+.extra-info:hover {
+	cursor: help;
 	color: var(--highlighted);
 }
 
@@ -214,16 +224,20 @@ input[type=checkbox] {
 	width: min-content;
 }
 
+.any-pool {
+	background-color: var(--any);
+}
+
 .day-pool {
-	background-color: #61b1d6;
+	background-color: var(--day);
 }
 
 .night-pool {
-	background-color: #432f70;
+	background-color: var(--night);
 }
 
 .morning-pool {
-	background-color: #d3c264;
+	background-color: var(--morning);
 }
 
 .pokemon-display {

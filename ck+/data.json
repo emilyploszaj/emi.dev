@@ -1973,6 +1973,10 @@
     "encounters": [
         {
             "area": "sprout-tower-2f",
+            "neighbors": [
+                "sprout-tower-3f",
+                "violet-city"
+            ],
             "normal": {
                 "day": [
                     {
@@ -2089,6 +2093,9 @@
         },
         {
             "area": "sprout-tower-3f",
+            "neighbors": [
+                "sprout-tower-2f"
+            ],
             "normal": {
                 "day": [
                     {
@@ -2206,6 +2213,16 @@
         {
             "area": "tin-tower-2f",
             "fishing": "shore",
+            "neighbors": [
+                "tin-tower-3f",
+                "tin-tower-4f",
+                "tin-tower-5f",
+                "tin-tower-6f",
+                "tin-tower-7f",
+                "tin-tower-8f",
+                "tin-tower-9f",
+                "ecruteak-city"
+            ],
             "normal": {
                 "day": [
                     {
@@ -2323,6 +2340,15 @@
         {
             "area": "tin-tower-3f",
             "fishing": "shore",
+            "neighbors": [
+                "tin-tower-2f",
+                "tin-tower-4f",
+                "tin-tower-5f",
+                "tin-tower-6f",
+                "tin-tower-7f",
+                "tin-tower-8f",
+                "tin-tower-9f"
+            ],
             "normal": {
                 "day": [
                     {
@@ -2440,6 +2466,15 @@
         {
             "area": "tin-tower-4f",
             "fishing": "shore",
+            "neighbors": [
+                "tin-tower-2f",
+                "tin-tower-3f",
+                "tin-tower-5f",
+                "tin-tower-6f",
+                "tin-tower-7f",
+                "tin-tower-8f",
+                "tin-tower-9f"
+            ],
             "normal": {
                 "day": [
                     {
@@ -2557,6 +2592,15 @@
         {
             "area": "tin-tower-5f",
             "fishing": "shore",
+            "neighbors": [
+                "tin-tower-2f",
+                "tin-tower-3f",
+                "tin-tower-4f",
+                "tin-tower-6f",
+                "tin-tower-7f",
+                "tin-tower-8f",
+                "tin-tower-9f"
+            ],
             "normal": {
                 "day": [
                     {
@@ -2674,6 +2718,15 @@
         {
             "area": "tin-tower-6f",
             "fishing": "shore",
+            "neighbors": [
+                "tin-tower-2f",
+                "tin-tower-3f",
+                "tin-tower-4f",
+                "tin-tower-5f",
+                "tin-tower-7f",
+                "tin-tower-8f",
+                "tin-tower-9f"
+            ],
             "normal": {
                 "day": [
                     {
@@ -2791,6 +2844,15 @@
         {
             "area": "tin-tower-7f",
             "fishing": "shore",
+            "neighbors": [
+                "tin-tower-2f",
+                "tin-tower-3f",
+                "tin-tower-4f",
+                "tin-tower-5f",
+                "tin-tower-6f",
+                "tin-tower-8f",
+                "tin-tower-9f"
+            ],
             "normal": {
                 "day": [
                     {
@@ -2908,6 +2970,15 @@
         {
             "area": "tin-tower-8f",
             "fishing": "shore",
+            "neighbors": [
+                "tin-tower-2f",
+                "tin-tower-3f",
+                "tin-tower-4f",
+                "tin-tower-5f",
+                "tin-tower-6f",
+                "tin-tower-7f",
+                "tin-tower-9f"
+            ],
             "normal": {
                 "day": [
                     {
@@ -3025,6 +3096,15 @@
         {
             "area": "tin-tower-9f",
             "fishing": "shore",
+            "neighbors": [
+                "tin-tower-2f",
+                "tin-tower-3f",
+                "tin-tower-4f",
+                "tin-tower-5f",
+                "tin-tower-6f",
+                "tin-tower-7f",
+                "tin-tower-8f"
+            ],
             "normal": {
                 "day": [
                     {
@@ -3142,6 +3222,10 @@
         {
             "area": "burned-tower-1f",
             "fishing": "shore",
+            "neighbors": [
+                "burned-tower-b1f",
+                "ecruteak-city"
+            ],
             "normal": {
                 "day": [
                     {
@@ -3259,6 +3343,9 @@
         {
             "area": "burned-tower-b1f",
             "fishing": "shore",
+            "neighbors": [
+                "burned-tower-1f"
+            ],
             "normal": {
                 "day": [
                     {
@@ -3376,6 +3463,10 @@
         {
             "area": "national-park",
             "fishing": "shore",
+            "neighbors": [
+                "route-36",
+                "route-35"
+            ],
             "normal": {
                 "day": [
                     {
@@ -3493,6 +3584,12 @@
         {
             "area": "ruins-of-alph-outside",
             "fishing": "pond",
+            "neighbors": [
+                "route-32",
+                "ruins-of-alph-inner-chamber",
+                "union-cave-b1f",
+                "route-36"
+            ],
             "normal": {
                 "day": [
                     {
@@ -3627,6 +3724,9 @@
         {
             "area": "ruins-of-alph-inner-chamber",
             "fishing": "shore",
+            "neighbors": [
+                "ruins-of-alph-outside"
+            ],
             "normal": {
                 "day": [
                     {
@@ -3744,6 +3844,12 @@
         {
             "area": "union-cave-1f",
             "fishing": "lake",
+            "neighbors": [
+                "route-33",
+                "union-cave-b1f",
+                "union-cave-b2f",
+                "route-32"
+            ],
             "normal": {
                 "day": [
                     {
@@ -3878,6 +3984,11 @@
         {
             "area": "union-cave-b1f",
             "fishing": "lake",
+            "neighbors": [
+                "union-cave-1f",
+                "ruins-of-alph-outside",
+                "union-cave-b2f"
+            ],
             "normal": {
                 "day": [
                     {
@@ -4012,6 +4123,10 @@
         {
             "area": "union-cave-b2f",
             "fishing": "shore",
+            "neighbors": [
+                "union-cave-1f",
+                "union-cave-b1f"
+            ],
             "normal": {
                 "day": [
                     {
@@ -4125,6 +4240,19 @@
                     }
                 ]
             },
+            "special": [
+                {
+                    "pool": [
+                        {
+                            "chance": 100,
+                            "extra": "Only on fridays. Requires fighting 3 optional trainers. Requires surf, strength, and waterfall",
+                            "level": 90,
+                            "pokemon": "lapras"
+                        }
+                    ],
+                    "type": "static"
+                }
+            ],
             "surf": [
                 {
                     "chance": 60,
@@ -4146,6 +4274,10 @@
         {
             "area": "slowpoke-well-b1f",
             "fishing": "lake",
+            "neighbors": [
+                "slowpoke-well-b2f",
+                "azalea-town"
+            ],
             "normal": {
                 "day": [
                     {
@@ -4281,6 +4413,9 @@
         {
             "area": "slowpoke-well-b2f",
             "fishing": "lake",
+            "neighbors": [
+                "slowpoke-well-b1f"
+            ],
             "normal": {
                 "day": [
                     {
@@ -4416,6 +4551,10 @@
             "area": "ilex-forest",
             "fishing": "pond",
             "headbutt": "forest",
+            "neighbors": [
+                "route-34",
+                "azalea-town"
+            ],
             "normal": {
                 "day": [
                     {
@@ -4550,6 +4689,12 @@
         {
             "area": "mount-mortar-1f-outside",
             "fishing": "lake",
+            "neighbors": [
+                "mount-mortar-1f-inside",
+                "mount-mortar-2f-inside",
+                "mount-mortar-b1f",
+                "route-42"
+            ],
             "normal": {
                 "day": [
                     {
@@ -4684,6 +4829,12 @@
         {
             "area": "mount-mortar-1f-inside",
             "fishing": "lake",
+            "neighbors": [
+                "mount-mortar-1f-outside",
+                "mount-mortar-2f-inside",
+                "mount-mortar-b1f",
+                "route-42"
+            ],
             "normal": {
                 "day": [
                     {
@@ -4801,6 +4952,12 @@
         {
             "area": "mount-mortar-2f-inside",
             "fishing": "lake",
+            "neighbors": [
+                "mount-mortar-1f-outside",
+                "mount-mortar-1f-inside",
+                "mount-mortar-b1f",
+                "route-42"
+            ],
             "normal": {
                 "day": [
                     {
@@ -4935,6 +5092,12 @@
         {
             "area": "mount-mortar-b1f",
             "fishing": "lake",
+            "neighbors": [
+                "mount-mortar-1f-outside",
+                "mount-mortar-2f-inside",
+                "mount-mortar-b1f",
+                "route-42"
+            ],
             "normal": {
                 "day": [
                     {
@@ -5048,6 +5211,19 @@
                     }
                 ]
             },
+            "special": [
+                {
+                    "pool": [
+                        {
+                            "chance": 100,
+                            "extra": "Requires beating Kiyo",
+                            "level": 10,
+                            "pokemon": "tyrogue"
+                        }
+                    ],
+                    "type": "gift"
+                }
+            ],
             "surf": [
                 {
                     "chance": 60,
@@ -5069,6 +5245,13 @@
         {
             "area": "ice-path-1f",
             "fishing": "dratini",
+            "neighbors": [
+                "ice-path-b1f",
+                "ice-path-b2f-mahogany-side",
+                "ice-path-b2f-blackthorn-side",
+                "ice-path-b3f",
+                "route-44"
+            ],
             "normal": {
                 "day": [
                     {
@@ -5186,6 +5369,12 @@
         {
             "area": "ice-path-b1f",
             "fishing": "dratini",
+            "neighbors": [
+                "ice-path-1f",
+                "ice-path-b2f-mahogany-side",
+                "ice-path-b2f-blackthorn-side",
+                "ice-path-b3f"
+            ],
             "normal": {
                 "day": [
                     {
@@ -5303,6 +5492,12 @@
         {
             "area": "ice-path-b2f-mahogany-side",
             "fishing": "dratini",
+            "neighbors": [
+                "ice-path-1f",
+                "ice-path-b1f",
+                "ice-path-b2f-blackthorn-side",
+                "ice-path-b3f"
+            ],
             "normal": {
                 "day": [
                     {
@@ -5420,6 +5615,13 @@
         {
             "area": "ice-path-b2f-blackthorn-side",
             "fishing": "dratini",
+            "neighbors": [
+                "blackthorn-city",
+                "ice-path-1f",
+                "ice-path-b1f",
+                "ice-path-b2f-mahogany-side",
+                "ice-path-b3f"
+            ],
             "normal": {
                 "day": [
                     {
@@ -5537,6 +5739,12 @@
         {
             "area": "ice-path-b3f",
             "fishing": "dratini",
+            "neighbors": [
+                "ice-path-1f",
+                "ice-path-b1f",
+                "ice-path-b2f-mahogany-side",
+                "ice-path-b2f-blackthorn-side"
+            ],
             "normal": {
                 "day": [
                     {
@@ -5654,6 +5862,16 @@
         {
             "area": "whirl-island-nw",
             "fishing": "whirlislands",
+            "neighbors": [
+                "whirl-island-ne",
+                "whirl-island-se",
+                "whirl-island-sw",
+                "whirl-island-b1f",
+                "whirl-island-b2f",
+                "whirl-island-cave",
+                "whirl-island-lugia-chamber",
+                "route-41"
+            ],
             "normal": {
                 "day": [
                     {
@@ -5771,6 +5989,16 @@
         {
             "area": "whirl-island-ne",
             "fishing": "whirlislands",
+            "neighbors": [
+                "whirl-island-nw",
+                "whirl-island-se",
+                "whirl-island-sw",
+                "whirl-island-b1f",
+                "whirl-island-b2f",
+                "whirl-island-cave",
+                "whirl-island-lugia-chamber",
+                "route-41"
+            ],
             "normal": {
                 "day": [
                     {
@@ -5888,6 +6116,16 @@
         {
             "area": "whirl-island-sw",
             "fishing": "whirlislands",
+            "neighbors": [
+                "whirl-island-nw",
+                "whirl-island-ne",
+                "whirl-island-sw",
+                "whirl-island-b1f",
+                "whirl-island-b2f",
+                "whirl-island-cave",
+                "whirl-island-lugia-chamber",
+                "route-41"
+            ],
             "normal": {
                 "day": [
                     {
@@ -6022,6 +6260,16 @@
         {
             "area": "whirl-island-cave",
             "fishing": "whirlislands",
+            "neighbors": [
+                "whirl-island-nw",
+                "whirl-island-ne",
+                "whirl-island-se",
+                "whirl-island-sw",
+                "whirl-island-b1f",
+                "whirl-island-b2f",
+                "whirl-island-lugia-chamber",
+                "route-41"
+            ],
             "normal": {
                 "day": [
                     {
@@ -6139,6 +6387,16 @@
         {
             "area": "whirl-island-se",
             "fishing": "whirlislands",
+            "neighbors": [
+                "whirl-island-nw",
+                "whirl-island-ne",
+                "whirl-island-sw",
+                "whirl-island-b1f",
+                "whirl-island-b2f",
+                "whirl-island-cave",
+                "whirl-island-lugia-chamber",
+                "route-41"
+            ],
             "normal": {
                 "day": [
                     {
@@ -6256,6 +6514,16 @@
         {
             "area": "whirl-island-b1f",
             "fishing": "whirlislands",
+            "neighbors": [
+                "whirl-island-nw",
+                "whirl-island-ne",
+                "whirl-island-se",
+                "whirl-island-sw",
+                "whirl-island-b2f",
+                "whirl-island-cave",
+                "whirl-island-lugia-chamber",
+                "route-41"
+            ],
             "normal": {
                 "day": [
                     {
@@ -6373,6 +6641,16 @@
         {
             "area": "whirl-island-b2f",
             "fishing": "whirlislands",
+            "neighbors": [
+                "whirl-island-nw",
+                "whirl-island-ne",
+                "whirl-island-se",
+                "whirl-island-sw",
+                "whirl-island-b1f",
+                "whirl-island-cave",
+                "whirl-island-lugia-chamber",
+                "route-41"
+            ],
             "normal": {
                 "day": [
                     {
@@ -6507,6 +6785,16 @@
         {
             "area": "whirl-island-lugia-chamber",
             "fishing": "whirlislands",
+            "neighbors": [
+                "whirl-island-nw",
+                "whirl-island-ne",
+                "whirl-island-se",
+                "whirl-island-sw",
+                "whirl-island-b1f",
+                "whirl-island-b2f",
+                "whirl-island-cave",
+                "route-41"
+            ],
             "normal": {
                 "day": [
                     {
@@ -6641,6 +6929,12 @@
         {
             "area": "silver-cave-room-1",
             "fishing": "lake",
+            "neighbors": [
+                "silver-cave-outside",
+                "silver-cave-room-2",
+                "silver-cave-room-3",
+                "silver-cave-item-rooms"
+            ],
             "normal": {
                 "day": [
                     {
@@ -6758,6 +7052,12 @@
         {
             "area": "silver-cave-room-2",
             "fishing": "lake",
+            "neighbors": [
+                "silver-cave-outside",
+                "silver-cave-room-1",
+                "silver-cave-room-3",
+                "silver-cave-item-rooms"
+            ],
             "normal": {
                 "day": [
                     {
@@ -6892,6 +7192,12 @@
         {
             "area": "silver-cave-room-3",
             "fishing": "lake",
+            "neighbors": [
+                "silver-cave-outside",
+                "silver-cave-room-1",
+                "silver-cave-room-2",
+                "silver-cave-item-rooms"
+            ],
             "normal": {
                 "day": [
                     {
@@ -7009,6 +7315,12 @@
         {
             "area": "silver-cave-item-rooms",
             "fishing": "lake",
+            "neighbors": [
+                "silver-cave-outside",
+                "silver-cave-room-1",
+                "silver-cave-room-2",
+                "silver-cave-room-3"
+            ],
             "normal": {
                 "day": [
                     {
@@ -7126,6 +7438,10 @@
         {
             "area": "dark-cave-violet-entrance",
             "fishing": "lake",
+            "neighbors": [
+                "dark-cave-blackthorn-entrance",
+                "route-31"
+            ],
             "normal": {
                 "day": [
                     {
@@ -7240,6 +7556,122 @@
                 ]
             },
             "rock": "rock",
+            "special": [
+                {
+                    "day": [
+                        {
+                            "chance": 30,
+                            "level": 3,
+                            "pokemon": "geodude"
+                        },
+                        {
+                            "chance": 30,
+                            "level": 3,
+                            "pokemon": "dunsparce"
+                        },
+                        {
+                            "chance": 20,
+                            "level": 2,
+                            "pokemon": "zubat"
+                        },
+                        {
+                            "chance": 10,
+                            "level": 2,
+                            "pokemon": "geodude"
+                        },
+                        {
+                            "chance": 5,
+                            "level": 2,
+                            "pokemon": "dunsparce"
+                        },
+                        {
+                            "chance": 4,
+                            "level": 4,
+                            "pokemon": "dunsparce"
+                        },
+                        {
+                            "chance": 1,
+                            "level": 4,
+                            "pokemon": "dunsparce"
+                        }
+                    ],
+                    "morning": [
+                        {
+                            "chance": 30,
+                            "level": 3,
+                            "pokemon": "geodude"
+                        },
+                        {
+                            "chance": 30,
+                            "level": 3,
+                            "pokemon": "dunsparce"
+                        },
+                        {
+                            "chance": 20,
+                            "level": 2,
+                            "pokemon": "zubat"
+                        },
+                        {
+                            "chance": 10,
+                            "level": 2,
+                            "pokemon": "geodude"
+                        },
+                        {
+                            "chance": 5,
+                            "level": 2,
+                            "pokemon": "dunsparce"
+                        },
+                        {
+                            "chance": 4,
+                            "level": 4,
+                            "pokemon": "dunsparce"
+                        },
+                        {
+                            "chance": 1,
+                            "level": 4,
+                            "pokemon": "dunsparce"
+                        }
+                    ],
+                    "night": [
+                        {
+                            "chance": 30,
+                            "level": 3,
+                            "pokemon": "geodude"
+                        },
+                        {
+                            "chance": 30,
+                            "level": 3,
+                            "pokemon": "dunsparce"
+                        },
+                        {
+                            "chance": 20,
+                            "level": 2,
+                            "pokemon": "zubat"
+                        },
+                        {
+                            "chance": 10,
+                            "level": 2,
+                            "pokemon": "geodude"
+                        },
+                        {
+                            "chance": 5,
+                            "level": 2,
+                            "pokemon": "dunsparce"
+                        },
+                        {
+                            "chance": 4,
+                            "level": 4,
+                            "pokemon": "dunsparce"
+                        },
+                        {
+                            "chance": 1,
+                            "level": 4,
+                            "pokemon": "dunsparce"
+                        }
+                    ],
+                    "type": "swarm"
+                }
+            ],
             "surf": [
                 {
                     "chance": 60,
@@ -7261,6 +7693,11 @@
         {
             "area": "dark-cave-blackthorn-entrance",
             "fishing": "lake",
+            "neighbors": [
+                "route-46",
+                "route-45",
+                "dark-cave-violet-entrance"
+            ],
             "normal": {
                 "day": [
                     {
@@ -7396,6 +7833,11 @@
             "area": "route-29",
             "fishing": "shore",
             "headbutt": "canyon",
+            "neighbors": [
+                "cherrygrove-city",
+                "route-46",
+                "new-bark-town"
+            ],
             "normal": {
                 "day": [
                     {
@@ -7514,6 +7956,10 @@
             "area": "route-30",
             "fishing": "pond",
             "headbutt": "canyon",
+            "neighbors": [
+                "route-31",
+                "cherrygrove-city"
+            ],
             "normal": {
                 "day": [
                     {
@@ -7649,6 +8095,11 @@
             "area": "route-31",
             "fishing": "pond",
             "headbutt": "canyon",
+            "neighbors": [
+                "violet-city",
+                "dark-cave-violet-entrance",
+                "route-30"
+            ],
             "normal": {
                 "day": [
                     {
@@ -7784,6 +8235,10 @@
             "area": "route-32",
             "fishing": "qwilfish",
             "headbutt": "town",
+            "neighbors": [
+                "union-cave-1f",
+                "ruins-of-alph-outside"
+            ],
             "normal": {
                 "day": [
                     {
@@ -7897,6 +8352,139 @@
                     }
                 ]
             },
+            "special": [
+                {
+                    "good": {
+                        "day": [
+                            {
+                                "chance": 35,
+                                "level": 20,
+                                "pokemon": "magikarp"
+                            },
+                            {
+                                "chance": 35,
+                                "level": 20,
+                                "pokemon": "qwilfish"
+                            },
+                            {
+                                "chance": 20,
+                                "level": 20,
+                                "pokemon": "qwilfish"
+                            },
+                            {
+                                "chance": 10,
+                                "level": 20,
+                                "pokemon": "qwilfish"
+                            }
+                        ],
+                        "night": [
+                            {
+                                "chance": 35,
+                                "level": 20,
+                                "pokemon": "magikarp"
+                            },
+                            {
+                                "chance": 35,
+                                "level": 20,
+                                "pokemon": "qwilfish"
+                            },
+                            {
+                                "chance": 20,
+                                "level": 20,
+                                "pokemon": "qwilfish"
+                            },
+                            {
+                                "chance": 10,
+                                "level": 20,
+                                "pokemon": "qwilfish"
+                            }
+                        ]
+                    },
+                    "old": {
+                        "day": [
+                            {
+                                "chance": 70,
+                                "level": 5,
+                                "pokemon": "magikarp"
+                            },
+                            {
+                                "chance": 15,
+                                "level": 5,
+                                "pokemon": "magikarp"
+                            },
+                            {
+                                "chance": 15,
+                                "level": 5,
+                                "pokemon": "qwilfish"
+                            }
+                        ],
+                        "night": [
+                            {
+                                "chance": 70,
+                                "level": 5,
+                                "pokemon": "magikarp"
+                            },
+                            {
+                                "chance": 15,
+                                "level": 5,
+                                "pokemon": "magikarp"
+                            },
+                            {
+                                "chance": 15,
+                                "level": 5,
+                                "pokemon": "qwilfish"
+                            }
+                        ]
+                    },
+                    "super": {
+                        "day": [
+                            {
+                                "chance": 40,
+                                "level": 40,
+                                "pokemon": "qwilfish"
+                            },
+                            {
+                                "chance": 30,
+                                "level": 40,
+                                "pokemon": "qwilfish"
+                            },
+                            {
+                                "chance": 20,
+                                "level": 40,
+                                "pokemon": "qwilfish"
+                            },
+                            {
+                                "chance": 10,
+                                "level": 40,
+                                "pokemon": "qwilfish"
+                            }
+                        ],
+                        "night": [
+                            {
+                                "chance": 40,
+                                "level": 40,
+                                "pokemon": "qwilfish"
+                            },
+                            {
+                                "chance": 30,
+                                "level": 40,
+                                "pokemon": "qwilfish"
+                            },
+                            {
+                                "chance": 20,
+                                "level": 40,
+                                "pokemon": "qwilfish"
+                            },
+                            {
+                                "chance": 10,
+                                "level": 40,
+                                "pokemon": "qwilfish"
+                            }
+                        ]
+                    },
+                    "type": "fishing-swarm"
+                }
+            ],
             "surf": [
                 {
                     "chance": 60,
@@ -7919,6 +8507,10 @@
             "area": "route-33",
             "fishing": "shore",
             "headbutt": "town",
+            "neighbors": [
+                "azalea-town",
+                "union-cave-1f"
+            ],
             "normal": {
                 "day": [
                     {
@@ -8037,6 +8629,10 @@
             "area": "route-34",
             "fishing": "shore",
             "headbutt": "route",
+            "neighbors": [
+                "goldenrod-city",
+                "ilex-forest"
+            ],
             "normal": {
                 "day": [
                     {
@@ -8150,6 +8746,55 @@
                     }
                 ]
             },
+            "special": [
+                {
+                    "pool": [
+                        {
+                            "chance": 19,
+                            "extra": "Egg, can be hatched elsewhere. Knows Dizzy Punch. 86% chance to be 0DV. 14% chance to be shiny with 0 2\/10 10\/10 10 DVs",
+                            "level": 5,
+                            "pokemon": "cleffa"
+                        },
+                        {
+                            "chance": 19,
+                            "extra": "Egg, can be hatched elsewhere. Knows Dizzy Punch. 86% chance to be 0DV. 14% chance to be shiny with 0 2\/10 10\/10 10 DVs",
+                            "level": 5,
+                            "pokemon": "igglybuff"
+                        },
+                        {
+                            "chance": 16,
+                            "extra": "Egg, can be hatched elsewhere. Knows Dizzy Punch. 86% chance to be 0DV. 14% chance to be shiny with 0 2\/10 10\/10 10 DVs",
+                            "level": 5,
+                            "pokemon": "smoochum"
+                        },
+                        {
+                            "chance": 14,
+                            "extra": "Egg, can be hatched elsewhere. Knows Dizzy Punch. 86% chance to be 0DV. 14% chance to be shiny with 0 2\/10 10\/10 10 DVs",
+                            "level": 5,
+                            "pokemon": "elekid"
+                        },
+                        {
+                            "chance": 12,
+                            "extra": "Egg, can be hatched elsewhere. Knows Dizzy Punch. 86% chance to be 0DV. 14% chance to be shiny with 0 2\/10 10\/10 10 DVs",
+                            "level": 5,
+                            "pokemon": "magby"
+                        },
+                        {
+                            "chance": 11,
+                            "extra": "Egg, can be hatched elsewhere. Knows Dizzy Punch. 86% chance to be 0DV. 14% chance to be shiny with 0 2\/10 10\/10 10 DVs",
+                            "level": 5,
+                            "pokemon": "tyrogue"
+                        },
+                        {
+                            "chance": 9,
+                            "extra": "Egg, can be hatched elsewhere. Knows Dizzy Punch. 86% chance to be 0DV. 14% chance to be shiny with 0 2\/10 10\/10 10 DVs",
+                            "level": 5,
+                            "pokemon": "pichu"
+                        }
+                    ],
+                    "type": "gift"
+                }
+            ],
             "surf": [
                 {
                     "chance": 60,
@@ -8172,6 +8817,10 @@
             "area": "route-35",
             "fishing": "pond",
             "headbutt": "route",
+            "neighbors": [
+                "national-park",
+                "goldenrod-city"
+            ],
             "normal": {
                 "day": [
                     {
@@ -8285,6 +8934,133 @@
                     }
                 ]
             },
+            "special": [
+                {
+                    "pool": [
+                        {
+                            "chance": 100,
+                            "extra": "Holding mail to be delivered to Route 31 in exchange for the TM for Nightmare. Or, can be kept as an encounter with traded OT.",
+                            "level": 10,
+                            "pokemon": "spearow"
+                        }
+                    ],
+                    "type": "gift"
+                },
+                {
+                    "day": [
+                        {
+                            "chance": 30,
+                            "level": 12,
+                            "pokemon": "nidoran-m"
+                        },
+                        {
+                            "chance": 30,
+                            "level": 12,
+                            "pokemon": "nidoran-f"
+                        },
+                        {
+                            "chance": 20,
+                            "level": 12,
+                            "pokemon": "yanma"
+                        },
+                        {
+                            "chance": 10,
+                            "level": 14,
+                            "pokemon": "yanma"
+                        },
+                        {
+                            "chance": 5,
+                            "level": 14,
+                            "pokemon": "pidgey"
+                        },
+                        {
+                            "chance": 4,
+                            "level": 10,
+                            "pokemon": "ditto"
+                        },
+                        {
+                            "chance": 1,
+                            "level": 10,
+                            "pokemon": "ditto"
+                        }
+                    ],
+                    "morning": [
+                        {
+                            "chance": 30,
+                            "level": 12,
+                            "pokemon": "nidoran-m"
+                        },
+                        {
+                            "chance": 30,
+                            "level": 12,
+                            "pokemon": "nidoran-f"
+                        },
+                        {
+                            "chance": 20,
+                            "level": 12,
+                            "pokemon": "yanma"
+                        },
+                        {
+                            "chance": 10,
+                            "level": 14,
+                            "pokemon": "yanma"
+                        },
+                        {
+                            "chance": 5,
+                            "level": 14,
+                            "pokemon": "pidgey"
+                        },
+                        {
+                            "chance": 4,
+                            "level": 10,
+                            "pokemon": "ditto"
+                        },
+                        {
+                            "chance": 1,
+                            "level": 10,
+                            "pokemon": "ditto"
+                        }
+                    ],
+                    "night": [
+                        {
+                            "chance": 30,
+                            "level": 12,
+                            "pokemon": "nidoran-m"
+                        },
+                        {
+                            "chance": 30,
+                            "level": 12,
+                            "pokemon": "nidoran-f"
+                        },
+                        {
+                            "chance": 20,
+                            "level": 12,
+                            "pokemon": "yanma"
+                        },
+                        {
+                            "chance": 10,
+                            "level": 14,
+                            "pokemon": "yanma"
+                        },
+                        {
+                            "chance": 5,
+                            "level": 14,
+                            "pokemon": "hoothoot"
+                        },
+                        {
+                            "chance": 4,
+                            "level": 10,
+                            "pokemon": "ditto"
+                        },
+                        {
+                            "chance": 1,
+                            "level": 10,
+                            "pokemon": "ditto"
+                        }
+                    ],
+                    "type": "swarm"
+                }
+            ],
             "surf": [
                 {
                     "chance": 60,
@@ -8307,6 +9083,13 @@
             "area": "route-36",
             "fishing": "shore",
             "headbutt": "route",
+            "neighbors": [
+                "ruins-of-alph-outside",
+                "route-37",
+                "route-35",
+                "national-park",
+                "violet-city"
+            ],
             "normal": {
                 "day": [
                     {
@@ -8419,12 +9202,29 @@
                         "pokemon": "nidoran-m"
                     }
                 ]
-            }
+            },
+            "special": [
+                {
+                    "pool": [
+                        {
+                            "chance": 100,
+                            "extra": "Requires squirtbottle after Whitney",
+                            "level": 20,
+                            "pokemon": "sudowoodo"
+                        }
+                    ],
+                    "type": "static"
+                }
+            ]
         },
         {
             "area": "route-37",
             "fishing": "shore",
             "headbutt": "route",
+            "neighbors": [
+                "ecruteak-city",
+                "route-36"
+            ],
             "normal": {
                 "day": [
                     {
@@ -8543,6 +9343,10 @@
             "area": "route-38",
             "fishing": "shore",
             "headbutt": "route",
+            "neighbors": [
+                "route-39",
+                "ecruteak-city"
+            ],
             "normal": {
                 "day": [
                     {
@@ -8661,6 +9465,10 @@
             "area": "route-39",
             "fishing": "shore",
             "headbutt": "route",
+            "neighbors": [
+                "olivine-city",
+                "route-38"
+            ],
             "normal": {
                 "day": [
                     {
@@ -8779,6 +9587,11 @@
             "area": "route-42",
             "fishing": "lake",
             "headbutt": "town",
+            "neighbors": [
+                "mount-mortar-1f-outside",
+                "mahogany-town",
+                "ecruteak-city"
+            ],
             "normal": {
                 "day": [
                     {
@@ -8914,6 +9727,10 @@
             "area": "route-43",
             "fishing": "pond",
             "headbutt": "town",
+            "neighbors": [
+                "lake-of-rage",
+                "mahogany-town"
+            ],
             "normal": {
                 "day": [
                     {
@@ -9049,6 +9866,10 @@
             "area": "route-44",
             "fishing": "pond",
             "headbutt": "town",
+            "neighbors": [
+                "ice-path-1f",
+                "mahogany-town"
+            ],
             "normal": {
                 "day": [
                     {
@@ -9184,6 +10005,11 @@
             "area": "route-45",
             "fishing": "dratini-2",
             "headbutt": "town",
+            "neighbors": [
+                "route-46",
+                "dark-cave-blackthorn-entrance",
+                "blackthorn-city"
+            ],
             "normal": {
                 "day": [
                     {
@@ -9319,6 +10145,11 @@
             "area": "route-46",
             "fishing": "shore",
             "headbutt": "town",
+            "neighbors": [
+                "route-45",
+                "dark-cave-blackthorn-entrance",
+                "route-29"
+            ],
             "normal": {
                 "day": [
                     {
@@ -9437,6 +10268,13 @@
             "area": "silver-cave-outside",
             "fishing": "pond",
             "headbutt": "town",
+            "neighbors": [
+                "silver-cave-room-1",
+                "silver-cave-room-2",
+                "silver-cave-room-3",
+                "silver-cave-item-rooms",
+                "route-28"
+            ],
             "normal": {
                 "day": [
                     {
@@ -9571,6 +10409,10 @@
         {
             "area": "digletts-cave",
             "fishing": "shore",
+            "neighbors": [
+                "route-2",
+                "route-11"
+            ],
             "normal": {
                 "day": [
                     {
@@ -9688,6 +10530,10 @@
         {
             "area": "mount-moon",
             "fishing": "shore",
+            "neighbors": [
+                "route-4",
+                "route-3"
+            ],
             "normal": {
                 "day": [
                     {
@@ -9805,6 +10651,12 @@
         {
             "area": "rock-tunnel-1f",
             "fishing": "shore",
+            "neighbors": [
+                "rock-tunnel-b1f",
+                "route-10-north",
+                "route-8",
+                "route-12"
+            ],
             "normal": {
                 "day": [
                     {
@@ -9922,6 +10774,9 @@
         {
             "area": "rock-tunnel-b1f",
             "fishing": "shore",
+            "neighbors": [
+                "rock-tunnel-1f"
+            ],
             "normal": {
                 "day": [
                     {
@@ -10039,6 +10894,9 @@
         {
             "area": "victory-road",
             "fishing": "shore",
+            "neighbors": [
+                "route-26"
+            ],
             "normal": {
                 "day": [
                     {
@@ -10156,6 +11014,9 @@
         {
             "area": "tohjo-falls",
             "fishing": "lake",
+            "neighbors": [
+                "route-27"
+            ],
             "normal": {
                 "day": [
                     {
@@ -10290,6 +11151,10 @@
         {
             "area": "route-1",
             "fishing": "shore",
+            "neighbors": [
+                "pallet-town",
+                "viridian-city"
+            ],
             "normal": {
                 "day": [
                     {
@@ -10407,6 +11272,11 @@
         {
             "area": "route-2",
             "fishing": "shore",
+            "neighbors": [
+                "pewter-city",
+                "viridian-city",
+                "digletts-cave"
+            ],
             "normal": {
                 "day": [
                     {
@@ -10524,6 +11394,10 @@
         {
             "area": "route-3",
             "fishing": "shore",
+            "neighbors": [
+                "mount-moon",
+                "pewter-city"
+            ],
             "normal": {
                 "day": [
                     {
@@ -10640,6 +11514,10 @@
         },
         {
             "area": "route-4",
+            "neighbors": [
+                "cerulean-city",
+                "mount-moon"
+            ],
             "normal": {
                 "day": [
                     {
@@ -10774,6 +11652,12 @@
         {
             "area": "route-5",
             "fishing": "shore",
+            "neighbors": [
+                "cerulean-city",
+                "route-6",
+                "route-7",
+                "route-8"
+            ],
             "normal": {
                 "day": [
                     {
@@ -10891,6 +11775,12 @@
         {
             "area": "route-6",
             "fishing": "pond",
+            "neighbors": [
+                "route-8",
+                "route-7",
+                "route-5",
+                "vermilion-city"
+            ],
             "normal": {
                 "day": [
                     {
@@ -11025,6 +11915,12 @@
         {
             "area": "route-7",
             "fishing": "shore",
+            "neighbors": [
+                "route-5",
+                "route-8",
+                "route-6",
+                "celadon-city"
+            ],
             "normal": {
                 "day": [
                     {
@@ -11142,6 +12038,13 @@
         {
             "area": "route-8",
             "fishing": "shore",
+            "neighbors": [
+                "route-12",
+                "rock-tunnel-1f",
+                "route-5",
+                "route-6",
+                "route-7"
+            ],
             "normal": {
                 "day": [
                     {
@@ -11259,6 +12162,10 @@
         {
             "area": "route-9",
             "fishing": "lake",
+            "neighbors": [
+                "cerulean-city",
+                "route-10-north"
+            ],
             "normal": {
                 "day": [
                     {
@@ -11393,6 +12300,10 @@
         {
             "area": "route-10-north",
             "fishing": "lake",
+            "neighbors": [
+                "route-9",
+                "rock-tunnel-1f"
+            ],
             "normal": {
                 "day": [
                     {
@@ -11506,6 +12417,19 @@
                     }
                 ]
             },
+            "special": [
+                {
+                    "pool": [
+                        {
+                            "chance": 100,
+                            "extra": "Traded for Dugtrio in the Power Plant",
+                            "level": 1,
+                            "pokemon": "magneton"
+                        }
+                    ],
+                    "type": "trade"
+                }
+            ],
             "surf": [
                 {
                     "chance": 60,
@@ -11527,6 +12451,11 @@
         {
             "area": "route-11",
             "fishing": "shore",
+            "neighbors": [
+                "digletts-cave",
+                "vermilion-city",
+                "route-12"
+            ],
             "normal": {
                 "day": [
                     {
@@ -11644,6 +12573,10 @@
         {
             "area": "route-13",
             "fishing": "qwilfish-noswarm",
+            "neighbors": [
+                "route-14",
+                "route-12"
+            ],
             "normal": {
                 "day": [
                     {
@@ -11778,6 +12711,10 @@
         {
             "area": "route-14",
             "fishing": "shore",
+            "neighbors": [
+                "route-15",
+                "route-13"
+            ],
             "normal": {
                 "day": [
                     {
@@ -11890,11 +12827,28 @@
                         "pokemon": "meganium"
                     }
                 ]
-            }
+            },
+            "special": [
+                {
+                    "pool": [
+                        {
+                            "chance": 100,
+                            "extra": "Traded for Chansey",
+                            "level": 1,
+                            "pokemon": "aerodactyl"
+                        }
+                    ],
+                    "type": "trade"
+                }
+            ]
         },
         {
             "area": "route-15",
             "fishing": "shore",
+            "neighbors": [
+                "fuchsia-city",
+                "route-14"
+            ],
             "normal": {
                 "day": [
                     {
@@ -12012,6 +12966,10 @@
         {
             "area": "route-16",
             "fishing": "shore",
+            "neighbors": [
+                "celadon-city",
+                "route-17"
+            ],
             "normal": {
                 "day": [
                     {
@@ -12128,6 +13086,10 @@
         },
         {
             "area": "route-17",
+            "neighbors": [
+                "route-16",
+                "route-18"
+            ],
             "normal": {
                 "day": [
                     {
@@ -12245,6 +13207,10 @@
         {
             "area": "route-18",
             "fishing": "shore",
+            "neighbors": [
+                "route-17",
+                "fuchsia-city"
+            ],
             "normal": {
                 "day": [
                     {
@@ -12362,6 +13328,10 @@
         {
             "area": "route-21",
             "fishing": "ocean",
+            "neighbors": [
+                "cinnabar-island",
+                "pallet-town"
+            ],
             "normal": {
                 "day": [
                     {
@@ -12496,6 +13466,12 @@
         {
             "area": "route-22",
             "fishing": "pond",
+            "neighbors": [
+                "route-28",
+                "route-26",
+                "victory-road",
+                "viridian-city"
+            ],
             "normal": {
                 "day": [
                     {
@@ -12630,6 +13606,10 @@
         {
             "area": "route-24",
             "fishing": "lake",
+            "neighbors": [
+                "route-25",
+                "cerulean-city"
+            ],
             "normal": {
                 "day": [
                     {
@@ -12764,6 +13744,9 @@
         {
             "area": "route-25",
             "fishing": "lake",
+            "neighbors": [
+                "route-24"
+            ],
             "normal": {
                 "day": [
                     {
@@ -12899,6 +13882,12 @@
             "area": "route-26",
             "fishing": "ocean",
             "headbutt": "kanto",
+            "neighbors": [
+                "victory-road",
+                "route-28",
+                "route-22",
+                "route-27"
+            ],
             "normal": {
                 "day": [
                     {
@@ -13034,6 +14023,11 @@
             "area": "route-27",
             "fishing": "ocean",
             "headbutt": "kanto",
+            "neighbors": [
+                "route-26",
+                "tohjo-falls",
+                "new-bark-town"
+            ],
             "normal": {
                 "day": [
                     {
@@ -13169,6 +14163,12 @@
             "area": "route-28",
             "fishing": "pond",
             "headbutt": "town",
+            "neighbors": [
+                "silver-cave-outside",
+                "route-26",
+                "victory-road",
+                "route-22"
+            ],
             "normal": {
                 "day": [
                     {
@@ -13303,6 +14303,9 @@
         {
             "area": "olivine-port",
             "fishing": "ocean",
+            "neighbors": [
+                "olivine-city"
+            ],
             "surf": [
                 {
                     "chance": 60,
@@ -13325,6 +14328,11 @@
             "area": "olivine-city",
             "fishing": "shore",
             "headbutt": "town",
+            "neighbors": [
+                "route-40",
+                "olivine-port",
+                "route-39"
+            ],
             "surf": [
                 {
                     "chance": 60,
@@ -13347,6 +14355,10 @@
             "area": "new-bark-town",
             "fishing": "ocean",
             "headbutt": "town",
+            "neighbors": [
+                "route-29",
+                "route-27"
+            ],
             "surf": [
                 {
                     "chance": 60,
@@ -13369,6 +14381,13 @@
             "area": "ecruteak-city",
             "fishing": "pond",
             "headbutt": "town",
+            "neighbors": [
+                "route-38",
+                "route-42",
+                "burned-tower-1f",
+                "tin-tower-2f",
+                "route-37"
+            ],
             "surf": [
                 {
                     "chance": 60,
@@ -13390,6 +14409,11 @@
         {
             "area": "viridian-city",
             "fishing": "pond",
+            "neighbors": [
+                "route-1",
+                "route-22",
+                "route-2"
+            ],
             "surf": [
                 {
                     "chance": 60,
@@ -13411,6 +14435,24 @@
         {
             "area": "vermilion-city",
             "fishing": "ocean",
+            "neighbors": [
+                "route-6",
+                "route-11",
+                "vermilion-port"
+            ],
+            "special": [
+                {
+                    "pool": [
+                        {
+                            "chance": 100,
+                            "extra": "Requires Poke Flute radio",
+                            "level": 50,
+                            "pokemon": "ditto"
+                        }
+                    ],
+                    "type": "static"
+                }
+            ],
             "surf": [
                 {
                     "chance": 60,
@@ -13433,6 +14475,10 @@
             "area": "cherrygrove-city",
             "fishing": "shore",
             "headbutt": "town",
+            "neighbors": [
+                "route-30",
+                "route-29"
+            ],
             "surf": [
                 {
                     "chance": 60,
@@ -13454,6 +14500,11 @@
         {
             "area": "fuchsia-city",
             "fishing": "gyarados",
+            "neighbors": [
+                "route-18",
+                "route-19",
+                "route-15"
+            ],
             "surf": [
                 {
                     "chance": 60,
@@ -13476,6 +14527,22 @@
             "area": "lake-of-rage",
             "fishing": "gyarados",
             "headbutt": "town",
+            "neighbors": [
+                "route-43"
+            ],
+            "special": [
+                {
+                    "pool": [
+                        {
+                            "chance": 100,
+                            "extra": "Shiny, has 0 14\/10 10\/10 10 DVs",
+                            "level": 30,
+                            "pokemon": "gyarados"
+                        }
+                    ],
+                    "type": "static"
+                }
+            ],
             "surf": [
                 {
                     "chance": 60,
@@ -13496,6 +14563,35 @@
         },
         {
             "area": "celadon-city",
+            "neighbors": [
+                "route-7",
+                "route-16"
+            ],
+            "special": [
+                {
+                    "pool": [
+                        {
+                            "chance": 100,
+                            "extra": "Celadon Game Corner, 2222 coins",
+                            "level": 25,
+                            "pokemon": "pikachu"
+                        },
+                        {
+                            "chance": 100,
+                            "extra": "Celadon Game Corner, 5555 coins",
+                            "level": 15,
+                            "pokemon": "porygon"
+                        },
+                        {
+                            "chance": 100,
+                            "extra": "Celadon Game Corner, 8888 coins",
+                            "level": 40,
+                            "pokemon": "larvitar"
+                        }
+                    ],
+                    "type": "buy"
+                }
+            ],
             "surf": [
                 {
                     "chance": 60,
@@ -13518,7 +14614,23 @@
             "area": "cianwood-city",
             "fishing": "shore",
             "headbutt": "town",
+            "neighbors": [
+                "route-41"
+            ],
             "rock": "rock",
+            "special": [
+                {
+                    "pool": [
+                        {
+                            "chance": 100,
+                            "extra": "Can be returned at any point. Has traded OT",
+                            "level": 15,
+                            "pokemon": "shuckle"
+                        }
+                    ],
+                    "type": "gift"
+                }
+            ],
             "surf": [
                 {
                     "chance": 60,
@@ -13540,6 +14652,10 @@
         {
             "area": "route-19",
             "fishing": "shore",
+            "neighbors": [
+                "route-20",
+                "fuchsia-city"
+            ],
             "surf": [
                 {
                     "chance": 60,
@@ -13560,6 +14676,12 @@
         },
         {
             "area": "cerulean-city",
+            "neighbors": [
+                "route-24",
+                "route-4",
+                "route-5",
+                "route-9"
+            ],
             "surf": [
                 {
                     "chance": 60,
@@ -13581,6 +14703,9 @@
         {
             "area": "vermilion-port",
             "fishing": "ocean",
+            "neighbors": [
+                "vermilion-city"
+            ],
             "surf": [
                 {
                     "chance": 60,
@@ -13602,6 +14727,22 @@
         {
             "area": "dragons-den-b1f",
             "fishing": "dratini",
+            "neighbors": [
+                "blackthorn-city"
+            ],
+            "special": [
+                {
+                    "pool": [
+                        {
+                            "chance": 100,
+                            "extra": "Will have ExtremeSpeed if you answer the quiz questions with PAL, Raising, Anybody, Love, Both in order",
+                            "level": 15,
+                            "pokemon": "dratini"
+                        }
+                    ],
+                    "type": "gift"
+                }
+            ],
             "surf": [
                 {
                     "chance": 60,
@@ -13624,6 +14765,11 @@
             "area": "route-40",
             "fishing": "shore",
             "headbutt": "town",
+            "neighbors": [
+                "route-41",
+                "battle-tower-outside",
+                "olivine-city"
+            ],
             "rock": "rock",
             "surf": [
                 {
@@ -13646,6 +14792,10 @@
         {
             "area": "route-20",
             "fishing": "ocean",
+            "neighbors": [
+                "cinnabar-island",
+                "route-19"
+            ],
             "surf": [
                 {
                     "chance": 60,
@@ -13668,6 +14818,35 @@
             "area": "violet-city",
             "fishing": "pond",
             "headbutt": "town",
+            "neighbors": [
+                "route-36",
+                "sprout-tower-2f",
+                "route-31"
+            ],
+            "special": [
+                {
+                    "pool": [
+                        {
+                            "chance": 100,
+                            "extra": "Traded for Bellsprout in the southern house",
+                            "level": 1,
+                            "pokemon": "onix"
+                        }
+                    ],
+                    "type": "trade"
+                },
+                {
+                    "pool": [
+                        {
+                            "chance": 100,
+                            "extra": "Egg, can be hatched elsewhere",
+                            "level": 5,
+                            "pokemon": "togepi"
+                        }
+                    ],
+                    "type": "gift"
+                }
+            ],
             "surf": [
                 {
                     "chance": 60,
@@ -13689,6 +14868,10 @@
         {
             "area": "cinnabar-island",
             "fishing": "ocean",
+            "neighbors": [
+                "route-21",
+                "route-20"
+            ],
             "surf": [
                 {
                     "chance": 60,
@@ -13711,6 +14894,14 @@
             "area": "route-41",
             "fishing": "ocean",
             "headbutt": "town",
+            "neighbors": [
+                "cianwood-city",
+                "whirl-island-ne",
+                "whirl-island-nw",
+                "whirl-island-se",
+                "whirl-island-sw",
+                "route-40"
+            ],
             "surf": [
                 {
                     "chance": 60,
@@ -13732,6 +14923,10 @@
         {
             "area": "pallet-town",
             "fishing": "ocean",
+            "neighbors": [
+                "route-21",
+                "route-1"
+            ],
             "surf": [
                 {
                     "chance": 60,
@@ -13754,6 +14949,24 @@
             "area": "blackthorn-city",
             "fishing": "pond",
             "headbutt": "town",
+            "neighbors": [
+                "dragons-den-b1f",
+                "route-45",
+                "ice-path-b2f-blackthorn-side"
+            ],
+            "special": [
+                {
+                    "pool": [
+                        {
+                            "chance": 100,
+                            "extra": "Traded for Dragonair",
+                            "level": 1,
+                            "pokemon": "dodrio"
+                        }
+                    ],
+                    "type": "trade"
+                }
+            ],
             "surf": [
                 {
                     "chance": 60,
@@ -13775,6 +14988,12 @@
         {
             "area": "route-12",
             "fishing": "qwilfish-noswarm",
+            "neighbors": [
+                "route-13",
+                "route-11",
+                "route-8",
+                "rock-tunnel-1f"
+            ],
             "surf": [
                 {
                     "chance": 60,
@@ -13795,19 +15014,130 @@
         },
         {
             "area": "azalea-town",
-            "headbutt": "town"
+            "headbutt": "town",
+            "neighbors": [
+                "ilex-forest",
+                "slowpoke-well-b1f",
+                "route-33"
+            ]
         },
         {
             "area": "goldenrod-city",
-            "headbutt": "town"
+            "headbutt": "town",
+            "neighbors": [
+                "route-35",
+                "route-34"
+            ],
+            "special": [
+                {
+                    "pool": [
+                        {
+                            "chance": 100,
+                            "extra": "Traded for Abra on the 5th floor of the department store",
+                            "level": 1,
+                            "pokemon": "machop"
+                        }
+                    ],
+                    "type": "trade"
+                },
+                {
+                    "pool": [
+                        {
+                            "chance": 100,
+                            "extra": "In Bill's house after speaking to him in Ecruteak City",
+                            "level": 20,
+                            "pokemon": "eevee"
+                        }
+                    ],
+                    "type": "gift"
+                },
+                {
+                    "pool": [
+                        {
+                            "chance": 100,
+                            "extra": "Goldenrod Game Corner, 100 coins",
+                            "level": 5,
+                            "pokemon": "abra"
+                        },
+                        {
+                            "chance": 100,
+                            "extra": "Goldenrod Game Corner, 800 coins",
+                            "level": 15,
+                            "pokemon": "cubone"
+                        },
+                        {
+                            "chance": 100,
+                            "extra": "Goldenrod Game Corner, 1500 coins",
+                            "level": 15,
+                            "pokemon": "wobbuffet"
+                        }
+                    ],
+                    "type": "buy"
+                }
+            ]
         },
         {
             "area": "mahogany-town",
-            "headbutt": "town"
+            "headbutt": "town",
+            "neighbors": [
+                "route-43",
+                "route-44",
+                "route-42"
+            ],
+            "special": [
+                {
+                    "pool": [
+                        {
+                            "chance": 100,
+                            "extra": "In hideout trap tile",
+                            "level": 21,
+                            "pokemon": "geodude"
+                        },
+                        {
+                            "chance": 100,
+                            "extra": "In hideout trap tile",
+                            "level": 21,
+                            "pokemon": "koffing"
+                        },
+                        {
+                            "chance": 100,
+                            "extra": "In hideout trap tile",
+                            "level": 23,
+                            "pokemon": "voltorb"
+                        },
+                        {
+                            "chance": 100,
+                            "extra": "In hideout generator room",
+                            "level": 50,
+                            "pokemon": "electrode"
+                        }
+                    ],
+                    "type": "static"
+                }
+            ]
         },
         {
             "area": "battle-tower-outside",
-            "headbutt": "route"
+            "headbutt": "route",
+            "neighbors": [
+                "route-40"
+            ]
+        },
+        {
+            "area": "pewter-city",
+            "special": [
+                {
+                    "pool": [
+                        {
+                            "chance": 100,
+                            "extra": "Traded for Haunter",
+                            "level": 1,
+                            "pokemon": "xatu"
+                        }
+                    ],
+                    "type": "trade"
+                }
+            ]
         }
     ],
     "moves": [

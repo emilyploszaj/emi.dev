@@ -204,7 +204,7 @@ fetch("./data.json")
 				addToFamily(p, family);
 				family++;
 			}
- 		}
+		}
 		for (let i in j.moves) {
 			var m = j.moves[i];
 			movesByName.set(m.name, m);
@@ -580,7 +580,7 @@ function displayPokemon(root, i) {
 			} else {
 				before = evolution.method;
 			}
-			evo += "<div>"+ pokeLink(v.name) + " -> " + before  + "</div>"
+			evo += "<div>" + pokeLink(v.name) + " -> " + before + "</div>"
 		}
 	}
 	if (p.evolutions) {
@@ -673,7 +673,7 @@ function addPoolList(map, name, t, list) {
 		if (!areas.has(name)) {
 			areas.set(name, []);
 		}
-		areas.get(name).push({chance: p.chance, type: t});
+		areas.get(name).push({ chance: p.chance, type: t });
 	}
 }
 
@@ -704,44 +704,119 @@ function addPoolInfo(pools) {
 		var pool = rockPools.get(pools.rock);
 		addPoolList(pokemonEncounters, name, "Rock Smash", pool.rock);
 	}
+	if (pools.special) {
+		for (let i = 0; i < pools.special.length; i++) {
+			var pool = pools.special[i];
+			if (pool.type == "swarm") {
+				addPoolList(pokemonEncounters, name, "Swarm", pool.day);
+				addPoolList(pokemonEncounters, name, "Swarm", pool.night);
+				addPoolList(pokemonEncounters, name, "Swarm", pool.morning);
+			} else if (pool.type == "fishing-swarm") {
+				addPoolList(pokemonEncounters, name, "Swarm Old Rod", pool.old.day);
+				addPoolList(pokemonEncounters, name, "Swarm Old Rod", pool.old.night);
+				addPoolList(pokemonEncounters, name, "Swarm Good Rod", pool.good.day);
+				addPoolList(pokemonEncounters, name, "Swarm Good Rod", pool.good.night);
+				addPoolList(pokemonEncounters, name, "Swarm Super Rod", pool.super.day);
+				addPoolList(pokemonEncounters, name, "Swarm Super Rod", pool.super.night);
+			} else {
+				addPoolList(pokemonEncounters, name, "Special", pool.pool);
+			}
+		}
+	}
 }
 
 function getEncounterDisplay(pools) {
 	var v = "";
-	v += "<h3>" + fullCapitalize(pools.area) + "</h3>"
+	v += "<h3>" + fullCapitalize(pools.area) + "</h3>";
+	v += "<p>Neighbors:";
+	if (pools.neighbors) {
+		for (var i = 0; i < pools.neighbors.length; i++) {
+			var e = encountersByName.get(pools.neighbors[i]);
+			if (i > 0) {
+				v += ",";
+			}
+			v += ' <span class="poke-link" onclick="focusEncounter(' + e + ')">';
+			v += fullCapitalize(pools.neighbors[i]);
+			v += '</span>';
+		}
+	}
+	v += "</p>";
 	if (pools.normal) {
-		v += "<p>Walking (Lvl " + pools.normal.day[0].level + "):</p>";
-		v += getEncounterPoolDisplay(pools.normal.day, "day");
-		v += getEncounterPoolDisplay(pools.normal.night, "night");
-		v += getEncounterPoolDisplay(pools.normal.morning, "morning");
+		v += getWalkingPoolDisplay(pools.normal, "Walking");
 	}
 	if (pools.surf) {
 		v += "<p>Surfing (Lvl " + pools.surf[0].level + "):</p>";
-		v += getEncounterPoolDisplay(pools.surf, "day");
+		v += getEncounterPoolDisplay(pools.surf, "any");
 	}
 	if (pools.headbutt) {
 		var pool = headbuttPools.get(pools.headbutt);
 		v += "<p>Headbutt (Lvl " + pool.headbutt[0].level + "):</p>";
-		v += getEncounterPoolDisplay(pool.headbutt, "day");
+		v += getEncounterPoolDisplay(pool.headbutt, "any");
 	}
 	if (pools.fishing) {
-		var pool = fishingPools.get(pools.fishing);
-		v += "<p>Old Rod (Lvl " + pool.old.day[0].level + "):</p>";
-		v += getEncounterPoolDisplay(pool.old.day, "day");
-		v += getEncounterPoolDisplay(pool.old.night, "night");
-		v += "<p>Good Rod (Lvl " + pool.good.day[0].level + "):</p>";
-		v += getEncounterPoolDisplay(pool.good.day, "day");
-		v += getEncounterPoolDisplay(pool.good.night, "night");
-		v += "<p>Super Rod (Lvl " + pool.super.day[0].level + "):</p>";
-		v += getEncounterPoolDisplay(pool.super.day, "day");
-		v += getEncounterPoolDisplay(pool.super.night, "night");
+		v += getFishingPoolDisplay(fishingPools.get(pools.fishing), "");
 	}
 	if (pools.rock) {
 		var pool = rockPools.get(pools.rock);
 		v += "<p>Rock Smash (Lvl " + pool.rock[0].level + "):</p>";
-		v += getEncounterPoolDisplay(pool.rock, "day");
+		v += getEncounterPoolDisplay(pool.rock, "any");
+	}
+	if (pools.special) {
+		for (let i = 0; i < pools.special.length; i++) {
+			var pool = pools.special[i];
+			if (pool.type == "swarm") {
+				v += getWalkingPoolDisplay(pool, "Swarm");
+			} else if (pool.type == "fishing-swarm") {
+				v += getFishingPoolDisplay(pool, "Swarm ");
+			} else {
+				v += "<p>Special:</p>";
+				v += getEncounterPoolDisplay(pool.pool, "any");
+			}
+		}
 	}
 	return v;
+}
+
+function getWalkingPoolDisplay(p, name) {
+	let v = "<p>" + name + " (Lvl " + p.day[0].level + "):</p>";
+	if (arePoolsEqual(p.day, p.night) && arePoolsEqual(p.night, p.morning)) {
+		v += getEncounterPoolDisplay(p.day, "any");
+	} else {
+		v += getEncounterPoolDisplay(p.day, "day");
+		v += getEncounterPoolDisplay(p.night, "night");
+		v += getEncounterPoolDisplay(p.morning, "morning");
+	}
+	return v;
+}
+
+function getFishingPoolDisplay(pool, name) {
+	let v = "";
+	v += "<p>" + name + "Old Rod (Lvl " + pool.old.day[0].level + "):</p>";
+	if (arePoolsEqual(pool.old.day, pool.old.night)) {
+		v += getEncounterPoolDisplay(pool.old.day, "any");
+	} else {
+		v += getEncounterPoolDisplay(pool.old.day, "day");
+		v += getEncounterPoolDisplay(pool.old.night, "night");
+	}
+	v += "<p>" + name + "Good Rod (Lvl " + pool.good.day[0].level + "):</p>";
+	if (arePoolsEqual(pool.good.day, pool.good.night)) {
+		v += getEncounterPoolDisplay(pool.good.day, "any");
+	} else {
+		v += getEncounterPoolDisplay(pool.good.day, "day");
+		v += getEncounterPoolDisplay(pool.good.night, "night");
+	}
+	v += "<p>" + name + "Super Rod (Lvl " + pool.super.day[0].level + "):</p>";
+	if (arePoolsEqual(pool.super.day, pool.super.night)) {
+		v += getEncounterPoolDisplay(pool.super.day, "any");
+	} else {
+		v += getEncounterPoolDisplay(pool.super.day, "day");
+		v += getEncounterPoolDisplay(pool.super.night, "night");
+	}
+	return v;
+}
+
+function arePoolsEqual(a, b) {
+	return JSON.stringify(a) === JSON.stringify(b);
 }
 
 function getEncounterPoolDisplay(pool, time) {
@@ -749,9 +824,14 @@ function getEncounterPoolDisplay(pool, time) {
 	v += '<div class="encounter-pool ' + time + '-pool">';
 	v += '<div style="display:flex">';
 	var totalWeight = 0;
+	var lvl = pool[0].level;
+	var showLevel = false;
 	for (var i = 0; i < pool.length; i++) {
 		if (!hasFamily(pokemonFamilies.get(pokemonByName.get(pool[i].pokemon).pokedex))) {
 			totalWeight += pool[i].chance;
+		}
+		if (pool[i].level != lvl) {
+			showLevel = true;
 		}
 	}
 	for (var i = 0; i < pool.length; i++) {
@@ -764,10 +844,18 @@ function getEncounterPoolDisplay(pool, time) {
 			v += '<div class="encounter-poke">';
 			adjustedPercent = parseInt(pool[i].chance / totalWeight * 10000) / 100 + "%";
 		}
-		
-		v += '<div><ruby>' + percent + '%<rt>(' + adjustedPercent + ')</rt></ruby></div>';
+		var tt = "";
+		if (pool[i].extra) {
+			tt += ' <div class="extra-info" title="' + pool[i].extra + '">?</div>';
+		}
+
+		v += '<div><ruby>' + percent + '%' + tt + '<rt>(' + adjustedPercent + ')';
+		if (showLevel) {
+			v += " Lvl " + pool[i].level;
+		}
+		v += '</rt></ruby></div>';
 		v += '<img style="cursor:pointer;" onclick="focusPokeByName(\'' + pool[i].pokemon
-			+'\')" src="https://img.pokemondb.net/sprites/crystal/normal/' + pool[i].pokemon + '.png">';
+			+ '\')" src="https://img.pokemondb.net/sprites/crystal/normal/' + pool[i].pokemon + '.png">';
 		v += '</div>';
 	}
 	v += '</div>';
@@ -802,7 +890,7 @@ function getMoveDisplay(move, level = undefined) {
 		for (var i = 0; i < move.extra.length; i++) {
 			alt += "\n" + move.extra[i];
 		}
-		v += '<td title="' + alt + '">?</td>';
+		v += '<td class="extra-info" title="' + alt + '">?</td>';
 	} else {
 		v += '<td></td>';
 	}
@@ -850,7 +938,7 @@ function getHiddenPower(poke) {
 	];
 	var ty = types[t];
 	var po = ((mSig("spa") + 2 * mSig("spe") + 4 * mSig("def") + 8 * mSig("atk")) * 5 + mod4("spa")) / 2 + 31;
-	return {type: ty, power: po};
+	return { type: ty, power: po };
 }
 
 function getDamage(attacker, defender, attackerStages, defenderStages, move, player, crit, low, giveAll = false) {
@@ -882,7 +970,7 @@ function getDamage(attacker, defender, attackerStages, defenderStages, move, pla
 	var dp = pokemonByName.get(defender.name);
 	var v = parseInt(attacker.level * 2 / 5) + 2;
 	v *= power;
-	
+
 	var special = specialTypes.has(type);
 	var statOff = 0;
 	if (special) {
@@ -890,7 +978,7 @@ function getDamage(attacker, defender, attackerStages, defenderStages, move, pla
 	}
 	var attackStat = ["atk", "spa"][statOff];
 	var defenseStat = ["def", "spd"][statOff];
-	
+
 	var a = getModifiedStat(attacker, attackerStages, attackStat);
 	var d = getModifiedStat(defender, defenderStages, defenseStat);
 	if (crit) {
@@ -1049,7 +1137,7 @@ function updateSearch(v) {
 			if (n[0].includes(v)) {
 				res += '<div class="search-suggestion" onmousedown="' + n[1] + '">' + fullCapitalize(n[0]) + '</div>';
 				amount++;
-				if (amount >= 8) {
+				if (amount >= 12) {
 					break;
 				}
 			}
@@ -1058,7 +1146,7 @@ function updateSearch(v) {
 	document.getElementById("search-suggestions").innerHTML = res;
 }
 
-document.getElementById("search-box").oninput = function(event) {
+document.getElementById("search-box").oninput = function (event) {
 	var v = event.target.value;
 	updateSearch(v);
 }
@@ -1084,7 +1172,7 @@ function setTab(name) {
 
 var editInputs = document.getElementsByClassName("poke-edit-input");
 for (let i in editInputs) {
-	editInputs[i].oninput = function(event) {
+	editInputs[i].oninput = function (event) {
 		if (event.target.id.includes("edit-move")) {
 			copyEditedMoves = false;
 		}
@@ -1227,9 +1315,9 @@ function updateBox() {
 	for (var i = 0; i < box.length; i++) {
 		document.getElementById("box-pokes").innerHTML += getTinyPokemonDisplay(box[i],
 			'<div><button onclick="editBox(' + i + ')">Edit</button><button onclick="moveToBoxStart('
-				+ i + ')">Move to Start</button><button onclick="calcFromBox('
-				+ i + ')">Show in Calc</button><button onclick="removeFromBox('
-				+ i + ')">Delete</button></div>');
+			+ i + ')">Move to Start</button><button onclick="calcFromBox('
+			+ i + ')">Show in Calc</button><button onclick="removeFromBox('
+			+ i + ')">Delete</button></div>');
 	}
 	localStorage.setItem("box", JSON.stringify(box));
 	localStorage.setItem("dead-box", JSON.stringify(deadBox));
@@ -1416,7 +1504,7 @@ function pokeLink(p) {
 
 function readFile(file) {
 	var reader = new FileReader();
-	reader.onload = function(e) {
+	reader.onload = function (e) {
 		var bytes = new Uint8Array(e.target.result);
 		if (bytes.length > 32000) {
 			pokemon = [];
@@ -1453,7 +1541,7 @@ function readFile(file) {
 	reader.readAsArrayBuffer(file);
 }
 
-document.ondrop = function(event) {
+document.ondrop = function (event) {
 	if (event.dataTransfer.files) {
 		var file = event.dataTransfer.files[0];
 		readFile(file);
@@ -1461,11 +1549,11 @@ document.ondrop = function(event) {
 	event.preventDefault();
 }
 
-document.ondragover = function(event) {
+document.ondragover = function (event) {
 	event.preventDefault();
 }
 
-document.getElementById("badges").oninput = function(event) {
+document.getElementById("badges").oninput = function (event) {
 	updateBadges();
 }
 
