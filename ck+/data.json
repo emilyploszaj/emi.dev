@@ -15125,6 +15125,10 @@
         },
         {
             "area": "pewter-city",
+            "neighbors": [
+                "route-3",
+                "route-2"
+            ],
             "special": [
                 {
                     "pool": [
