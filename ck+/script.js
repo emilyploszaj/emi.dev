@@ -45,6 +45,7 @@ var enemyTeam = [];
 var editing = -1;
 var copyEditedMoves = false;
 var badges = 0;
+var lastTrainer = 17;
 const attackBadges = 1;
 const defenseBadges = 7;
 const specialBadges = 6;
@@ -242,9 +243,10 @@ fetch("./data.json")
 		}
 		enemyTeam = j.trainers[17].team;
 		if (localStorage.getItem("last-trainer")) {
-			var lt = localStorage.getItem("last-trainer");
+			var lt = parseInt(localStorage.getItem("last-trainer"));
 			if (lt >= 0 && lt < j.trainers.length) {
 				enemyTeam = j.trainers[lt].team;
+				lastTrainer = lt;
 			}
 		}
 		data = j;
@@ -1332,8 +1334,19 @@ function updateBox() {
 	updateCalc();
 }
 
+function navigateBattle(i) {
+	lastTrainer += i;
+	if (lastTrainer < 0) {
+		lastTrainer = 0;
+	} else if (lastTrainer >= data.trainers.length) {
+		lastTrainer = data.trainers.length - 1;
+	}
+	calcTrainer(lastTrainer);
+}
+
 function calcTrainer(i) {
 	localStorage.setItem("last-trainer", i);
+	lastTrainer = i;
 	enemyTeam = data.trainers[i].team;
 	setEnemy(0);
 	setTab("calc");
