@@ -1460,6 +1460,64 @@ function updateBadges() {
 	updateBox();
 }
 
+function readNewbox(bytes, start) {
+	var pokemon = [];
+	var banks = [];
+	for (var i = 0; i < 3; i++) {
+		var b = bytes[start + 0x14 + i];
+		for (var j = 0; j < 8; j++) {
+			banks.push((b & 1) == 1);
+			b >>= 1;
+		}
+	}
+	for (var i = 0; i < 20; i++) {
+		var b = bytes[start + i];
+		if (b == 0) {
+			continue;
+		}
+		b--;
+		var p = 0x4000;
+		if (banks[i]) {
+			p = 0x6000;
+		}
+		p += b * 0x2F;
+		var item = bytes[p + 0x01];
+		if (itemsById.has(item)) {
+			item = itemsById.get(item);
+		} else {
+			item = "";
+		}
+		var atk = (bytes[p + 0x15] & 0xf0) >> 4;
+		var def = (bytes[p + 0x15] & 0x0f);
+		var spe = (bytes[p + 0x16] & 0xf0) >> 4;
+		var spa = (bytes[p + 0x16] & 0x0f);
+		var spd = spa
+		var hp = 8 * (atk & 0b1) + 4 * (def & 0b1) + 2 * (spe & 0b1) + (spa & 0b1);
+		var moves = [];
+		for (var j = 0; j < 4; j++) {
+			var move = bytes[p + 0x02 + j];
+			if (movesByIndex.has(move)) {
+				moves.push(movesByIndex.get(move).name);
+			}
+		}
+		pokemon.push({
+			name: pokemonByPokedex.get(bytes[p]).name,
+			level: bytes[p + 0x1c],
+			dvs: {
+				"hp": hp,
+				"atk": atk,
+				"def": def,
+				"spa": spa,
+				"spd": spd,
+				"spe": spe
+			},
+			"moves": moves,
+			"item": item
+		});
+	}
+	return pokemon;
+}
+
 function readPokemonList(bytes, start, capacity, increment) {
 	var count = bytes[start];
 	var p = start + 1;
@@ -1467,9 +1525,10 @@ function readPokemonList(bytes, start, capacity, increment) {
 	for (var i = 0; i < count; i++) {
 		species.push(bytes[p + i]);
 	}
+	/* Terminator was broken for a patch
 	if (bytes[p + count] != 0xff) {
 		return;
-	}
+	}*/
 	p += capacity + 1;
 	var pokemon = [];
 	for (var i = 0; i < count; i++) {
@@ -1527,19 +1586,17 @@ function readFile(file) {
 	var reader = new FileReader();
 	reader.onload = function (e) {
 		var bytes = new Uint8Array(e.target.result);
-		if (bytes.length > 32000) {
+		if (bytes.length > 32000 && bytes[0x2000] == 65 && bytes[0x2d0f] == 127) {
 			pokemon = [];
 			deadPokemon = [];
 			pokemon = pokemon.concat(readPokemonList(bytes, 0x2865, 6, 48));
-			for (var i = 0; i < 7; i++) {
-				pokemon = pokemon.concat(readPokemonList(bytes, 0x4000 + i * 0x450, 20, 32));
-			}
-			// Ignore death boxes
-			for (var i = 0; i < 5; i++) {
-				pokemon = pokemon.concat(readPokemonList(bytes, 0x6000 + i * 0x450, 20, 32));
-			}
-			for (var i = 5; i < 7; i++) {
-				deadPokemon = deadPokemon.concat(readPokemonList(bytes, 0x6000 + i * 0x450, 20, 32));
+			for (var i = 0; i < 16; i++) {
+				var l = readNewbox(bytes, 0x2f20 + i * 0x21);
+				if (i >= 14) {
+					deadPokemon = deadPokemon.concat(l);
+				} else {
+					pokemon = pokemon.concat(l);
+				}
 			}
 			box = pokemon;
 			deadBox = deadPokemon;
@@ -1557,6 +1614,10 @@ function readFile(file) {
 				setPlayer(0);
 			}
 			updateBox();
+		} else {
+			console.log(bytes[0x2000]);
+			console.log(bytes[0x2d0f]);
+			console.log("File doesn't appear to be a save file!");
 		}
 	};
 	reader.readAsArrayBuffer(file);

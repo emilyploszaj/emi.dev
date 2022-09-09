@@ -2212,7 +2212,6 @@
         },
         {
             "area": "tin-tower-2f",
-            "fishing": "shore",
             "neighbors": [
                 "tin-tower-3f",
                 "tin-tower-4f",
@@ -2339,7 +2338,6 @@
         },
         {
             "area": "tin-tower-3f",
-            "fishing": "shore",
             "neighbors": [
                 "tin-tower-2f",
                 "tin-tower-4f",
@@ -2465,7 +2463,6 @@
         },
         {
             "area": "tin-tower-4f",
-            "fishing": "shore",
             "neighbors": [
                 "tin-tower-2f",
                 "tin-tower-3f",
@@ -2591,7 +2588,6 @@
         },
         {
             "area": "tin-tower-5f",
-            "fishing": "shore",
             "neighbors": [
                 "tin-tower-2f",
                 "tin-tower-3f",
@@ -2717,7 +2713,6 @@
         },
         {
             "area": "tin-tower-6f",
-            "fishing": "shore",
             "neighbors": [
                 "tin-tower-2f",
                 "tin-tower-3f",
@@ -2843,7 +2838,6 @@
         },
         {
             "area": "tin-tower-7f",
-            "fishing": "shore",
             "neighbors": [
                 "tin-tower-2f",
                 "tin-tower-3f",
@@ -2969,7 +2963,6 @@
         },
         {
             "area": "tin-tower-8f",
-            "fishing": "shore",
             "neighbors": [
                 "tin-tower-2f",
                 "tin-tower-3f",
@@ -3095,7 +3088,6 @@
         },
         {
             "area": "tin-tower-9f",
-            "fishing": "shore",
             "neighbors": [
                 "tin-tower-2f",
                 "tin-tower-3f",
@@ -3221,7 +3213,6 @@
         },
         {
             "area": "burned-tower-1f",
-            "fishing": "shore",
             "neighbors": [
                 "burned-tower-b1f",
                 "ecruteak-city"
@@ -3342,7 +3333,6 @@
         },
         {
             "area": "burned-tower-b1f",
-            "fishing": "shore",
             "neighbors": [
                 "burned-tower-1f"
             ],
@@ -3462,7 +3452,6 @@
         },
         {
             "area": "national-park",
-            "fishing": "shore",
             "neighbors": [
                 "route-36",
                 "route-35"
@@ -3723,7 +3712,6 @@
         },
         {
             "area": "ruins-of-alph-inner-chamber",
-            "fishing": "shore",
             "neighbors": [
                 "ruins-of-alph-outside"
             ],
@@ -7831,7 +7819,6 @@
         },
         {
             "area": "route-29",
-            "fishing": "shore",
             "headbutt": "canyon",
             "neighbors": [
                 "cherrygrove-city",
@@ -8505,7 +8492,6 @@
         },
         {
             "area": "route-33",
-            "fishing": "shore",
             "headbutt": "town",
             "neighbors": [
                 "azalea-town",
@@ -9219,7 +9205,6 @@
         },
         {
             "area": "route-37",
-            "fishing": "shore",
             "headbutt": "route",
             "neighbors": [
                 "ecruteak-city",
@@ -10529,7 +10514,6 @@
         },
         {
             "area": "mount-moon",
-            "fishing": "shore",
             "neighbors": [
                 "route-4",
                 "route-3"
@@ -11271,7 +11255,6 @@
         },
         {
             "area": "route-2",
-            "fishing": "shore",
             "neighbors": [
                 "pewter-city",
                 "viridian-city",
@@ -11393,7 +11376,6 @@
         },
         {
             "area": "route-3",
-            "fishing": "shore",
             "neighbors": [
                 "mount-moon",
                 "pewter-city"
@@ -11651,7 +11633,6 @@
         },
         {
             "area": "route-5",
-            "fishing": "shore",
             "neighbors": [
                 "cerulean-city",
                 "route-6",
@@ -11914,7 +11895,6 @@
         },
         {
             "area": "route-7",
-            "fishing": "shore",
             "neighbors": [
                 "route-5",
                 "route-8",
@@ -12037,7 +12017,6 @@
         },
         {
             "area": "route-8",
-            "fishing": "shore",
             "neighbors": [
                 "route-12",
                 "rock-tunnel-1f",
@@ -12710,7 +12689,6 @@
         },
         {
             "area": "route-14",
-            "fishing": "shore",
             "neighbors": [
                 "route-15",
                 "route-13"
@@ -12844,7 +12822,6 @@
         },
         {
             "area": "route-15",
-            "fishing": "shore",
             "neighbors": [
                 "fuchsia-city",
                 "route-14"
@@ -13206,7 +13183,6 @@
         },
         {
             "area": "route-18",
-            "fishing": "shore",
             "neighbors": [
                 "route-17",
                 "fuchsia-city"
@@ -14474,7 +14450,6 @@
         {
             "area": "cherrygrove-city",
             "fishing": "shore",
-            "headbutt": "town",
             "neighbors": [
                 "route-30",
                 "route-29"
@@ -36253,22 +36228,6 @@
                 {
                     "level": 1,
                     "move": "roar"
-                },
-                {
-                    "level": 1,
-                    "move": "spark"
-                },
-                {
-                    "level": 1,
-                    "move": "bite"
-                },
-                {
-                    "level": 61,
-                    "move": "crunch"
-                },
-                {
-                    "level": 73,
-                    "move": "thunderbolt"
                 }
             ],
             "name": "raikou",
@@ -36324,22 +36283,6 @@
                 {
                     "level": 1,
                     "move": "roar"
-                },
-                {
-                    "level": 1,
-                    "move": "stomp"
-                },
-                {
-                    "level": 1,
-                    "move": "flamethrower"
-                },
-                {
-                    "level": 74,
-                    "move": "extremespeed"
-                },
-                {
-                    "level": 99,
-                    "move": "metal-claw"
                 }
             ],
             "name": "entei",
@@ -38025,6 +37968,7 @@
             ]
         },
         {
+            "meta": "cannot change team ",
             "name": "GruntM GRUNTM (1) GRUNT",
             "team": [
                 {
@@ -39271,13 +39215,21 @@
                     "name": "aipom"
                 },
                 {
+                    "dvs": {
+                        "atk": 13,
+                        "def": 14,
+                        "hp": 11,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "Berry Juice",
                     "level": 33,
                     "moves": [
                         "giga-drain",
                         "sludge-bomb",
                         "sleep-powder",
-                        "shadow-ball"
+                        "hp-ghost"
                     ],
                     "name": "gloom"
                 }
@@ -40880,7 +40832,7 @@
             "team": [
                 {
                     "item": "Quick Claw",
-                    "level": 41,
+                    "level": 40,
                     "moves": [
                         "spore",
                         "giga-drain",
@@ -40891,7 +40843,7 @@
                 },
                 {
                     "item": "Focus Band",
-                    "level": 40,
+                    "level": 39,
                     "moves": [
                         "surf",
                         "sludge-bomb",
@@ -40918,7 +40870,7 @@
             "team": [
                 {
                     "item": "Quick Claw",
-                    "level": 41,
+                    "level": 40,
                     "moves": [
                         "earthquake",
                         "rock-slide",
@@ -40929,7 +40881,7 @@
                 },
                 {
                     "item": "Quick Claw",
-                    "level": 41,
+                    "level": 40,
                     "moves": [
                         "crabhammer",
                         "metal-claw",
@@ -40940,7 +40892,7 @@
                 },
                 {
                     "item": "Quick Claw",
-                    "level": 40,
+                    "level": 39,
                     "moves": [
                         "guillotine",
                         "submission",
@@ -40967,7 +40919,7 @@
                 },
                 {
                     "item": "Focus Band",
-                    "level": 41,
+                    "level": 40,
                     "moves": [
                         "sky-attack",
                         "steel-wing",
@@ -40978,7 +40930,7 @@
                 },
                 {
                     "item": "Quick Claw",
-                    "level": 41,
+                    "level": 40,
                     "moves": [
                         "petal-dance",
                         "giga-drain",
@@ -41461,8 +41413,6 @@
                     "level": 50,
                     "moves": [
                         "destiny-bond",
-                        "counter",
-                        "mirror-coat",
                         "mean-look"
                     ],
                     "name": "wobbuffet"
@@ -43138,52 +43088,6 @@
         },
         {
             "meta": "Olivine Lighthouse",
-            "name": "Gentleman GENTLEMAN (5) ALFRED",
-            "team": [
-                {
-                    "item": "Miracleberry",
-                    "level": 57,
-                    "moves": [
-                        "thunder-wave",
-                        "frustration",
-                        "earthquake",
-                        "submission"
-                    ],
-                    "name": "granbull"
-                },
-                {
-                    "item": "Miracleberry",
-                    "level": 55,
-                    "moves": [
-                        "waterfall",
-                        "earthquake",
-                        "ice-beam",
-                        "submission"
-                    ],
-                    "name": "poliwrath"
-                },
-                {
-                    "dvs": {
-                        "atk": 14,
-                        "def": 12,
-                        "hp": 3,
-                        "spa": 15,
-                        "spd": 15,
-                        "spe": 15
-                    },
-                    "item": "Pink Bow",
-                    "level": 55,
-                    "moves": [
-                        "thunderbolt",
-                        "extremespeed",
-                        "surf",
-                        "hp-fire"
-                    ],
-                    "name": "raichu"
-                }
-            ]
-        },
-        {
             "name": "Sailor SAILOR (2) HUEY",
             "team": [
                 {
@@ -43237,6 +43141,52 @@
                         "ice-beam"
                     ],
                     "name": "politoed"
+                }
+            ]
+        },
+        {
+            "name": "Gentleman GENTLEMAN (5) ALFRED",
+            "team": [
+                {
+                    "item": "Miracleberry",
+                    "level": 57,
+                    "moves": [
+                        "thunder-wave",
+                        "frustration",
+                        "earthquake",
+                        "submission"
+                    ],
+                    "name": "granbull"
+                },
+                {
+                    "item": "Miracleberry",
+                    "level": 55,
+                    "moves": [
+                        "waterfall",
+                        "earthquake",
+                        "ice-beam",
+                        "submission"
+                    ],
+                    "name": "poliwrath"
+                },
+                {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
+                    "item": "Pink Bow",
+                    "level": 55,
+                    "moves": [
+                        "thunderbolt",
+                        "extremespeed",
+                        "surf",
+                        "hp-fire"
+                    ],
+                    "name": "raichu"
                 }
             ]
         },
@@ -46518,7 +46468,7 @@
                     "moves": [
                         "outrage",
                         "fire-blast",
-                        "fire-blast",
+                        "extremespeed",
                         "thunder"
                     ],
                     "name": "dragonite"
@@ -46857,7 +46807,7 @@
                 },
                 {
                     "item": "Quick Claw",
-                    "level": 70,
+                    "level": 68,
                     "moves": [
                         "earthquake",
                         "ancientpower",
@@ -46912,7 +46862,7 @@
                         "spe": 15
                     },
                     "item": "Focus Band",
-                    "level": 70,
+                    "level": 68,
                     "moves": [
                         "thunderbolt",
                         "psychic-m",
@@ -46923,7 +46873,7 @@
                 },
                 {
                     "item": "Focus Band",
-                    "level": 70,
+                    "level": 68,
                     "moves": [
                         "lovely-kiss",
                         "earthquake",
@@ -46942,7 +46892,7 @@
                         "spe": 15
                     },
                     "item": "Quick Claw",
-                    "level": 70,
+                    "level": 68,
                     "moves": [
                         "sleep-powder",
                         "giga-drain",
@@ -47120,7 +47070,7 @@
                         "spe": 15
                     },
                     "item": "Berserk Gene",
-                    "level": 68,
+                    "level": 66,
                     "moves": [
                         "explosion",
                         "thunderbolt",
@@ -47139,7 +47089,7 @@
                         "spe": 15
                     },
                     "item": "Berserk Gene",
-                    "level": 68,
+                    "level": 66,
                     "moves": [
                         "earthquake",
                         "rock-slide",
@@ -47150,7 +47100,7 @@
                 },
                 {
                     "item": "Berserk Gene",
-                    "level": 68,
+                    "level": 66,
                     "moves": [
                         "earthquake",
                         "fire-punch",
@@ -47161,7 +47111,7 @@
                 },
                 {
                     "item": "Berserk Gene",
-                    "level": 68,
+                    "level": 66,
                     "moves": [
                         "sludge-bomb",
                         "earthquake",
@@ -47180,7 +47130,7 @@
                         "spe": 15
                     },
                     "item": "Berserk Gene",
-                    "level": 68,
+                    "level": 66,
                     "moves": [
                         "quick-attack",
                         "metal-claw",
@@ -47199,7 +47149,7 @@
                         "spe": 15
                     },
                     "item": "Berserk Gene",
-                    "level": 68,
+                    "level": 66,
                     "moves": [
                         "rock-slide",
                         "fly",
@@ -47223,7 +47173,7 @@
                         "spd": 15,
                         "spe": 15
                     },
-                    "item": "Brightpowder",
+                    "item": "Miracleberry",
                     "level": 70,
                     "moves": [
                         "sing",
@@ -47281,7 +47231,7 @@
                     "name": "ampharos"
                 },
                 {
-                    "item": "Focus Band",
+                    "item": "Leftovers",
                     "level": 72,
                     "moves": [
                         "ancientpower",
@@ -47332,7 +47282,7 @@
                     "name": "meganium"
                 },
                 {
-                    "item": "Focus Band",
+                    "item": "Leftovers",
                     "level": 72,
                     "moves": [
                         "flamethrower",
@@ -47367,7 +47317,7 @@
                     "name": "ampharos"
                 },
                 {
-                    "item": "Focus Band",
+                    "item": "Leftovers",
                     "level": 72,
                     "moves": [
                         "ancientpower",
@@ -47418,7 +47368,7 @@
                     "name": "meganium"
                 },
                 {
-                    "item": "Focus Band",
+                    "item": "Leftovers",
                     "level": 72,
                     "moves": [
                         "flamethrower",
@@ -47453,7 +47403,7 @@
                     "name": "ampharos"
                 },
                 {
-                    "item": "Focus Band",
+                    "item": "Leftovers",
                     "level": 72,
                     "moves": [
                         "ancientpower",
@@ -47504,7 +47454,7 @@
                     "name": "meganium"
                 },
                 {
-                    "item": "Focus Band",
+                    "item": "Leftovers",
                     "level": 72,
                     "moves": [
                         "flamethrower",
@@ -48004,7 +47954,7 @@
             "team": [
                 {
                     "item": "Quick Claw",
-                    "level": 74,
+                    "level": 73,
                     "moves": [
                         "submission",
                         "earthquake",
@@ -48026,7 +47976,7 @@
                 },
                 {
                     "item": "Focus Band",
-                    "level": 74,
+                    "level": 72,
                     "moves": [
                         "metal-claw",
                         "submission",
@@ -48065,7 +48015,7 @@
                     "moves": [
                         "thunderbolt",
                         "hp-grass",
-                        "crunch",
+                        "bite",
                         "shadow-ball"
                     ],
                     "name": "jolteon"
@@ -48213,7 +48163,7 @@
             "team": [
                 {
                     "item": "Focus Band",
-                    "level": 76,
+                    "level": 73,
                     "moves": [
                         "lovely-kiss",
                         "double-edge",
@@ -48290,7 +48240,7 @@
                         "spe": 15
                     },
                     "item": "Miracleberry",
-                    "level": 75,
+                    "level": 74,
                     "moves": [
                         "thunderbolt",
                         "hp-grass",
@@ -48356,7 +48306,7 @@
                 },
                 {
                     "item": "Leftovers",
-                    "level": 75,
+                    "level": 73,
                     "moves": [
                         "explosion",
                         "sludge-bomb",
@@ -48432,7 +48382,7 @@
                         "spe": 15
                     },
                     "item": "Focus Band",
-                    "level": 76,
+                    "level": 74,
                     "moves": [
                         "lovely-kiss",
                         "ice-beam",
@@ -48590,7 +48540,7 @@
                         "spe": 15
                     },
                     "item": "Quick Claw",
-                    "level": 76,
+                    "level": 74,
                     "moves": [
                         "earthquake",
                         "ancientpower",
@@ -48636,7 +48586,7 @@
             "team": [
                 {
                     "item": "Quick Claw",
-                    "level": 76,
+                    "level": 74,
                     "moves": [
                         "double-edge",
                         "metal-claw",
@@ -48666,7 +48616,7 @@
                 },
                 {
                     "item": "Quick Claw",
-                    "level": 76,
+                    "level": 74,
                     "moves": [
                         "megahorn",
                         "submission",
@@ -48683,7 +48633,7 @@
             "team": [
                 {
                     "item": "Focus Band",
-                    "level": 76,
+                    "level": 74,
                     "moves": [
                         "shadow-ball",
                         "psychic-m",
@@ -48877,7 +48827,7 @@
                         "spe": 15
                     },
                     "item": "Focus Band",
-                    "level": 78,
+                    "level": 77,
                     "moves": [
                         "sky-attack",
                         "double-edge",
@@ -49022,7 +48972,7 @@
                 },
                 {
                     "item": "Quick Claw",
-                    "level": 79,
+                    "level": 77,
                     "moves": [
                         "earthquake",
                         "double-edge",
@@ -49173,7 +49123,7 @@
             "team": [
                 {
                     "item": "Quick Claw",
-                    "level": 77,
+                    "level": 76,
                     "moves": [
                         "explosion",
                         "earthquake",
@@ -49184,7 +49134,7 @@
                 },
                 {
                     "item": "Quick Claw",
-                    "level": 77,
+                    "level": 76,
                     "moves": [
                         "explosion",
                         "earthquake",
@@ -49195,7 +49145,7 @@
                 },
                 {
                     "item": "Quick Claw",
-                    "level": 77,
+                    "level": 76,
                     "moves": [
                         "explosion",
                         "sludge-bomb",
@@ -49262,7 +49212,7 @@
             "team": [
                 {
                     "item": "Quick Claw",
-                    "level": 78,
+                    "level": 77,
                     "moves": [
                         "sludge-bomb",
                         "spikes",
@@ -49273,7 +49223,7 @@
                 },
                 {
                     "item": "Quick Claw",
-                    "level": 78,
+                    "level": 77,
                     "moves": [
                         "waterfall",
                         "ice-beam",
@@ -49284,7 +49234,7 @@
                 },
                 {
                     "item": "Mystic Water",
-                    "level": 80,
+                    "level": 77,
                     "moves": [
                         "waterfall",
                         "psychic-m",
@@ -49295,7 +49245,7 @@
                 },
                 {
                     "item": "Quick Claw",
-                    "level": 83,
+                    "level": 82,
                     "moves": [
                         "megahorn",
                         "double-edge",
@@ -49318,7 +49268,7 @@
                         "thunderbolt",
                         "blizzard"
                     ],
-                    "name": "tentacool"
+                    "name": "tentacruel"
                 },
                 {
                     "item": "Miracleberry",
@@ -49344,7 +49294,7 @@
                 },
                 {
                     "item": "Quick Claw",
-                    "level": 80,
+                    "level": 79,
                     "moves": [
                         "fire-blast",
                         "octazooka",
@@ -49361,7 +49311,7 @@
             "team": [
                 {
                     "item": "Focus Band",
-                    "level": 81,
+                    "level": 80,
                     "moves": [
                         "earthquake",
                         "wing-attack",
@@ -49372,7 +49322,7 @@
                 },
                 {
                     "item": "Focus Band",
-                    "level": 81,
+                    "level": 80,
                     "moves": [
                         "swords-dance",
                         "sky-attack",
@@ -49383,7 +49333,7 @@
                 },
                 {
                     "item": "Focus Band",
-                    "level": 81,
+                    "level": 80,
                     "moves": [
                         "waterfall",
                         "ice-beam",
@@ -49394,7 +49344,7 @@
                 },
                 {
                     "item": "Focus Band",
-                    "level": 81,
+                    "level": 80,
                     "moves": [
                         "fire-blast",
                         "earthquake",
@@ -49479,11 +49429,11 @@
                     "level": 81,
                     "moves": [
                         "flamethrower",
-                        "earthquake",
-                        "thunderpunch",
+                        "extremespeed",
+                        "morning-sun",
                         "crunch"
                     ],
-                    "name": "charizard"
+                    "name": "arcanine"
                 },
                 {
                     "dvs": {
@@ -49495,7 +49445,7 @@
                         "spe": 15
                     },
                     "item": "Focus Band",
-                    "level": 81,
+                    "level": 80,
                     "moves": [
                         "sleep-powder",
                         "petal-dance",
@@ -49560,7 +49510,7 @@
                         "spe": 15
                     },
                     "item": "Brightpowder",
-                    "level": 81,
+                    "level": 80,
                     "moves": [
                         "waterfall",
                         "ice-beam",
@@ -49666,7 +49616,7 @@
                         "spe": 15
                     },
                     "item": "Quick Claw",
-                    "level": 82,
+                    "level": 80,
                     "moves": [
                         "earthquake",
                         "rock-slide",
@@ -49891,7 +49841,7 @@
                         "spe": 15
                     },
                     "item": "Focus Band",
-                    "level": 83,
+                    "level": 82,
                     "moves": [
                         "flamethrower",
                         "ancientpower",
@@ -49902,7 +49852,7 @@
                 },
                 {
                     "item": "Brightpowder",
-                    "level": 83,
+                    "level": 82,
                     "moves": [
                         "waterfall",
                         "ice-beam",
@@ -49921,7 +49871,7 @@
                         "spe": 15
                     },
                     "item": "Focus Band",
-                    "level": 83,
+                    "level": 82,
                     "moves": [
                         "thunderbolt",
                         "hp-grass",
@@ -49944,6 +49894,7 @@
             ]
         },
         {
+            "meta": "end of gauntlet",
             "name": "Teacher TEACHER (2) HILLARY",
             "team": [
                 {
@@ -50021,17 +49972,6 @@
         },
         {
             "meta": "Fuchsia city gym",
-            "name": "Picnicker PICNICKER (5) CINDY",
-            "team": [
-                {
-                    "item": "",
-                    "level": 1,
-                    "moves": [],
-                    "name": "celebi"
-                }
-            ]
-        },
-        {
             "name": "Janine JANINE (1) JANINE",
             "team": [
                 {
@@ -50111,17 +50051,6 @@
             ]
         },
         {
-            "name": "Camper CAMPER (5) BARRY",
-            "team": [
-                {
-                    "item": "",
-                    "level": 1,
-                    "moves": [],
-                    "name": "celebi"
-                }
-            ]
-        },
-        {
             "meta": "Route 17",
             "name": "Biker BIKER (8) JOEL",
             "team": [
@@ -50146,7 +50075,7 @@
                         "spe": 15
                     },
                     "item": "Berserk Gene",
-                    "level": 85,
+                    "level": 82,
                     "moves": [
                         "earthquake",
                         "rock-slide",
@@ -50259,7 +50188,7 @@
             "team": [
                 {
                     "item": "Focus Band",
-                    "level": 85,
+                    "level": 83,
                     "moves": [
                         "thunderbolt",
                         "ice-beam",
@@ -50278,7 +50207,7 @@
                         "spe": 15
                     },
                     "item": "Quick Claw",
-                    "level": 88,
+                    "level": 86,
                     "moves": [
                         "spore",
                         "leech-life",
@@ -50289,7 +50218,7 @@
                 },
                 {
                     "item": "Berserk Gene",
-                    "level": 85,
+                    "level": 83,
                     "moves": [
                         "hi-jump-kick",
                         "rock-slide",
@@ -50653,7 +50582,7 @@
             "team": [
                 {
                     "item": "Focus Band",
-                    "level": 85,
+                    "level": 84,
                     "moves": [
                         "hi-jump-kick",
                         "earthquake",
@@ -50929,7 +50858,7 @@
                 },
                 {
                     "item": "Quick Claw",
-                    "level": 86,
+                    "level": 85,
                     "moves": [
                         "sleep-powder",
                         "giga-drain",
@@ -50940,12 +50869,12 @@
                 },
                 {
                     "item": "Pink Bow",
-                    "level": 90,
+                    "level": 89,
                     "moves": [
                         "double-edge",
                         "submission",
                         "shadow-ball",
-                        "quick-attack"
+                        "extremespeed"
                     ],
                     "name": "furret"
                 }
@@ -50956,22 +50885,22 @@
             "team": [
                 {
                     "dvs": {
-                        "atk": 15,
-                        "def": 13,
-                        "hp": 15,
+                        "atk": 12,
+                        "def": 15,
+                        "hp": 7,
                         "spa": 15,
                         "spd": 15,
                         "spe": 15
                     },
-                    "item": "Miracleberry",
-                    "level": 86,
+                    "item": "Quick Claw",
+                    "level": 88,
                     "moves": [
-                        "thunderbolt",
-                        "fire-punch",
-                        "iron-tail",
-                        "hp-ice"
+                        "hydro-pump",
+                        "ice-beam",
+                        "sing",
+                        "hp-ground"
                     ],
-                    "name": "ampharos"
+                    "name": "azumarill"
                 },
                 {
                     "dvs": {
@@ -51004,42 +50933,6 @@
                     "name": "sandslash"
                 },
                 {
-                    "item": "Leftovers",
-                    "level": 87,
-                    "moves": [
-                        "thunder-wave",
-                        "thunderbolt",
-                        "waterfall",
-                        "ice-beam"
-                    ],
-                    "name": "lanturn"
-                }
-            ]
-        },
-        {
-            "meta": "(immediate)",
-            "name": "Camper CAMPER (8) SID",
-            "team": [
-                {
-                    "dvs": {
-                        "atk": 12,
-                        "def": 15,
-                        "hp": 7,
-                        "spa": 15,
-                        "spd": 15,
-                        "spe": 15
-                    },
-                    "item": "Quick Claw",
-                    "level": 90,
-                    "moves": [
-                        "hydro-pump",
-                        "ice-beam",
-                        "sing",
-                        "hp-ground"
-                    ],
-                    "name": "azumarill"
-                },
-                {
                     "item": "Miracleberry",
                     "level": 87,
                     "moves": [
@@ -51049,6 +50942,42 @@
                         "ancientpower"
                     ],
                     "name": "dunsparce"
+                }
+            ]
+        },
+        {
+            "meta": "(immediate)",
+            "name": "Camper CAMPER (8) SID",
+            "team": [
+                {
+                    "dvs": {
+                        "atk": 15,
+                        "def": 13,
+                        "hp": 15,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
+                    "item": "Miracleberry",
+                    "level": 86,
+                    "moves": [
+                        "thunderbolt",
+                        "fire-punch",
+                        "iron-tail",
+                        "hp-ice"
+                    ],
+                    "name": "ampharos"
+                },
+                {
+                    "item": "Leftovers",
+                    "level": 87,
+                    "moves": [
+                        "thunder-wave",
+                        "thunderbolt",
+                        "waterfall",
+                        "ice-beam"
+                    ],
+                    "name": "lanturn"
                 },
                 {
                     "dvs": {
@@ -51256,7 +51185,7 @@
                 },
                 {
                     "item": "Focus Band",
-                    "level": 87,
+                    "level": 86,
                     "moves": [
                         "endure",
                         "reversal",
@@ -51268,11 +51197,12 @@
             ]
         },
         {
+            "meta": "(immediate)",
             "name": "Psychic PSYCHIC_T (4) FIDEL",
             "team": [
                 {
                     "item": "Focus Band",
-                    "level": 87,
+                    "level": 86,
                     "moves": [
                         "reflect",
                         "light-screen",
@@ -51312,7 +51242,7 @@
                         "submission",
                         "thunder-wave"
                     ],
-                    "name": "jigglypuff"
+                    "name": "wigglytuff"
                 }
             ]
         },
@@ -51371,7 +51301,7 @@
             "team": [
                 {
                     "item": "Quick Claw",
-                    "level": 88,
+                    "level": 87,
                     "moves": [
                         "psychic-m",
                         "giga-drain",
@@ -51390,7 +51320,7 @@
                         "spe": 15
                     },
                     "item": "Brightpowder",
-                    "level": 88,
+                    "level": 87,
                     "moves": [
                         "psychic-m",
                         "light-screen",
@@ -51401,7 +51331,7 @@
                 },
                 {
                     "item": "Quick Claw",
-                    "level": 88,
+                    "level": 87,
                     "moves": [
                         "double-edge",
                         "rock-slide",
@@ -51412,7 +51342,7 @@
                 },
                 {
                     "item": "Focus Band",
-                    "level": 88,
+                    "level": 87,
                     "moves": [
                         "megahorn",
                         "rock-slide",
@@ -51431,7 +51361,7 @@
                         "spe": 15
                     },
                     "item": "Berserk Gene",
-                    "level": 88,
+                    "level": 86,
                     "moves": [
                         "megahorn",
                         "sludge-bomb",
@@ -51443,6 +51373,7 @@
             ]
         },
         {
+            "meta": "(immediate)",
             "name": "BugCatcher BUG_CATCHER (2) ROB",
             "team": [
                 {
@@ -51455,7 +51386,7 @@
                         "spe": 15
                     },
                     "item": "Quick Claw",
-                    "level": 88,
+                    "level": 86,
                     "moves": [
                         "metal-claw",
                         "submission",
@@ -51485,7 +51416,7 @@
                 },
                 {
                     "item": "Quick Claw",
-                    "level": 90,
+                    "level": 89,
                     "moves": [
                         "spore",
                         "leech-life",
@@ -51515,7 +51446,7 @@
                         "spe": 15
                     },
                     "item": "Berserk Gene",
-                    "level": 90,
+                    "level": 89,
                     "moves": [
                         "sky-attack",
                         "hp-fighting",
@@ -51559,7 +51490,7 @@
                         "spe": 15
                     },
                     "item": "Leftovers",
-                    "level": 87,
+                    "level": 88,
                     "moves": [
                         "flamethrower",
                         "hp-grass",
@@ -51766,7 +51697,7 @@
             "team": [
                 {
                     "item": "Quick Claw",
-                    "level": 89,
+                    "level": 88,
                     "moves": [
                         "waterfall",
                         "fire-blast",
@@ -51815,7 +51746,7 @@
                         "spe": 15
                     },
                     "item": "Focus Band",
-                    "level": 89,
+                    "level": 87,
                     "moves": [
                         "thunderbolt",
                         "hp-grass",
@@ -52145,7 +52076,7 @@
                         "spe": 15
                     },
                     "item": "Focus Band",
-                    "level": 91,
+                    "level": 90,
                     "moves": [
                         "sky-attack",
                         "petal-dance",
@@ -52167,7 +52098,7 @@
                 },
                 {
                     "item": "Quick Claw",
-                    "level": 91,
+                    "level": 90,
                     "moves": [
                         "earthquake",
                         "ancientpower",
@@ -52273,6 +52204,7 @@
             ]
         },
         {
+            "meta": "(immediate)",
             "name": "Lass LASS (11) ELLEN",
             "team": [
                 {
@@ -52298,7 +52230,7 @@
                     "name": "seaking"
                 },
                 {
-                    "item": "Quick Claw",
+                    "item": "Sharp Beak",
                     "level": 91,
                     "moves": [
                         "sky-attack",
@@ -52334,7 +52266,7 @@
                         "spe": 15
                     },
                     "item": "Quick Claw",
-                    "level": 91,
+                    "level": 90,
                     "moves": [
                         "giga-drain",
                         "ancientpower",
@@ -52356,7 +52288,7 @@
                 },
                 {
                     "item": "Quick Claw",
-                    "level": 89,
+                    "level": 88,
                     "moves": [
                         "iron-tail",
                         "rock-slide",
@@ -52413,7 +52345,7 @@
                         "spe": 15
                     },
                     "item": "Quick Claw",
-                    "level": 91,
+                    "level": 90,
                     "moves": [
                         "petal-dance",
                         "sleep-powder",
@@ -52430,7 +52362,7 @@
             "team": [
                 {
                     "item": "Quick Claw",
-                    "level": 91,
+                    "level": 89,
                     "moves": [
                         "double-edge",
                         "earthquake",
@@ -52497,7 +52429,7 @@
                 },
                 {
                     "item": "Quick Claw",
-                    "level": 94,
+                    "level": 91,
                     "moves": [
                         "spore",
                         "giga-drain",
@@ -52632,7 +52564,7 @@
             "team": [
                 {
                     "item": "Quick Claw",
-                    "level": 92,
+                    "level": 90,
                     "moves": [
                         "explosion",
                         "waterfall",
@@ -52643,7 +52575,7 @@
                 },
                 {
                     "item": "Quick Claw",
-                    "level": 92,
+                    "level": 91,
                     "moves": [
                         "earthquake",
                         "waterfall",
@@ -52654,7 +52586,7 @@
                 },
                 {
                     "item": "Quick Claw",
-                    "level": 92,
+                    "level": 91,
                     "moves": [
                         "recover",
                         "psychic-m",
@@ -52665,7 +52597,7 @@
                 },
                 {
                     "item": "Quick Claw",
-                    "level": 92,
+                    "level": 90,
                     "moves": [
                         "earthquake",
                         "rock-slide",
@@ -52676,7 +52608,7 @@
                 },
                 {
                     "item": "Leftovers",
-                    "level": 93,
+                    "level": 92,
                     "moves": [
                         "waterfall",
                         "thunderbolt",
@@ -52714,7 +52646,7 @@
                 },
                 {
                     "item": "Quick Claw",
-                    "level": 92,
+                    "level": 91,
                     "moves": [
                         "fire-blast",
                         "waterfall",
@@ -52753,7 +52685,7 @@
             "team": [
                 {
                     "item": "Focus Band",
-                    "level": 93,
+                    "level": 91,
                     "moves": [
                         "waterfall",
                         "ice-beam",
@@ -52943,6 +52875,7 @@
             ]
         },
         {
+            "meta": "(immediate)",
             "name": "CooltrainerF COOLTRAINERF (14) QUINN",
             "team": [
                 {
@@ -53008,7 +52941,7 @@
                 },
                 {
                     "item": "Quick Claw",
-                    "level": 94,
+                    "level": 93,
                     "moves": [
                         "sludge-bomb",
                         "earthquake",
@@ -53050,11 +52983,12 @@
             ]
         },
         {
+            "meta": "(immediate)",
             "name": "SwimmerM SWIMMERM (18) SETH",
             "team": [
                 {
                     "item": "Focus Band",
-                    "level": 94,
+                    "level": 93,
                     "moves": [
                         "earthquake",
                         "waterfall",
@@ -53198,7 +53132,7 @@
             "team": [
                 {
                     "item": "Quick Claw",
-                    "level": 95,
+                    "level": 93,
                     "moves": [
                         "hydro-pump",
                         "fire-blast",
@@ -53239,7 +53173,7 @@
                 },
                 {
                     "item": "Brightpowder",
-                    "level": 95,
+                    "level": 93,
                     "moves": [
                         "giga-drain",
                         "psychic-m",
@@ -53304,7 +53238,7 @@
                         "spe": 15
                     },
                     "item": "Quick Claw",
-                    "level": 95,
+                    "level": 93,
                     "moves": [
                         "sludge-bomb",
                         "hp-fire",
@@ -53354,7 +53288,7 @@
                 },
                 {
                     "item": "Focus Band",
-                    "level": 94,
+                    "level": 92,
                     "moves": [
                         "waterfall",
                         "ice-beam",
@@ -53635,7 +53569,7 @@
             "name": "Will WILL (2) WILL",
             "team": [
                 {
-                    "item": "Leftovers",
+                    "item": "Mystic Water",
                     "level": 100,
                     "moves": [
                         "hydro-pump",
@@ -53716,8 +53650,8 @@
                 {
                     "dvs": {
                         "atk": 14,
-                        "def": 14,
-                        "hp": 3,
+                        "def": 13,
+                        "hp": 7,
                         "spa": 15,
                         "spd": 15,
                         "spe": 15
@@ -53727,7 +53661,7 @@
                     "moves": [
                         "thunderbolt",
                         "crunch",
-                        "hp-grass",
+                        "hp-water",
                         "reflect"
                     ],
                     "name": "raikou"
@@ -53945,7 +53879,7 @@
                     "item": "Metal Coat",
                     "level": 100,
                     "moves": [
-                        "beat-up",
+                        "shadow-ball",
                         "metal-claw",
                         "surf",
                         "ice-beam"
@@ -56379,6 +56313,32 @@
                         "tackle"
                     ],
                     "name": "xatu"
+                }
+            ]
+        },
+        {
+            "name": "Picnicker PICNICKER (5) CINDY",
+            "team": [
+                {
+                    "item": "",
+                    "level": 1,
+                    "moves": [
+                        "tackle"
+                    ],
+                    "name": "celebi"
+                }
+            ]
+        },
+        {
+            "name": "Camper CAMPER (5) BARRY",
+            "team": [
+                {
+                    "item": "",
+                    "level": 1,
+                    "moves": [
+                        "tackle"
+                    ],
+                    "name": "celebi"
                 }
             ]
         }
