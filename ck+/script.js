@@ -1586,7 +1586,7 @@ function readFile(file) {
 	var reader = new FileReader();
 	reader.onload = function (e) {
 		var bytes = new Uint8Array(e.target.result);
-		if (bytes.length > 32000 && bytes[0x2000] == 65 && bytes[0x2d0f] == 127) {
+		if (bytes.length > 32000 && bytes[0x2008] == 99 && bytes[0x2d0f] == 127) {
 			pokemon = [];
 			deadPokemon = [];
 			pokemon = pokemon.concat(readPokemonList(bytes, 0x2865, 6, 48));
