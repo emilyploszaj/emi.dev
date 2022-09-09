@@ -338,7 +338,8 @@ function displayCalcPokemon(root, poke, opponent, right) {
 	root.getElementsByClassName("poke-name")[0].innerHTML = pokeLink(p);
 	root.getElementsByClassName("poke-level")[0].innerHTML = "Lvl " + poke.level;
 	root.getElementsByClassName("poke-item")[0].innerHTML = fullCapitalize(poke.item);
-	root.getElementsByClassName("poke-icon")[0].innerHTML = '<img src="https://img.pokemondb.net/sprites/crystal/normal/' + p.name + '.png">';
+	var shiny = isShiny(poke) ? "shiny" : "normal";
+	root.getElementsByClassName("poke-icon")[0].innerHTML = '<img src="https://img.pokemondb.net/sprites/crystal/' + shiny + '/' + p.name + '.png">';
 	if (right && root.getElementsByClassName("experience").length > 0) {
 		var exp = p.base_experience;
 		exp = parseInt(exp * 1.5); // Trainer
@@ -492,7 +493,8 @@ function displayCalcStat(div, poke, stat, player = false) {
 function getTinyPokemonDisplay(tp, extra = "") {
 	var p = pokemonByName.get(tp.name);
 	var v = '<div class="tiny-poke">';
-	v += '<div class="tiny-poke-icon"><img src="https://img.pokemondb.net/sprites/crystal/normal/' + p.name + '.png"></div>';
+	var shiny = isShiny(tp) ? "shiny" : "normal";
+	v += '<div class="tiny-poke-icon"><img src="https://img.pokemondb.net/sprites/crystal/' + shiny + '/' + p.name + '.png"></div>';
 	v += '<div class="tiny-poke-info">';
 	v += '<div>' + pokeLink(p.name) + ' - Lvl ' + tp.level + ' @ ' + fullCapitalize(tp.item) + '</div>';
 	v += "<table><tr>";
@@ -1257,16 +1259,22 @@ function updateCalc() {
 	displayCalcPokemon(document.getElementById("opponent"), theirPoke, myPoke, true);
 	var v = "";
 	for (var i = 0; i < box.length && i < box.length; i++) {
-		var img = '<img src="https://img.pokemondb.net/sprites/crystal/normal/' + box[i].name + '.png">';
+		var shiny = isShiny(box[i]) ? "shiny" : "normal";
+		var img = '<img src="https://img.pokemondb.net/sprites/crystal/' + shiny + '/' + box[i].name + '.png">';
 		v += '<div onclick="setPlayer(' + i + ')">' + img + "</div>";
 	}
 	document.getElementById("player").getElementsByClassName("calc-team")[0].innerHTML = v;
 	var v = "";
 	for (let i in enemyTeam) {
-		var img = '<img src="https://img.pokemondb.net/sprites/crystal/normal/' + enemyTeam[i].name + '.png">';
+		var shiny = isShiny(enemyTeam[i]) ? "shiny" : "normal";
+		var img = '<img src="https://img.pokemondb.net/sprites/crystal/' + shiny + '/' + enemyTeam[i].name + '.png">';
 		v += '<div onclick="setEnemy(' + i + ')">' + img + "</div>";
 	}
 	document.getElementById("opponent").getElementsByClassName("calc-team")[0].innerHTML = v;
+}
+
+function isShiny(poke) {
+	return getDv(poke, "def") == 10 && getDv(poke, "spa") == 10 && getDv(poke, "spe") == 10 && ((getDv(poke, "atk") & 2) == 2)
 }
 
 function getDv(poke, stat) {
