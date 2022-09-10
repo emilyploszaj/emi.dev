@@ -356,9 +356,15 @@ function displayCalcPokemon(root, poke, opponent, right) {
 	displayCalcStat(root.getElementsByClassName("calc-spa")[0], poke, "spa");
 	displayCalcStat(root.getElementsByClassName("calc-spd")[0], poke, "spd");
 	displayCalcStat(root.getElementsByClassName("calc-spe")[0], poke, "spe", player);
+	var myStages = "player-stages";
+	var theirStages = "enemy-stages";
+	if (!player) {
+		myStages = "enemy-stages";
+		theirStages = "player-stages";
+	}
 	if (opponent) {
-		var mySpe = getPokeStat(poke, "spe");
-		var theirSpe = getPokeStat(opponent, "spe");
+		var mySpe = getModifiedStat(poke, getStages(myStages), "spe");
+		var theirSpe = getModifiedStat(opponent, getStages(theirStages), "spe");
 		if (badges >= speedBadges) {
 			if (player) {
 				mySpe = parseInt(mySpe * 1.125);
@@ -383,12 +389,6 @@ function displayCalcPokemon(root, poke, opponent, right) {
 	var hp = 10;
 	if (opponent) {
 		hp = getPokeStat(opponent, "hp");
-	}
-	var myStages = "player-stages";
-	var theirStages = "enemy-stages";
-	if (!player) {
-		myStages = "enemy-stages";
-		theirStages = "player-stages";
 	}
 	var moves = '<table class="move-calcs">';
 	for (var i = 0; i < 4; i++) {
@@ -988,8 +988,8 @@ function getDamage(attacker, defender, attackerStages, defenderStages, move, pla
 	if (crit) {
 		if (defenderStages[defenseStat] >= attackerStages[attackStat]) {
 			a = getPokeStat(attacker, attackStat);
+			d = getPokeStat(defender, defenseStat);
 		}
-		d = getPokeStat(defender, defenseStat);
 	}
 	if (move.name == "explosion" || move.name == "selfdestruct") {
 		d = Math.max(1, parseInt(d / 2));
