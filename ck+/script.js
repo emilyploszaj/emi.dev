@@ -349,25 +349,29 @@ function displayCalcPokemon(root, poke, opponent, right) {
 		exp = parseInt(exp / 7);
 		root.getElementsByClassName("experience")[0].innerHTML = " (" + exp + " exp)";
 	}
-	var status = root.getElementsByClassName("status-select")[0].value;
-	var enemyStatus = document.getElementById("opponent").getElementsByClassName("status-select")[0].value;
-	if (!player) {
-		enemyStatus = document.getElementById("player").getElementsByClassName("status-select")[0].value;
-	}
-	var myHp = getPokeStat(poke, "hp");
-	if (status == "brn" || status == "psn") {
-		var dealt = Math.max(1, parseInt(myHp / 8));
-		root.getElementsByClassName("status-info")[0].innerHTML = dealt + "/t";
-	} else if (status == "tox") {
-		var inner = "<h1>Toxic Damage</h1>"
-		var base = parseInt(myHp / 16);
-		for (var i = 1; i <= 20; i++) {
-			inner += '<p>Turn ' + i + ': ' + Math.max(1, base * i) + ' HP</p>';
+	var status = "none";
+	var enemyStatus = "none";
+	if (root.getElementsByClassName("status-select")[0]) {
+		status = root.getElementsByClassName("status-select")[0].value;
+		enemyStatus = document.getElementById("opponent").getElementsByClassName("status-select")[0].value;
+		if (!player) {
+			enemyStatus = document.getElementById("player").getElementsByClassName("status-select")[0].value;
 		}
-		root.getElementsByClassName("status-info")[0].innerHTML = '<span>' + base + 'n/t<div class="rolls"><center>' + inner + '</center></div></span>';
-	} else {
-		root.getElementsByClassName("status-info")[0].innerHTML = "";
-	}
+		var myHp = getPokeStat(poke, "hp");
+		if (status == "brn" || status == "psn") {
+			var dealt = Math.max(1, parseInt(myHp / 8));
+			root.getElementsByClassName("status-info")[0].innerHTML = dealt + "/t";
+		} else if (status == "tox") {
+			var inner = "<h1>Toxic Damage</h1>"
+			var base = parseInt(myHp / 16);
+			for (var i = 1; i <= 20; i++) {
+				inner += '<p>Turn ' + i + ': ' + Math.max(1, base * i) + ' HP</p>';
+			}
+			root.getElementsByClassName("status-info")[0].innerHTML = '<span>' + base + 'n/t<div class="rolls"><center>' + inner + '</center></div></span>';
+		} else {
+			root.getElementsByClassName("status-info")[0].innerHTML = "";
+		}
+	}	
 
 	displayCalcStat(root.getElementsByClassName("calc-hp")[0], poke, "hp");
 	displayCalcStat(root.getElementsByClassName("calc-atk")[0], poke, "atk");
