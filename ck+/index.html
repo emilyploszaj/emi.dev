@@ -98,12 +98,25 @@
 					<div class="poke-icon"></div>
 					<div>
 						<div class="calc-stats">
+							<span style="padding-left:15px;">
+								Status
+								<select class="status-select" onchange="updateCalc()">
+									<option value="none">-</option>
+									<option value="brn">Brn</option>
+									<option value="prz">Prz</option>
+									<option value="psn">Psn</option>
+									<option value="tox">Tox</option>
+									<option value="frz">Frz</option>
+									<option value="slp">Slp</option>
+								</select>
+								<span class="status-info"></span>
+							</span>
 							<table>
 								<tr class="calc-hp"><td>HP</td><td><div class="stat-num"></div></td><td><button onclick="clearPlayerStages()">Clear</button></td></tr>
 								<tr class="calc-atk"><td>Atk</td><td><div class="stat-num"></div></td><td><input class="player-stages" type="number" value="0" min="-6" max="6" oninput="updateCalc()"></td></tr>
-								<tr class="calc-def"><td>Def</td><td><div class="stat-num"></div></td><td><input class="player-stages" type="number" value="0" min="-6" max="6" oninput="updateCalc()"></td></tr>
+								<tr class="calc-def"><td>Def</td><td><div class="stat-num"></div></td><td><input class="player-stages" type="number" value="0" min="-6" max="6" oninput="updateCalc()"></td><td><input id="player-reflect" type="checkbox" oninput="updateCalc()"><label for="player-reflect" class="fake-checkbox" title="Reflect"></label></td></tr>
 								<tr class="calc-spa"><td>SpA</td><td><div class="stat-num"></div></td><td><input class="player-stages" type="number" value="0" min="-6" max="6" oninput="updateCalc()"></td></tr>
-								<tr class="calc-spd"><td>SpD</td><td><div class="stat-num"></div></td><td><input class="player-stages" type="number" value="0" min="-6" max="6" oninput="updateCalc()"></td></tr>
+								<tr class="calc-spd"><td>SpD</td><td><div class="stat-num"></div></td><td><input class="player-stages" type="number" value="0" min="-6" max="6" oninput="updateCalc()"></td><td><input id="player-light-screen" type="checkbox" oninput="updateCalc()"><label for="player-light-screen" class="fake-checkbox" title="Light Screen"></label></td></tr>
 								<tr class="calc-spe"><td>Spe</td><td><div class="stat-num"></div></td><td><input class="player-stages" type="number" value="0" min="-6" max="6" oninput="updateCalc()"></td><td><div class="speed-indicator"></div></td></tr>
 							</table>
 						</div>
@@ -128,12 +141,25 @@
 				<div style="display:flex;float:right;">
 					<div>
 						<div class="calc-stats">
+							<span style="padding-right:15px;float:right;">
+								<span class="status-info"></span>
+								<select class="status-select" onchange="updateCalc()">
+									<option value="none">-</option>
+									<option value="brn">Brn</option>
+									<option value="prz">Prz</option>
+									<option value="psn">Psn</option>
+									<option value="tox">Tox</option>
+									<option value="frz">Frz</option>
+									<option value="slp">Slp</option>
+								</select>
+								Status
+							</span>
 							<table>
 								<tr class="calc-hp"><td></td><td><button onclick="clearEnemyStages()">Clear</button></td><td><div class="stat-num"></div></td><td>HP</td></tr>
 								<tr class="calc-atk"><td></td><td><input class="enemy-stages" type="number" value="0" min="-6" max="6" oninput="updateCalc()"></td><td><div class="stat-num"></div></td><td>Atk</td></tr>
-								<tr class="calc-def"><td></td><td><input class="enemy-stages" type="number" value="0" min="-6" max="6" oninput="updateCalc()"></td><td><div class="stat-num"></div></td><td>Def</td></tr>
+								<tr class="calc-def"><td><input id="enemy-reflect" type="checkbox" oninput="updateCalc()"><label for="enemy-reflect" class="fake-checkbox" title="Reflect"></label></td><td><input class="enemy-stages" type="number" value="0" min="-6" max="6" oninput="updateCalc()"></td><td><div class="stat-num"></div></td><td>Def</td></tr>
 								<tr class="calc-spa"><td></td><td><input class="enemy-stages" type="number" value="0" min="-6" max="6" oninput="updateCalc()"></td><td><div class="stat-num"></div></td><td>SpA</td></tr>
-								<tr class="calc-spd"><td></td><td><input class="enemy-stages" type="number" value="0" min="-6" max="6" oninput="updateCalc()"></td><td><div class="stat-num"></div></td><td>SpD</td></tr>
+								<tr class="calc-spd"><td><input id="enemy-light-screen" type="checkbox" oninput="updateCalc()"><label for="enemy-light-screen" class="fake-checkbox" title="Light Screen"></label></td><td><input class="enemy-stages" type="number" value="0" min="-6" max="6" oninput="updateCalc()"></td><td><div class="stat-num"></div></td><td>SpD</td></tr>
 								<tr class="calc-spe"><td><div class="speed-indicator"></div></td><td><input class="enemy-stages" type="number" value="0" min="-6" max="6" oninput="updateCalc()"></td><td><div class="stat-num"></div></td><td>Spe</td></tr>
 							</table>
 						</div>

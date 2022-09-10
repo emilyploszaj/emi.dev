@@ -349,6 +349,25 @@ function displayCalcPokemon(root, poke, opponent, right) {
 		exp = parseInt(exp / 7);
 		root.getElementsByClassName("experience")[0].innerHTML = " (" + exp + " exp)";
 	}
+	var status = root.getElementsByClassName("status-select")[0].value;
+	var enemyStatus = document.getElementById("opponent").getElementsByClassName("status-select")[0].value;
+	if (!player) {
+		enemyStatus = document.getElementById("player").getElementsByClassName("status-select")[0].value;
+	}
+	var myHp = getPokeStat(poke, "hp");
+	if (status == "brn" || status == "psn") {
+		var dealt = Math.max(1, parseInt(myHp / 8));
+		root.getElementsByClassName("status-info")[0].innerHTML = dealt + "/t";
+	} else if (status == "tox") {
+		var inner = "<h1>Toxic Damage</h1>"
+		var base = parseInt(myHp / 16);
+		for (var i = 1; i <= 20; i++) {
+			inner += '<p>Turn ' + i + ': ' + Math.max(1, base * i) + ' HP</p>';
+		}
+		root.getElementsByClassName("status-info")[0].innerHTML = '<span>' + base + 'n/t<div class="rolls"><center>' + inner + '</center></div></span>';
+	} else {
+		root.getElementsByClassName("status-info")[0].innerHTML = "";
+	}
 
 	displayCalcStat(root.getElementsByClassName("calc-hp")[0], poke, "hp");
 	displayCalcStat(root.getElementsByClassName("calc-atk")[0], poke, "atk");
@@ -372,12 +391,18 @@ function displayCalcPokemon(root, poke, opponent, right) {
 				theirSpe = parseInt(theirSpe * 1.125);
 			}
 		}
+		if (status == "prz") {
+			mySpe = parseInt(mySpe / 4);
+		}
+		if (enemyStatus == "prz") {
+			theirSpe = parseInt(theirSpe / 4);
+		}
 		if (mySpe > theirSpe) {
 			root.getElementsByClassName("speed-indicator")[0].innerHTML = '<div class="speed-faster">&laquo;</div>';
 		} else if (mySpe == theirSpe) {
 			root.getElementsByClassName("speed-indicator")[0].innerHTML = '<div class="speed-tied">-</div>';
 		} else {
-			root.getElementsByClassName("speed-indicator")[0].innerHTML = '<div class="speed-slower">&raquo;</div>';
+			root.getElementsByClassName("speed-indicator")[0].innerHTML = '<div class="speed-slower">&laquo;</div>';
 		}
 	}
 	var types = '<div style="display:flex">' + prettyType(p.types[0]);
@@ -985,20 +1010,33 @@ function getDamage(attacker, defender, attackerStages, defenderStages, move, pla
 
 	var a = getModifiedStat(attacker, attackerStages, attackStat);
 	var d = getModifiedStat(defender, defenderStages, defenseStat);
+	var ignoreBoosts = false;
 	if (crit) {
 		if (defenderStages[defenseStat] >= attackerStages[attackStat]) {
 			a = getPokeStat(attacker, attackStat);
 			d = getPokeStat(defender, defenseStat);
+			ignoreBoosts = true;
 		}
 	}
 	if (move.name == "explosion" || move.name == "selfdestruct") {
 		d = Math.max(1, parseInt(d / 2));
 	}
 
-	// TODO burn?
+	var burn = false;
+	if (!special) {
+		if (player && document.getElementById("player").getElementsByClassName("status-select")[0].value == "brn") {
+			burn = true;
+		} else if (!player && document.getElementById("opponent").getElementsByClassName("status-select")[0].value == "brn") {
+			burn = true;
+		}
+	}
+
+	if (burn) {
+		a = (parseInt(a / 2));
+	}
 
 	// Badge boost
-	if (!crit || defenderStages[defenseStat] < attackerStages[attackStat]) {
+	if (!ignoreBoosts) {
 		if (player && !special && badges >= attackBadges) {
 			a = parseInt(a * 1.125);
 		}
@@ -1013,7 +1051,22 @@ function getDamage(attacker, defender, attackerStages, defenderStages, move, pla
 		}
 	}
 
-	// screens
+	if (!ignoreBoosts) {
+		if (player) {
+			if (!special && document.getElementById("enemy-reflect").checked) {
+				d *= 2;
+			} else if (special && document.getElementById("enemy-light-screen").checked) {
+				d *= 2;
+			}
+		} else {
+			if (!special && document.getElementById("player-reflect").checked) {
+				d *= 2;
+			} else if (special && document.getElementById("player-light-screen").checked) {
+				d *= 2;
+			}
+		}
+	}
+
 	var ni = attacker.item.toLowerCase().replace(/ /g, "-");
 	var ndi = defender.item.toLowerCase().replace(/ /g, "-");
 
@@ -1426,6 +1479,7 @@ function assignStage(stages, s, v) {
 }
 
 function clearPlayerStages() {
+	document.getElementById("player").getElementsByClassName("status-select")[0].value = "none";
 	var inputs = document.getElementsByClassName("player-stages");
 	for (var i = 0; i < inputs.length; i++) {
 		inputs[i].value = "0";
@@ -1434,6 +1488,7 @@ function clearPlayerStages() {
 }
 
 function clearEnemyStages() {
+	document.getElementById("opponent").getElementsByClassName("status-select")[0].value = "none";
 	var inputs = document.getElementsByClassName("enemy-stages");
 	for (var i = 0; i < inputs.length; i++) {
 		inputs[i].value = "0";

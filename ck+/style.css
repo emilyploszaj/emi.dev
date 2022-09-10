@@ -48,7 +48,7 @@ img {
 	display: block;
 }
 
-button {
+button, select {
 	padding: 2px;
 	font-family: "Ubuntu Mono";
 	font-size: 16px;
@@ -59,8 +59,8 @@ button {
 	cursor: pointer;
 }
 
-button:hover {
-	color: var(--highlighted);
+button:hover, select:hover {
+	color: var(--highlighted) !important;
 }
 
 #tab-selection {
@@ -80,6 +80,7 @@ input {
 	font-size: 20px;
 	color: var(--text);
 	background-color: var(--box-background);
+	border-width: 2px;
 	border-style: solid;
 	border-color: var(--grouping-background);
 }
@@ -88,9 +89,24 @@ input[type=number] {
 	width:50px;
 }
 
-input[type=checkbox] {
-	width: 20px;
-	height: 20px;
+input[type="checkbox"] {
+	display: none;
+}
+
+.fake-checkbox {
+	display: inline-block;
+	width: 23px;
+	height: 23px;
+	background-color: var(--box-background);
+	border-width: 2px;
+	border-style: solid;
+	border-color: var(--grouping-background);
+	cursor: pointer;
+	margin-top: 3px;
+}
+
+input:checked + .fake-checkbox {
+	background-color: var(--highlighted);
 }
 
 .poke-link:hover {
@@ -119,6 +135,10 @@ input[type=checkbox] {
 	font-weight: 900;
 }
 
+#player .speed-indicator {
+	float: left;
+}
+
 .speed-faster {
     transform: rotate(90deg);
 	color: var(--speed-faster);
@@ -129,7 +149,7 @@ input[type=checkbox] {
 }
 
 .speed-slower {
-    transform: rotate(90deg);
+    transform: rotate(-90deg);
 	color: var(--speed-slower);
 }
 
@@ -255,6 +275,7 @@ input[type=checkbox] {
 	height: 224px;
 	min-width: 224px;
 	min-height: 224px;
+	margin-top: 10px;
 }
 
 .poke-stats table td {
@@ -302,7 +323,7 @@ input[type=checkbox] {
 	margin-top: 0px;
 }
 
-td:hover .rolls {
+*:hover > .rolls {
 	display: block;
 }
 
@@ -399,7 +420,6 @@ td:hover .rolls {
 
 .calc-stats table {
 	border-spacing: 5px;
-	padding: 10px;
 }
 
 .move-calcs {
