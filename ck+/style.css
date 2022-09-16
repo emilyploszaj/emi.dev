@@ -17,6 +17,9 @@
 	--speed-tied: #ecdf68;
 	--speed-slower: #d47070;
 
+	--high-switch-priority: var(--speed-faster);
+	--low-switch-priority: var(--speed-slower);
+
 	--highlighted: #49adff;
 	--dupe-background: #531414;
 
@@ -216,9 +219,13 @@ input:checked + .fake-checkbox {
 	display: none;
 }
 
-#full-encounter {
+#full-encounter, #full-move {
 	padding: 10px;
 	background-color: var(--box-background);
+}
+
+#full-move td {
+	padding: 0px 10px;
 }
 
 .encounter-poke {
@@ -237,6 +244,11 @@ input:checked + .fake-checkbox {
 	width: 112px;
 	height: 112px;
 	margin-right: 20px;
+}
+
+.learnset-pool {
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .encounter-pool {
@@ -276,6 +288,10 @@ input:checked + .fake-checkbox {
 	min-width: 224px;
 	min-height: 224px;
 	margin-top: 10px;
+}
+
+.poke-title {
+	height: 54px;
 }
 
 .poke-stats table td {
@@ -427,10 +443,18 @@ input:checked + .fake-checkbox {
 }
 
 .move-calcs td {
-	padding: 0px 10px;
+	padding: 0px 6px;
 	border-width: 3px;
 	border-style: dashed;
 	border-color: transparent;
+	height: 50px;
+	min-width: 140px;
+	max-width: 140px;
+}
+
+.rolls td {
+	min-width: 0px !important;
+	height: unset !important;
 }
 
 rt {
@@ -457,6 +481,20 @@ rt {
 
 .calc-team div {
 	background-color: var(--background);
-	padding: 8px;
+	padding: 5px;
 	margin: 2px;
+}
+
+.calc-team img {
+	border-width: 3px;
+	border-style: dashed;
+	border-color: transparent;
+}
+
+.low-switch-priority {
+	border-color: var(--low-switch-priority) !important;
+}
+
+.high-switch-priority {
+	border-color: var(--high-switch-priority) !important;
 }

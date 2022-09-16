@@ -34,7 +34,7 @@
 		<div id="edit" class="tab">
 			<div style="display:flex;justify-content:space-between;">
 				<div id="edited-poke">
-					<div>
+					<div class="poke-title">
 						<span class="poke-name"></span>
 						<span> - </span>
 						<span class="poke-level"></span>
@@ -86,13 +86,15 @@
 		</div>
 		<div id="calc" class="tab">
 			<div id="player">
-				<div>
-					<span class="poke-name"></span>
-					<span> @ </span>
-					<span class="poke-item"></span>
-				</div>
-				<div>
-					<span class="poke-level"></span>
+				<div class="poke-title">
+					<div>
+						<span class="poke-name"></span>
+						<span> @ </span>
+						<span class="poke-item"></span>
+					</div>
+					<div>
+						<span class="poke-level"></span> <button onclick="editCalc()">Edit</button>
+					</div>
 				</div>
 				<div style="display:flex;">
 					<div class="poke-icon"></div>
@@ -129,14 +131,16 @@
 				<div class="calc-team"></div>
 			</div>
 			<div id="opponent">
-				<div style="text-align:right;">
-					<span class="poke-item"></span>
-					<span> @ </span>
-					<span class="poke-name"></span>
-				</div>
-				<div style="text-align:right;">
-					<span class="poke-level"></span>
-					<span class="experience"></span>
+				<div class="poke-title">
+					<div style="text-align:right;">
+						<span class="poke-item"></span>
+						<span> @ </span>
+						<span class="poke-name"></span>
+					</div>
+					<div style="text-align:right;">
+						<span class="poke-level"></span>
+						<span class="experience"></span>
+					</div>
 				</div>
 				<div style="display:flex;float:right;">
 					<div>
@@ -175,6 +179,7 @@
 					<button onclick="navigateBattle(-1)">Previous Battle</button>
 					<button onclick="navigateBattle(1)">Next Battle</button>
 				</div>
+				<div id="current-trainer-name"></div>
 				<br style="clear:both;"/>
 			</div>
 		</div>
@@ -210,6 +215,8 @@
 			</div>
 		</div>
 		<div id="full-encounter" class="tab">
+		</div>
+		<div id="full-move" class="tab">
 		</div>
 	</body>
 	<script src="script.js"></script>

@@ -34,6 +34,8 @@ var encountersByName = new Map();
 var pokemonEncounters = new Map();
 var movesByName = new Map();
 var movesByIndex = new Map();
+var movesByLearnset = new Map();
+var movesByTMHM = new Map();
 var fishingPools = new Map();
 var headbuttPools = new Map();
 var rockPools = new Map();
@@ -46,6 +48,7 @@ var editing = -1;
 var copyEditedMoves = false;
 var badges = 0;
 var lastTrainer = 17;
+var editReturn;
 const attackBadges = 1;
 const defenseBadges = 7;
 const specialBadges = 6;
@@ -205,6 +208,20 @@ fetch("./data.json")
 				addToFamily(p, family);
 				family++;
 			}
+			for (var l = 0; l < p.learnset.length; l++) {
+				var m = p.learnset[l];
+				if (!movesByLearnset.has(m.move)) {
+					movesByLearnset.set(m.move, []);
+				}
+				movesByLearnset.get(m.move).push({pokemon: p.name, level: m.level})
+			}
+			for (var l = 0; l < p.tmhm.length; l++) {
+				var m = p.tmhm[l];
+				if (!movesByTMHM.has(m)) {
+					movesByTMHM.set(m, []);
+				}
+				movesByTMHM.get(m).push(p.name);
+			}
 		}
 		for (let i in j.moves) {
 			var m = j.moves[i];
@@ -212,6 +229,7 @@ fetch("./data.json")
 			if (m.index) {
 				movesByIndex.set(m.index, m);
 			}
+			searchResults.set(m.name.replace(/-/g, " "), 'focusMove(' + (m.index) + ')');
 		}
 		for (let i in j.type_matchups) {
 			var m = j.type_matchups[i];
@@ -247,6 +265,7 @@ fetch("./data.json")
 			if (lt >= 0 && lt < j.trainers.length) {
 				enemyTeam = j.trainers[lt].team;
 				lastTrainer = lt;
+				document.getElementById("current-trainer-name").innerHTML = j.trainers[lastTrainer].name;
 			}
 		}
 		data = j;
@@ -312,6 +331,13 @@ function focusEncounter(i) {
 	updateSearch("");
 	document.getElementById("full-encounter").innerHTML = getEncounterDisplay(data.encounters[i]);
 	setTab("full-encounter");
+}
+
+function focusMove(i) {
+	document.getElementById("search-box").value = "";
+	updateSearch("");
+	document.getElementById("full-move").innerHTML = getFullMoveDisplay(movesByIndex.get(i));
+	setTab("full-move");
 }
 
 function focusPokeByName(name) {
@@ -439,7 +465,10 @@ function displayCalcPokemon(root, poke, opponent, right) {
 				+ "<rt>" + minPercent + "% - " + maxPercent + "%</rt></ruby>"
 				+ prettyRolls(rolls) + "</td>";
 			if (max == 0) {
-				p2 = '<td>-<ruby><rt></rt></ruby></td>';
+				p2 = '<td>Status</td>';
+			}
+			if (opponent == undefined) {
+				p2 = "<td>-</td>";
 			}
 			var min = getDamage(poke, opponent, getStages(myStages), getStages(theirStages), movesByName.get(poke.moves[i]), player, true, true);
 			var max = getDamage(poke, opponent, getStages(myStages), getStages(theirStages), movesByName.get(poke.moves[i]), player, true, false);
@@ -457,7 +486,7 @@ function displayCalcPokemon(root, poke, opponent, right) {
 				+ "<rt>" + minPercent + "% - " + maxPercent + "%</rt></ruby>"
 				+ prettyRolls(rolls) + "</td>";
 			if (max == 0) {
-				p3 = '<td>-<ruby><rt>​</rt></ruby></td>';
+				p3 = '<td><ruby><rt>​</rt></ruby></td>';
 			}
 			moves += "<tr>";
 			if (right) {
@@ -467,7 +496,7 @@ function displayCalcPokemon(root, poke, opponent, right) {
 			}
 			moves += "</tr>";
 		} else {
-			moves += "<tr><td>-<ruby><rt>​</rt></ruby></td></tr>";
+			moves += "<tr><td><ruby>-<rt>​</rt></ruby></td><td><ruby>-<rt>​</rt></ruby></td><td><ruby>-<rt>​</rt></ruby></td></tr>";
 		}
 	}
 	moves += "</table>"
@@ -900,8 +929,56 @@ function prettyType(t) {
 	return '<div class="type" style="background-color:' + typeColors.get(t) + ';">' + fullCapitalize(t) + '</div>';
 }
 
+function moveLink(move) {
+	if (move.name) {
+		move = move.name;
+	}
+	var i = movesByName.get(move).index;
+	return '<span class="poke-link" onclick="focusMove(' + i + ')">' + fullCapitalize(move) + '</span>'
+}
+
 function getMoveName(move) {
+	if (nameFormatting.has(move)) {
+		return nameFormatting.get(move);
+	}
 	return fullCapitalize(move.replace(/-/g, " "));
+}
+
+function getFullMoveDisplay(move) {
+	var v = "<p>" + getMoveName(move.name) + ":</p>";
+	v += "<div><table>";
+	v += getMoveDisplay(move);
+	v += "</table></div>";
+	if (movesByLearnset.has(move.name)) {
+		var list = movesByLearnset.get(move.name);
+		v += "<p>By Learnset (" + list.length + "):</p>";
+		v += '<div class="learnset-pool">'
+		for (var i = 0; i < list.length; i++) {
+			v += '<div class="encounter-poke">';
+			v += " Lvl " + list[i].level;
+			v += '<img style="cursor:pointer;" onclick="focusPokeByName(\'' + list[i].pokemon
+				+ '\')" src="https://img.pokemondb.net/sprites/crystal/normal/' + list[i].pokemon + '.png">';
+			v += '</div>';
+		}
+		v += '</div>';
+	}
+	if (movesByTMHM.has(move.name)) {
+		var list = movesByTMHM.get(move.name);
+		v += "<p>By TMHM (" + list.length + "):</p>";
+		v += "<div>";
+		for (var i = 0; i < list.length; i++) {
+			v += '<div class="learnset-pool">'
+			for (var i = 0; i < list.length; i++) {
+				v += '<div class="encounter-poke">';
+				v += '<img style="cursor:pointer;" onclick="focusPokeByName(\'' + list[i]
+					+ '\')" src="https://img.pokemondb.net/sprites/crystal/normal/' + list[i] + '.png">';
+				v += '</div>';
+			}
+			v += '</div>';
+		}
+		v += '</div>';
+	}
+	return v;
 }
 
 function getMoveDisplay(move, level = undefined) {
@@ -910,14 +987,14 @@ function getMoveDisplay(move, level = undefined) {
 		v += '<td>' + level + '</td>';
 	}
 	v += '<td>' + prettyType(move.type) + '</td>';
-	v += '<td>' + getMoveName(move.name) + '</td>';
+	v += '<td>' + moveLink(move.name) + '</td>';
 	if (move.power == 0) {
 		v += '<td>-</td>';
 	} else {
 		v += '<td>' + move.power + '</td>';
 	}
-	v += '<td>' + move.accuracy + '</td>';
-	v += '<td>' + move.pp + '</td>';
+	v += '<td>' + move.accuracy + '%</td>';
+	v += '<td>' + move.pp + 'pp</td>';
 	if (move.extra && move.extra.length > 0) {
 		var alt = "Extra info from docs:"
 		for (var i = 0; i < move.extra.length; i++) {
@@ -972,6 +1049,34 @@ function getHiddenPower(poke) {
 	var ty = types[t];
 	var po = ((mSig("spa") + 2 * mSig("spe") + 4 * mSig("def") + 8 * mSig("atk")) * 5 + mod4("spa")) / 2 + 31;
 	return { type: ty, power: po };
+}
+
+function getSwitchPriority(enemy, player) {
+	var prio = 0;
+	if (hasSuperEffectiveMove(enemy, player))  {
+		prio++;
+	}
+	if (hasSuperEffectiveMove(player, enemy)) {
+		prio--;
+	}
+	return prio;
+}
+
+function hasSuperEffectiveMove(attacker, defender) {
+	var pp = pokemonByName.get(defender.name);
+	for (var i = 0; i < attacker.moves.length; i++) {
+		var move = movesByName.get(attacker.moves[i]);
+		var type = move.type;
+		var eff = 1;
+		eff *= getMatchup(type, pp.types[0]);
+		if (pp.types.length > 1) {
+			eff *= getMatchup(type, pp.types[1]);
+		}
+		if (eff > 1) {
+			return true;
+		}
+	}
+	return false;
 }
 
 function getDamage(attacker, defender, attackerStages, defenderStages, move, player, crit, low, giveAll = false) {
@@ -1326,7 +1431,14 @@ function updateCalc() {
 	var v = "";
 	for (let i in enemyTeam) {
 		var shiny = isShiny(enemyTeam[i]) ? "shiny" : "normal";
-		var img = '<img src="https://img.pokemondb.net/sprites/crystal/' + shiny + '/' + enemyTeam[i].name + '.png">';
+		var prio = getSwitchPriority(enemyTeam[i], myPoke);
+		var prioClass = "neutral-switch-priority";
+		if (prio < 0) {
+			prioClass = "low-switch-priority";
+		} else if (prio > 0) {
+			prioClass = "high-switch-priority";
+		}
+		var img = '<img class="' + prioClass + '" src="https://img.pokemondb.net/sprites/crystal/' + shiny + '/' + enemyTeam[i].name + '.png">';
 		v += '<div onclick="setEnemy(' + i + ')">' + img + "</div>";
 	}
 	document.getElementById("opponent").getElementsByClassName("calc-team")[0].innerHTML = v;
@@ -1405,12 +1517,14 @@ function calcTrainer(i) {
 	localStorage.setItem("last-trainer", i);
 	lastTrainer = i;
 	enemyTeam = data.trainers[i].team;
+	document.getElementById("current-trainer-name").innerHTML = data.trainers[i].name;
 	setEnemy(0);
 	setTab("calc");
 }
 
 function calcFromBox(i) {
-	setPlayer(i);
+	theirPoke = box[i];
+	updateCalc();
 	setTab("calc");
 }
 
@@ -1430,7 +1544,7 @@ function moveToBoxStart(i) {
 	}
 }
 
-function editBox(i) {
+function editBox(i, ret = "box") {
 	clearEdits();
 	editing = i;
 	var poke = box[i];
@@ -1447,6 +1561,15 @@ function editBox(i) {
 	document.getElementById("edit-spd").value = getDv(poke, "spd");
 	document.getElementById("edit-spe").value = getDv(poke, "spe");
 	setTab("edit");
+	editReturn = ret;
+}
+
+function editCalc() {
+	for (var i = 0; i < box.length; i++) {
+		if (myPoke === box[i]) {
+			editBox(i, "calc");
+		}
+	}
 }
 
 function saveEdited() {
@@ -1459,7 +1582,7 @@ function saveEdited() {
 		orig.moves = poke.moves;
 		orig.dvs = poke.dvs;
 		updateBox();
-		setTab("box");
+		setTab(editReturn);
 	}
 }
 
@@ -1674,7 +1797,7 @@ function readFile(file) {
 			}
 			updateBox();
 		} else {
-			console.log(bytes[0x2000]);
+			console.log(bytes[0x2008]);
 			console.log(bytes[0x2d0f]);
 			console.log("File doesn't appear to be a save file!");
 		}
