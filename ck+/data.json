@@ -15122,7 +15122,9 @@
     "moves": [
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "If the last damage taken was special, do twice the damage"
+            ],
             "index": 119,
             "name": "mirror-move",
             "power": 0,
@@ -15131,7 +15133,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Always hits"
+            ],
             "index": 185,
             "name": "faint-attack",
             "power": 60,
@@ -15140,7 +15144,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Confuses opponent"
+            ],
             "index": 109,
             "name": "confuse-ray",
             "power": 0,
@@ -15149,7 +15155,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "If the target attempts to switch out, doubles in power and hits first"
+            ],
             "index": 228,
             "name": "pursuit",
             "power": 40,
@@ -15168,7 +15176,9 @@
         },
         {
             "accuracy": 90,
-            "extra": [],
+            "extra": [
+                "Sets up rain for 5 turns"
+            ],
             "index": 240,
             "name": "rain-dance",
             "power": 0,
@@ -15177,7 +15187,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Hits 2-5 times"
+            ],
             "index": 42,
             "name": "pin-missile",
             "power": 20,
@@ -15186,7 +15198,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Lowers opponent's accuracy"
+            ],
             "index": 108,
             "name": "smokescreen",
             "power": 0,
@@ -15195,7 +15209,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "User faints"
+            ],
             "index": 153,
             "name": "explosion",
             "power": 250,
@@ -15204,7 +15220,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "30% chance to flinch opponent"
+            ],
             "index": 27,
             "name": "rolling-kick",
             "power": 60,
@@ -15213,7 +15231,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Restores 50% HP"
+            ],
             "index": 208,
             "name": "milk-drink",
             "power": 0,
@@ -15223,7 +15243,7 @@
         {
             "accuracy": 100,
             "extra": [
-                "25% recoil damage"
+                "User takes 25% of damage dealt as recoil"
             ],
             "index": 143,
             "name": "sky-attack",
@@ -15233,7 +15253,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "The next move used by the user will always hit, including semi-invulnerable turns of Fly and Dig"
+            ],
             "index": 170,
             "name": "mind-reader",
             "power": 0,
@@ -15242,7 +15264,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "10% chance to paralyze opponent"
+            ],
             "index": 9,
             "name": "thunderpunch",
             "power": 75,
@@ -15251,7 +15275,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Base power is higher when the user has less HP, from 20 to 200"
+            ],
             "index": 179,
             "name": "reversal",
             "power": 1,
@@ -15279,7 +15305,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "30% chance to flinch opponent"
+            ],
             "index": 29,
             "name": "headbutt",
             "power": 70,
@@ -15288,7 +15316,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Hits 2-5 times"
+            ],
             "index": 31,
             "name": "fury-attack",
             "power": 15,
@@ -15297,7 +15327,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "50% chance to lower opponent's defense"
+            ],
             "index": 249,
             "name": "rock-smash",
             "power": 40,
@@ -15306,7 +15338,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "If user is above half health, removes half of its max HP and sets the user to +6 attack, otherwise removes no health and sharply raises attack"
+            ],
             "index": 187,
             "name": "belly-drum",
             "power": 0,
@@ -15315,7 +15349,9 @@
         },
         {
             "accuracy": 90,
-            "extra": [],
+            "extra": [
+                "Sets up harsh sunlight for 5 turns"
+            ],
             "index": 241,
             "name": "sunny-day",
             "power": 0,
@@ -15324,7 +15360,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Hits before other attacks"
+            ],
             "index": 245,
             "name": "extremespeed",
             "power": 100,
@@ -15333,7 +15371,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Can only be used when asleep, uses another known move randomly"
+            ],
             "index": 214,
             "name": "sleep-talk",
             "power": 0,
@@ -15343,7 +15383,7 @@
         {
             "accuracy": 100,
             "extra": [
-                "Softboiled effect"
+                "Restores 50% HP"
             ],
             "index": 234,
             "name": "morning-sun",
@@ -15362,7 +15402,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "30% chance to paralyze opponent"
+            ],
             "index": 122,
             "name": "lick",
             "power": 40,
@@ -15371,7 +15413,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "10% chance to confuse opponent"
+            ],
             "index": 93,
             "name": "confusion",
             "power": 50,
@@ -15380,7 +15424,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Poisons opponent"
+            ],
             "index": 139,
             "name": "poison-gas",
             "power": 0,
@@ -15398,7 +15444,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Absorbs damage for 2-3 turns, then deals twice the damage taken to the opponent"
+            ],
             "index": 117,
             "name": "bide",
             "power": 0,
@@ -15407,7 +15455,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Deals user's level in damage"
+            ],
             "index": 101,
             "name": "night-shade",
             "power": 1,
@@ -15416,7 +15466,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Sharply raises attack"
+            ],
             "index": 14,
             "name": "swords-dance",
             "power": 0,
@@ -15425,7 +15477,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "If the user is above 25% HP, removes 25% HP and adds a Substitute that will take that much damage for the user"
+            ],
             "index": 164,
             "name": "substitute",
             "power": 0,
@@ -15434,7 +15488,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Becomes semi-invulnerable for a turn, then attacks on the next\nWhile semi-invulnerable, invulnerable to all moves except Gust, Thunder, Twister, and Whirlwind\nGust and Twister will deal double damage"
+            ],
             "index": 19,
             "name": "fly",
             "power": 70,
@@ -15452,7 +15508,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Sharply raises defense"
+            ],
             "index": 112,
             "name": "barrier",
             "power": 0,
@@ -15461,7 +15519,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Confuses opponent"
+            ],
             "index": 186,
             "name": "sweet-kiss",
             "power": 0,
@@ -15470,7 +15530,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "20% to either paralyze, freeze, or burn the opponent"
+            ],
             "index": 161,
             "name": "tri-attack",
             "power": 80,
@@ -15479,7 +15541,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "If no item is held, steals the opponent's"
+            ],
             "index": 168,
             "name": "thief",
             "power": 40,
@@ -15488,7 +15552,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Ignores accuracy drops and evasion increases and removes Ghost's immunities until the opponent switches out"
+            ],
             "index": 193,
             "name": "foresight",
             "power": 0,
@@ -15497,7 +15563,9 @@
         },
         {
             "accuracy": 90,
-            "extra": [],
+            "extra": [
+                "10% chance to flinch opponent"
+            ],
             "index": 158,
             "name": "hyper-fang",
             "power": 80,
@@ -15506,7 +15574,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Lowers opponent's accuracy"
+            ],
             "index": 134,
             "name": "kinesis",
             "power": 0,
@@ -15515,7 +15585,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Increases critical hit rate"
+            ],
             "index": 116,
             "name": "focus-energy",
             "power": 0,
@@ -15533,7 +15605,9 @@
         },
         {
             "accuracy": 30,
-            "extra": [],
+            "extra": [
+                "OHKO"
+            ],
             "index": 12,
             "name": "guillotine",
             "power": 0,
@@ -15551,7 +15625,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "10% chance to lower opponent's defense"
+            ],
             "index": 51,
             "name": "acid",
             "power": 40,
@@ -15560,7 +15636,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Flees wild encounters"
+            ],
             "index": 100,
             "name": "teleport",
             "power": 0,
@@ -15569,7 +15647,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Sharply lowers opponent's attack"
+            ],
             "index": 204,
             "name": "charm",
             "power": 0,
@@ -15577,8 +15657,10 @@
             "type": "normal"
         },
         {
-            "accuracy": 90,
-            "extra": [],
+            "accuracy": 100,
+            "extra": [
+                "If it misses or fails, deals 1\/8 the damage it would've dealt to the user instead"
+            ],
             "index": 136,
             "name": "hi-jump-kick",
             "power": 110,
@@ -15587,7 +15669,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Sharply raises speed"
+            ],
             "index": 97,
             "name": "agility",
             "power": 0,
@@ -15596,7 +15680,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Performs an attack with 10 BP for ever party member with HP and without a status"
+            ],
             "index": 251,
             "name": "beat-up",
             "power": 15,
@@ -15614,7 +15700,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Sharply lowers opponent's speed"
+            ],
             "index": 178,
             "name": "cotton-spore",
             "power": 0,
@@ -15632,7 +15720,9 @@
         },
         {
             "accuracy": 70,
-            "extra": [],
+            "extra": [
+                "10% chance to freeze opponent"
+            ],
             "index": 59,
             "name": "blizzard",
             "power": 120,
@@ -15641,7 +15731,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Poisons opponent"
+            ],
             "index": 77,
             "name": "poisonpowder",
             "power": 0,
@@ -15650,7 +15742,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Can only hit sleeping targets, user heals 50% damage dealt"
+            ],
             "index": 138,
             "name": "dream-eater",
             "power": 100,
@@ -15659,7 +15753,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Raises defense"
+            ],
             "index": 106,
             "name": "harden",
             "power": 0,
@@ -15668,7 +15764,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Hits 2-5 times"
+            ],
             "index": 154,
             "name": "fury-swipes",
             "power": 18,
@@ -15677,7 +15775,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Decreases the PP of the opponent's last used move by 2-5"
+            ],
             "index": 180,
             "name": "spite",
             "power": 0,
@@ -15687,7 +15787,7 @@
         {
             "accuracy": 100,
             "extra": [
-                "6.67% chance for each tri attack effect"
+                "20% to either paralyze, freeze, or burn the opponent"
             ],
             "index": 177,
             "name": "aeroblast",
@@ -15697,7 +15797,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "User takes 25% of damage dealt as recoil"
+            ],
             "index": 38,
             "name": "double-edge",
             "power": 120,
@@ -15706,7 +15808,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "30% chance to flinch opponent"
+            ],
             "index": 44,
             "name": "bite",
             "power": 60,
@@ -15715,7 +15819,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Raises defense"
+            ],
             "index": 110,
             "name": "withdraw",
             "power": 0,
@@ -15724,7 +15830,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Charges on the first turn, then deals damage on the second\nDoes not need to charge in harsh sunlight\nDeals half damage in rain"
+            ],
             "index": 76,
             "name": "solarbeam",
             "power": 120,
@@ -15733,7 +15841,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Restores 50% HP"
+            ],
             "index": 135,
             "name": "softboiled",
             "power": 0,
@@ -15742,16 +15852,20 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Restores 100% HP and cures status, goes to sleep for 2 turns"
+            ],
             "index": 156,
             "name": "rest",
             "power": 0,
-            "pp": 10,
+            "pp": 5,
             "type": "psychic"
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Afflicts the opponent with Leech Seed, transfering 1\/8 of its health to the opponent's opponent, even if the user switches out"
+            ],
             "index": 73,
             "name": "leech-seed",
             "power": 0,
@@ -15760,7 +15874,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "User heals 50% of damage dealt"
+            ],
             "index": 71,
             "name": "absorb",
             "power": 20,
@@ -15769,7 +15885,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Copies opponent's stat changes"
+            ],
             "index": 244,
             "name": "psych-up",
             "power": 0,
@@ -15778,7 +15896,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Lowers opponent's speed"
+            ],
             "index": 81,
             "name": "string-shot",
             "power": 0,
@@ -15796,7 +15916,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Lasts 2-3 turns, then confuses the user"
+            ],
             "index": 37,
             "name": "thrash",
             "power": 90,
@@ -15805,7 +15927,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Raises defense\nDoubles the power of Rollout"
+            ],
             "index": 111,
             "name": "defense-curl",
             "power": 0,
@@ -15814,7 +15938,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Always hits"
+            ],
             "index": 129,
             "name": "swift",
             "power": 60,
@@ -15823,7 +15949,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Changes the user's type into one of its moves' types"
+            ],
             "index": 160,
             "name": "conversion",
             "power": 0,
@@ -15832,7 +15960,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Sets the HP of both the user and the opponent to the average of their HP"
+            ],
             "index": 220,
             "name": "pain-split",
             "power": 0,
@@ -15841,7 +15971,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Always hits"
+            ],
             "index": 233,
             "name": "vital-throw",
             "power": 70,
@@ -15850,7 +15982,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "10% chance to burn opponent"
+            ],
             "index": 52,
             "name": "ember",
             "power": 40,
@@ -15859,7 +15993,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "User takes 25% of damage dealt as recoil"
+            ],
             "index": 165,
             "name": "struggle",
             "power": 50,
@@ -15868,7 +16004,9 @@
         },
         {
             "accuracy": 85,
-            "extra": [],
+            "extra": [
+                "User takes 25% of damage dealt as recoil"
+            ],
             "index": 36,
             "name": "take-down",
             "power": 90,
@@ -15877,7 +16015,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Raises attack"
+            ],
             "index": 96,
             "name": "meditate",
             "power": 0,
@@ -15886,7 +16026,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "If the user is a Ghost type, removes half of its max HP and inflicts a curse on the opponent that will deal 1\/4 HP a turn\nOtherwise, raises attack and defense, lowers speed"
+            ],
             "index": 174,
             "name": "curse",
             "power": 0,
@@ -15895,7 +16037,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "The next move used by the user will always hit, including semi-invulnerable turns of Fly and Dig"
+            ],
             "index": 199,
             "name": "lock-on",
             "power": 0,
@@ -15904,7 +16048,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Lowers opponent's accuracy"
+            ],
             "index": 28,
             "name": "sand-attack",
             "power": 0,
@@ -15913,7 +16059,9 @@
         },
         {
             "accuracy": 30,
-            "extra": [],
+            "extra": [
+                "OHKO"
+            ],
             "index": 32,
             "name": "horn-drill",
             "power": 1,
@@ -15922,9 +16070,7 @@
         },
         {
             "accuracy": 100,
-            "extra": [
-                "No happiness scaling effect"
-            ],
+            "extra": [],
             "index": 218,
             "name": "frustration",
             "power": 102,
@@ -15933,7 +16079,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Forces the opponent to switch"
+            ],
             "index": 46,
             "name": "roar",
             "power": 0,
@@ -15942,7 +16090,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "10% chance to flinch opponent"
+            ],
             "index": 125,
             "name": "bone-club",
             "power": 65,
@@ -15951,7 +16101,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Deals user's level in damage"
+            ],
             "index": 69,
             "name": "seismic-toss",
             "power": 1,
@@ -15960,7 +16112,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "For 2-5 turns, prevents the opponent from switching and deals 1\/16 HP at the end of each turn"
+            ],
             "index": 35,
             "name": "wrap",
             "power": 15,
@@ -15970,8 +16124,7 @@
         {
             "accuracy": 100,
             "extra": [
-                "Damage = to user’s level",
-                "No typing"
+                "Deals user's level in damage"
             ],
             "index": 149,
             "name": "psywave",
@@ -15981,7 +16134,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Double's the team's defense for 5 turns"
+            ],
             "index": 115,
             "name": "reflect",
             "power": 0,
@@ -15990,7 +16145,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "For 2-5 turns, prevents the opponent from switching and deals 1\/16 HP at the end of each turn"
+            ],
             "index": 20,
             "name": "bind",
             "power": 15,
@@ -15999,7 +16156,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Switches to another pokemon, keeping stat changes and effects like Mean Look"
+            ],
             "index": 226,
             "name": "baton-pass",
             "power": 0,
@@ -16008,7 +16167,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "10% chance to freeze opponent"
+            ],
             "index": 8,
             "name": "ice-punch",
             "power": 75,
@@ -16017,7 +16178,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "If the opponent is sleeping, inflicts a nightmare"
+            ],
             "index": 171,
             "name": "nightmare",
             "power": 0,
@@ -16026,7 +16189,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Prevents the user's team from being afflicted with status conditions or confusion for 5 turns"
+            ],
             "index": 219,
             "name": "safeguard",
             "power": 0,
@@ -16035,7 +16200,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "30% chance to confuse opponent"
+            ],
             "index": 60,
             "name": "psybeam",
             "power": 65,
@@ -16044,7 +16211,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Transforms into the opponent, copying types, all stats except HP, and all moves with at most 5PP each"
+            ],
             "index": 144,
             "name": "transform",
             "power": 0,
@@ -16062,7 +16231,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "10% chance to paralyze opponent"
+            ],
             "index": 84,
             "name": "thundershock",
             "power": 40,
@@ -16081,7 +16252,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Hits 2-5 times"
+            ],
             "index": 4,
             "name": "comet-punch",
             "power": 18,
@@ -16090,7 +16263,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Deals 40 damage"
+            ],
             "index": 82,
             "name": "dragon-rage",
             "power": 40,
@@ -16099,7 +16274,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Does double damage to opponents who have used Minimize"
+            ],
             "index": 23,
             "name": "stomp",
             "power": 65,
@@ -16108,7 +16285,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Hits 3 times, doubling in damage each hit"
+            ],
             "index": 167,
             "name": "triple-kick",
             "power": 10,
@@ -16126,7 +16305,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Lowers opponent's evasion"
+            ],
             "index": 230,
             "name": "sweet-scent",
             "power": 0,
@@ -16135,7 +16316,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Sharply raises defense"
+            ],
             "index": 151,
             "name": "acid-armor",
             "power": 0,
@@ -16154,7 +16337,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Hits 2-5 times"
+            ],
             "index": 198,
             "name": "bone-rush",
             "power": 25,
@@ -16163,7 +16348,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Lasts 5 turns, doubling in power each turn\nDoubles in damage if the user has used Defense Curl"
+            ],
             "index": 205,
             "name": "rollout",
             "power": 30,
@@ -16172,7 +16359,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Hits before other attacks"
+            ],
             "index": 98,
             "name": "quick-attack",
             "power": 40,
@@ -16181,7 +16370,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "50% chance to burn opponent\nWill instantly thaw the user"
+            ],
             "index": 221,
             "name": "sacred-fire",
             "power": 120,
@@ -16190,7 +16381,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "User heals 50% of damage dealt"
+            ],
             "index": 72,
             "name": "mega-drain",
             "power": 40,
@@ -16199,7 +16392,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Increases in damage every time when used back to back and the user takes damage"
+            ],
             "index": 99,
             "name": "rage",
             "power": 20,
@@ -16208,7 +16403,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Disables opponent's the last used move for 2-8 turns"
+            ],
             "index": 50,
             "name": "disable",
             "power": 0,
@@ -16217,7 +16414,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Hits 2-5 times"
+            ],
             "index": 3,
             "name": "doubleslap",
             "power": 15,
@@ -16226,7 +16425,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "30% chance to poison opponent"
+            ],
             "index": 124,
             "name": "sludge",
             "power": 65,
@@ -16235,7 +16436,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "10% chance to lower opponent's attack"
+            ],
             "index": 62,
             "name": "aurora-beam",
             "power": 65,
@@ -16244,7 +16447,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Hits 2 times"
+            ],
             "index": 24,
             "name": "double-kick",
             "power": 30,
@@ -16253,7 +16458,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Deals half of the opponent's current HP"
+            ],
             "index": 162,
             "name": "super-fang",
             "power": 1,
@@ -16262,7 +16469,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Lowers opponent's defense"
+            ],
             "index": 39,
             "name": "tail-whip",
             "power": 0,
@@ -16271,7 +16480,9 @@
         },
         {
             "accuracy": 90,
-            "extra": [],
+            "extra": [
+                "Can damage with 40, 80, or 120 BP, or heal the opponent for 25% of their max HP"
+            ],
             "index": 217,
             "name": "present",
             "power": 1,
@@ -16280,7 +16491,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Toxic poisons opponent"
+            ],
             "index": 92,
             "name": "toxic",
             "power": 0,
@@ -16289,7 +16502,9 @@
         },
         {
             "accuracy": 90,
-            "extra": [],
+            "extra": [
+                "30% chance to lower opponent's defense"
+            ],
             "index": 231,
             "name": "iron-tail",
             "power": 100,
@@ -16298,7 +16513,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "User faints"
+            ],
             "index": 120,
             "name": "selfdestruct",
             "power": 200,
@@ -16307,7 +16524,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "10% chance to burn opponent"
+            ],
             "index": 7,
             "name": "fire-punch",
             "power": 75,
@@ -16316,7 +16535,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "30% chance to flinch opponent"
+            ],
             "index": 67,
             "name": "low-kick",
             "power": 50,
@@ -16334,7 +16555,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "20% chance to confuse opponent"
+            ],
             "index": 146,
             "name": "dizzy-punch",
             "power": 70,
@@ -16343,7 +16566,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Copies the opponent's last used move for the duration of the battle"
+            ],
             "index": 102,
             "name": "mimic",
             "power": 0,
@@ -16352,7 +16577,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Puts opponent to sleep"
+            ],
             "index": 147,
             "name": "spore",
             "power": 0,
@@ -16361,7 +16588,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Prevents the opponent from switching out until the user does"
+            ],
             "index": 169,
             "name": "spider-web",
             "power": 0,
@@ -16370,7 +16599,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Removes the effects of binding moves, Leech Seed, and Spikes on the user's side of the field"
+            ],
             "index": 229,
             "name": "rapid-spin",
             "power": 20,
@@ -16379,7 +16610,9 @@
         },
         {
             "accuracy": 85,
-            "extra": [],
+            "extra": [
+                "10% chance to burn opponent"
+            ],
             "index": 126,
             "name": "fire-blast",
             "power": 120,
@@ -16388,7 +16621,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "10% chance to freeze opponent"
+            ],
             "index": 181,
             "name": "powder-snow",
             "power": 40,
@@ -16397,7 +16632,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Can only be used when asleep"
+            ],
             "index": 173,
             "name": "snore",
             "power": 60,
@@ -16406,7 +16643,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Ranges in power from 10 to 150, 70 is most common\nHits and deals double damage opponents in the semi-invulnerable turn of Dig"
+            ],
             "index": 222,
             "name": "magnitude",
             "power": 1,
@@ -16415,7 +16654,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Prevents the opponent from selecting any move except the last one it used for 2-6 turns"
+            ],
             "index": 227,
             "name": "encore",
             "power": 0,
@@ -16424,7 +16665,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Hits 2-5 times"
+            ],
             "index": 131,
             "name": "spike-cannon",
             "power": 20,
@@ -16433,7 +16676,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Prevents the opponent from lowering the user's stats until the user switches out"
+            ],
             "index": 54,
             "name": "mist",
             "power": 0,
@@ -16446,12 +16691,14 @@
             "index": 243,
             "name": "mirror-coat",
             "power": 1,
-            "pp": 20,
+            "pp": 1,
             "type": "psychic"
         },
         {
             "accuracy": 90,
-            "extra": [],
+            "extra": [
+                "Puts opponent to sleep"
+            ],
             "index": 142,
             "name": "lovely-kiss",
             "power": 0,
@@ -16460,7 +16707,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "User heals 50% of damage dealt"
+            ],
             "index": 141,
             "name": "leech-life",
             "power": 40,
@@ -16469,7 +16718,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Raises attack"
+            ],
             "index": 159,
             "name": "sharpen",
             "power": 0,
@@ -16478,7 +16729,9 @@
         },
         {
             "accuracy": 80,
-            "extra": [],
+            "extra": [
+                "Lowers opponent's accuracy"
+            ],
             "index": 148,
             "name": "flash",
             "power": 0,
@@ -16497,7 +16750,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Hits 2 times"
+            ],
             "index": 155,
             "name": "bonemerang",
             "power": 50,
@@ -16525,7 +16780,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Scatters coins that are collected after battle"
+            ],
             "index": 6,
             "name": "pay-day",
             "power": 40,
@@ -16534,7 +16791,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Infatuates the opponent"
+            ],
             "index": 213,
             "name": "attract",
             "power": 0,
@@ -16544,7 +16803,7 @@
         {
             "accuracy": 100,
             "extra": [
-                "Fly effect"
+                "Charges for a turn before attacking"
             ],
             "index": 13,
             "name": "razor-wind",
@@ -16554,7 +16813,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Uses a random move"
+            ],
             "index": 118,
             "name": "metronome",
             "power": 0,
@@ -16563,7 +16824,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Goes first, prevents being attacked for the turn"
+            ],
             "index": 182,
             "name": "protect",
             "power": 0,
@@ -16572,7 +16835,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "20% chance to lower opponent's special defense"
+            ],
             "index": 242,
             "name": "crunch",
             "power": 80,
@@ -16581,7 +16846,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Paralyzes opponent"
+            ],
             "index": 86,
             "name": "thunder-wave",
             "power": 0,
@@ -16590,7 +16857,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Raises evasion"
+            ],
             "index": 104,
             "name": "double-team",
             "power": 0,
@@ -16599,7 +16868,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "For 2-5 turns, prevents the opponent from switching and deals 1\/16 HP at the end of each turn"
+            ],
             "index": 250,
             "name": "whirlpool",
             "power": 35,
@@ -16608,7 +16879,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "10% chance to paralyze opponent"
+            ],
             "index": 85,
             "name": "thunderbolt",
             "power": 95,
@@ -16617,7 +16890,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "10% chance to burn opponent"
+            ],
             "index": 53,
             "name": "flamethrower",
             "power": 95,
@@ -16626,7 +16901,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Raises the user's defense on the first turn, then deals damage on the second"
+            ],
             "index": 130,
             "name": "skull-bash",
             "power": 100,
@@ -16636,7 +16913,7 @@
         {
             "accuracy": 100,
             "extra": [
-                "Softboiled effect"
+                "Restores 50% HP"
             ],
             "index": 236,
             "name": "moonlight",
@@ -16655,7 +16932,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Double's the team's special defense for 5 turns"
+            ],
             "index": 113,
             "name": "light-screen",
             "power": 0,
@@ -16664,7 +16943,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Will leave opponent on 1 HP"
+            ],
             "index": 206,
             "name": "false-swipe",
             "power": 40,
@@ -16673,7 +16954,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Sharply lowers opponent's defense"
+            ],
             "index": 103,
             "name": "screech",
             "power": 0,
@@ -16682,7 +16965,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Sets up a sandstorm for 5 turns"
+            ],
             "index": 201,
             "name": "sandstorm",
             "power": 0,
@@ -16691,12 +16976,25 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Copies the opponent's last used move permanently"
+            ],
             "index": 166,
             "name": "sketch",
             "power": 0,
             "pp": 1,
             "type": "normal"
+        },
+        {
+            "accuracy": 100,
+            "extra": [
+                "10% chance to lower opponent's special defense"
+            ],
+            "index": 94,
+            "name": "psychic",
+            "power": 90,
+            "pp": 10,
+            "type": "psychic"
         },
         {
             "accuracy": 100,
@@ -16739,7 +17037,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "For 2-5 turns, prevents the opponent from switching and deals 1\/16 HP at the end of each turn"
+            ],
             "index": 83,
             "name": "fire-spin",
             "power": 15,
@@ -16748,7 +17048,9 @@
         },
         {
             "accuracy": 55,
-            "extra": [],
+            "extra": [
+                "Confuses opponent"
+            ],
             "index": 48,
             "name": "supersonic",
             "power": 0,
@@ -16757,7 +17059,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "10% chance to lower opponent's speed"
+            ],
             "index": 145,
             "name": "bubble",
             "power": 20,
@@ -16766,7 +17070,9 @@
         },
         {
             "accuracy": 50,
-            "extra": [],
+            "extra": [
+                "100% chance to confuse opponent"
+            ],
             "index": 223,
             "name": "dynamicpunch",
             "power": 100,
@@ -16775,7 +17081,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Hits 2-5 times"
+            ],
             "index": 140,
             "name": "barrage",
             "power": 15,
@@ -16784,7 +17092,9 @@
         },
         {
             "accuracy": 70,
-            "extra": [],
+            "extra": [
+                "Puts opponent to sleep"
+            ],
             "index": 47,
             "name": "sing",
             "power": 0,
@@ -16793,7 +17103,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Hits 2-5 times\n20% chance to poison opponents (including steel types)"
+            ],
             "index": 41,
             "name": "twineedle",
             "power": 35,
@@ -16802,7 +17114,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Raises evasion\nCauses Stomp to deal double damage afterwards"
+            ],
             "index": 107,
             "name": "minimize",
             "power": 0,
@@ -16811,7 +17125,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Deals 20 damage"
+            ],
             "index": 49,
             "name": "sonicboom",
             "power": 20,
@@ -16820,7 +17136,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "User heals 50% of damage dealt"
+            ],
             "index": 202,
             "name": "giga-drain",
             "power": 75,
@@ -16838,7 +17156,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Requires a turn to recharge after being used"
+            ],
             "index": 63,
             "name": "hyper-beam",
             "power": 150,
@@ -16847,16 +17167,20 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "If the last damage taken was physical, do twice the damage"
+            ],
             "index": 68,
             "name": "counter",
             "power": 1,
-            "pp": 20,
+            "pp": 1,
             "type": "fighting"
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Paralyzes opponent"
+            ],
             "index": 78,
             "name": "stun-spore",
             "power": 0,
@@ -16865,7 +17189,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Becomes semi-invulnerable for a turn, then attacks on the next\nWhile semi-invulnerable, invulnerable to all moves except Earthquake, Magnitude, and Fissure\nEarthquake and Magnitude will deal double damage"
+            ],
             "index": 91,
             "name": "dig",
             "power": 80,
@@ -16874,7 +17200,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "10% chance to lower opponent's speed"
+            ],
             "index": 61,
             "name": "bubblebeam",
             "power": 65,
@@ -16901,7 +17229,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "30% chance to paralyze opponent"
+            ],
             "index": 209,
             "name": "spark",
             "power": 65,
@@ -16910,7 +17240,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "10% chance to raise all stats"
+            ],
             "index": 246,
             "name": "ancientpower",
             "power": 100,
@@ -16919,7 +17251,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Clears the opponent's stat changes"
+            ],
             "index": 114,
             "name": "haze",
             "power": 0,
@@ -16928,7 +17262,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "30% chance to flinch opponent"
+            ],
             "index": 157,
             "name": "rock-slide",
             "power": 75,
@@ -16937,7 +17273,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Forces the opponent to switch\nHits opponents in the semi-invulnerable turn of Fly"
+            ],
             "index": 18,
             "name": "whirlwind",
             "power": 0,
@@ -16956,7 +17294,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "10% chance to burn opponent\nWill instantly thaw the user"
+            ],
             "index": 172,
             "name": "flame-wheel",
             "power": 60,
@@ -16965,7 +17305,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "10% chance to lower opponent's speed"
+            ],
             "index": 132,
             "name": "constrict",
             "power": 10,
@@ -16975,7 +17317,7 @@
         {
             "accuracy": 100,
             "extra": [
-                "Lowers defense instead of special defense"
+                "20% chance to lower opponent's defense"
             ],
             "index": 247,
             "name": "shadow-ball",
@@ -16985,7 +17327,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Places a layer of spikes on the opponent's side that will deal 1\/8 HP when an opponent switches in\nFlying type pokemon are unaffected"
+            ],
             "index": 191,
             "name": "spikes",
             "power": 0,
@@ -16994,7 +17338,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "30% chance to poison opponent"
+            ],
             "index": 40,
             "name": "poison-sting",
             "power": 15,
@@ -17003,7 +17349,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Raises special attack"
+            ],
             "index": 74,
             "name": "growth",
             "power": 0,
@@ -17012,7 +17360,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Lowers opponent's defense"
+            ],
             "index": 43,
             "name": "leer",
             "power": 0,
@@ -17021,7 +17371,9 @@
         },
         {
             "accuracy": 30,
-            "extra": [],
+            "extra": [
+                "OHKO\nHits opponents in the semi-invulnerable turn of Dig"
+            ],
             "index": 90,
             "name": "fissure",
             "power": 1,
@@ -17030,7 +17382,9 @@
         },
         {
             "accuracy": 50,
-            "extra": [],
+            "extra": [
+                "100% chance to paralyze opponent"
+            ],
             "index": 192,
             "name": "zap-cannon",
             "power": 100,
@@ -17039,7 +17393,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "30% chance to poison opponent"
+            ],
             "index": 188,
             "name": "sludge-bomb",
             "power": 90,
@@ -17048,7 +17404,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "100% chance to lower opponent's speed"
+            ],
             "index": 196,
             "name": "icy-wind",
             "power": 55,
@@ -17057,7 +17415,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Sharply raises special defense"
+            ],
             "index": 133,
             "name": "amnesia",
             "power": 0,
@@ -17075,7 +17435,9 @@
         },
         {
             "accuracy": 75,
-            "extra": [],
+            "extra": [
+                "Puts opponent to sleep"
+            ],
             "index": 79,
             "name": "sleep-powder",
             "power": 0,
@@ -17093,7 +17455,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Paralyzes opponent"
+            ],
             "index": 137,
             "name": "glare",
             "power": 0,
@@ -17112,7 +17476,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Hits an deals double damage against opponents in the semi-invulnerable turn of Fly"
+            ],
             "index": 16,
             "name": "gust",
             "power": 40,
@@ -17121,7 +17487,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "50% chance to lower opponent's accuracy"
+            ],
             "index": 190,
             "name": "octazooka",
             "power": 95,
@@ -17130,7 +17498,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Lowers opponent's attack"
+            ],
             "index": 45,
             "name": "growl",
             "power": 0,
@@ -17139,16 +17509,20 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "If it misses fails, deals 1\/8 the damage it would've dealt to the user instead"
+            ],
             "index": 26,
             "name": "jump-kick",
-            "power": 70,
+            "power": 90,
             "pp": 25,
             "type": "fighting"
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Sharply lowers opponent's speed"
+            ],
             "index": 184,
             "name": "scary-face",
             "power": 0,
@@ -17168,7 +17542,7 @@
         {
             "accuracy": 100,
             "extra": [
-                "Softboiled effect"
+                "Restores 50% HP"
             ],
             "index": 235,
             "name": "synthesis",
@@ -17187,7 +17561,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Goes first, prevents being attacked for the turn"
+            ],
             "index": 197,
             "name": "detect",
             "power": 0,
@@ -17196,7 +17572,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Sharply raise's the opponent's attack, confuses opponent"
+            ],
             "index": 207,
             "name": "swagger",
             "power": 0,
@@ -17215,7 +17593,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "100% chance to lower opponent's accuracy"
+            ],
             "index": 189,
             "name": "mud-slap",
             "power": 20,
@@ -17224,9 +17604,7 @@
         },
         {
             "accuracy": 100,
-            "extra": [
-                "No recoil"
-            ],
+            "extra": [],
             "index": 66,
             "name": "submission",
             "power": 80,
@@ -17245,7 +17623,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Hits 2 turns after it is uesed, regardless if the user and opponent switch out"
+            ],
             "index": 248,
             "name": "future-sight",
             "power": 80,
@@ -17254,7 +17634,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Will KO the opponent if the user dies before its next turn"
+            ],
             "index": 194,
             "name": "destiny-bond",
             "power": 0,
@@ -17263,7 +17645,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Doubles in damage each turn it is used back to back"
+            ],
             "index": 210,
             "name": "fury-cutter",
             "power": 15,
@@ -17282,7 +17666,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Base power is higher when the user has less HP, from 20 to 200"
+            ],
             "index": 175,
             "name": "flail",
             "power": 1,
@@ -17291,7 +17677,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Survive all damage on 1 HP until the end of the turn\nWill occur before attacks"
+            ],
             "index": 203,
             "name": "endure",
             "power": 0,
@@ -17311,7 +17699,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "For 2-5 turns, prevents the opponent from switching and deals 1\/16 HP at the end of each turn"
+            ],
             "index": 128,
             "name": "clamp",
             "power": 35,
@@ -17320,7 +17710,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Prevents the opponent from switching out until the user does"
+            ],
             "index": 212,
             "name": "mean-look",
             "power": 0,
@@ -17338,16 +17730,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
-            "index": 94,
-            "name": "psychic-m",
-            "power": 90,
-            "pp": 10,
-            "type": "psychic"
-        },
-        {
-            "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Does nothing"
+            ],
             "index": 150,
             "name": "splash",
             "power": 0,
@@ -17365,7 +17750,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "10% chance to freeze opponent"
+            ],
             "index": 58,
             "name": "ice-beam",
             "power": 95,
@@ -17374,7 +17761,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Will cause both the user and opponent to faint in 3 turns unless they switch out"
+            ],
             "index": 195,
             "name": "perish-song",
             "power": 0,
@@ -17383,7 +17772,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "10% chance to raise defense"
+            ],
             "index": 211,
             "name": "steel-wing",
             "power": 80,
@@ -17410,7 +17801,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "30% chance to paralyze opponent"
+            ],
             "index": 225,
             "name": "dragonbreath",
             "power": 60,
@@ -17419,7 +17812,9 @@
         },
         {
             "accuracy": 70,
-            "extra": [],
+            "extra": [
+                "Puts opponent to sleep"
+            ],
             "index": 95,
             "name": "hypnosis",
             "power": 0,
@@ -17428,7 +17823,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "40% chance to poison opponent"
+            ],
             "index": 123,
             "name": "smog",
             "power": 20,
@@ -17437,7 +17834,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Hits and deals double damage opponents in the semi-invulnerable turn of Dig"
+            ],
             "index": 89,
             "name": "earthquake",
             "power": 100,
@@ -17456,9 +17855,7 @@
         },
         {
             "accuracy": 100,
-            "extra": [
-                "No happiness scaling effect"
-            ],
+            "extra": [],
             "index": 216,
             "name": "return",
             "power": 102,
@@ -17467,7 +17864,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Hits before other attacks"
+            ],
             "index": 183,
             "name": "mach-punch",
             "power": 40,
@@ -17476,7 +17875,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Changes the user's type into one that resists the last move it was hit by"
+            ],
             "index": 176,
             "name": "conversion2",
             "power": 0,
@@ -17485,7 +17886,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Varies in type and damage based on the user's DVs"
+            ],
             "index": 237,
             "name": "hidden-power",
             "power": 1,
@@ -17503,7 +17906,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "20% chance to flinch opponent\nHits an deals double damage against opponents in the semi-invulnerable turn of Fly"
+            ],
             "index": 239,
             "name": "twister",
             "power": 40,
@@ -17512,7 +17917,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Cures status for entire team"
+            ],
             "index": 215,
             "name": "heal-bell",
             "power": 0,
@@ -17521,7 +17928,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Lasts 2-3 turns, then confuses the user"
+            ],
             "index": 200,
             "name": "outrage",
             "power": 90,
@@ -17530,7 +17939,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "10% chance to raise attack"
+            ],
             "index": 232,
             "name": "metal-claw",
             "power": 100,
@@ -17539,7 +17950,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Restores 50% HP"
+            ],
             "index": 105,
             "name": "recover",
             "power": 0,
@@ -17548,7 +17961,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "30% chance to paralyze opponent"
+            ],
             "index": 34,
             "name": "body-slam",
             "power": 85,
@@ -17557,7 +17972,9 @@
         },
         {
             "accuracy": 70,
-            "extra": [],
+            "extra": [
+                "30% chance to paralyze opponent\n100% accurate in rain, 50% accurage in sun\nHits opponents in the semi-invulnerable turn of Fly"
+            ],
             "index": 87,
             "name": "thunder",
             "power": 120,
@@ -18354,7 +18771,7 @@
                 },
                 {
                     "level": 25,
-                    "move": "psychic-m"
+                    "move": "psychic"
                 },
                 {
                     "level": 29,
@@ -18397,7 +18814,7 @@
                 "frustration",
                 "solarbeam",
                 "return",
-                "psychic-m",
+                "psychic",
                 "double-team",
                 "swagger",
                 "sleep-talk",
@@ -20091,7 +20508,7 @@
                 "iron-tail",
                 "thunder",
                 "return",
-                "psychic-m",
+                "psychic",
                 "shadow-ball",
                 "mud-slap",
                 "double-team",
@@ -20176,7 +20593,7 @@
                 "iron-tail",
                 "thunder",
                 "return",
-                "psychic-m",
+                "psychic",
                 "shadow-ball",
                 "mud-slap",
                 "double-team",
@@ -20439,7 +20856,7 @@
                 "solarbeam",
                 "thunder",
                 "return",
-                "psychic-m",
+                "psychic",
                 "shadow-ball",
                 "mud-slap",
                 "double-team",
@@ -20523,7 +20940,7 @@
                 "solarbeam",
                 "thunder",
                 "return",
-                "psychic-m",
+                "psychic",
                 "shadow-ball",
                 "mud-slap",
                 "double-team",
@@ -21091,7 +21508,7 @@
                 "frustration",
                 "solarbeam",
                 "return",
-                "psychic-m",
+                "psychic",
                 "double-team",
                 "swagger",
                 "sleep-talk",
@@ -21123,7 +21540,7 @@
                 },
                 {
                     "level": 38,
-                    "move": "psychic-m"
+                    "move": "psychic"
                 },
                 {
                     "level": 54,
@@ -21154,7 +21571,7 @@
                 "frustration",
                 "solarbeam",
                 "return",
-                "psychic-m",
+                "psychic",
                 "double-team",
                 "swagger",
                 "sleep-talk",
@@ -21598,7 +22015,7 @@
                 },
                 {
                     "level": 47,
-                    "move": "psychic-m"
+                    "move": "psychic"
                 },
                 {
                     "level": 51,
@@ -22040,7 +22457,7 @@
                 "endure",
                 "frustration",
                 "return",
-                "psychic-m",
+                "psychic",
                 "double-team",
                 "swagger",
                 "sleep-talk",
@@ -22118,7 +22535,7 @@
                 "frustration",
                 "earthquake",
                 "return",
-                "psychic-m",
+                "psychic",
                 "mud-slap",
                 "double-team",
                 "ice-punch",
@@ -22194,7 +22611,7 @@
                 "frustration",
                 "earthquake",
                 "return",
-                "psychic-m",
+                "psychic",
                 "mud-slap",
                 "double-team",
                 "ice-punch",
@@ -22236,7 +22653,7 @@
                 },
                 {
                     "level": 90,
-                    "move": "psychic-m"
+                    "move": "psychic"
                 }
             ],
             "name": "abra",
@@ -22264,7 +22681,7 @@
                 "endure",
                 "frustration",
                 "return",
-                "psychic-m",
+                "psychic",
                 "shadow-ball",
                 "double-team",
                 "ice-punch",
@@ -22315,7 +22732,7 @@
                 },
                 {
                     "level": 90,
-                    "move": "psychic-m"
+                    "move": "psychic"
                 }
             ],
             "name": "kadabra",
@@ -22344,7 +22761,7 @@
                 "frustration",
                 "return",
                 "dig",
-                "psychic-m",
+                "psychic",
                 "shadow-ball",
                 "double-team",
                 "ice-punch",
@@ -22376,7 +22793,7 @@
                 },
                 {
                     "level": 55,
-                    "move": "psychic-m"
+                    "move": "psychic"
                 },
                 {
                     "level": 85,
@@ -22384,7 +22801,7 @@
                 },
                 {
                     "level": 90,
-                    "move": "psychic-m"
+                    "move": "psychic"
                 },
                 {
                     "level": 100,
@@ -22418,7 +22835,7 @@
                 "frustration",
                 "return",
                 "dig",
-                "psychic-m",
+                "psychic",
                 "shadow-ball",
                 "double-team",
                 "ice-punch",
@@ -23424,7 +23841,7 @@
                 "earthquake",
                 "return",
                 "dig",
-                "psychic-m",
+                "psychic",
                 "shadow-ball",
                 "mud-slap",
                 "double-team",
@@ -23460,7 +23877,7 @@
                 },
                 {
                     "level": 58,
-                    "move": "psychic-m"
+                    "move": "psychic"
                 },
                 {
                     "level": 70,
@@ -23472,7 +23889,7 @@
                 },
                 {
                     "level": 85,
-                    "move": "psychic-m"
+                    "move": "psychic"
                 }
             ],
             "name": "slowbro",
@@ -23507,7 +23924,7 @@
                 "earthquake",
                 "return",
                 "dig",
-                "psychic-m",
+                "psychic",
                 "shadow-ball",
                 "mud-slap",
                 "double-team",
@@ -24391,7 +24808,7 @@
                 "frustration",
                 "thunder",
                 "return",
-                "psychic-m",
+                "psychic",
                 "shadow-ball",
                 "double-team",
                 "swagger",
@@ -24432,7 +24849,7 @@
                 },
                 {
                     "level": 68,
-                    "move": "psychic-m"
+                    "move": "psychic"
                 }
             ],
             "name": "haunter",
@@ -24446,13 +24863,17 @@
                 "spe": 95
             },
             "tmhm": [
+                "dynamicpunch",
+                "headbutt",
                 "curse",
                 "toxic",
                 "zap-cannon",
+                "rock-smash",
                 "psych-up",
                 "hidden-power",
                 "sunny-day",
                 "snore",
+                "hyper-beam",
                 "protect",
                 "rain-dance",
                 "giga-drain",
@@ -24460,16 +24881,20 @@
                 "frustration",
                 "thunder",
                 "return",
-                "psychic-m",
+                "psychic",
                 "shadow-ball",
                 "double-team",
+                "ice-punch",
                 "swagger",
                 "sleep-talk",
+                "thunderpunch",
                 "dream-eater",
                 "rest",
                 "attract",
                 "thief",
+                "fire-punch",
                 "nightmare",
+                "strength",
                 "thunderbolt"
             ],
             "types": [
@@ -24494,7 +24919,7 @@
                 },
                 {
                     "level": 76,
-                    "move": "psychic-m"
+                    "move": "psychic"
                 }
             ],
             "name": "gengar",
@@ -24526,7 +24951,7 @@
                 "frustration",
                 "thunder",
                 "return",
-                "psychic-m",
+                "psychic",
                 "shadow-ball",
                 "double-team",
                 "ice-punch",
@@ -24674,7 +25099,7 @@
                 },
                 {
                     "level": 46,
-                    "move": "psychic-m"
+                    "move": "psychic"
                 },
                 {
                     "level": 50,
@@ -24710,7 +25135,7 @@
                 "endure",
                 "frustration",
                 "return",
-                "psychic-m",
+                "psychic",
                 "shadow-ball",
                 "double-team",
                 "ice-punch",
@@ -24749,7 +25174,7 @@
                 },
                 {
                     "level": 42,
-                    "move": "psychic-m"
+                    "move": "psychic"
                 },
                 {
                     "level": 47,
@@ -24794,7 +25219,7 @@
                 "endure",
                 "frustration",
                 "return",
-                "psychic-m",
+                "psychic",
                 "shadow-ball",
                 "double-team",
                 "ice-punch",
@@ -25122,7 +25547,7 @@
                 },
                 {
                     "level": 57,
-                    "move": "psychic-m"
+                    "move": "psychic"
                 },
                 {
                     "level": 67,
@@ -25157,7 +25582,7 @@
                 "frustration",
                 "solarbeam",
                 "return",
-                "psychic-m",
+                "psychic",
                 "double-team",
                 "swagger",
                 "sleep-talk",
@@ -25192,7 +25617,7 @@
                 },
                 {
                     "level": 57,
-                    "move": "psychic-m"
+                    "move": "psychic"
                 },
                 {
                     "level": 67,
@@ -25229,7 +25654,7 @@
                 "frustration",
                 "solarbeam",
                 "return",
-                "psychic-m",
+                "psychic",
                 "double-team",
                 "swagger",
                 "sleep-talk",
@@ -26076,17 +26501,15 @@
                 "iron-tail",
                 "thunder",
                 "return",
-                "psychic-m",
+                "psychic",
                 "shadow-ball",
                 "mud-slap",
                 "double-team",
                 "swagger",
-                "sleep-talk",
                 "sandstorm",
                 "fire-blast",
                 "defense-curl",
                 "dream-eater",
-                "rest",
                 "attract",
                 "strength",
                 "flash",
@@ -26618,7 +27041,7 @@
                 "frustration",
                 "thunder",
                 "return",
-                "psychic-m",
+                "psychic",
                 "double-team",
                 "swagger",
                 "sleep-talk",
@@ -26649,7 +27072,7 @@
                 },
                 {
                     "level": 55,
-                    "move": "psychic-m"
+                    "move": "psychic"
                 },
                 {
                     "level": 60,
@@ -26690,7 +27113,7 @@
                 "frustration",
                 "thunder",
                 "return",
-                "psychic-m",
+                "psychic",
                 "double-team",
                 "swagger",
                 "sleep-talk",
@@ -26736,7 +27159,7 @@
                 },
                 {
                     "level": 45,
-                    "move": "psychic-m"
+                    "move": "psychic"
                 },
                 {
                     "level": 49,
@@ -26778,7 +27201,7 @@
                 "solarbeam",
                 "thunder",
                 "return",
-                "psychic-m",
+                "psychic",
                 "shadow-ball",
                 "mud-slap",
                 "double-team",
@@ -26903,7 +27326,7 @@
                 },
                 {
                     "level": 55,
-                    "move": "psychic-m"
+                    "move": "psychic"
                 }
             ],
             "name": "jynx",
@@ -26933,7 +27356,7 @@
                 "endure",
                 "frustration",
                 "return",
-                "psychic-m",
+                "psychic",
                 "shadow-ball",
                 "mud-slap",
                 "double-team",
@@ -26995,7 +27418,7 @@
                 "iron-tail",
                 "thunder",
                 "return",
-                "psychic-m",
+                "psychic",
                 "mud-slap",
                 "double-team",
                 "ice-punch",
@@ -27065,7 +27488,7 @@
                 "frustration",
                 "iron-tail",
                 "return",
-                "psychic-m",
+                "psychic",
                 "mud-slap",
                 "double-team",
                 "swagger",
@@ -27426,7 +27849,7 @@
                 "dragonbreath",
                 "thunder",
                 "return",
-                "psychic-m",
+                "psychic",
                 "double-team",
                 "swagger",
                 "sleep-talk",
@@ -27437,6 +27860,7 @@
                 "surf",
                 "strength",
                 "whirlpool",
+                "waterfall",
                 "thunderbolt",
                 "ice-beam"
             ],
@@ -27538,7 +27962,6 @@
                 "mud-slap",
                 "double-team",
                 "swagger",
-                "sleep-talk",
                 "swift",
                 "detect",
                 "rest",
@@ -27857,7 +28280,7 @@
                 "iron-tail",
                 "thunder",
                 "return",
-                "psychic-m",
+                "psychic",
                 "double-team",
                 "swagger",
                 "sleep-talk",
@@ -28269,7 +28692,7 @@
                 "thunder",
                 "earthquake",
                 "return",
-                "psychic-m",
+                "psychic",
                 "shadow-ball",
                 "mud-slap",
                 "double-team",
@@ -28734,7 +29157,7 @@
                 },
                 {
                     "level": 1,
-                    "move": "psychic-m"
+                    "move": "psychic"
                 },
                 {
                     "level": 1,
@@ -28773,7 +29196,7 @@
                 "iron-tail",
                 "thunder",
                 "return",
-                "psychic-m",
+                "psychic",
                 "shadow-ball",
                 "mud-slap",
                 "double-team",
@@ -28857,7 +29280,7 @@
                 "earthquake",
                 "return",
                 "dig",
-                "psychic-m",
+                "psychic",
                 "shadow-ball",
                 "mud-slap",
                 "double-team",
@@ -29839,7 +30262,7 @@
                 },
                 {
                     "level": 37,
-                    "move": "psychic-m"
+                    "move": "psychic"
                 },
                 {
                     "level": 42,
@@ -29915,7 +30338,7 @@
                 },
                 {
                     "level": 33,
-                    "move": "psychic-m"
+                    "move": "psychic"
                 },
                 {
                     "level": 37,
@@ -30074,7 +30497,7 @@
                 },
                 {
                     "level": 22,
-                    "move": "psychic-m"
+                    "move": "psychic"
                 },
                 {
                     "level": 25,
@@ -30177,7 +30600,7 @@
                 },
                 {
                     "level": 25,
-                    "move": "psychic-m"
+                    "move": "psychic"
                 },
                 {
                     "level": 27,
@@ -30223,7 +30646,7 @@
                 "solarbeam",
                 "return",
                 "dig",
-                "psychic-m",
+                "psychic",
                 "double-team",
                 "swagger",
                 "sleep-talk",
@@ -30255,7 +30678,7 @@
                 },
                 {
                     "level": 25,
-                    "move": "psychic-m"
+                    "move": "psychic"
                 },
                 {
                     "level": 27,
@@ -30302,7 +30725,7 @@
                 "solarbeam",
                 "return",
                 "dig",
-                "psychic-m",
+                "psychic",
                 "double-team",
                 "swagger",
                 "sleep-talk",
@@ -30692,7 +31115,7 @@
                 "solarbeam",
                 "iron-tail",
                 "return",
-                "psychic-m",
+                "psychic",
                 "shadow-ball",
                 "mud-slap",
                 "double-team",
@@ -30774,7 +31197,7 @@
                 "frustration",
                 "solarbeam",
                 "return",
-                "psychic-m",
+                "psychic",
                 "shadow-ball",
                 "mud-slap",
                 "double-team",
@@ -30852,7 +31275,7 @@
                 "frustration",
                 "solarbeam",
                 "return",
-                "psychic-m",
+                "psychic",
                 "shadow-ball",
                 "mud-slap",
                 "double-team",
@@ -30889,7 +31312,7 @@
                 },
                 {
                     "level": 21,
-                    "move": "psychic-m"
+                    "move": "psychic"
                 },
                 {
                     "level": 24,
@@ -30928,7 +31351,7 @@
                 "frustration",
                 "solarbeam",
                 "return",
-                "psychic-m",
+                "psychic",
                 "shadow-ball",
                 "mud-slap",
                 "double-team",
@@ -30983,7 +31406,7 @@
                 },
                 {
                     "level": 30,
-                    "move": "psychic-m"
+                    "move": "psychic"
                 },
                 {
                     "level": 34,
@@ -30991,7 +31414,7 @@
                 },
                 {
                     "level": 37,
-                    "move": "psychic-m"
+                    "move": "psychic"
                 },
                 {
                     "level": 45,
@@ -31021,7 +31444,7 @@
                 "frustration",
                 "solarbeam",
                 "return",
-                "psychic-m",
+                "psychic",
                 "double-team",
                 "swagger",
                 "sleep-talk",
@@ -31064,7 +31487,7 @@
                 },
                 {
                     "level": 37,
-                    "move": "psychic-m"
+                    "move": "psychic"
                 },
                 {
                     "level": 42,
@@ -31099,7 +31522,7 @@
                 "frustration",
                 "solarbeam",
                 "return",
-                "psychic-m",
+                "psychic",
                 "double-team",
                 "swagger",
                 "sleep-talk",
@@ -31755,7 +32178,7 @@
                 "frustration",
                 "earthquake",
                 "return",
-                "psychic-m",
+                "psychic",
                 "mud-slap",
                 "double-team",
                 "ice-punch",
@@ -32511,7 +32934,7 @@
                 },
                 {
                     "level": 47,
-                    "move": "psychic-m"
+                    "move": "psychic"
                 },
                 {
                     "level": 59,
@@ -32544,7 +32967,7 @@
                 "frustration",
                 "iron-tail",
                 "return",
-                "psychic-m",
+                "psychic",
                 "shadow-ball",
                 "mud-slap",
                 "double-team",
@@ -32625,12 +33048,11 @@
                 "frustration",
                 "iron-tail",
                 "return",
-                "psychic-m",
+                "psychic",
                 "shadow-ball",
                 "mud-slap",
                 "double-team",
                 "swagger",
-                "sleep-talk",
                 "swift",
                 "dream-eater",
                 "detect",
@@ -32731,7 +33153,7 @@
             "learnset": [
                 {
                     "level": 1,
-                    "move": "psychic-m"
+                    "move": "psychic"
                 },
                 {
                     "level": 45,
@@ -32743,7 +33165,7 @@
                 },
                 {
                     "level": 58,
-                    "move": "psychic-m"
+                    "move": "psychic"
                 },
                 {
                     "level": 68,
@@ -32782,7 +33204,7 @@
                 "earthquake",
                 "return",
                 "dig",
-                "psychic-m",
+                "psychic",
                 "shadow-ball",
                 "mud-slap",
                 "double-team",
@@ -32865,7 +33287,7 @@
                 "frustration",
                 "thunder",
                 "return",
-                "psychic-m",
+                "psychic",
                 "shadow-ball",
                 "double-team",
                 "swagger",
@@ -33017,7 +33439,7 @@
                 "thunder",
                 "earthquake",
                 "return",
-                "psychic-m",
+                "psychic",
                 "shadow-ball",
                 "mud-slap",
                 "double-team",
@@ -33836,7 +34258,6 @@
                 "headbutt",
                 "curse",
                 "rollout",
-                "toxic",
                 "rock-smash",
                 "hidden-power",
                 "sunny-day",
@@ -33854,7 +34275,6 @@
                 "sludge-bomb",
                 "sandstorm",
                 "defense-curl",
-                "rest",
                 "attract",
                 "strength",
                 "flash"
@@ -34608,7 +35028,7 @@
                 "frustration",
                 "earthquake",
                 "return",
-                "psychic-m",
+                "psychic",
                 "mud-slap",
                 "double-team",
                 "swagger",
@@ -35499,7 +35919,7 @@
                 "iron-tail",
                 "thunder",
                 "return",
-                "psychic-m",
+                "psychic",
                 "double-team",
                 "swagger",
                 "sleep-talk",
@@ -35586,7 +36006,7 @@
                 "frustration",
                 "earthquake",
                 "return",
-                "psychic-m",
+                "psychic",
                 "mud-slap",
                 "double-team",
                 "swagger",
@@ -35868,7 +36288,7 @@
                 "endure",
                 "frustration",
                 "return",
-                "psychic-m",
+                "psychic",
                 "shadow-ball",
                 "mud-slap",
                 "double-team",
@@ -35954,7 +36374,7 @@
                 "frustration",
                 "thunder",
                 "return",
-                "psychic-m",
+                "psychic",
                 "mud-slap",
                 "double-team",
                 "ice-punch",
@@ -36040,7 +36460,7 @@
                 "frustration",
                 "iron-tail",
                 "return",
-                "psychic-m",
+                "psychic",
                 "mud-slap",
                 "double-team",
                 "swagger",
@@ -36200,7 +36620,7 @@
                 "solarbeam",
                 "thunder",
                 "return",
-                "psychic-m",
+                "psychic",
                 "shadow-ball",
                 "mud-slap",
                 "double-team",
@@ -36648,7 +37068,7 @@
                 "thunder",
                 "earthquake",
                 "return",
-                "psychic-m",
+                "psychic",
                 "shadow-ball",
                 "mud-slap",
                 "double-team",
@@ -36725,7 +37145,7 @@
                 "thunder",
                 "earthquake",
                 "return",
-                "psychic-m",
+                "psychic",
                 "shadow-ball",
                 "mud-slap",
                 "double-team",
@@ -36767,7 +37187,7 @@
                 },
                 {
                     "level": 1,
-                    "move": "psychic-m"
+                    "move": "psychic"
                 }
             ],
             "name": "celebi",
@@ -36796,7 +37216,7 @@
                 "frustration",
                 "solarbeam",
                 "return",
-                "psychic-m",
+                "psychic",
                 "shadow-ball",
                 "mud-slap",
                 "double-team",
@@ -37830,7 +38250,7 @@
                         "swift",
                         "submission",
                         "spore",
-                        "psychic-m"
+                        "psychic"
                     ],
                     "name": "smeargle"
                 }
@@ -38269,7 +38689,7 @@
                     "level": 24,
                     "moves": [
                         "sleep-powder",
-                        "psychic-m",
+                        "psychic",
                         "psywave",
                         "giga-drain"
                     ],
@@ -38304,7 +38724,7 @@
                         "sludge",
                         "night-shade",
                         "giga-drain",
-                        "psychic-m"
+                        "psychic"
                     ],
                     "name": "ariados"
                 },
@@ -38364,7 +38784,7 @@
                     "moves": [
                         "leech-life",
                         "submission",
-                        "psychic-m",
+                        "psychic",
                         "giga-drain"
                     ],
                     "name": "ledian"
@@ -38382,7 +38802,7 @@
                         "waterfall",
                         "thunderbolt",
                         "aurora-beam",
-                        "psychic-m"
+                        "psychic"
                     ],
                     "name": "staryu"
                 },
@@ -38605,7 +39025,7 @@
                     "moves": [
                         "synthesis",
                         "giga-drain",
-                        "psychic-m",
+                        "psychic",
                         "body-slam"
                     ],
                     "name": "bayleef"
@@ -38620,7 +39040,7 @@
                     "level": 27,
                     "moves": [
                         "wing-attack",
-                        "psychic-m",
+                        "psychic",
                         "return",
                         "steel-wing"
                     ],
@@ -38745,7 +39165,7 @@
                     "moves": [
                         "selfdestruct",
                         "giga-drain",
-                        "psychic-m",
+                        "psychic",
                         "sleep-powder"
                     ],
                     "name": "exeggcute"
@@ -38788,7 +39208,7 @@
                     "moves": [
                         "shadow-ball",
                         "ice-punch",
-                        "psychic-m",
+                        "psychic",
                         "selfdestruct"
                     ],
                     "name": "haunter"
@@ -38920,7 +39340,7 @@
                         "seismic-toss",
                         "fire-punch",
                         "softboiled",
-                        "psychic-m"
+                        "psychic"
                     ],
                     "name": "togetic"
                 },
@@ -38994,7 +39414,7 @@
                     "level": 27,
                     "moves": [
                         "body-slam",
-                        "psychic-m",
+                        "psychic",
                         "ice-beam",
                         "softboiled"
                     ],
@@ -39159,7 +39579,7 @@
                     "item": "Twistedspoon",
                     "level": 32,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "giga-drain",
                         "double-edge",
                         "sleep-powder"
@@ -39304,7 +39724,7 @@
                         "giga-drain",
                         "synthesis",
                         "sludge-bomb",
-                        "psychic-m"
+                        "psychic"
                     ],
                     "name": "bayleef"
                 }
@@ -39666,7 +40086,7 @@
                     "item": "Berry Juice",
                     "level": 34,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "earthquake",
                         "body-slam",
                         "crunch"
@@ -40021,7 +40441,7 @@
                     "moves": [
                         "faint-attack",
                         "moonlight",
-                        "psychic-m",
+                        "psychic",
                         "toxic"
                     ],
                     "name": "umbreon"
@@ -40043,7 +40463,7 @@
                     "item": "Miracleberry",
                     "level": 35,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "hp-fire",
                         "sing",
                         "shadow-ball"
@@ -40100,7 +40520,7 @@
                     "item": "Focus Band",
                     "level": 38,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "hp-fighting",
                         "shadow-ball"
                     ],
@@ -40160,7 +40580,7 @@
                     "level": 35,
                     "moves": [
                         "hypnosis",
-                        "psychic-m",
+                        "psychic",
                         "night-shade",
                         "reflect"
                     ],
@@ -40199,7 +40619,7 @@
                     "level": 35,
                     "moves": [
                         "flamethrower",
-                        "psychic-m",
+                        "psychic",
                         "iron-tail",
                         "confuse-ray"
                     ],
@@ -40209,7 +40629,7 @@
                     "item": "Berry Juice",
                     "level": 35,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "drill-peck",
                         "giga-drain",
                         "confuse-ray"
@@ -40309,7 +40729,7 @@
                         "hypnosis",
                         "night-shade",
                         "thunderbolt",
-                        "psychic-m"
+                        "psychic"
                     ],
                     "name": "misdreavus"
                 },
@@ -40320,7 +40740,7 @@
                         "confuse-ray",
                         "moonlight",
                         "body-slam",
-                        "psychic-m"
+                        "psychic"
                     ],
                     "name": "umbreon"
                 },
@@ -40372,7 +40792,7 @@
                     "item": "Leftovers",
                     "level": 38,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "softboiled",
                         "body-slam",
                         "ice-punch"
@@ -40411,7 +40831,7 @@
                     "level": 38,
                     "moves": [
                         "double-edge",
-                        "psychic-m",
+                        "psychic",
                         "thunder-wave",
                         "thunderbolt"
                     ],
@@ -40507,7 +40927,7 @@
                         "waterfall",
                         "ice-beam",
                         "hypnosis",
-                        "psychic-m"
+                        "psychic"
                     ],
                     "name": "golduck"
                 },
@@ -40609,7 +41029,7 @@
                     "item": "Miracle Seed",
                     "level": 39,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "reflect",
                         "drill-peck",
                         "giga-drain"
@@ -40640,7 +41060,7 @@
                     "item": "Leftovers",
                     "level": 39,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "tri-attack",
                         "recover",
                         "shadow-ball"
@@ -40808,7 +41228,7 @@
                     "level": 40,
                     "moves": [
                         "waterfall",
-                        "psychic-m",
+                        "psychic",
                         "ice-beam"
                     ],
                     "name": "golduck"
@@ -40819,7 +41239,7 @@
                     "moves": [
                         "thunderbolt",
                         "waterfall",
-                        "psychic-m",
+                        "psychic",
                         "ice-beam"
                     ],
                     "name": "starmie"
@@ -41227,7 +41647,7 @@
                     "item": "Brightpowder",
                     "level": 41,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "drill-peck",
                         "giga-drain",
                         "shadow-ball"
@@ -41290,7 +41710,7 @@
                     "item": "Miracleberry",
                     "level": 41,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "thunderpunch",
                         "ice-punch",
                         "fire-punch"
@@ -41593,7 +42013,7 @@
                     "item": "Quick Claw",
                     "level": 47,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "ice-beam",
                         "waterfall",
                         "earthquake"
@@ -41639,7 +42059,7 @@
                     "moves": [
                         "giga-drain",
                         "selfdestruct",
-                        "psychic-m"
+                        "psychic"
                     ],
                     "name": "exeggutor"
                 }
@@ -41765,7 +42185,7 @@
                     "level": 47,
                     "moves": [
                         "giga-drain",
-                        "psychic-m",
+                        "psychic",
                         "shadow-ball",
                         "drill-peck"
                     ],
@@ -42167,7 +42587,7 @@
                     "item": "Quick Claw",
                     "level": 48,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "giga-drain",
                         "ancientpower"
                     ],
@@ -42188,7 +42608,7 @@
                     "item": "Miracleberry",
                     "level": 48,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "ice-punch",
                         "fire-punch",
                         "thunderbolt"
@@ -42458,7 +42878,7 @@
                     "item": "Miracleberry",
                     "level": 51,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "hp-fire",
                         "growth"
                     ],
@@ -42522,7 +42942,7 @@
                     "level": 52,
                     "moves": [
                         "giga-drain",
-                        "psychic-m",
+                        "psychic",
                         "hp-fire",
                         "drill-peck"
                     ],
@@ -42635,7 +43055,7 @@
                         "explosion",
                         "sludge-bomb",
                         "thunderbolt",
-                        "psychic-m"
+                        "psychic"
                     ],
                     "name": "weezing"
                 }
@@ -42659,7 +43079,7 @@
                     "item": "Leftovers",
                     "level": 52,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "ice-beam",
                         "waterfall",
                         "recover"
@@ -42670,7 +43090,7 @@
                     "item": "Miracleberry",
                     "level": 52,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "thunderbolt",
                         "fire-punch",
                         "reflect"
@@ -42688,7 +43108,7 @@
                     "moves": [
                         "hypnosis",
                         "night-shade",
-                        "psychic-m",
+                        "psychic",
                         "thunderbolt"
                     ],
                     "name": "misdreavus"
@@ -42719,7 +43139,7 @@
                         "sleep-powder",
                         "giga-drain",
                         "explosion",
-                        "psychic-m"
+                        "psychic"
                     ],
                     "name": "exeggutor"
                 },
@@ -42785,7 +43205,7 @@
                     "level": 53,
                     "moves": [
                         "sing",
-                        "psychic-m",
+                        "psychic",
                         "psywave",
                         "hp-fire"
                     ],
@@ -42915,7 +43335,7 @@
                     "item": "Twistedspoon",
                     "level": 54,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "body-slam",
                         "shadow-ball",
                         "thunderbolt"
@@ -43008,7 +43428,7 @@
                     "moves": [
                         "lovely-kiss",
                         "ice-beam",
-                        "psychic-m",
+                        "psychic",
                         "destiny-bond"
                     ],
                     "name": "jynx"
@@ -43080,7 +43500,7 @@
                         "sky-attack",
                         "ice-beam",
                         "hp-grass",
-                        "psychic-m"
+                        "psychic"
                     ],
                     "name": "articuno"
                 }
@@ -43113,7 +43533,7 @@
                     "item": "Miracleberry",
                     "level": 54,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "hp-fire",
                         "shadow-ball",
                         "morning-sun"
@@ -43199,7 +43619,7 @@
                     "moves": [
                         "hypnosis",
                         "sky-attack",
-                        "psychic-m",
+                        "psychic",
                         "steel-wing"
                     ],
                     "name": "noctowl"
@@ -43330,7 +43750,7 @@
                     "level": 55,
                     "moves": [
                         "giga-drain",
-                        "psychic-m",
+                        "psychic",
                         "drill-peck",
                         "confuse-ray"
                     ],
@@ -43481,7 +43901,7 @@
                         "tri-attack",
                         "ice-beam",
                         "thunderbolt",
-                        "psychic-m"
+                        "psychic"
                     ],
                     "name": "porygon2"
                 },
@@ -43510,7 +43930,7 @@
                     "moves": [
                         "fire-blast",
                         "waterfall",
-                        "psychic-m",
+                        "psychic",
                         "earthquake"
                     ],
                     "name": "slowbro"
@@ -43740,7 +44160,7 @@
                     "level": 63,
                     "moves": [
                         "hypnosis",
-                        "psychic-m",
+                        "psychic",
                         "fire-punch",
                         "thunderpunch"
                     ],
@@ -43881,7 +44301,7 @@
                         "flamethrower",
                         "cross-chop",
                         "thunderpunch",
-                        "psychic-m"
+                        "psychic"
                     ],
                     "name": "magmar"
                 },
@@ -43890,7 +44310,7 @@
                     "level": 62,
                     "moves": [
                         "fire-punch",
-                        "psychic-m",
+                        "psychic",
                         "thunderpunch",
                         "seismic-toss"
                     ],
@@ -43901,7 +44321,7 @@
                     "level": 63,
                     "moves": [
                         "ice-punch",
-                        "psychic-m",
+                        "psychic",
                         "thunderbolt",
                         "fire-punch"
                     ],
@@ -44004,7 +44424,7 @@
                     "level": 60,
                     "moves": [
                         "selfdestruct",
-                        "psychic-m",
+                        "psychic",
                         "sleep-powder",
                         "giga-drain"
                     ],
@@ -44134,7 +44554,7 @@
                     "moves": [
                         "lovely-kiss",
                         "ice-beam",
-                        "psychic-m",
+                        "psychic",
                         "seismic-toss"
                     ],
                     "name": "jynx"
@@ -44198,7 +44618,7 @@
                     "level": 63,
                     "moves": [
                         "thunderbolt",
-                        "psychic-m",
+                        "psychic",
                         "cross-chop",
                         "fire-punch"
                     ],
@@ -44293,7 +44713,7 @@
                     "level": 63,
                     "moves": [
                         "thunderbolt",
-                        "psychic-m",
+                        "psychic",
                         "cross-chop",
                         "ice-punch"
                     ],
@@ -44380,7 +44800,7 @@
                     "level": 63,
                     "moves": [
                         "thunderbolt",
-                        "psychic-m",
+                        "psychic",
                         "cross-chop",
                         "hp-grass"
                     ],
@@ -44456,7 +44876,7 @@
                     "level": 63,
                     "moves": [
                         "flamethrower",
-                        "psychic-m",
+                        "psychic",
                         "hp-grass",
                         "iron-tail"
                     ],
@@ -44535,7 +44955,7 @@
                         "hypnosis",
                         "thunderbolt",
                         "return",
-                        "psychic-m"
+                        "psychic"
                     ],
                     "name": "girafarig"
                 },
@@ -44603,7 +45023,7 @@
                         "waterfall",
                         "ice-beam",
                         "thunderbolt",
-                        "psychic-m"
+                        "psychic"
                     ],
                     "name": "lapras"
                 }
@@ -44683,7 +45103,7 @@
                     "item": "Blackglasses",
                     "level": 63,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "pursuit",
                         "hp-fire",
                         "crunch"
@@ -44699,7 +45119,7 @@
                     "item": "Miracleberry",
                     "level": 63,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "thunderbolt",
                         "hypnosis",
                         "shadow-ball"
@@ -44718,7 +45138,7 @@
                     "item": "Miracleberry",
                     "level": 63,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "drill-peck",
                         "giga-drain",
                         "hp-fire"
@@ -44797,7 +45217,7 @@
                         "flamethrower",
                         "cross-chop",
                         "thunderpunch",
-                        "psychic-m"
+                        "psychic"
                     ],
                     "name": "magmar"
                 },
@@ -44862,7 +45282,7 @@
                     "item": "Leftovers",
                     "level": 64,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "hp-fire",
                         "crunch",
                         "moonlight"
@@ -44885,7 +45305,7 @@
                     "level": 64,
                     "moves": [
                         "fire-punch",
-                        "psychic-m",
+                        "psychic",
                         "submission",
                         "shadow-ball"
                     ],
@@ -44961,7 +45381,7 @@
                     "level": 64,
                     "moves": [
                         "ice-beam",
-                        "psychic-m",
+                        "psychic",
                         "waterfall",
                         "earthquake"
                     ],
@@ -45010,7 +45430,7 @@
                     "level": 64,
                     "moves": [
                         "thunderpunch",
-                        "psychic-m",
+                        "psychic",
                         "fire-punch",
                         "ice-punch"
                     ],
@@ -45023,7 +45443,7 @@
                         "waterfall",
                         "ice-beam",
                         "thunderbolt",
-                        "psychic-m"
+                        "psychic"
                     ],
                     "name": "starmie"
                 },
@@ -45045,7 +45465,7 @@
                         "tri-attack",
                         "ice-beam",
                         "thunderbolt",
-                        "psychic-m"
+                        "psychic"
                     ],
                     "name": "porygon2"
                 },
@@ -45202,7 +45622,7 @@
                     "item": "Twistedspoon",
                     "level": 63,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "hypnosis",
                         "thunderbolt",
                         "fire-punch"
@@ -45213,7 +45633,7 @@
                     "item": "Twistedspoon",
                     "level": 63,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "giga-drain",
                         "drill-peck",
                         "thunder-wave"
@@ -45224,7 +45644,7 @@
                     "item": "Twistedspoon",
                     "level": 63,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "lovely-kiss",
                         "ice-beam",
                         "seismic-toss"
@@ -45235,7 +45655,7 @@
                     "item": "Twistedspoon",
                     "level": 63,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "thunderbolt",
                         "body-slam",
                         "shadow-ball"
@@ -45254,7 +45674,7 @@
                     "item": "Twistedspoon",
                     "level": 63,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "sleep-powder",
                         "giga-drain",
                         "hp-fire"
@@ -45273,7 +45693,7 @@
                     "item": "Twistedspoon",
                     "level": 63,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "sing",
                         "morning-sun",
                         "hp-fire"
@@ -45332,7 +45752,7 @@
                         "hydro-pump",
                         "blizzard",
                         "hypnosis",
-                        "psychic-m"
+                        "psychic"
                     ],
                     "name": "golduck"
                 }
@@ -45638,7 +46058,7 @@
                         "recover",
                         "waterfall",
                         "ice-beam",
-                        "psychic-m"
+                        "psychic"
                     ],
                     "name": "starmie"
                 },
@@ -45800,7 +46220,7 @@
                     "level": 68,
                     "moves": [
                         "hypnosis",
-                        "psychic-m",
+                        "psychic",
                         "thunderbolt",
                         "fire-punch"
                     ],
@@ -45883,7 +46303,7 @@
                     "item": "Miracleberry",
                     "level": 66,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "thunderbolt",
                         "return",
                         "rest"
@@ -45958,7 +46378,7 @@
                     "moves": [
                         "return",
                         "hypnosis",
-                        "psychic-m",
+                        "psychic",
                         "earthquake"
                     ],
                     "name": "stantler"
@@ -46033,7 +46453,7 @@
                         "sludge-bomb",
                         "leech-life",
                         "sleep-powder",
-                        "psychic-m"
+                        "psychic"
                     ],
                     "name": "venomoth"
                 },
@@ -46062,7 +46482,7 @@
                     "moves": [
                         "lovely-kiss",
                         "ice-beam",
-                        "psychic-m",
+                        "psychic",
                         "hp-fire"
                     ],
                     "name": "jynx"
@@ -46309,7 +46729,7 @@
                     "level": 69,
                     "moves": [
                         "thunderbolt",
-                        "psychic-m",
+                        "psychic",
                         "cross-chop",
                         "fire-punch"
                     ],
@@ -46390,7 +46810,7 @@
                         "thunder-wave",
                         "waterfall",
                         "ice-beam",
-                        "psychic-m"
+                        "psychic"
                     ],
                     "name": "slowbro"
                 },
@@ -46506,7 +46926,7 @@
                     "level": 69,
                     "moves": [
                         "thunderbolt",
-                        "psychic-m",
+                        "psychic",
                         "waterfall",
                         "ice-beam"
                     ],
@@ -46548,7 +46968,7 @@
                     "moves": [
                         "flamethrower",
                         "thunderbolt",
-                        "psychic-m",
+                        "psychic",
                         "cross-chop"
                     ],
                     "name": "magmar"
@@ -46666,7 +47086,7 @@
                     "moves": [
                         "lovely-kiss",
                         "ice-beam",
-                        "psychic-m",
+                        "psychic",
                         "hp-fire"
                     ],
                     "name": "jynx"
@@ -46720,7 +47140,7 @@
                     "moves": [
                         "hypnosis",
                         "thunderpunch",
-                        "psychic-m",
+                        "psychic",
                         "fire-punch"
                     ],
                     "name": "alakazam"
@@ -46768,7 +47188,7 @@
                     "item": "Miracleberry",
                     "level": 70,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "giga-drain",
                         "drill-peck",
                         "thunder-wave"
@@ -46782,7 +47202,7 @@
                         "waterfall",
                         "ice-beam",
                         "flamethrower",
-                        "psychic-m"
+                        "psychic"
                     ],
                     "name": "slowbro"
                 },
@@ -46800,7 +47220,7 @@
                     "moves": [
                         "lovely-kiss",
                         "ice-beam",
-                        "psychic-m",
+                        "psychic",
                         "hp-fire"
                     ],
                     "name": "jynx"
@@ -46865,7 +47285,7 @@
                     "level": 68,
                     "moves": [
                         "thunderbolt",
-                        "psychic-m",
+                        "psychic",
                         "hp-fire",
                         "hypnosis"
                     ],
@@ -46896,7 +47316,7 @@
                     "moves": [
                         "sleep-powder",
                         "giga-drain",
-                        "psychic-m",
+                        "psychic",
                         "hp-fire"
                     ],
                     "name": "exeggutor"
@@ -46908,7 +47328,7 @@
                         "hypnosis",
                         "frustration",
                         "earthquake",
-                        "psychic-m"
+                        "psychic"
                     ],
                     "name": "stantler"
                 }
@@ -47051,7 +47471,7 @@
                         "flamethrower",
                         "thunderbolt",
                         "cross-chop",
-                        "psychic-m"
+                        "psychic"
                     ],
                     "name": "magmar"
                 }
@@ -47201,7 +47621,7 @@
                         "recover",
                         "waterfall",
                         "thunderbolt",
-                        "psychic-m"
+                        "psychic"
                     ],
                     "name": "starmie"
                 }
@@ -47483,7 +47903,7 @@
                     "level": 73,
                     "moves": [
                         "psywave",
-                        "psychic-m",
+                        "psychic",
                         "hp-fire",
                         "morning-sun"
                     ],
@@ -47513,7 +47933,7 @@
                     "level": 72,
                     "moves": [
                         "hp-fire",
-                        "psychic-m",
+                        "psychic",
                         "giga-drain",
                         "ancientpower"
                     ],
@@ -47535,7 +47955,7 @@
                     "level": 73,
                     "moves": [
                         "fire-blast",
-                        "psychic-m",
+                        "psychic",
                         "waterfall",
                         "earthquake"
                     ],
@@ -47546,7 +47966,7 @@
                     "level": 72,
                     "moves": [
                         "ice-punch",
-                        "psychic-m",
+                        "psychic",
                         "fire-punch",
                         "thunderpunch"
                     ],
@@ -47776,7 +48196,7 @@
                         "hypnosis",
                         "psywave",
                         "thunderbolt",
-                        "psychic-m"
+                        "psychic"
                     ],
                     "name": "misdreavus"
                 },
@@ -47804,7 +48224,7 @@
                     "level": 73,
                     "moves": [
                         "submission",
-                        "psychic-m",
+                        "psychic",
                         "shadow-ball",
                         "reflect"
                     ],
@@ -48067,7 +48487,7 @@
                     "item": "Miracleberry",
                     "level": 74,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "thunderbolt",
                         "hypnosis",
                         "hp-water"
@@ -48092,7 +48512,7 @@
                         "flamethrower",
                         "thunderbolt",
                         "cross-chop",
-                        "psychic-m"
+                        "psychic"
                     ],
                     "name": "magmar"
                 },
@@ -48167,7 +48587,7 @@
                     "moves": [
                         "lovely-kiss",
                         "double-edge",
-                        "psychic-m",
+                        "psychic",
                         "ice-beam"
                     ],
                     "name": "wigglytuff"
@@ -48207,7 +48627,7 @@
                     "level": 74,
                     "moves": [
                         "return",
-                        "psychic-m",
+                        "psychic",
                         "shadow-ball",
                         "hp-fighting"
                     ],
@@ -48220,7 +48640,7 @@
                         "waterfall",
                         "ice-beam",
                         "thunderbolt",
-                        "psychic-m"
+                        "psychic"
                     ],
                     "name": "starmie"
                 }
@@ -48261,7 +48681,7 @@
                     "item": "Miracleberry",
                     "level": 75,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "hp-water",
                         "thunderbolt",
                         "lovely-kiss"
@@ -48386,7 +48806,7 @@
                     "moves": [
                         "lovely-kiss",
                         "ice-beam",
-                        "psychic-m",
+                        "psychic",
                         "hp-water"
                     ],
                     "name": "jynx"
@@ -48430,7 +48850,7 @@
                     "item": "Leftovers",
                     "level": 76,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "ice-beam",
                         "waterfall",
                         "thunderbolt"
@@ -48636,7 +49056,7 @@
                     "level": 74,
                     "moves": [
                         "shadow-ball",
-                        "psychic-m",
+                        "psychic",
                         "submission",
                         "destiny-bond"
                     ],
@@ -48666,7 +49086,7 @@
                     "level": 76,
                     "moves": [
                         "submission",
-                        "psychic-m",
+                        "psychic",
                         "hypnosis",
                         "body-slam"
                     ],
@@ -48677,7 +49097,7 @@
                     "level": 76,
                     "moves": [
                         "pain-split",
-                        "psychic-m",
+                        "psychic",
                         "thunderbolt",
                         "night-shade"
                     ],
@@ -48693,7 +49113,7 @@
                     "level": 77,
                     "moves": [
                         "sky-attack",
-                        "psychic-m",
+                        "psychic",
                         "drill-peck",
                         "night-shade"
                     ],
@@ -48704,7 +49124,7 @@
                     "level": 77,
                     "moves": [
                         "reflect",
-                        "psychic-m",
+                        "psychic",
                         "thunderbolt",
                         "hypnosis"
                     ],
@@ -48725,7 +49145,7 @@
                     "item": "Charcoal",
                     "level": 77,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "ice-punch",
                         "fire-punch",
                         "thunderpunch"
@@ -48761,7 +49181,7 @@
                     "level": 77,
                     "moves": [
                         "destiny-bond",
-                        "psychic-m",
+                        "psychic",
                         "thunderbolt",
                         "pain-split"
                     ],
@@ -48773,7 +49193,7 @@
                     "moves": [
                         "hydro-pump",
                         "thunderbolt",
-                        "psychic-m",
+                        "psychic",
                         "ice-beam"
                     ],
                     "name": "starmie"
@@ -48782,7 +49202,7 @@
                     "item": "Leftovers",
                     "level": 77,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "ice-punch",
                         "thunderbolt",
                         "hyper-beam"
@@ -48802,7 +49222,7 @@
                         "double-edge",
                         "thunderbolt",
                         "shadow-ball",
-                        "psychic-m"
+                        "psychic"
                     ],
                     "name": "girafarig"
                 },
@@ -48831,7 +49251,7 @@
                     "moves": [
                         "sky-attack",
                         "double-edge",
-                        "psychic-m",
+                        "psychic",
                         "hp-fire"
                     ],
                     "name": "noctowl"
@@ -48857,7 +49277,7 @@
                     "level": 77,
                     "moves": [
                         "ice-beam",
-                        "psychic-m",
+                        "psychic",
                         "submission",
                         "shadow-ball"
                     ],
@@ -48895,7 +49315,7 @@
                     "level": 78,
                     "moves": [
                         "lovely-kiss",
-                        "psychic-m",
+                        "psychic",
                         "ice-beam",
                         "hp-fire"
                     ],
@@ -48926,7 +49346,7 @@
                     "moves": [
                         "thunderpunch",
                         "fire-punch",
-                        "psychic-m",
+                        "psychic",
                         "ice-punch"
                     ],
                     "name": "alakazam"
@@ -48937,7 +49357,7 @@
                     "moves": [
                         "waterfall",
                         "flamethrower",
-                        "psychic-m",
+                        "psychic",
                         "ice-beam"
                     ],
                     "name": "slowking"
@@ -49068,7 +49488,7 @@
                     "level": 80,
                     "moves": [
                         "explosion",
-                        "psychic-m",
+                        "psychic",
                         "giga-drain",
                         "hp-fire"
                     ],
@@ -49108,7 +49528,7 @@
                     "item": "Pink Bow",
                     "level": 80,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "thunderbolt",
                         "ice-beam",
                         "hyper-beam"
@@ -49177,7 +49597,7 @@
                     "moves": [
                         "fire-blast",
                         "waterfall",
-                        "psychic-m",
+                        "psychic",
                         "ice-beam"
                     ],
                     "name": "slowbro"
@@ -49199,7 +49619,7 @@
                     "moves": [
                         "pain-split",
                         "hypnosis",
-                        "psychic-m",
+                        "psychic",
                         "thunderbolt"
                     ],
                     "name": "misdreavus"
@@ -49237,7 +49657,7 @@
                     "level": 77,
                     "moves": [
                         "waterfall",
-                        "psychic-m",
+                        "psychic",
                         "thunderbolt",
                         "recover"
                     ],
@@ -49337,7 +49757,7 @@
                     "moves": [
                         "waterfall",
                         "ice-beam",
-                        "psychic-m",
+                        "psychic",
                         "disable"
                     ],
                     "name": "golduck"
@@ -49569,7 +49989,7 @@
                         "hypnosis",
                         "sky-attack",
                         "double-edge",
-                        "psychic-m"
+                        "psychic"
                     ],
                     "name": "noctowl"
                 },
@@ -49580,7 +50000,7 @@
                         "hypnosis",
                         "waterfall",
                         "ice-beam",
-                        "psychic-m"
+                        "psychic"
                     ],
                     "name": "golduck"
                 },
@@ -49599,7 +50019,7 @@
                     "item": "Miracle Seed",
                     "level": 82,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "giga-drain",
                         "sky-attack",
                         "hypnosis"
@@ -49655,7 +50075,7 @@
                     "level": 81,
                     "moves": [
                         "double-edge",
-                        "psychic-m",
+                        "psychic",
                         "ice-punch",
                         "thunderpunch"
                     ],
@@ -49714,7 +50134,7 @@
                     "moves": [
                         "ice-beam",
                         "softboiled",
-                        "psychic-m",
+                        "psychic",
                         "sing"
                     ],
                     "name": "chansey"
@@ -49913,7 +50333,7 @@
                     "level": 83,
                     "moves": [
                         "return",
-                        "psychic-m",
+                        "psychic",
                         "earthquake",
                         "shadow-ball"
                     ],
@@ -50240,7 +50660,7 @@
                     "level": 85,
                     "moves": [
                         "hypnosis",
-                        "psychic-m",
+                        "psychic",
                         "shadow-ball",
                         "hp-water"
                     ],
@@ -50352,7 +50772,7 @@
                         "waterfall",
                         "ice-beam",
                         "thunderbolt",
-                        "psychic-m"
+                        "psychic"
                     ],
                     "name": "lapras"
                 },
@@ -50417,7 +50837,7 @@
                         "return",
                         "ice-beam",
                         "thunderbolt",
-                        "psychic-m"
+                        "psychic"
                     ],
                     "name": "wigglytuff"
                 }
@@ -50532,7 +50952,7 @@
                         "ancientpower",
                         "sleep-powder",
                         "giga-drain",
-                        "psychic-m"
+                        "psychic"
                     ],
                     "name": "exeggutor"
                 },
@@ -50548,7 +50968,7 @@
                     "item": "Leftovers",
                     "level": 86,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "giga-drain",
                         "ancientpower",
                         "hp-fire"
@@ -50614,7 +51034,7 @@
                     "level": 85,
                     "moves": [
                         "flamethrower",
-                        "psychic-m",
+                        "psychic",
                         "thunderpunch",
                         "cross-chop"
                     ],
@@ -50697,7 +51117,7 @@
                     "moves": [
                         "fire-blast",
                         "hp-grass",
-                        "psychic-m",
+                        "psychic",
                         "confuse-ray"
                     ],
                     "name": "ninetales"
@@ -50827,7 +51247,7 @@
                     "item": "Miracleberry",
                     "level": 86,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "earthquake",
                         "return",
                         "shadow-ball"
@@ -50862,7 +51282,7 @@
                     "moves": [
                         "sleep-powder",
                         "giga-drain",
-                        "psychic-m",
+                        "psychic",
                         "sludge-bomb"
                     ],
                     "name": "venomoth"
@@ -51011,7 +51431,7 @@
                     "level": 88,
                     "moves": [
                         "hypnosis",
-                        "psychic-m",
+                        "psychic",
                         "sky-attack",
                         "hp-water"
                     ],
@@ -51069,7 +51489,7 @@
                     "level": 87,
                     "moves": [
                         "hypnosis",
-                        "psychic-m",
+                        "psychic",
                         "hp-grass",
                         "thunderbolt"
                     ],
@@ -51206,7 +51626,7 @@
                     "moves": [
                         "reflect",
                         "light-screen",
-                        "psychic-m",
+                        "psychic",
                         "swagger"
                     ],
                     "name": "mr-mime"
@@ -51228,7 +51648,7 @@
                     "moves": [
                         "fire-blast",
                         "waterfall",
-                        "psychic-m",
+                        "psychic",
                         "earthquake"
                     ],
                     "name": "slowking"
@@ -51237,7 +51657,7 @@
                     "item": "Pink Bow",
                     "level": 87,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "double-edge",
                         "submission",
                         "thunder-wave"
@@ -51254,7 +51674,7 @@
                     "level": 87,
                     "moves": [
                         "giga-drain",
-                        "psychic-m",
+                        "psychic",
                         "ancientpower",
                         "egg-bomb"
                     ],
@@ -51276,7 +51696,7 @@
                     "level": 87,
                     "moves": [
                         "lovely-kiss",
-                        "psychic-m",
+                        "psychic",
                         "ice-beam",
                         "perish-song"
                     ],
@@ -51289,7 +51709,7 @@
                         "pain-split",
                         "thunder-wave",
                         "night-shade",
-                        "psychic-m"
+                        "psychic"
                     ],
                     "name": "misdreavus"
                 }
@@ -51303,7 +51723,7 @@
                     "item": "Quick Claw",
                     "level": 87,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "giga-drain",
                         "sleep-powder",
                         "sludge-bomb"
@@ -51322,7 +51742,7 @@
                     "item": "Brightpowder",
                     "level": 87,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "light-screen",
                         "giga-drain",
                         "hp-fire"
@@ -51365,7 +51785,7 @@
                     "moves": [
                         "megahorn",
                         "sludge-bomb",
-                        "psychic-m",
+                        "psychic",
                         "hp-rock"
                     ],
                     "name": "ariados"
@@ -51522,7 +51942,7 @@
                     "item": "Leftovers",
                     "level": 88,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "hp-water",
                         "psywave",
                         "morning-sun"
@@ -51666,7 +52086,7 @@
                     "moves": [
                         "sleep-powder",
                         "giga-drain",
-                        "psychic-m",
+                        "psychic",
                         "selfdestruct"
                     ],
                     "name": "exeggutor"
@@ -51782,7 +52202,7 @@
                     "item": "Leftovers",
                     "level": 90,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "earthquake",
                         "flamethrower",
                         "waterfall"
@@ -51821,7 +52241,7 @@
                     "item": "Charcoal",
                     "level": 90,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "fire-punch",
                         "ice-punch",
                         "thunderpunch"
@@ -51900,7 +52320,7 @@
                     "item": "Nevermeltice",
                     "level": 90,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "fire-punch",
                         "ice-punch",
                         "thunderpunch"
@@ -51979,7 +52399,7 @@
                     "item": "Magnet",
                     "level": 90,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "fire-punch",
                         "ice-punch",
                         "thunderpunch"
@@ -52091,7 +52511,7 @@
                     "moves": [
                         "hydro-pump",
                         "ice-beam",
-                        "psychic-m",
+                        "psychic",
                         "hypnosis"
                     ],
                     "name": "golduck"
@@ -52244,7 +52664,7 @@
                     "item": "Twistedspoon",
                     "level": 100,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "fire-blast",
                         "blizzard",
                         "thunder"
@@ -52317,7 +52737,7 @@
                     "item": "Leftovers",
                     "level": 91,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "recover",
                         "ice-beam",
                         "waterfall"
@@ -52329,7 +52749,7 @@
                     "level": 91,
                     "moves": [
                         "fire-blast",
-                        "psychic-m",
+                        "psychic",
                         "iron-tail",
                         "quick-attack"
                     ],
@@ -52516,7 +52936,7 @@
                     "item": "Scope Lens",
                     "level": 92,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "ice-beam",
                         "lovely-kiss",
                         "destiny-bond"
@@ -52589,7 +53009,7 @@
                     "level": 91,
                     "moves": [
                         "recover",
-                        "psychic-m",
+                        "psychic",
                         "waterfall",
                         "earthquake"
                     ],
@@ -52739,7 +53159,7 @@
                         "hydro-pump",
                         "thunder",
                         "ice-beam",
-                        "psychic-m"
+                        "psychic"
                     ],
                     "name": "starmie"
                 },
@@ -52800,7 +53220,7 @@
                     "level": 94,
                     "moves": [
                         "thunder",
-                        "psychic-m",
+                        "psychic",
                         "hp-water",
                         "shadow-ball"
                     ],
@@ -52825,7 +53245,7 @@
                     "level": 93,
                     "moves": [
                         "ice-beam",
-                        "psychic-m",
+                        "psychic",
                         "lovely-kiss",
                         "hp-water"
                     ],
@@ -52837,7 +53257,7 @@
                     "moves": [
                         "thunderbolt",
                         "fire-punch",
-                        "psychic-m",
+                        "psychic",
                         "ice-punch"
                     ],
                     "name": "electabuzz"
@@ -52896,7 +53316,7 @@
                         "waterfall",
                         "ice-beam",
                         "thunderbolt",
-                        "psychic-m"
+                        "psychic"
                     ],
                     "name": "starmie"
                 },
@@ -52934,7 +53354,7 @@
                     "moves": [
                         "light-screen",
                         "reflect",
-                        "psychic-m",
+                        "psychic",
                         "mach-punch"
                     ],
                     "name": "ledian"
@@ -53003,7 +53423,7 @@
                     "moves": [
                         "hydro-pump",
                         "ice-beam",
-                        "psychic-m",
+                        "psychic",
                         "hypnosis"
                     ],
                     "name": "golduck"
@@ -53176,7 +53596,7 @@
                     "level": 93,
                     "moves": [
                         "giga-drain",
-                        "psychic-m",
+                        "psychic",
                         "drill-peck",
                         "light-screen"
                     ],
@@ -53253,7 +53673,7 @@
                     "moves": [
                         "hydro-pump",
                         "thunderbolt",
-                        "psychic-m",
+                        "psychic",
                         "ice-beam"
                     ],
                     "name": "starmie"
@@ -53388,7 +53808,7 @@
                     "level": 96,
                     "moves": [
                         "waterfall",
-                        "psychic-m",
+                        "psychic",
                         "ice-beam",
                         "thunderbolt"
                     ],
@@ -53475,7 +53895,7 @@
                     "item": "Nevermeltice",
                     "level": 97,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "solarbeam",
                         "hp-ice",
                         "sacred-fire"
@@ -53492,7 +53912,7 @@
                     "item": "Brightpowder",
                     "level": 98,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "fire-punch",
                         "thunderpunch",
                         "ice-punch"
@@ -53574,7 +53994,7 @@
                     "moves": [
                         "hydro-pump",
                         "ice-beam",
-                        "psychic-m",
+                        "psychic",
                         "thunderbolt"
                     ],
                     "name": "starmie"
@@ -53611,7 +54031,7 @@
                     "level": 100,
                     "moves": [
                         "ancientpower",
-                        "psychic-m",
+                        "psychic",
                         "giga-drain",
                         "hp-fire"
                     ],
@@ -53632,7 +54052,7 @@
                         "ice-beam",
                         "sky-attack",
                         "hp-grass",
-                        "psychic-m"
+                        "psychic"
                     ],
                     "name": "articuno"
                 },
@@ -53641,7 +54061,7 @@
                     "level": 100,
                     "moves": [
                         "waterfall",
-                        "psychic-m",
+                        "psychic",
                         "ice-beam",
                         "fire-blast"
                     ],
@@ -53749,7 +54169,7 @@
                         "submission",
                         "softboiled",
                         "toxic",
-                        "psychic-m"
+                        "psychic"
                     ],
                     "name": "mew"
                 }
@@ -53986,7 +54406,7 @@
                     "level": 100,
                     "moves": [
                         "thunderbolt",
-                        "psychic-m",
+                        "psychic",
                         "ice-beam",
                         "waterfall"
                     ],
@@ -53996,7 +54416,7 @@
                     "item": "Leftovers",
                     "level": 100,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "submission",
                         "flamethrower",
                         "shadow-ball"
@@ -54035,7 +54455,7 @@
                     "item": "Brightpowder",
                     "level": 105,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "submission",
                         "softboiled",
                         "flamethrower"
@@ -54064,7 +54484,7 @@
                     "moves": [
                         "aeroblast",
                         "recover",
-                        "psychic-m",
+                        "psychic",
                         "hp-fire"
                     ],
                     "name": "lugia"
@@ -54073,7 +54493,7 @@
                     "item": "Brightpowder",
                     "level": 105,
                     "moves": [
-                        "psychic-m",
+                        "psychic",
                         "shadow-ball",
                         "thunderbolt",
                         "flamethrower"
@@ -56179,7 +56599,7 @@
                         "return",
                         "ice-beam",
                         "thunderbolt",
-                        "psychic-m"
+                        "psychic"
                     ],
                     "name": "wigglytuff"
                 },
@@ -56205,7 +56625,7 @@
                     "moves": [
                         "lovely-kiss",
                         "double-edge",
-                        "psychic-m",
+                        "psychic",
                         "ice-beam"
                     ],
                     "name": "wigglytuff"
@@ -56245,7 +56665,7 @@
                     "level": 74,
                     "moves": [
                         "return",
-                        "psychic-m",
+                        "psychic",
                         "shadow-ball",
                         "hp-fighting"
                     ],
@@ -56258,7 +56678,7 @@
                         "waterfall",
                         "ice-beam",
                         "thunderbolt",
-                        "psychic-m"
+                        "psychic"
                     ],
                     "name": "starmie"
                 }
@@ -56691,6 +57111,11 @@
         },
         {
             "attacker": "psychic",
+            "defender": "dark",
+            "multiplier": 0
+        },
+        {
+            "attacker": "psychic",
             "defender": "fighting",
             "multiplier": 2
         },
@@ -56703,11 +57128,6 @@
             "attacker": "psychic",
             "defender": "psychic",
             "multiplier": 0.5
-        },
-        {
-            "attacker": "psychic",
-            "defender": "dark",
-            "multiplier": 0
         },
         {
             "attacker": "psychic",
@@ -56892,6 +57312,11 @@
         {
             "attacker": "fighting",
             "defender": "ghost",
+            "multiplier": 0
+        },
+        {
+            "attacker": "psychic",
+            "defender": "dark",
             "multiplier": 0
         }
     ]

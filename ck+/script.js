@@ -175,9 +175,7 @@ var trueNames = [
 	"MiracleBerry",
 	"MysteryBerry",
 ];
-var nameFormatting = new Map([
-	["psychic-m", "Psychic"]
-]);
+var nameFormatting = new Map();
 
 var multiHitMoves = new Set([
 	"barrage", "bone-rush", "comet-punch", "doubleslap",
@@ -946,6 +944,13 @@ function getMoveName(move) {
 
 function getFullMoveDisplay(move) {
 	var v = "<p>" + getMoveName(move.name) + ":</p>";
+	if (move.extra) {
+		for (var i = 0; i < move.extra.length; i++) {
+			v += "<p>";
+			v += move.extra[i];
+			v += "</p>"
+		}
+	}
 	v += "<div><table>";
 	v += getMoveDisplay(move);
 	v += "</table></div>";
@@ -996,9 +1001,9 @@ function getMoveDisplay(move, level = undefined) {
 	v += '<td>' + move.accuracy + '%</td>';
 	v += '<td>' + move.pp + 'pp</td>';
 	if (move.extra && move.extra.length > 0) {
-		var alt = "Extra info from docs:"
+		var alt = "";
 		for (var i = 0; i < move.extra.length; i++) {
-			alt += "\n" + move.extra[i];
+			alt += move.extra[i];
 		}
 		v += '<td class="extra-info" title="' + alt + '">?</td>';
 	} else {
@@ -1067,6 +1072,9 @@ function hasSuperEffectiveMove(attacker, defender) {
 	for (var i = 0; i < attacker.moves.length; i++) {
 		var move = movesByName.get(attacker.moves[i]);
 		var type = move.type;
+		if (move.name.startsWith("hp-")) {
+			type = "normal";
+		}
 		var eff = 1;
 		eff *= getMatchup(type, pp.types[0]);
 		if (pp.types.length > 1) {
