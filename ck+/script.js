@@ -1191,11 +1191,11 @@ function hasSuperEffectiveMove(attacker, defender) {
 function hasTypeAdvantage(attacker, defender) {
 	var ap = pokemonByName.get(attacker.name);
 	var dp = pokemonByName.get(defender.name);
-	for (var i = 0; i < ap.types; i++) {
+	for (var i = 0; i < ap.types.length; i++) {
 		var t = ap.types[i];
 		var eff = 1;
 		eff *= getMatchup(t, dp.types[0]);
-		if (pp.types.length > 1) {
+		if (dp.types.length > 1) {
 			eff *= getMatchup(t, dp.types[1]);
 		}
 		if (eff > 1) {
