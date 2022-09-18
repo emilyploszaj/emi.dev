@@ -53,6 +53,106 @@ const attackBadges = 1;
 const defenseBadges = 7;
 const specialBadges = 6;
 const speedBadges = 3;
+const landmarksByIndex = new Map([
+	[0x00, "special"],
+	[0x01, "new-bark-town"],
+	[0x02, "route-29"],
+	[0x03, "cherrygrove-city"],
+	[0x04, "route-30"],
+	[0x05, "route-31"],
+	[0x06, "violet-city"],
+	[0x07, "sprout-tower"],
+	[0x08, "route-32"],
+	[0x09, "ruins-of-alph"],
+	[0x0A, "union-cave"],
+	[0x0B, "route-33"],
+	[0x0C, "azalea-town"],
+	[0x0D, "slowpoke-well"],
+	[0x0E, "ilex-forest"],
+	[0x0F, "route-34"],
+	[0x10, "goldenrod-city"],
+	[0x11, "radio-tower"],
+	[0x12, "route-35"],
+	[0x13, "national-park"],
+	[0x14, "route-36"],
+	[0x15, "route-37"],
+	[0x16, "ecruteak-city"],
+	[0x17, "tin-tower"],
+	[0x18, "burned-tower"],
+	[0x19, "route-38"],
+	[0x1A, "route-39"],
+	[0x1B, "olivine-city"],
+	[0x1C, "lighthouse"],
+	[0x1D, "battle-tower"],
+	[0x1E, "route-40"],
+	[0x1F, "whirl-islands"],
+	[0x20, "route-41"],
+	[0x21, "cianwood-city"],
+	[0x22, "route-42"],
+	[0x23, "mt-mortar"],
+	[0x24, "mahogany-town"],
+	[0x25, "route-43"],
+	[0x26, "lake-of-rage"],
+	[0x27, "route-44"],
+	[0x28, "ice-path"],
+	[0x29, "blackthorn-city"],
+	[0x2A, "dragon's-den"],
+	[0x2B, "route-45"],
+	[0x2C, "dark-cave"],
+	[0x2D, "route-46"],
+	[0x2E, "silver-cave"],
+	[0x2F, "pallet-town"],
+	[0x30, "route-1"],
+	[0x31, "viridian-city"],
+	[0x32, "route-2"],
+	[0x33, "pewter-city"],
+	[0x34, "route-3"],
+	[0x35, "mt-moon"],
+	[0x36, "route-4"],
+	[0x37, "cerulean-city"],
+	[0x38, "route-24"],
+	[0x39, "route-25"],
+	[0x3A, "route-5"],
+	[0x3B, "underground"],
+	[0x3C, "route-6"],
+	[0x3D, "vermilion-city"],
+	[0x3E, "digletts-cave"],
+	[0x3F, "route-7"],
+	[0x40, "route-8"],
+	[0x41, "route-9"],
+	[0x42, "rock-tunnel"],
+	[0x43, "route-10"],
+	[0x44, "power-plant"],
+	[0x45, "lavender-town"],
+	[0x46, "lav-radio-tower"],
+	[0x47, "celadon-city"],
+	[0x48, "saffron-city"],
+	[0x49, "route-11"],
+	[0x4A, "route-12"],
+	[0x4B, "route-13"],
+	[0x4C, "route-14"],
+	[0x4D, "route-15"],
+	[0x4E, "route-16"],
+	[0x4F, "route-17"],
+	[0x50, "route-18"],
+	[0x51, "fuchsia-city"],
+	[0x52, "route-19"],
+	[0x53, "route-20"],
+	[0x54, "seafoam-islands"],
+	[0x55, "cinnabar-island"],
+	[0x56, "route-21"],
+	[0x57, "route-22"],
+	[0x58, "victory-road"],
+	[0x59, "route-23"],
+	[0x5A, "indigo-plateau"],
+	[0x5B, "route-26"],
+	[0x5C, "route-27"],
+	[0x5D, "tohjo-falls"],
+	[0x5E, "route-28"],
+	[0x5F, "fast-ship"],
+	[0x7E, "unlabeled"],
+	[0x7F, "event"]
+]);
 const badgeTypes = new Map([
 	["flying", 1],
 	["bug", 2],
@@ -447,9 +547,10 @@ function displayCalcPokemon(root, poke, opponent, right) {
 	for (var i = 0; i < 4; i++) {
 		if (i < poke.moves.length) {
 			var p1 = "<td>" + getMoveName(poke.moves[i]) + "</td>"
-			var min = getDamage(poke, opponent, getStages(myStages), getStages(theirStages), movesByName.get(poke.moves[i]), player, false, true);
-			var max = getDamage(poke, opponent, getStages(myStages), getStages(theirStages), movesByName.get(poke.moves[i]), player, false, false);
-			var rolls = getDamage(poke, opponent, getStages(myStages), getStages(theirStages), movesByName.get(poke.moves[i]), player, false, false, true);
+			var move = movesByName.get(poke.moves[i]);
+			var min = getDamage(poke, opponent, getStages(myStages), getStages(theirStages), move, player, false, true);
+			var max = getDamage(poke, opponent, getStages(myStages), getStages(theirStages), move, player, false, false);
+			var rolls = getDamage(poke, opponent, getStages(myStages), getStages(theirStages), move, player, false, false, true);
 			var minPercent = Math.round(1000 * min / hp) / 10;
 			var maxPercent = Math.round(1000 * max / hp) / 10;
 			var extra = "";
@@ -462,15 +563,15 @@ function displayCalcPokemon(root, poke, opponent, right) {
 			var p2 = '<td class="' + extra + '"><ruby>' + min + " - " + max
 				+ "<rt>" + minPercent + "% - " + maxPercent + "%</rt></ruby>"
 				+ prettyRolls(rolls) + "</td>";
-			if (max == 0) {
+			if (max == 0 && move.power == 0) {
 				p2 = '<td>Status</td>';
 			}
 			if (opponent == undefined) {
 				p2 = "<td>-</td>";
 			}
-			var min = getDamage(poke, opponent, getStages(myStages), getStages(theirStages), movesByName.get(poke.moves[i]), player, true, true);
-			var max = getDamage(poke, opponent, getStages(myStages), getStages(theirStages), movesByName.get(poke.moves[i]), player, true, false);
-			var rolls = getDamage(poke, opponent, getStages(myStages), getStages(theirStages), movesByName.get(poke.moves[i]), player, true, false, true);
+			var min = getDamage(poke, opponent, getStages(myStages), getStages(theirStages), move, player, true, true);
+			var max = getDamage(poke, opponent, getStages(myStages), getStages(theirStages), move, player, true, false);
+			var rolls = getDamage(poke, opponent, getStages(myStages), getStages(theirStages), move, player, true, false, true);
 			var minPercent = Math.round(1000 * min / hp) / 10;
 			var maxPercent = Math.round(1000 * max / hp) / 10;
 			var extra = "";
@@ -483,7 +584,7 @@ function displayCalcPokemon(root, poke, opponent, right) {
 			var p3 = '<td class="crit' + extra + '"><ruby>' + min + " - " + max
 				+ "<rt>" + minPercent + "% - " + maxPercent + "%</rt></ruby>"
 				+ prettyRolls(rolls) + "</td>";
-			if (max == 0) {
+			if (max == 0 && move.power == 0) {
 				p3 = '<td><ruby><rt>​</rt></ruby></td>';
 			}
 			moves += "<tr>";
@@ -1061,7 +1162,7 @@ function getSwitchPriority(enemy, player) {
 	if (hasSuperEffectiveMove(enemy, player))  {
 		prio++;
 	}
-	if (hasSuperEffectiveMove(player, enemy)) {
+	if (hasTypeAdvantage(player, enemy)) {
 		prio--;
 	}
 	return prio;
@@ -1079,6 +1180,23 @@ function hasSuperEffectiveMove(attacker, defender) {
 		eff *= getMatchup(type, pp.types[0]);
 		if (pp.types.length > 1) {
 			eff *= getMatchup(type, pp.types[1]);
+		}
+		if (eff > 1) {
+			return true;
+		}
+	}
+	return false;
+}
+
+function hasTypeAdvantage(attacker, defender) {
+	var ap = pokemonByName.get(defender.name);
+	var dp = pokemonByName.get(defender.name);
+	for (var i = 0; i < ap.types; i++) {
+		var t = ap.types[i];
+		var eff = 1;
+		eff *= getMatchup(t, dp.types[0]);
+		if (pp.types.length > 1) {
+			eff *= getMatchup(t, dp.types[1]);
 		}
 		if (eff > 1) {
 			return true;
@@ -1427,29 +1545,32 @@ function getEditedPoke() {
 }
 
 function updateCalc() {
-	displayCalcPokemon(document.getElementById("player"), myPoke, theirPoke, false);
-	displayCalcPokemon(document.getElementById("opponent"), theirPoke, myPoke, true);
-	var v = "";
-	for (var i = 0; i < box.length && i < box.length; i++) {
-		var shiny = isShiny(box[i]) ? "shiny" : "normal";
-		var img = '<img src="https://img.pokemondb.net/sprites/crystal/' + shiny + '/' + box[i].name + '.png">';
-		v += '<div onclick="setPlayer(' + i + ')">' + img + "</div>";
-	}
-	document.getElementById("player").getElementsByClassName("calc-team")[0].innerHTML = v;
-	var v = "";
-	for (let i in enemyTeam) {
-		var shiny = isShiny(enemyTeam[i]) ? "shiny" : "normal";
-		var prio = getSwitchPriority(enemyTeam[i], myPoke);
-		var prioClass = "neutral-switch-priority";
-		if (prio < 0) {
-			prioClass = "low-switch-priority";
-		} else if (prio > 0) {
-			prioClass = "high-switch-priority";
+	try {
+		displayCalcPokemon(document.getElementById("player"), myPoke, theirPoke, false);
+		displayCalcPokemon(document.getElementById("opponent"), theirPoke, myPoke, true);
+		var v = "";
+		for (var i = 0; i < box.length && i < box.length; i++) {
+			var shiny = isShiny(box[i]) ? "shiny" : "normal";
+			var img = '<img src="https://img.pokemondb.net/sprites/crystal/' + shiny + '/' + box[i].name + '.png">';
+			v += '<div onclick="setPlayer(' + i + ')">' + img + "</div>";
 		}
-		var img = '<img class="' + prioClass + '" src="https://img.pokemondb.net/sprites/crystal/' + shiny + '/' + enemyTeam[i].name + '.png">';
-		v += '<div onclick="setEnemy(' + i + ')">' + img + "</div>";
+		document.getElementById("player").getElementsByClassName("calc-team")[0].innerHTML = v;
+		var v = "";
+		for (let i in enemyTeam) {
+			var shiny = isShiny(enemyTeam[i]) ? "shiny" : "normal";
+			var prio = getSwitchPriority(enemyTeam[i], myPoke);
+			var prioClass = "neutral-switch-priority";
+			if (prio < 0) {
+				prioClass = "low-switch-priority";
+			} else if (prio > 0) {
+				prioClass = "high-switch-priority";
+			}
+			var img = '<img class="' + prioClass + '" src="https://img.pokemondb.net/sprites/crystal/' + shiny + '/' + enemyTeam[i].name + '.png">';
+			v += '<div onclick="setEnemy(' + i + ')">' + img + "</div>";
+		}
+		document.getElementById("opponent").getElementsByClassName("calc-team")[0].innerHTML = v;
+	} catch(e) {
 	}
-	document.getElementById("opponent").getElementsByClassName("calc-team")[0].innerHTML = v;
 }
 
 function isShiny(poke) {
