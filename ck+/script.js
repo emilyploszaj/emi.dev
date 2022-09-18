@@ -1189,7 +1189,7 @@ function hasSuperEffectiveMove(attacker, defender) {
 }
 
 function hasTypeAdvantage(attacker, defender) {
-	var ap = pokemonByName.get(defender.name);
+	var ap = pokemonByName.get(attacker.name);
 	var dp = pokemonByName.get(defender.name);
 	for (var i = 0; i < ap.types; i++) {
 		var t = ap.types[i];
