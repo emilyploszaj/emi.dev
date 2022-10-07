@@ -114,7 +114,7 @@
 								<span class="status-info"></span>
 							</span>
 							<table>
-								<tr class="calc-hp"><td>HP</td><td><div class="stat-num"></div></td><td><button onclick="clearPlayerStages()">Clear</button></td></tr>
+								<tr class="calc-hp"><td>HP</td><td><div class="stat-num"></div></td><td><input class="player-current-hp" type="number" oninput="updateCalc()"></td><td><button onclick="clearPlayerStages()">Clear</button></td></tr>
 								<tr class="calc-atk"><td>Atk</td><td><div class="stat-num"></div></td><td><input class="player-stages" type="number" value="0" min="-6" max="6" oninput="updateCalc()"></td></tr>
 								<tr class="calc-def"><td>Def</td><td><div class="stat-num"></div></td><td><input class="player-stages" type="number" value="0" min="-6" max="6" oninput="updateCalc()"></td><td><input id="player-reflect" type="checkbox" oninput="updateCalc()"><label for="player-reflect" class="fake-checkbox" title="Reflect"></label></td></tr>
 								<tr class="calc-spa"><td>SpA</td><td><div class="stat-num"></div></td><td><input class="player-stages" type="number" value="0" min="-6" max="6" oninput="updateCalc()"></td></tr>
@@ -159,7 +159,7 @@
 								Status
 							</span>
 							<table>
-								<tr class="calc-hp"><td></td><td><button onclick="clearEnemyStages()">Clear</button></td><td><div class="stat-num"></div></td><td>HP</td></tr>
+								<tr class="calc-hp"><td><button onclick="clearEnemyStages()">Clear</button></td><td><input class="enemy-current-hp" type="number" oninput="updateCalc()"></td><td><div class="stat-num"></div></td><td>HP</td></tr>
 								<tr class="calc-atk"><td></td><td><input class="enemy-stages" type="number" value="0" min="-6" max="6" oninput="updateCalc()"></td><td><div class="stat-num"></div></td><td>Atk</td></tr>
 								<tr class="calc-def"><td><input id="enemy-reflect" type="checkbox" oninput="updateCalc()"><label for="enemy-reflect" class="fake-checkbox" title="Reflect"></label></td><td><input class="enemy-stages" type="number" value="0" min="-6" max="6" oninput="updateCalc()"></td><td><div class="stat-num"></div></td><td>Def</td></tr>
 								<tr class="calc-spa"><td></td><td><input class="enemy-stages" type="number" value="0" min="-6" max="6" oninput="updateCalc()"></td><td><div class="stat-num"></div></td><td>SpA</td></tr>

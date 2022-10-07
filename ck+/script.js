@@ -475,13 +475,13 @@ function displayCalcPokemon(root, poke, opponent, right) {
 	}
 	var status = "none";
 	var enemyStatus = "none";
+	var myHp = getPokeStat(poke, "hp");
 	if (root.getElementsByClassName("status-select")[0]) {
 		status = root.getElementsByClassName("status-select")[0].value;
 		enemyStatus = document.getElementById("opponent").getElementsByClassName("status-select")[0].value;
 		if (!player) {
 			enemyStatus = document.getElementById("player").getElementsByClassName("status-select")[0].value;
 		}
-		var myHp = getPokeStat(poke, "hp");
 		if (status == "brn" || status == "psn") {
 			var dealt = Math.max(1, parseInt(myHp / 8));
 			root.getElementsByClassName("status-info")[0].innerHTML = dealt + "/t";
@@ -495,7 +495,14 @@ function displayCalcPokemon(root, poke, opponent, right) {
 		} else {
 			root.getElementsByClassName("status-info")[0].innerHTML = "";
 		}
-	}	
+	}
+	var cHp = document.getElementsByClassName("player-current-hp")[0];
+	if (!player) {
+		cHp = document.getElementsByClassName("enemy-current-hp")[0];
+	}
+	if (cHp.value == "") {
+		cHp.value = myHp;
+	}
 
 	displayCalcStat(root.getElementsByClassName("calc-hp")[0], poke, "hp");
 	displayCalcStat(root.getElementsByClassName("calc-atk")[0], poke, "atk");
@@ -766,7 +773,7 @@ function displayPokemon(root, i) {
 	}
 	var encounters = pokemonEncounters.get(p.name);
 	if (encounters) {
-		var e = "<div>Encounters:</div>";
+		var e = "<details><summary>Encounters:</summary>";
 		for (const en of encounters.entries()) {
 			var area = en[0];
 			var parts = en[1];
@@ -781,6 +788,7 @@ function displayPokemon(root, i) {
 			}
 			e += "</div>";
 		}
+		e += "</details>"
 		root.getElementsByClassName("encounters")[0].innerHTML = e + "<br>";
 	} else {
 		root.getElementsByClassName("encounters")[0].innerHTML = "";
@@ -1227,6 +1235,27 @@ function getDamage(attacker, defender, attackerStages, defenderStages, move, pla
 		power = hp.power;
 		type = hp.type;
 	}
+	if (move.name == "flail" || move.name == "reversal") {
+		var mhp = getPokeStat(attacker, "hp");
+		var chp = parseInt(document.getElementsByClassName("player-current-hp")[0].value);
+		if (!player) {
+			chp = parseInt(document.getElementsByClassName("enemy-current-hp")[0].value);
+		}
+		var ratio = chp / mhp;
+		if (ratio < 0.0417) {
+			power = 200;
+		} else if (ratio < 0.1042) {
+			power = 150;
+		} else if (ratio < 0.2083) {
+			power = 100;
+		} else if (ratio < 0.3542) {
+			power = 80;
+		} else if (ratio < 0.6875) {
+			power = 40;
+		} else {
+			power = 20;
+		}
+	}
 	if (power == 0) {
 		return 0;
 	}
@@ -1325,6 +1354,18 @@ function getDamage(attacker, defender, attackerStages, defenderStages, move, pla
 		v = parseInt(v);
 	}
 	v += 2;
+
+	if (move.name == "triple-kick" && !giveAll) {
+		return getModdedDamage(v, attacker, defender, ap, dp, power, type, move, player, crit, low, giveAll, 1)
+			+ getModdedDamage(v, attacker, defender, ap, dp, power, type, move, player, crit, low, giveAll, 2)
+			+ getModdedDamage(v, attacker, defender, ap, dp, power, type, move, player, crit, low, giveAll, 3);
+	}
+
+	return getModdedDamage(v, attacker, defender, ap, dp, power, type, move, player, crit, low, giveAll, 1);
+}
+
+function getModdedDamage(v, attacker, defender, ap, dp, power, type, move, player, crit, low, giveAll, tk) {
+	v *= tk;
 
 	// TODO if (weather)
 
@@ -1570,6 +1611,7 @@ function updateCalc() {
 		}
 		document.getElementById("opponent").getElementsByClassName("calc-team")[0].innerHTML = v;
 	} catch(e) {
+		console.log(e);
 	}
 }
 
@@ -1740,6 +1782,7 @@ function clearPlayerStages() {
 	for (var i = 0; i < inputs.length; i++) {
 		inputs[i].value = "0";
 	}
+	document.getElementsByClassName("player-current-hp")[0].value = "";
 	updateCalc();
 }
 
@@ -1749,6 +1792,7 @@ function clearEnemyStages() {
 	for (var i = 0; i < inputs.length; i++) {
 		inputs[i].value = "0";
 	}
+	document.getElementsByClassName("enemy-current-hp")[0].value = "";
 	updateCalc();
 }
 

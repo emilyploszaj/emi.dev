@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Emily Ploszaj">
+	<title>Emi's Blog</title>
+	<link rel="stylesheet" href="https://fonts.bunny.net/css?family=Ubuntu+Mono">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h3>Tags:</h3>
+	<input id="tag-sweet" type="checkbox" autocomplete="off">
+	<label for="tag-sweet" class="tag label-sweet">Sweet</label>
+	<input id="tag-salty" type="checkbox" autocomplete="off">
+	<label for="tag-salty" class="tag label-salty">Salty</label>
+	<input id="tag-sour" type="checkbox" autocomplete="off">
+	<label for="tag-sour" class="tag label-sour">Sour</label>
+	<input id="tag-bitter" type="checkbox" autocomplete="off">
+	<label for="tag-bitter" class="tag label-bitter">Bitter</label>
+	<input id="tag-savory" type="checkbox" autocomplete="off">
+	<label for="tag-savory" class="tag label-savory">Savory</label>
+
+	<h3>Posts:</h3>
+
+	<div id="posts">
+		<div class="post tag-sweet">
+			<div><b>First date!</b></div>
+			<div class="display-tags">
+				<span class="display-tag label-sweet"></span>
+			</div>
+		</div>
+		<div class="post tag-sour">
+			<div><b>Time travelling with my dad's ex boyfriend!</b></div>
+			<div class="display-tags">
+				<span class="display-tag label-sour"></span>
+			</div>
+		</div>
+		<div class="post tag-sweet tag-bitter">
+			<div><b>Poison flavored glasses</b></div>
+			<div class="display-tags">
+				<span class="display-tag label-sweet"></span>
+				<span class="display-tag label-bitter"></span>
+			</div>
+		</div>
+		<div class="post tag-sour tag-bitter">
+			<div><b>A boxing match against my principle</b></div>
+			<div class="display-tags">
+				<span class="display-tag label-sour"></span>
+				<span class="display-tag label-bitter"></span>
+			</div>
+		</div>
+		<div class="post tag-sweet tag-salty tag-sour tag-bitter tag-savory">
+			<div><b>A little bit of everything</b></div>
+			<div class="display-tags">
+				<span class="display-tag label-sweet"></span>
+				<span class="display-tag label-salty"></span>
+				<span class="display-tag label-sour"></span>
+				<span class="display-tag label-bitter"></span>
+				<span class="display-tag label-savory"></span>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

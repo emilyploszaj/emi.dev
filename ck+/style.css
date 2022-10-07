@@ -88,6 +88,11 @@ input {
 	border-color: var(--grouping-background);
 }
 
+summary:hover {
+	cursor: pointer;
+	color: var(--highlighted);
+}
+
 input[type=number] {
 	width:50px;
 }
@@ -435,7 +440,15 @@ input:checked + .fake-checkbox {
 }
 
 .calc-stats table {
-	border-spacing: 5px;
+	border-spacing: 3px;
+}
+
+#opponent .fake-checkbox {
+	float: right;
+}
+
+#player .fake-checkbox {
+	float: left;
 }
 
 .move-calcs {
@@ -492,9 +505,13 @@ rt {
 }
 
 .low-switch-priority {
-	border-color: var(--low-switch-priority) !important;
+	border-left-color: var(--low-switch-priority) !important;
+	border-right-color: var(--low-switch-priority) !important;
+	border-bottom-color: var(--low-switch-priority) !important;
 }
 
 .high-switch-priority {
-	border-color: var(--high-switch-priority) !important;
+	border-left-color: var(--high-switch-priority) !important;
+	border-right-color: var(--high-switch-priority) !important;
+	border-top-color: var(--high-switch-priority) !important;
 }
