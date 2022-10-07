@@ -475,6 +475,19 @@ rt {
 	border-width: 3px;
 }
 
+#weather {
+	position: absolute;
+	left: calc(50% - 72px);
+	margin-top: 4px;
+	width: 128px;
+	padding: 6px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: var(--grouping-background);
+	background-color: var(--box-background);
+	text-align: center;
+}
+
 .crit {
 	color: var(--crit-text);
 }

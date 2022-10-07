@@ -1367,6 +1367,21 @@ function getDamage(attacker, defender, attackerStages, defenderStages, move, pla
 function getModdedDamage(v, attacker, defender, ap, dp, power, type, move, player, crit, low, giveAll, tk) {
 	v *= tk;
 
+	var weather = document.getElementById("current-weather").value;
+	if (weather == "rain") {
+		if (move.type == "fire" || move.name == "solar-beam") {
+			v = parseInt(v * 0.5);
+		} else if (move.type == "water") {
+			v = parseInt(v * 1.5);
+		}
+	} else if (weather == "sun") {
+		if (move.type == "water") {
+			v = parseInt(v * 0.5);
+		} else if (move.type == "fire") {
+			v = parseInt(v * 1.5);
+		}
+	}
+
 	// TODO if (weather)
 
 	if (player && badgeTypes.has(type) && badgeTypes.get(type) <= badges) {
