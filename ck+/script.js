@@ -218,6 +218,7 @@ var itemsById = new Map([
 	[0x6c, "magnet"],
 	[0x6d, "miracleberry"],
 	[0x70, "everstone"],
+	[0x71, "spell-tag"],
 	[0x75, "miracle-seed"],
 	[0x76, "thick-club"],
 	[0x77, "focus-band"],
