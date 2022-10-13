@@ -18149,7 +18149,11 @@
                     "move": "sleep-powder"
                 },
                 {
-                    "level": 45,
+                    "level": 41,
+                    "move": "giga-drain"
+                },
+                {
+                    "level": 47,
                     "move": "sludge-bomb"
                 },
                 {
@@ -19408,31 +19412,31 @@
                     "move": "wing-attack"
                 },
                 {
-                    "level": 33,
+                    "level": 29,
                     "move": "tri-attack"
                 },
                 {
-                    "level": 36,
+                    "level": 34,
                     "move": "steel-wing"
                 },
                 {
-                    "level": 40,
+                    "level": 37,
                     "move": "drill-peck"
                 },
                 {
-                    "level": 47,
+                    "level": 43,
                     "move": "mirror-move"
                 },
                 {
-                    "level": 53,
+                    "level": 48,
                     "move": "agility"
                 },
                 {
-                    "level": 64,
+                    "level": 53,
                     "move": "double-edge"
                 },
                 {
-                    "level": 70,
+                    "level": 59,
                     "move": "sky-attack"
                 }
             ],
@@ -22205,7 +22209,7 @@
                     "move": "cross-chop"
                 },
                 {
-                    "level": 96,
+                    "level": 98,
                     "move": "reversal"
                 }
             ],
@@ -23036,6 +23040,10 @@
                     "move": "counter"
                 },
                 {
+                    "level": 80,
+                    "move": "rock-slide"
+                },
+                {
                     "level": 90,
                     "move": "earthquake"
                 }
@@ -23716,6 +23724,10 @@
                     "move": "ember"
                 },
                 {
+                    "level": 34,
+                    "move": "double-edge"
+                },
+                {
                     "level": 42,
                     "move": "flamethrower"
                 },
@@ -24125,7 +24137,7 @@
                     "move": "double-edge"
                 }
             ],
-            "name": "farfetchd",
+            "name": "farfetch'd",
             "pokedex": 83,
             "stats": {
                 "atk": 90,
@@ -24171,7 +24183,7 @@
             "evolutions": [
                 {
                     "into": "dodrio",
-                    "level": 31,
+                    "level": 37,
                     "method": "level"
                 }
             ],
@@ -24194,11 +24206,11 @@
                 },
                 {
                     "level": 25,
-                    "move": "tri-attack"
+                    "move": "wing-attack"
                 },
                 {
-                    "level": 36,
-                    "move": "drill-peck"
+                    "level": 34,
+                    "move": "tri-attack"
                 }
             ],
             "name": "doduo",
@@ -24245,7 +24257,7 @@
                     "move": "quick-attack"
                 },
                 {
-                    "level": 43,
+                    "level": 45,
                     "move": "drill-peck"
                 },
                 {
@@ -24254,15 +24266,19 @@
                 },
                 {
                     "level": 54,
-                    "move": "hi-jump-kick"
+                    "move": "jump-kick"
                 },
                 {
-                    "level": 66,
+                    "level": 67,
                     "move": "double-edge"
                 },
                 {
-                    "level": 74,
+                    "level": 75,
                     "move": "sky-attack"
+                },
+                {
+                    "level": 95,
+                    "move": "hi-jump-kick"
                 }
             ],
             "name": "dodrio",
@@ -27992,18 +28008,26 @@
                 },
                 {
                     "level": 34,
-                    "move": "haze"
-                },
-                {
-                    "level": 42,
                     "move": "waterfall"
                 },
                 {
-                    "level": 57,
+                    "level": 43,
                     "move": "ice-beam"
                 },
                 {
-                    "level": 99,
+                    "level": 53,
+                    "move": "ice-beam"
+                },
+                {
+                    "level": 57,
+                    "move": "haze"
+                },
+                {
+                    "level": 80,
+                    "move": "growth"
+                },
+                {
+                    "level": 100,
                     "move": "baton-pass"
                 }
             ],
@@ -28068,20 +28092,20 @@
                     "move": "bite"
                 },
                 {
-                    "level": 20,
+                    "level": 24,
                     "move": "spark"
                 },
                 {
-                    "level": 28,
+                    "level": 29,
                     "move": "bite"
                 },
                 {
-                    "level": 34,
-                    "move": "thunderbolt"
+                    "level": 37,
+                    "move": "thunder-wave"
                 },
                 {
                     "level": 42,
-                    "move": "thunder-wave"
+                    "move": "thunderbolt"
                 },
                 {
                     "level": 57,
@@ -28152,27 +28176,31 @@
                 },
                 {
                     "level": 28,
-                    "move": "flame-wheel"
-                },
-                {
-                    "level": 34,
                     "move": "flamethrower"
                 },
                 {
-                    "level": 42,
-                    "move": "double-edge"
+                    "level": 33,
+                    "move": "curse"
                 },
                 {
-                    "level": 52,
-                    "move": "iron-tail"
-                },
-                {
-                    "level": 57,
+                    "level": 37,
                     "move": "shadow-ball"
                 },
                 {
-                    "level": 90,
+                    "level": 46,
+                    "move": "double-edge"
+                },
+                {
+                    "level": 53,
+                    "move": "iron-tail"
+                },
+                {
+                    "level": 59,
                     "move": "sacred-fire"
+                },
+                {
+                    "level": 76,
+                    "move": "baton-pass"
                 }
             ],
             "name": "flareon",
@@ -28687,13 +28715,9 @@
                 "protect",
                 "rain-dance",
                 "endure",
-                "frustration",
                 "solarbeam",
                 "thunder",
-                "earthquake",
-                "return",
                 "psychic",
-                "shadow-ball",
                 "mud-slap",
                 "double-team",
                 "ice-punch",
@@ -28707,7 +28731,6 @@
                 "attract",
                 "fire-punch",
                 "surf",
-                "strength",
                 "flamethrower",
                 "thunderbolt",
                 "ice-beam"
@@ -32046,27 +32069,27 @@
                     "move": "low-kick"
                 },
                 {
-                    "level": 18,
+                    "level": 14,
                     "move": "return"
                 },
                 {
-                    "level": 24,
+                    "level": 20,
                     "move": "rock-slide"
                 },
                 {
-                    "level": 32,
+                    "level": 26,
                     "move": "submission"
                 },
                 {
-                    "level": 38,
+                    "level": 31,
                     "move": "earthquake"
                 },
                 {
-                    "level": 44,
+                    "level": 37,
                     "move": "hi-jump-kick"
                 },
                 {
-                    "level": 54,
+                    "level": 44,
                     "move": "ancientpower"
                 },
                 {
@@ -32926,14 +32949,14 @@
                 },
                 {
                     "level": 27,
-                    "move": "shadow-ball"
-                },
-                {
-                    "level": 34,
                     "move": "bite"
                 },
                 {
-                    "level": 47,
+                    "level": 34,
+                    "move": "shadow-ball"
+                },
+                {
+                    "level": 44,
                     "move": "psychic"
                 },
                 {
@@ -33718,35 +33741,47 @@
             "learnset": [
                 {
                     "level": 1,
-                    "move": "mud-slap"
-                },
-                {
-                    "level": 6,
-                    "move": "slash"
+                    "move": "poison-sting"
                 },
                 {
                     "level": 9,
-                    "move": "steel-wing"
+                    "move": "scratch"
                 },
                 {
                     "level": 17,
-                    "move": "rock-slide"
+                    "move": "mud-slap"
                 },
                 {
-                    "level": 23,
-                    "move": "wing-attack"
+                    "level": 26,
+                    "move": "quick-attack"
                 },
                 {
-                    "level": 29,
-                    "move": "dig"
+                    "level": 34,
+                    "move": "slash"
+                },
+                {
+                    "level": 39,
+                    "move": "steel-wing"
                 },
                 {
                     "level": 46,
-                    "move": "earthquake"
+                    "move": "rock-slide"
                 },
                 {
-                    "level": 60,
+                    "level": 53,
                     "move": "screech"
+                },
+                {
+                    "level": 62,
+                    "move": "wing-attack"
+                },
+                {
+                    "level": 72,
+                    "move": "dig"
+                },
+                {
+                    "level": 80,
+                    "move": "earthquake"
                 }
             ],
             "name": "gligar",
@@ -34172,6 +34207,10 @@
                 {
                     "level": 75,
                     "move": "fury-cutter"
+                },
+                {
+                    "level": 85,
+                    "move": "submission"
                 },
                 {
                     "level": 90,
@@ -36088,15 +36127,18 @@
             "evolutions": [
                 {
                     "into": "hitmonchan",
-                    "method": "hitmonchan"
+                    "level": 20,
+                    "method": "stat"
                 },
                 {
                     "into": "hitmonlee",
-                    "method": "hitmonlee"
+                    "level": 20,
+                    "method": "stat"
                 },
                 {
                     "into": "hitmontop",
-                    "method": "hitmontop"
+                    "level": 20,
+                    "method": "stat"
                 }
             ],
             "learnset": [
@@ -36175,14 +36217,10 @@
                 },
                 {
                     "level": 66,
-                    "move": "jump-kick"
-                },
-                {
-                    "level": 74,
                     "move": "counter"
                 },
                 {
-                    "level": 99,
+                    "level": 74,
                     "move": "hi-jump-kick"
                 }
             ],
