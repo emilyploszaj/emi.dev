@@ -15657,7 +15657,7 @@
             "type": "normal"
         },
         {
-            "accuracy": 100,
+            "accuracy": 95,
             "extra": [
                 "If it misses or fails, deals 1\/8 the damage it would've dealt to the user instead"
             ],
