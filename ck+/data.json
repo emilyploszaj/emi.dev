@@ -13814,6 +13814,28 @@
             "area": "new-bark-town",
             "fishing": "ocean",
             "headbutt": "town",
+            "special": [
+                {
+                    "pool": [
+                        {
+                            "chance": 100,
+                            "level": 5,
+                            "pokemon": "cyndaquil"
+                        },
+                        {
+                            "chance": 100,
+                            "level": 5,
+                            "pokemon": "totodile"
+                        },
+                        {
+                            "chance": 100,
+                            "level": 5,
+                            "pokemon": "chikorita"
+                        }
+                    ],
+                    "type": "gift"
+                }
+            ],
             "surf": [
                 {
                     "chance": 60,
