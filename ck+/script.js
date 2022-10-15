@@ -1892,9 +1892,11 @@ function readNewbox(bytes, start) {
 			}
 		}
 		var caught = bytes[p + 0x1B] & 0b0111_1111;
-		var landmark = landmarksByIndex.get(caught).name;
+		var landmark = landmarksByIndex.get(caught);
 		if (!landmark) {
 			landmark = "unknown";
+		} else {
+			landmark = landmark.name;
 		}
 		pokemon.push({
 			name: pokemonByPokedex.get(bytes[p]).name,
@@ -1953,9 +1955,11 @@ function readPokemonList(bytes, start, capacity, increment) {
 			}
 		}
 		var caught = bytes[p + 0x1E] & 0b0111_1111;
-		var landmark = landmarksByIndex.get(caught).name;
+		var landmark = landmarksByIndex.get(caught);
 		if (!landmark) {
 			landmark = "unknown";
+		} else {
+			landmark = landmark.name;
 		}
 		pokemon.push({
 			name: pokemonByPokedex.get(bytes[p]).name,
