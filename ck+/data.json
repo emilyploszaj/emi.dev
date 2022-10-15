@@ -1973,10 +1973,6 @@
     "encounters": [
         {
             "area": "sprout-tower-2f",
-            "neighbors": [
-                "sprout-tower-3f",
-                "violet-city"
-            ],
             "normal": {
                 "day": [
                     {
@@ -2093,9 +2089,6 @@
         },
         {
             "area": "sprout-tower-3f",
-            "neighbors": [
-                "sprout-tower-2f"
-            ],
             "normal": {
                 "day": [
                     {
@@ -2212,16 +2205,6 @@
         },
         {
             "area": "tin-tower-2f",
-            "neighbors": [
-                "tin-tower-3f",
-                "tin-tower-4f",
-                "tin-tower-5f",
-                "tin-tower-6f",
-                "tin-tower-7f",
-                "tin-tower-8f",
-                "tin-tower-9f",
-                "ecruteak-city"
-            ],
             "normal": {
                 "day": [
                     {
@@ -2338,15 +2321,6 @@
         },
         {
             "area": "tin-tower-3f",
-            "neighbors": [
-                "tin-tower-2f",
-                "tin-tower-4f",
-                "tin-tower-5f",
-                "tin-tower-6f",
-                "tin-tower-7f",
-                "tin-tower-8f",
-                "tin-tower-9f"
-            ],
             "normal": {
                 "day": [
                     {
@@ -2463,15 +2437,6 @@
         },
         {
             "area": "tin-tower-4f",
-            "neighbors": [
-                "tin-tower-2f",
-                "tin-tower-3f",
-                "tin-tower-5f",
-                "tin-tower-6f",
-                "tin-tower-7f",
-                "tin-tower-8f",
-                "tin-tower-9f"
-            ],
             "normal": {
                 "day": [
                     {
@@ -2588,15 +2553,6 @@
         },
         {
             "area": "tin-tower-5f",
-            "neighbors": [
-                "tin-tower-2f",
-                "tin-tower-3f",
-                "tin-tower-4f",
-                "tin-tower-6f",
-                "tin-tower-7f",
-                "tin-tower-8f",
-                "tin-tower-9f"
-            ],
             "normal": {
                 "day": [
                     {
@@ -2713,15 +2669,6 @@
         },
         {
             "area": "tin-tower-6f",
-            "neighbors": [
-                "tin-tower-2f",
-                "tin-tower-3f",
-                "tin-tower-4f",
-                "tin-tower-5f",
-                "tin-tower-7f",
-                "tin-tower-8f",
-                "tin-tower-9f"
-            ],
             "normal": {
                 "day": [
                     {
@@ -2838,15 +2785,6 @@
         },
         {
             "area": "tin-tower-7f",
-            "neighbors": [
-                "tin-tower-2f",
-                "tin-tower-3f",
-                "tin-tower-4f",
-                "tin-tower-5f",
-                "tin-tower-6f",
-                "tin-tower-8f",
-                "tin-tower-9f"
-            ],
             "normal": {
                 "day": [
                     {
@@ -2963,15 +2901,6 @@
         },
         {
             "area": "tin-tower-8f",
-            "neighbors": [
-                "tin-tower-2f",
-                "tin-tower-3f",
-                "tin-tower-4f",
-                "tin-tower-5f",
-                "tin-tower-6f",
-                "tin-tower-7f",
-                "tin-tower-9f"
-            ],
             "normal": {
                 "day": [
                     {
@@ -3088,15 +3017,6 @@
         },
         {
             "area": "tin-tower-9f",
-            "neighbors": [
-                "tin-tower-2f",
-                "tin-tower-3f",
-                "tin-tower-4f",
-                "tin-tower-5f",
-                "tin-tower-6f",
-                "tin-tower-7f",
-                "tin-tower-8f"
-            ],
             "normal": {
                 "day": [
                     {
@@ -3213,10 +3133,6 @@
         },
         {
             "area": "burned-tower-1f",
-            "neighbors": [
-                "burned-tower-b1f",
-                "ecruteak-city"
-            ],
             "normal": {
                 "day": [
                     {
@@ -3334,9 +3250,6 @@
         },
         {
             "area": "burned-tower-b1f",
-            "neighbors": [
-                "burned-tower-1f"
-            ],
             "normal": {
                 "day": [
                     {
@@ -3453,10 +3366,6 @@
         },
         {
             "area": "national-park",
-            "neighbors": [
-                "route-36",
-                "route-35"
-            ],
             "normal": {
                 "day": [
                     {
@@ -3574,12 +3483,6 @@
         {
             "area": "ruins-of-alph-outside",
             "fishing": "pond",
-            "neighbors": [
-                "route-32",
-                "ruins-of-alph-inner-chamber",
-                "union-cave-b1f",
-                "route-36"
-            ],
             "normal": {
                 "day": [
                     {
@@ -3713,9 +3616,6 @@
         },
         {
             "area": "ruins-of-alph-inner-chamber",
-            "neighbors": [
-                "ruins-of-alph-outside"
-            ],
             "normal": {
                 "day": [
                     {
@@ -3833,12 +3733,6 @@
         {
             "area": "union-cave-1f",
             "fishing": "lake",
-            "neighbors": [
-                "route-33",
-                "union-cave-b1f",
-                "union-cave-b2f",
-                "route-32"
-            ],
             "normal": {
                 "day": [
                     {
@@ -3973,11 +3867,6 @@
         {
             "area": "union-cave-b1f",
             "fishing": "lake",
-            "neighbors": [
-                "union-cave-1f",
-                "ruins-of-alph-outside",
-                "union-cave-b2f"
-            ],
             "normal": {
                 "day": [
                     {
@@ -4112,10 +4001,6 @@
         {
             "area": "union-cave-b2f",
             "fishing": "shore",
-            "neighbors": [
-                "union-cave-1f",
-                "union-cave-b1f"
-            ],
             "normal": {
                 "day": [
                     {
@@ -4263,10 +4148,6 @@
         {
             "area": "slowpoke-well-b1f",
             "fishing": "lake",
-            "neighbors": [
-                "slowpoke-well-b2f",
-                "azalea-town"
-            ],
             "normal": {
                 "day": [
                     {
@@ -4402,9 +4283,6 @@
         {
             "area": "slowpoke-well-b2f",
             "fishing": "lake",
-            "neighbors": [
-                "slowpoke-well-b1f"
-            ],
             "normal": {
                 "day": [
                     {
@@ -4540,10 +4418,6 @@
             "area": "ilex-forest",
             "fishing": "pond",
             "headbutt": "forest",
-            "neighbors": [
-                "route-34",
-                "azalea-town"
-            ],
             "normal": {
                 "day": [
                     {
@@ -4678,12 +4552,6 @@
         {
             "area": "mount-mortar-1f-outside",
             "fishing": "lake",
-            "neighbors": [
-                "mount-mortar-1f-inside",
-                "mount-mortar-2f-inside",
-                "mount-mortar-b1f",
-                "route-42"
-            ],
             "normal": {
                 "day": [
                     {
@@ -4818,12 +4686,6 @@
         {
             "area": "mount-mortar-1f-inside",
             "fishing": "lake",
-            "neighbors": [
-                "mount-mortar-1f-outside",
-                "mount-mortar-2f-inside",
-                "mount-mortar-b1f",
-                "route-42"
-            ],
             "normal": {
                 "day": [
                     {
@@ -4941,12 +4803,6 @@
         {
             "area": "mount-mortar-2f-inside",
             "fishing": "lake",
-            "neighbors": [
-                "mount-mortar-1f-outside",
-                "mount-mortar-1f-inside",
-                "mount-mortar-b1f",
-                "route-42"
-            ],
             "normal": {
                 "day": [
                     {
@@ -5081,12 +4937,6 @@
         {
             "area": "mount-mortar-b1f",
             "fishing": "lake",
-            "neighbors": [
-                "mount-mortar-1f-outside",
-                "mount-mortar-2f-inside",
-                "mount-mortar-b1f",
-                "route-42"
-            ],
             "normal": {
                 "day": [
                     {
@@ -5234,13 +5084,6 @@
         {
             "area": "ice-path-1f",
             "fishing": "dratini",
-            "neighbors": [
-                "ice-path-b1f",
-                "ice-path-b2f-mahogany-side",
-                "ice-path-b2f-blackthorn-side",
-                "ice-path-b3f",
-                "route-44"
-            ],
             "normal": {
                 "day": [
                     {
@@ -5358,12 +5201,6 @@
         {
             "area": "ice-path-b1f",
             "fishing": "dratini",
-            "neighbors": [
-                "ice-path-1f",
-                "ice-path-b2f-mahogany-side",
-                "ice-path-b2f-blackthorn-side",
-                "ice-path-b3f"
-            ],
             "normal": {
                 "day": [
                     {
@@ -5481,12 +5318,6 @@
         {
             "area": "ice-path-b2f-mahogany-side",
             "fishing": "dratini",
-            "neighbors": [
-                "ice-path-1f",
-                "ice-path-b1f",
-                "ice-path-b2f-blackthorn-side",
-                "ice-path-b3f"
-            ],
             "normal": {
                 "day": [
                     {
@@ -5604,13 +5435,6 @@
         {
             "area": "ice-path-b2f-blackthorn-side",
             "fishing": "dratini",
-            "neighbors": [
-                "blackthorn-city",
-                "ice-path-1f",
-                "ice-path-b1f",
-                "ice-path-b2f-mahogany-side",
-                "ice-path-b3f"
-            ],
             "normal": {
                 "day": [
                     {
@@ -5728,12 +5552,6 @@
         {
             "area": "ice-path-b3f",
             "fishing": "dratini",
-            "neighbors": [
-                "ice-path-1f",
-                "ice-path-b1f",
-                "ice-path-b2f-mahogany-side",
-                "ice-path-b2f-blackthorn-side"
-            ],
             "normal": {
                 "day": [
                     {
@@ -5851,16 +5669,6 @@
         {
             "area": "whirl-island-nw",
             "fishing": "whirlislands",
-            "neighbors": [
-                "whirl-island-ne",
-                "whirl-island-se",
-                "whirl-island-sw",
-                "whirl-island-b1f",
-                "whirl-island-b2f",
-                "whirl-island-cave",
-                "whirl-island-lugia-chamber",
-                "route-41"
-            ],
             "normal": {
                 "day": [
                     {
@@ -5978,16 +5786,6 @@
         {
             "area": "whirl-island-ne",
             "fishing": "whirlislands",
-            "neighbors": [
-                "whirl-island-nw",
-                "whirl-island-se",
-                "whirl-island-sw",
-                "whirl-island-b1f",
-                "whirl-island-b2f",
-                "whirl-island-cave",
-                "whirl-island-lugia-chamber",
-                "route-41"
-            ],
             "normal": {
                 "day": [
                     {
@@ -6105,16 +5903,6 @@
         {
             "area": "whirl-island-sw",
             "fishing": "whirlislands",
-            "neighbors": [
-                "whirl-island-nw",
-                "whirl-island-ne",
-                "whirl-island-sw",
-                "whirl-island-b1f",
-                "whirl-island-b2f",
-                "whirl-island-cave",
-                "whirl-island-lugia-chamber",
-                "route-41"
-            ],
             "normal": {
                 "day": [
                     {
@@ -6249,16 +6037,6 @@
         {
             "area": "whirl-island-cave",
             "fishing": "whirlislands",
-            "neighbors": [
-                "whirl-island-nw",
-                "whirl-island-ne",
-                "whirl-island-se",
-                "whirl-island-sw",
-                "whirl-island-b1f",
-                "whirl-island-b2f",
-                "whirl-island-lugia-chamber",
-                "route-41"
-            ],
             "normal": {
                 "day": [
                     {
@@ -6376,16 +6154,6 @@
         {
             "area": "whirl-island-se",
             "fishing": "whirlislands",
-            "neighbors": [
-                "whirl-island-nw",
-                "whirl-island-ne",
-                "whirl-island-sw",
-                "whirl-island-b1f",
-                "whirl-island-b2f",
-                "whirl-island-cave",
-                "whirl-island-lugia-chamber",
-                "route-41"
-            ],
             "normal": {
                 "day": [
                     {
@@ -6503,16 +6271,6 @@
         {
             "area": "whirl-island-b1f",
             "fishing": "whirlislands",
-            "neighbors": [
-                "whirl-island-nw",
-                "whirl-island-ne",
-                "whirl-island-se",
-                "whirl-island-sw",
-                "whirl-island-b2f",
-                "whirl-island-cave",
-                "whirl-island-lugia-chamber",
-                "route-41"
-            ],
             "normal": {
                 "day": [
                     {
@@ -6630,16 +6388,6 @@
         {
             "area": "whirl-island-b2f",
             "fishing": "whirlislands",
-            "neighbors": [
-                "whirl-island-nw",
-                "whirl-island-ne",
-                "whirl-island-se",
-                "whirl-island-sw",
-                "whirl-island-b1f",
-                "whirl-island-cave",
-                "whirl-island-lugia-chamber",
-                "route-41"
-            ],
             "normal": {
                 "day": [
                     {
@@ -6774,16 +6522,6 @@
         {
             "area": "whirl-island-lugia-chamber",
             "fishing": "whirlislands",
-            "neighbors": [
-                "whirl-island-nw",
-                "whirl-island-ne",
-                "whirl-island-se",
-                "whirl-island-sw",
-                "whirl-island-b1f",
-                "whirl-island-b2f",
-                "whirl-island-cave",
-                "route-41"
-            ],
             "normal": {
                 "day": [
                     {
@@ -6918,12 +6656,6 @@
         {
             "area": "silver-cave-room-1",
             "fishing": "lake",
-            "neighbors": [
-                "silver-cave-outside",
-                "silver-cave-room-2",
-                "silver-cave-room-3",
-                "silver-cave-item-rooms"
-            ],
             "normal": {
                 "day": [
                     {
@@ -7041,12 +6773,6 @@
         {
             "area": "silver-cave-room-2",
             "fishing": "lake",
-            "neighbors": [
-                "silver-cave-outside",
-                "silver-cave-room-1",
-                "silver-cave-room-3",
-                "silver-cave-item-rooms"
-            ],
             "normal": {
                 "day": [
                     {
@@ -7181,12 +6907,6 @@
         {
             "area": "silver-cave-room-3",
             "fishing": "lake",
-            "neighbors": [
-                "silver-cave-outside",
-                "silver-cave-room-1",
-                "silver-cave-room-2",
-                "silver-cave-item-rooms"
-            ],
             "normal": {
                 "day": [
                     {
@@ -7304,12 +7024,6 @@
         {
             "area": "silver-cave-item-rooms",
             "fishing": "lake",
-            "neighbors": [
-                "silver-cave-outside",
-                "silver-cave-room-1",
-                "silver-cave-room-2",
-                "silver-cave-room-3"
-            ],
             "normal": {
                 "day": [
                     {
@@ -7427,10 +7141,6 @@
         {
             "area": "dark-cave-violet-entrance",
             "fishing": "lake",
-            "neighbors": [
-                "dark-cave-blackthorn-entrance",
-                "route-31"
-            ],
             "normal": {
                 "day": [
                     {
@@ -7682,11 +7392,6 @@
         {
             "area": "dark-cave-blackthorn-entrance",
             "fishing": "lake",
-            "neighbors": [
-                "route-46",
-                "route-45",
-                "dark-cave-violet-entrance"
-            ],
             "normal": {
                 "day": [
                     {
@@ -7821,11 +7526,6 @@
         {
             "area": "route-29",
             "headbutt": "canyon",
-            "neighbors": [
-                "cherrygrove-city",
-                "route-46",
-                "new-bark-town"
-            ],
             "normal": {
                 "day": [
                     {
@@ -7944,10 +7644,6 @@
             "area": "route-30",
             "fishing": "pond",
             "headbutt": "canyon",
-            "neighbors": [
-                "route-31",
-                "cherrygrove-city"
-            ],
             "normal": {
                 "day": [
                     {
@@ -8083,11 +7779,6 @@
             "area": "route-31",
             "fishing": "pond",
             "headbutt": "canyon",
-            "neighbors": [
-                "violet-city",
-                "dark-cave-violet-entrance",
-                "route-30"
-            ],
             "normal": {
                 "day": [
                     {
@@ -8223,10 +7914,6 @@
             "area": "route-32",
             "fishing": "qwilfish",
             "headbutt": "town",
-            "neighbors": [
-                "union-cave-1f",
-                "ruins-of-alph-outside"
-            ],
             "normal": {
                 "day": [
                     {
@@ -8494,10 +8181,6 @@
         {
             "area": "route-33",
             "headbutt": "town",
-            "neighbors": [
-                "azalea-town",
-                "union-cave-1f"
-            ],
             "normal": {
                 "day": [
                     {
@@ -8616,10 +8299,6 @@
             "area": "route-34",
             "fishing": "shore",
             "headbutt": "route",
-            "neighbors": [
-                "goldenrod-city",
-                "ilex-forest"
-            ],
             "normal": {
                 "day": [
                     {
@@ -8804,10 +8483,6 @@
             "area": "route-35",
             "fishing": "pond",
             "headbutt": "route",
-            "neighbors": [
-                "national-park",
-                "goldenrod-city"
-            ],
             "normal": {
                 "day": [
                     {
@@ -9070,13 +8745,6 @@
             "area": "route-36",
             "fishing": "shore",
             "headbutt": "route",
-            "neighbors": [
-                "ruins-of-alph-outside",
-                "route-37",
-                "route-35",
-                "national-park",
-                "violet-city"
-            ],
             "normal": {
                 "day": [
                     {
@@ -9207,10 +8875,6 @@
         {
             "area": "route-37",
             "headbutt": "route",
-            "neighbors": [
-                "ecruteak-city",
-                "route-36"
-            ],
             "normal": {
                 "day": [
                     {
@@ -9329,10 +8993,6 @@
             "area": "route-38",
             "fishing": "shore",
             "headbutt": "route",
-            "neighbors": [
-                "route-39",
-                "ecruteak-city"
-            ],
             "normal": {
                 "day": [
                     {
@@ -9451,10 +9111,6 @@
             "area": "route-39",
             "fishing": "shore",
             "headbutt": "route",
-            "neighbors": [
-                "olivine-city",
-                "route-38"
-            ],
             "normal": {
                 "day": [
                     {
@@ -9573,11 +9229,6 @@
             "area": "route-42",
             "fishing": "lake",
             "headbutt": "town",
-            "neighbors": [
-                "mount-mortar-1f-outside",
-                "mahogany-town",
-                "ecruteak-city"
-            ],
             "normal": {
                 "day": [
                     {
@@ -9713,10 +9364,6 @@
             "area": "route-43",
             "fishing": "pond",
             "headbutt": "town",
-            "neighbors": [
-                "lake-of-rage",
-                "mahogany-town"
-            ],
             "normal": {
                 "day": [
                     {
@@ -9852,10 +9499,6 @@
             "area": "route-44",
             "fishing": "pond",
             "headbutt": "town",
-            "neighbors": [
-                "ice-path-1f",
-                "mahogany-town"
-            ],
             "normal": {
                 "day": [
                     {
@@ -9991,11 +9634,6 @@
             "area": "route-45",
             "fishing": "dratini-2",
             "headbutt": "town",
-            "neighbors": [
-                "route-46",
-                "dark-cave-blackthorn-entrance",
-                "blackthorn-city"
-            ],
             "normal": {
                 "day": [
                     {
@@ -10131,11 +9769,6 @@
             "area": "route-46",
             "fishing": "shore",
             "headbutt": "town",
-            "neighbors": [
-                "route-45",
-                "dark-cave-blackthorn-entrance",
-                "route-29"
-            ],
             "normal": {
                 "day": [
                     {
@@ -10254,13 +9887,6 @@
             "area": "silver-cave-outside",
             "fishing": "pond",
             "headbutt": "town",
-            "neighbors": [
-                "silver-cave-room-1",
-                "silver-cave-room-2",
-                "silver-cave-room-3",
-                "silver-cave-item-rooms",
-                "route-28"
-            ],
             "normal": {
                 "day": [
                     {
@@ -10395,10 +10021,6 @@
         {
             "area": "digletts-cave",
             "fishing": "shore",
-            "neighbors": [
-                "route-2",
-                "route-11"
-            ],
             "normal": {
                 "day": [
                     {
@@ -10515,10 +10137,6 @@
         },
         {
             "area": "mount-moon",
-            "neighbors": [
-                "route-4",
-                "route-3"
-            ],
             "normal": {
                 "day": [
                     {
@@ -10636,12 +10254,6 @@
         {
             "area": "rock-tunnel-1f",
             "fishing": "shore",
-            "neighbors": [
-                "rock-tunnel-b1f",
-                "route-10-north",
-                "route-8",
-                "route-12"
-            ],
             "normal": {
                 "day": [
                     {
@@ -10759,9 +10371,6 @@
         {
             "area": "rock-tunnel-b1f",
             "fishing": "shore",
-            "neighbors": [
-                "rock-tunnel-1f"
-            ],
             "normal": {
                 "day": [
                     {
@@ -10879,9 +10488,6 @@
         {
             "area": "victory-road",
             "fishing": "shore",
-            "neighbors": [
-                "route-26"
-            ],
             "normal": {
                 "day": [
                     {
@@ -10999,9 +10605,6 @@
         {
             "area": "tohjo-falls",
             "fishing": "lake",
-            "neighbors": [
-                "route-27"
-            ],
             "normal": {
                 "day": [
                     {
@@ -11136,10 +10739,6 @@
         {
             "area": "route-1",
             "fishing": "shore",
-            "neighbors": [
-                "pallet-town",
-                "viridian-city"
-            ],
             "normal": {
                 "day": [
                     {
@@ -11256,11 +10855,6 @@
         },
         {
             "area": "route-2",
-            "neighbors": [
-                "pewter-city",
-                "viridian-city",
-                "digletts-cave"
-            ],
             "normal": {
                 "day": [
                     {
@@ -11377,10 +10971,6 @@
         },
         {
             "area": "route-3",
-            "neighbors": [
-                "mount-moon",
-                "pewter-city"
-            ],
             "normal": {
                 "day": [
                     {
@@ -11497,10 +11087,6 @@
         },
         {
             "area": "route-4",
-            "neighbors": [
-                "cerulean-city",
-                "mount-moon"
-            ],
             "normal": {
                 "day": [
                     {
@@ -11634,12 +11220,6 @@
         },
         {
             "area": "route-5",
-            "neighbors": [
-                "cerulean-city",
-                "route-6",
-                "route-7",
-                "route-8"
-            ],
             "normal": {
                 "day": [
                     {
@@ -11757,12 +11337,6 @@
         {
             "area": "route-6",
             "fishing": "pond",
-            "neighbors": [
-                "route-8",
-                "route-7",
-                "route-5",
-                "vermilion-city"
-            ],
             "normal": {
                 "day": [
                     {
@@ -11896,12 +11470,6 @@
         },
         {
             "area": "route-7",
-            "neighbors": [
-                "route-5",
-                "route-8",
-                "route-6",
-                "celadon-city"
-            ],
             "normal": {
                 "day": [
                     {
@@ -12018,13 +11586,6 @@
         },
         {
             "area": "route-8",
-            "neighbors": [
-                "route-12",
-                "rock-tunnel-1f",
-                "route-5",
-                "route-6",
-                "route-7"
-            ],
             "normal": {
                 "day": [
                     {
@@ -12142,10 +11703,6 @@
         {
             "area": "route-9",
             "fishing": "lake",
-            "neighbors": [
-                "cerulean-city",
-                "route-10-north"
-            ],
             "normal": {
                 "day": [
                     {
@@ -12280,10 +11837,6 @@
         {
             "area": "route-10-north",
             "fishing": "lake",
-            "neighbors": [
-                "route-9",
-                "rock-tunnel-1f"
-            ],
             "normal": {
                 "day": [
                     {
@@ -12431,11 +11984,6 @@
         {
             "area": "route-11",
             "fishing": "shore",
-            "neighbors": [
-                "digletts-cave",
-                "vermilion-city",
-                "route-12"
-            ],
             "normal": {
                 "day": [
                     {
@@ -12553,10 +12101,6 @@
         {
             "area": "route-13",
             "fishing": "qwilfish-noswarm",
-            "neighbors": [
-                "route-14",
-                "route-12"
-            ],
             "normal": {
                 "day": [
                     {
@@ -12690,10 +12234,6 @@
         },
         {
             "area": "route-14",
-            "neighbors": [
-                "route-15",
-                "route-13"
-            ],
             "normal": {
                 "day": [
                     {
@@ -12823,10 +12363,6 @@
         },
         {
             "area": "route-15",
-            "neighbors": [
-                "fuchsia-city",
-                "route-14"
-            ],
             "normal": {
                 "day": [
                     {
@@ -12944,10 +12480,6 @@
         {
             "area": "route-16",
             "fishing": "shore",
-            "neighbors": [
-                "celadon-city",
-                "route-17"
-            ],
             "normal": {
                 "day": [
                     {
@@ -13064,10 +12596,6 @@
         },
         {
             "area": "route-17",
-            "neighbors": [
-                "route-16",
-                "route-18"
-            ],
             "normal": {
                 "day": [
                     {
@@ -13184,10 +12712,6 @@
         },
         {
             "area": "route-18",
-            "neighbors": [
-                "route-17",
-                "fuchsia-city"
-            ],
             "normal": {
                 "day": [
                     {
@@ -13305,10 +12829,6 @@
         {
             "area": "route-21",
             "fishing": "ocean",
-            "neighbors": [
-                "cinnabar-island",
-                "pallet-town"
-            ],
             "normal": {
                 "day": [
                     {
@@ -13443,12 +12963,6 @@
         {
             "area": "route-22",
             "fishing": "pond",
-            "neighbors": [
-                "route-28",
-                "route-26",
-                "victory-road",
-                "viridian-city"
-            ],
             "normal": {
                 "day": [
                     {
@@ -13583,10 +13097,6 @@
         {
             "area": "route-24",
             "fishing": "lake",
-            "neighbors": [
-                "route-25",
-                "cerulean-city"
-            ],
             "normal": {
                 "day": [
                     {
@@ -13721,9 +13231,6 @@
         {
             "area": "route-25",
             "fishing": "lake",
-            "neighbors": [
-                "route-24"
-            ],
             "normal": {
                 "day": [
                     {
@@ -13859,12 +13366,6 @@
             "area": "route-26",
             "fishing": "ocean",
             "headbutt": "kanto",
-            "neighbors": [
-                "victory-road",
-                "route-28",
-                "route-22",
-                "route-27"
-            ],
             "normal": {
                 "day": [
                     {
@@ -14000,11 +13501,6 @@
             "area": "route-27",
             "fishing": "ocean",
             "headbutt": "kanto",
-            "neighbors": [
-                "route-26",
-                "tohjo-falls",
-                "new-bark-town"
-            ],
             "normal": {
                 "day": [
                     {
@@ -14140,12 +13636,6 @@
             "area": "route-28",
             "fishing": "pond",
             "headbutt": "town",
-            "neighbors": [
-                "silver-cave-outside",
-                "route-26",
-                "victory-road",
-                "route-22"
-            ],
             "normal": {
                 "day": [
                     {
@@ -14280,9 +13770,6 @@
         {
             "area": "olivine-port",
             "fishing": "ocean",
-            "neighbors": [
-                "olivine-city"
-            ],
             "surf": [
                 {
                     "chance": 60,
@@ -14305,11 +13792,6 @@
             "area": "olivine-city",
             "fishing": "shore",
             "headbutt": "town",
-            "neighbors": [
-                "route-40",
-                "olivine-port",
-                "route-39"
-            ],
             "surf": [
                 {
                     "chance": 60,
@@ -14332,10 +13814,6 @@
             "area": "new-bark-town",
             "fishing": "ocean",
             "headbutt": "town",
-            "neighbors": [
-                "route-29",
-                "route-27"
-            ],
             "surf": [
                 {
                     "chance": 60,
@@ -14358,13 +13836,6 @@
             "area": "ecruteak-city",
             "fishing": "pond",
             "headbutt": "town",
-            "neighbors": [
-                "route-38",
-                "route-42",
-                "burned-tower-1f",
-                "tin-tower-2f",
-                "route-37"
-            ],
             "surf": [
                 {
                     "chance": 60,
@@ -14386,11 +13857,6 @@
         {
             "area": "viridian-city",
             "fishing": "pond",
-            "neighbors": [
-                "route-1",
-                "route-22",
-                "route-2"
-            ],
             "surf": [
                 {
                     "chance": 60,
@@ -14412,11 +13878,6 @@
         {
             "area": "vermilion-city",
             "fishing": "ocean",
-            "neighbors": [
-                "route-6",
-                "route-11",
-                "vermilion-port"
-            ],
             "special": [
                 {
                     "pool": [
@@ -14451,10 +13912,6 @@
         {
             "area": "cherrygrove-city",
             "fishing": "shore",
-            "neighbors": [
-                "route-30",
-                "route-29"
-            ],
             "surf": [
                 {
                     "chance": 60,
@@ -14476,11 +13933,6 @@
         {
             "area": "fuchsia-city",
             "fishing": "gyarados",
-            "neighbors": [
-                "route-18",
-                "route-19",
-                "route-15"
-            ],
             "surf": [
                 {
                     "chance": 60,
@@ -14503,9 +13955,6 @@
             "area": "lake-of-rage",
             "fishing": "gyarados",
             "headbutt": "town",
-            "neighbors": [
-                "route-43"
-            ],
             "special": [
                 {
                     "pool": [
@@ -14539,10 +13988,6 @@
         },
         {
             "area": "celadon-city",
-            "neighbors": [
-                "route-7",
-                "route-16"
-            ],
             "special": [
                 {
                     "pool": [
@@ -14590,9 +14035,6 @@
             "area": "cianwood-city",
             "fishing": "shore",
             "headbutt": "town",
-            "neighbors": [
-                "route-41"
-            ],
             "rock": "rock",
             "special": [
                 {
@@ -14628,10 +14070,6 @@
         {
             "area": "route-19",
             "fishing": "shore",
-            "neighbors": [
-                "route-20",
-                "fuchsia-city"
-            ],
             "surf": [
                 {
                     "chance": 60,
@@ -14652,12 +14090,6 @@
         },
         {
             "area": "cerulean-city",
-            "neighbors": [
-                "route-24",
-                "route-4",
-                "route-5",
-                "route-9"
-            ],
             "surf": [
                 {
                     "chance": 60,
@@ -14679,9 +14111,6 @@
         {
             "area": "vermilion-port",
             "fishing": "ocean",
-            "neighbors": [
-                "vermilion-city"
-            ],
             "surf": [
                 {
                     "chance": 60,
@@ -14703,9 +14132,6 @@
         {
             "area": "dragons-den-b1f",
             "fishing": "dratini",
-            "neighbors": [
-                "blackthorn-city"
-            ],
             "special": [
                 {
                     "pool": [
@@ -14741,11 +14167,6 @@
             "area": "route-40",
             "fishing": "shore",
             "headbutt": "town",
-            "neighbors": [
-                "route-41",
-                "battle-tower-outside",
-                "olivine-city"
-            ],
             "rock": "rock",
             "surf": [
                 {
@@ -14768,10 +14189,6 @@
         {
             "area": "route-20",
             "fishing": "ocean",
-            "neighbors": [
-                "cinnabar-island",
-                "route-19"
-            ],
             "surf": [
                 {
                     "chance": 60,
@@ -14794,11 +14211,6 @@
             "area": "violet-city",
             "fishing": "pond",
             "headbutt": "town",
-            "neighbors": [
-                "route-36",
-                "sprout-tower-2f",
-                "route-31"
-            ],
             "special": [
                 {
                     "pool": [
@@ -14844,10 +14256,6 @@
         {
             "area": "cinnabar-island",
             "fishing": "ocean",
-            "neighbors": [
-                "route-21",
-                "route-20"
-            ],
             "surf": [
                 {
                     "chance": 60,
@@ -14870,14 +14278,6 @@
             "area": "route-41",
             "fishing": "ocean",
             "headbutt": "town",
-            "neighbors": [
-                "cianwood-city",
-                "whirl-island-ne",
-                "whirl-island-nw",
-                "whirl-island-se",
-                "whirl-island-sw",
-                "route-40"
-            ],
             "surf": [
                 {
                     "chance": 60,
@@ -14899,10 +14299,6 @@
         {
             "area": "pallet-town",
             "fishing": "ocean",
-            "neighbors": [
-                "route-21",
-                "route-1"
-            ],
             "surf": [
                 {
                     "chance": 60,
@@ -14925,11 +14321,6 @@
             "area": "blackthorn-city",
             "fishing": "pond",
             "headbutt": "town",
-            "neighbors": [
-                "dragons-den-b1f",
-                "route-45",
-                "ice-path-b2f-blackthorn-side"
-            ],
             "special": [
                 {
                     "pool": [
@@ -14964,12 +14355,6 @@
         {
             "area": "route-12",
             "fishing": "qwilfish-noswarm",
-            "neighbors": [
-                "route-13",
-                "route-11",
-                "route-8",
-                "rock-tunnel-1f"
-            ],
             "surf": [
                 {
                     "chance": 60,
@@ -14990,20 +14375,11 @@
         },
         {
             "area": "azalea-town",
-            "headbutt": "town",
-            "neighbors": [
-                "ilex-forest",
-                "slowpoke-well-b1f",
-                "route-33"
-            ]
+            "headbutt": "town"
         },
         {
             "area": "goldenrod-city",
             "headbutt": "town",
-            "neighbors": [
-                "route-35",
-                "route-34"
-            ],
             "special": [
                 {
                     "pool": [
@@ -15055,11 +14431,6 @@
         {
             "area": "mahogany-town",
             "headbutt": "town",
-            "neighbors": [
-                "route-43",
-                "route-44",
-                "route-42"
-            ],
             "special": [
                 {
                     "pool": [
@@ -15094,29 +14465,1357 @@
         },
         {
             "area": "battle-tower-outside",
-            "headbutt": "route",
-            "neighbors": [
-                "route-40"
+            "headbutt": "route"
+        }
+    ],
+    "landmarks": [
+        {
+            "id": 0,
+            "locations": [],
+            "name": "special",
+            "positions": [
+                {}
             ]
         },
         {
-            "area": "pewter-city",
-            "neighbors": [
-                "route-3",
+            "id": 1,
+            "locations": [
+                "new-bark-town"
+            ],
+            "name": "new-bark-town",
+            "positions": [
+                {
+                    "x": 16,
+                    "y": 11
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "locations": [
+                "route-29"
+            ],
+            "name": "route-29",
+            "positions": [
+                {
+                    "width": 4,
+                    "x": 12,
+                    "y": 11
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "locations": [
+                "cherrygrove-city"
+            ],
+            "name": "cherrygrove-city",
+            "positions": [
+                {
+                    "x": 11,
+                    "y": 11
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "locations": [
+                "route-30"
+            ],
+            "name": "route-30",
+            "positions": [
+                {
+                    "height": 4,
+                    "x": 11,
+                    "y": 7
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "locations": [
+                "route-31"
+            ],
+            "name": "route-31",
+            "positions": [
+                {
+                    "width": 2,
+                    "x": 10,
+                    "y": 6
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "locations": [
+                "violet-city"
+            ],
+            "name": "violet-city",
+            "positions": [
+                {
+                    "x": 9,
+                    "y": 6
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "locations": [
+                "sprout-tower-2f",
+                "sprout-tower-3f"
+            ],
+            "name": "sprout-tower",
+            "positions": [
+                {
+                    "x": 9,
+                    "y": 5
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "locations": [
+                "route-32"
+            ],
+            "name": "route-32",
+            "positions": [
+                {
+                    "height": 6,
+                    "x": 9,
+                    "y": 7
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "locations": [
+                "ruins-of-alph-outside",
+                "ruins-of-alph-inner-chamber"
+            ],
+            "name": "ruins-of-alph",
+            "positions": [
+                {
+                    "x": 8,
+                    "y": 7
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "locations": [
+                "union-cave-1f",
+                "union-cave-b1f",
+                "union-cave-b2f"
+            ],
+            "name": "union-cave",
+            "positions": [
+                {
+                    "x": 9,
+                    "y": 13
+                }
+            ]
+        },
+        {
+            "id": 11,
+            "locations": [
+                "route-33"
+            ],
+            "name": "route-33",
+            "positions": [
+                {
+                    "width": 3,
+                    "x": 7,
+                    "y": 14
+                }
+            ]
+        },
+        {
+            "id": 12,
+            "locations": [
+                "azalea-town"
+            ],
+            "name": "azalea-town",
+            "positions": [
+                {
+                    "x": 6,
+                    "y": 14
+                }
+            ]
+        },
+        {
+            "id": 13,
+            "locations": [
+                "slowpoke-well-b1f",
+                "slowpoke-well-b2f"
+            ],
+            "name": "slowpoke-well",
+            "positions": [
+                {
+                    "x": 7,
+                    "y": 13
+                }
+            ]
+        },
+        {
+            "id": 14,
+            "locations": [
+                "ilex-forest"
+            ],
+            "name": "ilex-forest",
+            "positions": [
+                {
+                    "x": 5,
+                    "y": 14
+                }
+            ]
+        },
+        {
+            "id": 15,
+            "locations": [
+                "route-34"
+            ],
+            "name": "route-34",
+            "positions": [
+                {
+                    "height": 3,
+                    "x": 5,
+                    "y": 11
+                }
+            ]
+        },
+        {
+            "id": 16,
+            "locations": [
+                "goldenrod-city"
+            ],
+            "name": "goldenrod-city",
+            "positions": [
+                {
+                    "x": 5,
+                    "y": 10
+                }
+            ]
+        },
+        {
+            "id": 17,
+            "locations": [
+                "radio-tower"
+            ],
+            "name": "radio-tower",
+            "positions": [
+                {
+                    "x": 4,
+                    "y": 10
+                }
+            ]
+        },
+        {
+            "id": 18,
+            "locations": [
+                "route-35"
+            ],
+            "name": "route-35",
+            "positions": [
+                {
+                    "height": 3,
+                    "x": 5,
+                    "y": 7
+                }
+            ]
+        },
+        {
+            "id": 19,
+            "locations": [
+                "national-park"
+            ],
+            "name": "national-park",
+            "positions": [
+                {
+                    "x": 5,
+                    "y": 6
+                }
+            ]
+        },
+        {
+            "id": 20,
+            "locations": [
+                "route-36"
+            ],
+            "name": "route-36",
+            "positions": [
+                {
+                    "width": 3,
+                    "x": 6,
+                    "y": 6
+                }
+            ]
+        },
+        {
+            "id": 21,
+            "locations": [
+                "route-37"
+            ],
+            "name": "route-37",
+            "positions": [
+                {
+                    "x": 7,
+                    "y": 5
+                }
+            ]
+        },
+        {
+            "id": 22,
+            "locations": [
+                "ecruteak-city"
+            ],
+            "name": "ecruteak-city",
+            "positions": [
+                {
+                    "x": 7,
+                    "y": 4
+                }
+            ]
+        },
+        {
+            "id": 23,
+            "locations": [
+                "tin-tower-2f",
+                "tin-tower-3f",
+                "tin-tower-4f",
+                "tin-tower-5f",
+                "tin-tower-6f",
+                "tin-tower-7f",
+                "tin-tower-8f",
+                "tin-tower-9f"
+            ],
+            "name": "tin-tower",
+            "positions": [
+                {
+                    "x": 8,
+                    "y": 3
+                }
+            ]
+        },
+        {
+            "id": 24,
+            "locations": [
+                "burned-tower-1f",
+                "burned-tower-b1f"
+            ],
+            "name": "burned-tower",
+            "positions": [
+                {
+                    "x": 7,
+                    "y": 3
+                }
+            ]
+        },
+        {
+            "id": 25,
+            "locations": [
+                "route-38"
+            ],
+            "name": "route-38",
+            "positions": [
+                {
+                    "width": 3,
+                    "x": 4,
+                    "y": 4
+                }
+            ]
+        },
+        {
+            "id": 26,
+            "locations": [
+                "route-39"
+            ],
+            "name": "route-39",
+            "positions": [
+                {
+                    "height": 2,
+                    "x": 3,
+                    "y": 4
+                }
+            ]
+        },
+        {
+            "id": 27,
+            "locations": [
+                "olivine-city",
+                "olivine-port"
+            ],
+            "name": "olivine-city",
+            "positions": [
+                {
+                    "x": 3,
+                    "y": 6
+                }
+            ]
+        },
+        {
+            "id": 28,
+            "locations": [
+                "lighthouse"
+            ],
+            "name": "lighthouse",
+            "positions": [
+                {
+                    "x": 4,
+                    "y": 6
+                }
+            ]
+        },
+        {
+            "id": 29,
+            "locations": [
+                "battle-tower-outside"
+            ],
+            "name": "battle-tower",
+            "positions": [
+                {
+                    "x": 2,
+                    "y": 5
+                }
+            ]
+        },
+        {
+            "id": 30,
+            "locations": [
+                "route-40"
+            ],
+            "name": "route-40",
+            "positions": [
+                {
+                    "height": 4,
+                    "x": 2,
+                    "y": 6
+                }
+            ]
+        },
+        {
+            "id": 31,
+            "locations": [
+                "whirl-island-nw",
+                "whirl-island-ne",
+                "whirl-island-sw",
+                "whirl-island-cave",
+                "whirl-island-se",
+                "whirl-island-b1f",
+                "whirl-island-b2f",
+                "whirl-island-lugia-chamber"
+            ],
+            "name": "whirl-islands",
+            "positions": [
+                {
+                    "x": 2,
+                    "y": 10
+                }
+            ]
+        },
+        {
+            "id": 32,
+            "locations": [
+                "route-41"
+            ],
+            "name": "route-41",
+            "positions": [
+                {
+                    "x": 2,
+                    "y": 11
+                }
+            ]
+        },
+        {
+            "id": 33,
+            "locations": [
+                "cianwood-city"
+            ],
+            "name": "cianwood-city",
+            "positions": [
+                {
+                    "x": 1,
+                    "y": 11
+                }
+            ]
+        },
+        {
+            "id": 34,
+            "locations": [
+                "route-42"
+            ],
+            "name": "route-42",
+            "positions": [
+                {
+                    "x": 8,
+                    "y": 4
+                },
+                {
+                    "width": 2,
+                    "x": 10,
+                    "y": 4
+                }
+            ]
+        },
+        {
+            "id": 35,
+            "locations": [
+                "mount-mortar-1f-outside",
+                "mount-mortar-1f-inside",
+                "mount-mortar-2f-inside",
+                "mount-mortar-b1f"
+            ],
+            "name": "mt-mortar",
+            "positions": [
+                {
+                    "x": 9,
+                    "y": 4
+                }
+            ]
+        },
+        {
+            "id": 36,
+            "locations": [
+                "mahogany-town"
+            ],
+            "name": "mahogany-town",
+            "positions": [
+                {
+                    "x": 12,
+                    "y": 4
+                }
+            ]
+        },
+        {
+            "id": 37,
+            "locations": [
+                "route-43"
+            ],
+            "name": "route-43",
+            "positions": [
+                {
+                    "x": 12,
+                    "y": 3
+                }
+            ]
+        },
+        {
+            "id": 38,
+            "locations": [
+                "lake-of-rage"
+            ],
+            "name": "lake-of-rage",
+            "positions": [
+                {
+                    "x": 12,
+                    "y": 2
+                }
+            ]
+        },
+        {
+            "id": 39,
+            "locations": [
+                "route-44"
+            ],
+            "name": "route-44",
+            "positions": [
+                {
+                    "width": 2,
+                    "x": 13,
+                    "y": 4
+                }
+            ]
+        },
+        {
+            "id": 40,
+            "locations": [
+                "ice-path-1f",
+                "ice-path-b1f",
+                "ice-path-b2f-mahogany-side",
+                "ice-path-b2f-blackthorn-side",
+                "ice-path-b3f"
+            ],
+            "name": "ice-path",
+            "positions": [
+                {
+                    "x": 15,
+                    "y": 3
+                }
+            ]
+        },
+        {
+            "id": 41,
+            "locations": [
+                "blackthorn-city"
+            ],
+            "name": "blackthorn-city",
+            "positions": [
+                {
+                    "x": 15,
+                    "y": 4
+                }
+            ]
+        },
+        {
+            "id": 42,
+            "locations": [
+                "dragons-den-b1f"
+            ],
+            "name": "dragons-den",
+            "positions": [
+                {
+                    "x": 16,
+                    "y": 4
+                }
+            ]
+        },
+        {
+            "id": 43,
+            "locations": [
+                "route-45"
+            ],
+            "name": "route-45",
+            "positions": [
+                {
+                    "height": 4,
+                    "x": 15,
+                    "y": 5
+                }
+            ]
+        },
+        {
+            "id": 44,
+            "locations": [
+                "dark-cave-violet-entrance",
+                "dark-cave-blackthorn-entrance"
+            ],
+            "name": "dark-cave",
+            "positions": [
+                {
+                    "x": 12,
+                    "y": 6
+                },
+                {
+                    "x": 14,
+                    "y": 7
+                },
+                {
+                    "x": 14,
+                    "y": 5
+                }
+            ]
+        },
+        {
+            "id": 45,
+            "locations": [
+                "route-46"
+            ],
+            "name": "route-46",
+            "positions": [
+                {
+                    "height": 3,
+                    "x": 14,
+                    "y": 8
+                }
+            ]
+        },
+        {
+            "id": 46,
+            "locations": [
+                "silver-cave-room-1",
+                "silver-cave-room-2",
+                "silver-cave-room-3",
+                "silver-cave-item-rooms",
+                "silver-cave-outside"
+            ],
+            "name": "silver-cave",
+            "positions": [
+                {
+                    "x": 17,
+                    "y": 7
+                }
+            ]
+        },
+        {
+            "id": 47,
+            "locations": [
+                "pallet-town"
+            ],
+            "name": "pallet-town",
+            "positions": [
+                {
+                    "x": 23,
+                    "y": 12
+                }
+            ]
+        },
+        {
+            "id": 48,
+            "locations": [
+                "route-1"
+            ],
+            "name": "route-1",
+            "positions": [
+                {
+                    "height": 3,
+                    "x": 23,
+                    "y": 9
+                }
+            ]
+        },
+        {
+            "id": 49,
+            "locations": [
+                "viridian-city"
+            ],
+            "name": "viridian-city",
+            "positions": [
+                {
+                    "x": 23,
+                    "y": 8
+                }
+            ]
+        },
+        {
+            "id": 50,
+            "locations": [
                 "route-2"
             ],
-            "special": [
+            "name": "route-2",
+            "positions": [
                 {
-                    "pool": [
-                        {
-                            "chance": 100,
-                            "extra": "Traded for Haunter",
-                            "level": 1,
-                            "pokemon": "xatu"
-                        }
-                    ],
-                    "type": "trade"
+                    "height": 2,
+                    "x": 23,
+                    "y": 6
                 }
+            ]
+        },
+        {
+            "id": 51,
+            "locations": [
+                "pewter-city"
+            ],
+            "name": "pewter-city",
+            "positions": [
+                {
+                    "x": 23,
+                    "y": 5
+                }
+            ]
+        },
+        {
+            "id": 52,
+            "locations": [
+                "route-3"
+            ],
+            "name": "route-3",
+            "positions": [
+                {
+                    "width": 2,
+                    "x": 24,
+                    "y": 5
+                }
+            ]
+        },
+        {
+            "id": 53,
+            "locations": [
+                "mount-moon"
+            ],
+            "name": "mt-moon",
+            "positions": [
+                {
+                    "x": 26,
+                    "y": 5
+                }
+            ]
+        },
+        {
+            "id": 54,
+            "locations": [
+                "route-4"
+            ],
+            "name": "route-4",
+            "positions": [
+                {
+                    "width": 2,
+                    "x": 27,
+                    "y": 5
+                }
+            ]
+        },
+        {
+            "id": 55,
+            "locations": [
+                "cerulean-city"
+            ],
+            "name": "cerulean-city",
+            "positions": [
+                {
+                    "x": 29,
+                    "y": 5
+                }
+            ]
+        },
+        {
+            "id": 56,
+            "locations": [
+                "route-24"
+            ],
+            "name": "route-24",
+            "positions": [
+                {
+                    "height": 2,
+                    "x": 29,
+                    "y": 3
+                }
+            ]
+        },
+        {
+            "id": 57,
+            "locations": [
+                "route-25"
+            ],
+            "name": "route-25",
+            "positions": [
+                {
+                    "width": 2,
+                    "x": 30,
+                    "y": 3
+                }
+            ]
+        },
+        {
+            "id": 58,
+            "locations": [
+                "route-5"
+            ],
+            "name": "route-5",
+            "positions": [
+                {
+                    "x": 29,
+                    "y": 6
+                }
+            ]
+        },
+        {
+            "id": 59,
+            "locations": [
+                "underground"
+            ],
+            "name": "underground",
+            "positions": [
+                {}
+            ]
+        },
+        {
+            "id": 60,
+            "locations": [
+                "route-6"
+            ],
+            "name": "route-6",
+            "positions": [
+                {
+                    "x": 29,
+                    "y": 8
+                }
+            ]
+        },
+        {
+            "id": 61,
+            "locations": [
+                "vermilion-city",
+                "vermilion-port"
+            ],
+            "name": "vermilion-city",
+            "positions": [
+                {
+                    "x": 29,
+                    "y": 9
+                }
+            ]
+        },
+        {
+            "id": 62,
+            "locations": [
+                "digletts-cave"
+            ],
+            "name": "digletts-cave",
+            "positions": [
+                {
+                    "x": 30,
+                    "y": 9
+                },
+                {
+                    "x": 24,
+                    "y": 6
+                }
+            ]
+        },
+        {
+            "id": 63,
+            "locations": [
+                "route-7"
+            ],
+            "name": "route-7",
+            "positions": [
+                {
+                    "width": 2,
+                    "x": 27,
+                    "y": 7
+                }
+            ]
+        },
+        {
+            "id": 64,
+            "locations": [
+                "route-8"
+            ],
+            "name": "route-8",
+            "positions": [
+                {
+                    "width": 3,
+                    "x": 30,
+                    "y": 7
+                }
+            ]
+        },
+        {
+            "id": 65,
+            "locations": [
+                "route-9"
+            ],
+            "name": "route-9",
+            "positions": [
+                {
+                    "width": 3,
+                    "x": 30,
+                    "y": 5
+                }
+            ]
+        },
+        {
+            "id": 66,
+            "locations": [
+                "rock-tunnel-1f",
+                "rock-tunnel-b1f"
+            ],
+            "name": "rock-tunnel",
+            "positions": [
+                {
+                    "x": 33,
+                    "y": 6
+                }
+            ]
+        },
+        {
+            "id": 67,
+            "locations": [
+                "route-10"
+            ],
+            "name": "route-10",
+            "positions": [
+                {
+                    "x": 33,
+                    "y": 5
+                }
+            ]
+        },
+        {
+            "id": 68,
+            "locations": [
+                "power-plant"
+            ],
+            "name": "power-plant",
+            "positions": [
+                {
+                    "x": 34,
+                    "y": 5
+                }
+            ]
+        },
+        {
+            "id": 69,
+            "locations": [
+                "lavender-town"
+            ],
+            "name": "lavender-town",
+            "positions": [
+                {
+                    "x": 33,
+                    "y": 7
+                }
+            ]
+        },
+        {
+            "id": 70,
+            "locations": [
+                "lav-radio-tower"
+            ],
+            "name": "lav-radio-tower",
+            "positions": [
+                {
+                    "x": 34,
+                    "y": 7
+                }
+            ]
+        },
+        {
+            "id": 71,
+            "locations": [
+                "celadon-city"
+            ],
+            "name": "celadon-city",
+            "positions": [
+                {
+                    "x": 26,
+                    "y": 7
+                }
+            ]
+        },
+        {
+            "id": 72,
+            "locations": [
+                "saffron-city"
+            ],
+            "name": "saffron-city",
+            "positions": [
+                {
+                    "x": 29,
+                    "y": 7
+                }
+            ]
+        },
+        {
+            "id": 73,
+            "locations": [
+                "route-11"
+            ],
+            "name": "route-11",
+            "positions": [
+                {
+                    "width": 2,
+                    "x": 31,
+                    "y": 9
+                }
+            ]
+        },
+        {
+            "id": 74,
+            "locations": [
+                "route-12"
+            ],
+            "name": "route-12",
+            "positions": [
+                {
+                    "height": 3,
+                    "x": 33,
+                    "y": 8
+                }
+            ]
+        },
+        {
+            "id": 75,
+            "locations": [
+                "route-13"
+            ],
+            "name": "route-13",
+            "positions": [
+                {
+                    "width": 3,
+                    "x": 31,
+                    "y": 11
+                }
+            ]
+        },
+        {
+            "id": 76,
+            "locations": [
+                "route-14"
+            ],
+            "name": "route-14",
+            "positions": [
+                {
+                    "height": 2,
+                    "x": 31,
+                    "y": 12
+                }
+            ]
+        },
+        {
+            "id": 77,
+            "locations": [
+                "route-15"
+            ],
+            "name": "route-15",
+            "positions": [
+                {
+                    "width": 2,
+                    "x": 29,
+                    "y": 13
+                }
+            ]
+        },
+        {
+            "id": 78,
+            "locations": [
+                "route-16"
+            ],
+            "name": "route-16",
+            "positions": [
+                {
+                    "x": 25,
+                    "y": 7
+                }
+            ]
+        },
+        {
+            "id": 79,
+            "locations": [
+                "route-17"
+            ],
+            "name": "route-17",
+            "positions": [
+                {
+                    "height": 5,
+                    "x": 25,
+                    "y": 8
+                }
+            ]
+        },
+        {
+            "id": 80,
+            "locations": [
+                "route-18"
+            ],
+            "name": "route-18",
+            "positions": [
+                {
+                    "width": 3,
+                    "x": 25,
+                    "y": 13
+                }
+            ]
+        },
+        {
+            "id": 81,
+            "locations": [
+                "fuchsia-city"
+            ],
+            "name": "fuchsia-city",
+            "positions": [
+                {
+                    "x": 28,
+                    "y": 13
+                }
+            ]
+        },
+        {
+            "id": 82,
+            "locations": [
+                "route-19"
+            ],
+            "name": "route-19",
+            "positions": [
+                {
+                    "height": 2,
+                    "x": 28,
+                    "y": 14
+                }
+            ]
+        },
+        {
+            "id": 83,
+            "locations": [
+                "route-20"
+            ],
+            "name": "route-20",
+            "positions": [
+                {
+                    "width": 2,
+                    "x": 26,
+                    "y": 15
+                },
+                {
+                    "x": 24,
+                    "y": 15
+                }
+            ]
+        },
+        {
+            "id": 84,
+            "locations": [
+                "seafoam-islands"
+            ],
+            "name": "seafoam-islands",
+            "positions": [
+                {
+                    "x": 25,
+                    "y": 15
+                }
+            ]
+        },
+        {
+            "id": 85,
+            "locations": [
+                "cinnabar-island"
+            ],
+            "name": "cinnabar-island",
+            "positions": [
+                {
+                    "x": 23,
+                    "y": 15
+                }
+            ]
+        },
+        {
+            "id": 86,
+            "locations": [
+                "route-21"
+            ],
+            "name": "route-21",
+            "positions": [
+                {
+                    "height": 2,
+                    "x": 23,
+                    "y": 13
+                }
+            ]
+        },
+        {
+            "id": 87,
+            "locations": [
+                "route-22"
+            ],
+            "name": "route-22",
+            "positions": [
+                {
+                    "width": 2,
+                    "x": 21,
+                    "y": 7
+                }
+            ]
+        },
+        {
+            "id": 88,
+            "locations": [
+                "victory-road"
+            ],
+            "name": "victory-road",
+            "positions": [
+                {
+                    "x": 20,
+                    "y": 5
+                }
+            ]
+        },
+        {
+            "id": 89,
+            "locations": [
+                "route-23"
+            ],
+            "name": "route-23",
+            "positions": [
+                {
+                    "x": 20,
+                    "y": 4
+                }
+            ]
+        },
+        {
+            "id": 90,
+            "locations": [
+                "indigo-plateau"
+            ],
+            "name": "indigo-plateau",
+            "positions": [
+                {
+                    "x": 20,
+                    "y": 3
+                }
+            ]
+        },
+        {
+            "id": 91,
+            "locations": [
+                "route-26"
+            ],
+            "name": "route-26",
+            "positions": [
+                {
+                    "height": 5,
+                    "x": 20,
+                    "y": 6
+                }
+            ]
+        },
+        {
+            "id": 92,
+            "locations": [
+                "route-27"
+            ],
+            "name": "route-27",
+            "positions": [
+                {
+                    "x": 17,
+                    "y": 11
+                },
+                {
+                    "width": 2,
+                    "x": 19,
+                    "y": 11
+                }
+            ]
+        },
+        {
+            "id": 93,
+            "locations": [
+                "tohjo-falls"
+            ],
+            "name": "tohjo-falls",
+            "positions": [
+                {
+                    "x": 18,
+                    "y": 11
+                }
+            ]
+        },
+        {
+            "id": 94,
+            "locations": [
+                "route-28"
+            ],
+            "name": "route-28",
+            "positions": [
+                {
+                    "width": 2,
+                    "x": 18,
+                    "y": 7
+                }
+            ]
+        },
+        {
+            "id": 95,
+            "locations": [
+                "fast-ship"
+            ],
+            "name": "fast-ship",
+            "positions": [
+                {}
+            ]
+        },
+        {
+            "locations": [],
+            "name": "unlabeled",
+            "positions": [
+                {}
+            ]
+        },
+        {
+            "id": 127,
+            "locations": [],
+            "name": "event",
+            "positions": [
+                {}
             ]
         }
     ],
@@ -15658,7 +16357,7 @@
             "type": "normal"
         },
         {
-            "accuracy": 100,
+            "accuracy": 95,
             "extra": [
                 "If it misses or fails, deals 1\/8 the damage it would've dealt to the user instead"
             ],
@@ -28716,13 +29415,9 @@
                 "protect",
                 "rain-dance",
                 "endure",
-                "frustration",
                 "solarbeam",
                 "thunder",
-                "earthquake",
-                "return",
                 "psychic",
-                "shadow-ball",
                 "mud-slap",
                 "double-team",
                 "ice-punch",
@@ -28736,7 +29431,6 @@
                 "attract",
                 "fire-punch",
                 "surf",
-                "strength",
                 "flamethrower",
                 "thunderbolt",
                 "ice-beam"

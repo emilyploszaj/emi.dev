@@ -33,6 +33,16 @@
 	--day: #61b1d6;
 	--night: #432f70;
 	--morning: #d3c264;
+
+	--route: #e4cb7b;
+	--route-dark: #b19d5c;
+	--route-darker: #968344;
+	--town: #3e6ff5;
+	--town-dark: #2b51b9;
+	--town-darker: #1d3c92;
+	--dungeon: #d85778;
+	--dungeon-dark: #b44460;
+	--dungeon-darker: #8f3149;
 }
 
 html {
@@ -527,4 +537,72 @@ rt {
 	border-left-color: var(--high-switch-priority) !important;
 	border-right-color: var(--high-switch-priority) !important;
 	border-top-color: var(--high-switch-priority) !important;
+}
+
+#map {
+	background-color: var(--box-background);
+	padding: 24px;
+	height: fit-content;
+}
+
+.minimap {
+	position: relative;
+	overflow: hidden;
+	background-color: var(--background);
+}
+
+.encounter-minimap {
+	float: right;
+	clear: right;
+	margin: 8px;
+	padding: 8px;
+	background-color: var(--grouping-background);
+}
+
+.landmark {
+	position: absolute;
+	border-color: #00000085;
+	border-style: solid;
+	cursor: pointer;
+	background-color: var(--landmark-color);
+
+	--landmark-color: var(--dungeon);
+	--dark-landmark-color: var(--dungeon-dark);
+	--darker-landmark-color: var(--dungeon-darker);
+}
+
+.landmark-focused {
+	border-color: #8d3ee7;
+}
+
+.landmark-route {
+	--landmark-color: var(--route);
+	--dark-landmark-color: var(--route-dark);
+	--darker-landmark-color: var(--route-darker);
+}
+
+.landmark-town {
+	--landmark-color: var(--town);
+	--dark-landmark-color: var(--town-dark);
+	--darker-landmark-color: var(--town-darker);
+}
+
+.landmark-caught {
+	background: repeating-linear-gradient(
+		-45deg,
+		var(--dark-landmark-color) 0px,
+		var(--dark-landmark-color) 10px,
+		var(--darker-landmark-color) 10px,
+		var(--darker-landmark-color) 20px
+	) !important;
+}
+
+.landmark-caught:hover {
+	background: repeating-linear-gradient(
+		-45deg,
+		var(--landmark-color) 0px,
+		var(--landmark-color) 10px,
+		var(--dark-landmark-color) 10px,
+		var(--dark-landmark-color) 20px
+	) !important;
 }

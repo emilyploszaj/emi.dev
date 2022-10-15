@@ -39,6 +39,9 @@ var movesByTMHM = new Map();
 var fishingPools = new Map();
 var headbuttPools = new Map();
 var rockPools = new Map();
+var landmarksByIndex = new Map();
+var landmarksByName = new Map();
+var landmarksByLocation = new Map();
 var myPoke;
 var theirPoke;
 var box = [];
@@ -49,110 +52,11 @@ var copyEditedMoves = false;
 var badges = 0;
 var lastTrainer = 17;
 var editReturn;
+var caughtLandmarks = new Set();
 const attackBadges = 1;
 const defenseBadges = 7;
 const specialBadges = 6;
 const speedBadges = 3;
-const landmarksByIndex = new Map([
-	[0x00, "special"],
-	[0x01, "new-bark-town"],
-	[0x02, "route-29"],
-	[0x03, "cherrygrove-city"],
-	[0x04, "route-30"],
-	[0x05, "route-31"],
-	[0x06, "violet-city"],
-	[0x07, "sprout-tower"],
-	[0x08, "route-32"],
-	[0x09, "ruins-of-alph"],
-	[0x0A, "union-cave"],
-	[0x0B, "route-33"],
-	[0x0C, "azalea-town"],
-	[0x0D, "slowpoke-well"],
-	[0x0E, "ilex-forest"],
-	[0x0F, "route-34"],
-	[0x10, "goldenrod-city"],
-	[0x11, "radio-tower"],
-	[0x12, "route-35"],
-	[0x13, "national-park"],
-	[0x14, "route-36"],
-	[0x15, "route-37"],
-	[0x16, "ecruteak-city"],
-	[0x17, "tin-tower"],
-	[0x18, "burned-tower"],
-	[0x19, "route-38"],
-	[0x1A, "route-39"],
-	[0x1B, "olivine-city"],
-	[0x1C, "lighthouse"],
-	[0x1D, "battle-tower"],
-	[0x1E, "route-40"],
-	[0x1F, "whirl-islands"],
-	[0x20, "route-41"],
-	[0x21, "cianwood-city"],
-	[0x22, "route-42"],
-	[0x23, "mt-mortar"],
-	[0x24, "mahogany-town"],
-	[0x25, "route-43"],
-	[0x26, "lake-of-rage"],
-	[0x27, "route-44"],
-	[0x28, "ice-path"],
-	[0x29, "blackthorn-city"],
-	[0x2A, "dragon's-den"],
-	[0x2B, "route-45"],
-	[0x2C, "dark-cave"],
-	[0x2D, "route-46"],
-	[0x2E, "silver-cave"],
-	[0x2F, "pallet-town"],
-	[0x30, "route-1"],
-	[0x31, "viridian-city"],
-	[0x32, "route-2"],
-	[0x33, "pewter-city"],
-	[0x34, "route-3"],
-	[0x35, "mt-moon"],
-	[0x36, "route-4"],
-	[0x37, "cerulean-city"],
-	[0x38, "route-24"],
-	[0x39, "route-25"],
-	[0x3A, "route-5"],
-	[0x3B, "underground"],
-	[0x3C, "route-6"],
-	[0x3D, "vermilion-city"],
-	[0x3E, "digletts-cave"],
-	[0x3F, "route-7"],
-	[0x40, "route-8"],
-	[0x41, "route-9"],
-	[0x42, "rock-tunnel"],
-	[0x43, "route-10"],
-	[0x44, "power-plant"],
-	[0x45, "lavender-town"],
-	[0x46, "lav-radio-tower"],
-	[0x47, "celadon-city"],
-	[0x48, "saffron-city"],
-	[0x49, "route-11"],
-	[0x4A, "route-12"],
-	[0x4B, "route-13"],
-	[0x4C, "route-14"],
-	[0x4D, "route-15"],
-	[0x4E, "route-16"],
-	[0x4F, "route-17"],
-	[0x50, "route-18"],
-	[0x51, "fuchsia-city"],
-	[0x52, "route-19"],
-	[0x53, "route-20"],
-	[0x54, "seafoam-islands"],
-	[0x55, "cinnabar-island"],
-	[0x56, "route-21"],
-	[0x57, "route-22"],
-	[0x58, "victory-road"],
-	[0x59, "route-23"],
-	[0x5A, "indigo-plateau"],
-	[0x5B, "route-26"],
-	[0x5C, "route-27"],
-	[0x5D, "tohjo-falls"],
-	[0x5E, "route-28"],
-	[0x5F, "fast-ship"],
-	[0x7E, "unlabeled"],
-	[0x7F, "event"]
-]);
 const badgeTypes = new Map([
 	["flying", 1],
 	["bug", 2],
@@ -338,6 +242,13 @@ fetch("./data.json")
 			var map = typeMatchups.get(m.attacker);
 			map.set(m.defender, m.multiplier);
 		}
+		for (let i in j.landmarks) {
+			landmarksByIndex.set(j.landmarks[i].id, j.landmarks[i]);
+			landmarksByName.set(j.landmarks[i].name, j.landmarks[i]);
+			for (var k = 0; k < j.landmarks[i].locations.length; k++) {
+				landmarksByLocation.set(j.landmarks[i].locations[k], j.landmarks[i]);
+			}
+		}
 		for (let i in j.encounters) {
 			var e = j.encounters[i];
 			encountersByName.set(e.area, i);
@@ -423,6 +334,16 @@ function displayTrainers() {
 		v += '</div>';
 	}
 	document.getElementById("trainers").innerHTML = v;
+}
+
+function focusLandmark(i) {
+	var d = encountersByName.get(landmarksByIndex.get(i).locations[0]);
+	if (d !== undefined) {
+		focusEncounter(d);
+	} else {
+		document.getElementById("full-encounter").innerHTML = getEncounterDisplay(landmarksByIndex.get(i).name);
+		setTab("full-encounter");
+	}
 }
 
 function focusEncounter(i) {
@@ -896,51 +817,64 @@ function addPoolInfo(pools) {
 }
 
 function getEncounterDisplay(pools) {
+	var landmark;
+	if (pools.area) {
+		landmark = landmarksByLocation.get(pools.area)
+	} else {
+		landmark = landmarksByName.get(pools);
+	}
+	var center = getMapCenter(landmark);
 	var v = "";
-	v += "<h3>" + fullCapitalize(pools.area) + "</h3>";
-	v += "<p>Neighbors:";
-	if (pools.neighbors) {
-		for (var i = 0; i < pools.neighbors.length; i++) {
-			var e = encountersByName.get(pools.neighbors[i]);
-			if (i > 0) {
-				v += ",";
-			}
-			v += ' <span class="poke-link" onclick="focusEncounter(' + e + ')">';
-			v += fullCapitalize(pools.neighbors[i]);
-			v += '</span>';
+	var w = 320;
+	var h = 280;
+	var scale = 40;
+	v += '<div>';
+	v += '<div class="encounter-minimap">' + getMapDisplay(w, h, -center.x + w / scale / 2, -center.y + h / scale / 2, scale, landmark.name) + '</div>';
+	if (pools.area) {
+		v += "<h3>" + fullCapitalize(pools.area) + "</h3>";
+		v += "<p>Areas:</p>";
+		for (var i = 0; i < landmark.locations.length; i++) {
+			var e = encountersByName.get(landmark.locations[i]);
+			v += '<div class="poke-link" onclick="focusEncounter(' + e + ')">';
+			v += fullCapitalize(landmark.locations[i]);
+			v += '</div>';
 		}
+	} else {
+		v += "<h3>" + fullCapitalize(pools) + "</h3>";
 	}
-	v += "</p>";
-	if (pools.normal) {
-		v += getWalkingPoolDisplay(pools.normal, "Walking");
-	}
-	if (pools.surf) {
-		v += "<p>Surfing (Lvl " + pools.surf[0].level + "):</p>";
-		v += getEncounterPoolDisplay(pools.surf, "any");
-	}
-	if (pools.headbutt) {
-		var pool = headbuttPools.get(pools.headbutt);
-		v += "<p>Headbutt (Lvl " + pool.headbutt[0].level + "):</p>";
-		v += getEncounterPoolDisplay(pool.headbutt, "any");
-	}
-	if (pools.fishing) {
-		v += getFishingPoolDisplay(fishingPools.get(pools.fishing), "");
-	}
-	if (pools.rock) {
-		var pool = rockPools.get(pools.rock);
-		v += "<p>Rock Smash (Lvl " + pool.rock[0].level + "):</p>";
-		v += getEncounterPoolDisplay(pool.rock, "any");
-	}
-	if (pools.special) {
-		for (let i = 0; i < pools.special.length; i++) {
-			var pool = pools.special[i];
-			if (pool.type == "swarm") {
-				v += getWalkingPoolDisplay(pool, "Swarm");
-			} else if (pool.type == "fishing-swarm") {
-				v += getFishingPoolDisplay(pool, "Swarm ");
-			} else {
-				v += "<p>Special:</p>";
-				v += getEncounterPoolDisplay(pool.pool, "any");
+	v += '<br style="clear:both;"/></div>';
+	if (pools.area) {
+		if (pools.normal) {
+			v += getWalkingPoolDisplay(pools.normal, "Walking");
+		}
+		if (pools.surf) {
+			v += "<p>Surfing (Lvl " + pools.surf[0].level + "):</p>";
+			v += getEncounterPoolDisplay(pools.surf, "any");
+		}
+		if (pools.headbutt) {
+			var pool = headbuttPools.get(pools.headbutt);
+			v += "<p>Headbutt (Lvl " + pool.headbutt[0].level + "):</p>";
+			v += getEncounterPoolDisplay(pool.headbutt, "any");
+		}
+		if (pools.fishing) {
+			v += getFishingPoolDisplay(fishingPools.get(pools.fishing), "");
+		}
+		if (pools.rock) {
+			var pool = rockPools.get(pools.rock);
+			v += "<p>Rock Smash (Lvl " + pool.rock[0].level + "):</p>";
+			v += getEncounterPoolDisplay(pool.rock, "any");
+		}
+		if (pools.special) {
+			for (let i = 0; i < pools.special.length; i++) {
+				var pool = pools.special[i];
+				if (pool.type == "swarm") {
+					v += getWalkingPoolDisplay(pool, "Swarm");
+				} else if (pool.type == "fishing-swarm") {
+					v += getFishingPoolDisplay(pool, "Swarm ");
+				} else {
+					v += "<p>Special:</p>";
+					v += getEncounterPoolDisplay(pool.pool, "any");
+				}
 			}
 		}
 	}
@@ -1121,6 +1055,82 @@ function getMoveDisplay(move, level = undefined) {
 	}
 	v += '</tr>';
 	return v;
+}
+
+function setMap(xOffset = 0, yOffset = 0, scale = 48) {
+	var th = 17 * scale;
+	var v = "";
+	v += '<button onclick="setMap(0)">Johto</button>';
+	v += '<button onclick="setMap(-17)">Kanto</button>';
+	v += getMapDisplay(960, th, xOffset, yOffset, scale);
+	document.getElementById("map").innerHTML = v;
+}
+
+function getMapDisplay(width, height, xOffset = 0, yOffset = 0, scale = 48, focus = "") {
+	var border = parseInt(scale / 8);
+	var xo = xOffset * scale;
+	var yo = yOffset * scale;
+	var v = "";
+	v += '<div class="minimap" style="width:' + width + 'px;height:' + height + 'px;">';
+	for (var i = 0; i < data.landmarks.length; i++) {
+		var lc = data.landmarks[i];
+		var cl = "";
+		if (lc.name.startsWith("route")) {
+			cl = "landmark-route";
+		} else if (lc.name.includes("city") || lc.name.includes("town")) {
+			cl = "landmark-town";
+		}
+
+		if (caughtLandmarks.has(lc.name)) {
+			cl += " landmark-caught";
+		}
+
+		if (lc.name == focus) {
+			cl += " landmark-focused";
+		}
+
+		for (var j = 0; j < lc.positions.length; j++) {
+			var l = lc.positions[j];
+			var x = l.x * scale + xo;
+			var y = l.y * scale + yo;
+			if (x !== 0 && !x) {
+				continue;
+			}
+			var width = scale;
+			var height = scale;
+			if (l.width) {
+				width = l.width * scale;
+			}
+			if (l.height) {
+				height = l.height * scale;
+			}
+			width -= border * 2;
+			height -= border * 2;
+			v += '<div onclick=focusLandmark(' + lc.id + ') class="landmark ' + cl + '" style="left:' + x + 'px;top:' + y + 'px;width:' + width + 'px;height:' + height + 'px;border-width:' + border + 'px;"></div>';
+		}
+	}
+	v += "</div>";
+	return v;
+}
+
+function getMapCenter(landmark) {
+	var xo = 0;
+	var yo = 0;
+	for (var j = 0; j < landmark.positions.length; j++) {
+		var width = landmark.positions[j].width;
+		var height = landmark.positions[j].height;
+		if (width == undefined) {
+			width = 1;
+		}
+		if (height == undefined) {
+			height = 1;
+		}
+		xo += landmark.positions[j].x + width / 2;
+		yo += landmark.positions[j].y + height / 2;
+	}
+	xo /= landmark.positions.length;
+	yo /= landmark.positions.length;
+	return {x: xo, y: yo};
 }
 
 function padNumber(s) {
@@ -1501,6 +1511,9 @@ document.getElementById("search-box").oninput = function (event) {
 }
 
 function setTab(name) {
+	if (name == "map") {
+		setMap();
+	}
 	if (name != "edit") {
 		editing = -1;
 	} else {
@@ -1687,6 +1700,13 @@ function updateBox() {
 	}
 	localStorage.setItem("box", JSON.stringify(box));
 	localStorage.setItem("dead-box", JSON.stringify(deadBox));
+	caughtLandmarks.clear();
+	for (var i = 0; i < box.length; i++) {
+		caughtLandmarks.add(box[i].caught);
+	}
+	for (var i = 0; i < deadBox.length; i++) {
+		caughtLandmarks.add(deadBox[i].caught);
+	}
 	updateCalc();
 }
 
@@ -1871,6 +1891,11 @@ function readNewbox(bytes, start) {
 				moves.push(movesByIndex.get(move).name);
 			}
 		}
+		var caught = bytes[p + 0x1B] & 0b0111_1111;
+		var landmark = landmarksByIndex.get(caught).name;
+		if (!landmark) {
+			landmark = "unknown";
+		}
 		pokemon.push({
 			name: pokemonByPokedex.get(bytes[p]).name,
 			level: bytes[p + 0x1c],
@@ -1883,7 +1908,8 @@ function readNewbox(bytes, start) {
 				"spe": spe
 			},
 			"moves": moves,
-			"item": item
+			"item": item,
+			"caught": landmark
 		});
 	}
 	return pokemon;
@@ -1926,6 +1952,11 @@ function readPokemonList(bytes, start, capacity, increment) {
 				moves.push(movesByIndex.get(move).name);
 			}
 		}
+		var caught = bytes[p + 0x1E] & 0b0111_1111;
+		var landmark = landmarksByIndex.get(caught).name;
+		if (!landmark) {
+			landmark = "unknown";
+		}
 		pokemon.push({
 			name: pokemonByPokedex.get(bytes[p]).name,
 			level: bytes[p + 0x1f],
@@ -1938,7 +1969,8 @@ function readPokemonList(bytes, start, capacity, increment) {
 				"spe": spe
 			},
 			"moves": moves,
-			"item": item
+			"item": item,
+			"caught": landmark
 		});
 		p += increment;
 	}
