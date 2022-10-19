@@ -991,8 +991,13 @@ function getFullMoveDisplay(move) {
 	if (move.extra) {
 		for (var i = 0; i < move.extra.length; i++) {
 			v += "<p>";
-			v += move.extra[i];
-			v += "</p>"
+			var me = move.extra[i].split("\n");
+			for (var i = 0; i < me.length; i++) {
+				v += "<div>";
+				v += me[i];
+				v += "</div>";
+			}
+			v += "</p>";
 		}
 	}
 	v += "<div><table>";
@@ -1994,40 +1999,57 @@ function readFile(file) {
 	reader.onload = function (e) {
 		var bytes = new Uint8Array(e.target.result);
 		if (bytes.length > 32000 && bytes[0x2008] == 99 && bytes[0x2d0f] == 127) {
-			pokemon = [];
-			deadPokemon = [];
-			pokemon = pokemon.concat(readPokemonList(bytes, 0x2865, 6, 48));
-			for (var i = 0; i < 16; i++) {
-				var l = readNewbox(bytes, 0x2f20 + i * 0x21);
-				if (i >= 14) {
-					deadPokemon = deadPokemon.concat(l);
-				} else {
-					pokemon = pokemon.concat(l);
+			try {
+				pokemon = [];
+				deadPokemon = [];
+				pokemon = pokemon.concat(readPokemonList(bytes, 0x2865, 6, 48));
+				for (var i = 0; i < 16; i++) {
+					var l = readNewbox(bytes, 0x2f20 + i * 0x21);
+					if (i >= 14) {
+						deadPokemon = deadPokemon.concat(l);
+					} else {
+						pokemon = pokemon.concat(l);
+					}
 				}
-			}
-			box = pokemon;
-			deadBox = deadPokemon;
-			var badgeMask = (bytes[0x23e5] << 8) | bytes[0x23e6];
-			badges = 0;
-			for (var i = 0; i < 16; i++) {
-				if ((badgeMask & 1) == 1) {
-					badges++;
+				box = pokemon;
+				deadBox = deadPokemon;
+				var badgeMask = (bytes[0x23e5] << 8) | bytes[0x23e6];
+				badges = 0;
+				for (var i = 0; i < 16; i++) {
+					if ((badgeMask & 1) == 1) {
+						badges++;
+					}
+					badgeMask >>= 1;
 				}
-				badgeMask >>= 1;
+				document.getElementById("badges").value = badges;
+				updateBadges();
+				if (box.length > 0) {
+					setPlayer(0);
+				}
+				updateBox();
+				var popup = '<div onclick="closePopup()" class="save-success">Successfully parsed save!';
+				popup += '<br>Encounters: ' + pokemon.length;
+				if (deadPokemon.length > 0) {
+					popup += ' (+' + deadPokemon.length + ' fainted)';
+				}
+				popup += '<br>Badges: ' + badges;
+				popup += '</div>';
+				document.getElementById("info-popup").innerHTML = popup;
+			} catch (e) {
+				document.getElementById("info-popup").innerHTML = '<div onclick="closePopup()" class="save-error">Error while parsing save!<br>Is this a valid file?<br>See console for details</div>';
 			}
-			document.getElementById("badges").value = badges;
-			updateBadges();
-			if (box.length > 0) {
-				setPlayer(0);
-			}
-			updateBox();
 		} else {
+			console.log("File doesn't appear to be a save file!");
 			console.log(bytes[0x2008]);
 			console.log(bytes[0x2d0f]);
-			console.log("File doesn't appear to be a save file!");
+			document.getElementById("info-popup").innerHTML = '<div onclick="closePopup()" class="save-error">File doesn\'t appear to be a save file!<br>Name should end with .sav</div>';
 		}
 	};
 	reader.readAsArrayBuffer(file);
+}
+
+function closePopup() {
+	document.getElementById("info-popup").innerHTML = "";
 }
 
 document.ondrop = function (event) {

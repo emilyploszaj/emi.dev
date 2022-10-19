@@ -37,12 +37,15 @@
 	--route: #e4cb7b;
 	--route-dark: #b19d5c;
 	--route-darker: #968344;
+	--route-light: #f8e194;
 	--town: #3e6ff5;
 	--town-dark: #2b51b9;
 	--town-darker: #1d3c92;
+	--town-light: #628bfd;
 	--dungeon: #d85778;
 	--dungeon-dark: #b44460;
 	--dungeon-darker: #8f3149;
+	--dungeon-light: #f8809e;
 }
 
 html {
@@ -569,6 +572,11 @@ rt {
 	--landmark-color: var(--dungeon);
 	--dark-landmark-color: var(--dungeon-dark);
 	--darker-landmark-color: var(--dungeon-darker);
+	--light-landmark-color: var(--dungeon-light);
+}
+
+.landmark:hover {
+	background-color: var(--light-landmark-color);
 }
 
 .landmark-focused {
@@ -579,12 +587,14 @@ rt {
 	--landmark-color: var(--route);
 	--dark-landmark-color: var(--route-dark);
 	--darker-landmark-color: var(--route-darker);
+	--light-landmark-color: var(--route-light);
 }
 
 .landmark-town {
 	--landmark-color: var(--town);
 	--dark-landmark-color: var(--town-dark);
 	--darker-landmark-color: var(--town-darker);
+	--light-landmark-color: var(--town-light);
 }
 
 .landmark-caught {
@@ -605,4 +615,50 @@ rt {
 		var(--dark-landmark-color) 10px,
 		var(--dark-landmark-color) 20px
 	) !important;
+}
+
+#info-popup {
+	pointer-events: none;
+	position: fixed;
+	overflow-x: hidden;
+	width: 100%;
+	height: 100%;
+	bottom: 0px;
+	left: 0px;
+}
+
+#info-popup > div {
+	pointer-events: all;
+	cursor: pointer;
+	position: absolute;
+	right: -200%;
+	bottom: 40px;
+	padding: 8px;
+	border-color: var(--grouping-background);
+	border-width: 4px;
+	border-style: solid;
+	background-color: var(--box-background);
+	animation-name: disappear;
+	animation-duration: 6s;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes disappear {
+	0% {
+		right: 40px;
+	}
+	60% {
+		right: 40px;
+	}
+	100% {
+		right: -200%;
+	}
+}
+
+.save-error {
+	border-color: #c51f1f !important;
+}
+
+.save-success {
+	border-color: #28ade2 !important;
 }
