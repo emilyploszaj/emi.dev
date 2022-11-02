@@ -386,8 +386,7 @@ function displayCalcPokemon(root, poke, opponent, right) {
 	root.getElementsByClassName("poke-name")[0].innerHTML = pokeLink(p);
 	root.getElementsByClassName("poke-level")[0].innerHTML = "Lvl " + poke.level;
 	root.getElementsByClassName("poke-item")[0].innerHTML = fullCapitalize(poke.item);
-	var shiny = isShiny(poke) ? "shiny" : "normal";
-	root.getElementsByClassName("poke-icon")[0].innerHTML = '<img src="https://img.pokemondb.net/sprites/crystal/' + shiny + '/' + p.name + '.png">';
+	root.getElementsByClassName("poke-icon")[0].innerHTML = '<img src="' + getPokeImage(poke) + '">';
 	if (right && root.getElementsByClassName("experience").length > 0) {
 		var exp = p.base_experience;
 		exp = parseInt(exp * 1.5); // Trainer
@@ -581,8 +580,7 @@ function displayCalcStat(div, poke, stat, player = false) {
 function getTinyPokemonDisplay(tp, extra = "") {
 	var p = pokemonByName.get(tp.name);
 	var v = '<div class="tiny-poke">';
-	var shiny = isShiny(tp) ? "shiny" : "normal";
-	v += '<div class="tiny-poke-icon"><img src="https://img.pokemondb.net/sprites/crystal/' + shiny + '/' + p.name + '.png"></div>';
+	v += '<div class="tiny-poke-icon"><img src="' + getPokeImage(tp) + '"></div>';
 	v += '<div class="tiny-poke-info">';
 	v += '<div>' + pokeLink(p.name) + ' - Lvl ' + tp.level + ' @ ' + fullCapitalize(tp.item) + '</div>';
 	v += "<table><tr>";
@@ -638,7 +636,7 @@ function displayPokemon(root, i) {
 	var p = data.pokemon[i];
 	root.getElementsByClassName("poke-name")[0].innerHTML = pokeLink(p);
 	root.getElementsByClassName("poke-dex-num")[0].innerHTML = "#" + padNumber(p.pokedex);
-	root.getElementsByClassName("poke-icon")[0].innerHTML = '<img src="https://img.pokemondb.net/sprites/crystal/normal/' + p.name + '.png">';
+	root.getElementsByClassName("poke-icon")[0].innerHTML = '<img src="' + getPokeImage(p) + '">';
 	var types = '<div style="display:flex">' + prettyType(p.types[0]);
 	if (p.types.length > 1) {
 		types += " " + prettyType(p.types[1]);
@@ -802,6 +800,8 @@ function addPoolInfo(pools) {
 				addPoolList(pokemonEncounters, name, "Swarm", pool.day);
 				addPoolList(pokemonEncounters, name, "Swarm", pool.night);
 				addPoolList(pokemonEncounters, name, "Swarm", pool.morning);
+			} else if (pool.type == "bug-catching-contest") {
+				addPoolList(pokemonEncounters, name, "Bug Catching Contest", pool.pool);
 			} else if (pool.type == "fishing-swarm") {
 				addPoolList(pokemonEncounters, name, "Swarm Old Rod", pool.old.day);
 				addPoolList(pokemonEncounters, name, "Swarm Old Rod", pool.old.night);
@@ -871,6 +871,9 @@ function getEncounterDisplay(pools) {
 					v += getWalkingPoolDisplay(pool, "Swarm");
 				} else if (pool.type == "fishing-swarm") {
 					v += getFishingPoolDisplay(pool, "Swarm ");
+				} else if (pool.type == "bug-catching-contest") {
+					v += "<p>Bug Catching Contest:</p>";
+					v += getEncounterPoolDisplay(pool.pool, "any");
 				} else {
 					v += "<p>Special:</p>";
 					v += getEncounterPoolDisplay(pool.pool, "any");
@@ -926,7 +929,7 @@ function arePoolsEqual(a, b) {
 function getEncounterPoolDisplay(pool, time) {
 	var v = "";
 	v += '<div class="encounter-pool ' + time + '-pool">';
-	v += '<div style="display:flex">';
+	v += '<div style="display:flex;flex-wrap:wrap;">';
 	var totalWeight = 0;
 	var lvl = pool[0].level;
 	var showLevel = false;
@@ -959,7 +962,7 @@ function getEncounterPoolDisplay(pool, time) {
 		}
 		v += '</rt></ruby></div>';
 		v += '<img style="cursor:pointer;" onclick="focusPokeByName(\'' + pool[i].pokemon
-			+ '\')" src="https://img.pokemondb.net/sprites/crystal/normal/' + pool[i].pokemon + '.png">';
+			+ '\')" src="' + getPokeImage(pool[i].pokemon) + '">';
 		v += '</div>';
 	}
 	v += '</div>';
@@ -1011,7 +1014,7 @@ function getFullMoveDisplay(move) {
 			v += '<div class="encounter-poke">';
 			v += " Lvl " + list[i].level;
 			v += '<img style="cursor:pointer;" onclick="focusPokeByName(\'' + list[i].pokemon
-				+ '\')" src="https://img.pokemondb.net/sprites/crystal/normal/' + list[i].pokemon + '.png">';
+				+ '\')" src="' + getPokeImage(list[i]) + '">';
 			v += '</div>';
 		}
 		v += '</div>';
@@ -1025,7 +1028,7 @@ function getFullMoveDisplay(move) {
 			for (var i = 0; i < list.length; i++) {
 				v += '<div class="encounter-poke">';
 				v += '<img style="cursor:pointer;" onclick="focusPokeByName(\'' + list[i]
-					+ '\')" src="https://img.pokemondb.net/sprites/crystal/normal/' + list[i] + '.png">';
+					+ '\')" src="' + getPokeImage(list[i]) + '">';
 				v += '</div>';
 			}
 			v += '</div>';
@@ -1625,14 +1628,12 @@ function updateCalc() {
 		displayCalcPokemon(document.getElementById("opponent"), theirPoke, myPoke, true);
 		var v = "";
 		for (var i = 0; i < box.length && i < box.length; i++) {
-			var shiny = isShiny(box[i]) ? "shiny" : "normal";
-			var img = '<img src="https://img.pokemondb.net/sprites/crystal/' + shiny + '/' + box[i].name + '.png">';
+			var img = '<img src="' + getPokeImage(box[i]) + '">';
 			v += '<div onclick="setPlayer(' + i + ')">' + img + "</div>";
 		}
 		document.getElementById("player").getElementsByClassName("calc-team")[0].innerHTML = v;
 		var v = "";
 		for (let i in enemyTeam) {
-			var shiny = isShiny(enemyTeam[i]) ? "shiny" : "normal";
 			var prio = getSwitchPriority(enemyTeam[i], myPoke);
 			var prioClass = "neutral-switch-priority";
 			if (prio < 0) {
@@ -1640,13 +1641,21 @@ function updateCalc() {
 			} else if (prio > 0) {
 				prioClass = "high-switch-priority";
 			}
-			var img = '<img class="' + prioClass + '" src="https://img.pokemondb.net/sprites/crystal/' + shiny + '/' + enemyTeam[i].name + '.png">';
+			var img = '<img class="' + prioClass + '" src="' + getPokeImage(enemyTeam[i]) + '">';
 			v += '<div onclick="setEnemy(' + i + ')">' + img + "</div>";
 		}
 		document.getElementById("opponent").getElementsByClassName("calc-team")[0].innerHTML = v;
 	} catch(e) {
 		console.log(e);
 	}
+}
+
+function getPokeImage(poke) {
+	var shiny = poke.name && isShiny(poke) ? "shiny" : "normal";
+	if (poke.name) {
+		poke = poke.name;
+	}
+	return 'https://img.pokemondb.net/sprites/crystal/' + shiny + '/' + poke + '.png';
 }
 
 function isShiny(poke) {

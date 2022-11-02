@@ -271,7 +271,8 @@ input:checked + .fake-checkbox {
 
 .encounter-pool {
 	padding: 8px;
-	width: min-content;
+	width: fit-content;
+	max-width: 952px;
 }
 
 .any-pool {

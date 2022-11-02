@@ -3478,7 +3478,64 @@
                         "pokemon": "noctowl"
                     }
                 ]
-            }
+            },
+            "special": [
+                {
+                    "pool": [
+                        {
+                            "chance": 20,
+                            "level": 25,
+                            "pokemon": "caterpie"
+                        },
+                        {
+                            "chance": 20,
+                            "level": 25,
+                            "pokemon": "weedle"
+                        },
+                        {
+                            "chance": 10,
+                            "level": 25,
+                            "pokemon": "metapod"
+                        },
+                        {
+                            "chance": 10,
+                            "level": 25,
+                            "pokemon": "kakuna"
+                        },
+                        {
+                            "chance": 5,
+                            "level": 25,
+                            "pokemon": "butterfree"
+                        },
+                        {
+                            "chance": 5,
+                            "level": 25,
+                            "pokemon": "beedrill"
+                        },
+                        {
+                            "chance": 10,
+                            "level": 25,
+                            "pokemon": "venonat"
+                        },
+                        {
+                            "chance": 10,
+                            "level": 25,
+                            "pokemon": "paras"
+                        },
+                        {
+                            "chance": 5,
+                            "level": 25,
+                            "pokemon": "scyther"
+                        },
+                        {
+                            "chance": 5,
+                            "level": 25,
+                            "pokemon": "pinsir"
+                        }
+                    ],
+                    "type": "bug-catching-contest"
+                }
+            ]
         },
         {
             "area": "ruins-of-alph-outside",
@@ -15432,7 +15489,7 @@
         {
             "id": 67,
             "locations": [
-                "route-10"
+                "route-10-north"
             ],
             "name": "route-10",
             "positions": [
