@@ -1014,7 +1014,7 @@ function getFullMoveDisplay(move) {
 			v += '<div class="encounter-poke">';
 			v += " Lvl " + list[i].level;
 			v += '<img style="cursor:pointer;" onclick="focusPokeByName(\'' + list[i].pokemon
-				+ '\')" src="' + getPokeImage(list[i]) + '">';
+				+ '\')" src="' + getPokeImage(list[i].pokemon) + '">';
 			v += '</div>';
 		}
 		v += '</div>';
