@@ -56,8 +56,10 @@ html {
 }
 
 body {
-	padding-left: calc(50% - 520px);
-	padding-right: calc(50% - 520px);
+	padding-left: calc(50% - 512px);
+	padding-right: calc(50% - 512px);
+	min-width: 1024px;
+	overflow-x: scroll;
 }
 
 img {
@@ -107,7 +109,7 @@ summary:hover {
 }
 
 input[type=number] {
-	width:50px;
+	width: 50px;
 }
 
 input[type="checkbox"] {
@@ -491,7 +493,7 @@ rt {
 
 #weather {
 	position: absolute;
-	left: calc(50% - 72px);
+	left: calc(max(0px, calc(50% - 512px)) + 448px);
 	margin-top: 4px;
 	width: 128px;
 	padding: 6px;
