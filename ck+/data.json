@@ -43311,7 +43311,7 @@
                     "moves": [
                         "submission",
                         "crabhammer",
-                        "submission",
+                        "metal-claw",
                         "ice-punch"
                     ],
                     "name": "kingler"
@@ -53707,6 +53707,17 @@
                         "metronome"
                     ],
                     "name": "togetic"
+                },
+                {
+                    "item": "Spell Tag",
+                    "level": 92,
+                    "moves": [
+                        "shadow-ball",
+                        "thunderbolt",
+                        "destiny-bond",
+                        "hypnosis"
+                    ],
+                    "name": "misdreavus"
                 }
             ]
         },
@@ -53756,34 +53767,6 @@
                         "night-shade"
                     ],
                     "name": "umbreon"
-                }
-            ]
-        },
-        {
-            "meta": "(immediate)",
-            "name": "CooltrainerM COOLTRAINERM (17) KEVIN",
-            "team": [
-                {
-                    "item": "Scope Lens",
-                    "level": 92,
-                    "moves": [
-                        "psychic",
-                        "ice-beam",
-                        "lovely-kiss",
-                        "destiny-bond"
-                    ],
-                    "name": "jynx"
-                },
-                {
-                    "item": "Spell Tag",
-                    "level": 92,
-                    "moves": [
-                        "shadow-ball",
-                        "thunderbolt",
-                        "destiny-bond",
-                        "hypnosis"
-                    ],
-                    "name": "misdreavus"
                 },
                 {
                     "item": "Leftovers",
@@ -53806,6 +53789,23 @@
                         "blizzard"
                     ],
                     "name": "nidoqueen"
+                }
+            ]
+        },
+        {
+            "meta": "Optional",
+            "name": "CooltrainerM COOLTRAINERM (17) KEVIN",
+            "team": [
+                {
+                    "item": "Scope Lens",
+                    "level": 92,
+                    "moves": [
+                        "psychic",
+                        "ice-beam",
+                        "lovely-kiss",
+                        "destiny-bond"
+                    ],
+                    "name": "jynx"
                 }
             ]
         },
