@@ -49747,6 +49747,53 @@
         },
         {
             "meta": "Route 6",
+            "name": "PokefanM POKEFANM (13) REX",
+            "team": [
+                {
+                    "item": "Quick Claw",
+                    "level": 74,
+                    "moves": [
+                        "double-edge",
+                        "metal-claw",
+                        "earthquake",
+                        "submission"
+                    ],
+                    "name": "ursaring"
+                },
+                {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 14,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
+                    "item": "Miracleberry",
+                    "level": 76,
+                    "moves": [
+                        "waterfall",
+                        "ice-beam",
+                        "rest",
+                        "hp-grass"
+                    ],
+                    "name": "vaporeon"
+                },
+                {
+                    "item": "Quick Claw",
+                    "level": 74,
+                    "moves": [
+                        "megahorn",
+                        "submission",
+                        "rock-slide",
+                        "double-edge"
+                    ],
+                    "name": "pinsir"
+                }
+            ]
+        },
+        {
+            "meta": "(immediate)",
             "name": "PokefanM POKEFANM (14) ALLAN",
             "team": [
                 {
@@ -49815,53 +49862,6 @@
                         "hypnosis"
                     ],
                     "name": "yanma"
-                }
-            ]
-        },
-        {
-            "meta": "(immediate)",
-            "name": "PokefanM POKEFANM (13) REX",
-            "team": [
-                {
-                    "item": "Quick Claw",
-                    "level": 74,
-                    "moves": [
-                        "double-edge",
-                        "metal-claw",
-                        "earthquake",
-                        "submission"
-                    ],
-                    "name": "ursaring"
-                },
-                {
-                    "dvs": {
-                        "atk": 14,
-                        "def": 14,
-                        "hp": 3,
-                        "spa": 15,
-                        "spd": 15,
-                        "spe": 15
-                    },
-                    "item": "Miracleberry",
-                    "level": 76,
-                    "moves": [
-                        "waterfall",
-                        "ice-beam",
-                        "rest",
-                        "hp-grass"
-                    ],
-                    "name": "vaporeon"
-                },
-                {
-                    "item": "Quick Claw",
-                    "level": 74,
-                    "moves": [
-                        "megahorn",
-                        "submission",
-                        "rock-slide",
-                        "double-edge"
-                    ],
-                    "name": "pinsir"
                 }
             ]
         },
@@ -50660,64 +50660,6 @@
         },
         {
             "meta": "Route 14",
-            "name": "PokefanM POKEFANM (6) TREVOR",
-            "team": [
-                {
-                    "item": "Charcoal",
-                    "level": 81,
-                    "moves": [
-                        "flamethrower",
-                        "extremespeed",
-                        "morning-sun",
-                        "crunch"
-                    ],
-                    "name": "arcanine"
-                },
-                {
-                    "dvs": {
-                        "atk": 14,
-                        "def": 12,
-                        "hp": 3,
-                        "spa": 15,
-                        "spd": 15,
-                        "spe": 15
-                    },
-                    "item": "Focus Band",
-                    "level": 82,
-                    "moves": [
-                        "sleep-powder",
-                        "petal-dance",
-                        "sludge-bomb",
-                        "hp-fire"
-                    ],
-                    "name": "venusaur"
-                },
-                {
-                    "item": "Leftovers",
-                    "level": 82,
-                    "moves": [
-                        "waterfall",
-                        "ice-beam",
-                        "seismic-toss",
-                        "body-slam"
-                    ],
-                    "name": "blastoise"
-                },
-                {
-                    "item": "Miracle Seed",
-                    "level": 82,
-                    "moves": [
-                        "thunderbolt",
-                        "petal-dance",
-                        "surf",
-                        "thunder-wave"
-                    ],
-                    "name": "raichu"
-                }
-            ]
-        },
-        {
-            "meta": "(immediate)",
             "name": "PokefanM POKEFANM (5) CARTER",
             "team": [
                 {
@@ -50795,6 +50737,64 @@
                         "hp-fire"
                     ],
                     "name": "tangela"
+                }
+            ]
+        },
+        {
+            "meta": "(immediate)",
+            "name": "PokefanM POKEFANM (6) TREVOR",
+            "team": [
+                {
+                    "item": "Charcoal",
+                    "level": 81,
+                    "moves": [
+                        "flamethrower",
+                        "extremespeed",
+                        "morning-sun",
+                        "crunch"
+                    ],
+                    "name": "arcanine"
+                },
+                {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
+                    "item": "Focus Band",
+                    "level": 82,
+                    "moves": [
+                        "sleep-powder",
+                        "petal-dance",
+                        "sludge-bomb",
+                        "hp-fire"
+                    ],
+                    "name": "venusaur"
+                },
+                {
+                    "item": "Leftovers",
+                    "level": 82,
+                    "moves": [
+                        "waterfall",
+                        "ice-beam",
+                        "seismic-toss",
+                        "body-slam"
+                    ],
+                    "name": "blastoise"
+                },
+                {
+                    "item": "Miracle Seed",
+                    "level": 82,
+                    "moves": [
+                        "thunderbolt",
+                        "petal-dance",
+                        "surf",
+                        "thunder-wave"
+                    ],
+                    "name": "raichu"
                 }
             ]
         },
@@ -51291,138 +51291,6 @@
         },
         {
             "meta": "Route 17",
-            "name": "Biker BIKER (6) CHARLES",
-            "team": [
-                {
-                    "item": "Magnet",
-                    "level": 85,
-                    "moves": [
-                        "thunderbolt",
-                        "fire-punch",
-                        "ice-punch",
-                        "cross-chop"
-                    ],
-                    "name": "electabuzz"
-                },
-                {
-                    "dvs": {
-                        "atk": 12,
-                        "def": 13,
-                        "hp": 7,
-                        "spa": 15,
-                        "spd": 15,
-                        "spe": 15
-                    },
-                    "item": "Berserk Gene",
-                    "level": 82,
-                    "moves": [
-                        "earthquake",
-                        "rock-slide",
-                        "return",
-                        "hp-flying"
-                    ],
-                    "name": "donphan"
-                },
-                {
-                    "item": "Leftovers",
-                    "level": 85,
-                    "moves": [
-                        "shadow-ball",
-                        "fire-blast",
-                        "giga-drain",
-                        "explosion"
-                    ],
-                    "name": "muk"
-                },
-                {
-                    "dvs": {
-                        "atk": 14,
-                        "def": 14,
-                        "hp": 3,
-                        "spa": 15,
-                        "spd": 15,
-                        "spe": 15
-                    },
-                    "item": "Blackglasses",
-                    "level": 85,
-                    "moves": [
-                        "flamethrower",
-                        "crunch",
-                        "iron-tail",
-                        "hp-grass"
-                    ],
-                    "name": "houndoom"
-                }
-            ]
-        },
-        {
-            "meta": "(immediate)",
-            "name": "Biker BIKER (9) GLENN",
-            "team": [
-                {
-                    "dvs": {
-                        "atk": 14,
-                        "def": 15,
-                        "hp": 7,
-                        "spa": 15,
-                        "spd": 15,
-                        "spe": 15
-                    },
-                    "item": "Leftovers",
-                    "level": 85,
-                    "moves": [
-                        "waterfall",
-                        "ice-beam",
-                        "earthquake",
-                        "hp-electric"
-                    ],
-                    "name": "blastoise"
-                },
-                {
-                    "item": "Leftovers",
-                    "level": 85,
-                    "moves": [
-                        "sludge-bomb",
-                        "earthquake",
-                        "giga-drain",
-                        "glare"
-                    ],
-                    "name": "arbok"
-                },
-                {
-                    "item": "Pink Bow",
-                    "level": 85,
-                    "moves": [
-                        "glare",
-                        "return",
-                        "earthquake",
-                        "rock-slide"
-                    ],
-                    "name": "dunsparce"
-                },
-                {
-                    "dvs": {
-                        "atk": 12,
-                        "def": 12,
-                        "hp": 3,
-                        "spa": 15,
-                        "spd": 15,
-                        "spe": 15
-                    },
-                    "item": "Miracleberry",
-                    "level": 86,
-                    "moves": [
-                        "sky-attack",
-                        "faint-attack",
-                        "hp-fighting",
-                        "quick-attack"
-                    ],
-                    "name": "murkrow"
-                }
-            ]
-        },
-        {
-            "meta": "(immediate)",
             "name": "Biker BIKER (8) JOEL",
             "team": [
                 {
@@ -51503,6 +51371,138 @@
                         "thunder-wave"
                     ],
                     "name": "magneton"
+                }
+            ]
+        },
+        {
+            "meta": "(immediate)",
+            "name": "Biker BIKER (9) GLENN",
+            "team": [
+                {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 15,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
+                    "item": "Leftovers",
+                    "level": 85,
+                    "moves": [
+                        "waterfall",
+                        "ice-beam",
+                        "earthquake",
+                        "hp-electric"
+                    ],
+                    "name": "blastoise"
+                },
+                {
+                    "item": "Leftovers",
+                    "level": 85,
+                    "moves": [
+                        "sludge-bomb",
+                        "earthquake",
+                        "giga-drain",
+                        "glare"
+                    ],
+                    "name": "arbok"
+                },
+                {
+                    "item": "Pink Bow",
+                    "level": 85,
+                    "moves": [
+                        "glare",
+                        "return",
+                        "earthquake",
+                        "rock-slide"
+                    ],
+                    "name": "dunsparce"
+                },
+                {
+                    "dvs": {
+                        "atk": 12,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
+                    "item": "Miracleberry",
+                    "level": 86,
+                    "moves": [
+                        "sky-attack",
+                        "faint-attack",
+                        "hp-fighting",
+                        "quick-attack"
+                    ],
+                    "name": "murkrow"
+                }
+            ]
+        },
+        {
+            "meta": "(immediate)",
+            "name": "Biker BIKER (6) CHARLES",
+            "team": [
+                {
+                    "item": "Magnet",
+                    "level": 85,
+                    "moves": [
+                        "thunderbolt",
+                        "fire-punch",
+                        "ice-punch",
+                        "cross-chop"
+                    ],
+                    "name": "electabuzz"
+                },
+                {
+                    "dvs": {
+                        "atk": 12,
+                        "def": 13,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
+                    "item": "Berserk Gene",
+                    "level": 82,
+                    "moves": [
+                        "earthquake",
+                        "rock-slide",
+                        "return",
+                        "hp-flying"
+                    ],
+                    "name": "donphan"
+                },
+                {
+                    "item": "Leftovers",
+                    "level": 85,
+                    "moves": [
+                        "shadow-ball",
+                        "fire-blast",
+                        "giga-drain",
+                        "explosion"
+                    ],
+                    "name": "muk"
+                },
+                {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 14,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
+                    "item": "Blackglasses",
+                    "level": 85,
+                    "moves": [
+                        "flamethrower",
+                        "crunch",
+                        "iron-tail",
+                        "hp-grass"
+                    ],
+                    "name": "houndoom"
                 }
             ]
         },
