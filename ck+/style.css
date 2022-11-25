@@ -56,8 +56,8 @@ html {
 }
 
 body {
-	padding-left: calc(50% - 512px);
-	padding-right: calc(50% - 512px);
+	padding-left: calc(50% - 516px);
+	padding-right: calc(50% - 516px);
 	min-width: 1024px;
 	overflow-x: scroll;
 }
