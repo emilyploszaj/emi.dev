@@ -52359,45 +52359,6 @@
         },
         {
             "meta": "Route 11",
-            "name": "Youngster YOUNGSTER (12) JASON",
-            "team": [
-                {
-                    "item": "Silverpowder",
-                    "level": 87,
-                    "moves": [
-                        "earthquake",
-                        "megahorn",
-                        "double-edge",
-                        "ancientpower"
-                    ],
-                    "name": "rhydon"
-                },
-                {
-                    "item": "Miracle Seed",
-                    "level": 87,
-                    "moves": [
-                        "confuse-ray",
-                        "sky-attack",
-                        "giga-drain",
-                        "sludge-bomb"
-                    ],
-                    "name": "crobat"
-                },
-                {
-                    "item": "Pink Bow",
-                    "level": 87,
-                    "moves": [
-                        "milk-drink",
-                        "body-slam",
-                        "earthquake",
-                        "attract"
-                    ],
-                    "name": "miltank"
-                }
-            ]
-        },
-        {
-            "meta": "(immediate)",
             "name": "Youngster YOUNGSTER (11) OWEN",
             "team": [
                 {
@@ -52443,6 +52404,45 @@
                         "earthquake"
                     ],
                     "name": "hitmonlee"
+                }
+            ]
+        },
+        {
+            "meta": "(immediate)",
+            "name": "Youngster YOUNGSTER (12) JASON",
+            "team": [
+                {
+                    "item": "Silverpowder",
+                    "level": 87,
+                    "moves": [
+                        "earthquake",
+                        "megahorn",
+                        "double-edge",
+                        "ancientpower"
+                    ],
+                    "name": "rhydon"
+                },
+                {
+                    "item": "Miracle Seed",
+                    "level": 87,
+                    "moves": [
+                        "confuse-ray",
+                        "sky-attack",
+                        "giga-drain",
+                        "sludge-bomb"
+                    ],
+                    "name": "crobat"
+                },
+                {
+                    "item": "Pink Bow",
+                    "level": 87,
+                    "moves": [
+                        "milk-drink",
+                        "body-slam",
+                        "earthquake",
+                        "attract"
+                    ],
+                    "name": "miltank"
                 }
             ]
         },
@@ -52547,83 +52547,6 @@
         },
         {
             "meta": "Route 2",
-            "name": "BugCatcher BUG_CATCHER (3) ED",
-            "team": [
-                {
-                    "item": "Quick Claw",
-                    "level": 87,
-                    "moves": [
-                        "psychic",
-                        "giga-drain",
-                        "sleep-powder",
-                        "sludge-bomb"
-                    ],
-                    "name": "venomoth"
-                },
-                {
-                    "dvs": {
-                        "atk": 14,
-                        "def": 12,
-                        "hp": 3,
-                        "spa": 15,
-                        "spd": 15,
-                        "spe": 15
-                    },
-                    "item": "Brightpowder",
-                    "level": 87,
-                    "moves": [
-                        "psychic",
-                        "light-screen",
-                        "giga-drain",
-                        "hp-fire"
-                    ],
-                    "name": "butterfree"
-                },
-                {
-                    "item": "Quick Claw",
-                    "level": 87,
-                    "moves": [
-                        "double-edge",
-                        "rock-slide",
-                        "megahorn",
-                        "earthquake"
-                    ],
-                    "name": "pinsir"
-                },
-                {
-                    "item": "Focus Band",
-                    "level": 87,
-                    "moves": [
-                        "megahorn",
-                        "rock-slide",
-                        "submission",
-                        "earthquake"
-                    ],
-                    "name": "heracross"
-                },
-                {
-                    "dvs": {
-                        "atk": 13,
-                        "def": 12,
-                        "hp": 11,
-                        "spa": 15,
-                        "spd": 15,
-                        "spe": 15
-                    },
-                    "item": "Berserk Gene",
-                    "level": 86,
-                    "moves": [
-                        "megahorn",
-                        "sludge-bomb",
-                        "psychic",
-                        "hp-rock"
-                    ],
-                    "name": "ariados"
-                }
-            ]
-        },
-        {
-            "meta": "(immediate)",
             "name": "BugCatcher BUG_CATCHER (2) ROB",
             "team": [
                 {
@@ -52704,6 +52627,83 @@
                         "extremespeed"
                     ],
                     "name": "ledian"
+                }
+            ]
+        },
+        {
+            "meta": "(immediate)",
+            "name": "BugCatcher BUG_CATCHER (3) ED",
+            "team": [
+                {
+                    "item": "Quick Claw",
+                    "level": 87,
+                    "moves": [
+                        "psychic",
+                        "giga-drain",
+                        "sleep-powder",
+                        "sludge-bomb"
+                    ],
+                    "name": "venomoth"
+                },
+                {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
+                    "item": "Brightpowder",
+                    "level": 87,
+                    "moves": [
+                        "psychic",
+                        "light-screen",
+                        "giga-drain",
+                        "hp-fire"
+                    ],
+                    "name": "butterfree"
+                },
+                {
+                    "item": "Quick Claw",
+                    "level": 87,
+                    "moves": [
+                        "double-edge",
+                        "rock-slide",
+                        "megahorn",
+                        "earthquake"
+                    ],
+                    "name": "pinsir"
+                },
+                {
+                    "item": "Focus Band",
+                    "level": 87,
+                    "moves": [
+                        "megahorn",
+                        "rock-slide",
+                        "submission",
+                        "earthquake"
+                    ],
+                    "name": "heracross"
+                },
+                {
+                    "dvs": {
+                        "atk": 13,
+                        "def": 12,
+                        "hp": 11,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
+                    "item": "Berserk Gene",
+                    "level": 86,
+                    "moves": [
+                        "megahorn",
+                        "sludge-bomb",
+                        "psychic",
+                        "hp-rock"
+                    ],
+                    "name": "ariados"
                 }
             ]
         },
