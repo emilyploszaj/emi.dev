@@ -44383,6 +44383,7 @@
             ]
         },
         {
+            "meta": "b2b",
             "name": "Gentleman GENTLEMAN (5) ALFRED",
             "team": [
                 {
@@ -53303,6 +53304,45 @@
         },
         {
             "meta": "Route 4",
+            "name": "BirdKeeper BIRD_KEEPER (8) HANK",
+            "team": [
+                {
+                    "item": "Soft Sand",
+                    "level": 91,
+                    "moves": [
+                        "earthquake",
+                        "steel-wing",
+                        "wing-attack",
+                        "rock-slide"
+                    ],
+                    "name": "gligar"
+                },
+                {
+                    "item": "Sharp Beak",
+                    "level": 91,
+                    "moves": [
+                        "sky-attack",
+                        "return",
+                        "steel-wing",
+                        "quick-attack"
+                    ],
+                    "name": "pidgeot"
+                },
+                {
+                    "item": "Charcoal",
+                    "level": 91,
+                    "moves": [
+                        "fire-blast",
+                        "earthquake",
+                        "rock-slide",
+                        "thunderpunch"
+                    ],
+                    "name": "charizard"
+                }
+            ]
+        },
+        {
+            "meta": "(immediate)",
             "name": "Picnicker PICNICKER (6) HOPE",
             "team": [
                 {
@@ -53356,45 +53396,6 @@
                         "slash"
                     ],
                     "name": "sandslash"
-                }
-            ]
-        },
-        {
-            "meta": "(immediate)",
-            "name": "BirdKeeper BIRD_KEEPER (8) HANK",
-            "team": [
-                {
-                    "item": "Soft Sand",
-                    "level": 91,
-                    "moves": [
-                        "earthquake",
-                        "steel-wing",
-                        "wing-attack",
-                        "rock-slide"
-                    ],
-                    "name": "gligar"
-                },
-                {
-                    "item": "Sharp Beak",
-                    "level": 91,
-                    "moves": [
-                        "sky-attack",
-                        "return",
-                        "steel-wing",
-                        "quick-attack"
-                    ],
-                    "name": "pidgeot"
-                },
-                {
-                    "item": "Charcoal",
-                    "level": 91,
-                    "moves": [
-                        "fire-blast",
-                        "earthquake",
-                        "rock-slide",
-                        "thunderpunch"
-                    ],
-                    "name": "charizard"
                 }
             ]
         },
