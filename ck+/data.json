@@ -38873,9 +38873,7 @@
                     "item": "Focus Band",
                     "level": 22,
                     "moves": [
-                        "rock-throw",
-                        "dig",
-                        "body-slam"
+                        "rock-throw"
                     ],
                     "name": "geodude"
                 },
