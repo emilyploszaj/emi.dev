@@ -29,6 +29,10 @@
 	--stat-bar-fill-great: #3cf57a;
 	--stat-bar-fill-amazing: #3c86f5;
 
+	--gender-unknown: #4b4b4b;
+	--gender-male: #3099f0;
+	--gender-female: #f79dff;
+
 	--any: #a2d891;
 	--day: #61b1d6;
 	--night: #432f70;
@@ -53,6 +57,11 @@ html {
 	color: var(--text);
 	font-family: "Ubuntu Mono";
 	font-size: 24px;
+}
+
+lb {
+	display: block;
+	height: 10px;
 }
 
 body {
@@ -158,6 +167,15 @@ input:checked + .fake-checkbox {
 	font-weight: 900;
 }
 
+.speed-indicator div {
+	display: inline-block;
+}
+
+.has-priority {
+	font-size: 24px;
+	vertical-align: top;
+}
+
 #player .speed-indicator {
 	float: left;
 }
@@ -185,6 +203,10 @@ input:checked + .fake-checkbox {
 	min-width: 14px;
 	min-height: 14px;
 	margin-right: 4px;
+}
+
+.poke-gender {
+	font-size: 16px;
 }
 
 #search {
@@ -235,11 +257,20 @@ input:checked + .fake-checkbox {
 	margin: 0px !important;
 }
 
+.gender-bar {
+	width: 200px;
+	height: 20px;
+}
+
+.unknown-gender {
+	background-color: var(--gender-unknown);
+}
+
 .tab {
 	display: none;
 }
 
-#full-encounter, #full-move {
+#full-encounter, #full-move, #full-item, #full-trainer {
 	padding: 10px;
 	background-color: var(--box-background);
 }
@@ -264,6 +295,17 @@ input:checked + .fake-checkbox {
 	width: 112px;
 	height: 112px;
 	margin-right: 20px;
+}
+
+.encounter-poke:hover .wild-calc {
+	display: block;
+}
+
+.wild-calc {
+	display: none;
+	position: relative;
+	top: -28px;
+	margin-bottom: -28px;
 }
 
 .learnset-pool {

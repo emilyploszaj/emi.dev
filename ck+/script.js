@@ -29,6 +29,7 @@ var typeMatchups = new Map();
 var searchResults = new Map();
 var pokemonByName = new Map();
 var pokemonByPokedex = new Map();
+var pokemonByItem = new Map();
 var pokemonFamilies = new Map();
 var encountersByName = new Map();
 var pokemonEncounters = new Map();
@@ -36,12 +37,15 @@ var movesByName = new Map();
 var movesByIndex = new Map();
 var movesByLearnset = new Map();
 var movesByTMHM = new Map();
+var itemsByName = new Map();
 var fishingPools = new Map();
 var headbuttPools = new Map();
 var rockPools = new Map();
 var landmarksByIndex = new Map();
 var landmarksByName = new Map();
 var landmarksByLocation = new Map();
+var landmarksByItem = new Map();
+var fightsByTrainer = new Map();
 var myPoke;
 var theirPoke;
 var box = [];
@@ -182,6 +186,9 @@ var trueNames = [
 ];
 var nameFormatting = new Map();
 
+var priorityMoves = new Set([
+	"quick-attack", "mach-punch", "extremespeed", "protect", "detect", "endure"
+])
 var multiHitMoves = new Set([
 	"barrage", "bone-rush", "comet-punch", "doubleslap",
 	"fury-attack", "fury-swipes", "pin-missile", "spike-cannon"
@@ -203,6 +210,12 @@ fetch("./data.json")
 			pokemonByName.set(p.name, p);
 			pokemonByPokedex.set(p.pokedex, p);
 			searchResults.set(p.name, 'focusPokemon(' + (p.pokedex) + ')');
+			for (let j in p.items) {
+				if (!pokemonByItem.has(p.items[j].item)) {
+					pokemonByItem.set(p.items[j].item, []);
+				}
+				pokemonByItem.get(p.items[j].item).push({pokemon: p.name, chance: p.items[j].chance});
+			}
 		}
 		var family = 0;
 		for (let i in j.pokemon) {
@@ -248,6 +261,16 @@ fetch("./data.json")
 			for (var k = 0; k < j.landmarks[i].locations.length; k++) {
 				landmarksByLocation.set(j.landmarks[i].locations[k], j.landmarks[i]);
 			}
+			for (var k = 0; k < j.landmarks[i].items.length; k++) {
+				if (!landmarksByItem.has(j.landmarks[i].items[k].item)) {
+					landmarksByItem.set(j.landmarks[i].items[k].item, []);
+				}
+				landmarksByItem.get(j.landmarks[i].items[k].item).push(j.landmarks[i]);
+			}
+		}
+		for (const i of j.items) {
+			itemsByName.set(i.name, i);
+			searchResults.set(i.name.replace(/-/g, " "), 'focusItem(\'' + i.name + '\')');
 		}
 		for (let i in j.encounters) {
 			var e = j.encounters[i];
@@ -296,6 +319,19 @@ fetch("./data.json")
 		}
 	});
 
+fetch("./fights.json")
+	.then(response => response.text())
+	.then(text => {
+		var j = JSON.parse(text);
+		for (const f of j.fights) {
+			var t = f.trainer.toLowerCase();
+			if (!fightsByTrainer.has(t)) {
+				fightsByTrainer.set(t, []);
+			}
+			fightsByTrainer.get(t).push(f);
+		}
+	});
+
 function addToFamily(p, family) {
 	pokemonFamilies.set(p.pokedex, family);
 	for (let i in p.evolutions) {
@@ -324,16 +360,23 @@ function displayTrainers() {
 		if (t.meta != undefined) {
 			v += "<h2>" + t.meta + "</h2>";
 		}
-		v += '<div class="trainer">'
-		v += '<div>' + t.name;
-		v += '<button style="float:right;" onclick="calcTrainer(' + i + ')">Calc</button>';
-		v += '</div>';
-		v += '<div class="trainer-pokes">';
-		v += getTeamDisplay(t);
-		v += '</div>';
-		v += '</div>';
+		v += getTrainerDisplay(t, i);
 	}
 	document.getElementById("trainers").innerHTML = v;
+}
+
+function getTrainerDisplay(trainer, i) {
+	var t = "";
+	t += '<div class="trainer">'
+	t += '<div>' + trainer.name;
+	t += '<button style="float:right;" onclick="calcTrainer(' + i + ')">Calc</button>';
+	t += '<button style="float:right;" onclick="statCheckTrainer(' + i + ')">Statistics</button>';
+	t += '</div>';
+	t += '<div class="trainer-pokes">';
+	t += getTeamDisplay(trainer);
+	t += '</div>';
+	t += '</div>';
+	return t;
 }
 
 function focusLandmark(i) {
@@ -351,6 +394,13 @@ function focusEncounter(i) {
 	updateSearch("");
 	document.getElementById("full-encounter").innerHTML = getEncounterDisplay(data.encounters[i]);
 	setTab("full-encounter");
+}
+
+function focusItem(i) {
+	document.getElementById("search-box").value = "";
+	updateSearch("");
+	document.getElementById("full-item").innerHTML = getFullItemDisplay(i);
+	setTab("full-item");
 }
 
 function focusMove(i) {
@@ -379,20 +429,47 @@ function getTeamDisplay(t) {
 	return v;
 }
 
+function hasPriority(poke) {
+	if (poke.item == "quick-claw") {
+		return true;
+	}
+	for (var i = 0; i < poke.moves.length; i++) {
+		if (priorityMoves.has(poke.moves[i])) {
+			return true;
+		}
+	}
+	return false;
+}
+
 function displayCalcPokemon(root, poke, opponent, right) {
 	var player = !right;
 	var p = pokemonByName.get(poke.name);
 
 	root.getElementsByClassName("poke-name")[0].innerHTML = pokeLink(p);
 	root.getElementsByClassName("poke-level")[0].innerHTML = "Lvl " + poke.level;
-	root.getElementsByClassName("poke-item")[0].innerHTML = fullCapitalize(poke.item);
+	root.getElementsByClassName("poke-item")[0].innerHTML = itemLink(poke.item);
 	root.getElementsByClassName("poke-icon")[0].innerHTML = '<img src="' + getPokeImage(poke) + '">';
+	root.getElementsByClassName("poke-gender")[0].innerHTML = ["∅", "♀", "♂"][getGender(poke)];
 	if (right && root.getElementsByClassName("experience").length > 0) {
 		var exp = p.base_experience;
 		exp = parseInt(exp * 1.5); // Trainer
 		exp = parseInt(exp * poke.level);
 		exp = parseInt(exp / 7);
-		root.getElementsByClassName("experience")[0].innerHTML = " (" + exp + " exp)";
+		var inner = "<h3>Experience split:</h3>";
+		for (var i = 2; i < 7; i++) {
+			inner += "<p>" + parseInt(exp / i) + " exp to " + i + " Pokemon</p>";
+		}
+		root.getElementsByClassName("experience")[0].innerHTML = "<span> (" + exp + " exp)<div class='rolls'><center>" + inner + "</center></div></span>";
+	}
+	var myStages = "player-stages";
+	var theirStages = "enemy-stages";
+	if (!player) {
+		myStages = "enemy-stages";
+		theirStages = "player-stages";
+	}
+	var hp = 10;
+	if (opponent) {
+		hp = getPokeStat(opponent, "hp");
 	}
 	var status = "none";
 	var enemyStatus = "none";
@@ -413,6 +490,17 @@ function displayCalcPokemon(root, poke, opponent, right) {
 				inner += '<p>Turn ' + i + ': ' + Math.max(1, base * i) + ' HP</p>';
 			}
 			root.getElementsByClassName("status-info")[0].innerHTML = '<span>' + base + 'n/t<div class="rolls"><center>' + inner + '</center></div></span>';
+		} else if (status == "cnf") {
+			var move = {"name": "confusion-self-hit", "type": "curse", "power": 40}
+			var min = getDamage(poke, opponent, getStages(myStages), getStages(theirStages), move, player, false, true);
+			var max = getDamage(poke, opponent, getStages(myStages), getStages(theirStages), move, player, false, false);
+			var rolls = getDamage(poke, opponent, getStages(myStages), getStages(theirStages), move, player, false, false, true);
+			var minPercent = Math.round(1000 * min / getPokeStat(poke, "hp")) / 10;
+			var maxPercent = Math.round(1000 * max / getPokeStat(poke, "hp")) / 10;
+			var desc = '<td class="crit' + extra + '"><ruby>' + min + " - " + max
+				+ "<rt>" + minPercent + "% - " + maxPercent + "%</rt></ruby>"
+				+ prettyRolls(rolls) + "</td>";
+			root.getElementsByClassName("status-info")[0].innerHTML = desc;
 		} else {
 			root.getElementsByClassName("status-info")[0].innerHTML = "";
 		}
@@ -431,12 +519,6 @@ function displayCalcPokemon(root, poke, opponent, right) {
 	displayCalcStat(root.getElementsByClassName("calc-spa")[0], poke, "spa");
 	displayCalcStat(root.getElementsByClassName("calc-spd")[0], poke, "spd");
 	displayCalcStat(root.getElementsByClassName("calc-spe")[0], poke, "spe", player);
-	var myStages = "player-stages";
-	var theirStages = "enemy-stages";
-	if (!player) {
-		myStages = "enemy-stages";
-		theirStages = "player-stages";
-	}
 	if (opponent) {
 		var mySpe = getModifiedStat(poke, getStages(myStages), "spe");
 		var theirSpe = getModifiedStat(opponent, getStages(theirStages), "spe");
@@ -454,11 +536,14 @@ function displayCalcPokemon(root, poke, opponent, right) {
 			theirSpe = parseInt(theirSpe / 4);
 		}
 		if (mySpe > theirSpe) {
-			root.getElementsByClassName("speed-indicator")[0].innerHTML = '<div class="speed-faster">&laquo;</div>';
+			var prio = hasPriority(opponent) ? '<span class="has-priority">*</span>' : "";
+			root.getElementsByClassName("speed-indicator")[0].innerHTML = '<div class="speed-faster">&laquo;</div>' + prio;
 		} else if (mySpe == theirSpe) {
-			root.getElementsByClassName("speed-indicator")[0].innerHTML = '<div class="speed-tied">-</div>';
+			var prio = (hasPriority(poke) || hasPriority(opponent)) ? '<span class="has-priority">*</span>' : "";
+			root.getElementsByClassName("speed-indicator")[0].innerHTML = '<div class="speed-tied">-</div>' + prio;
 		} else {
-			root.getElementsByClassName("speed-indicator")[0].innerHTML = '<div class="speed-slower">&laquo;</div>';
+			var prio = hasPriority(poke) ? '<span class="has-priority">*</span>' : "";
+			root.getElementsByClassName("speed-indicator")[0].innerHTML = '<div class="speed-slower">&laquo;</div>' + prio;
 		}
 	}
 	var types = '<div style="display:flex">' + prettyType(p.types[0]);
@@ -467,14 +552,10 @@ function displayCalcPokemon(root, poke, opponent, right) {
 	}
 	types += "</div>";
 	root.getElementsByClassName("poke-types")[0].innerHTML = types;
-	var hp = 10;
-	if (opponent) {
-		hp = getPokeStat(opponent, "hp");
-	}
 	var moves = '<table class="move-calcs">';
 	for (var i = 0; i < 4; i++) {
 		if (i < poke.moves.length) {
-			var p1 = "<td>" + getMoveName(poke.moves[i]) + "</td>"
+			var p1 = "<td>" + moveLink(poke.moves[i]) + "</td>"
 			var move = movesByName.get(poke.moves[i]);
 			var min = getDamage(poke, opponent, getStages(myStages), getStages(theirStages), move, player, false, true);
 			var max = getDamage(poke, opponent, getStages(myStages), getStages(theirStages), move, player, false, false);
@@ -492,7 +573,11 @@ function displayCalcPokemon(root, poke, opponent, right) {
 				+ "<rt>" + minPercent + "% - " + maxPercent + "%</rt></ruby>"
 				+ prettyRolls(rolls) + "</td>";
 			if (max == 0 && move.power == 0) {
-				p2 = '<td>Status</td>';
+				if (move.name == "transform") {
+					p2 = '<td><button onclick="transform(' + right + ')">Transform</button></td>';
+				} else {
+					p2 = '<td>Status</td>';
+				}
 			}
 			if (opponent == undefined) {
 				p2 = "<td>-</td>";
@@ -582,7 +667,7 @@ function getTinyPokemonDisplay(tp, extra = "") {
 	var v = '<div class="tiny-poke">';
 	v += '<div class="tiny-poke-icon"><img src="' + getPokeImage(tp) + '"></div>';
 	v += '<div class="tiny-poke-info">';
-	v += '<div>' + pokeLink(p.name) + ' - Lvl ' + tp.level + ' @ ' + fullCapitalize(tp.item) + '</div>';
+	v += '<div>' + pokeLink(p.name) + ' - Lvl ' + tp.level + ' @ ' + itemLink(tp.item) + '</div>';
 	v += "<table><tr>";
 	for (var i = 0; i < 4; i++) {
 		if (i == 2) {
@@ -601,7 +686,7 @@ function getTinyPokemonDisplay(tp, extra = "") {
 				color = typeColors.get(type);
 			}
 			v += '<td><span class="move-emblem" style="background-color:' + color
-				+ ';"></span>' + getMoveName(tp.moves[i]) + '</td>';
+				+ ';"></span>' + moveLink(tp.moves[i]) + '</td>';
 		} else {
 			// Zero width space to force formatting
 			v += "<td>​</td>"
@@ -649,6 +734,24 @@ function displayPokemon(root, i) {
 	displayStat(root.getElementsByClassName("poke-spa")[0], p.stats.spa);
 	displayStat(root.getElementsByClassName("poke-spd")[0], p.stats.spd);
 	displayStat(root.getElementsByClassName("poke-spe")[0], p.stats.spe);
+	if (p.gender.startsWith("f")) {
+		var female = parseFloat(p.gender.substring(1));
+
+		var m = parseInt(female * 16 / 100);
+		document.getElementsByClassName("poke-genders")[0].innerHTML = '<div>Gender: ' + m + ' Female, ' + (16 - m) + ' Male</div>'
+			+ '<div class="gender-bar" style="background: '
+			+ 'linear-gradient(90deg, var(--gender-female) 0%, var(--gender-female) '
+			+ female + '%, var(--gender-male) ' + female + '%, var(--gender-male) 100%)">'
+			+ '</div><lb></lb>';
+	} else {
+		document.getElementsByClassName("poke-genders")[0].innerHTML = '<div>Gender: Unknown</div><div class="gender-bar unknown-gender"></div><lb></lb>';
+	}
+	var items = "<div>Wild Held Items: ";
+	for (var i = 0; i < p.items.length; i++) {
+		items += itemLink(p.items[i].item) + " " + (p.items[i].chance * 100) + "% ";
+	}
+	items += "</div><lb></lb>";
+	document.getElementsByClassName("poke-items")[0].innerHTML = items;
 	var evo = "<div>Evolutions:</div>";
 	for (let index in data.pokemon) {
 		var v = data.pokemon[index];
@@ -662,7 +765,7 @@ function displayPokemon(root, i) {
 			}
 			var before;
 			if (evolution.method == "item") {
-				before = evolution.item;
+				before = itemLink(evolution.item);
 			} else if (evolution.method == "level") {
 				before = "Level " + evolution.level;
 			} else {
@@ -676,7 +779,7 @@ function displayPokemon(root, i) {
 			var evolution = p.evolutions[i];
 			var before;
 			if (evolution.method == "item") {
-				before = evolution.item;
+				before = itemLink(evolution.item);
 			} else if (evolution.method == "level") {
 				before = "Level " + evolution.level;
 			} else {
@@ -686,7 +789,7 @@ function displayPokemon(root, i) {
 		}
 	}
 	if (evo != "<div>Evolutions:</div>") {
-		evo += "<br>"
+		evo += "<lb></lb>"
 		root.getElementsByClassName("poke-evolution")[0].innerHTML = evo;
 	} else {
 		root.getElementsByClassName("poke-evolution")[0].innerHTML = "";
@@ -842,6 +945,13 @@ function getEncounterDisplay(pools) {
 	} else {
 		v += "<h3>" + fullCapitalize(pools) + "</h3>";
 	}
+	if (landmark.items.length > 0) {
+		v += "<lb></lb><details><summary>Items</summary>";
+		for (var j = 0; j < landmark.items.length; j++) {
+			v += getItemLocationDescription(landmark.items[j]) + "<lb></lb>";
+		}
+		v += "</details>";
+	}
 	v += '<br style="clear:both;"/></div>';
 	if (pools.area) {
 		if (pools.normal) {
@@ -963,6 +1073,7 @@ function getEncounterPoolDisplay(pool, time) {
 		v += '</rt></ruby></div>';
 		v += '<img style="cursor:pointer;" onclick="focusPokeByName(\'' + pool[i].pokemon
 			+ '\')" src="' + getPokeImage(pool[i].pokemon) + '">';
+		v += '<div class="wild-calc"><button onclick="calcWild(' + pokemonByName.get(pool[i].pokemon).pokedex + ', ' + pool[i].level + ')">Calc</button></div>';
 		v += '</div>';
 	}
 	v += '</div>';
@@ -972,6 +1083,124 @@ function getEncounterPoolDisplay(pool, time) {
 
 function prettyType(t) {
 	return '<div class="type" style="background-color:' + typeColors.get(t) + ';">' + fullCapitalize(t) + '</div>';
+}
+
+function itemLink(item) {
+	return '<span class="poke-link" onclick="focusItem(\'' + item + '\')">' + fullCapitalize(item) + '</span>'
+}
+
+function landmarkLink(landmark) {
+	return '<span class="poke-link" onclick="focusLandmark(' + landmark.id + ')">' + fullCapitalize(landmark.name) + '</span>'
+}
+
+function getFullItemDisplay(item) {
+	var v = "<h3>" + fullCapitalize(item) + "</h3>";
+	var it = itemsByName.get(item);
+	v += "<p>" + it.description + "</p>"
+	var locs = landmarksByItem.get(item);
+	if (locs) {
+		v += "<p>Locations:</p>";
+		for (var i = 0; i < locs.length; i++) {
+			var loc = locs[i];
+			for (var j = 0; j < loc.items.length; j++) {
+				if (loc.items[j].item == item) {
+					v += "<div>" + landmarkLink(loc) + ":</div>";
+					v += getItemLocationDescription(loc.items[j]) + "<br>";
+				}
+			}
+		}
+	}
+	if (pokemonByItem.has(item)) {
+		var list = pokemonByItem.get(item);
+		v += "<p>Wild Held Item (" + list.length + "):</p>";
+		v += '<div class="learnset-pool">'
+		for (var i = 0; i < list.length; i++) {
+			v += '<div class="encounter-poke">';
+			v += list[i].chance * 100 + "%";
+			v += '<img style="cursor:pointer;" onclick="focusPokeByName(\'' + list[i].pokemon
+				+ '\')" src="' + getPokeImage(list[i].pokemon) + '">';
+			v += '</div>';
+		}
+		v += '</div>';
+	}
+	return v;
+}
+
+function getItemLocationDescription(desc) {
+	var l = "<div>";
+	l += itemLink(desc.item) + " " + desc.amount;
+	l += "</div>";
+	l += "<div>";
+	l += desc.info;
+	l += "</div>";
+	return l;
+}
+
+function getTrainerStats(i) {
+	var trainer = data.trainers[i];
+	var v = "<h3>" + trainer.name + "</h3>";
+	v += '<div class="trainer">';
+	v += '<div class="trainer-pokes">';
+	v += getTeamDisplay(trainer);
+	v += '</div>';
+	v += '</div>';
+	var fights = fightsByTrainer.get(trainer.name.toLowerCase());
+	if (fights) {
+		var brings = new Map();
+		var leads = new Map();
+		var ht = "";
+		ht += '<p>Historic teams:</p>';
+		for (const f of fights.reverse()) {
+			var pokes = f.pokemon;
+			if (pokes.length > 0) {
+				ht += '<div>' + f.runner + " (Patch: " + f.patch + ")</div>";
+				ht += '<div class="learnset-pool">'
+				if (!leads.has(pokes[0])) {
+					leads.set(pokes[0], 0);
+				}
+				leads.set(pokes[0], leads.get(pokes[0]) + 1);
+				for (const p of pokes) {
+					if (!brings.has(p)) {
+						brings.set(p, 0);
+					}
+					brings.set(p, brings.get(p) + 1);
+					ht += '<div class="encounter-poke">';
+					ht += '<img style="cursor:pointer;" onclick="focusPokeByName(\'' + p
+						+ '\')" src="' + getPokeImage(p) + '">';
+					ht += '</div>';
+				}
+				ht += '</div>';
+			}
+		}
+		brings = new Map([...brings.entries()].sort((a, b) => b[1] - a[1]));
+		leads = new Map([...leads.entries()].sort((a, b) => b[1] - a[1]));
+		v += '<p>Common Leads:</p>';
+		v += getBringsDisplay(leads, fights.length, 7);
+		v += '<p>Common Pokemon:</p>';
+		v += getBringsDisplay(brings, fights.length, 21);
+		console.log(brings);
+		v += ht;
+	}
+	return v;
+}
+
+function getBringsDisplay(brings, total, maxShown) {
+	v = "";
+	v += '<div class="learnset-pool">'
+	var ba = 0;
+	for (const e of brings.entries()) {
+		if (ba >= maxShown) {
+			break;
+		}
+		v += '<div class="encounter-poke">';
+		v += parseInt(e[1] * 100 / total) + "%";
+		v += '<img style="cursor:pointer;" onclick="focusPokeByName(\'' + e[0]
+			+ '\')" src="' + getPokeImage(e[0]) + '">';
+		v += '</div>';
+		ba++;
+	}
+	v += '</div>';
+	return v;
 }
 
 function moveLink(move) {
@@ -990,7 +1219,7 @@ function getMoveName(move) {
 }
 
 function getFullMoveDisplay(move) {
-	var v = "<p>" + getMoveName(move.name) + ":</p>";
+	var v = "<h3>" + getMoveName(move.name) + "</h3>";
 	if (move.extra) {
 		for (var i = 0; i < move.extra.length; i++) {
 			v += "<p>";
@@ -1482,6 +1711,9 @@ function getPokeStat(poke, stat) {
 	v = parseInt((v * 2 * poke.level) / 100);
 
 	if (stat == "hp") {
+		if (poke.transformHp) {
+			return poke.transformHp;
+		}
 		return v + poke.level + 10;
 	} else {
 		return v + 5;
@@ -1622,6 +1854,53 @@ function getEditedPoke() {
 	return null;
 }
 
+function calcWild(p, level) {
+	p = pokemonByPokedex.get(p);
+	var moves = [];
+	for (var i = p.learnset.length - 1; i >= 0; i--) {
+		var l = p.learnset[i];
+		if (l.level <= level) {
+			moves.push(l.move);
+		}
+	}
+	if (moves.length > 4) {
+		moves = moves.splice(0, 4).reverse();
+	}
+	theirPoke = {
+		"name": p.name,
+		"item": "",
+		"level": level,
+		"dvs": {
+			"hp": 0,
+			"atk": 15,
+			"def": 0,
+			"spa": 15,
+			"spd": 0,
+			"spe": 15
+		},
+		"moves": moves
+	}
+	updateCalc();
+	setTab("calc");
+}
+
+function transform(right) {
+	var p;
+	var originalHp;
+	if (right) {
+		var p = JSON.parse(JSON.stringify(myPoke));
+		var originalHp = getPokeStat(theirPoke, "hp");
+		p.transformHp = originalHp;
+		theirPoke = p;
+	} else {
+		var p = JSON.parse(JSON.stringify(theirPoke));
+		var originalHp = getPokeStat(myPoke, "hp");
+		p.transformHp = originalHp;
+		myPoke = p;
+	}
+	updateCalc();
+}
+
 function updateCalc() {
 	try {
 		displayCalcPokemon(document.getElementById("player"), myPoke, theirPoke, false);
@@ -1660,6 +1939,21 @@ function getPokeImage(poke) {
 
 function isShiny(poke) {
 	return getDv(poke, "def") == 10 && getDv(poke, "spa") == 10 && getDv(poke, "spe") == 10 && ((getDv(poke, "atk") & 2) == 2)
+}
+
+function getGender(poke) {
+	atk = getDv(poke, "atk");
+	p = pokemonByName.get(poke.name);
+	if (p.gender.startsWith("f")) {
+		var m = parseInt(parseFloat(p.gender.substring(1)) * 16 / 100);
+		if (atk >= m) {
+			return 2;
+		} else {
+			return 1;
+		}
+	} else {
+		return 0;
+	}
 }
 
 function getDv(poke, stat) {
@@ -1741,6 +2035,11 @@ function calcTrainer(i) {
 	document.getElementById("current-trainer-name").innerHTML = data.trainers[i].name;
 	setEnemy(0);
 	setTab("calc");
+}
+
+function statCheckTrainer(i) {
+	document.getElementById("full-trainer").innerHTML = getTrainerStats(i);
+	setTab("full-trainer");
 }
 
 function calcFromBox(i) {
@@ -2037,21 +2336,21 @@ function readFile(file) {
 				}
 				updateBox();
 				var popup = '<div onclick="closePopup()" class="save-success">Successfully parsed save!';
-				popup += '<br>Encounters: ' + pokemon.length;
+				popup += '<lb></lb>Encounters: ' + pokemon.length;
 				if (deadPokemon.length > 0) {
 					popup += ' (+' + deadPokemon.length + ' fainted)';
 				}
-				popup += '<br>Badges: ' + badges;
+				popup += '<lb></lb>Badges: ' + badges;
 				popup += '</div>';
 				document.getElementById("info-popup").innerHTML = popup;
 			} catch (e) {
-				document.getElementById("info-popup").innerHTML = '<div onclick="closePopup()" class="save-error">Error while parsing save!<br>Is this a valid file?<br>See console for details</div>';
+				document.getElementById("info-popup").innerHTML = '<div onclick="closePopup()" class="save-error">Error while parsing save!<lb></lb>Is this a valid file?<lb></lb>See console for details</div>';
 			}
 		} else {
 			console.log("File doesn't appear to be a save file!");
 			console.log(bytes[0x2008]);
 			console.log(bytes[0x2d0f]);
-			document.getElementById("info-popup").innerHTML = '<div onclick="closePopup()" class="save-error">File doesn\'t appear to be a save file!<br>Name should end with .sav</div>';
+			document.getElementById("info-popup").innerHTML = '<div onclick="closePopup()" class="save-error">File doesn\'t appear to be a save file!<lb></lb>Name should end with .sav</div>';
 		}
 	};
 	reader.readAsArrayBuffer(file);
