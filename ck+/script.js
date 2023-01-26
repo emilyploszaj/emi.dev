@@ -46,6 +46,7 @@ var landmarksByName = new Map();
 var landmarksByLocation = new Map();
 var landmarksByItem = new Map();
 var fightsByTrainer = new Map();
+var bringsByTrainer = new Map();
 var myPoke;
 var theirPoke;
 var box = [];
@@ -185,6 +186,25 @@ var trueNames = [
 	"MysteryBerry",
 ];
 var nameFormatting = new Map();
+
+var statisticsSplits = new Set([
+	"Falkner FALKNER (1) FALKNER",
+	"Bugsy BUGSY (1) BUGSY",
+	"Whitney WHITNEY (1) WHITNEY",
+	"Morty MORTY (1) MORTY",
+	"Chuck CHUCK (1) CHUCK",
+	"Pryce PRYCE (1) PRYCE",
+	"Jasmine JASMINE (1) JASMINE",
+	"Clair CLAIR (1) CLAIR",
+	"LtSurge LT_SURGE (1) LT.SURGE",
+	"Sabrina SABRINA (1) SABRINA",
+	"Janine JANINE (1) JANINE",
+	"Erika ERIKA (1) ERIKA",
+	"Brock BROCK (1) BROCK",
+	"Misty MISTY (1) MISTY",
+	"Blaine BLAINE (1) BLAINE",
+	"Blue BLUE (1) BLUE"
+])
 
 var priorityMoves = new Set([
 	"quick-attack", "mach-punch", "extremespeed", "protect", "detect", "endure"
@@ -330,7 +350,38 @@ fetch("./fights.json")
 			}
 			fightsByTrainer.get(t).push(f);
 		}
+		for (const f of fightsByTrainer.values()) {
+			var t = f[0].trainer;
+			bringsByTrainer.set(t, calculateBrings(f));
+		}
 	});
+
+function calculateBrings(fights) {
+	var brings = new Map();
+	var leads = new Map();
+	for (const f of fights.reverse()) {
+		var pokes = f.pokemon;
+		if (pokes.length > 0) {
+			if (!leads.has(pokes[0])) {
+				leads.set(pokes[0], 0);
+			}
+			leads.set(pokes[0], leads.get(pokes[0]) + 1);
+			for (const p of pokes) {
+				if (!brings.has(p)) {
+					brings.set(p, 0);
+				}
+				brings.set(p, brings.get(p) + 1);
+			}
+		}
+	}
+	brings = new Map([...brings.entries()].sort((a, b) => b[1] - a[1]));
+	leads = new Map([...leads.entries()].sort((a, b) => b[1] - a[1]));
+	return {
+		"brings": brings,
+		"leads": leads,
+		"total": fights.length
+	};
+}
 
 function addToFamily(p, family) {
 	pokemonFamilies.set(p.pokedex, family);
@@ -796,7 +847,7 @@ function displayPokemon(root, i) {
 	}
 	var encounters = pokemonEncounters.get(p.name);
 	if (encounters) {
-		var e = "<details><summary>Encounters:</summary>";
+		var e = "<details><summary>Encounters</summary>";
 		for (const en of encounters.entries()) {
 			var area = en[0];
 			var parts = en[1];
@@ -816,6 +867,40 @@ function displayPokemon(root, i) {
 	} else {
 		root.getElementsByClassName("encounters")[0].innerHTML = "";
 	}
+
+	var usageLines = "";
+	var usagePoints = "";
+
+	var h = 0;
+	var hTotal = data.trainers.length;
+	for (const t of data.trainers) {
+		var b = bringsByTrainer.get(t.name);
+		var usage = 0;
+		if (b && b.brings.has(p.name)) {
+			usage = b.brings.get(p.name) * 100 / b.total;
+		}
+		if (t.name == "Champion CHAMPION (1) LANCE") {
+			usageLines += `<div class="poke-statistics-line e4r1" style="left:calc(2px + ${h * 100 / hTotal}%)"><div class="rolls"><center>${t.name}</center></div></div>`;
+		}
+		if (statisticsSplits.has(t.name)) {
+			usageLines += `<div class="poke-statistics-line" style="left:calc(2px + ${h * 100 / hTotal}%)"><div class="rolls"><center>${t.name}</center></div></div>`;
+		}
+		usagePoints += `<div class="usage-point" style="left:${h * 100 / hTotal}%;bottom:${usage}%;"><div class="rolls"><center>${t.name}</center></div></div>`;
+		h += 1;
+	}
+
+	var stats = `
+	<details>
+		<summary>Usage Statistics</summary>
+		<div class="poke-usage-statistics">
+			<div class="poke-usage-statistics-inner"">${usageLines}${usagePoints}</div>
+		</div>
+	</details>
+	<br>
+	`;
+
+	root.getElementsByClassName("statistics")[0].innerHTML = stats;
+
 	var l = "";
 	l += '<div>Learnset:</div><table class="move-table">';
 	for (let mi in p.learnset) {
@@ -1146,8 +1231,6 @@ function getTrainerStats(i) {
 	v += '</div>';
 	var fights = fightsByTrainer.get(trainer.name.toLowerCase());
 	if (fights) {
-		var brings = new Map();
-		var leads = new Map();
 		var ht = "";
 		ht += '<p>Historic teams:</p>';
 		for (const f of fights.reverse()) {
@@ -1155,15 +1238,7 @@ function getTrainerStats(i) {
 			if (pokes.length > 0) {
 				ht += '<div>' + f.runner + " (Patch: " + f.patch + ")</div>";
 				ht += '<div class="learnset-pool">'
-				if (!leads.has(pokes[0])) {
-					leads.set(pokes[0], 0);
-				}
-				leads.set(pokes[0], leads.get(pokes[0]) + 1);
 				for (const p of pokes) {
-					if (!brings.has(p)) {
-						brings.set(p, 0);
-					}
-					brings.set(p, brings.get(p) + 1);
 					ht += '<div class="encounter-poke">';
 					ht += '<img style="cursor:pointer;" onclick="focusPokeByName(\'' + p
 						+ '\')" src="' + getPokeImage(p) + '">';
@@ -1172,13 +1247,11 @@ function getTrainerStats(i) {
 				ht += '</div>';
 			}
 		}
-		brings = new Map([...brings.entries()].sort((a, b) => b[1] - a[1]));
-		leads = new Map([...leads.entries()].sort((a, b) => b[1] - a[1]));
+		var b = calculateBrings(fights);
 		v += '<p>Common Leads:</p>';
-		v += getBringsDisplay(leads, fights.length, 7);
+		v += getBringsDisplay(b.leads, fights.length, 7);
 		v += '<p>Common Pokemon:</p>';
-		v += getBringsDisplay(brings, fights.length, 21);
-		console.log(brings);
+		v += getBringsDisplay(b.brings, fights.length, 21);
 		v += ht;
 	}
 	return v;
