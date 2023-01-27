@@ -514,12 +514,18 @@ function displayCalcPokemon(root, poke, opponent, right) {
 	var p = pokemonByName.get(poke.name);
 
 	root.getElementsByClassName("poke-name")[0].innerHTML = pokeLink(p);
+	if (poke.transformStats) {
+		root.getElementsByClassName("poke-name")[0].innerHTML = pokeLink(pokemonByName.get("ditto"));
+	}
 	root.getElementsByClassName("poke-level")[0].innerHTML = "Lvl " + poke.level;
 	root.getElementsByClassName("poke-item")[0].innerHTML = itemLink(poke.item);
 	root.getElementsByClassName("poke-icon")[0].innerHTML = '<img src="' + getPokeImage(poke) + '">';
 	root.getElementsByClassName("poke-gender")[0].innerHTML = ["∅", "♀", "♂"][getGender(poke)];
 	if (right && root.getElementsByClassName("experience").length > 0) {
 		var exp = p.base_experience;
+		if (poke.transformStats) {
+			exp = pokemonByName.get("ditto").base_experience;
+		}
 		exp = parseInt(exp * 1.5); // Trainer
 		exp = parseInt(exp * poke.level);
 		exp = parseInt(exp / 7);
@@ -1673,7 +1679,7 @@ function getDamage(attacker, defender, attackerStages, defenderStages, move, pla
 	if (attacker.name == "pikachu" && ni == "light-ball" && special) {
 		a *= 2;
 	}
-	if ((defender.name == "ditto" || defender.transformHp) && ndi == "metal-powder") {
+	if ((defender.name == "ditto" || defender.transformStats) && ndi == "metal-powder") {
 		d = d * 1.5;
 	}
 	v = parseInt(parseInt(v * a) / d);
@@ -1786,6 +1792,9 @@ function getMatchup(attackType, defenseType) {
 }
 
 function getPokeStat(poke, stat) {
+	if (poke.transformStats) {
+		return poke.transformStats[stat];
+	}
 	var p = pokemonByName.get(poke.name);
 	var v = p.stats[stat];
 	if (poke.dvs != undefined) {
@@ -1796,9 +1805,6 @@ function getPokeStat(poke, stat) {
 	v = parseInt((v * 2 * poke.level) / 100);
 
 	if (stat == "hp") {
-		if (poke.transformHp) {
-			return poke.transformHp;
-		}
 		return v + poke.level + 10;
 	} else {
 		return v + 5;
@@ -1973,12 +1979,28 @@ function transform(right) {
 	var p;
 	if (right) {
 		var p = JSON.parse(JSON.stringify(myPoke));
-		p.transformHp = getPokeStat(theirPoke, "hp");
+		p.transformStats = {
+			"hp": getPokeStat(theirPoke, "hp"),
+			"atk": getPokeStat(myPoke, "atk"),
+			"def": getPokeStat(myPoke, "def"),
+			"spa": getPokeStat(myPoke, "spa"),
+			"spd": getPokeStat(myPoke, "spd"),
+			"spe": getPokeStat(myPoke, "spe")
+		};
+		p.level = theirPoke.level;
 		p.item = theirPoke.item;
 		theirPoke = p;
 	} else {
 		var p = JSON.parse(JSON.stringify(theirPoke));
-		p.transformHp = getPokeStat(myPoke, "hp");
+		p.transformStats = {
+			"hp": getPokeStat(myPoke, "hp"),
+			"atk": getPokeStat(theirPoke, "atk"),
+			"def": getPokeStat(theirPoke, "def"),
+			"spa": getPokeStat(theirPoke, "spa"),
+			"spd": getPokeStat(theirPoke, "spd"),
+			"spe": getPokeStat(theirPoke, "spe")
+		};
+		p.level = myPoke.level;
 		p.item = myPoke.item;
 		myPoke = p;
 	}
