@@ -312,6 +312,23 @@ fetch("./data.json")
 		for (let i in j.encounters) {
 			addPoolInfo(j.encounters[i]);
 		}
+
+		var pokemonDataList;
+		for (const p of pokemonByName.keys()) {
+			pokemonDataList += `<option value="${fullCapitalize(p)}" />`
+		}
+		document.getElementById("pokemon-names-list").innerHTML = pokemonDataList;
+		var itemDataList;
+		for (const i of itemsByName.keys()) {
+			itemDataList += `<option value="${fullCapitalize(i)}" />`
+		}
+		document.getElementById("item-names-list").innerHTML = itemDataList;
+		var moveDataList;
+		for (const m of movesByName.keys()) {
+			moveDataList += `<option value="${fullCapitalize(m)}" />`
+		}
+		document.getElementById("move-names-list").innerHTML = moveDataList;
+
 		enemyTeam = j.trainers[17].team;
 		if (localStorage.getItem("last-trainer")) {
 			var lt = parseInt(localStorage.getItem("last-trainer"));
@@ -543,14 +560,9 @@ function displayCalcPokemon(root, poke, opponent, right) {
 			root.getElementsByClassName("status-info")[0].innerHTML = '<span>' + base + 'n/t<div class="rolls"><center>' + inner + '</center></div></span>';
 		} else if (status == "cnf") {
 			var move = {"name": "confusion-self-hit", "type": "curse", "power": 40}
-			var min = getDamage(poke, opponent, getStages(myStages), getStages(theirStages), move, player, false, true);
-			var max = getDamage(poke, opponent, getStages(myStages), getStages(theirStages), move, player, false, false);
-			var rolls = getDamage(poke, opponent, getStages(myStages), getStages(theirStages), move, player, false, false, true);
-			var minPercent = Math.round(1000 * min / getPokeStat(poke, "hp")) / 10;
+			var max = getDamage(poke, poke, getStages(myStages), getStages(myStages), move, player, false, false);
 			var maxPercent = Math.round(1000 * max / getPokeStat(poke, "hp")) / 10;
-			var desc = '<td class="crit' + extra + '"><ruby>' + min + " - " + max
-				+ "<rt>" + minPercent + "% - " + maxPercent + "%</rt></ruby>"
-				+ prettyRolls(rolls) + "</td>";
+			var desc = `<span>${max}</span>`;
 			root.getElementsByClassName("status-info")[0].innerHTML = desc;
 		} else {
 			root.getElementsByClassName("status-info")[0].innerHTML = "";
@@ -1157,7 +1169,7 @@ function getEncounterPoolDisplay(pool, time) {
 		}
 		v += '</rt></ruby></div>';
 		v += '<img style="cursor:pointer;" onclick="focusPokeByName(\'' + pool[i].pokemon
-			+ '\')" src="' + getPokeImage(pool[i].pokemon) + '">';
+			+ '\')" src="' + getPokeImage(pool[i].pokemon, i) + '">';
 		v += '<div class="wild-calc"><button onclick="calcWild(' + pokemonByName.get(pool[i].pokemon).pokedex + ', ' + pool[i].level + ')">Calc</button></div>';
 		v += '</div>';
 	}
@@ -1661,7 +1673,7 @@ function getDamage(attacker, defender, attackerStages, defenderStages, move, pla
 	if (attacker.name == "pikachu" && ni == "light-ball" && special) {
 		a *= 2;
 	}
-	if (defender.name == "ditto" && ndi == "metal-powder") {
+	if ((defender.name == "ditto" || defender.transformHp) && ndi == "metal-powder") {
 		d = d * 1.5;
 	}
 	v = parseInt(parseInt(v * a) / d);
@@ -1959,16 +1971,15 @@ function calcWild(p, level) {
 
 function transform(right) {
 	var p;
-	var originalHp;
 	if (right) {
 		var p = JSON.parse(JSON.stringify(myPoke));
-		var originalHp = getPokeStat(theirPoke, "hp");
-		p.transformHp = originalHp;
+		p.transformHp = getPokeStat(theirPoke, "hp");
+		p.item = theirPoke.item;
 		theirPoke = p;
 	} else {
 		var p = JSON.parse(JSON.stringify(theirPoke));
-		var originalHp = getPokeStat(myPoke, "hp");
-		p.transformHp = originalHp;
+		p.transformHp = getPokeStat(myPoke, "hp");
+		p.item = myPoke.item;
 		myPoke = p;
 	}
 	updateCalc();
@@ -2002,10 +2013,13 @@ function updateCalc() {
 	}
 }
 
-function getPokeImage(poke) {
+function getPokeImage(poke, unownExtra = undefined) {
 	var shiny = poke.name && isShiny(poke) ? "shiny" : "normal";
 	if (poke.name) {
 		poke = poke.name;
+	}
+	if (unownExtra !== undefined && poke == "unown") {
+		poke += ["-b", "-u", "-n", "-n", "-y", "-q", "-t"][unownExtra];
 	}
 	return 'https://img.pokemondb.net/sprites/crystal/' + shiny + '/' + poke + '.png';
 }
@@ -2108,6 +2122,10 @@ function calcTrainer(i) {
 	document.getElementById("current-trainer-name").innerHTML = data.trainers[i].name;
 	setEnemy(0);
 	setTab("calc");
+}
+
+function statCheckCurrentTrainer() {
+	statCheckTrainer(lastTrainer);
 }
 
 function statCheckTrainer(i) {

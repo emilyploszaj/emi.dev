@@ -69,14 +69,14 @@
 					<button id="add-poke" onclick="addEditedPoke()">Add to Box</button>
 					<button id="save-poke" onclick="saveEdited()">Save</button>
 					<table>
-						<tr><td>Name</td><td><input class="poke-edit-input" type="text" id="edit-name"></td></tr>
-						<tr><td>Item</td><td><input class="poke-edit-input" type="text" id="edit-item"></td></tr>
+						<tr><td>Name</td><td><input class="poke-edit-input" type="text" id="edit-name" list="pokemon-names-list"></td></tr>
+						<tr><td>Item</td><td><input class="poke-edit-input" type="text" id="edit-item" list="item-names-list"></td></tr>
 						<tr><td>Lvl</td><td><input class="poke-edit-input" type="number" value="5" min="1" max="100" id="edit-lvl"></td></tr>
 						<tr><td></td></tr>
-						<tr><td>Move</td><td><input class="poke-edit-input" type="text" id="edit-move-1"></td></tr>
-						<tr><td>Move</td><td><input class="poke-edit-input" type="text" id="edit-move-2"></td></tr>
-						<tr><td>Move</td><td><input class="poke-edit-input" type="text" id="edit-move-3"></td></tr>
-						<tr><td>Move</td><td><input class="poke-edit-input" type="text" id="edit-move-4"></td></tr>
+						<tr><td>Move</td><td><input class="poke-edit-input" type="text" id="edit-move-1" list="move-names-list"></td></tr>
+						<tr><td>Move</td><td><input class="poke-edit-input" type="text" id="edit-move-2" list="move-names-list"></td></tr>
+						<tr><td>Move</td><td><input class="poke-edit-input" type="text" id="edit-move-3" list="move-names-list"></td></tr>
+						<tr><td>Move</td><td><input class="poke-edit-input" type="text" id="edit-move-4" list="move-names-list"></td></tr>
 						<tr><td></td></tr>
 						<tr><td>HP</td><td><input class="poke-edit-input" type="number" value="0" min="0" max="15" id="edit-hp"></td></tr>
 						<tr><td>Atk</td><td><input class="poke-edit-input" type="number" value="0" min="0" max="15" id="edit-atk"></td></tr>
@@ -191,6 +191,7 @@
 				<div class="calc-moves"></div>
 				<div class="calc-team"></div>
 				<div class="calc-naviation">
+					<button onclick="statCheckCurrentTrainer()">Statistics</button>
 					<button onclick="navigateBattle(-1)">Previous Battle</button>
 					<button onclick="navigateBattle(1)">Next Battle</button>
 				</div>
@@ -242,5 +243,8 @@
 		</div>
 		<div id="info-popup"></div>
 	</body>
+	<datalist id="pokemon-names-list"></datalist>
+	<datalist id="item-names-list"></datalist>
+	<datalist id="move-names-list"></datalist>
 	<script src="script.js"></script>
 </html>

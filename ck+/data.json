@@ -14605,10 +14605,6 @@
             "name": "old-rod"
         },
         {
-            "description": "Restores 5pp to a move upon running out of pp",
-            "name": "mystery-berry"
-        },
-        {
             "description": "Restores 30hp upon falling under 50% hp",
             "name": "gold-berry"
         },
@@ -14729,7 +14725,7 @@
             "name": "nevermelt-ice"
         },
         {
-            "description": "Grants pokemon bonus exp ",
+            "description": "Grants pokemon bonus exp",
             "name": "lucky-egg"
         },
         {
@@ -14773,7 +14769,7 @@
             "name": "silverpowder"
         },
         {
-            "description": "restores 5pp to a move upon running out of pp",
+            "description": "Restores 5pp to a move upon running out of pp",
             "name": "mysteryberry"
         },
         {
@@ -14781,11 +14777,11 @@
             "name": "tinymushroom"
         },
         {
-            "description": "gives a 30\/256 chance to cause a flinch",
+            "description": "Gives a 30\/256 chance to cause a flinch",
             "name": "kings-rock"
         },
         {
-            "description": "Increases Farfetch'd''s critical hit ratio by two stages",
+            "description": "Increases Farfetch'd's critical hit ratio by two stages",
             "name": "stick"
         },
         {
@@ -14813,7 +14809,7 @@
             "name": "miracleberry"
         },
         {
-            "description": "When drank by the player it causes them to be healthy and live a long and productive life where they are free from things like quick claw explosion, back to back critical hits, and other such unlucky occurances. If given to a pokemon it restores 100hp out of battle though",
+            "description": "When given to a pokemon it restores 100hp out of battle",
             "name": "moomoo-milk"
         },
         {
@@ -15062,7 +15058,7 @@
                 {
                     "amount": "1",
                     "info": "Obtained in the Omanyte Puzzle room while holding a water stone",
-                    "item": "mystery-berry"
+                    "item": "mysteryberry"
                 },
                 {
                     "amount": "1",
@@ -15494,7 +15490,7 @@
                 {
                     "amount": "renewable",
                     "info": "Tree in the middle path",
-                    "item": "mystery-berry"
+                    "item": "mysteryberry"
                 },
                 {
                     "amount": "renewable",
