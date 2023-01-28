@@ -40890,7 +40890,7 @@
                     "name": "mankey"
                 },
                 {
-                    "item": "blackbelt-i",
+                    "item": "blackbelt",
                     "level": 22,
                     "moves": [
                         "dig",
@@ -44380,7 +44380,7 @@
             "name": "Blackbelt BLACKBELT_T (4) LAO",
             "team": [
                 {
-                    "item": "blackbelt-i",
+                    "item": "blackbelt",
                     "level": 42,
                     "moves": [
                         "submission",
@@ -44529,7 +44529,7 @@
                     "name": "magmar"
                 },
                 {
-                    "item": "blackbelt-i",
+                    "item": "blackbelt",
                     "level": 44,
                     "moves": [
                         "thunderbolt",
@@ -46159,7 +46159,7 @@
                     "name": "espeon"
                 },
                 {
-                    "item": "blackbelt-i",
+                    "item": "blackbelt",
                     "level": 55,
                     "moves": [
                         "cross-chop",
@@ -48930,7 +48930,7 @@
                     "name": "girafarig"
                 },
                 {
-                    "item": "blackbelt-i",
+                    "item": "blackbelt",
                     "level": 67,
                     "moves": [
                         "cross-chop",
@@ -50763,7 +50763,7 @@
                     "name": "snorlax"
                 },
                 {
-                    "item": "blackbelt-i",
+                    "item": "blackbelt",
                     "level": 73,
                     "moves": [
                         "cross-chop",
@@ -51060,7 +51060,7 @@
                     "name": "mr-mime"
                 },
                 {
-                    "item": "blackbelt-i",
+                    "item": "blackbelt",
                     "level": 74,
                     "moves": [
                         "cross-chop",
@@ -51366,7 +51366,7 @@
                     "name": "lanturn"
                 },
                 {
-                    "item": "blackbelt-i",
+                    "item": "blackbelt",
                     "level": 75,
                     "moves": [
                         "hi-jump-kick",
@@ -51477,7 +51477,7 @@
                     "name": "lapras"
                 },
                 {
-                    "item": "blackbelt-i",
+                    "item": "blackbelt",
                     "level": 77,
                     "moves": [
                         "thunderbolt",
@@ -52010,7 +52010,7 @@
                     "name": "rhydon"
                 },
                 {
-                    "item": "blackbelt-i",
+                    "item": "blackbelt",
                     "level": 79,
                     "moves": [
                         "cross-chop",
@@ -52921,7 +52921,7 @@
                     "name": "magneton"
                 },
                 {
-                    "item": "blackbelt-i",
+                    "item": "blackbelt",
                     "level": 83,
                     "moves": [
                         "hi-jump-kick",
@@ -53680,7 +53680,7 @@
                         "spd": 15,
                         "spe": 15
                     },
-                    "item": "blackbelt-i",
+                    "item": "blackbelt",
                     "level": 86,
                     "moves": [
                         "earthquake",
@@ -54551,7 +54551,7 @@
                     "name": "typhlosion"
                 },
                 {
-                    "item": "blackbelt-i",
+                    "item": "blackbelt",
                     "level": 88,
                     "moves": [
                         "cross-chop",
@@ -55548,7 +55548,7 @@
                     "name": "hitmonchan"
                 },
                 {
-                    "item": "blackbelt-i",
+                    "item": "blackbelt",
                     "level": 92,
                     "moves": [
                         "fire-blast",
