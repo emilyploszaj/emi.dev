@@ -1668,13 +1668,13 @@ function getDamage(attacker, defender, attackerStages, defenderStages, move, pla
 		if (attackerBoost && !special && badges >= attackBadges) {
 			a = parseInt(a * 1.125);
 		}
-		if (!defenderBoost && !special && badges >= defenseBadges) {
+		if (defenderBoost && !special && badges >= defenseBadges) {
 			d = parseInt(d * 1.125);
 		}
 		if (attackerBoost && special && badges >= specialBadges) {
 			a = parseInt(a * 1.125);
 		}
-		if (!defenderBoost && special && badges >= specialBadges) {
+		if (defenderBoost && special && badges >= specialBadges) {
 			d = parseInt(d * 1.125);
 		}
 	}
