@@ -47,6 +47,7 @@ var landmarksByLocation = new Map();
 var landmarksByItem = new Map();
 var fightsByTrainer = new Map();
 var bringsByTrainer = new Map();
+var trainersByName = new Map();
 var myPoke;
 var theirPoke;
 var box = [];
@@ -329,23 +330,23 @@ fetch("./data.json")
 		}
 		document.getElementById("move-names-list").innerHTML = moveDataList;
 
-		enemyTeam = j.trainers[17].team;
-		if (localStorage.getItem("last-trainer")) {
-			var lt = parseInt(localStorage.getItem("last-trainer"));
-			if (lt >= 0 && lt < j.trainers.length) {
-				enemyTeam = j.trainers[lt].team;
-				lastTrainer = lt;
-				document.getElementById("current-trainer-name").innerHTML = j.trainers[lastTrainer].name;
-			}
+		for (const t of j.trainers) {
+			trainersByName.set(t.name, t);
 		}
+
 		data = j;
 		var a = j.trainers[17].team[2];
-		var b = enemyTeam[0];
 		myPoke = a;
 		if (box.length > 0) {
 			myPoke = box[0];
 		}
-		theirPoke = b;
+		enemyTeam = j.trainers[17].team;
+		if (localStorage.getItem("last-trainer")) {
+			var lt = parseInt(localStorage.getItem("last-trainer"));
+			if (lt >= 0 && lt < j.trainers.length) {
+				calcTrainer(lt);
+			}
+		}
 		updateCalc();
 		updateBox();
 		displayTrainers();
@@ -436,7 +437,7 @@ function displayTrainers() {
 function getTrainerDisplay(trainer, i) {
 	var t = "";
 	t += '<div class="trainer">'
-	t += '<div>' + trainer.name;
+	t += '<div>' + getTrainerName(trainer.name);
 	t += '<button style="float:right;" onclick="calcTrainer(' + i + ')">Calc</button>';
 	t += '<button style="float:right;" onclick="statCheckTrainer(' + i + ')">Statistics</button>';
 	t += '</div>';
@@ -592,9 +593,10 @@ function displayCalcPokemon(root, poke, opponent, right) {
 		var mySpe = getModifiedStat(poke, getStages(myStages), "spe");
 		var theirSpe = getModifiedStat(opponent, getStages(theirStages), "spe");
 		if (badges >= speedBadges) {
-			if (player) {
+			if (player || poke.transformStats) {
 				mySpe = parseInt(mySpe * 1.125);
-			} else {
+			}
+			if (!player || opponent.transformStats) {
 				theirSpe = parseInt(theirSpe * 1.125);
 			}
 		}
@@ -722,7 +724,7 @@ function displayCalcStat(div, poke, stat, player = false) {
 	var s = getPokeStat(poke, stat);
 	var o = s;
 	if (badges >= speedBadges && stat == "spe") {
-		if (player) {
+		if (player || poke.transformStats) {
 			s = parseInt(s * 1.125);
 		}
 		div.getElementsByClassName("stat-num")[0].innerHTML = "<ruby>" + s + "<rt>" + o + "</rt></ruby>";
@@ -1241,7 +1243,7 @@ function getItemLocationDescription(desc) {
 
 function getTrainerStats(i) {
 	var trainer = data.trainers[i];
-	var v = "<h3>" + trainer.name + "</h3>";
+	var v = "<h3>" + getTrainerName(trainer.name) + "</h3>";
 	v += '<div class="trainer">';
 	v += '<div class="trainer-pokes">';
 	v += getTeamDisplay(trainer);
@@ -1476,7 +1478,28 @@ function fullCapitalize(s) {
 	if (nameFormatting.has(s)) {
 		return nameFormatting.get(s);
 	}
-	return s.replace(/-/g, " ").replace(/\w\S*/g, (word) => (word.replace(/^\w/, (c) => c.toUpperCase())));
+	return s.replace(/[-_]/g, " ").replace(/\w\S*/g, (word) => (word.replace(/^\w/, (c) => c.toUpperCase())));
+}
+
+function getTrainerName(s) {
+	var m = s.match(/([^\s]+) ([^\s]+) \((\d+)\) ([^\s]+)/);
+	if (m) {
+		var tc = fullCapitalize(m[2]);
+		var cn = fullCapitalize(m[3]);
+		var tn = fullCapitalize(m[4]);
+		if (tc == tn) {
+			tn = "";
+		}
+		if (cn == "1") {
+			if (!trainersByName.has(s.replace(/\(1\)/, "(2)"))) {
+				cn = "";
+			}
+		} else if (!trainersByName.has(s.replace(/\(\d+\)/, "(1)"))) {
+			cn = "";
+		}
+		return `${tc} ${tn} ${cn}`;
+	}
+	return s;
 }
 
 function getEmptyStages() {
@@ -1640,16 +1663,18 @@ function getDamage(attacker, defender, attackerStages, defenderStages, move, pla
 
 	// Badge boost
 	if (!ignoreBoosts) {
-		if (player && !special && badges >= attackBadges) {
+		var attackerBoost = player || (attacker.transformStats !== undefined);
+		var defenderBoost = !player || (defender.transformStats !== undefined);
+		if (attackerBoost && !special && badges >= attackBadges) {
 			a = parseInt(a * 1.125);
 		}
-		if (!player && !special && badges >= defenseBadges) {
+		if (!defenderBoost && !special && badges >= defenseBadges) {
 			d = parseInt(d * 1.125);
 		}
-		if (player && special && badges >= specialBadges) {
+		if (attackerBoost && special && badges >= specialBadges) {
 			a = parseInt(a * 1.125);
 		}
-		if (!player && special && badges >= specialBadges) {
+		if (!defenderBoost && special && badges >= specialBadges) {
 			d = parseInt(d * 1.125);
 		}
 	}
@@ -2141,7 +2166,8 @@ function calcTrainer(i) {
 	localStorage.setItem("last-trainer", i);
 	lastTrainer = i;
 	enemyTeam = data.trainers[i].team;
-	document.getElementById("current-trainer-name").innerHTML = data.trainers[i].name;
+	document.getElementById("current-trainer-name").innerHTML =
+		`${getTrainerName(data.trainers[i].name)}`;
 	setEnemy(0);
 	setTab("calc");
 }
