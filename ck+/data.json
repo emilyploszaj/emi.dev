@@ -14722,7 +14722,7 @@
         },
         {
             "description": "Increases the damage of Ice type moves by 10%",
-            "name": "nevermelt-ice"
+            "name": "nevermeltice"
         },
         {
             "description": "Grants pokemon bonus exp",
@@ -15598,6 +15598,11 @@
                     "amount": "1",
                     "info": "Obtained from woman in MooMoo ranch after completing the side quest to save MooMoo",
                     "item": "tm-13"
+                },
+                {
+                    "amount": "1",
+                    "info": "Hidden on the ground in MooMoo ranch",
+                    "item": "thick-club"
                 }
             ],
             "locations": [
@@ -15917,7 +15922,7 @@
                 {
                     "amount": "1",
                     "info": "",
-                    "item": "nevermelt-ice"
+                    "item": "nevermeltice"
                 },
                 {
                     "amount": "1",
@@ -19786,24 +19791,40 @@
                     "move": "mega-drain"
                 },
                 {
-                    "level": 15,
+                    "level": 13,
                     "move": "sleep-powder"
                 },
                 {
-                    "level": 19,
-                    "move": "acid"
-                },
-                {
-                    "level": 23,
+                    "level": 16,
                     "move": "razor-leaf"
                 },
                 {
-                    "level": 28,
+                    "level": 20,
+                    "move": "sludge"
+                },
+                {
+                    "level": 26,
                     "move": "body-slam"
                 },
                 {
-                    "level": 36,
+                    "level": 30,
                     "move": "sludge-bomb"
+                },
+                {
+                    "level": 44,
+                    "move": "petal-dance"
+                },
+                {
+                    "level": 49,
+                    "move": "synthesis"
+                },
+                {
+                    "level": 57,
+                    "move": "toxic"
+                },
+                {
+                    "level": 60,
+                    "move": "ancientpower"
                 }
             ],
             "name": "bulbasaur",
@@ -19929,20 +19950,28 @@
                     "move": "sleep-powder"
                 },
                 {
-                    "level": 41,
+                    "level": 37,
                     "move": "giga-drain"
                 },
                 {
-                    "level": 47,
+                    "level": 42,
                     "move": "sludge-bomb"
                 },
                 {
-                    "level": 54,
+                    "level": 49,
                     "move": "petal-dance"
                 },
                 {
-                    "level": 70,
+                    "level": 55,
                     "move": "synthesis"
+                },
+                {
+                    "level": 62,
+                    "move": "toxic"
+                },
+                {
+                    "level": 68,
+                    "move": "ancientpower"
                 }
             ],
             "name": "venusaur",
@@ -20329,12 +20358,16 @@
                     "move": "water-gun"
                 },
                 {
-                    "level": 23,
+                    "level": 20,
                     "move": "bubblebeam"
                 },
                 {
-                    "level": 28,
+                    "level": 24,
                     "move": "ice-punch"
+                },
+                {
+                    "level": 30,
+                    "move": "body-slam"
                 }
             ],
             "name": "wartortle",
@@ -20393,28 +20426,32 @@
                     "move": "bubblebeam"
                 },
                 {
-                    "level": 38,
+                    "level": 1,
                     "move": "body-slam"
                 },
                 {
-                    "level": 44,
+                    "level": 36,
                     "move": "waterfall"
                 },
                 {
-                    "level": 49,
-                    "move": "hydro-pump"
+                    "level": 40,
+                    "move": "ice-beam"
                 },
                 {
-                    "level": 54,
-                    "move": "skull-bash"
-                },
-                {
-                    "level": 60,
+                    "level": 53,
                     "move": "rapid-spin"
                 },
                 {
+                    "level": 60,
+                    "move": "icy-wind"
+                },
+                {
                     "level": 67,
-                    "move": "ice-beam"
+                    "move": "hydro-pump"
+                },
+                {
+                    "level": 73,
+                    "move": "waterfall"
                 }
             ],
             "name": "blastoise",
@@ -20561,12 +20598,12 @@
                     "move": "sleep-powder"
                 },
                 {
-                    "level": 15,
+                    "level": 16,
                     "move": "psybeam"
                 },
                 {
-                    "level": 17,
-                    "move": "stun-spore"
+                    "level": 18,
+                    "move": "giga-drain"
                 },
                 {
                     "level": 21,
@@ -20574,7 +20611,7 @@
                 },
                 {
                     "level": 23,
-                    "move": "giga-drain"
+                    "move": "morning-sun"
                 },
                 {
                     "level": 25,
@@ -20582,19 +20619,11 @@
                 },
                 {
                     "level": 29,
-                    "move": "morning-sun"
-                },
-                {
-                    "level": 34,
                     "move": "sleep-powder"
                 },
                 {
-                    "level": 34,
+                    "level": 29,
                     "move": "dream-eater"
-                },
-                {
-                    "level": 45,
-                    "move": "whirlwind"
                 }
             ],
             "name": "butterfree",
@@ -20890,11 +20919,11 @@
                     "move": "swift"
                 },
                 {
-                    "level": 29,
+                    "level": 28,
                     "move": "steel-wing"
                 },
                 {
-                    "level": 36,
+                    "level": 34,
                     "move": "return"
                 }
             ],
@@ -20945,20 +20974,20 @@
                     "move": "wing-attack"
                 },
                 {
-                    "level": 47,
+                    "level": 36,
                     "move": "steel-wing"
                 },
                 {
-                    "level": 53,
-                    "move": "razor-wind"
+                    "level": 40,
+                    "move": "return"
                 },
                 {
-                    "level": 57,
+                    "level": 45,
                     "move": "sky-attack"
                 },
                 {
-                    "level": 64,
-                    "move": "whirlwind"
+                    "level": 55,
+                    "move": "aeroblast"
                 }
             ],
             "name": "pidgeot",
@@ -21733,24 +21762,28 @@
                     "move": "slash"
                 },
                 {
-                    "level": 34,
+                    "level": 33,
                     "move": "rock-slide"
                 },
                 {
-                    "level": 39,
+                    "level": 38,
                     "move": "earthquake"
                 },
                 {
-                    "level": 49,
-                    "move": "rapid-spin"
+                    "level": 42,
+                    "move": "counter"
                 },
                 {
-                    "level": 55,
+                    "level": 47,
                     "move": "ancientpower"
                 },
                 {
+                    "level": 53,
+                    "move": "rapid-spin"
+                },
+                {
                     "level": 65,
-                    "move": "counter"
+                    "move": "earthquake"
                 }
             ],
             "name": "sandslash",
@@ -22704,28 +22737,28 @@
                     "move": "faint-attack"
                 },
                 {
-                    "level": 23,
+                    "level": 17,
                     "move": "headbutt"
                 },
                 {
-                    "level": 27,
-                    "move": "swift"
-                },
-                {
-                    "level": 31,
-                    "move": "body-slam"
-                },
-                {
-                    "level": 41,
+                    "level": 21,
                     "move": "seismic-toss"
                 },
                 {
-                    "level": 49,
+                    "level": 26,
                     "move": "thunder-wave"
                 },
                 {
-                    "level": 56,
+                    "level": 29,
+                    "move": "body-slam"
+                },
+                {
+                    "level": 32,
                     "move": "double-edge"
+                },
+                {
+                    "level": 37,
+                    "move": "hyper-beam"
                 }
             ],
             "name": "jigglypuff",
@@ -22793,24 +22826,24 @@
                     "move": "dizzy-punch"
                 },
                 {
-                    "level": 27,
-                    "move": "rollout"
-                },
-                {
-                    "level": 31,
-                    "move": "body-slam"
-                },
-                {
-                    "level": 41,
-                    "move": "seismic-toss"
-                },
-                {
-                    "level": 49,
+                    "level": 29,
                     "move": "thunder-wave"
                 },
                 {
-                    "level": 56,
+                    "level": 33,
+                    "move": "body-slam"
+                },
+                {
+                    "level": 35,
                     "move": "double-edge"
+                },
+                {
+                    "level": 39,
+                    "move": "hyper-beam"
+                },
+                {
+                    "level": 45,
+                    "move": "explosion"
                 }
             ],
             "name": "wigglytuff",
@@ -23029,15 +23062,19 @@
                     "move": "mega-drain"
                 },
                 {
-                    "level": 7,
+                    "level": 4,
                     "move": "acid"
                 },
                 {
-                    "level": 14,
+                    "level": 9,
                     "move": "poisonpowder"
                 },
                 {
-                    "level": 18,
+                    "level": 13,
+                    "move": "moonlight"
+                },
+                {
+                    "level": 16,
                     "move": "razor-leaf"
                 }
             ],
@@ -23329,6 +23366,22 @@
                 {
                     "level": 28,
                     "move": "leech-life"
+                },
+                {
+                    "level": 30,
+                    "move": "toxic"
+                },
+                {
+                    "level": 34,
+                    "move": "synthesis"
+                },
+                {
+                    "level": 37,
+                    "move": "giga-drain"
+                },
+                {
+                    "level": 40,
+                    "move": "spore"
                 }
             ],
             "name": "parasect",
@@ -23949,7 +24002,7 @@
                     "move": "hypnosis"
                 },
                 {
-                    "level": 38,
+                    "level": 37,
                     "move": "waterfall"
                 },
                 {
@@ -23957,7 +24010,7 @@
                     "move": "ice-beam"
                 },
                 {
-                    "level": 47,
+                    "level": 46,
                     "move": "psychic"
                 },
                 {
@@ -23974,11 +24027,11 @@
                 },
                 {
                     "level": 70,
-                    "move": "psych-up"
+                    "move": "cross-chop"
                 },
                 {
                     "level": 75,
-                    "move": "cross-chop"
+                    "move": "psych-up"
                 }
             ],
             "name": "golduck",
@@ -25171,6 +25224,10 @@
                 {
                     "level": 37,
                     "move": "sludge-bomb"
+                },
+                {
+                    "level": 48,
+                    "move": "lovely-kiss"
                 }
             ],
             "name": "weepinbell",
@@ -25230,6 +25287,10 @@
                 {
                     "level": 47,
                     "move": "sludge-bomb"
+                },
+                {
+                    "level": 54,
+                    "move": "lovely-kiss"
                 },
                 {
                     "level": 63,
@@ -25313,6 +25374,10 @@
                 {
                     "level": 56,
                     "move": "sludge-bomb"
+                },
+                {
+                    "level": 80,
+                    "move": "waterfall"
                 },
                 {
                     "level": 99,
@@ -25538,6 +25603,10 @@
                 {
                     "level": 55,
                     "move": "earthquake"
+                },
+                {
+                    "level": 60,
+                    "move": "ancientpower"
                 }
             ],
             "name": "graveler",
@@ -25609,6 +25678,10 @@
                 {
                     "level": 56,
                     "move": "earthquake"
+                },
+                {
+                    "level": 60,
+                    "move": "ancientpower"
                 },
                 {
                     "level": 99,
@@ -25932,6 +26005,10 @@
                 {
                     "level": 74,
                     "move": "psych-up"
+                },
+                {
+                    "level": 80,
+                    "move": "waterfall"
                 },
                 {
                     "level": 85,
@@ -26571,16 +26648,20 @@
                     "move": "acid"
                 },
                 {
-                    "level": 15,
+                    "level": 13,
                     "move": "sludge"
                 },
                 {
-                    "level": 23,
+                    "level": 18,
                     "move": "disable"
                 },
                 {
-                    "level": 28,
+                    "level": 23,
                     "move": "body-slam"
+                },
+                {
+                    "level": 26,
+                    "move": "sludge-bomb"
                 },
                 {
                     "level": 46,
@@ -26646,7 +26727,7 @@
             "learnset": [
                 {
                     "level": 1,
-                    "move": "sludge"
+                    "move": "sludge-bomb"
                 },
                 {
                     "level": 39,
@@ -26820,6 +26901,10 @@
                 {
                     "level": 55,
                     "move": "rapid-spin"
+                },
+                {
+                    "level": 73,
+                    "move": "spikes"
                 },
                 {
                     "level": 99,
@@ -28383,6 +28468,10 @@
                     "move": "pain-split"
                 },
                 {
+                    "level": 70,
+                    "move": "explosion"
+                },
+                {
                     "level": 85,
                     "move": "explosion"
                 }
@@ -28707,7 +28796,7 @@
                 },
                 {
                     "level": 13,
-                    "move": "acid"
+                    "move": "faint-attack"
                 },
                 {
                     "level": 17,
@@ -28735,10 +28824,6 @@
                 },
                 {
                     "level": 47,
-                    "move": "ancientpower"
-                },
-                {
-                    "level": 54,
                     "move": "petal-dance"
                 }
             ],
@@ -29765,12 +29850,12 @@
                     "move": "rock-slide"
                 },
                 {
-                    "level": 44,
-                    "move": "seismic-toss"
-                },
-                {
                     "level": 50,
                     "move": "megahorn"
+                },
+                {
+                    "level": 56,
+                    "move": "earthquake"
                 }
             ],
             "name": "pinsir",
@@ -30338,11 +30423,11 @@
                     "move": "thunder-wave"
                 },
                 {
-                    "level": 42,
+                    "level": 44,
                     "move": "thunderbolt"
                 },
                 {
-                    "level": 57,
+                    "level": 52,
                     "move": "hidden-power"
                 },
                 {
@@ -30436,6 +30521,10 @@
                 },
                 {
                     "level": 76,
+                    "move": "extremespeed"
+                },
+                {
+                    "level": 84,
                     "move": "baton-pass"
                 }
             ],
@@ -31746,11 +31835,11 @@
                 },
                 {
                     "level": 26,
-                    "move": "giga-drain"
+                    "move": "body-slam"
                 },
                 {
                     "level": 31,
-                    "move": "body-slam"
+                    "move": "giga-drain"
                 },
                 {
                     "level": 39,
@@ -32292,7 +32381,7 @@
                 },
                 {
                     "level": 36,
-                    "move": "surf"
+                    "move": "waterfall"
                 },
                 {
                     "level": 42,
@@ -32308,11 +32397,7 @@
                 },
                 {
                     "level": 67,
-                    "move": "waterfall"
-                },
-                {
-                    "level": 74,
-                    "move": "hydro-pump"
+                    "move": "cross-chop"
                 }
             ],
             "name": "feraligatr",
@@ -34541,27 +34626,27 @@
                     "move": "waterfall"
                 },
                 {
-                    "level": 41,
+                    "level": 40,
                     "move": "ice-beam"
                 },
                 {
-                    "level": 47,
+                    "level": 45,
                     "move": "encore"
+                },
+                {
+                    "level": 50,
+                    "move": "lovely-kiss"
                 },
                 {
                     "level": 56,
                     "move": "hydro-pump"
                 },
                 {
-                    "level": 67,
+                    "level": 62,
                     "move": "earthquake"
                 },
                 {
-                    "level": 71,
-                    "move": "lovely-kiss"
-                },
-                {
-                    "level": 99,
+                    "level": 77,
                     "move": "perish-song"
                 }
             ],
@@ -35096,28 +35181,32 @@
                     "move": "giga-drain"
                 },
                 {
-                    "level": 19,
+                    "level": 18,
                     "move": "wing-attack"
                 },
                 {
-                    "level": 28,
+                    "level": 24,
                     "move": "toxic"
                 },
                 {
-                    "level": 32,
+                    "level": 28,
                     "move": "hidden-power"
                 },
                 {
-                    "level": 36,
+                    "level": 32,
                     "move": "shadow-ball"
                 },
                 {
-                    "level": 45,
+                    "level": 38,
                     "move": "protect"
                 },
                 {
-                    "level": 67,
+                    "level": 45,
                     "move": "ancientpower"
+                },
+                {
+                    "level": 52,
+                    "move": "sky-attack"
                 }
             ],
             "name": "yanma",
@@ -35443,7 +35532,7 @@
                 },
                 {
                     "level": 44,
-                    "move": "mean-look"
+                    "move": "crunch"
                 },
                 {
                     "level": 55,
@@ -35451,7 +35540,7 @@
                 },
                 {
                     "level": 78,
-                    "move": "crunch"
+                    "move": "mean-look"
                 },
                 {
                     "level": 99,
@@ -35542,6 +35631,10 @@
                 {
                     "level": 45,
                     "move": "sky-attack"
+                },
+                {
+                    "level": 52,
+                    "move": "crunch"
                 }
             ],
             "name": "murkrow",
@@ -35839,11 +35932,11 @@
                 },
                 {
                     "level": 13,
-                    "move": "confusion"
+                    "move": "confuse-ray"
                 },
                 {
                     "level": 17,
-                    "move": "confuse-ray"
+                    "move": "psybeam"
                 },
                 {
                     "level": 23,
@@ -35855,11 +35948,11 @@
                 },
                 {
                     "level": 34,
-                    "move": "psybeam"
+                    "move": "earthquake"
                 },
                 {
                     "level": 41,
-                    "move": "earthquake"
+                    "move": "psychic"
                 },
                 {
                     "level": 47,
@@ -38717,7 +38810,7 @@
                 },
                 {
                     "level": 25,
-                    "move": "triple-kick"
+                    "move": "double-kick"
                 },
                 {
                     "level": 31,
@@ -39079,19 +39172,19 @@
                     "move": "headbutt"
                 },
                 {
-                    "level": 60,
+                    "level": 45,
+                    "move": "body-slam"
+                },
+                {
+                    "level": 55,
                     "move": "earthquake"
                 },
                 {
                     "level": 70,
-                    "move": "body-slam"
-                },
-                {
-                    "level": 85,
                     "move": "milk-drink"
                 },
                 {
-                    "level": 99,
+                    "level": 77,
                     "move": "heal-bell"
                 }
             ],
@@ -40675,7 +40768,9 @@
                     "item": "focus-band",
                     "level": 22,
                     "moves": [
-                        "rock-throw"
+                        "rock-throw",
+                        "dig",
+                        "body-slam"
                     ],
                     "name": "geodude"
                 },
@@ -41790,6 +41885,7 @@
             ]
         },
         {
+            "meta": "(immediate)",
             "name": "Pokemaniac POKEMANIAC (11) ISSAC",
             "team": [
                 {
@@ -43296,7 +43392,7 @@
                     "moves": [
                         "softboiled",
                         "ice-beam",
-                        "seismic-toss",
+                        "psywave",
                         "toxic"
                     ],
                     "name": "chansey"
@@ -45335,6 +45431,7 @@
             ]
         },
         {
+            "meta": "(immediate)",
             "name": "GruntM GRUNTM (21) GRUNT",
             "team": [
                 {
@@ -46988,7 +47085,7 @@
                     "moves": [
                         "softboiled",
                         "reflect",
-                        "seismic-toss"
+                        "psywave"
                     ],
                     "name": "chansey"
                 },
@@ -52721,7 +52818,7 @@
                     "name": "ninetales"
                 },
                 {
-                    "item": "soft-sand",
+                    "item": "thick-club",
                     "level": 82,
                     "moves": [
                         "earthquake",
