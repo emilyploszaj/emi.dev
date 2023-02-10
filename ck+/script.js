@@ -345,6 +345,8 @@ fetch("./data.json")
 			var lt = parseInt(localStorage.getItem("last-trainer"));
 			if (lt >= 0 && lt < j.trainers.length) {
 				calcTrainer(lt);
+			} else {
+				calcTrainer(17);
 			}
 		}
 		updateCalc();
@@ -1523,7 +1525,7 @@ function getHiddenPower(poke) {
 		"psychic", "ice", "dragon", "dark"
 	];
 	var ty = types[t];
-	var po = ((mSig("spa") + 2 * mSig("spe") + 4 * mSig("def") + 8 * mSig("atk")) * 5 + mod4("spa")) / 2 + 31;
+	var po = (((mSig("spa") + 2 * mSig("spe") + 4 * mSig("def") + 8 * mSig("atk")) * 5 + mod4("spa")) >> 1) + 31;
 	return { type: ty, power: po };
 }
 
@@ -1928,6 +1930,8 @@ function updateEdit() {
 	}
 	if (poke) {
 		displayCalcPokemon(document.getElementById("edited-poke"), poke, undefined, false);
+		var hp = getHiddenPower(poke);
+		document.getElementById("edit-hidden-power").innerHTML = `${fullCapitalize(hp.type)} ${hp.power}`;
 	}
 }
 
