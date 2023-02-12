@@ -16901,9 +16901,7 @@
     "moves": [
         {
             "accuracy": 100,
-            "extra": [
-                "If the last damage taken was special, do twice the damage"
-            ],
+            "extra": [],
             "index": 119,
             "name": "mirror-move",
             "power": 0,
@@ -18466,7 +18464,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "If the last damage taken was special, do twice the damage"
+            ],
             "index": 243,
             "name": "mirror-coat",
             "power": 1,
