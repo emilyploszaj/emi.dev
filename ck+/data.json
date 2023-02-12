@@ -6455,17 +6455,17 @@
                     {
                         "chance": 30,
                         "level": 63,
-                        "pokemon": "sudowoodo"
+                        "pokemon": "piloswine"
                     },
                     {
                         "chance": 20,
                         "level": 63,
-                        "pokemon": "piloswine"
+                        "pokemon": "sneasel"
                     },
                     {
                         "chance": 10,
                         "level": 63,
-                        "pokemon": "sneasel"
+                        "pokemon": "sudowoodo"
                     },
                     {
                         "chance": 5,
@@ -6497,12 +6497,12 @@
                     {
                         "chance": 20,
                         "level": 63,
-                        "pokemon": "sudowoodo"
+                        "pokemon": "misdreavus"
                     },
                     {
                         "chance": 10,
                         "level": 63,
-                        "pokemon": "misdreavus"
+                        "pokemon": "sudowoodo"
                     },
                     {
                         "chance": 5,
@@ -6534,12 +6534,12 @@
                     {
                         "chance": 20,
                         "level": 63,
-                        "pokemon": "sudowoodo"
+                        "pokemon": "misdreavus"
                     },
                     {
                         "chance": 10,
                         "level": 63,
-                        "pokemon": "misdreavus"
+                        "pokemon": "sudowoodo"
                     },
                     {
                         "chance": 5,
@@ -7240,7 +7240,7 @@
                     {
                         "chance": 30,
                         "level": 7,
-                        "pokemon": "larvitar"
+                        "pokemon": "girafarig"
                     },
                     {
                         "chance": 30,
@@ -7292,7 +7292,7 @@
                     {
                         "chance": 10,
                         "level": 7,
-                        "pokemon": "larvitar"
+                        "pokemon": "girafarig"
                     },
                     {
                         "chance": 5,
@@ -10555,7 +10555,7 @@
                     {
                         "chance": 30,
                         "level": 64,
-                        "pokemon": "muk"
+                        "pokemon": "pupitar"
                     },
                     {
                         "chance": 20,
@@ -10597,7 +10597,7 @@
                     {
                         "chance": 20,
                         "level": 64,
-                        "pokemon": "ursaring"
+                        "pokemon": "pupitar"
                     },
                     {
                         "chance": 10,
@@ -10624,7 +10624,7 @@
                     {
                         "chance": 30,
                         "level": 64,
-                        "pokemon": "dugtrio"
+                        "pokemon": "pupitar"
                     },
                     {
                         "chance": 30,
@@ -14718,7 +14718,7 @@
         },
         {
             "description": "Increases the damage of fighting type moves by 10%",
-            "name": "black-belt"
+            "name": "blackbelt"
         },
         {
             "description": "Increases the damage of Ice type moves by 10%",
@@ -15887,7 +15887,7 @@
                 {
                     "amount": "1",
                     "info": "On Island requiring Whirlpool.",
-                    "item": "black-belt"
+                    "item": "blackbelt"
                 }
             ],
             "locations": [
@@ -19788,15 +19788,15 @@
                 },
                 {
                     "level": 10,
-                    "move": "mega-drain"
-                },
-                {
-                    "level": 13,
                     "move": "sleep-powder"
                 },
                 {
-                    "level": 16,
+                    "level": 13,
                     "move": "razor-leaf"
+                },
+                {
+                    "level": 16,
+                    "move": "headbutt"
                 },
                 {
                     "level": 20,
@@ -19811,19 +19811,19 @@
                     "move": "sludge-bomb"
                 },
                 {
-                    "level": 44,
+                    "level": 36,
                     "move": "petal-dance"
                 },
                 {
-                    "level": 49,
+                    "level": 41,
                     "move": "synthesis"
                 },
                 {
-                    "level": 57,
+                    "level": 49,
                     "move": "toxic"
                 },
                 {
-                    "level": 60,
+                    "level": 57,
                     "move": "ancientpower"
                 }
             ],
@@ -19881,22 +19881,22 @@
             "learnset": [
                 {
                     "level": 1,
-                    "move": "mega-drain"
+                    "move": "razor-leaf"
                 },
                 {
                     "level": 19,
-                    "move": "acid"
+                    "move": "headbutt"
                 },
                 {
                     "level": 23,
-                    "move": "razor-leaf"
+                    "move": "sludge"
                 },
                 {
                     "level": 28,
                     "move": "body-slam"
                 },
                 {
-                    "level": 36,
+                    "level": 34,
                     "move": "sludge-bomb"
                 }
             ],
@@ -20366,8 +20366,12 @@
                     "move": "ice-punch"
                 },
                 {
-                    "level": 30,
+                    "level": 28,
                     "move": "body-slam"
+                },
+                {
+                    "level": 33,
+                    "move": "waterfall"
                 }
             ],
             "name": "wartortle",
@@ -20430,28 +20434,32 @@
                     "move": "body-slam"
                 },
                 {
-                    "level": 36,
+                    "level": 1,
                     "move": "waterfall"
                 },
                 {
-                    "level": 40,
+                    "level": 36,
                     "move": "ice-beam"
                 },
                 {
-                    "level": 53,
-                    "move": "rapid-spin"
-                },
-                {
-                    "level": 60,
+                    "level": 39,
                     "move": "icy-wind"
                 },
                 {
-                    "level": 67,
-                    "move": "hydro-pump"
+                    "level": 44,
+                    "move": "counter"
                 },
                 {
-                    "level": 73,
-                    "move": "waterfall"
+                    "level": 49,
+                    "move": "rapid-spin"
+                },
+                {
+                    "level": 53,
+                    "move": "earthquake"
+                },
+                {
+                    "level": 63,
+                    "move": "hydro-pump"
                 }
             ],
             "name": "blastoise",
@@ -22759,6 +22767,10 @@
                 {
                     "level": 37,
                     "move": "hyper-beam"
+                },
+                {
+                    "level": 45,
+                    "move": "explosion"
                 }
             ],
             "name": "jigglypuff",
@@ -22844,6 +22856,22 @@
                 {
                     "level": 45,
                     "move": "explosion"
+                },
+                {
+                    "level": 49,
+                    "move": "thunder-wave"
+                },
+                {
+                    "level": 53,
+                    "move": "body-slam"
+                },
+                {
+                    "level": 57,
+                    "move": "double-edge"
+                },
+                {
+                    "level": 60,
+                    "move": "hyper-beam"
                 }
             ],
             "name": "wigglytuff",
@@ -23137,6 +23165,10 @@
                     "move": "mega-drain"
                 },
                 {
+                    "level": 13,
+                    "move": "moonlight"
+                },
+                {
                     "level": 24,
                     "move": "sleep-powder"
                 },
@@ -23151,6 +23183,10 @@
                 {
                     "level": 40,
                     "move": "sleep-powder"
+                },
+                {
+                    "level": 46,
+                    "move": "moonlight"
                 }
             ],
             "name": "gloom",
@@ -23372,16 +23408,20 @@
                     "move": "toxic"
                 },
                 {
-                    "level": 34,
+                    "level": 33,
                     "move": "synthesis"
                 },
                 {
-                    "level": 37,
+                    "level": 36,
                     "move": "giga-drain"
                 },
                 {
-                    "level": 40,
+                    "level": 39,
                     "move": "spore"
+                },
+                {
+                    "level": 42,
+                    "move": "sludge-bomb"
                 }
             ],
             "name": "parasect",
@@ -25449,6 +25489,10 @@
                     "move": "ice-beam"
                 },
                 {
+                    "level": 73,
+                    "move": "waterfall"
+                },
+                {
                     "level": 99,
                     "move": "toxic"
                 }
@@ -25999,15 +26043,15 @@
                     "move": "psychic"
                 },
                 {
-                    "level": 70,
+                    "level": 63,
                     "move": "disable"
                 },
                 {
-                    "level": 74,
+                    "level": 68,
                     "move": "psych-up"
                 },
                 {
-                    "level": 80,
+                    "level": 73,
                     "move": "waterfall"
                 },
                 {
@@ -26734,12 +26778,16 @@
                     "move": "giga-drain"
                 },
                 {
-                    "level": 46,
+                    "level": 44,
                     "move": "flamethrower"
                 },
                 {
-                    "level": 50,
+                    "level": 48,
                     "move": "sludge-bomb"
+                },
+                {
+                    "level": 53,
+                    "move": "shadow-ball"
                 },
                 {
                     "level": 99,
@@ -29373,6 +29421,10 @@
                 {
                     "level": 67,
                     "move": "thunderbolt"
+                },
+                {
+                    "level": 73,
+                    "move": "waterfall"
                 },
                 {
                     "level": 99,
@@ -32311,6 +32363,10 @@
                     "move": "crunch"
                 },
                 {
+                    "level": 21,
+                    "move": "headbutt"
+                },
+                {
                     "level": 23,
                     "move": "bubblebeam"
                 },
@@ -32384,19 +32440,15 @@
                     "move": "waterfall"
                 },
                 {
-                    "level": 42,
+                    "level": 44,
                     "move": "double-edge"
                 },
                 {
-                    "level": 49,
-                    "move": "rage"
-                },
-                {
-                    "level": 57,
+                    "level": 54,
                     "move": "earthquake"
                 },
                 {
-                    "level": 67,
+                    "level": 63,
                     "move": "cross-chop"
                 }
             ],
@@ -34196,7 +34248,7 @@
                     "move": "fire-punch"
                 },
                 {
-                    "level": 50,
+                    "level": 44,
                     "move": "thunderbolt"
                 },
                 {
@@ -35202,11 +35254,11 @@
                 },
                 {
                     "level": 45,
-                    "move": "ancientpower"
+                    "move": "sky-attack"
                 },
                 {
                     "level": 52,
-                    "move": "sky-attack"
+                    "move": "ancientpower"
                 }
             ],
             "name": "yanma",
@@ -35543,7 +35595,7 @@
                     "move": "mean-look"
                 },
                 {
-                    "level": 99,
+                    "level": 85,
                     "move": "moonlight"
                 }
             ],
@@ -35695,14 +35747,14 @@
                 },
                 {
                     "level": 45,
-                    "move": "surf"
+                    "move": "waterfall"
                 },
                 {
                     "level": 51,
                     "move": "ice-beam"
                 },
                 {
-                    "level": 58,
+                    "level": 55,
                     "move": "psychic"
                 },
                 {
@@ -35927,7 +35979,11 @@
                     "move": "tackle"
                 },
                 {
-                    "level": 7,
+                    "level": 5,
+                    "move": "confusion"
+                },
+                {
+                    "level": 9,
                     "move": "bite"
                 },
                 {
@@ -35936,18 +35992,30 @@
                 },
                 {
                     "level": 17,
+                    "move": "stomp"
+                },
+                {
+                    "level": 21,
                     "move": "psybeam"
                 },
                 {
-                    "level": 23,
-                    "move": "body-slam"
-                },
-                {
-                    "level": 28,
+                    "level": 25,
                     "move": "crunch"
                 },
                 {
-                    "level": 34,
+                    "level": 28,
+                    "move": "body-slam"
+                },
+                {
+                    "level": 31,
+                    "move": "light-screen"
+                },
+                {
+                    "level": 31,
+                    "move": "reflect"
+                },
+                {
+                    "level": 36,
                     "move": "earthquake"
                 },
                 {
@@ -35955,11 +36023,11 @@
                     "move": "psychic"
                 },
                 {
-                    "level": 47,
+                    "level": 46,
                     "move": "thunderbolt"
                 },
                 {
-                    "level": 53,
+                    "level": 52,
                     "move": "return"
                 }
             ],
@@ -36557,27 +36625,27 @@
                     "move": "attract"
                 },
                 {
-                    "level": 30,
+                    "level": 28,
                     "move": "crunch"
                 },
                 {
-                    "level": 39,
+                    "level": 38,
                     "move": "shadow-ball"
                 },
                 {
-                    "level": 45,
+                    "level": 42,
+                    "move": "submission"
+                },
+                {
+                    "level": 46,
                     "move": "earthquake"
                 },
                 {
-                    "level": 51,
+                    "level": 50,
                     "move": "return"
                 },
                 {
                     "level": 57,
-                    "move": "rage"
-                },
-                {
-                    "level": 64,
                     "move": "scary-face"
                 },
                 {
@@ -37615,12 +37683,16 @@
                     "move": "rock-slide"
                 },
                 {
-                    "level": 45,
+                    "level": 44,
                     "move": "mirror-coat"
                 },
                 {
                     "level": 53,
                     "move": "rapid-spin"
+                },
+                {
+                    "level": 58,
+                    "move": "ancientpower"
                 }
             ],
             "name": "corsola",
@@ -39589,7 +39661,7 @@
             "learnset": [
                 {
                     "level": 1,
-                    "move": "return"
+                    "move": "rock-throw"
                 },
                 {
                     "level": 47,
@@ -40097,9 +40169,9 @@
                     "level": 11,
                     "moves": [
                         "flame-wheel",
-                        "rock-throw",
+                        "protect",
                         "toxic",
-                        "protect"
+                        "rock-throw"
                     ],
                     "name": "slugma"
                 }
@@ -40188,8 +40260,8 @@
                     "moves": [
                         "confusion",
                         "thunderpunch",
-                        "ice-punch",
-                        "thunder-wave"
+                        "thunder-wave",
+                        "ice-punch"
                     ],
                     "name": "abra"
                 },
@@ -40251,8 +40323,8 @@
                     "moves": [
                         "bubblebeam",
                         "icy-wind",
-                        "headbutt",
-                        "sing"
+                        "sing",
+                        "headbutt"
                     ],
                     "name": "seel"
                 },
@@ -40262,8 +40334,8 @@
                     "moves": [
                         "spark",
                         "headbutt",
-                        "quick-attack",
-                        "thunder-wave"
+                        "thunder-wave",
+                        "quick-attack"
                     ],
                     "name": "mareep"
                 }
@@ -40780,8 +40852,8 @@
                     "moves": [
                         "sludge",
                         "giga-drain",
-                        "wing-attack",
-                        "confuse-ray"
+                        "confuse-ray",
+                        "wing-attack"
                     ],
                     "name": "zubat"
                 }
@@ -41312,8 +41384,8 @@
                     "moves": [
                         "sludge",
                         "giga-drain",
-                        "shadow-ball",
-                        "confuse-ray"
+                        "confuse-ray",
+                        "shadow-ball"
                     ],
                     "name": "golbat"
                 }
@@ -41524,8 +41596,8 @@
                     "moves": [
                         "razor-leaf",
                         "sludge-bomb",
-                        "body-slam",
-                        "sleep-powder"
+                        "sleep-powder",
+                        "body-slam"
                     ],
                     "name": "weepinbell"
                 },
@@ -41829,8 +41901,8 @@
                     "moves": [
                         "ice-punch",
                         "thunderpunch",
-                        "dizzy-punch",
-                        "attract"
+                        "attract",
+                        "dizzy-punch"
                     ],
                     "name": "clefairy"
                 }
@@ -41877,8 +41949,8 @@
                     "moves": [
                         "selfdestruct",
                         "giga-drain",
-                        "psychic",
-                        "sleep-powder"
+                        "sleep-powder",
+                        "psychic"
                     ],
                     "name": "exeggcute"
                 }
@@ -41955,8 +42027,8 @@
                     "moves": [
                         "waterfall",
                         "ice-beam",
-                        "double-edge",
-                        "sing"
+                        "sing",
+                        "double-edge"
                     ],
                     "name": "azumarill"
                 },
@@ -42004,8 +42076,8 @@
                     "moves": [
                         "headbutt",
                         "rollout",
-                        "ice-punch",
-                        "attract"
+                        "attract",
+                        "ice-punch"
                     ],
                     "name": "lickitung"
                 },
@@ -42150,8 +42222,8 @@
                     "moves": [
                         "thunderbolt",
                         "surf",
-                        "body-slam",
-                        "sweet-kiss"
+                        "lovely-kiss",
+                        "body-slam"
                     ],
                     "name": "raichu"
                 },
@@ -42177,8 +42249,8 @@
                     "moves": [
                         "earthquake",
                         "thunderpunch",
-                        "ice-punch",
-                        "toxic"
+                        "toxic",
+                        "ice-punch"
                     ],
                     "name": "nidoqueen"
                 },
@@ -42256,8 +42328,8 @@
                     "moves": [
                         "waterfall",
                         "ice-beam",
-                        "submission",
-                        "lovely-kiss"
+                        "lovely-kiss",
+                        "submission"
                     ],
                     "name": "poliwhirl"
                 },
@@ -42289,13 +42361,21 @@
             "name": "Picnicker PICNICKER (4) KIM",
             "team": [
                 {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "twistedspoon",
                     "level": 32,
                     "moves": [
                         "psychic",
                         "giga-drain",
-                        "double-edge",
-                        "sleep-powder"
+                        "sleep-powder",
+                        "hp-fire"
                     ],
                     "name": "butterfree"
                 },
@@ -42515,8 +42595,8 @@
                     "moves": [
                         "headbutt",
                         "earthquake",
-                        "submission",
-                        "lovely-kiss"
+                        "lovely-kiss",
+                        "submission"
                     ],
                     "name": "granbull"
                 },
@@ -42612,8 +42692,8 @@
                     "moves": [
                         "hydro-pump",
                         "ice-beam",
-                        "double-edge",
-                        "attract"
+                        "attract",
+                        "double-edge"
                     ],
                     "name": "azumarill"
                 }
@@ -42812,8 +42892,8 @@
                     "moves": [
                         "dream-eater",
                         "fire-punch",
-                        "ice-punch",
-                        "lovely-kiss"
+                        "lovely-kiss",
+                        "ice-punch"
                     ],
                     "name": "mr-mime"
                 }
@@ -42866,8 +42946,8 @@
                     "moves": [
                         "dream-eater",
                         "sludge-bomb",
-                        "giga-drain",
-                        "sleep-powder"
+                        "sleep-powder",
+                        "giga-drain"
                     ],
                     "name": "venomoth"
                 },
@@ -43154,8 +43234,8 @@
                     "moves": [
                         "faint-attack",
                         "moonlight",
-                        "psychic",
-                        "toxic"
+                        "toxic",
+                        "psychic"
                     ],
                     "name": "umbreon"
                 }
@@ -43210,8 +43290,8 @@
                     "moves": [
                         "waterfall",
                         "ice-beam",
-                        "recover",
-                        "toxic"
+                        "toxic",
+                        "recover"
                     ],
                     "name": "vaporeon"
                 }
@@ -43333,8 +43413,8 @@
                     "moves": [
                         "flamethrower",
                         "psychic",
-                        "iron-tail",
-                        "confuse-ray"
+                        "confuse-ray",
+                        "iron-tail"
                     ],
                     "name": "ninetales"
                 },
@@ -43344,8 +43424,8 @@
                     "moves": [
                         "psychic",
                         "drill-peck",
-                        "giga-drain",
-                        "confuse-ray"
+                        "confuse-ray",
+                        "giga-drain"
                     ],
                     "name": "xatu"
                 },
@@ -43381,8 +43461,8 @@
                     "moves": [
                         "confuse-ray",
                         "waterfall",
-                        "ice-beam",
-                        "toxic"
+                        "toxic",
+                        "ice-beam"
                     ],
                     "name": "mantine"
                 },
@@ -43392,8 +43472,8 @@
                     "moves": [
                         "softboiled",
                         "ice-beam",
-                        "psywave",
-                        "toxic"
+                        "toxic",
+                        "psywave"
                     ],
                     "name": "chansey"
                 }
@@ -43684,8 +43764,8 @@
                     "moves": [
                         "sludge-bomb",
                         "giga-drain",
-                        "earthquake",
-                        "glare"
+                        "glare",
+                        "earthquake"
                     ],
                     "name": "arbok"
                 },
@@ -44085,8 +44165,8 @@
                     "moves": [
                         "petal-dance",
                         "synthesis",
-                        "double-edge",
-                        "sleep-powder"
+                        "sleep-powder",
+                        "double-edge"
                     ],
                     "name": "bellossom"
                 },
@@ -45709,9 +45789,9 @@
                     "level": 52,
                     "moves": [
                         "giga-drain",
-                        "sludge-bomb",
+                        "sleep-powder",
                         "hp-fire",
-                        "sleep-powder"
+                        "sludge-bomb"
                     ],
                     "name": "vileplume"
                 },
@@ -45785,8 +45865,8 @@
                     "moves": [
                         "body-slam",
                         "milk-drink",
-                        "earthquake",
-                        "attract"
+                        "attract",
+                        "earthquake"
                     ],
                     "name": "miltank"
                 },
@@ -45902,8 +45982,8 @@
                     "moves": [
                         "earthquake",
                         "ancientpower",
-                        "body-slam",
-                        "swagger"
+                        "swagger",
+                        "body-slam"
                     ],
                     "name": "donphan"
                 },
@@ -45949,10 +46029,18 @@
                     "name": "gengar"
                 },
                 {
+                    "dvs": {
+                        "atk": 13,
+                        "def": 12,
+                        "hp": 11,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
                     "item": "hard-stone",
                     "level": 53,
                     "moves": [
-                        "rock-slide",
+                        "hp-rock",
                         "wing-attack",
                         "earthquake",
                         "fire-blast"
@@ -46077,9 +46165,9 @@
                     "level": 54,
                     "moves": [
                         "body-slam",
-                        "earthquake",
+                        "confuse-ray",
                         "hypnosis",
-                        "confuse-ray"
+                        "earthquake"
                     ],
                     "name": "stantler"
                 },
@@ -46467,8 +46555,8 @@
                     "moves": [
                         "giga-drain",
                         "psychic",
-                        "drill-peck",
-                        "confuse-ray"
+                        "confuse-ray",
+                        "drill-peck"
                     ],
                     "name": "xatu"
                 }
@@ -46923,8 +47011,8 @@
                     "moves": [
                         "waterfall",
                         "ice-beam",
-                        "sludge-bomb",
-                        "confuse-ray"
+                        "confuse-ray",
+                        "sludge-bomb"
                     ],
                     "name": "tentacruel"
                 },
@@ -47219,9 +47307,9 @@
                     "level": 63,
                     "moves": [
                         "waterfall",
-                        "ice-beam",
+                        "toxic",
                         "hp-electric",
-                        "toxic"
+                        "ice-beam"
                     ],
                     "name": "mantine"
                 },
@@ -47259,8 +47347,8 @@
                     "moves": [
                         "surf",
                         "body-slam",
-                        "earthquake",
-                        "attract"
+                        "attract",
+                        "earthquake"
                     ],
                     "name": "kangaskhan"
                 },
@@ -47365,8 +47453,8 @@
                     "moves": [
                         "waterfall",
                         "ice-beam",
-                        "earthquake",
-                        "toxic"
+                        "toxic",
+                        "earthquake"
                     ],
                     "name": "politoed"
                 },
@@ -47452,8 +47540,8 @@
                     "moves": [
                         "waterfall",
                         "ice-beam",
-                        "earthquake",
-                        "toxic"
+                        "toxic",
+                        "earthquake"
                     ],
                     "name": "politoed"
                 },
@@ -48305,8 +48393,8 @@
                     "moves": [
                         "waterfall",
                         "ice-beam",
-                        "wing-attack",
-                        "confuse-ray"
+                        "confuse-ray",
+                        "wing-attack"
                     ],
                     "name": "mantine"
                 },
@@ -48513,8 +48601,8 @@
                     "moves": [
                         "waterfall",
                         "ice-beam",
-                        "earthquake",
-                        "hypnosis"
+                        "hypnosis",
+                        "earthquake"
                     ],
                     "name": "politoed"
                 },
@@ -48578,8 +48666,8 @@
                     "moves": [
                         "explosion",
                         "waterfall",
-                        "ice-beam",
-                        "toxic"
+                        "toxic",
+                        "ice-beam"
                     ],
                     "name": "cloyster"
                 }
@@ -48614,8 +48702,8 @@
                     "moves": [
                         "flamethrower",
                         "earthquake",
-                        "thunderpunch",
-                        "toxic"
+                        "toxic",
+                        "thunderpunch"
                     ],
                     "name": "typhlosion"
                 },
@@ -48691,8 +48779,8 @@
                     "moves": [
                         "flamethrower",
                         "thunderpunch",
-                        "earthquake",
-                        "swagger"
+                        "swagger",
+                        "earthquake"
                     ],
                     "name": "typhlosion"
                 },
@@ -48784,8 +48872,8 @@
                     "moves": [
                         "earthquake",
                         "sludge-bomb",
-                        "flamethrower",
-                        "lovely-kiss"
+                        "lovely-kiss",
+                        "flamethrower"
                     ],
                     "name": "nidoking"
                 },
@@ -49301,9 +49389,9 @@
                     "level": 67,
                     "moves": [
                         "fire-blast",
-                        "morning-sun",
+                        "toxic",
                         "hp-electric",
-                        "toxic"
+                        "morning-sun"
                     ],
                     "name": "rapidash"
                 }
@@ -49326,9 +49414,9 @@
                     "level": 68,
                     "moves": [
                         "synthesis",
-                        "giga-drain",
+                        "leech-seed",
                         "hp-flying",
-                        "leech-seed"
+                        "giga-drain"
                     ],
                     "name": "jumpluff"
                 },
@@ -49665,8 +49753,8 @@
                     "moves": [
                         "waterfall",
                         "thunderbolt",
-                        "ice-beam",
-                        "confuse-ray"
+                        "confuse-ray",
+                        "ice-beam"
                     ],
                     "name": "lanturn"
                 },
@@ -49947,8 +50035,8 @@
                     "moves": [
                         "earthquake",
                         "ancientpower",
-                        "body-slam",
-                        "swagger"
+                        "swagger",
+                        "body-slam"
                     ],
                     "name": "donphan"
                 }
@@ -49964,8 +50052,8 @@
                     "moves": [
                         "waterfall",
                         "ice-beam",
-                        "earthquake",
-                        "hypnosis"
+                        "hypnosis",
+                        "earthquake"
                     ],
                     "name": "politoed"
                 },
@@ -50002,8 +50090,8 @@
                     "moves": [
                         "thunderbolt",
                         "psychic",
-                        "hp-fire",
-                        "hypnosis"
+                        "pain-split",
+                        "hp-fire"
                     ],
                     "name": "misdreavus"
                 },
@@ -50117,9 +50205,9 @@
                     "level": 71,
                     "moves": [
                         "waterfall",
-                        "ice-beam",
+                        "toxic",
                         "hp-grass",
-                        "toxic"
+                        "ice-beam"
                     ],
                     "name": "vaporeon"
                 },
@@ -50423,8 +50511,8 @@
                     "moves": [
                         "flamethrower",
                         "earthquake",
-                        "thunderpunch",
-                        "toxic"
+                        "toxic",
+                        "thunderpunch"
                     ],
                     "name": "typhlosion"
                 }
@@ -50509,8 +50597,8 @@
                     "moves": [
                         "flamethrower",
                         "earthquake",
-                        "thunderpunch",
-                        "toxic"
+                        "toxic",
+                        "thunderpunch"
                     ],
                     "name": "typhlosion"
                 }
@@ -50595,8 +50683,8 @@
                     "moves": [
                         "flamethrower",
                         "earthquake",
-                        "thunderpunch",
-                        "toxic"
+                        "toxic",
+                        "thunderpunch"
                     ],
                     "name": "typhlosion"
                 }
@@ -50737,8 +50825,8 @@
                     "moves": [
                         "waterfall",
                         "ice-beam",
-                        "giga-drain",
-                        "attract"
+                        "attract",
+                        "giga-drain"
                     ],
                     "name": "tentacruel"
                 },
@@ -50854,8 +50942,7 @@
                     "moves": [
                         "fire-blast",
                         "earthquake",
-                        "double-edge",
-                        "lovely-kiss"
+                        "double-edge"
                     ],
                     "name": "snorlax"
                 },
@@ -51094,8 +51181,8 @@
                     "moves": [
                         "submission",
                         "earthquake",
-                        "waterfall",
-                        "lovely-kiss"
+                        "lovely-kiss",
+                        "waterfall"
                     ],
                     "name": "poliwrath"
                 },
@@ -51105,8 +51192,8 @@
                     "moves": [
                         "double-edge",
                         "earthquake",
-                        "submission",
-                        "lovely-kiss"
+                        "lovely-kiss",
+                        "submission"
                     ],
                     "name": "granbull"
                 },
@@ -51184,8 +51271,8 @@
                     "moves": [
                         "double-edge",
                         "submission",
-                        "earthquake",
-                        "hypnosis"
+                        "hypnosis",
+                        "earthquake"
                     ],
                     "name": "stantler"
                 }
@@ -51275,9 +51362,9 @@
                     "level": 74,
                     "moves": [
                         "waterfall",
-                        "ice-beam",
+                        "lovely-kiss",
                         "hp-grass",
-                        "lovely-kiss"
+                        "ice-beam"
                     ],
                     "name": "vaporeon"
                 },
@@ -51314,8 +51401,8 @@
                     "moves": [
                         "hydro-pump",
                         "blizzard",
-                        "double-edge",
-                        "lovely-kiss"
+                        "lovely-kiss",
+                        "double-edge"
                     ],
                     "name": "azumarill"
                 },
@@ -51399,8 +51486,8 @@
                     "moves": [
                         "psychic",
                         "hp-water",
-                        "thunderbolt",
-                        "lovely-kiss"
+                        "lovely-kiss",
+                        "thunderbolt"
                     ],
                     "name": "mr-mime"
                 },
@@ -51756,8 +51843,8 @@
                     "moves": [
                         "ancientpower",
                         "hp-bug",
-                        "giga-drain",
-                        "hypnosis"
+                        "hypnosis",
+                        "giga-drain"
                     ],
                     "name": "yanma"
                 }
@@ -51841,8 +51928,8 @@
                     "moves": [
                         "reflect",
                         "psychic",
-                        "thunderbolt",
-                        "hypnosis"
+                        "hypnosis",
+                        "thunderbolt"
                     ],
                     "name": "mr-mime"
                 },
@@ -52738,8 +52825,8 @@
                     "moves": [
                         "psychic",
                         "giga-drain",
-                        "sky-attack",
-                        "hypnosis"
+                        "hypnosis",
+                        "sky-attack"
                     ],
                     "name": "xatu"
                 },
@@ -52812,8 +52899,8 @@
                     "moves": [
                         "flamethrower",
                         "psychic",
-                        "hp-grass",
-                        "hypnosis"
+                        "hypnosis",
+                        "hp-grass"
                     ],
                     "name": "ninetales"
                 },
@@ -52851,8 +52938,8 @@
                     "moves": [
                         "ice-beam",
                         "softboiled",
-                        "psychic",
-                        "sing"
+                        "sing",
+                        "psychic"
                     ],
                     "name": "blissey"
                 },
@@ -52862,8 +52949,8 @@
                     "moves": [
                         "giga-drain",
                         "ancientpower",
-                        "earthquake",
-                        "sleep-powder"
+                        "sleep-powder",
+                        "earthquake"
                     ],
                     "name": "meganium"
                 },
@@ -53507,8 +53594,8 @@
                     "moves": [
                         "sludge-bomb",
                         "giga-drain",
-                        "hp-fire",
-                        "hypnosis"
+                        "hypnosis",
+                        "hp-fire"
                     ],
                     "name": "crobat"
                 }
@@ -53588,9 +53675,9 @@
                     "level": 86,
                     "moves": [
                         "waterfall",
-                        "ice-beam",
+                        "confuse-ray",
                         "hp-electric",
-                        "confuse-ray"
+                        "ice-beam"
                     ],
                     "name": "mantine"
                 },
@@ -53845,8 +53932,8 @@
                     "moves": [
                         "fire-blast",
                         "hp-grass",
-                        "psychic",
-                        "confuse-ray"
+                        "confuse-ray",
+                        "psychic"
                     ],
                     "name": "ninetales"
                 },
@@ -53910,9 +53997,9 @@
                     "level": 86,
                     "moves": [
                         "waterfall",
-                        "ice-beam",
+                        "attract",
                         "hp-grass",
-                        "attract"
+                        "ice-beam"
                     ],
                     "name": "dewgong"
                 },
@@ -53988,8 +54075,8 @@
                     "moves": [
                         "waterfall",
                         "ice-beam",
-                        "giga-drain",
-                        "confuse-ray"
+                        "confuse-ray",
+                        "giga-drain"
                     ],
                     "name": "tentacruel"
                 },
@@ -54337,8 +54424,8 @@
                     "moves": [
                         "milk-drink",
                         "body-slam",
-                        "earthquake",
-                        "attract"
+                        "attract",
+                        "earthquake"
                     ],
                     "name": "miltank"
                 }
@@ -54354,8 +54441,8 @@
                     "moves": [
                         "reflect",
                         "light-screen",
-                        "psychic",
-                        "swagger"
+                        "swagger",
+                        "psychic"
                     ],
                     "name": "mr-mime"
                 },
@@ -55278,8 +55365,8 @@
                     "moves": [
                         "hydro-pump",
                         "ice-beam",
-                        "psychic",
-                        "hypnosis"
+                        "hypnosis",
+                        "psychic"
                     ],
                     "name": "golduck"
                 },
@@ -55552,10 +55639,10 @@
                     "item": "miracle-seed",
                     "level": 91,
                     "moves": [
-                        "giga-drain",
+                        "sleep-powder",
                         "hp-fire",
                         "growth",
-                        "sleep-powder"
+                        "giga-drain"
                     ],
                     "name": "sunflora"
                 }
@@ -55611,9 +55698,9 @@
                     "level": 92,
                     "moves": [
                         "shadow-ball",
-                        "thunderbolt",
+                        "hypnosis",
                         "destiny-bond",
-                        "hypnosis"
+                        "thunderbolt"
                     ],
                     "name": "misdreavus"
                 }
@@ -56041,8 +56128,8 @@
                     "moves": [
                         "giga-drain",
                         "sludge-bomb",
-                        "earthquake",
-                        "sleep-powder"
+                        "sleep-powder",
+                        "earthquake"
                     ],
                     "name": "venusaur"
                 },
@@ -56102,8 +56189,8 @@
                     "moves": [
                         "sludge-bomb",
                         "earthquake",
-                        "giga-drain",
-                        "glare"
+                        "glare",
+                        "giga-drain"
                     ],
                     "name": "arbok"
                 },
@@ -56120,9 +56207,9 @@
                     "level": 94,
                     "moves": [
                         "waterfall",
-                        "ice-beam",
+                        "attract",
                         "hp-grass",
-                        "attract"
+                        "ice-beam"
                     ],
                     "name": "dewgong"
                 },
@@ -56131,9 +56218,9 @@
                     "level": 94,
                     "moves": [
                         "waterfall",
-                        "thunderbolt",
+                        "confuse-ray",
                         "ice-beam",
-                        "confuse-ray"
+                        "thunderbolt"
                     ],
                     "name": "lanturn"
                 }
@@ -56160,8 +56247,8 @@
                     "moves": [
                         "hydro-pump",
                         "ice-beam",
-                        "psychic",
-                        "hypnosis"
+                        "hypnosis",
+                        "psychic"
                     ],
                     "name": "golduck"
                 },
@@ -56236,9 +56323,9 @@
                     "level": 95,
                     "moves": [
                         "sludge-bomb",
-                        "waterfall",
+                        "spikes",
                         "explosion",
-                        "spikes"
+                        "waterfall"
                     ],
                     "name": "qwilfish"
                 },
@@ -56266,9 +56353,9 @@
                     "level": 95,
                     "moves": [
                         "double-edge",
-                        "shadow-ball",
+                        "hypnosis",
                         "hp-fighting",
-                        "hypnosis"
+                        "shadow-ball"
                     ],
                     "name": "persian"
                 },
@@ -56369,9 +56456,9 @@
                     "level": 95,
                     "moves": [
                         "metal-claw",
-                        "drill-peck",
+                        "detect",
                         "spikes",
-                        "detect"
+                        "drill-peck"
                     ],
                     "name": "skarmory"
                 },
@@ -56400,8 +56487,8 @@
                     "moves": [
                         "sludge-bomb",
                         "hp-fire",
-                        "giga-drain",
-                        "toxic"
+                        "toxic",
+                        "giga-drain"
                     ],
                     "name": "victreebel"
                 },
