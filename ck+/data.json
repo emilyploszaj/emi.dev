@@ -17446,9 +17446,9 @@
             "type": "normal"
         },
         {
-            "accuracy": 95,
+            "accuracy": 100,
             "extra": [
-                "User takes 25% of damage dealt as recoil"
+                "User takes 33% of damage dealt as recoil"
             ],
             "index": 136,
             "name": "hi-jump-kick",
