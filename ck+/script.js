@@ -1650,21 +1650,16 @@ function getDamage(attacker, defender, attackerStages, defenderStages, move, pla
 		d = Math.max(1, parseInt(d / 2));
 	}
 
-	var burn = false;
-	if (!special) {
-		if (player && document.getElementById("player").getElementsByClassName("status-select")[0].value == "brn") {
-			burn = true;
-		} else if (!player && document.getElementById("opponent").getElementsByClassName("status-select")[0].value == "brn") {
-			burn = true;
-		}
-	}
-
-	if (burn) {
-		a = (parseInt(a / 2));
-	}
-
-	// Badge boost
 	if (!ignoreBoosts) {
+		// Burn
+		if (!special) {
+			if (player && document.getElementById("player").getElementsByClassName("status-select")[0].value == "brn") {
+				a = (parseInt(a / 2));
+			} else if (!player && document.getElementById("opponent").getElementsByClassName("status-select")[0].value == "brn") {
+				a = (parseInt(a / 2));
+			}
+		}
+		// Badge boost
 		var attackerBoost = player || (attacker.transformStats !== undefined);
 		var defenderBoost = !player || (defender.transformStats !== undefined);
 		if (attackerBoost && !special && badges >= attackBadges) {
@@ -1679,9 +1674,7 @@ function getDamage(attacker, defender, attackerStages, defenderStages, move, pla
 		if (defenderBoost && special && badges >= specialBadges) {
 			d = parseInt(d * 1.125);
 		}
-	}
-
-	if (!ignoreBoosts) {
+		// Screens
 		if (player) {
 			if (!special && document.getElementById("enemy-reflect").checked) {
 				d *= 2;

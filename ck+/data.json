@@ -14785,6 +14785,10 @@
             "name": "stick"
         },
         {
+            "description": "Increases Chansey's critical hit ratio by two stages",
+            "name": "Lucky-Punch"
+        },
+        {
             "description": "Sells high",
             "name": "nugget"
         },
@@ -14795,6 +14799,14 @@
         {
             "description": "Doubles the attack of Marowak, Cubone, or any pokemon transformed into them ",
             "name": "thick-club"
+        },
+        {
+            "description": "Doubles the Special attack of Pikachu, or any pokemon transformed into them ",
+            "name": "Light-Ball"
+        },
+        {
+            "description": "Increases the Defence and Special Defence of Ditto by 50%, and any pokemon it is transformed into ",
+            "name": "Metal-Powder"
         },
         {
             "description": "No effect",
@@ -17020,7 +17032,7 @@
         {
             "accuracy": 100,
             "extra": [
-                "User takes 25% of damage dealt as recoil"
+                "User takes 33% of damage dealt as recoil"
             ],
             "index": 143,
             "name": "sky-attack",
@@ -17436,7 +17448,7 @@
         {
             "accuracy": 95,
             "extra": [
-                "If it misses or fails, deals 1\/8 the damage it would've dealt to the user instead"
+                "User takes 25% of damage dealt as recoil"
             ],
             "index": 136,
             "name": "hi-jump-kick",
@@ -17575,7 +17587,7 @@
         {
             "accuracy": 100,
             "extra": [
-                "User takes 25% of damage dealt as recoil"
+                "User takes 33% of damage dealt as recoil"
             ],
             "index": 38,
             "name": "double-edge",
@@ -17782,7 +17794,7 @@
         {
             "accuracy": 85,
             "extra": [
-                "User takes 25% of damage dealt as recoil"
+                "User takes 33% of damage dealt as recoil"
             ],
             "index": 36,
             "name": "take-down",
