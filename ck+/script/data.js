@@ -218,6 +218,12 @@ var doubleHitMoves = new Set([
 	"bonemerang", "double-hit", "double-kick", "twineedle"
 ]);
 
+//ADD GENERAL FLAGS OBJECT TO GLOBAL VARIABLES
+const game_general_flags = {
+	badge_boost: true
+}
+
+
 function fetchData() {
 	fetch("./data.json")
 	.then(response => response.text())
@@ -314,6 +320,11 @@ function fetchData() {
 		for (let i in j.encounters) {
 			addPoolInfo(j.encounters[i]);
 		}
+
+		//ADD GENERAL FLAGS TO DATA PARSE
+		const feature_flags = j.feature_flags;
+		game_general_flags.badge_boost = feature_flags.badge_boost;
+		
 
 		var pokemonDataList;
 		for (const p of pokemonByName.keys()) {

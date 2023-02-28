@@ -1,4 +1,8 @@
 {
+    
+    "feature_flags": {
+        "badge_boost": true
+    },
     "encounter_pools": {
         "fishing": [
             {

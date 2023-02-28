@@ -80,7 +80,7 @@ function displayCalcPokemon(root, poke, opponent, right) {
 	if (opponent) {
 		var mySpe = getModifiedStat(poke, getStages(myStages), "spe");
 		var theirSpe = getModifiedStat(opponent, getStages(theirStages), "spe");
-		if (badges >= speedBadges) {
+		if (game_general_flags.badge_boost && badges >= speedBadges) {
 			if (player || poke.transformStats) {
 				mySpe = parseInt(mySpe * 1.125);
 			}
@@ -211,7 +211,7 @@ function prettyRolls(rolls) {
 function displayCalcStat(div, poke, stat, player = false) {
 	var s = getPokeStat(poke, stat);
 	var o = s;
-	if (badges >= speedBadges && stat == "spe") {
+	if (game_general_flags.badge_boost && badges >= speedBadges && stat == "spe") {
 		if (player || poke.transformStats) {
 			s = parseInt(s * 1.125);
 		}

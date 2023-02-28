@@ -111,18 +111,23 @@ function getDamage(attacker, defender, attackerStages, defenderStages, move, pla
 		// Badge boost
 		var attackerBoost = player || (attacker.transformStats !== undefined);
 		var defenderBoost = !player || (defender.transformStats !== undefined);
-		if (attackerBoost && !special && badges >= attackBadges) {
-			a = parseInt(a * 1.125);
+
+
+		if (game_general_flags.badge_boost) {
+			if (attackerBoost && !special && badges >= attackBadges) {
+				a = parseInt(a * 1.125);
+			}
+			if (defenderBoost && !special && badges >= defenseBadges) {
+				d = parseInt(d * 1.125);
+			}
+			if (attackerBoost && special && badges >= specialBadges) {
+				a = parseInt(a * 1.125);
+			}
+			if (defenderBoost && special && badges >= specialBadges) {
+				d = parseInt(d * 1.125);
+			}
 		}
-		if (defenderBoost && !special && badges >= defenseBadges) {
-			d = parseInt(d * 1.125);
-		}
-		if (attackerBoost && special && badges >= specialBadges) {
-			a = parseInt(a * 1.125);
-		}
-		if (defenderBoost && special && badges >= specialBadges) {
-			d = parseInt(d * 1.125);
-		}
+
 		// Screens
 		if (player) {
 			if (!special && document.getElementById("enemy-reflect").checked) {
@@ -192,7 +197,7 @@ function getModdedDamage(v, attacker, defender, ap, dp, power, type, move, playe
 
 	// TODO if (weather)
 
-	if (player && badgeTypes.has(type) && badgeTypes.get(type) <= badges) {
+	if (player && game_general_flags.badge_boost && badgeTypes.has(type) && badgeTypes.get(type) <= badges) {
 		v = parseInt(v * 1.125);
 	}
 
