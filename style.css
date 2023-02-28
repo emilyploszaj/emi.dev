@@ -10,12 +10,13 @@ html{
 	-ms-overflow-style: none;
 	margin: 0px;
 }
-p, h1, h2{
+p, h1, h2, h3{
 	transition: color 0.3s, background-color 0.3s;
 }
 a{
 	color: var(--text-color);
-	transition: color 0.3s, background-color 0.3s;
+	text-decoration-color: var(--text-color);
+	transition: color 0.3s, background-color 0.3s, text-decoration-color 0.3s;
 }
 a:hover{
 	color: #212121;
@@ -38,7 +39,6 @@ a:hover{
 	min-height: 24px;
 }
 #topbar a{
-	padding-right: 10px;
 	text-decoration: none;
 }
 #topbar p{
@@ -53,7 +53,8 @@ a:hover{
 }
 .topbar-link{
 	float: left;
-	width: 200px;
+	text-align: left;
+	min-width: 180px;
 	font-size: 18px;
 	font-weight: bold;
 	margin-top: 0px;
@@ -66,7 +67,7 @@ a:hover{
 #content{
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 700px;
+	max-width: 800px;
 }
 #content h1{
 	text-align: center;
@@ -83,7 +84,7 @@ a:hover{
 	margin-left: 24px;
 	margin-right: 24px;
 	font-size: 24px;
-	max-width: 640px;
+	max-width: 740px;
 }
 a:hover + .topbar-path, a:hover + .inline-path{
 	background-color: var(--text-color);
@@ -105,6 +106,6 @@ a:hover + .topbar-path, a:hover + .inline-path{
 	margin-left: 60px;
 	transition: background-color 0.3s;
 }
-.inline-link a{
-	padding-right: 16px;
+.images {
+	text-align: center;
 }
