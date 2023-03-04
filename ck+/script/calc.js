@@ -142,7 +142,7 @@ function getDamage(attacker, defender, attackerStages, defenderStages, move, pla
 	var ni = attacker.item.toLowerCase().replace(/ /g, "-");
 	var ndi = defender.item.toLowerCase().replace(/ /g, "-");
 
-	if ((attacker.name == "cubone" || attacker.name == "marowak") && ni == "thick-club") {
+	if ((attacker.name == "cubone" || attacker.name == "marowak") && ni == "thick-club" && !special) {
 		a *= 2;
 	}
 	if (attacker.name == "pikachu" && ni == "light-ball" && special) {
