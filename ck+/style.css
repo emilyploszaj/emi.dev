@@ -279,6 +279,12 @@ input:checked + .fake-checkbox {
 	padding: 0px 10px;
 }
 
+.item-icon {
+	display: inline-block;
+	margin-right: 6px;
+	margin-bottom: -5px;
+}
+
 .encounter-poke {
 	background-color: var(--grouping-background);
 	padding: 10px;
@@ -425,7 +431,7 @@ input:checked + .fake-checkbox {
 .trainer-pokes {
 	display: flex;
 	flex-wrap: wrap;
-	padding: 4px;
+	padding: 0px;
 }
 
 .trainer-pokes .tiny-poke {
@@ -443,7 +449,7 @@ input:checked + .fake-checkbox {
 }
 
 .tiny-poke {
-	width: 450px;
+	width: 470px;
 	display: flex;
 	padding: 4px;
 	background-color: var(--box-background);
@@ -468,7 +474,7 @@ input:checked + .fake-checkbox {
 }
 
 .tiny-poke-info td {
-	min-width: 10px;
+	min-width: 160px;
 }
 
 #calc {

@@ -3,14 +3,16 @@ function getTinyPokemonDisplay(tp, extra = "") {
 	var v = '<div class="tiny-poke">';
 	v += '<div class="tiny-poke-icon"><img src="' + getPokeImage(tp) + '"></div>';
 	v += '<div class="tiny-poke-info">';
-	v += '<div>' + pokeLink(p.name) + ' - Lvl ' + tp.level + ' @ ' + itemLink(tp.item) + '</div>';
 	v += "<table><tr>";
+	v += `<td>${pokeLink(p.name)}</td><td>${itemLink(tp.item)}</td></tr><tr>`;
+	if (tp.dvs) {
+		v += `<td>Lvl ${tp.level}</td><td>${tp.dvs.hp} ${tp.dvs.atk}/${tp.dvs.def} ${tp.dvs.spa}/${tp.dvs.spd} ${tp.dvs.spe}</td></tr><tr>`;
+	} else {
+		v += `<td>Lvl ${tp.level}</td><td>15 15/15 15/15 15</td></tr><tr>`;
+	}
 	for (var i = 0; i < 4; i++) {
 		if (i == 2) {
 			v += "</tr><tr>";
-		}
-		if (i == 1 || i == 3) {
-			v += "<td></td>";
 		}
 		if (i < tp.moves.length) {
 			var color = "#ffffff";
@@ -21,8 +23,8 @@ function getTinyPokemonDisplay(tp, extra = "") {
 				}
 				color = typeColors.get(type);
 			}
-			v += '<td><span class="move-emblem" style="background-color:' + color
-				+ ';"></span>' + moveLink(tp.moves[i]) + '</td>';
+			//v += `<td class="move-emblem" style="--type-color:${color};">${moveLink(tp.moves[i])}</td>`;
+			v += `<td><span class="move-emblem" style="background-color:${color};"></span>${moveLink(tp.moves[i])}</td>`;
 		} else {
 			// Zero width space to force formatting
 			v += "<td>​</td>"
@@ -33,21 +35,10 @@ function getTinyPokemonDisplay(tp, extra = "") {
 	//v += "<tr><td>Atk</td><td>" + p.stats.atk + "</td><td> </td><td>SpD</td><td>" + p.stats.spd + "</td></tr>";
 	//v += "<tr><td>Def</td><td>" + p.stats.atk + "</td><td> </td><td>Spe</td><td>" + p.stats.spe + "</td></tr>";
 	v += "</table>";
-	var s = getPokeStat(tp, "spe");
-	if (extra != "" && badges >= speedBadges) {
-		s = parseInt(s * 1.125);
-	}
-	v += "<div>Spe: " + s;
-	if (tp.dvs) {
-		v += " DVs: ";
-		v += tp.dvs.hp + " "
-		v += tp.dvs.atk + "/"
-		v += tp.dvs.def + " "
-		v += tp.dvs.spa + "/"
-		v += tp.dvs.spd + " "
-		v += tp.dvs.spe
-	}
-	v += "</div>"
+	//var s = getPokeStat(tp, "spe");
+	//if (extra != "" && badges >= speedBadges) {
+	//	s = parseInt(s * 1.125);
+	//}
 	v += extra;
 	v += "</div></div>";
 	return v;

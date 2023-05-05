@@ -393,7 +393,7 @@ function displayStat(div, stat) {
 }
 
 function getFullItemDisplay(item) {
-	var v = "<h3>" + fullCapitalize(item) + "</h3>";
+	var v = "<h3>" + `<img class="item-icon" src="./images/items/${item.replace("-", "_")}.png">` + fullCapitalize(item) + "</h3>";
 	var it = itemsByName.get(item);
 	v += "<p>" + it.description + "</p>"
 	var locs = landmarksByItem.get(item);

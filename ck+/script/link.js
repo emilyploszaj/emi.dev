@@ -53,7 +53,10 @@ function prettyType(t) {
 }
 
 function itemLink(item) {
-	return '<span class="poke-link" onclick="focusItem(\'' + item + '\')">' + fullCapitalize(item) + '</span>'
+	if (item.length == 0 || item == "no-item") {
+		return "";
+	}
+	return '<span class="poke-link" onclick="focusItem(\'' + item + '\')">' + `<img class="item-icon" src="./images/items/${item.replace("-", "_")}.png">` + fullCapitalize(item) + '</span>'
 }
 
 function landmarkLink(landmark) {

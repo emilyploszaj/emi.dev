@@ -113,10 +113,10 @@ var itemsById = new Map([
 	[0x4f, "burnt-berry"],
 	[0x50, "ice-berry"],
 	[0x51, "poison-barb"],
-	[0x52, "king's-rock"],
+	[0x52, "kings-rock"],
 	[0x53, "bitter-berry"],
 	[0x54, "mint-berry"],
-	[0x58, "silver-powder"],
+	[0x58, "silverpowder"],
 	[0x5b, "amulet-coin"],
 	[0x5f, "mystic-water"],
 	[0x60, "twistedspoon"],
@@ -142,8 +142,7 @@ var itemsById = new Map([
 	[0x92, "leftovers"],
 	[0x96, "mysteryberry"],
 	[0x97, "dragon-scale"],
-	[0x98, "beserk-gene"],
-	[0x98, "beserk-gene"],
+	[0x98, "berserk-gene"],
 	[0xa3, "light-ball"],
 	[0xaa, "pokadot-bow"],
 	[0xad, "berry"],
@@ -185,6 +184,7 @@ var trueNames = [
 	"NeverMeltIce",
 	"MiracleBerry",
 	"MysteryBerry",
+	"SecretPotion",
 ];
 var nameFormatting = new Map();
 
@@ -226,6 +226,7 @@ function fetchData() {
 			var lower = trueNames[i].toLowerCase().replace(/-/g, " ");
 			nameFormatting.set(lower, trueNames[i]);
 		}
+		nameFormatting.set("kings-rock", "King's Rock");
 		var j = JSON.parse(text);
 		for (let i in j.pokemon) {
 			var p = j.pokemon[i];

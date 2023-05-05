@@ -14565,6 +14565,10 @@
             "name": "berry"
         },
         {
+            "description": "Restores 20hp upon falling under 50% hp",
+            "name": "berry-juice"
+        },
+        {
             "description": "Increases the damage of normal type moves by 10% ",
             "name": "pink-bow"
         },
@@ -14634,7 +14638,7 @@
         },
         {
             "description": "Allows for the evolution of certain pokemon",
-            "name": "thunder-stone"
+            "name": "thunderstone"
         },
         {
             "description": "Allows for the evolution of certain pokemon",
@@ -14654,7 +14658,7 @@
         },
         {
             "description": "Allows user to enter route 17",
-            "name": "bike"
+            "name": "bicycle"
         },
         {
             "description": "Allows user to disturb the Sudowoodo on route 36",
@@ -14678,7 +14682,7 @@
         },
         {
             "description": "Allows user to enter b2f of goldenrod underground",
-            "name": "underground-key"
+            "name": "basement-key"
         },
         {
             "description": "Gives a 60\/256 chance to give a move +1 priority ",
@@ -14706,11 +14710,11 @@
         },
         {
             "description": "Forces Jasmine back into her gym when given to her at lighthouse",
-            "name": "secret-potion"
+            "name": "secretpotion"
         },
         {
             "description": "Cures all status conditions",
-            "name": "miracle-berry"
+            "name": "miracleberry"
         },
         {
             "description": "Can be traded with mr pokemon on route 30 for Exp Share",
@@ -14742,7 +14746,7 @@
         },
         {
             "description": "To be returned to the kanto power plant in return for zap cannon TM",
-            "name": "machine-parts"
+            "name": "machine-part"
         },
         {
             "description": "Increases attack by 2 stages but also causes confusion",
@@ -14786,7 +14790,7 @@
         },
         {
             "description": "Increases Chansey's critical hit ratio by two stages",
-            "name": "Lucky-Punch"
+            "name": "lucky-punch"
         },
         {
             "description": "Sells high",
@@ -14802,11 +14806,11 @@
         },
         {
             "description": "Doubles the Special attack of Pikachu, or any pokemon transformed into them ",
-            "name": "Light-Ball"
+            "name": "light-ball"
         },
         {
             "description": "Increases the Defence and Special Defence of Ditto by 50%, and any pokemon it is transformed into ",
-            "name": "Metal-Powder"
+            "name": "metal-powder"
         },
         {
             "description": "No effect",
@@ -14827,6 +14831,22 @@
         {
             "description": "When used from the Bag, Sacred Ash fully restores the HP and PP of all Pokémon in the party, provided there is a fainted Pokémon in the party. It can only be used outside of battle.",
             "name": "sacred-ash"
+        },
+        {
+            "description": "Gives a 30\/256 chance to live a lethal move on 1hp",
+            "name": "focus-band"
+        },
+        {
+            "description": "Gives opponent an extra 20\/256 chance to miss when attacking",
+            "name": "brightpowder"
+        },
+        {
+            "description": "Increases holder's critical hit ratio by one stage",
+            "name": "scope-lens"
+        },
+        {
+            "description": "Increases holder's critical hit ratio by one stage",
+            "name": "leftovers"
         }
     ],
     "landmarks": [
