@@ -45,14 +45,14 @@ function displayCalcPokemon(root, poke, opponent, right) {
 		}
 		if (status == "brn" || status == "psn") {
 			var dealt = Math.max(1, parseInt(myHp / 8));
-			root.getElementsByClassName("status-info")[0].innerHTML = dealt + "/t";
+			root.getElementsByClassName("status-info")[0].innerHTML = dealt + "";
 		} else if (status == "tox") {
 			var inner = "<h1>Toxic Damage</h1>"
 			var base = parseInt(myHp / 16);
 			for (var i = 1; i <= 20; i++) {
 				inner += '<p>Turn ' + i + ': ' + Math.max(1, base * i) + ' HP</p>';
 			}
-			root.getElementsByClassName("status-info")[0].innerHTML = '<span>' + base + 'n/t<div class="rolls"><center>' + inner + '</center></div></span>';
+			root.getElementsByClassName("status-info")[0].innerHTML = '<span>' + base + 'n<div class="rolls"><center>' + inner + '</center></div></span>';
 		} else if (status == "cnf") {
 			var move = {"name": "confusion-self-hit", "type": "curse", "power": 40}
 			var max = getDamage(poke, poke, getStages(myStages), getStages(myStages), move, player, false, false);
@@ -63,13 +63,19 @@ function displayCalcPokemon(root, poke, opponent, right) {
 			root.getElementsByClassName("status-info")[0].innerHTML = "";
 		}
 	}
+
 	var cHp = document.getElementsByClassName("player-current-hp")[0];
+	var oHp = document.getElementsByClassName("enemy-current-hp")[0];
 	if (!player) {
 		cHp = document.getElementsByClassName("enemy-current-hp")[0];
+		oHp = document.getElementsByClassName("player-current-hp")[0];
 	}
 	if (cHp.value == "") {
 		cHp.value = myHp;
 	}
+
+	var myCurrentHp = cHp.value;
+	var opponentCurrentHp = oHp.value;
 
 	displayCalcStat(root.getElementsByClassName("calc-hp")[0], poke, "hp");
 	displayCalcStat(root.getElementsByClassName("calc-atk")[0], poke, "atk");
@@ -114,51 +120,46 @@ function displayCalcPokemon(root, poke, opponent, right) {
 	var moves = '<table class="move-calcs">';
 	for (var i = 0; i < 4; i++) {
 		if (i < poke.moves.length) {
-			var p1 = "<td>" + moveLink(poke.moves[i]) + "</td>"
+			var p1 = `<td class="move-calc">${moveLink(poke.moves[i])}</td>`;
 			var move = movesByName.get(poke.moves[i]);
+			var recoil = 0;
+			if (move.effects && move.effects.recoil) {
+				recoil = move.effects.recoil;
+			}
 			var min = getDamage(poke, opponent, getStages(myStages), getStages(theirStages), move, player, false, true);
 			var max = getDamage(poke, opponent, getStages(myStages), getStages(theirStages), move, player, false, false);
 			var rolls = getDamage(poke, opponent, getStages(myStages), getStages(theirStages), move, player, false, false, true);
 			var minPercent = Math.round(1000 * min / hp) / 10;
 			var maxPercent = Math.round(1000 * max / hp) / 10;
 			var extra = "";
-			if (minPercent >= 50 || (!player && maxPercent >= 50)) {
-				extra = ' thko';
-			}
 			if (minPercent >= 100 || (!player && maxPercent >= 100)) {
-				extra = ' ohko';
+				extra += ' ohko';
+			} else if (minPercent >= 50 || (!player && maxPercent >= 50)) {
+				extra += ' thko';
 			}
-			var p2 = '<td class="' + extra + '"><ruby>' + min + " - " + max
-				+ "<rt>" + minPercent + "% - " + maxPercent + "%</rt></ruby>"
-				+ prettyRolls(rolls) + "</td>";
+			var p2 = moveDisplay(min, max, minPercent, maxPercent, extra, prettyRolls(rolls, myHp, myCurrentHp, opponentCurrentHp, recoil), move.power)
 			if (max == 0 && move.power == 0) {
 				if (move.name == "transform") {
-					p2 = '<td><button onclick="transform(' + right + ')">Transform</button></td>';
+					p2 = '<td class="move-calc"><button onclick="transform(' + right + ')">Transform</button></td>';
 				} else {
-					p2 = '<td>Status</td>';
+					p2 = '<td class="move-calc">Status</td>';
 				}
 			}
 			if (opponent == undefined) {
-				p2 = "<td>-</td>";
+				p2 = `<td class="move-calc">-</td>`;
 			}
 			var min = getDamage(poke, opponent, getStages(myStages), getStages(theirStages), move, player, true, true);
 			var max = getDamage(poke, opponent, getStages(myStages), getStages(theirStages), move, player, true, false);
 			var rolls = getDamage(poke, opponent, getStages(myStages), getStages(theirStages), move, player, true, false, true);
 			var minPercent = Math.round(1000 * min / hp) / 10;
 			var maxPercent = Math.round(1000 * max / hp) / 10;
-			var extra = "";
-			if (minPercent >= 50 || (!player && maxPercent >= 50)) {
-				extra = ' thko';
-			}
+			var extra = " crit";
 			if (minPercent >= 100 || (!player && maxPercent >= 100)) {
-				extra = ' ohko';
+				extra += ' ohko';
+			} else if (minPercent >= 50 || (!player && maxPercent >= 50)) {
+				extra += ' thko';
 			}
-			var p3 = '<td class="crit' + extra + '"><ruby>' + min + " - " + max
-				+ "<rt>" + minPercent + "% - " + maxPercent + "%</rt></ruby>"
-				+ prettyRolls(rolls) + "</td>";
-			if (max == 0 && move.power == 0) {
-				p3 = '<td><ruby><rt>​</rt></ruby></td>';
-			}
+			var p3 = moveDisplay(min, max, minPercent, maxPercent, extra, prettyRolls(rolls, myHp, myCurrentHp, opponentCurrentHp, recoil), move.power);
 			moves += "<tr>";
 			if (right) {
 				moves += p3 + p2 + p1;
@@ -167,44 +168,60 @@ function displayCalcPokemon(root, poke, opponent, right) {
 			}
 			moves += "</tr>";
 		} else {
-			moves += "<tr><td><ruby>-<rt>​</rt></ruby></td><td><ruby>-<rt>​</rt></ruby></td><td><ruby>-<rt>​</rt></ruby></td></tr>";
+			var blank = `<td class="move-calc"><ruby>-<rt>​</rt></ruby></td>`;
+			moves += `<tr>${blank}${blank}${blank}</tr>`;
 		}
 	}
 	moves += "</table>"
 	root.getElementsByClassName("calc-moves")[0].innerHTML = moves;
 }
 
-function prettyRolls(rolls) {
+function moveDisplay(min, max, minPercent, maxPercent, classes, tooltip, power) {
+	var v = `<td class="move-calc ${classes}"><ruby>${min} - ${max}<rt>${minPercent}% - ${maxPercent}%</rt></ruby>${tooltip}</td>`;
+	if (max == 0 && power == 0) {
+		v = '<td class="move-calc"><ruby><rt>​</rt></ruby></td>';
+	}
+	return v;
+}
+
+function prettyRolls(rolls, myHp, myCurrentHp, killHp, recoil) {
 	if (!rolls.length) {
 		rolls = [rolls];
 	}
+	if (rolls.length == 0) {
+		return "";
+	}
 	var v = '<div class="rolls">';
-	v += "<h1>Rolls:</h1>";
-	v += "<p>";
-	v += ("" + rolls).replace(/,/g, " ");
-	v += "</p>";
-	var map = new Map();
+	v += "<center><h1>Rolls:</h1>";
+	v += `<table><tr>`;
+	var kills = 0;
 	for (var i = 0; i < rolls.length; i++) {
-		var l = rolls[i];
-		if (map.has(l)) {
-			map.set(l, map.get(l) + 1);
+		if (rolls[i] >= killHp) {
+			kills++;
+			v += `<td class="crit">${rolls[i]}</td>`;
 		} else {
-			map.set(l, 1);
+			v += `<td>${rolls[i]}</td>`;
+		}
+		if ((i + 1) % 8 == 0 && i + 1 < rolls.length) {
+			v += `</tr><tr>`;
 		}
 	}
-	v += "<table><tr>";
-	var counts = 0;
-	for (var [key, value] of map.entries()) {
-		var chance = parseInt(value / rolls.length * 10000) / 100;
-		v += "<td><p>" + key + ": " + chance + "%</p></td>";
-		counts++;
-		if (counts >= 3) {
-			v += "</tr><tr>";
-			counts = 0;
+	v += `</tr></table>`;
+	kills = Math.round(1000 * kills / rolls.length) / 10;
+	v += `${kills}% chance to OHKO`;
+	if (recoil > 0) {
+		var min = parseInt(Math.min(killHp, rolls[0]) * recoil);
+		var max = parseInt(Math.min(killHp, rolls[rolls.length - 1]) * recoil);
+		var minPercent = Math.round(1000 * min / myHp) / 10;
+		var maxPercent = Math.round(1000 * max / myHp) / 10;
+		var extra = "";
+		if (max >= myCurrentHp) {
+			extra = "ohko";
 		}
+		v += "<h1>Recoil:</h1>";
+		v += `<table><tr>${moveDisplay(min, max, minPercent, maxPercent, extra, "", -1)}</tr></table>`;
 	}
-	v += "</tr></table>"
-	v += "</div>";
+	v += "</center></div>";
 	return v;
 }
 

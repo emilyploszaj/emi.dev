@@ -14845,7 +14845,7 @@
             "name": "scope-lens"
         },
         {
-            "description": "Increases holder's critical hit ratio by one stage",
+            "description": "Restores 1\/16th of the holder's maximum hp at the end of each turn",
             "name": "leftovers"
         }
     ],
@@ -17051,6 +17051,9 @@
         },
         {
             "accuracy": 100,
+            "effects": {
+                "recoil": 0.333299999999999985
+            },
             "extra": [
                 "User takes 33% of damage dealt as recoil"
             ],
@@ -17244,7 +17247,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Has an increased crititical hit rate"
+            ],
             "index": 163,
             "name": "slash",
             "power": 70,
@@ -17467,6 +17472,9 @@
         },
         {
             "accuracy": 100,
+            "effects": {
+                "recoil": 0.333299999999999985
+            },
             "extra": [
                 "User takes 33% of damage dealt as recoil"
             ],
@@ -17596,7 +17604,7 @@
         {
             "accuracy": 100,
             "extra": [
-                "20% to either paralyze, freeze, or burn the opponent"
+                "20% to either paralyze, freeze, or burn the opponent\nHas an increased crititical hit rate"
             ],
             "index": 177,
             "name": "aeroblast",
@@ -17606,6 +17614,9 @@
         },
         {
             "accuracy": 100,
+            "effects": {
+                "recoil": 0.333299999999999985
+            },
             "extra": [
                 "User takes 33% of damage dealt as recoil"
             ],
@@ -17802,6 +17813,9 @@
         },
         {
             "accuracy": 100,
+            "effects": {
+                "recoil": 0.333299999999999985
+            },
             "extra": [
                 "User takes 25% of damage dealt as recoil"
             ],
@@ -17813,6 +17827,9 @@
         },
         {
             "accuracy": 85,
+            "effects": {
+                "recoil": 0.333299999999999985
+            },
             "extra": [
                 "User takes 33% of damage dealt as recoil"
             ],
@@ -18582,7 +18599,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Has an increased crititical hit rate"
+            ],
             "index": 152,
             "name": "crabhammer",
             "power": 120,
@@ -18614,7 +18633,7 @@
         {
             "accuracy": 100,
             "extra": [
-                "Charges for a turn before attacking\nDismisses move when under the effect of perish song or if you have used protect"
+                "Charges for a turn before attacking\nDismisses move when under the effect of perish song or if you have used protect\nHas an increased crititical hit rate"
             ],
             "index": 13,
             "name": "razor-wind",
@@ -18958,7 +18977,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Has an increased crititical hit rate"
+            ],
             "index": 238,
             "name": "cross-chop",
             "power": 100,
@@ -19031,7 +19052,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Has an increased crititical hit rate"
+            ],
             "index": 75,
             "name": "razor-leaf",
             "power": 55,
@@ -19321,7 +19344,7 @@
         {
             "accuracy": 100,
             "extra": [
-                "If it misses fails, deals 1\/8 the damage it would've dealt to the user instead"
+                "If it misses or fails, deals 1\/8 the damage it would've dealt to the user instead"
             ],
             "index": 26,
             "name": "jump-kick",
@@ -19532,7 +19555,9 @@
         },
         {
             "accuracy": 100,
-            "extra": [],
+            "extra": [
+                "Has an increased crititical hit rate"
+            ],
             "index": 2,
             "name": "karate-chop",
             "power": 50,
@@ -40962,7 +40987,7 @@
             ]
         },
         {
-            "meta": "cannot change team ",
+            "meta": "cannot change team  for rival afterwards",
             "name": "GruntM GRUNTM (1) GRUNT",
             "team": [
                 {
@@ -41405,7 +41430,7 @@
             ]
         },
         {
-            "meta": "immediate",
+            "b2b": true,
             "name": "CooltrainerF COOLTRAINERF (17) JENN",
             "team": [
                 {
@@ -41444,7 +41469,8 @@
             ]
         },
         {
-            "meta": "immediate",
+            "b2b": true,
+            "meta": "gives soft sand (talk after battle)",
             "name": "CooltrainerF COOLTRAINERF (5) KATE",
             "team": [
                 {
@@ -41568,7 +41594,7 @@
             ]
         },
         {
-            "meta": "immediate",
+            "b2b": true,
             "name": "Picnicker PICNICKER (2) GINA",
             "team": [
                 {
@@ -41672,7 +41698,7 @@
             ]
         },
         {
-            "meta": "immediate",
+            "b2b": true,
             "name": "PokefanM POKEFANM (7) BRANDON",
             "team": [
                 {
@@ -41699,7 +41725,7 @@
             ]
         },
         {
-            "meta": "Goldenrod entrance",
+            "meta": "Goldenrod entrance boom trainer",
             "name": "SuperNerd SUPER_NERD (10) TERU",
             "team": [
                 {
@@ -41747,7 +41773,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "Pokemaniac POKEMANIAC (11) ISSAC",
             "team": [
                 {
@@ -41884,7 +41910,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "Beauty BEAUTY (2) SAMANTHA",
             "team": [
                 {
@@ -41981,7 +42007,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "Lass LASS (2) BRIDGET",
             "team": [
                 {
@@ -42147,7 +42173,7 @@
             ]
         },
         {
-            "meta": "immediate",
+            "b2b": true,
             "name": "Picnicker PICNICKER (4) KIM",
             "team": [
                 {
@@ -42314,7 +42340,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "BirdKeeper BIRD_KEEPER (3) BRYAN",
             "team": [
                 {
@@ -42376,7 +42402,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "Officer OFFICER (2) DIRK",
             "team": [
                 {
@@ -43194,7 +43220,7 @@
             ]
         },
         {
-            "meta": "immediate",
+            "b2b": true,
             "name": "Medium MEDIUM (2) GRACE",
             "team": [
                 {
@@ -43732,7 +43758,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "SwimmerF SWIMMERF (2) PAULA",
             "team": [
                 {
@@ -43804,7 +43830,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "SwimmerF SWIMMERF (1) ELAINE",
             "team": [
                 {
@@ -43869,7 +43895,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "SwimmerM SWIMMERM (7) KIRK",
             "team": [
                 {
@@ -43946,7 +43972,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "SwimmerF SWIMMERF (6) KARA",
             "team": [
                 {
@@ -44100,7 +44126,8 @@
             ]
         },
         {
-            "meta": "(right trainer) (immediate)",
+            "b2b": true,
+            "meta": "(right trainer)",
             "name": "SwimmerF SWIMMERF (5) DENISE",
             "team": [
                 {
@@ -44304,7 +44331,7 @@
             ]
         },
         {
-            "meta": "Cianwood city gym",
+            "meta": "Cianwood city gym gauntlet",
             "name": "Blackbelt BLACKBELT_T (2) YOSHI",
             "team": [
                 {
@@ -44342,7 +44369,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "Blackbelt BLACKBELT_T (4) LAO",
             "team": [
                 {
@@ -44416,15 +44443,16 @@
                     "item": "miracleberry",
                     "level": 50,
                     "moves": [
-                        "destiny-bond",
-                        "mean-look"
+                        "mean-look",
+                        "destiny-bond"
                     ],
                     "name": "wobbuffet"
                 }
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
+            "meta": "end of gauntlet",
             "name": "Blackbelt BLACKBELT_T (7) LUNG",
             "team": [
                 {
@@ -44541,7 +44569,7 @@
             ]
         },
         {
-            "meta": "Mt. Mortar",
+            "meta": "Mt. Mortar (gives you tyrogue)",
             "name": "Blackbelt BLACKBELT_T (6) KIYO",
             "team": [
                 {
@@ -44791,7 +44819,7 @@
             ]
         },
         {
-            "meta": "Route 43",
+            "meta": "Route 43 (right trainer)",
             "name": "Pokemaniac POKEMANIAC (5) BEN",
             "team": [
                 {
@@ -44827,7 +44855,8 @@
             ]
         },
         {
-            "meta": "(left trainer) (immediate)",
+            "b2b": true,
+            "meta": "(left trainer)",
             "name": "Pokemaniac POKEMANIAC (6) BRENT",
             "team": [
                 {
@@ -45046,7 +45075,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "Fisher FISHER (9) RAYMOND",
             "team": [
                 {
@@ -45085,7 +45114,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "CooltrainerM COOLTRAINERM (2) AARON",
             "team": [
                 {
@@ -45301,7 +45330,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "GruntM GRUNTM (21) GRUNT",
             "team": [
                 {
@@ -46158,7 +46187,7 @@
             ]
         },
         {
-            "meta": "b2b",
+            "b2b": true,
             "name": "Gentleman GENTLEMAN (5) ALFRED",
             "team": [
                 {
@@ -46231,7 +46260,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "BirdKeeper BIRD_KEEPER (4) THEO",
             "team": [
                 {
@@ -46670,7 +46699,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "GruntF GRUNTF (2) GRUNT",
             "team": [
                 {
@@ -46847,7 +46876,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "GruntM GRUNTM (8) GRUNT",
             "team": [
                 {
@@ -46935,7 +46964,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "Scientist SCIENTIST (5) RICH",
             "team": [
                 {
@@ -47128,7 +47157,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "GruntM GRUNTM (11) GRUNT",
             "team": [
                 {
@@ -47509,7 +47538,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "Burglar BURGLAR (2) EDDIE",
             "team": [
                 {
@@ -47624,7 +47653,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "GruntM GRUNTM (14) GRUNT",
             "team": [
                 {
@@ -47660,7 +47689,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "GruntM GRUNTM (15) GRUNT",
             "team": [
                 {
@@ -47965,7 +47994,7 @@
                     "moves": [
                         "thunder-wave",
                         "reflect",
-                        "seismic-toss",
+                        "psywave",
                         "softboiled"
                     ],
                     "name": "blissey"
@@ -48464,7 +48493,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "CooltrainerF COOLTRAINERF (16) CYBIL",
             "team": [
                 {
@@ -48588,7 +48617,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "CooltrainerM COOLTRAINERM (3) PAUL",
             "team": [
                 {
@@ -48917,7 +48946,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "Blackbelt BLACKBELT_T (8) KENJI",
             "team": [
                 {
@@ -49188,7 +49217,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "CooltrainerF COOLTRAINERF (7) KELLY",
             "team": [
                 {
@@ -49570,7 +49599,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "BirdKeeper BIRD_KEEPER (14) JOSE",
             "team": [
                 {
@@ -49652,7 +49681,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "CooltrainerF COOLTRAINERF (10) REENA",
             "team": [
                 {
@@ -49775,7 +49804,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "Psychic PSYCHIC_T (10) GILBERT",
             "team": [
                 {
@@ -49929,7 +49958,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "Fisher FISHER (21) SCOTT",
             "team": [
                 {
@@ -50175,7 +50204,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "CooltrainerF COOLTRAINERF (9) BETH",
             "team": [
                 {
@@ -50916,7 +50945,7 @@
             ]
         },
         {
-            "meta": "S. S. Anne",
+            "meta": "S. S. Anne gauntlet",
             "name": "Firebreather FIREBREATHER (8) LYLE",
             "team": [
                 {
@@ -51295,7 +51324,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "Juggler JUGGLER (3) HORTON",
             "team": [
                 {
@@ -51568,7 +51597,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "PokefanM POKEFANM (14) ALLAN",
             "team": [
                 {
@@ -51805,7 +51834,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "Psychic PSYCHIC_T (2) FRANKLIN",
             "team": [
                 {
@@ -52016,7 +52045,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "Biker BIKER (4) HARRIS",
             "team": [
                 {
@@ -52131,7 +52160,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "SuperNerd SUPER_NERD (7) TOM",
             "team": [
                 {
@@ -52170,7 +52199,7 @@
             ]
         },
         {
-            "meta": "Route 12",
+            "meta": "Route 12 (gauntlet)",
             "name": "Fisher FISHER (14) STEPHEN",
             "team": [
                 {
@@ -52220,7 +52249,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "Fisher FISHER (4) KYLE",
             "team": [
                 {
@@ -52278,7 +52307,7 @@
                     "moves": [
                         "waterfall",
                         "sludge-bomb",
-                        "thunderbolt",
+                        "giga-drain",
                         "blizzard"
                     ],
                     "name": "tentacruel"
@@ -52516,7 +52545,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "PokefanM POKEFANM (6) TREVOR",
             "team": [
                 {
@@ -52719,7 +52748,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "Teacher TEACHER (1) COLETTE",
             "team": [
                 {
@@ -52831,7 +52860,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "Schoolboy SCHOOLBOY (6) TOMMY",
             "team": [
                 {
@@ -52985,7 +53014,7 @@
             ]
         },
         {
-            "meta": "Fuchsia city gym",
+            "meta": "Fuchsia city gym spikes",
             "name": "Janine JANINE (1) JANINE",
             "team": [
                 {
@@ -53150,7 +53179,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "Biker BIKER (9) GLENN",
             "team": [
                 {
@@ -53216,7 +53245,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "Biker BIKER (6) CHARLES",
             "team": [
                 {
@@ -53337,7 +53366,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "Picnicker PICNICKER (19) TANYA",
             "team": [
                 {
@@ -53392,64 +53421,6 @@
             ]
         },
         {
-            "name": "Twins TWINS (5) JO & ZOE",
-            "team": [
-                {
-                    "item": "hard-stone",
-                    "level": 85,
-                    "moves": [
-                        "ancientpower",
-                        "earthquake",
-                        "double-edge",
-                        "explosion"
-                    ],
-                    "name": "sudowoodo"
-                },
-                {
-                    "dvs": {
-                        "atk": 15,
-                        "def": 13,
-                        "hp": 15,
-                        "spa": 15,
-                        "spd": 15,
-                        "spe": 15
-                    },
-                    "item": "leftovers",
-                    "level": 86,
-                    "moves": [
-                        "sleep-powder",
-                        "double-team",
-                        "giga-drain",
-                        "hp-ice"
-                    ],
-                    "name": "bellossom"
-                },
-                {
-                    "item": "leftovers",
-                    "level": 86,
-                    "moves": [
-                        "return",
-                        "ice-beam",
-                        "thunderbolt",
-                        "psychic"
-                    ],
-                    "name": "wigglytuff"
-                },
-                {
-                    "item": "charcoal",
-                    "level": 86,
-                    "moves": [
-                        "fire-blast",
-                        "iron-tail",
-                        "double-edge",
-                        "hi-jump-kick"
-                    ],
-                    "name": "rapidash"
-                }
-            ]
-        },
-        {
-            "meta": "(immediate)",
             "name": "Beauty BEAUTY (14) JULIA",
             "team": [
                 {
@@ -53511,6 +53482,64 @@
                         "thunderbolt"
                     ],
                     "name": "persian"
+                }
+            ]
+        },
+        {
+            "b2b": true,
+            "name": "Twins TWINS (5) JO & ZOE",
+            "team": [
+                {
+                    "item": "hard-stone",
+                    "level": 85,
+                    "moves": [
+                        "ancientpower",
+                        "earthquake",
+                        "double-edge",
+                        "explosion"
+                    ],
+                    "name": "sudowoodo"
+                },
+                {
+                    "dvs": {
+                        "atk": 15,
+                        "def": 13,
+                        "hp": 15,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
+                    "item": "leftovers",
+                    "level": 86,
+                    "moves": [
+                        "sleep-powder",
+                        "double-team",
+                        "giga-drain",
+                        "hp-ice"
+                    ],
+                    "name": "bellossom"
+                },
+                {
+                    "item": "leftovers",
+                    "level": 86,
+                    "moves": [
+                        "return",
+                        "ice-beam",
+                        "thunderbolt",
+                        "psychic"
+                    ],
+                    "name": "wigglytuff"
+                },
+                {
+                    "item": "charcoal",
+                    "level": 86,
+                    "moves": [
+                        "fire-blast",
+                        "iron-tail",
+                        "double-edge",
+                        "hi-jump-kick"
+                    ],
+                    "name": "rapidash"
                 }
             ]
         },
@@ -53771,7 +53800,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "Hiker HIKER (15) SIDNEY",
             "team": [
                 {
@@ -53906,72 +53935,6 @@
             ]
         },
         {
-            "name": "Hiker HIKER (13) TIM",
-            "team": [
-                {
-                    "dvs": {
-                        "atk": 12,
-                        "def": 15,
-                        "hp": 7,
-                        "spa": 15,
-                        "spd": 15,
-                        "spe": 15
-                    },
-                    "item": "quick-claw",
-                    "level": 88,
-                    "moves": [
-                        "hydro-pump",
-                        "ice-beam",
-                        "sing",
-                        "hp-ground"
-                    ],
-                    "name": "azumarill"
-                },
-                {
-                    "dvs": {
-                        "atk": 13,
-                        "def": 12,
-                        "hp": 11,
-                        "spa": 15,
-                        "spd": 15,
-                        "spe": 15
-                    },
-                    "item": "leftovers",
-                    "level": 86,
-                    "moves": [
-                        "sleep-powder",
-                        "sludge-bomb",
-                        "giga-drain",
-                        "hp-rock"
-                    ],
-                    "name": "victreebel"
-                },
-                {
-                    "item": "soft-sand",
-                    "level": 86,
-                    "moves": [
-                        "earthquake",
-                        "ancientpower",
-                        "metal-claw",
-                        "submission"
-                    ],
-                    "name": "sandslash"
-                },
-                {
-                    "item": "miracleberry",
-                    "level": 87,
-                    "moves": [
-                        "glare",
-                        "double-edge",
-                        "earthquake",
-                        "ancientpower"
-                    ],
-                    "name": "dunsparce"
-                }
-            ]
-        },
-        {
-            "meta": "(immediate)",
             "name": "Camper CAMPER (8) SID",
             "team": [
                 {
@@ -54041,6 +54004,72 @@
                         "hp-water"
                     ],
                     "name": "noctowl"
+                }
+            ]
+        },
+        {
+            "b2b": true,
+            "name": "Hiker HIKER (13) TIM",
+            "team": [
+                {
+                    "dvs": {
+                        "atk": 12,
+                        "def": 15,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
+                    "item": "quick-claw",
+                    "level": 88,
+                    "moves": [
+                        "hydro-pump",
+                        "ice-beam",
+                        "sing",
+                        "hp-ground"
+                    ],
+                    "name": "azumarill"
+                },
+                {
+                    "dvs": {
+                        "atk": 13,
+                        "def": 12,
+                        "hp": 11,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
+                    "item": "leftovers",
+                    "level": 86,
+                    "moves": [
+                        "sleep-powder",
+                        "sludge-bomb",
+                        "giga-drain",
+                        "hp-rock"
+                    ],
+                    "name": "victreebel"
+                },
+                {
+                    "item": "soft-sand",
+                    "level": 86,
+                    "moves": [
+                        "earthquake",
+                        "ancientpower",
+                        "metal-claw",
+                        "submission"
+                    ],
+                    "name": "sandslash"
+                },
+                {
+                    "item": "miracleberry",
+                    "level": 87,
+                    "moves": [
+                        "glare",
+                        "double-edge",
+                        "earthquake",
+                        "ancientpower"
+                    ],
+                    "name": "dunsparce"
                 }
             ]
         },
@@ -54183,7 +54212,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "Youngster YOUNGSTER (12) JASON",
             "team": [
                 {
@@ -54222,7 +54251,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "Psychic PSYCHIC_T (4) FIDEL",
             "team": [
                 {
@@ -54406,7 +54435,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "BugCatcher BUG_CATCHER (3) ED",
             "team": [
                 {
@@ -54483,7 +54512,7 @@
             ]
         },
         {
-            "meta": "Pewter City Gym",
+            "meta": "Pewter City Gym perma sandstorm",
             "name": "Camper CAMPER (18) JERRY",
             "team": [
                 {
@@ -54644,7 +54673,7 @@
             ]
         },
         {
-            "meta": "Route 3",
+            "meta": "Route 3 gauntlet",
             "name": "Youngster YOUNGSTER (9) WARREN",
             "team": [
                 {
@@ -55116,7 +55145,8 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
+            "meta": "end of gauntlet",
             "name": "Picnicker PICNICKER (6) HOPE",
             "team": [
                 {
@@ -55174,7 +55204,7 @@
             ]
         },
         {
-            "meta": "Route 25",
+            "meta": "Route 25 gauntlet",
             "name": "Schoolboy SCHOOLBOY (7) DUDLEY",
             "team": [
                 {
@@ -55229,7 +55259,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "Lass LASS (11) ELLEN",
             "team": [
                 {
@@ -55382,7 +55412,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "Camper CAMPER (6) LLOYD",
             "team": [
                 {
@@ -55585,7 +55615,7 @@
             ]
         },
         {
-            "meta": "Cerulean City Gym",
+            "meta": "Cerulean City Gym perma rain",
             "name": "SwimmerM SWIMMERM (21) PARKER",
             "team": [
                 {
@@ -55706,7 +55736,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "SwimmerF SWIMMERF (19) BRIANA",
             "team": [
                 {
@@ -55909,7 +55939,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "CooltrainerF COOLTRAINERF (14) QUINN",
             "team": [
                 {
@@ -56017,7 +56047,7 @@
             ]
         },
         {
-            "meta": "(immediate)",
+            "b2b": true,
             "name": "SwimmerM SWIMMERM (18) SETH",
             "team": [
                 {
@@ -56086,7 +56116,7 @@
             ]
         },
         {
-            "meta": "Route 19",
+            "meta": "Route 19 gauntlet",
             "name": "SwimmerM SWIMMERM (14) JEROME",
             "team": [
                 {
@@ -56433,7 +56463,7 @@
             ]
         },
         {
-            "meta": "Cinnabar City Gym",
+            "meta": "Cinnabar City Gym perma sun",
             "name": "Blaine BLAINE (1) BLAINE",
             "team": [
                 {

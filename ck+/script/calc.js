@@ -8,22 +8,36 @@ function updateCalc() {
 			v += '<div onclick="setPlayer(' + i + ')">' + img + "</div>";
 		}
 		document.getElementById("player").getElementsByClassName("calc-team")[0].innerHTML = v;
-		var v = "";
-		for (let i in enemyTeam) {
-			var prio = getSwitchPriority(enemyTeam[i], myPoke);
-			var prioClass = "neutral-switch-priority";
-			if (prio < 0) {
-				prioClass = "low-switch-priority";
-			} else if (prio > 0) {
-				prioClass = "high-switch-priority";
-			}
-			var img = '<img class="' + prioClass + '" src="' + getPokeImage(enemyTeam[i]) + '">';
-			v += '<div onclick="setEnemy(' + i + ')">' + img + "</div>";
+		document.getElementById("opponent").getElementsByClassName("calc-team")[0].innerHTML = getEnemyTeamDisplay(enemyTeam, lastTrainer);
+		var extraTrainers = "";
+		for (var i = lastTrainer + i; isTrainerB2b(i); i++) {
+			extraTrainers += `<div class="calc-team">${getEnemyTeamDisplay(data.trainers[i].team, i)}</div>`;
+			extraTrainers += `<div class="calc-navigation"><span>${getTrainerName(data.trainers[i].name)} </span>`;
+			extraTrainers += `<button onclick="statCheckCurrentTrainer()">Stats</button> `;
+			extraTrainers += `<button disabled=true onclick="navigateBattle(-1)">Previous</button> `;
+			extraTrainers += `<button disabled=true onclick="navigateBattle(1)">Next</button> `;
+			extraTrainers += `</div>`
 		}
-		document.getElementById("opponent").getElementsByClassName("calc-team")[0].innerHTML = v;
+		document.getElementById("opponent").getElementsByClassName("extra-calc-teams")[0].innerHTML = extraTrainers;
 	} catch(e) {
 		console.log(e);
 	}
+}
+
+function getEnemyTeamDisplay(enemyTeam, trainer) {
+	var v = "";
+	for (let i in enemyTeam) {
+		var prio = getSwitchPriority(enemyTeam[i], myPoke);
+		var prioClass = "neutral-switch-priority";
+		if (prio < 0) {
+			prioClass = "low-switch-priority";
+		} else if (prio > 0) {
+			prioClass = "high-switch-priority";
+		}
+		var img = '<img class="' + prioClass + '" src="' + getPokeImage(enemyTeam[i]) + '">';
+		v += `<div onclick="setEnemy(${trainer}, ${i})">${img}</div>`;
+	}
+	return v;
 }
 
 function getDamage(attacker, defender, attackerStages, defenderStages, move, player, crit, low, giveAll = false) {
@@ -283,14 +297,17 @@ function setPlayer(i) {
 	updateCalc();
 }
 
-function setEnemy(i) {
-	theirPoke = enemyTeam[i];
+function setEnemy(trainer, i) {
+	theirPoke = data.trainers[trainer].team[i];
 	clearEnemyStages();
 	updateCalc();
 }
 
 function navigateBattle(i) {
 	lastTrainer += i;
+	while (isTrainerB2b(lastTrainer) && i != 0) {
+		lastTrainer += i;
+	}
 	if (lastTrainer < 0) {
 		lastTrainer = 0;
 	} else if (lastTrainer >= data.trainers.length) {
@@ -299,13 +316,24 @@ function navigateBattle(i) {
 	calcTrainer(lastTrainer);
 }
 
+function isTrainerB2b(i) {
+	if (data.trainers[i]) {
+		return data.trainers[i].b2b == true;
+	}
+	return false;
+}
+
 function calcTrainer(i) {
+	if (isTrainerB2b(i)) {
+		calcTrainer(i - 1);
+		return;
+	}
 	localStorage.setItem("last-trainer", i);
 	lastTrainer = i;
 	enemyTeam = data.trainers[i].team;
 	document.getElementById("current-trainer-name").innerHTML =
 		`${getTrainerName(data.trainers[i].name)}`;
-	setEnemy(0);
+	setEnemy(lastTrainer, 0);
 	setTab("calc");
 }
 

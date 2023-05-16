@@ -107,21 +107,21 @@
 					<div class="poke-icon"></div>
 					<div>
 						<div class="calc-stats">
-							<span style="padding-left:15px;">
-								Status
-								<select class="status-select" onchange="updateCalc()">
-									<option value="none">-</option>
-									<option value="brn">Brn</option>
-									<option value="prz">Prz</option>
-									<option value="psn">Psn</option>
-									<option value="tox">Tox</option>
-									<option value="frz">Frz</option>
-									<option value="slp">Slp</option>
-									<option value="cnf">Cnf</option>
-								</select>
-								<span class="status-info"></span>
-							</span>
 							<table>
+								<tr>
+									<td colspan=2>Status</td>
+									<td><select class="status-select" onchange="updateCalc()">
+										<option value="none">-</option>
+										<option value="brn">Brn</option>
+										<option value="prz">Prz</option>
+										<option value="psn">Psn</option>
+										<option value="tox">Tox</option>
+										<option value="frz">Frz</option>
+										<option value="slp">Slp</option>
+										<option value="cnf">Cnf</option>
+									</select></td>
+									<td class="status-info"></td>
+								</tr>
 								<tr class="calc-hp"><td>HP</td><td><div class="stat-num"></div></td><td><input class="player-current-hp" type="number" oninput="updateCalc()"></td><td><button onclick="clearPlayerStages()">Clear</button></td></tr>
 								<tr class="calc-atk"><td>Atk</td><td><div class="stat-num"></div></td><td><input class="player-stages" type="number" value="0" min="-6" max="6" oninput="updateCalc()"></td></tr>
 								<tr class="calc-def"><td>Def</td><td><div class="stat-num"></div></td><td><input class="player-stages" type="number" value="0" min="-6" max="6" oninput="updateCalc()"></td><td><input id="player-reflect" type="checkbox" oninput="updateCalc()"><label for="player-reflect" class="fake-checkbox" title="Reflect"></label></td></tr>
@@ -162,21 +162,21 @@
 				<div style="display:flex;float:right;">
 					<div>
 						<div class="calc-stats">
-							<span style="padding-right:15px;float:right;">
-								<span class="status-info"></span>
-								<select class="status-select" onchange="updateCalc()">
-									<option value="none">-</option>
-									<option value="brn">Brn</option>
-									<option value="prz">Prz</option>
-									<option value="psn">Psn</option>
-									<option value="tox">Tox</option>
-									<option value="frz">Frz</option>
-									<option value="slp">Slp</option>
-									<option value="cnf">Cnf</option>
-								</select>
-								Status
-							</span>
 							<table>
+								<tr>
+									<td class="status-info"></td>
+									<td><select class="status-select" onchange="updateCalc()">
+										<option value="none">-</option>
+										<option value="brn">Brn</option>
+										<option value="prz">Prz</option>
+										<option value="psn">Psn</option>
+										<option value="tox">Tox</option>
+										<option value="frz">Frz</option>
+										<option value="slp">Slp</option>
+										<option value="cnf">Cnf</option>
+									</select></td>
+									<td colspan=2>Status</td>
+								</tr>
 								<tr class="calc-hp"><td><button onclick="clearEnemyStages()">Clear</button></td><td><input class="enemy-current-hp" type="number" oninput="updateCalc()"></td><td><div class="stat-num"></div></td><td>HP</td></tr>
 								<tr class="calc-atk"><td></td><td><input class="enemy-stages" type="number" value="0" min="-6" max="6" oninput="updateCalc()"></td><td><div class="stat-num"></div></td><td>Atk</td></tr>
 								<tr class="calc-def"><td><input id="enemy-reflect" type="checkbox" oninput="updateCalc()"><label for="enemy-reflect" class="fake-checkbox" title="Reflect"></label></td><td><input class="enemy-stages" type="number" value="0" min="-6" max="6" oninput="updateCalc()"></td><td><div class="stat-num"></div></td><td>Def</td></tr>
@@ -194,11 +194,12 @@
 				<div class="calc-moves"></div>
 				<div class="calc-team"></div>
 				<div class="calc-naviation">
-					<button onclick="statCheckCurrentTrainer()">Statistics</button>
-					<button onclick="navigateBattle(-1)">Previous Battle</button>
-					<button onclick="navigateBattle(1)">Next Battle</button>
+					<span id="current-trainer-name"></span>
+					<button onclick="statCheckCurrentTrainer()">Stats</button>
+					<button onclick="navigateBattle(-1)">Previous</button>
+					<button onclick="navigateBattle(1)">Next</button>
 				</div>
-				<div id="current-trainer-name"></div>
+				<div class="extra-calc-teams"></div>
 				<br style="clear:both;"/>
 			</div>
 		</div>

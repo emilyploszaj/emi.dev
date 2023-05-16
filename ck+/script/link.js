@@ -56,6 +56,7 @@ function itemLink(item) {
 	if (item.length == 0 || item == "no-item") {
 		return "";
 	}
+	item = item.replace(" ", "-");
 	return '<span class="poke-link" onclick="focusItem(\'' + item + '\')">' + `<img class="item-icon" src="./images/items/${item.replace("-", "_")}.png">` + fullCapitalize(item) + '</span>'
 }
 

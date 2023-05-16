@@ -90,6 +90,11 @@ button:hover, select:hover {
 	color: var(--highlighted) !important;
 }
 
+button:disabled {
+	color: var(--crit-text);
+	visibility: hidden;
+}
+
 #tab-selection {
 	margin-bottom: 10px;
 }
@@ -428,6 +433,13 @@ input:checked + .fake-checkbox {
 	padding: 4px;
 }
 
+.b2b {
+	border-top: 6px dashed white;
+	border-right: 6px dashed white;
+	border-bottom: 6px dashed white;
+	margin-bottom: 10px;
+}
+
 .trainer-pokes {
 	display: flex;
 	flex-wrap: wrap;
@@ -504,6 +516,10 @@ input:checked + .fake-checkbox {
 	clear: both;
 }
 
+#opponent .calc-stats {
+	text-align: right;
+}
+
 .calc-stats table td {
 	padding: 0px 10px;
 }
@@ -524,7 +540,7 @@ input:checked + .fake-checkbox {
 	text-align: center;
 }
 
-.move-calcs td {
+.move-calc {
 	padding: 0px 6px;
 	border-width: 3px;
 	border-style: dashed;
@@ -534,9 +550,18 @@ input:checked + .fake-checkbox {
 	max-width: 140px;
 }
 
+.rolls {
+	padding-bottom: 8px;
+}
+
 .rolls td {
-	min-width: 0px !important;
-	height: unset !important;
+	padding: 0px 6px;
+	font-size: 16px;
+}
+
+.rolls .move-calc {
+	text-align: center;
+	font-size: 20px;
 }
 
 rt {

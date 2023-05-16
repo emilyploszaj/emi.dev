@@ -29,10 +29,20 @@ function displayTrainers() {
 	var v = "";
 	for (var i = 0; i < data.trainers.length; i++) {
 		var t = data.trainers[i];
+		var meta = "";
 		if (t.meta != undefined) {
-			v += "<h2>" + t.meta + "</h2>";
+			meta += t.meta;
+		}
+		if (isTrainerB2b(i) == false && isTrainerB2b(i + 1) == true) {
+			v += `<div class="b2b">`;
+		}
+		if (meta) {
+			v += "<h2>" + meta + "</h2>";
 		}
 		v += getTrainerDisplay(t, i);
+		if (isTrainerB2b(i) == true && isTrainerB2b(i + 1) == false) {
+			v += `</div>`;
+		}
 	}
 	document.getElementById("trainers").innerHTML = v;
 }
