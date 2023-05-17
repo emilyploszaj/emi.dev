@@ -13,7 +13,7 @@ function updateCalc() {
 		for (var i = lastTrainer + 1; isTrainerB2b(i); i++) {
 			extraTrainers += `<div class="calc-team">${getEnemyTeamDisplay(data.trainers[i].team, i)}</div>`;
 			extraTrainers += `<div class="calc-navigation"><span>${getTrainerName(data.trainers[i].name)} </span>`;
-			extraTrainers += `<button onclick="statCheckCurrentTrainer()">Stats</button> `;
+			extraTrainers += `<button onclick="statCheckTrainer(${i})">Stats</button> `;
 			extraTrainers += `<button disabled=true onclick="navigateBattle(-1)">Previous</button> `;
 			extraTrainers += `<button disabled=true onclick="navigateBattle(1)">Next</button> `;
 			extraTrainers += `</div>`
