@@ -10,7 +10,7 @@ function updateCalc() {
 		document.getElementById("player").getElementsByClassName("calc-team")[0].innerHTML = v;
 		document.getElementById("opponent").getElementsByClassName("calc-team")[0].innerHTML = getEnemyTeamDisplay(enemyTeam, lastTrainer);
 		var extraTrainers = "";
-		for (var i = lastTrainer + i; isTrainerB2b(i); i++) {
+		for (var i = lastTrainer + 1; isTrainerB2b(i); i++) {
 			extraTrainers += `<div class="calc-team">${getEnemyTeamDisplay(data.trainers[i].team, i)}</div>`;
 			extraTrainers += `<div class="calc-navigation"><span>${getTrainerName(data.trainers[i].name)} </span>`;
 			extraTrainers += `<button onclick="statCheckCurrentTrainer()">Stats</button> `;
@@ -305,7 +305,7 @@ function setEnemy(trainer, i) {
 
 function navigateBattle(i) {
 	lastTrainer += i;
-	while (isTrainerB2b(lastTrainer) && i != 0) {
+	while (isTrainerB2b(lastTrainer) && i > 0) {
 		lastTrainer += i;
 	}
 	if (lastTrainer < 0) {
