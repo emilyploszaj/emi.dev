@@ -365,7 +365,22 @@ input:checked + .fake-checkbox {
 }
 
 .poke-title {
-	height: 54px;
+	column-width: 100px;
+	border-spacing: 0px;
+	height: 88px;
+}
+
+.poke-title td:first-child {
+	width: 200px;
+}
+
+.poke-title tr {
+	height: 28px;
+}
+
+#opponent .poke-title {
+	float: right;
+	text-align: right;
 }
 
 .poke-stats table td {
@@ -390,6 +405,25 @@ input:checked + .fake-checkbox {
 .poke-usage-statistics .rolls {
 	top: auto !important;
 	bottom: 40px !important;
+}
+
+.selection-menu {
+	display: none;
+	z-index: 100;
+	position: absolute;
+	padding: 6px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: var(--grouping-background);
+	background-color: var(--box-background);
+}
+
+.visible-selection-menu {
+	display: block !important;
+}
+
+#item-menu td {
+	width: unset;
 }
 
 .rolls {
@@ -447,7 +481,7 @@ input:checked + .fake-checkbox {
 }
 
 .trainer-pokes .tiny-poke {
-	margin: 10px;
+	margin: 8px;
 }
 
 #tiny-pokes {

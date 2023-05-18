@@ -338,7 +338,7 @@ function fetchData() {
 
 		data = j;
 		var a = j.trainers[17].team[2];
-		myPoke = a;
+		myPoke = JSON.parse(JSON.stringify(a));
 		if (box.length > 0) {
 			myPoke = box[0];
 		}

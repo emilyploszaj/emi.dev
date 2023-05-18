@@ -144,6 +144,17 @@ function editCalc() {
 	}
 }
 
+function setPlayerItem(item) {
+	myPoke.item = item;
+	updateCalc();
+	updateBox();
+	for (var i = 0; i < box.length; i++) {
+		if (myPoke === box[i]) {
+			
+		}
+	}
+}
+
 function saveEdited() {
 	var poke = getEditedPoke();
 	if (poke) {

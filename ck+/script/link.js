@@ -57,7 +57,12 @@ function itemLink(item) {
 		return "";
 	}
 	item = item.replace(" ", "-");
-	return '<span class="poke-link" onclick="focusItem(\'' + item + '\')">' + `<img class="item-icon" src="./images/items/${item.replace("-", "_")}.png">` + fullCapitalize(item) + '</span>'
+	return '<span class="poke-link" onclick="focusItem(\'' + item + '\')">' + itemImage(item) + fullCapitalize(item) + '</span>'
+}
+
+function itemImage(item) {
+	item = item.replace(" ", "-");
+	return `<img class="item-icon" src="./images/items/${item.replace("-", "_")}.png">`;
 }
 
 function landmarkLink(landmark) {

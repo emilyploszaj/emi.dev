@@ -36,14 +36,17 @@
 		<div id="edit" class="tab">
 			<div style="display:flex;justify-content:space-between;">
 				<div id="edited-poke">
-					<div class="poke-title">
-						<span class="poke-name"></span>
-						<span class="poke-gender"></span>
-						<span> - </span>
-						<span class="poke-level"></span>
-						<span> - </span>
-						<span class="poke-item"></span>
-					</div>
+					<table class="poke-title">
+						<tr>
+							<td><span class="poke-name"></span> <span class="poke-gender"></span></td>
+						</tr>
+						<tr>
+							<td><span class="poke-item"></span></td>
+						</tr>
+						<tr>
+							<td><span class="poke-level"></span></td>
+						</tr>
+					</table>
 					<div style="display:flex;">
 						<div class="poke-icon"></div>
 						<div>
@@ -93,16 +96,20 @@
 		</div>
 		<div id="calc" class="tab">
 			<div id="player">
-				<div class="poke-title">
-					<div>
-						<span class="poke-name"></span>
-						<span class="poke-gender"></span>
-						<span class="poke-item"></span>
-					</div>
-					<div>
-						<span class="poke-level"></span> <button onclick="editCalc()">Edit</button>
-					</div>
-				</div>
+				<table class="poke-title">
+					<tr>
+						<td><span class="poke-name"></span> <span class="poke-gender"></span></td>
+						<td><button onclick="editCalc()">Edit</button></td>
+					</tr>
+					<tr>
+						<td><span class="poke-item"></span></td>
+						<td><button onclick="openMenu('item-menu')">Items</button><div id="item-menu" class="selection-menu"></div></td>
+					</tr>
+					<tr>
+						<td><span class="poke-level"></span></td>
+						<td><input id="player-current-level" type="number" min="1" max="100"></td>
+					</tr>
+				</table>
 				<div style="display:flex;">
 					<div class="poke-icon"></div>
 					<div>
@@ -148,17 +155,17 @@
 				</select>
 			</div>
 			<div id="opponent">
-				<div class="poke-title">
-					<div style="text-align:right;">
-						<span class="poke-item"></span>
-						<span class="poke-gender"></span>
-						<span class="poke-name"></span>
-					</div>
-					<div style="text-align:right;">
-						<span class="poke-level"></span>
-						<span class="experience"></span>
-					</div>
-				</div>
+				<table class="poke-title">
+					<tr>
+						<td><span class="poke-gender"></span> <span class="poke-name"></span></td>
+					</tr>
+					<tr>
+						<td><span class="poke-item"></span></td>
+					</tr>
+					<tr>
+						<td><span class="poke-level"></span></td>
+					</tr>
+				</table>
 				<div style="display:flex;float:right;">
 					<div>
 						<div class="calc-stats">

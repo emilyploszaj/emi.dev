@@ -1,3 +1,5 @@
+var menuOpen;
+
 function displayCalcPokemon(root, poke, opponent, right) {
 	var player = !right;
 	var p = pokemonByName.get(poke.name);
@@ -64,6 +66,8 @@ function displayCalcPokemon(root, poke, opponent, right) {
 		}
 	}
 
+	document.getElementById("player-current-level").value = myPoke.level;
+
 	var cHp = document.getElementsByClassName("player-current-hp")[0];
 	var oHp = document.getElementsByClassName("enemy-current-hp")[0];
 	if (!player) {
@@ -122,10 +126,6 @@ function displayCalcPokemon(root, poke, opponent, right) {
 		if (i < poke.moves.length) {
 			var p1 = `<td class="move-calc">${moveLink(poke.moves[i])}</td>`;
 			var move = movesByName.get(poke.moves[i]);
-			var recoil = 0;
-			if (move.effects && move.effects.recoil) {
-				recoil = move.effects.recoil;
-			}
 			var min = getDamage(poke, opponent, getStages(myStages), getStages(theirStages), move, player, false, true);
 			var max = getDamage(poke, opponent, getStages(myStages), getStages(theirStages), move, player, false, false);
 			var rolls = getDamage(poke, opponent, getStages(myStages), getStages(theirStages), move, player, false, false, true);
@@ -137,7 +137,7 @@ function displayCalcPokemon(root, poke, opponent, right) {
 			} else if (minPercent >= 50 || (!player && maxPercent >= 50)) {
 				extra += ' thko';
 			}
-			var p2 = moveDisplay(min, max, minPercent, maxPercent, extra, prettyRolls(rolls, myHp, myCurrentHp, opponentCurrentHp, recoil), move.power)
+			var p2 = moveDisplay(min, max, minPercent, maxPercent, extra, prettyRolls(rolls, myHp, myCurrentHp, opponentCurrentHp, move.effects), move.power)
 			if (max == 0 && move.power == 0) {
 				if (move.name == "transform") {
 					p2 = '<td class="move-calc"><button onclick="transform(' + right + ')">Transform</button></td>';
@@ -159,7 +159,7 @@ function displayCalcPokemon(root, poke, opponent, right) {
 			} else if (minPercent >= 50 || (!player && maxPercent >= 50)) {
 				extra += ' thko';
 			}
-			var p3 = moveDisplay(min, max, minPercent, maxPercent, extra, prettyRolls(rolls, myHp, myCurrentHp, opponentCurrentHp, recoil), move.power);
+			var p3 = moveDisplay(min, max, minPercent, maxPercent, extra, prettyRolls(rolls, myHp, myCurrentHp, opponentCurrentHp, move.effects), move.power);
 			moves += "<tr>";
 			if (right) {
 				moves += p3 + p2 + p1;
@@ -184,7 +184,7 @@ function moveDisplay(min, max, minPercent, maxPercent, classes, tooltip, power) 
 	return v;
 }
 
-function prettyRolls(rolls, myHp, myCurrentHp, killHp, recoil) {
+function prettyRolls(rolls, myHp, myCurrentHp, killHp, effects) {
 	if (!rolls.length) {
 		rolls = [rolls];
 	}
@@ -209,17 +209,31 @@ function prettyRolls(rolls, myHp, myCurrentHp, killHp, recoil) {
 	v += `</tr></table>`;
 	kills = Math.round(1000 * kills / rolls.length) / 10;
 	v += `${kills}% chance to OHKO`;
-	if (recoil > 0) {
-		var min = parseInt(Math.min(killHp, rolls[0]) * recoil);
-		var max = parseInt(Math.min(killHp, rolls[rolls.length - 1]) * recoil);
-		var minPercent = Math.round(1000 * min / myHp) / 10;
-		var maxPercent = Math.round(1000 * max / myHp) / 10;
-		var extra = "";
-		if (max >= myCurrentHp) {
-			extra = "ohko";
+	if (effects) {
+		if (effects.recoil > 0) {
+			var min = parseInt(Math.min(killHp, rolls[0]) * effects.recoil);
+			var max = parseInt(Math.min(killHp, rolls[rolls.length - 1]) *effects.recoil);
+			var minPercent = Math.round(1000 * min / myHp) / 10;
+			var maxPercent = Math.round(1000 * max / myHp) / 10;
+			var extra = "";
+			if (max >= myCurrentHp) {
+				extra = "ohko";
+			}
+			v += "<h1>Recoil:</h1>";
+			v += `<table><tr>${moveDisplay(min, max, minPercent, maxPercent, extra, "", -1)}</tr></table>`;
 		}
-		v += "<h1>Recoil:</h1>";
-		v += `<table><tr>${moveDisplay(min, max, minPercent, maxPercent, extra, "", -1)}</tr></table>`;
+		if (effects.drain > 0) {
+			var min = parseInt(Math.min(killHp, rolls[0]) * effects.drain);
+			var max = parseInt(Math.min(killHp, rolls[rolls.length - 1]) * effects.drain);
+			var minPercent = Math.round(1000 * min / myHp) / 10;
+			var maxPercent = Math.round(1000 * max / myHp) / 10;
+			var extra = "";
+			if (max >= myCurrentHp) {
+				extra = "ohko";
+			}
+			v += "<h1>Heal:</h1>";
+			v += `<table><tr>${moveDisplay(min, max, minPercent, maxPercent, extra, "", -1)}</tr></table>`;
+		}
 	}
 	v += "</center></div>";
 	return v;
@@ -670,4 +684,77 @@ function clearEnemyStages() {
 	}
 	document.getElementsByClassName("enemy-current-hp")[0].value = "";
 	updateCalc();
+}
+
+function openMenu(name) {
+	var el = document.getElementById(name);
+	if (!el.classList.contains("visible-selection-menu")) {
+		el.classList.add("visible-selection-menu");
+		menuOpen = Date.now();
+	}
+}
+
+document.onclick = function(event) {
+	if (Math.abs(menuOpen - Date.now()) > 30) {
+		for (let el of document.getElementsByClassName("visible-selection-menu")) {
+			if (el && el.classList) {
+				el.classList.remove("visible-selection-menu")
+			}
+		}
+	}
+}
+
+document.getElementById("player-current-level").oninput = function(event) {
+	var lvl = parseInt(document.getElementById("player-current-level").value);
+	if (lvl > 0) {
+		myPoke.level = lvl;
+	}
+	updateCalc();
+	updateBox();
+}
+
+function setItemMenu() {
+	var handyItems = [
+		"blackbelt",
+		"sharp-beak",
+		"poison-barb",
+		"soft-sand",
+		"hard-stone",
+		"silverpowder",
+		"spell-tag",
+		"metal-coat",
+		"charcoal",
+		"mystic-water",
+		"miracle-seed",
+		"magnet",
+		"twistedspoon",
+		"nevermeltice",
+		"dragon-fang",
+		"blackglasses",
+		"pink-bow",
+		"quick-claw",
+		"kings-rock",
+		"stick",
+		"thick-club",
+		"berry",
+		"berry-juice",
+		"gold-berry",
+		"przcureberry",
+		"mint-berry",
+		"psncureberry",
+		"ice-berry",
+		"burnt-berry",
+		"bitter-berry",
+		"mysteryberry",
+		"miracleberry",
+	];
+	var v = `<table><tr>`;
+	for (var i = 0; i < handyItems.length; i++) {
+		v += `<td style="cursor:pointer;" onclick="setPlayerItem('${handyItems[i]}')">${itemImage(handyItems[i])}</td>`;
+		if ((i + 1) % 8 == 0 && i + 1 < handyItems.length) {
+			v += `</tr><tr>`;
+		}
+	}
+	v += `</tr></table>`;
+	document.getElementById("item-menu").innerHTML = v;
 }

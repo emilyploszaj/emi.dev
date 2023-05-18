@@ -15806,7 +15806,7 @@
                 {
                     "amount": "renewable",
                     "info": "Tree behind the cut tree, requires surf",
-                    "item": "miracle-berry"
+                    "item": "miracleberry"
                 }
             ],
             "locations": [
@@ -17559,6 +17559,9 @@
         },
         {
             "accuracy": 100,
+            "effects": {
+                "drain": 0.5
+            },
             "extra": [
                 "Can only hit sleeping targets, user heals 50% damage dealt"
             ],
@@ -17694,6 +17697,9 @@
         },
         {
             "accuracy": 100,
+            "effects": {
+                "drain": 0.5
+            },
             "extra": [
                 "User heals 50% of damage dealt"
             ],
@@ -18207,6 +18213,9 @@
         },
         {
             "accuracy": 100,
+            "effects": {
+                "drain": 0.5
+            },
             "extra": [
                 "User heals 50% of damage dealt"
             ],
@@ -18535,6 +18544,9 @@
         },
         {
             "accuracy": 100,
+            "effects": {
+                "drain": 0.5
+            },
             "extra": [
                 "User heals 50% of damage dealt"
             ],
@@ -18966,6 +18978,9 @@
         },
         {
             "accuracy": 100,
+            "effects": {
+                "drain": 0.5
+            },
             "extra": [
                 "User heals 50% of damage dealt"
             ],

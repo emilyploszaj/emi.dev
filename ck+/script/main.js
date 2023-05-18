@@ -53,6 +53,8 @@ if (localStorage.getItem("badges")) {
 	badges = parseInt(localStorage.getItem("badges"));
 }
 
+setItemMenu();
+
 var editInputs = document.getElementsByClassName("poke-edit-input");
 for (let i in editInputs) {
 	editInputs[i].oninput = function (event) {
