@@ -174,11 +174,3 @@ tr:nth-child(2n), thead tr {
 #minecraft:target ~ #posts .post:not(.minecraft) {
 	display: none;
 }
-
-#bytecode:target ~ #posts .post:not(.bytecode) {
-	display: none;
-}
-
-#games:target ~ #posts .post:not(.games) {
-	display: none;
-}
