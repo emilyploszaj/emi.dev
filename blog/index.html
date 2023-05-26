@@ -3,60 +3,33 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="author" content="Emily Ploszaj">
+	<meta name="color-scheme" content="dark light">
 	<title>Emi's Blog</title>
-	<link rel="stylesheet" href="https://fonts.bunny.net/css?family=Ubuntu+Mono">
+	<link rel="stylesheet" href="https://fonts.bunny.net/css?family=Ubuntu+Mono:400,700">
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<h3>Tags:</h3>
-	<input id="tag-sweet" type="checkbox" autocomplete="off">
-	<label for="tag-sweet" class="tag label-sweet">Sweet</label>
-	<input id="tag-salty" type="checkbox" autocomplete="off">
-	<label for="tag-salty" class="tag label-salty">Salty</label>
-	<input id="tag-sour" type="checkbox" autocomplete="off">
-	<label for="tag-sour" class="tag label-sour">Sour</label>
-	<input id="tag-bitter" type="checkbox" autocomplete="off">
-	<label for="tag-bitter" class="tag label-bitter">Bitter</label>
-	<input id="tag-savory" type="checkbox" autocomplete="off">
-	<label for="tag-savory" class="tag label-savory">Savory</label>
+	<h1>Emi's Blog</h2>
+	<h3><a href="/">&lt- Back to emi.dev</a></h3>
 
-	<h3>Posts:</h3>
+	<!-- Tag focus elements -->
+		<div id="programming" class="current-tag">Tag: #programming</div>
+		<div id="minecraft" class="current-tag">Tag: #minecraft</div>
+	<!-- End tag focus elements -->
+	<div class="current-tag-placeholder">End of tags</div>
+	<div id="clear-tag"><a href="#">View all posts</a></div>
 
 	<div id="posts">
-		<div class="post tag-sweet">
-			<div><b>First date!</b></div>
-			<div class="display-tags">
-				<span class="display-tag label-sweet"></span>
-			</div>
-		</div>
-		<div class="post tag-sour">
-			<div><b>Time travelling with my dad's ex boyfriend!</b></div>
-			<div class="display-tags">
-				<span class="display-tag label-sour"></span>
-			</div>
-		</div>
-		<div class="post tag-sweet tag-bitter">
-			<div><b>Poison flavored glasses</b></div>
-			<div class="display-tags">
-				<span class="display-tag label-sweet"></span>
-				<span class="display-tag label-bitter"></span>
-			</div>
-		</div>
-		<div class="post tag-sour tag-bitter">
-			<div><b>A boxing match against my principle</b></div>
-			<div class="display-tags">
-				<span class="display-tag label-sour"></span>
-				<span class="display-tag label-bitter"></span>
-			</div>
-		</div>
-		<div class="post tag-sweet tag-salty tag-sour tag-bitter tag-savory">
-			<div><b>A little bit of everything</b></div>
-			<div class="display-tags">
-				<span class="display-tag label-sweet"></span>
-				<span class="display-tag label-salty"></span>
-				<span class="display-tag label-sour"></span>
-				<span class="display-tag label-bitter"></span>
-				<span class="display-tag label-savory"></span>
+		<div class="post programming minecraft">
+			<h3 class="post-title"><a href="mappings-and-maven">Inching Over the Finish Line 60 Times: Gradle, Mappings, and Maven</a></h3>
+			<div class="post-description">An adventure through Minecraft modding's many forms of source representation, the build systems that interact with them, and how I had to navigate it all in order to publish EMI.</div>
+			<div class="post-footer">
+				<span class="post-date">2023-05-25</span>
+				<span> - 20 minute read - </span>
+				<span class="post-tags">
+					<a href="#programming">#programming</a>
+					<a href="#minecraft">#minecraft</a>
+				</span>
 			</div>
 		</div>
 	</div>

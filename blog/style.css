@@ -1,106 +1,184 @@
 :root {
-	--bg-color: #1d2227;
-
-	color: white;
-	font-family: "Ubuntu Mono";
+	--bg-color: #101214;
+	--text-color: white;
+	--text: var(--text-color);
+	--date: #bebebe;
+	--link: #dc9eff;
+	--code: #1b1c1d;
+	--tr-odd: #20252b;
+	--tr-even: #181d22;
 }
 
-.label-sweet {
-	--my-color: #f2c0ff;
-}
-
-.label-sweet.display-tag:after {
-	content: "Sweet";
-}
-
-#tag-sweet:checked ~ #posts .post:not(.tag-sweet) {
-	display: none;
-}
-
-
-.label-salty {
-	--my-color: #85a6ff;
-}
-.label-salty.display-tag:after {
-	content: "Salty";
-}
-#tag-salty:checked ~ #posts .post:not(.tag-salty) {
-	display: none;
-}
-
-.label-sour {
-	--my-color: #ffff85;
-}
-.label-sour.display-tag:after {
-	content: "Sour";
-}
-#tag-sour:checked ~ #posts .post:not(.tag-sour) {
-	display: none;
-}
-
-.label-bitter {
-	--my-color: #85ff85;
-}
-.label-bitter.display-tag:after {
-	content: "Bitter";
-}
-#tag-bitter:checked ~ #posts .post:not(.tag-bitter) {
-	display: none;
-}
-
-.label-savory {
-	--my-color: #ff8585;
-}
-.label-savory.display-tag:after {
-	content: "Savory";
-}
-#tag-savory:checked ~ #posts .post:not(.tag-savory) {
-	display: none;
-}
-
-input[type=checkbox] {
-	border-style: none;
-	margin: 20px 0px;
-	width: 0px;
-	visibility: hidden;
-}
-
-.tag {
-	padding: 6px;
-	border-radius: 16px;
-	border-width: 3px;
-	font-weight: bold;
-	border-style: solid;
-	user-select: none;
-	cursor: pointer;
-	color: var(--my-color);
-	border-color: var(--my-color);
-	transition: background-color 0.3s, color 0.3s;
-}
-
-input:checked + .tag {
-	color: var(--bg-color) !important;
-	background-color: var(--my-color);
-}
-
-.post {
-	margin-bottom: 20px;
-}
-
-.display-tags {
-	margin-top: 8px;
-}
-
-.display-tag {
-	padding: 4px;
-	border-radius: 6px;
-	background-color: var(--my-color);
+::selection {
 	color: var(--bg-color);
+	background-color: var(--text);
+}
+
+* {
+	color: var(--text);
 }
 
 body {
-	max-width: 700px;
+	font-family: "Ubuntu Mono";
+	max-width: 800px;
 	margin-left: auto;
 	margin-right: auto;
 	background-color: var(--bg-color);
+	padding: 24px;
+}
+
+h1 {
+	text-align: center;
+}
+
+p, ol, ul {
+	font-family: "Fira Sans";
+	font-size: large;
+	line-height: 1.4;
+}
+
+li {
+	margin-top: 10px;
+}
+
+code {
+	font-family: "Ubuntu Mono";
+	background-color: var(--code);
+	padding: 2px 4px;
+}
+
+pre {
+	background-color: var(--code);
+	font-size: large;
+	font-family: "Ubuntu Mono";
+	line-height: 1.2;
+	overflow-x: auto;
+	padding: 8px;
+}
+
+.keyword {
+	--text: #569cd6;
+}
+
+.string {
+	--text: #ce9178;
+}
+
+.type {
+	--text: #4ec9b0;
+}
+
+.field {
+	--text: #9cdcfe;
+}
+
+.method {
+	--text: #dcdcaa;
+}
+
+a {
+	--text: var(--link);
+	text-decoration: none;
+}
+
+a:hover {
+	color: var(--bg-color);
+	background-color: var(--link);
+}
+
+table {
+	border-spacing: 0px;
+	width: 100%;
+	margin-bottom: 8px;
+}
+
+thead {
+	text-align: center;
+}
+
+td {
+	padding: 10px 8px;
+}
+
+tr {
+	background-color: var(--tr-odd);
+}
+
+tr:nth-child(2n), thead tr {
+	background-color: var(--tr-even);
+}
+
+.post {
+	margin-top: 20px;
+	padding-bottom: 20px;
+}
+
+.post-title {
+	font-weight: bold;
+	font-size: large;
+	margin-bottom: 8px;
+}
+
+.post-title a {
+	--text: var(--text-color);
+}
+
+.post a:hover {
+	color: var(--bg-color);
+	background-color: var(--text);
+}
+
+.post-description {
+	font-size: medium;
+	margin-bottom: 8px;
+}
+
+.post-footer {
+	--text: var(--date);
+	font-size: medium;
+}
+
+.post-footer a {
+	--text: var(--date);
+}
+
+#clear-tag {
+	padding-top: 8px;
+	visibility: hidden;
+}
+
+.current-tag {
+	display: none;
+}
+
+.current-tag-placeholder {
+	visibility: hidden;
+}
+
+:target {
+	display: inline !important;
+}
+
+:target ~ .current-tag-placeholder {
+	display: none;
+}
+
+:target ~ #clear-tag {
+	visibility: visible;
+}
+
+#programming:target ~ #posts .post:not(.programming) {
+	display: none;
+}
+
+#minecraft:target ~ #posts .post:not(.minecraft) {
+	display: none;
+}
+
+#bytecode:target ~ #posts .post:not(.bytecode) {
+	display: none;
+}
+
+#games:target ~ #posts .post:not(.games) {
+	display: none;
 }

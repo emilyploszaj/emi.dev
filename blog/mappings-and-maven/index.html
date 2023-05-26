@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Emily Ploszaj">
+	<meta name="color-scheme" content="dark light">
+	<meta property="og:title" content="Inching Over the Finish Line 60 Times: Gradle, Mappings, and Maven">
+	<meta property="og:description" content="An adventure through Minecraft modding's many forms of source representation, the build systems that interact with them, and how I had to navigate it all in order to publish EMI.">
+	<meta property="og:site_name" content="emi.dev">
+	<meta name="theme-color" content="#dc9eff">
+	<title>Emi's Blog</title>
+	<link rel="stylesheet" href="https://fonts.bunny.net/css?family=Fira+Sans:400,700">
+	<link rel="stylesheet" href="https://fonts.bunny.net/css?family=Ubuntu+Mono:400,700">
+	<link rel="stylesheet" type="text/css" href="/blog/style.css">
+</head>
+<body>
+	<h1>Emi's Blog</h2>
+	<h3><a href="/blog/">&lt- Back to blog</a></h3>
+	
+	<h1>Inching Over the Finish Line 60 Times: Gradle, Mappings, and Maven</h1>
+	<p>
+		I spent a weekend and more in what I can only affectionately refer to as the Gradle and Maven trenches.
+		But first, some context.
+		At time of writing, I'm finishing up the process of porting my mod, EMI, from being Fabric exclusive to Forge and, more broadly, to an xplat build system.
+		This has involved a lot of technical work in a lot of areas, but most of it is not relevant to my recent goal: publishing binaries and sources for EMI on Maven.
+		As an xplat mod and API, I need to publish different jars for Fabric/Quilt consumers, Forge consumers, Intermediary xplat consumers, and Mojmap xplat consumers.
+	</p>
+	<h2>
+		Four different distributions?
+	</h2>
+	<p>
+		Yep!
+		Though, to understand why, we're going to have to talk about mappings.
+		If you know everything there is to know about mappings, you can skip past it to <a href="#publishing">Publishing</a>.
+	</p>
+	<h2 id="mappings">Mappings</h2>
+	<p>
+		Minecraft is released as a jar file, and for basically its entire life has had its class, method, and field names obfuscated using ProGuard.
+		This process minimizes the names of all symbols to an extreme degree.
+		Everything is a short string of letters, most methods are named simply <code>a</code>.
+		Worse yet, there's no consistency, a class called <code>faa</code> in one snapshot can be <code>ddq</code> in the next.
+	</p>
+	<p>
+		Early modding interfaced with these names directly, manually replacing class files and delicately calling all the impossible to understand names.
+		Naturally though, this is infeasible, and a solution needed to be developed.
+		The idea is simple; some modding collective like Forge gets together when Minecraft releases a version and creates a file that maps every Official (obfuscated) name to something that makes more sense.
+		Then, when modders mod the game, they transform the Minecraft jar file to this mapping so they can understand what they're doing, then when they build their mod, the build system unmaps it back to the official mappings, and everything is great!
+	</p>
+	<p>
+		Haha, it's not that simple.
+		Mappings solve the issue of understanding what you're doing, but this still presents two problems:
+	</p>
+	<ul>
+		<li>Everything breaks on minor versions, because the Official names have changed.</li>
+		<li>If something has a bad name, you have to wait to change it.</li>
+	</ul>
+	<p>
+		To solve this, at the start over every version an intermediary layer is created that contains names that are still mostly nonsense, but can be used as a source of truth.
+		There are also efforts to keep what these names point to the same, so the intermediaries are incrementally generated every release to try and track changes.
+		Modloaders, like Forge, Fabric, or Quilt, will generate their intermediary layer, and use this to remap the game at runtime from the official names.
+		Mods are written with whatever updated version of the mappings with sensible names exists, and will be compiled to the intermediary, and loaded alongside the base game.
+		Voilà!
+		We've overcomplicated everything, but now we have a working system, let's put a name to all the pieces in the modern ecosystem.
+	</p>
+	<table>
+		<thead>
+			<tr>
+				<td>Name</td>
+				<td>Example</td>
+				<td>Description</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Official</td>
+				<td><code><span class="type">eub</span>.<span class="method">a</span></code></td>
+				<td>The distributed, obfuscated code</td>
+			</tr>
+			<tr>
+				<td>SRG</td>
+				<td><code><span class="type">C_3624_</span>.<span class="method">m_97774_</span></code></td>
+				<td>Forge's intermediary</td>
+			</tr>
+			<tr>
+				<td>Mixed SRG</td>
+				<td><code><span class="type">AbstractContainerScreen</span>.<span class="method">m_97774_</span></code></td>
+				<td>Forge's other intermediary</td>
+			</tr>
+			<tr>
+				<td>Intermediary</td>
+				<td><code><span class="type">class_465</span>.<span class="method">method_2387</span></code></td>
+				<td>Fabric's incremental intermediary</td>
+			</tr>
+			<tr>
+				<td>Hashed</td>
+				<td><code><span class="type">C_gwivrcyr</span>.<span class="method">m_cwxxnnun</span></code></td>
+				<td>Quilt's intermediary</td>
+			</tr>
+			<tr>
+				<td>MCP</td>
+				<td><code><span class="type">ContainerScreen</span>.<span class="method">isSlotSelected</span></code></td>
+				<td>Legacy Forge's dev mappings</td>
+			</tr>
+			<tr>
+				<td>Yarn</td>
+				<td><code><span class="type">HandledScreen</span>.<span class="method">isPointOverSlot</span></code></td>
+				<td>Fabric's cleanroom dev mappings</td>
+			</tr>
+			<tr>
+				<td>Quilt Mappings</td>
+				<td><code><span class="type">HandledScreen</span>.<span class="method">isPointOverSlot</span></code></td>
+				<td>Quilt's Yarn derivative</td>
+			</tr>
+			<tr>
+				<td>Mojmap</td>
+				<td><code><span class="type">AbstractContainerScreen</span>.<span class="method">isHovering</span></code></td>
+				<td>Mojang's official mappings</td>
+			</tr>
+		</tbody>
+	</table>
+	<h2>Wait a second, Mojang's official mappings?</h2>
+	<p>
+		Yeah.
+		While you're at it you might also be concerned about Forge seemingly having two intermediaries?
+		Well, it's the result of <a href="https://github.com/MinecraftForge/ForgeAutoRenamingTool">ForgeAutoRenamingTool</a> which mixes Mojmap classes with SRG methods and fields.
+		Before Mojmap existed, it mixed Official obfuscated class names with SRG methods and fields instead.
+		And doesn't seem to have a name?
+		People have called it "FART", but I'm going to go with Mixed SRG.
+	</p>
+	<p>
+		Things probably still aren't super clear.
+		Let's see where things are being used.
+	</p>
+	<table>
+		<thead>
+			<tr>
+				<td>Loader</td>
+				<td>Dev Mappings</td>
+				<td>Runtime Intermediary</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Forge</td>
+				<td>Mojmap</td>
+				<td>Mixed SRG</td>
+			</tr>
+			<tr>
+				<td>Legacy Forge</td>
+				<td>MCP</td>
+				<td>Legacy Mixed SRG</td>
+			</tr>
+			<tr>
+				<td>Fabric</td>
+				<td>Yarn, Mojmap, Quilt Mappings, et al</td>
+				<td>Intermediary</td>
+			</tr>
+			<tr>
+				<td>Quilt</td>
+				<td>Quilt Mappings, Mojmap, Yarn, et al</td>
+				<td>Intermediary</td>
+			</tr>
+		</tbody>
+	</table>
+	<table>
+		<thead>
+			<tr>
+				<td>Build System</td>
+				<td>Dev Mappings</td>
+				<td>Intermediary</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Architectury</td>
+				<td>Mojmap, Yarn, Quilt Mappings, et al</td>
+				<td>Intermediary</td>
+			</tr>
+			<tr>
+				<td>VanillaGradle</td>
+				<td>Mojmap</td>
+				<td>Mojmap</td>
+			</tr>
+		</tbody>
+	</table>
+	<p>
+		Wait why's Quilt using Intermediary, doesn't it have Hashed?
+		Also what's VanillaGradle and why does it use a dev mapping as an intermediary format?
+		I appreciate the observations, but we should take a step back.
+	</p>
+	<p>
+		The textile loaders (Fabric and Quilt) use Fabric's incremental <a href="https://github.com/FabricMC/intermediary">Intermediary</a>, which is what the loaders map Official names to at runtime.
+		<a href="https://github.com/FabricMC/fabric-loom">Fabric Loom</a> allows you to use arbitrary mappings, primarily <a href="https://github.com/FabricMC/yarn">Yarn</a> or <a href="https://github.com/QuiltMC/quilt-mappings">Quilt Mappings</a> respectively, at dev time.
+		Yarn and Quilt Mappings are updated several times each version, and developers can use whatever version they want.
+		Mods are built from named mappings into Intermediary, the consistent names for the version.
+	</p>
+	<p>
+		Forge generates an incremental <a href="https://github.com/MinecraftForge/MCPConfig">SRG</a> intermediary, and mixes that with Mojmap class names to create Mixed SRG, which is what the loader maps Official names to at runtime.
+		<a href="https://github.com/MinecraftForge/ForgeGradle">ForgeGradle</a> only allows you to use Mojmap.
+		Mods are built from Mojmap into Mixed SRG.
+	</p>
+	<h2>No seriously what's Mojmap?</h2>
+	<p>
+		Oh right, so for a while the loaders were doing their thing, back when Forge used MCP as dev mappings and Mixed SRG used Official class names mixed with SRG.
+		The date that would go down in history was September 4th, 2019, 8 years after the game's official release, and 9 after the game's alpha release, Mojang released snapshot <a href="https://www.minecraft.net/en-us/article/minecraft-snapshot-19w36a">19w36a</a>.
+		Inside of this snapshot was a brand new change, Mojang still uses ProGuard to obfuscate the game, but now releases a json file that maps all of the Official names to the original names used by the developers.
+	</p>
+	<p>
+		This set of mappings is often called Mojmap, though it's worth noting that it has no official name.
+		Some people also call it the "Official Mappings", but that can be confused with the Official obfuscated mappings, and Mojmap sounds cooler.
+		Why didn't they just stop obfuscating the game you ask?
+		Well that's not clear, but considering Mojmap is under a restrictive, custom license, it's probably safe to assume the reason is legal.
+	</p>
+	<h2>Then why doesn't everybody use that?</h2>
+	<p>
+		That's a complicated question.
+		The answer is a combination of historical, legal, and social factors.
+		The most notable legal portion of Mojmap's license, last updated in <a href="https://www.minecraft.net/en-us/article/minecraft-snapshot-21w03a">21w03a</a> in early 2021 is it does not allow distribution of the mappings "complete and unmodified".
+	</p>
+	<p>
+		Forge is reluctant to use Mojmap at runtime, and compromises with Mixed SRG using only the class names, and using SRG for the method and field names.
+		Modernly, SRG utilizes Mojmap to match names.
+		At dev time, however, ForgeGradle uses Mojmap.
+	</p>
+	<p>
+		Fabric's Intermediary is completely independent of Mojmap, incrementally generated each snapshot using <a href="https://github.com/FabricMC/Matcher">Matcher</a> to try and keep the names on the same symbols.
+		This approach is reasonably effective at tracking methods even when their signatures change or Mojang renames them.
+		Fabric uses <a href="https://github.com/FabricMC/yarn">Yarn</a> for the development of its libraries.
+		Yarn is semi-cleanroom set of mappings, backed by Intermediary.
+		It does not allowing references or "inspiration" from other sets of more restrictive mappings.
+	</p>
+	<p>
+		Quilt doesn't use Mojmap directly, and instead <a href="https://github.com/QuiltMC/mappings-hasher">hashes it</a> to create an intermediary.
+		This intermediary is intended to eventually replace their usage of Fabric's Intermediary, but currently is only used for internal development purposes and not used at runtime.
+		Unlike Intermediary, its generation is not incremental, but instead relies on Mojang not changing their names too often.
+		<a href="https://github.com/QuiltMC/quilt-mappings">Quilt Mappings</a> is a set of mappings forked from Yarn with a less restrictive stance, allowing contributions derived from other sets of mappings, including Mojmap.
+	</p>
+	<p>
+		Both Fabric and Quilt use a version of Loom, which allows usage of arbitrary mappings, including Mojmap, though as they each have their own set of mappings, Yarn and Quilt Mappings respectively, Mojmap is not the default.
+	</p>
+	<h2>My thoughts on mappings</h2>
+	<p>
+		SRG is quite vestigial.
+		It provides no clear benefit to Forge other than legal posturing and adherence to legacy tools.
+	</p>
+	<p>
+		As a format, Intermediary has a pretty reasonable leg to stand on for existing, being both non-derivative of Mojmap and having unique benefits for usage.
+		While not without its flaws, Yarn's semi-cleanroom stance and contribution process sets it apart as a very high quality set of mappings.
+		It's hard to imagine that community reverse engineered names could be better than the real ones used by the game's developers.
+		However, when your goal is strictly making good names rather than the rest of the responsibility for the code, great things can happen.
+	</p>
+	<p>
+		Much of the things said about Yarn apply to Quilt Mappings.
+		It retains many of the names, and can have a quicker and more informed iteration cycle with references to Mojmap.
+		On the other hand, Hashed is a pretty disappointing format.
+		It's most comparable to modern SRG, but without the legacy to back it up.
+		Its primary benefit over Intermediary is not being Intermediary, as Quilt has an interest in reducing reliance on Fabric, and as Intermediary requires manual intervention for generation, requires a single authority.
+		Quilt currently has one way compatibility with Fabric, allowing Fabric mods to load, and allowing Quilt devs to use APIs developed on Fabric.
+		Switching to Hashed would break both of these without serious work, and would significantly complicate the publishing landscape of both the textiles and the general xplat ecosystems.
+	</p>
+	<h2 id="publishing">Publishing</h2>
+	<p>
+		Okay enough about mappings, you get the idea.
+		What's the deal with publishing and xplat?
+	</p>
+	<p>
+		APIs in mods are published on Maven in the loader's respective intermediary format, Mixed SRG on Forge, and Intermediary on the textile loaders.
+		ForgeGradle and Loom will remap the mods from the intermediary to the dev mappings when depended on.
+		Xplat mods use build systems that lets them reuse common code that only depends on Minecraft, and have much smaller loader specific implementations.
+		The two most common xplat build systems are <a href="https://github.com/architectury/architectury-loom">Architectury</a> and <a href="https://github.com/SpongePowered/VanillaGradle">VanillaGradle</a>.
+	</p>
+	<p>
+		Architectury uses a fork of Fabric's Loom to allow it to work with Forge. Because it uses Loom, it produces Intermediary binaries, and has specific tooling to remap the Forge output to Mixed SRG.
+	</p>
+	<p>
+		VanillaGradle on its own isn't a full build system, but rather a minimalist build system that only knows about vanilla Minecraft.
+		However, it is the core of the <a href="https://github.com/jaredlll08/MultiLoader-Template">MultiLoader Template</a>.
+		The MultiLoader Template uses VanillaGradle for the common xplat sourceset, and then uses Fabric Loom and ForgeGradle on the respective modloaders.
+		ForgeGradle natively produces Mixed SRG binaries, and Fabric Loom natively produces intermediary binaries.
+		So everything works!
+	</p>
+	<h2>Xplat binaries</h2>
+	<p>
+		Xplat binaries?
+		Why would you want that?
+		You can't run a mod without a modloader.
+	</p>
+	<p>
+		But you can depend on its API.
+	</p>
+	<p>
+		So it's time to talk about APIs and dependencies from the perspective of an xplat mod.
+		Both are equipped to readily handle Forge and Fabric dependencies on either end, but there is another use case.
+		For the more familiar, consider a mod like <a href="https://www.curseforge.com/minecraft/mc-mods/jei">JEI</a>, <a href="https://www.curseforge.com/minecraft/mc-mods/patchouli">Patchouli</a>, or <a href="https://www.curseforge.com/minecraft/mc-mods/cloth-config">Cloth Config</a>.
+		These mods release on both Fabric and Forge, and use an xplat build system.
+		So, logically, if you're making an xplat mod, surely you don't need to have a dedicated Fabric and Forge implementation of these mods, you could just depend on them in your xplat module!
+	</p>
+	<p>
+		Well, I appreciate the enthusiasm.
+		It is, of course, not that simple.
+		The main question is, as an artifact producer, what do you export your artifact as so that xplat consumers can use it?
+		Forge uses Mixed SRG, and Fabric uses Intermediary, which one do you pick for the common ground?
+		Architectury and VanillaGradle raise their hands confidently at the same time and shout out completely different answers.
+		Architectury uses Intermediary, it's a derivative of Loom after all, this is its natural format.
+		VanillaGradle uses Mojmap.
+		Hold on a second, Mojmap?
+		That wasn't one of the options.
+	</p>
+	<p>
+		Oops!
+		VanillaGradle is, by construction, supposed to be simple.
+		It doesn't know what an intermediary is, it only knows what Minecraft is and how to get it to be Mojmap.
+		Mojmap is all it knows, and all it wants to know.
+	</p>
+	<p>
+		Well that's a shame, each one has a completely incompatible intermediary, and both build systems are widely used.
+		How are xplat APIs like Patchouli, JEI, and Cloth Config solving this issue then?
+		All of these mods produce consumable xplat artifacts after all.
+		Here's a list of the different strategies employed by these mods to produce widely consumable xplat artifacts:
+	</p>
+	<ul>
+		<li><code>// TODO pls fix</code></li>
+	</ul>
+	<h2>Uh oh the list is empty</h2>
+	<p>
+		Wait are you saying that no xplat libraries properly expose binaries for both types of consumer?
+		Of course not!
+		And by that I mean yes, no xplat libraries properly expose binaries for both types of consumer.
+	</p>
+	<p>
+		Small caveat time, while ForgeGradle and Loom remap dependencies to be used, this isn't an absolutely necessary step.
+		If your dependency and you use the same version of the same mappings, the remapping step will just map no names (nothing found, nothing to do!).
+		And then you'll be left with a jar that just works on accident.
+		Neat!
+	</p>
+	<p>
+		This isn't really a solution, though.
+		You can't just say "use my mappings or perish" because inevitably a mod will need two incompatible mappings for its dependencies.
+		Either two different mappings, or more insidiously two different versions of the same mappings.
+		Also no one is going to change their mappings for a dependency.
+		Either way, you're eventually going to get issues, which is why intermediaries exist, and why ForgeGradle and Loom handle this.
+	</p>
+	<h2>Everyone should just use Mojmap!</h2>
+	<p>
+		This is often repeated when people start talking about problems with mappings.
+		"Everyone should just do what I do" is both a solution to any problem, and also not useful. 
+		Everyone's going to disagree on the common thing to do, and oops you're in the exact same position.
+		Fabric as a loader refuses to adopt Mojmap, and Forge is reluctant to wholy and fully embrace it, still maintaining SRG and partially using it for runtime remapping.
+		Mojmap is also, strictly speaking, not an effective intermediary.
+	</p>
+	<p>
+		One of the core features of an intermediary is a stable naming convention to allow mods to work across trivial version boundaries among other things.
+		But Mojmap maps all the classes, methods, and fields, right?
+		Well, for the most part yes, but these names are not stable, the devs can and do change them whenever they want.
+		Minecraft is a product, not an API.
+	</p>
+	<p>
+		But more directly, a ton of methods in the game aren't actually mapped by Mojmap.
+		As the bulk, synthetic methods (secret methods generated by java for special language features like lambdas) remain unmapped.
+		You may think modders don't need to touch these, but since both loaders support arbitrary bytecode transformation of vanilla classes at runtime, you may be surprised by a lot of things people do.
+	</p>
+	<p>
+		As a side note, SRG actually doesn't support this either anymore, so this is more of a point for the textile ecosystems where this concrete stability is expected and relied on.
+	</p>
+	<p>
+		This combination of technical and social factors means while widespread Mojmap use would benefit everyone, it's also just never going to happen, the same way "Everyone should use Fabric" is wishful thinking.
+		Some people don't like Mojmap names, and will cling to their favorite mappings forever.
+		Personally, I use Yarn in all of my projects, and would go to pretty absurd lengths to continue doing so.
+		So we need a solution that accommodates all the common types of users. 
+	</p>
+	<h2>EMI's solution</h2>
+	<p>
+		So we have a publishing problem.
+		How does EMI solve it?
+		Simple!
+		Alongside my Fabric and Forge artifacts, I just need to publish an Intermediary and a Mojmap copy and let the consumers use the one they need.
+		This is only trivially possible because I use Architectury Loom, which supports mapping to Intermediary at all.
+		Then I simply need to document a bunch of example dependencies for various use cases, like this table, but better.
+	</p>
+	<table>
+		<thead>
+			<tr>
+				<td>Environment</td>
+				<td>Use</td>
+				<td>Dependency</td>
+			</tr>
+		</thead>
+		<tr>
+			<td>Fabric/Quilt</td>
+			<td>Compile</td>
+			<td><code>modCompileOnly <span class="string">"dev.emi:emi-fabric:</span><span class="keyword">${</span>project.emi_version<span class="keyword">}</span><span class="string">:api"</span></code></td>
+		</tr>
+		<tr>
+			<td>Fabric/Quilt</td>
+			<td>Runtime</td>
+			<td><code>modLocalRuntime <span class="string">"dev.emi:emi-fabric:</span><span class="keyword">${</span>project.emi_version<span class="keyword">}</span><span class="string">"</span></code></td>
+		</tr>
+		<tr>
+			<td>Forge</td>
+			<td>Compile</td>
+			<td><code>compileOnly fg.deobf(<span class="string">"dev.emi:emi-forge:</span><span class="keyword">${</span>project.emi_version<span class="keyword">}</span><span class="string">:api"</span>)</code></td>
+		</tr>
+		<tr>
+			<td>Forge</td>
+			<td>Runtime</td>
+			<td><code>runtimeOnly fg.deobf(<span class="string">"dev.emi:emi-forge:</span><span class="keyword">${</span>project.emi_version<span class="keyword">}</span><span class="string">"</span>)</code></td>
+		</tr>
+		<tr>
+			<td>Architectury</td>
+			<td>Compile</td>
+			<td><code>modCompileOnly <span class="string">"dev.emi:emi-xplat-intermediary:</span><span class="keyword">${</span>project.emi_version<span class="keyword">}</span><span class="string">:api"</span></code></td>
+		</tr>
+		<tr>
+			<td>VG</td>
+			<td>Compile</td>
+			<td><code>modCompileOnly <span class="string">"dev.emi:emi-xplat-mojmap:</span><span class="keyword">${</span>project.emi_version<span class="keyword">}</span><span class="string">:api"</span></code></td>
+		</tr>
+	</table>
+	<p>
+		Of course, producing Mojmap artifacts is non-trivial, especially since I use Yarn to develop EMI.
+		This is solved by adding a new subproject that's configured to use Mojmap, grabbing the Intermediary jars from my xplat project, and then asking Loom very nicely to reverse the process.
+		Since the subproject uses Mojmap, you've got a valid VG Mojmap xplat artifact, push on Maven and thrive.
+		Here's one of the tasks my project uses.
+	</p>
+	<pre>task mojmapJar(type: <span class="type">net.fabricmc.loom.task.RemapJarTask</span>) {
+	classpath.from loom.getMinecraftJarsCollection(<span class="type">net.fabricmc.loom.api.mappings.layered.MappingsNamespace.INTERMEDIARY</span>)
+	dependsOn project(<span class="string">':xplat'</span>).remapJar
+	
+	inputFile = project(<span class="string">':xplat'</span>).remapJar.archiveFile
+	sourceNamespace = <span class="string">'intermediary'</span>
+	targetNamespace = <span class="string">'named'</span>
+	
+	remapperIsolation = <span class="keyword">true</span>
+}</pre>
+	<p>
+		Bam!
+		That's that, do the same with the API and sources jars and you've got everything working, all popular build systems can consume EMI as a library, making it the first mod of its kind.
+	</p>
+	<h2>What's wrong with my sources</h2>
+	<p>
+		That's the end of the story when it comes to mappings, but that's not the end of the story when it comes to Gradle and Maven.
+		I encountered a bunch of roadblocks while working on this, most significant among them was an issue I caught very late on.
+		As a bit of context, when publishing artifacts to Maven for others to use as a dependency, there are 3 common types of artifacts published:
+	</p>
+	<ol>
+		<li>
+			First is the normal jar, the mod just made.
+		</li>
+		<li>
+			Second, and optionally, is the API jar.
+			This is a subset of the API visible classes in the primary artifact.
+			The utility of providing this is consumers can depend on it and know for a fact that they're not accidentally importing and using implementation features.
+			A lot of people in the modded community live with the "move fast and break things" pathos, but stick around a while and you'll probably start to appreciate stability.
+		</li>
+		<li>
+			Finally, is the sources jar.
+			While this is a jar in the literal sense, it doesn't have .class files, it is full of .java files.
+			Traditionally, this is the source code used to generate the primary artifact.
+			Not necessarily a reproduceable build, but sources are used by IDEs to view javadocs on methods as well as explore code.
+			In modded environments, sources are often exported in an intermediary format, and the build system handles remapping it as well.
+			This is to prevent confusion.
+			Though, because it's mostly invisible when using the same mapping set, a lot of libraries actually export their sources incorrectly.
+			(Here's a fun game, go on random Mavens for Fabric mods and try to guess if the sources are in Mojmap, Yarn, or Intermediary).
+			Javadocs are pretty important, so while the absence won't prevent compilation, this is basically a necessity for libraries to expose.
+		</li>
+	</ol>
+	<p>
+		So sources are important.
+		And mine were broken.
+		Initially this seemed like a problem with just the xplat projects, but further investigation revealed this was just a sampling bias.
+		The issue I was running into caused my sources to get partially remapped, fail, and just exclude the remaining classes.
+		This is a terrifying (nearly) silent failure state!
+		The processing order was consistent but arbitrary, meaning Forge and Fabric produced significantly more readable sources by random chance.
+		Xplat on the other hand was correctly mapping 14 of about 300 classes for a clean 5%, which is how it got noticed.
+	</p>
+	<h2>The problem</h2>
+	<p>
+		I'd like to tell you what the problem was.
+		I spent 2 hours with a debugger attached to Gradle stepping through method calls reading stack traces and locals to find out.
+		In the end I only had 3 conclusions:
+	</p>
+	<ol>
+		<li>
+			My classpath was incomplete for the remap tasks.
+		</li>
+		<li>
+			I knew what classes were causing it to break.
+			This was actually much harder to find out than you'd think.
+			You don't get a nice print when a remap fails, just a pretty <code>java.lang.NullPointerException</code> and a suspiciously roomy jar file.
+		</li>
+		<li>
+			This failure wasn't only occurring in my local project, but was also occurring in dependent projects when they attempted to map my sources.
+		</li>
+	</ol>
+	<p>
+		The problem seemed to be stemming from my usage of another library at compile time only and only in my xplat subproject.
+		JEI is developed using VanillaGradle, so its xplat artifacts are actually unusable by EMI, and instead I need to depend on its Fabric artifacts from xplat and just... be careful to not use the wrong things.
+		If JEI was not on the classpath when Loom tried to remap my sources, it'd just silently fail and give me my beautiful empty jars.
+		This wasn't hard and fast though, plenty of classes using JEI methods got remapped totally fine, and only a handful were causing this issue.
+	</p>
+	<p>
+		Ultimately, making progress on solving this was taking a ton of time, and fixing the problem on my end wasn't even an option.
+		Even if I did work my magic, it'd still fail to remap for consumers, unless I transitively made them depend on JEI for an internal bit of functionality unrelated to my API (which I'm not going to do).
+		So I did what every reasonable engineer does when going gets tough, I wrote an elegant hack to exclude the problematic classes and accepted the slightly incomplete sources jar since they were implementation classes.
+	</p>
+	<pre>task filteredSourcesJar(type: <span class="type">Jar</span>) {
+	classifier = <span class="string">'filtered-sources'</span>
+	dependsOn remapSourcesJar
+	from zipTree(remapSourcesJar.archivePath)
+	exclude <span class="string">'dev/emi/emi/jemi/**'</span>
+}</pre>
+	<p>
+		I used this task in place of <code>remapSourcesJar</code> for publishing artifacts and for remapping Mojmap sources.
+		This task was also present on the Fabric and Forge sides, but that didn't fix the failures inside of those projects.
+		I found that I need to re-specify all of my compile time dependencies from my xplat project in my loader projects, despite them remaining unused.
+		This likely has to do with how Architectury does its project dependencies, but I don't have a handful of hours staring at a debugger attached to Gradle in me to find out for sure.
+		Following this approach with my Mojmap xplat project would likely have similar results, but it's ultimately uneeded as I need to filter the jar regardless.
+		With all this together, I was generating proper sources on Fabric and Forge too.
+	</p>
+	<h2 id="conclusion">Conclusion</h2>
+	<p>
+		EMI can successfully publish its binaries for all 4 platforms.
+		It publishes 3 artifacts (normal, API, and sources) per platform and has 4 platforms (Forge, Fabric, Intermediary xplat, and Mojmap xplat).
+		A release of a single Minecraft version includes 12 jars.
+		Since EMI currently supports 1.18.2, 1.19.2, 1.19.3, and 1.19.4, and will be supporting 1.20 when it comes out in a matter of days, that'd be 5 versions.
+		EMI updates all Minecraft versions at once, 3 artifacts, 4 platforms, and 5 Minecraft versions permutates for 60 jars per release.
+		That's quite a couple compared to the average library, especially considering it's 60 versions of basically the same thing.
+	</p>
+	<p>
+		Build systems in the Minecraft ecosystem, especially for the increasingly common xplat use cases, are an absolute mess.
+		Every loader has its own quirks for dev mappings and intermediaries, no one is too interesting in coming together, and Quilt in particular is looking to widen the gap.
+		The two primary xplat build systems, Architectury and VanillaGradle, are incompatible with each other, and requires delicate hacking for one way interop.
+	</p>
+	<p>
+		ForgeGradle is a rigid and untenable mess, and I didn't even get into the issues I ran into where consumers of mods with mixins (like mine!) need to specify seemingly random build flags to not get instant runtime crashes.
+		Loom is more permissive but has serious limitations and shortcomings that require being worked around, as well as subtle failures that need to be caught.
+		Architectury is quite fragile and has its own share of obtuse operations, getting a workspace going is its own challenge.
+		And VanillaGradle is a simple and effective tool for certain situations being used outside of its domain.
+	</p>
+	<p>
+		Where does this leave us?
+		Well, EMI is available on all common build systems.
+		We now know more about Minecraft build systems and mappings.
+		With this, we're inched ever forward towards global serenity.
+		Maybe in a couple years, things will look better.
+		Until then, we'll make do.
+	</p>
+</body>
+</html>
