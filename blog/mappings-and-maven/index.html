@@ -22,7 +22,7 @@
 		I spent a weekend and more in what I can only affectionately refer to as the Gradle and Maven trenches.
 		But first, some context.
 		At time of writing, I'm finishing up the process of porting my mod, EMI, from being Fabric exclusive to Forge and, more broadly, to an xplat build system.
-		This has involved a lot of technical work in a lot of areas, but most of it is not relevant to my recent goal: publishing binaries and sources for EMI on Maven.
+		This has involved a lot of technical work in a lot of areas, but most of it is not relevant to my recent goal: publishing artifacts and sources for EMI on Maven.
 		As an xplat mod and API, I need to publish different jars for Fabric/Quilt consumers, Forge consumers, Intermediary xplat consumers, and Mojmap xplat consumers.
 	</p>
 	<h2>
@@ -227,7 +227,7 @@
 		This approach is reasonably effective at tracking methods even when their signatures change or Mojang renames them.
 		Fabric uses <a href="https://github.com/FabricMC/yarn">Yarn</a> for the development of its libraries.
 		Yarn is semi-cleanroom set of mappings, backed by Intermediary.
-		It does not allowing references or "inspiration" from other sets of more restrictive mappings.
+		It does not allow references or "inspiration" from other sets of more restrictive mappings.
 	</p>
 	<p>
 		Quilt doesn't use Mojmap directly, and instead <a href="https://github.com/QuiltMC/mappings-hasher">hashes it</a> to create an intermediary.
@@ -279,9 +279,9 @@
 		ForgeGradle natively produces Mixed SRG binaries, and Fabric Loom natively produces intermediary binaries.
 		So everything works!
 	</p>
-	<h2>Xplat binaries</h2>
+	<h2>Xplat artifacts</h2>
 	<p>
-		Xplat binaries?
+		Xplat artifacts?
 		Why would you want that?
 		You can't run a mod without a modloader.
 	</p>
@@ -323,9 +323,9 @@
 	</ul>
 	<h2>Uh oh the list is empty</h2>
 	<p>
-		Wait are you saying that no xplat libraries properly expose binaries for both types of consumer?
+		Wait are you saying that no xplat libraries properly expose artifacts for both types of consumer?
 		Of course not!
-		And by that I mean yes, no xplat libraries properly expose binaries for both types of consumer.
+		And by that I mean yes, no xplat libraries properly expose artifacts for both types of consumer.
 	</p>
 	<p>
 		Small caveat time, while ForgeGradle and Loom remap dependencies to be used, this isn't an absolutely necessary step.
@@ -519,7 +519,7 @@
 	</p>
 	<h2 id="conclusion">Conclusion</h2>
 	<p>
-		EMI can successfully publish its binaries for all 4 platforms.
+		EMI can successfully publish its artifacts for all 4 platforms.
 		It publishes 3 artifacts (normal, API, and sources) per platform and has 4 platforms (Forge, Fabric, Intermediary xplat, and Mojmap xplat).
 		A release of a single Minecraft version includes 12 jars.
 		Since EMI currently supports 1.18.2, 1.19.2, 1.19.3, and 1.19.4, and will be supporting 1.20 when it comes out in a matter of days, that'd be 5 versions.
