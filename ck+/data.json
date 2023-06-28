@@ -14717,6 +14717,10 @@
             "name": "secretpotion"
         },
         {
+            "description": "Captures every pokemon without fail",
+            "name": "master-ball"
+        },
+        {
             "description": "Cures all status conditions",
             "name": "miracleberry"
         },
@@ -14861,6 +14865,11 @@
                     "amount": "1",
                     "info": "???",
                     "item": "twistedspoon"
+                },
+                {
+                    "amount": "?",
+                    "info": "Rematch Youngster Joey",
+                    "item": "master-ball"
                 }
             ],
             "locations": [],
