@@ -64,7 +64,7 @@
                         {
                             "chance": 15,
                             "level": 14,
-                            "pokemon": "goldeen"
+                            "pokemon": "seel"
                         }
                     ],
                     "night": [
@@ -3505,7 +3505,7 @@
                         {
                             "chance": 5,
                             "level": 25,
-                            "pokemon": "butterfree"
+                            "pokemon": "heracross"
                         },
                         {
                             "chance": 5,
@@ -3520,7 +3520,7 @@
                         {
                             "chance": 10,
                             "level": 25,
-                            "pokemon": "paras"
+                            "pokemon": "pineco"
                         },
                         {
                             "chance": 5,
@@ -7800,7 +7800,7 @@
                     {
                         "chance": 5,
                         "level": 5,
-                        "pokemon": "spinarak"
+                        "pokemon": "meowth"
                     },
                     {
                         "chance": 4,
@@ -7810,7 +7810,7 @@
                     {
                         "chance": 1,
                         "level": 5,
-                        "pokemon": "meowth"
+                        "pokemon": "ditto"
                     }
                 ]
             },
@@ -7846,7 +7846,7 @@
                     {
                         "chance": 30,
                         "level": 7,
-                        "pokemon": "snubbull"
+                        "pokemon": "poliwag"
                     },
                     {
                         "chance": 20,
@@ -7920,7 +7920,7 @@
                     {
                         "chance": 30,
                         "level": 7,
-                        "pokemon": "poliwag"
+                        "pokemon": "snubbull"
                     },
                     {
                         "chance": 20,
@@ -7935,7 +7935,7 @@
                     {
                         "chance": 5,
                         "level": 7,
-                        "pokemon": "snubbull"
+                        "pokemon": "wooper"
                     },
                     {
                         "chance": 4,
@@ -8060,7 +8060,7 @@
                     {
                         "chance": 20,
                         "level": 12,
-                        "pokemon": "oddish"
+                        "pokemon": "bellsprout"
                     },
                     {
                         "chance": 10,
@@ -8243,7 +8243,7 @@
                     {
                         "chance": 30,
                         "level": 18,
-                        "pokemon": "marill"
+                        "pokemon": "yanma"
                     },
                     {
                         "chance": 30,
@@ -8253,12 +8253,12 @@
                     {
                         "chance": 20,
                         "level": 18,
-                        "pokemon": "sandshrew"
+                        "pokemon": "hoppip"
                     },
                     {
                         "chance": 10,
                         "level": 18,
-                        "pokemon": "hoppip"
+                        "pokemon": "sandshrew"
                     },
                     {
                         "chance": 5,
@@ -8386,7 +8386,7 @@
                     {
                         "chance": 4,
                         "level": 21,
-                        "pokemon": "ditto"
+                        "pokemon": "bulbasaur"
                     },
                     {
                         "chance": 1,
@@ -8423,12 +8423,12 @@
                     {
                         "chance": 4,
                         "level": 21,
-                        "pokemon": "ditto"
+                        "pokemon": "bulbasaur"
                     },
                     {
                         "chance": 1,
                         "level": 21,
-                        "pokemon": "ditto"
+                        "pokemon": "ivysaur"
                     }
                 ],
                 "night": [
@@ -9856,19 +9856,19 @@
                     {
                         "chance": 4,
                         "level": 5,
-                        "pokemon": "totodile"
+                        "pokemon": "cyndaquil"
                     },
                     {
                         "chance": 1,
                         "level": 5,
-                        "pokemon": "cyndaquil"
+                        "pokemon": "eevee"
                     }
                 ],
                 "morning": [
                     {
                         "chance": 30,
                         "level": 5,
-                        "pokemon": "nidoran-m"
+                        "pokemon": "bulbasaur"
                     },
                     {
                         "chance": 30,
@@ -9883,7 +9883,7 @@
                     {
                         "chance": 10,
                         "level": 5,
-                        "pokemon": "bulbasaur"
+                        "pokemon": "nidoran-m"
                     },
                     {
                         "chance": 5,
@@ -9935,7 +9935,7 @@
                     {
                         "chance": 1,
                         "level": 5,
-                        "pokemon": "eevee"
+                        "pokemon": "squirtle"
                     }
                 ]
             }
@@ -14617,6 +14617,10 @@
             "name": "charcoal"
         },
         {
+            "description": "Increases the damage of psychic type moves by 10%",
+            "name": "twistedspoon"
+        },
+        {
             "description": "Cures freeze",
             "name": "burnt-berry"
         },
@@ -14852,7 +14856,13 @@
     "landmarks": [
         {
             "id": 0,
-            "items": [],
+            "items": [
+                {
+                    "amount": "1",
+                    "info": "???",
+                    "item": "twistedspoon"
+                }
+            ],
             "locations": [],
             "name": "special",
             "positions": [
@@ -19871,16 +19881,20 @@
                     "move": "headbutt"
                 },
                 {
-                    "level": 20,
+                    "level": 19,
                     "move": "sludge"
                 },
                 {
-                    "level": 26,
+                    "level": 23,
                     "move": "body-slam"
                 },
                 {
-                    "level": 30,
+                    "level": 27,
                     "move": "sludge-bomb"
+                },
+                {
+                    "level": 31,
+                    "move": "synthesis"
                 },
                 {
                     "level": 36,
@@ -19955,20 +19969,24 @@
                     "move": "razor-leaf"
                 },
                 {
-                    "level": 19,
+                    "level": 1,
                     "move": "headbutt"
                 },
                 {
-                    "level": 23,
+                    "level": 22,
                     "move": "sludge"
                 },
                 {
-                    "level": 28,
+                    "level": 25,
                     "move": "body-slam"
                 },
                 {
-                    "level": 34,
+                    "level": 33,
                     "move": "sludge-bomb"
+                },
+                {
+                    "level": 37,
+                    "move": "synthesis"
                 }
             ],
             "name": "ivysaur",
@@ -20020,12 +20038,16 @@
                     "move": "sleep-powder"
                 },
                 {
-                    "level": 37,
+                    "level": 36,
                     "move": "giga-drain"
                 },
                 {
-                    "level": 42,
+                    "level": 41,
                     "move": "sludge-bomb"
+                },
+                {
+                    "level": 45,
+                    "move": "giga-drain"
                 },
                 {
                     "level": 49,
@@ -20042,6 +20064,10 @@
                 {
                     "level": 68,
                     "move": "ancientpower"
+                },
+                {
+                    "level": 100,
+                    "move": "leech-seed"
                 }
             ],
             "name": "venusaur",
@@ -20437,6 +20463,22 @@
                 {
                     "level": 33,
                     "move": "waterfall"
+                },
+                {
+                    "level": 37,
+                    "move": "icy-wind"
+                },
+                {
+                    "level": 40,
+                    "move": "counter"
+                },
+                {
+                    "level": 42,
+                    "move": "rapid-spin"
+                },
+                {
+                    "level": 44,
+                    "move": "earthquake"
                 }
             ],
             "name": "wartortle",
@@ -20695,6 +20737,14 @@
                 {
                     "level": 29,
                     "move": "dream-eater"
+                },
+                {
+                    "level": 30,
+                    "move": "giga-drain"
+                },
+                {
+                    "level": 31,
+                    "move": "psychic"
                 }
             ],
             "name": "butterfree",
@@ -20980,7 +21030,7 @@
                 },
                 {
                     "level": 18,
-                    "move": "whirlwind"
+                    "move": "quick-attack"
                 },
                 {
                     "level": 23,
@@ -23672,7 +23722,7 @@
                 },
                 {
                     "level": 38,
-                    "move": "tri-attack"
+                    "move": "rock-slide"
                 },
                 {
                     "level": 44,
@@ -25336,11 +25386,11 @@
                 },
                 {
                     "level": 54,
-                    "move": "lovely-kiss"
+                    "move": "synthesis"
                 },
                 {
                     "level": 63,
-                    "move": "synthesis"
+                    "move": "lovely-kiss"
                 }
             ],
             "name": "victreebel",
@@ -27699,16 +27749,24 @@
                     "move": "thunderbolt"
                 },
                 {
-                    "level": 46,
+                    "level": 40,
+                    "move": "reflect"
+                },
+                {
+                    "level": 40,
                     "move": "light-screen"
                 },
                 {
-                    "level": 67,
+                    "level": 50,
                     "move": "screech"
                 },
                 {
                     "level": 77,
                     "move": "explosion"
+                },
+                {
+                    "level": 80,
+                    "move": "thunder"
                 }
             ],
             "name": "electrode",
@@ -28836,6 +28894,10 @@
                 {
                     "level": 47,
                     "move": "petal-dance"
+                },
+                {
+                    "level": 55,
+                    "move": "ancientpower"
                 }
             ],
             "name": "tangela",
@@ -29065,6 +29127,10 @@
                 {
                     "level": 35,
                     "move": "dragon-rage"
+                },
+                {
+                    "level": 40,
+                    "move": "dragonbreath"
                 },
                 {
                     "level": 47,
@@ -35212,7 +35278,7 @@
                     "move": "body-slam"
                 },
                 {
-                    "level": 27,
+                    "level": 29,
                     "move": "earthquake"
                 },
                 {
@@ -35220,11 +35286,15 @@
                     "move": "ice-beam"
                 },
                 {
-                    "level": 36,
+                    "level": 35,
                     "move": "hydro-pump"
                 },
                 {
-                    "level": 41,
+                    "level": 40,
+                    "move": "waterfall"
+                },
+                {
+                    "level": 43,
                     "move": "sludge-bomb"
                 }
             ],
@@ -38015,23 +38085,23 @@
                     "move": "pursuit"
                 },
                 {
+                    "level": 17,
+                    "move": "bite"
+                },
+                {
                     "level": 25,
-                    "move": "roar"
+                    "move": "flame-wheel"
                 },
                 {
                     "level": 29,
-                    "move": "bite"
+                    "move": "roar"
                 },
                 {
                     "level": 33,
                     "move": "quick-attack"
                 },
                 {
-                    "level": 36,
-                    "move": "flame-wheel"
-                },
-                {
-                    "level": 45,
+                    "level": 42,
                     "move": "flamethrower"
                 },
                 {
@@ -38188,19 +38258,15 @@
                     "move": "dragonbreath"
                 },
                 {
-                    "level": 56,
-                    "move": "return"
-                },
-                {
-                    "level": 58,
+                    "level": 55,
                     "move": "ice-beam"
                 },
                 {
-                    "level": 68,
+                    "level": 65,
                     "move": "octazooka"
                 },
                 {
-                    "level": 76,
+                    "level": 73,
                     "move": "double-edge"
                 }
             ],
@@ -57099,7 +57165,7 @@
         },
         {
             "meta": "Pokémon League",
-            "name": "Rival2 RIVAL2 (4) ?",
+            "name": "Rival2 RIVAL2 (4)",
             "team": [
                 {
                     "item": "quick-claw",
@@ -57113,7 +57179,7 @@
                     "name": "snorlax"
                 },
                 {
-                    "item": "brightpowder",
+                    "item": "leftovers",
                     "level": 105,
                     "moves": [
                         "psychic",
@@ -57140,7 +57206,7 @@
                         "spd": 15,
                         "spe": 15
                     },
-                    "item": "brightpowder",
+                    "item": "leftovers",
                     "level": 105,
                     "moves": [
                         "aeroblast",
@@ -57151,7 +57217,7 @@
                     "name": "lugia"
                 },
                 {
-                    "item": "brightpowder",
+                    "item": "leftovers",
                     "level": 105,
                     "moves": [
                         "psychic",
@@ -57170,7 +57236,7 @@
                         "spd": 15,
                         "spe": 15
                     },
-                    "item": "brightpowder",
+                    "item": "leftovers",
                     "level": 105,
                     "moves": [
                         "sacred-fire",
