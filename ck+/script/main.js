@@ -33,6 +33,20 @@ document.ondrop = function (event) {
 	event.preventDefault();
 }
 
+document.getElementById("sav-upload").onchange = function (event) {
+	if (document.getElementById("sav-upload").files) {
+		var file = document.getElementById("sav-upload").files[0];
+		readFile(file);
+	}
+}
+
+function clearData() {
+	box = [];
+	document.getElementById("badges").value = 0;
+	updateBadges();
+	updateBox();
+}
+
 document.ondragover = function (event) {
 	event.preventDefault();
 }

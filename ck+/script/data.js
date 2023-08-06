@@ -337,18 +337,16 @@ function fetchData() {
 		}
 
 		data = j;
-		var a = j.trainers[17].team[2];
+		var a = j.trainers[0].team[0];
 		myPoke = JSON.parse(JSON.stringify(a));
 		if (box.length > 0) {
 			myPoke = box[0];
 		}
-		enemyTeam = j.trainers[17].team;
+		calcTrainer(0);
 		if (localStorage.getItem("last-trainer")) {
 			var lt = parseInt(localStorage.getItem("last-trainer"));
 			if (lt >= 0 && lt < j.trainers.length) {
 				calcTrainer(lt);
-			} else {
-				calcTrainer(17);
 			}
 		}
 		updateCalc();

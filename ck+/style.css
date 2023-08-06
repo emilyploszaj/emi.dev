@@ -75,12 +75,13 @@ img {
 	display: block;
 }
 
-button, select {
+button, select, .fake-file-upload {
 	padding: 2px;
 	font-family: "Ubuntu Mono";
 	font-size: 16px;
 	color: var(--text);
 	background-color: var(--box-background);
+	border-width: 2px;
 	border-style: solid;
 	border-color: var(--grouping-background);
 	cursor: pointer;
@@ -126,7 +127,7 @@ input[type=number] {
 	width: 50px;
 }
 
-input[type="checkbox"] {
+input[type="checkbox"], input[type="file"] {
 	display: none;
 }
 
