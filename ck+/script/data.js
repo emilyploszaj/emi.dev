@@ -342,12 +342,15 @@ function fetchData() {
 		if (box.length > 0) {
 			myPoke = box[0];
 		}
-		calcTrainer(0);
 		if (localStorage.getItem("last-trainer")) {
 			var lt = parseInt(localStorage.getItem("last-trainer"));
 			if (lt >= 0 && lt < j.trainers.length) {
 				calcTrainer(lt);
+			} else {
+				calcTrainer(0);
 			}
+		} else {
+			calcTrainer(0);
 		}
 		updateCalc();
 		updateBox();
