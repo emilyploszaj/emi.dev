@@ -71,7 +71,7 @@ function getTeamDisplay(t) {
 
 function getTrainerStats(i) {
 	var trainer = data.trainers[i];
-	var v = "<h3>" + getTrainerName(trainer.name) + "</h3>";
+	var v = "<h3>" + getTrainerName(trainer.name) + '<button style="float:right;" onclick="calcTrainer(' + i + ')">Calc</button>' + "</h3>";
 	v += '<div class="trainer">';
 	v += '<div class="trainer-pokes">';
 	v += getTeamDisplay(trainer);

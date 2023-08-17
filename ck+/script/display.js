@@ -355,22 +355,21 @@ function displayPokemon(root, i) {
 	var usageLines = "";
 	var usagePoints = "";
 
-	var h = 0;
 	var hTotal = data.trainers.length;
-	for (const t of data.trainers) {
+	for (var i = 0; i < data.trainers.length; i++) {
+		var t = data.trainers[i];
 		var b = bringsByTrainer.get(t.name);
 		var usage = 0;
 		if (b && b.brings.has(p.name)) {
 			usage = b.brings.get(p.name) * 100 / b.total;
 		}
 		if (t.name == "Champion CHAMPION (1) LANCE") {
-			usageLines += `<div class="poke-statistics-line e4r1" style="left:calc(2px + ${h * 100 / hTotal}%)"><div class="rolls"><center>${t.name}</center></div></div>`;
+			usageLines += `<div class="poke-statistics-line e4r1" onclick="statCheckTrainer(${i})" style="left:calc(2px + ${i * 100 / hTotal}%)"><div class="rolls"><center>${t.name}</center></div></div>`;
 		}
 		if (statisticsSplits.has(t.name)) {
-			usageLines += `<div class="poke-statistics-line" style="left:calc(2px + ${h * 100 / hTotal}%)"><div class="rolls"><center>${t.name}</center></div></div>`;
+			usageLines += `<div class="poke-statistics-line" onclick="statCheckTrainer(${i})" style="left:calc(2px + ${i * 100 / hTotal}%)"><div class="rolls"><center>${t.name}</center></div></div>`;
 		}
-		usagePoints += `<div class="usage-point" style="left:${h * 100 / hTotal}%;bottom:${usage}%;"><div class="rolls"><center>${t.name}</center></div></div>`;
-		h += 1;
+		usagePoints += `<div class="usage-point" onclick="statCheckTrainer(${i})" style="left:${i * 100 / hTotal}%;bottom:${usage}%;"><div class="rolls"><center>${t.name}</center></div></div>`;
 	}
 
 	var stats = `

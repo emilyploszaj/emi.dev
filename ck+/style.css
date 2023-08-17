@@ -762,6 +762,7 @@ rt {
 	width: 4px;
 	position: absolute;
 	margin: 0px !important;
+	cursor: pointer;
 }
 
 .usage-point {
@@ -771,6 +772,7 @@ rt {
 	height: 8px;
 	border-radius: 5px;
 	margin: 0px !important;
+	cursor: pointer;
 }
 
 .poke-statistics-line:hover, .usage-point:hover {
