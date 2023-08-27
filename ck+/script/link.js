@@ -1,14 +1,34 @@
+var lookupHistory = [];
+
+function addHistory(name, link) {
+	lookupHistory = lookupHistory.filter((h) => h.name != name && h.link != link);
+	lookupHistory = [{"name": name, "link": link}].concat(lookupHistory);
+	updateHistory();
+}
+
+function updateHistory() {
+	var v = "";
+	for (var i = 0; i < lookupHistory.length; i++) {
+		var h = lookupHistory[i];
+		v += `<button onclick="lookupHistory[${i}].link()">${h.name}</button>`
+		console.log(h);
+	}
+	document.getElementById("history").innerHTML = v;
+}
+
 function focusLandmark(i) {
 	var d = encountersByName.get(landmarksByIndex.get(i).locations[0]);
 	if (d !== undefined) {
 		focusEncounter(d);
 	} else {
+		addHistory(fullCapitalize(landmarksByIndex.get(i).name), () => focusLandmark(i));
 		document.getElementById("full-encounter").innerHTML = getEncounterDisplay(landmarksByIndex.get(i).name);
 		setTab("full-encounter");
 	}
 }
 
 function focusEncounter(i) {
+	addHistory(fullCapitalize(data.encounters[i].area), () => focusEncounter(i));
 	document.getElementById("search-box").value = "";
 	updateSearch("");
 	document.getElementById("full-encounter").innerHTML = getEncounterDisplay(data.encounters[i]);
@@ -16,6 +36,7 @@ function focusEncounter(i) {
 }
 
 function focusItem(i) {
+	addHistory(fullCapitalize(i), () => focusItem(i));
 	document.getElementById("search-box").value = "";
 	updateSearch("");
 	document.getElementById("full-item").innerHTML = getFullItemDisplay(i);
@@ -23,10 +44,21 @@ function focusItem(i) {
 }
 
 function focusMove(i) {
+	addHistory(fullCapitalize(movesByIndex.get(i).name), () => focusMove(i));
 	document.getElementById("search-box").value = "";
 	updateSearch("");
 	document.getElementById("full-move").innerHTML = getFullMoveDisplay(movesByIndex.get(i));
 	setTab("full-move");
+}
+
+function statCheckCurrentTrainer() {
+	statCheckTrainer(lastTrainer);
+}
+
+function statCheckTrainer(i) {
+	addHistory(getTrainerName(data.trainers[i].name), () => statCheckTrainer(i));
+	document.getElementById("full-trainer").innerHTML = getTrainerStats(i);
+	setTab("full-trainer");
 }
 
 function focusPokeByName(name) {
@@ -34,6 +66,7 @@ function focusPokeByName(name) {
 }
 
 function focusPokemon(i) {
+	addHistory(fullCapitalize(data.pokemon[i - 1].name), () => focusPokemon(i));
 	document.getElementById("search-box").value = "";
 	updateSearch("");
 	displayPokemon(document.getElementById("main-poke"), i - 1);

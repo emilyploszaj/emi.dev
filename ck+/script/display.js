@@ -656,15 +656,6 @@ function updateBox() {
 	updateCalc();
 }
 
-function statCheckCurrentTrainer() {
-	statCheckTrainer(lastTrainer);
-}
-
-function statCheckTrainer(i) {
-	document.getElementById("full-trainer").innerHTML = getTrainerStats(i);
-	setTab("full-trainer");
-}
-
 function clearPlayerStages() {
 	document.getElementById("player").getElementsByClassName("status-select")[0].value = "none";
 	var inputs = document.getElementsByClassName("player-stages");

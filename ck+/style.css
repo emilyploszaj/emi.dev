@@ -96,12 +96,34 @@ button:disabled {
 	visibility: hidden;
 }
 
-#tab-selection {
+#top-bar {
+	display: flex;
+	flex-wrap: nowrap;
+	white-space: nowrap;
 	margin-bottom: 10px;
 }
 
-#tab-selection button {
+#top-bar button {
 	font-size: 24px;
+}
+
+#tab-selection {
+	display: inline-flexbox;
+	flex-wrap: nowrap;
+	margin-right: 200px;
+}
+
+#history {
+	direction: rtl;
+	display: inline-block;
+	margin-left: auto;
+	align-content: flex-end;
+	overflow-x: hidden;
+}
+
+#history button {
+	font-size: 16px;
+	margin-left: 4px;
 }
 
 img {
