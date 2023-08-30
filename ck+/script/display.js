@@ -91,10 +91,10 @@ function displayCalcPokemon(root, poke, opponent, right) {
 		var mySpe = getModifiedStat(poke, getStages(myStages), "spe");
 		var theirSpe = getModifiedStat(opponent, getStages(theirStages), "spe");
 		if (badges >= speedBadges) {
-			if (player || poke.transformStats) {
+			if (player == (poke.transformStats == undefined)) {
 				mySpe = parseInt(mySpe * 1.125);
 			}
-			if (!player || opponent.transformStats) {
+			if (player != (opponent.transformStats == undefined)) {
 				theirSpe = parseInt(theirSpe * 1.125);
 			}
 		}
@@ -243,7 +243,7 @@ function displayCalcStat(div, poke, stat, player = false) {
 	var s = getPokeStat(poke, stat);
 	var o = s;
 	if (badges >= speedBadges && stat == "spe") {
-		if (player || poke.transformStats) {
+		if (player == (poke.transformStats == undefined)) {
 			s = parseInt(s * 1.125);
 		}
 		div.getElementsByClassName("stat-num")[0].innerHTML = "<ruby>" + s + "<rt>" + o + "</rt></ruby>";
