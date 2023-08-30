@@ -17267,7 +17267,7 @@
         {
             "accuracy": 100,
             "extra": [
-                "Has an increased crititical hit rate"
+                "Has an increased critical hit rate"
             ],
             "index": 163,
             "name": "slash",
@@ -17626,7 +17626,7 @@
         {
             "accuracy": 100,
             "extra": [
-                "20% to either paralyze, freeze, or burn the opponent\nHas an increased crititical hit rate"
+                "20% to either paralyze, freeze, or burn the opponent\nHas an increased critical hit rate"
             ],
             "index": 177,
             "name": "aeroblast",
@@ -17839,7 +17839,7 @@
         {
             "accuracy": 100,
             "effects": {
-                "recoil": 0.333299999999999985
+                "recoil": 0.25
             },
             "extra": [
                 "User takes 25% of damage dealt as recoil"
@@ -17848,7 +17848,7 @@
             "name": "struggle",
             "power": 50,
             "pp": 1,
-            "type": "normal"
+            "type": "curse"
         },
         {
             "accuracy": 85,
@@ -18631,7 +18631,7 @@
         {
             "accuracy": 100,
             "extra": [
-                "Has an increased crititical hit rate"
+                "Has an increased critical hit rate"
             ],
             "index": 152,
             "name": "crabhammer",
@@ -18664,7 +18664,7 @@
         {
             "accuracy": 100,
             "extra": [
-                "Charges for a turn before attacking\nDismisses move when under the effect of perish song or if you have used protect\nHas an increased crititical hit rate"
+                "Charges for a turn before attacking\nDismisses move when under the effect of perish song or if you have used protect\nHas an increased critical hit rate"
             ],
             "index": 13,
             "name": "razor-wind",
@@ -19012,7 +19012,7 @@
         {
             "accuracy": 100,
             "extra": [
-                "Has an increased crititical hit rate"
+                "Has an increased critical hit rate"
             ],
             "index": 238,
             "name": "cross-chop",
@@ -19087,7 +19087,7 @@
         {
             "accuracy": 100,
             "extra": [
-                "Has an increased crititical hit rate"
+                "Has an increased critical hit rate"
             ],
             "index": 75,
             "name": "razor-leaf",
@@ -19590,7 +19590,7 @@
         {
             "accuracy": 100,
             "extra": [
-                "Has an increased crititical hit rate"
+                "Has an increased critical hit rate"
             ],
             "index": 2,
             "name": "karate-chop",

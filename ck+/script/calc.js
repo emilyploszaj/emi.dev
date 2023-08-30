@@ -123,8 +123,8 @@ function getDamage(attacker, defender, attackerStages, defenderStages, move, pla
 			}
 		}
 		// Badge boost
-		var attackerBoost = player || (attacker.transformStats !== undefined);
-		var defenderBoost = !player || (defender.transformStats !== undefined);
+		var attackerBoost = player == (attacker.transformStats == undefined);
+		var defenderBoost = player != (defender.transformStats == undefined);
 		if (attackerBoost && !special && badges >= attackBadges) {
 			a = parseInt(a * 1.125);
 		}
