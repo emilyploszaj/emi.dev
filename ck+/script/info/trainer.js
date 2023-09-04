@@ -52,7 +52,7 @@ function getTrainerDisplay(trainer, i) {
 	t += '<div class="trainer">'
 	t += '<div>' + getTrainerName(trainer.name);
 	t += '<button style="float:right;" onclick="calcTrainer(' + i + ')">Calc</button>';
-	t += '<button style="float:right;" onclick="statCheckTrainer(' + i + ')">Statistics</button>';
+	t += '<button style="float:right;" onclick="focusTrainer(' + i + ')">Statistics</button>';
 	t += '</div>';
 	t += '<div class="trainer-pokes">';
 	t += getTeamDisplay(trainer);
@@ -71,7 +71,16 @@ function getTeamDisplay(t) {
 
 function getTrainerStats(i) {
 	var trainer = data.trainers[i];
-	var v = "<h3>" + getTrainerName(trainer.name) + '<button style="float:right;" onclick="calcTrainer(' + i + ')">Calc</button>' + "</h3>";
+	var v = `
+		<h3>
+			${getTrainerName(trainer.name)}
+			<span style = "float:right;">
+			<button onclick="calcTrainer(${i})">Calc</button>
+			<button onclick="focusTrainer(${i - 1})">Previous</button>
+			<button onclick="focusTrainer(${i + 1})">Next</button>
+			</span>
+		</h3>
+	`;
 	v += '<div class="trainer">';
 	v += '<div class="trainer-pokes">';
 	v += getTeamDisplay(trainer);

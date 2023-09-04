@@ -13,7 +13,7 @@ function updateCalc() {
 		for (var i = lastTrainer + 1; isTrainerB2b(i); i++) {
 			extraTrainers += `<div class="calc-team">${getEnemyTeamDisplay(data.trainers[i].team, i)}</div>`;
 			extraTrainers += `<div class="calc-navigation"><span>${getTrainerName(data.trainers[i].name)} </span>`;
-			extraTrainers += `<button onclick="statCheckTrainer(${i})">Stats</button> `;
+			extraTrainers += `<button onclick="focusTrainer(${i})">Stats</button> `;
 			extraTrainers += `<button disabled=true onclick="navigateBattle(-1)">Previous</button> `;
 			extraTrainers += `<button disabled=true onclick="navigateBattle(1)">Next</button> `;
 			extraTrainers += `</div>`
@@ -123,8 +123,8 @@ function getDamage(attacker, defender, attackerStages, defenderStages, move, pla
 			}
 		}
 		// Badge boost
-		var attackerBoost = player == (attacker.transformStats == undefined);
-		var defenderBoost = player != (defender.transformStats == undefined);
+		var attackerBoost = hasBadgeBoost(attacker, player);
+		var defenderBoost = hasBadgeBoost(defender, !player);
 		if (attackerBoost && !special && badges >= attackBadges) {
 			a = parseInt(a * 1.125);
 		}
@@ -262,6 +262,10 @@ function getModdedDamage(v, attacker, defender, ap, dp, power, type, move, playe
 		}
 	}
 	return Math.max(1, v) * times;
+}
+
+function hasBadgeBoost(poke, player) {
+	return player == (poke.transformStats == undefined)
 }
 
 function getPokeStat(poke, stat) {

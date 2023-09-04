@@ -11,7 +11,6 @@ function updateHistory() {
 	for (var i = 0; i < lookupHistory.length; i++) {
 		var h = lookupHistory[i];
 		v += `<button onclick="lookupHistory[${i}].link()">${h.name}</button>`
-		console.log(h);
 	}
 	document.getElementById("history").innerHTML = v;
 }
@@ -52,11 +51,13 @@ function focusMove(i) {
 }
 
 function statCheckCurrentTrainer() {
-	statCheckTrainer(lastTrainer);
+	focusTrainer(lastTrainer);
 }
 
-function statCheckTrainer(i) {
-	addHistory(getTrainerName(data.trainers[i].name), () => statCheckTrainer(i));
+function focusTrainer(i) {
+	addHistory(getTrainerName(data.trainers[i].name), () => focusTrainer(i));
+	document.getElementById("search-box").value = "";
+	updateSearch("");
 	document.getElementById("full-trainer").innerHTML = getTrainerStats(i);
 	setTab("full-trainer");
 }

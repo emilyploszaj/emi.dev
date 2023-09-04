@@ -335,7 +335,9 @@ function fetchData() {
 		for (const t of j.trainers) {
 			trainersByName.set(t.name, t);
 		}
-
+		for (let i in j.trainers) {
+			searchResults.set(getTrainerName(j.trainers[i].name).toLowerCase(), `focusTrainer(${i})`);
+		}
 		data = j;
 		var a = j.trainers[0].team[0];
 		myPoke = JSON.parse(JSON.stringify(a));

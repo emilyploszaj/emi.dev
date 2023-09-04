@@ -91,10 +91,10 @@ function displayCalcPokemon(root, poke, opponent, right) {
 		var mySpe = getModifiedStat(poke, getStages(myStages), "spe");
 		var theirSpe = getModifiedStat(opponent, getStages(theirStages), "spe");
 		if (badges >= speedBadges) {
-			if (player == (poke.transformStats == undefined)) {
+			if (hasBadgeBoost(poke, player)) {
 				mySpe = parseInt(mySpe * 1.125);
 			}
-			if (player != (opponent.transformStats == undefined)) {
+			if (hasBadgeBoost(opponent, !player)) {
 				theirSpe = parseInt(theirSpe * 1.125);
 			}
 		}
@@ -243,7 +243,7 @@ function displayCalcStat(div, poke, stat, player = false) {
 	var s = getPokeStat(poke, stat);
 	var o = s;
 	if (badges >= speedBadges && stat == "spe") {
-		if (player == (poke.transformStats == undefined)) {
+		if (hasBadgeBoost(poke, player)) {
 			s = parseInt(s * 1.125);
 		}
 		div.getElementsByClassName("stat-num")[0].innerHTML = "<ruby>" + s + "<rt>" + o + "</rt></ruby>";
@@ -364,12 +364,12 @@ function displayPokemon(root, i) {
 			usage = b.brings.get(p.name) * 100 / b.total;
 		}
 		if (t.name == "Champion CHAMPION (1) LANCE") {
-			usageLines += `<div class="poke-statistics-line e4r1" onclick="statCheckTrainer(${i})" style="left:calc(2px + ${i * 100 / hTotal}%)"><div class="rolls"><center>${t.name}</center></div></div>`;
+			usageLines += `<div class="poke-statistics-line e4r1" onclick="focusTrainer(${i})" style="left:calc(2px + ${i * 100 / hTotal}%)"><div class="rolls"><center>${t.name}</center></div></div>`;
 		}
 		if (statisticsSplits.has(t.name)) {
-			usageLines += `<div class="poke-statistics-line" onclick="statCheckTrainer(${i})" style="left:calc(2px + ${i * 100 / hTotal}%)"><div class="rolls"><center>${t.name}</center></div></div>`;
+			usageLines += `<div class="poke-statistics-line" onclick="focusTrainer(${i})" style="left:calc(2px + ${i * 100 / hTotal}%)"><div class="rolls"><center>${t.name}</center></div></div>`;
 		}
-		usagePoints += `<div class="usage-point" onclick="statCheckTrainer(${i})" style="left:${i * 100 / hTotal}%;bottom:${usage}%;"><div class="rolls"><center>${t.name}</center></div></div>`;
+		usagePoints += `<div class="usage-point" onclick="focusTrainer(${i})" style="left:${i * 100 / hTotal}%;bottom:${usage}%;"><div class="rolls"><center>${t.name}</center></div></div>`;
 	}
 
 	var stats = `
