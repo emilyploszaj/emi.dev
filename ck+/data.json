@@ -81,7 +81,7 @@
                         {
                             "chance": 15,
                             "level": 14,
-                            "pokemon": "goldeen"
+                            "pokemon": "seel"
                         }
                     ]
                 },
@@ -23655,7 +23655,19 @@
                 },
                 {
                     "level": 54,
-                    "move": "psych-up"
+                    "move": "sleep-powder"
+                },
+                {
+                    "level": 70,
+                    "move": "toxic"
+                },
+                {
+                    "level": 80,
+                    "move": "giga-drain"
+                },
+                {
+                    "level": 85,
+                    "move": "sludge-bomb"
                 }
             ],
             "name": "venomoth",
@@ -23796,10 +23808,6 @@
                     "move": "rock-slide"
                 },
                 {
-                    "level": 34,
-                    "move": "dig"
-                },
-                {
                     "level": 38,
                     "move": "tri-attack"
                 },
@@ -23810,6 +23818,10 @@
                 {
                     "level": 50,
                     "move": "earthquake"
+                },
+                {
+                    "level": 85,
+                    "move": "ancientpower"
                 }
             ],
             "name": "dugtrio",
@@ -24143,16 +24155,12 @@
                     "move": "hydro-pump"
                 },
                 {
-                    "level": 62,
+                    "level": 61,
                     "move": "encore"
                 },
                 {
-                    "level": 70,
+                    "level": 66,
                     "move": "cross-chop"
-                },
-                {
-                    "level": 75,
-                    "move": "psych-up"
                 }
             ],
             "name": "golduck",
@@ -24320,7 +24328,7 @@
                     "move": "foresight"
                 },
                 {
-                    "level": 69,
+                    "level": 63,
                     "move": "cross-chop"
                 },
                 {
@@ -25328,11 +25336,11 @@
                     "move": "body-slam"
                 },
                 {
-                    "level": 37,
+                    "level": 36,
                     "move": "sludge-bomb"
                 },
                 {
-                    "level": 48,
+                    "level": 44,
                     "move": "lovely-kiss"
                 }
             ],
@@ -25390,8 +25398,12 @@
                     "move": "giga-drain"
                 },
                 {
-                    "level": 47,
+                    "level": 42,
                     "move": "sludge-bomb"
+                },
+                {
+                    "level": 47,
+                    "move": "petal-dance"
                 },
                 {
                     "level": 54,
@@ -26756,6 +26768,10 @@
                     "move": "sludge-bomb"
                 },
                 {
+                    "level": 37,
+                    "move": "shadow-ball"
+                },
+                {
                     "level": 46,
                     "move": "flamethrower"
                 },
@@ -27481,11 +27497,43 @@
                     "move": "reflect"
                 },
                 {
-                    "level": 90,
+                    "level": 60,
                     "move": "meditate"
                 },
                 {
-                    "level": 99,
+                    "level": 60,
+                    "move": "submission"
+                },
+                {
+                    "level": 60,
+                    "move": "shadow-ball"
+                },
+                {
+                    "level": 65,
+                    "move": "psychic"
+                },
+                {
+                    "level": 70,
+                    "move": "hypnosis"
+                },
+                {
+                    "level": 80,
+                    "move": "meditate"
+                },
+                {
+                    "level": 80,
+                    "move": "submission"
+                },
+                {
+                    "level": 80,
+                    "move": "shadow-ball"
+                },
+                {
+                    "level": 85,
+                    "move": "psychic"
+                },
+                {
+                    "level": 90,
                     "move": "hypnosis"
                 }
             ],
@@ -28548,6 +28596,10 @@
                 {
                     "level": 64,
                     "move": "pain-split"
+                },
+                {
+                    "level": 68,
+                    "move": "sludge-bomb"
                 },
                 {
                     "level": 70,
@@ -30409,6 +30461,14 @@
                 {
                     "level": 57,
                     "move": "haze"
+                },
+                {
+                    "level": 58,
+                    "move": "ice-beam"
+                },
+                {
+                    "level": 73,
+                    "move": "recover"
                 },
                 {
                     "level": 80,
@@ -35119,20 +35179,24 @@
             "items": [],
             "learnset": [
                 {
-                    "level": 19,
-                    "move": "giga-drain"
+                    "level": 18,
+                    "move": "return"
                 },
                 {
-                    "level": 24,
-                    "move": "return"
+                    "level": 23,
+                    "move": "giga-drain"
                 },
                 {
                     "level": 31,
                     "move": "petal-dance"
                 },
                 {
-                    "level": 45,
+                    "level": 38,
                     "move": "growth"
+                },
+                {
+                    "level": 50,
+                    "move": "spore"
                 }
             ],
             "name": "sunflora",
@@ -36575,8 +36639,12 @@
                     "move": "attract"
                 },
                 {
-                    "level": 28,
+                    "level": 27,
                     "move": "crunch"
+                },
+                {
+                    "level": 32,
+                    "move": "body-slam"
                 },
                 {
                     "level": 38,
@@ -37466,8 +37534,12 @@
                     "move": "return"
                 },
                 {
-                    "level": 53,
+                    "level": 48,
                     "move": "ice-beam"
+                },
+                {
+                    "level": 55,
+                    "move": "rock-slide"
                 },
                 {
                     "level": 64,
@@ -37533,7 +37605,7 @@
                     "move": "return"
                 },
                 {
-                    "level": 50,
+                    "level": 55,
                     "move": "rock-slide"
                 },
                 {
@@ -37541,7 +37613,7 @@
                     "move": "ice-beam"
                 },
                 {
-                    "level": 74,
+                    "level": 68,
                     "move": "earthquake"
                 },
                 {
@@ -38277,6 +38349,14 @@
                 {
                     "level": 73,
                     "move": "double-edge"
+                },
+                {
+                    "level": 80,
+                    "move": "octazooka"
+                },
+                {
+                    "level": 90,
+                    "move": "octazooka"
                 }
             ],
             "name": "kingdra",
@@ -38529,11 +38609,19 @@
                     "move": "conversion2"
                 },
                 {
-                    "level": 85,
+                    "level": 75,
                     "move": "hyper-beam"
                 },
                 {
-                    "level": 99,
+                    "level": 80,
+                    "move": "tri-attack"
+                },
+                {
+                    "level": 85,
+                    "move": "recover"
+                },
+                {
+                    "level": 90,
                     "move": "sharpen"
                 }
             ],
@@ -39634,6 +39722,14 @@
                     "move": "bite"
                 },
                 {
+                    "level": 1,
+                    "move": "hyper-beam"
+                },
+                {
+                    "level": 1,
+                    "move": "scary-face"
+                },
+                {
                     "level": 80,
                     "move": "crunch"
                 },
@@ -39929,7 +40025,7 @@
     ],
     "trainers": [
         {
-            "meta": "Cherrygrove City",
+            "area": "Cherrygrove City",
             "name": "Rival1 RIVAL1 (1) ?",
             "team": [
                 {
@@ -39944,6 +40040,7 @@
             ]
         },
         {
+            "area": "Cherrygrove City",
             "name": "Rival1 RIVAL1 (2) ?",
             "team": [
                 {
@@ -39958,6 +40055,7 @@
             ]
         },
         {
+            "area": "Cherrygrove City",
             "name": "Rival1 RIVAL1 (3) ?",
             "team": [
                 {
@@ -39972,7 +40070,7 @@
             ]
         },
         {
-            "meta": "Route 30",
+            "area": "Route 30",
             "name": "Youngster YOUNGSTER (1) JOEY",
             "team": [
                 {
@@ -39987,6 +40085,7 @@
             ]
         },
         {
+            "area": "Route 30",
             "name": "Youngster YOUNGSTER (2) MIKEY",
             "team": [
                 {
@@ -40009,6 +40108,7 @@
             ]
         },
         {
+            "area": "Route 30",
             "name": "BugCatcher BUG_CATCHER (1) DON",
             "team": [
                 {
@@ -40035,7 +40135,7 @@
             ]
         },
         {
-            "meta": "Route 31",
+            "area": "Route 31",
             "name": "BugCatcher BUG_CATCHER (4) WADE",
             "team": [
                 {
@@ -40083,7 +40183,7 @@
             ]
         },
         {
-            "meta": "Sprout Tower",
+            "area": "Sprout Tower",
             "name": "Sage SAGE (7) EDMOND",
             "team": [
                 {
@@ -40119,6 +40219,7 @@
             ]
         },
         {
+            "area": "Sprout Tower",
             "name": "Sage SAGE (2) NICO",
             "team": [
                 {
@@ -40157,6 +40258,7 @@
             ]
         },
         {
+            "area": "Sprout Tower",
             "name": "Sage SAGE (1) CHOW",
             "team": [
                 {
@@ -40195,6 +40297,7 @@
             ]
         },
         {
+            "area": "Sprout Tower",
             "name": "Sage SAGE (4) TROY",
             "team": [
                 {
@@ -40220,6 +40323,7 @@
             ]
         },
         {
+            "area": "Sprout Tower",
             "name": "Sage SAGE (3) JIN",
             "team": [
                 {
@@ -40247,6 +40351,7 @@
             ]
         },
         {
+            "area": "Sprout Tower",
             "name": "Sage SAGE (8) NEAL",
             "team": [
                 {
@@ -40274,6 +40379,7 @@
             ]
         },
         {
+            "area": "Sprout Tower",
             "name": "Sage SAGE (9) LI",
             "team": [
                 {
@@ -40310,7 +40416,7 @@
             ]
         },
         {
-            "meta": "Ruins of Alph",
+            "area": "Ruins of Alph",
             "name": "Psychic PSYCHIC_T (1) NATHAN",
             "team": [
                 {
@@ -40337,7 +40443,7 @@
             ]
         },
         {
-            "meta": "Violet City Gym",
+            "area": "Violet City Gym",
             "name": "BirdKeeper BIRD_KEEPER (2) ABE",
             "team": [
                 {
@@ -40376,6 +40482,7 @@
             ]
         },
         {
+            "area": "Violet City Gym",
             "name": "BirdKeeper BIRD_KEEPER (1) ROD",
             "team": [
                 {
@@ -40413,6 +40520,7 @@
             ]
         },
         {
+            "area": "Violet City Gym",
             "name": "Falkner FALKNER (1) FALKNER",
             "team": [
                 {
@@ -40480,7 +40588,7 @@
             ]
         },
         {
-            "meta": "Route 32 (gauntlet)",
+            "area": "Route 32 (gauntlet)",
             "name": "Youngster YOUNGSTER (3) ALBERT",
             "team": [
                 {
@@ -40508,6 +40616,7 @@
             ]
         },
         {
+            "area": "Route 32 (gauntlet)",
             "name": "Picnicker PICNICKER (1) LIZ",
             "team": [
                 {
@@ -40535,6 +40644,7 @@
             ]
         },
         {
+            "area": "Route 32 (gauntlet)",
             "name": "Fisher FISHER (5) HENRY",
             "team": [
                 {
@@ -40572,6 +40682,7 @@
             ]
         },
         {
+            "area": "Route 32 (gauntlet)",
             "name": "Fisher FISHER (2) RALPH",
             "team": [
                 {
@@ -40610,6 +40721,7 @@
             ]
         },
         {
+            "area": "Route 32 (gauntlet)",
             "name": "Youngster YOUNGSTER (4) GORDON",
             "team": [
                 {
@@ -40648,6 +40760,7 @@
             ]
         },
         {
+            "area": "Route 32 (gauntlet)",
             "name": "BirdKeeper BIRD_KEEPER (13) PETER",
             "team": [
                 {
@@ -40686,7 +40799,7 @@
             ]
         },
         {
-            "meta": "Union cave",
+            "area": "Union cave",
             "name": "Hiker HIKER (18) DANIEL",
             "team": [
                 {
@@ -40712,6 +40825,7 @@
             ]
         },
         {
+            "area": "Union cave",
             "name": "Firebreather FIREBREATHER (5) BILL",
             "team": [
                 {
@@ -40739,6 +40853,7 @@
             ]
         },
         {
+            "area": "Union cave",
             "name": "Hiker HIKER (2) RUSSELL",
             "team": [
                 {
@@ -40765,6 +40880,7 @@
             ]
         },
         {
+            "area": "Union cave",
             "name": "Firebreather FIREBREATHER (7) RAY",
             "team": [
                 {
@@ -40791,6 +40907,7 @@
             ]
         },
         {
+            "area": "Union cave",
             "name": "Hiker HIKER (3) PHILLIP",
             "team": [
                 {
@@ -40829,6 +40946,7 @@
             ]
         },
         {
+            "area": "Union cave",
             "name": "Pokemaniac POKEMANIAC (2) ANDREW",
             "team": [
                 {
@@ -40856,6 +40974,7 @@
             ]
         },
         {
+            "area": "Union cave",
             "name": "Hiker HIKER (4) LEONARD",
             "team": [
                 {
@@ -40882,6 +41001,7 @@
             ]
         },
         {
+            "area": "Union cave",
             "name": "Pokemaniac POKEMANIAC (3) CALVIN",
             "team": [
                 {
@@ -40909,6 +41029,7 @@
             ]
         },
         {
+            "area": "Union cave",
             "name": "Pokemaniac POKEMANIAC (1) LARRY",
             "team": [
                 {
@@ -40947,7 +41068,7 @@
             ]
         },
         {
-            "meta": "Route 33",
+            "area": "Route 33",
             "name": "Hiker HIKER (5) ANTHONY",
             "team": [
                 {
@@ -40986,7 +41107,7 @@
             ]
         },
         {
-            "meta": "Slowpoke well",
+            "area": "Slowpoke well",
             "name": "GruntM GRUNTM (29) GRUNT",
             "team": [
                 {
@@ -41014,6 +41135,7 @@
             ]
         },
         {
+            "area": "Slowpoke well",
             "name": "GruntF GRUNTF (1) GRUNT",
             "team": [
                 {
@@ -41041,6 +41163,7 @@
             ]
         },
         {
+            "area": "Slowpoke well",
             "name": "GruntM GRUNTM (2) GRUNT",
             "team": [
                 {
@@ -41077,6 +41200,7 @@
             ]
         },
         {
+            "area": "Slowpoke well",
             "meta": "cannot change team  for rival afterwards",
             "name": "GruntM GRUNTM (1) GRUNT",
             "team": [
@@ -41116,7 +41240,7 @@
             ]
         },
         {
-            "meta": "Azalea town",
+            "area": "Azalea town",
             "name": "Rival1 RIVAL1 (4) ?",
             "team": [
                 {
@@ -41152,6 +41276,7 @@
             ]
         },
         {
+            "area": "Azalea town",
             "name": "Rival1 RIVAL1 (5) ?",
             "team": [
                 {
@@ -41187,6 +41312,7 @@
             ]
         },
         {
+            "area": "Azalea town",
             "name": "Rival1 RIVAL1 (6) ?",
             "team": [
                 {
@@ -41222,7 +41348,7 @@
             ]
         },
         {
-            "meta": "Azalea Gym",
+            "area": "Azalea Gym",
             "name": "Twins TWINS (1) AMY & MAY",
             "team": [
                 {
@@ -41259,6 +41385,7 @@
             ]
         },
         {
+            "area": "Azalea Gym",
             "name": "BugCatcher BUG_CATCHER (7) JOSH",
             "team": [
                 {
@@ -41297,6 +41424,7 @@
             ]
         },
         {
+            "area": "Azalea Gym",
             "name": "BugCatcher BUG_CATCHER (6) AL",
             "team": [
                 {
@@ -41333,6 +41461,7 @@
             ]
         },
         {
+            "area": "Azalea Gym",
             "name": "BugCatcher BUG_CATCHER (5) BENNY",
             "team": [
                 {
@@ -41371,6 +41500,7 @@
             ]
         },
         {
+            "area": "Azalea Gym",
             "name": "Bugsy BUGSY (1) BUGSY",
             "team": [
                 {
@@ -41442,7 +41572,7 @@
             ]
         },
         {
-            "meta": "Ilex forest",
+            "area": "Ilex forest",
             "name": "BugCatcher BUG_CATCHER (19) WAYNE",
             "team": [
                 {
@@ -41481,7 +41611,7 @@
             ]
         },
         {
-            "meta": "Route 34",
+            "area": "Route 34",
             "name": "CooltrainerF COOLTRAINERF (6) IRENE",
             "team": [
                 {
@@ -41520,6 +41650,7 @@
             ]
         },
         {
+            "area": "Route 34",
             "b2b": true,
             "name": "CooltrainerF COOLTRAINERF (17) JENN",
             "team": [
@@ -41559,6 +41690,7 @@
             ]
         },
         {
+            "area": "Route 34",
             "b2b": true,
             "meta": "gives soft sand (talk after battle)",
             "name": "CooltrainerF COOLTRAINERF (5) KATE",
@@ -41599,6 +41731,7 @@
             ]
         },
         {
+            "area": "Route 34",
             "name": "Youngster YOUNGSTER (6) IAN",
             "team": [
                 {
@@ -41635,6 +41768,7 @@
             ]
         },
         {
+            "area": "Route 34",
             "name": "Youngster YOUNGSTER (5) SAMUEL",
             "team": [
                 {
@@ -41684,6 +41818,7 @@
             ]
         },
         {
+            "area": "Route 34",
             "b2b": true,
             "name": "Picnicker PICNICKER (2) GINA",
             "team": [
@@ -41723,6 +41858,7 @@
             ]
         },
         {
+            "area": "Route 34",
             "name": "Officer OFFICER (1) KEITH",
             "team": [
                 {
@@ -41761,6 +41897,7 @@
             ]
         },
         {
+            "area": "Route 34",
             "name": "Camper CAMPER (2) TODD",
             "team": [
                 {
@@ -41788,6 +41925,7 @@
             ]
         },
         {
+            "area": "Route 34",
             "b2b": true,
             "name": "PokefanM POKEFANM (7) BRANDON",
             "team": [
@@ -41815,7 +41953,8 @@
             ]
         },
         {
-            "meta": "Goldenrod entrance boom trainer",
+            "area": "Goldenrod entrance",
+            "meta": "boom trainer",
             "name": "SuperNerd SUPER_NERD (10) TERU",
             "team": [
                 {
@@ -41863,6 +42002,7 @@
             ]
         },
         {
+            "area": "Goldenrod entrance",
             "b2b": true,
             "name": "Pokemaniac POKEMANIAC (11) ISSAC",
             "team": [
@@ -41879,6 +42019,7 @@
             ]
         },
         {
+            "area": "Goldenrod entrance",
             "meta": "boom trainer",
             "name": "SuperNerd SUPER_NERD (2) ERIC",
             "team": [
@@ -41915,6 +42056,7 @@
             ]
         },
         {
+            "area": "Goldenrod entrance",
             "name": "Pokemaniac POKEMANIAC (12) DONALD",
             "team": [
                 {
@@ -41952,7 +42094,7 @@
             ]
         },
         {
-            "meta": "Goldenrod Gym",
+            "area": "Goldenrod Gym",
             "name": "Beauty BEAUTY (1) VICTORIA",
             "team": [
                 {
@@ -42000,6 +42142,7 @@
             ]
         },
         {
+            "area": "Goldenrod Gym",
             "b2b": true,
             "name": "Beauty BEAUTY (2) SAMANTHA",
             "team": [
@@ -42048,6 +42191,7 @@
             ]
         },
         {
+            "area": "Goldenrod Gym",
             "name": "Lass LASS (1) CARRIE",
             "team": [
                 {
@@ -42097,6 +42241,7 @@
             ]
         },
         {
+            "area": "Goldenrod Gym",
             "b2b": true,
             "name": "Lass LASS (2) BRIDGET",
             "team": [
@@ -42147,6 +42292,7 @@
             ]
         },
         {
+            "area": "Goldenrod Gym",
             "name": "Whitney WHITNEY (1) WHITNEY",
             "team": [
                 {
@@ -42225,7 +42371,7 @@
             ]
         },
         {
-            "meta": "Route 35",
+            "area": "Route 35",
             "name": "Camper CAMPER (4) ELLIOT",
             "team": [
                 {
@@ -42263,6 +42409,7 @@
             ]
         },
         {
+            "area": "Route 35",
             "b2b": true,
             "name": "Picnicker PICNICKER (4) KIM",
             "team": [
@@ -42310,6 +42457,7 @@
             ]
         },
         {
+            "area": "Route 35",
             "name": "Picnicker PICNICKER (3) BROOKE",
             "team": [
                 {
@@ -42355,6 +42503,7 @@
             ]
         },
         {
+            "area": "Route 35",
             "name": "Firebreather FIREBREATHER (6) WALT",
             "team": [
                 {
@@ -42393,6 +42542,7 @@
             ]
         },
         {
+            "area": "Route 35",
             "name": "Camper CAMPER (3) IVAN",
             "team": [
                 {
@@ -42430,6 +42580,7 @@
             ]
         },
         {
+            "area": "Route 35",
             "b2b": true,
             "name": "BirdKeeper BIRD_KEEPER (3) BRYAN",
             "team": [
@@ -42469,6 +42620,7 @@
             ]
         },
         {
+            "area": "Route 35",
             "name": "BugCatcher BUG_CATCHER (8) ARNIE",
             "team": [
                 {
@@ -42492,6 +42644,7 @@
             ]
         },
         {
+            "area": "Route 35",
             "b2b": true,
             "name": "Officer OFFICER (2) DIRK",
             "team": [
@@ -42531,6 +42684,7 @@
             ]
         },
         {
+            "area": "Route 35",
             "name": "Juggler JUGGLER (1) IRWIN",
             "team": [
                 {
@@ -42568,7 +42722,7 @@
             ]
         },
         {
-            "meta": "National park",
+            "area": "National park",
             "name": "PokefanF POKEFANF (1) BEVERLY",
             "team": [
                 {
@@ -42606,6 +42760,7 @@
             ]
         },
         {
+            "area": "National park",
             "name": "Schoolboy SCHOOLBOY (1) JACK",
             "team": [
                 {
@@ -42644,6 +42799,7 @@
             ]
         },
         {
+            "area": "National park",
             "name": "Lass LASS (4) KRISE",
             "team": [
                 {
@@ -42682,6 +42838,7 @@
             ]
         },
         {
+            "area": "National park",
             "name": "PokefanM POKEFANM (1) WILLIAM",
             "team": [
                 {
@@ -42730,7 +42887,7 @@
             ]
         },
         {
-            "meta": "Route 36",
+            "area": "Route 36",
             "name": "Schoolboy SCHOOLBOY (3) ALAN",
             "team": [
                 {
@@ -42768,6 +42925,7 @@
             ]
         },
         {
+            "area": "Route 36",
             "name": "Psychic PSYCHIC_T (7) MARK",
             "team": [
                 {
@@ -42806,7 +42964,7 @@
             ]
         },
         {
-            "meta": "Route 37",
+            "area": "Route 37",
             "name": "Twins TWINS (2) ANN & ANNE",
             "team": [
                 {
@@ -42834,6 +42992,7 @@
             ]
         },
         {
+            "area": "Route 37",
             "name": "Psychic PSYCHIC_T (5) GREG",
             "team": [
                 {
@@ -42871,7 +43030,7 @@
             ]
         },
         {
-            "meta": "Burned Tower",
+            "area": "Burned Tower",
             "name": "Rival1 RIVAL1 (7) ?",
             "team": [
                 {
@@ -42957,6 +43116,7 @@
             ]
         },
         {
+            "area": "Burned Tower",
             "name": "Rival1 RIVAL1 (8) ?",
             "team": [
                 {
@@ -43033,6 +43193,7 @@
             ]
         },
         {
+            "area": "Burned Tower",
             "name": "Rival1 RIVAL1 (9) ?",
             "team": [
                 {
@@ -43108,7 +43269,7 @@
             ]
         },
         {
-            "meta": "Ecruteak City",
+            "area": "Ecruteak City",
             "name": "KimonoGirl KIMONO_GIRL (2) NAOKO",
             "team": [
                 {
@@ -43132,6 +43293,7 @@
             ]
         },
         {
+            "area": "Ecruteak City",
             "name": "KimonoGirl KIMONO_GIRL (3) SAYO",
             "team": [
                 {
@@ -43148,6 +43310,7 @@
             ]
         },
         {
+            "area": "Ecruteak City",
             "name": "KimonoGirl KIMONO_GIRL (4) ZUKI",
             "team": [
                 {
@@ -43172,6 +43335,7 @@
             ]
         },
         {
+            "area": "Ecruteak City",
             "name": "KimonoGirl KIMONO_GIRL (5) KUNI",
             "team": [
                 {
@@ -43188,6 +43352,7 @@
             ]
         },
         {
+            "area": "Ecruteak City",
             "name": "KimonoGirl KIMONO_GIRL (6) MIKI",
             "team": [
                 {
@@ -43204,7 +43369,7 @@
             ]
         },
         {
-            "meta": "Ecruteak City Gym",
+            "area": "Ecruteak City Gym",
             "name": "Sage SAGE (6) PING",
             "team": [
                 {
@@ -43272,6 +43437,7 @@
             ]
         },
         {
+            "area": "Ecruteak City Gym",
             "name": "Medium MEDIUM (1) MARTHA",
             "team": [
                 {
@@ -43310,6 +43476,7 @@
             ]
         },
         {
+            "area": "Ecruteak City Gym",
             "b2b": true,
             "name": "Medium MEDIUM (2) GRACE",
             "team": [
@@ -43349,6 +43516,7 @@
             ]
         },
         {
+            "area": "Ecruteak City Gym",
             "name": "Sage SAGE (5) JEFFREY",
             "team": [
                 {
@@ -43386,6 +43554,7 @@
             ]
         },
         {
+            "area": "Ecruteak City Gym",
             "name": "Morty MORTY (1) MORTY",
             "team": [
                 {
@@ -43457,7 +43626,7 @@
             ]
         },
         {
-            "meta": "Route 38 (gauntlet)",
+            "area": "Route 38 (gauntlet)",
             "name": "Sailor SAILOR (10) HARRY",
             "team": [
                 {
@@ -43485,6 +43654,7 @@
             ]
         },
         {
+            "area": "Route 38 (gauntlet)",
             "name": "Beauty BEAUTY (17) OLIVIA",
             "team": [
                 {
@@ -43512,6 +43682,7 @@
             ]
         },
         {
+            "area": "Route 38 (gauntlet)",
             "name": "Lass LASS (10) DANA",
             "team": [
                 {
@@ -43560,6 +43731,7 @@
             ]
         },
         {
+            "area": "Route 38 (gauntlet)",
             "name": "Beauty BEAUTY (16) VALERIE",
             "team": [
                 {
@@ -43616,6 +43788,7 @@
             ]
         },
         {
+            "area": "Route 38 (gauntlet)",
             "meta": "you can leave after this fight one time",
             "name": "BirdKeeper BIRD_KEEPER (5) TOBY",
             "team": [
@@ -43662,6 +43835,7 @@
             ]
         },
         {
+            "area": "Route 38 (gauntlet)",
             "name": "Schoolboy SCHOOLBOY (10) CHAD",
             "team": [
                 {
@@ -43689,7 +43863,7 @@
             ]
         },
         {
-            "meta": "Route 39",
+            "area": "Route 39",
             "name": "PokefanF POKEFANF (6) JAIME",
             "team": [
                 {
@@ -43706,6 +43880,7 @@
             ]
         },
         {
+            "area": "Route 39",
             "name": "PokefanM POKEFANM (2) DEREK",
             "team": [
                 {
@@ -43722,6 +43897,7 @@
             ]
         },
         {
+            "area": "Route 39",
             "name": "Psychic PSYCHIC_T (6) NORMAN",
             "team": [
                 {
@@ -43769,6 +43945,7 @@
             ]
         },
         {
+            "area": "Route 39",
             "name": "Sailor SAILOR (1) EUGENE",
             "team": [
                 {
@@ -43807,6 +43984,7 @@
             ]
         },
         {
+            "area": "Route 39",
             "meta": "end of gauntlet",
             "name": "PokefanF POKEFANF (2) RUTH",
             "team": [
@@ -43824,7 +44002,7 @@
             ]
         },
         {
-            "meta": "Route 40",
+            "area": "Route 40",
             "name": "SwimmerM SWIMMERM (2) SIMON",
             "team": [
                 {
@@ -43848,6 +44026,7 @@
             ]
         },
         {
+            "area": "Route 40",
             "b2b": true,
             "name": "SwimmerF SWIMMERF (2) PAULA",
             "team": [
@@ -43885,6 +44064,7 @@
             ]
         },
         {
+            "area": "Route 40",
             "name": "SwimmerM SWIMMERM (3) RANDALL",
             "team": [
                 {
@@ -43920,6 +44100,7 @@
             ]
         },
         {
+            "area": "Route 40",
             "b2b": true,
             "name": "SwimmerF SWIMMERF (1) ELAINE",
             "team": [
@@ -43947,7 +44128,7 @@
             ]
         },
         {
-            "meta": "Route 41",
+            "area": "Route 41",
             "name": "SwimmerM SWIMMERM (4) CHARLIE",
             "team": [
                 {
@@ -43985,6 +44166,7 @@
             ]
         },
         {
+            "area": "Route 41",
             "b2b": true,
             "name": "SwimmerM SWIMMERM (7) KIRK",
             "team": [
@@ -44024,6 +44206,7 @@
             ]
         },
         {
+            "area": "Route 41",
             "name": "SwimmerF SWIMMERF (3) KAYLEE",
             "team": [
                 {
@@ -44062,6 +44245,7 @@
             ]
         },
         {
+            "area": "Route 41",
             "b2b": true,
             "name": "SwimmerF SWIMMERF (6) KARA",
             "team": [
@@ -44099,6 +44283,7 @@
             ]
         },
         {
+            "area": "Route 41",
             "name": "SwimmerM SWIMMERM (6) BERKE",
             "team": [
                 {
@@ -44130,6 +44315,7 @@
             ]
         },
         {
+            "area": "Route 41",
             "name": "SwimmerM SWIMMERM (5) GEORGE",
             "team": [
                 {
@@ -44200,6 +44386,7 @@
             ]
         },
         {
+            "area": "Route 41",
             "meta": "(left trainer)",
             "name": "SwimmerM SWIMMERM (8) MATHEW",
             "team": [
@@ -44216,6 +44403,7 @@
             ]
         },
         {
+            "area": "Route 41",
             "b2b": true,
             "meta": "(right trainer)",
             "name": "SwimmerF SWIMMERF (5) DENISE",
@@ -44274,6 +44462,7 @@
             ]
         },
         {
+            "area": "Route 41",
             "name": "SwimmerF SWIMMERF (7) WENDY",
             "team": [
                 {
@@ -44341,7 +44530,7 @@
             ]
         },
         {
-            "meta": "Cianwood city",
+            "area": "Cianwood city",
             "name": "Mysticalman MYSTICALMAN (1) EUSINE",
             "team": [
                 {
@@ -44421,7 +44610,8 @@
             ]
         },
         {
-            "meta": "Cianwood city gym gauntlet",
+            "area": "Cianwood city gym",
+            "meta": "gauntlet",
             "name": "Blackbelt BLACKBELT_T (2) YOSHI",
             "team": [
                 {
@@ -44459,6 +44649,7 @@
             ]
         },
         {
+            "area": "Cianwood city gym",
             "b2b": true,
             "name": "Blackbelt BLACKBELT_T (4) LAO",
             "team": [
@@ -44498,6 +44689,7 @@
             ]
         },
         {
+            "area": "Cianwood city gym",
             "name": "Blackbelt BLACKBELT_T (5) NOB",
             "team": [
                 {
@@ -44541,6 +44733,7 @@
             ]
         },
         {
+            "area": "Cianwood city gym",
             "b2b": true,
             "meta": "end of gauntlet",
             "name": "Blackbelt BLACKBELT_T (7) LUNG",
@@ -44588,6 +44781,7 @@
             ]
         },
         {
+            "area": "Cianwood city gym",
             "name": "Chuck CHUCK (1) CHUCK",
             "team": [
                 {
@@ -44659,7 +44853,8 @@
             ]
         },
         {
-            "meta": "Mt. Mortar (gives you tyrogue)",
+            "area": "Mt. Mortar",
+            "meta": "(gives you tyrogue)",
             "name": "Blackbelt BLACKBELT_T (6) KIYO",
             "team": [
                 {
@@ -44687,6 +44882,7 @@
             ]
         },
         {
+            "area": "Mt. Mortar",
             "name": "Pokemaniac POKEMANIAC (15) MILLER",
             "team": [
                 {
@@ -44725,6 +44921,7 @@
             ]
         },
         {
+            "area": "Mt. Mortar",
             "name": "SuperNerd SUPER_NERD (14) MARKUS",
             "team": [
                 {
@@ -44768,6 +44965,7 @@
             ]
         },
         {
+            "area": "Mt. Mortar",
             "name": "SuperNerd SUPER_NERD (13) HUGH",
             "team": [
                 {
@@ -44812,7 +45010,7 @@
             ]
         },
         {
-            "meta": "Route 42",
+            "area": "Route 42",
             "name": "Hiker HIKER (6) BENJAMIN",
             "team": [
                 {
@@ -44858,6 +45056,7 @@
             ]
         },
         {
+            "area": "Route 42",
             "name": "Pokemaniac POKEMANIAC (4) SHANE",
             "team": [
                 {
@@ -44896,6 +45095,7 @@
             ]
         },
         {
+            "area": "Route 42",
             "name": "Fisher FISHER (7) TULLY",
             "team": [
                 {
@@ -44909,7 +45109,8 @@
             ]
         },
         {
-            "meta": "Route 43 (right trainer)",
+            "area": "Route 43",
+            "meta": "(right trainer)",
             "name": "Pokemaniac POKEMANIAC (5) BEN",
             "team": [
                 {
@@ -44945,6 +45146,7 @@
             ]
         },
         {
+            "area": "Route 43",
             "b2b": true,
             "meta": "(left trainer)",
             "name": "Pokemaniac POKEMANIAC (6) BRENT",
@@ -44981,6 +45183,7 @@
             ]
         },
         {
+            "area": "Route 43",
             "name": "Pokemaniac POKEMANIAC (7) RON",
             "team": [
                 {
@@ -45007,6 +45210,7 @@
             ]
         },
         {
+            "area": "Route 43",
             "name": "Fisher FISHER (6) MARVIN",
             "team": [
                 {
@@ -45055,6 +45259,7 @@
             ]
         },
         {
+            "area": "Route 43",
             "name": "Picnicker PICNICKER (20) TIFFANY",
             "team": [
                 {
@@ -45090,6 +45295,7 @@
             ]
         },
         {
+            "area": "Route 43",
             "name": "Camper CAMPER (19) SPENCER",
             "team": [
                 {
@@ -45130,7 +45336,7 @@
             ]
         },
         {
-            "meta": "Lake of Rage",
+            "area": "Lake of Rage",
             "name": "Fisher FISHER (8) ANDRE",
             "team": [
                 {
@@ -45165,6 +45371,7 @@
             ]
         },
         {
+            "area": "Lake of Rage",
             "b2b": true,
             "name": "Fisher FISHER (9) RAYMOND",
             "team": [
@@ -45204,6 +45411,7 @@
             ]
         },
         {
+            "area": "Lake of Rage",
             "b2b": true,
             "name": "CooltrainerM COOLTRAINERM (2) AARON",
             "team": [
@@ -45243,6 +45451,7 @@
             ]
         },
         {
+            "area": "Lake of Rage",
             "name": "CooltrainerF COOLTRAINERF (2) LOIS",
             "team": [
                 {
@@ -45321,7 +45530,7 @@
             ]
         },
         {
-            "meta": "Rocket Hideout",
+            "area": "Rocket Hideout",
             "name": "GruntM GRUNTM (16) GRUNT",
             "team": [
                 {
@@ -45387,6 +45596,7 @@
             ]
         },
         {
+            "area": "Rocket Hideout",
             "name": "GruntM GRUNTM (20) GRUNT",
             "team": [
                 {
@@ -45420,6 +45630,7 @@
             ]
         },
         {
+            "area": "Rocket Hideout",
             "b2b": true,
             "name": "GruntM GRUNTM (21) GRUNT",
             "team": [
@@ -45465,6 +45676,7 @@
             ]
         },
         {
+            "area": "Rocket Hideout",
             "name": "Scientist SCIENTIST (3) JED",
             "team": [
                 {
@@ -45511,6 +45723,7 @@
             ]
         },
         {
+            "area": "Rocket Hideout",
             "name": "GruntM GRUNTM (19) GRUNT",
             "team": [
                 {
@@ -45549,6 +45762,7 @@
             ]
         },
         {
+            "area": "Rocket Hideout",
             "name": "GruntM GRUNTM (17) GRUNT",
             "team": [
                 {
@@ -45602,6 +45816,7 @@
             ]
         },
         {
+            "area": "Rocket Hideout",
             "name": "Scientist SCIENTIST (2) MITCH",
             "team": [
                 {
@@ -45631,6 +45846,7 @@
             ]
         },
         {
+            "area": "Rocket Hideout",
             "name": "GruntM GRUNTM (28) GRUNT",
             "team": [
                 {
@@ -45683,6 +45899,7 @@
             ]
         },
         {
+            "area": "Rocket Hideout",
             "name": "GruntF GRUNTF (5) GRUNT",
             "team": [
                 {
@@ -45729,6 +45946,7 @@
             ]
         },
         {
+            "area": "Rocket Hideout",
             "name": "GruntM GRUNTM (18) GRUNT",
             "team": [
                 {
@@ -45766,6 +45984,7 @@
             ]
         },
         {
+            "area": "Rocket Hideout",
             "name": "Scientist SCIENTIST (1) ROSS",
             "team": [
                 {
@@ -45804,6 +46023,7 @@
             ]
         },
         {
+            "area": "Rocket Hideout",
             "name": "ExecutiveM EXECUTIVEM (4) EXECUTIVE",
             "team": [
                 {
@@ -45883,6 +46103,7 @@
             ]
         },
         {
+            "area": "Rocket Hideout",
             "name": "ExecutiveF EXECUTIVEF (2) EXECUTIVE",
             "team": [
                 {
@@ -45970,7 +46191,7 @@
             ]
         },
         {
-            "meta": "Mahogany town gym",
+            "area": "Mahogany town gym",
             "name": "Skier SKIER (2) CLARISSA",
             "team": [
                 {
@@ -46019,6 +46240,7 @@
             ]
         },
         {
+            "area": "Mahogany town gym",
             "name": "Boarder BOARDER (1) RONALD",
             "team": [
                 {
@@ -46067,6 +46289,7 @@
             ]
         },
         {
+            "area": "Mahogany town gym",
             "name": "Boarder BOARDER (3) DOUGLAS",
             "team": [
                 {
@@ -46132,6 +46355,7 @@
             ]
         },
         {
+            "area": "Mahogany town gym",
             "name": "Pryce PRYCE (1) PRYCE",
             "team": [
                 {
@@ -46219,7 +46443,7 @@
             ]
         },
         {
-            "meta": "Olivine Lighthouse",
+            "area": "Olivine Lighthouse",
             "name": "Sailor SAILOR (2) HUEY",
             "team": [
                 {
@@ -46277,6 +46501,7 @@
             ]
         },
         {
+            "area": "Olivine Lighthouse",
             "b2b": true,
             "name": "Gentleman GENTLEMAN (5) ALFRED",
             "team": [
@@ -46324,6 +46549,7 @@
             ]
         },
         {
+            "area": "Olivine Lighthouse",
             "name": "Gentleman GENTLEMAN (1) PRESTON",
             "team": [
                 {
@@ -46350,6 +46576,7 @@
             ]
         },
         {
+            "area": "Olivine Lighthouse",
             "b2b": true,
             "name": "BirdKeeper BIRD_KEEPER (4) THEO",
             "team": [
@@ -46426,6 +46653,7 @@
             ]
         },
         {
+            "area": "Olivine Lighthouse",
             "name": "BirdKeeper BIRD_KEEPER (6) DENIS",
             "team": [
                 {
@@ -46472,6 +46700,7 @@
             ]
         },
         {
+            "area": "Olivine Lighthouse",
             "name": "Lass LASS (5) CONNIE",
             "team": [
                 {
@@ -46499,6 +46728,7 @@
             ]
         },
         {
+            "area": "Olivine Lighthouse",
             "name": "Sailor SAILOR (3) TERRELL",
             "team": [
                 {
@@ -46524,6 +46754,7 @@
             ]
         },
         {
+            "area": "Olivine Lighthouse",
             "meta": "cant leave after Terrell",
             "name": "Sailor SAILOR (5) ERNEST",
             "team": [
@@ -46574,7 +46805,7 @@
             ]
         },
         {
-            "meta": "Olivine city gym",
+            "area": "Olivine city gym",
             "name": "Jasmine JASMINE (1) JASMINE",
             "team": [
                 {
@@ -46662,7 +46893,7 @@
             ]
         },
         {
-            "meta": "Radio Tower",
+            "area": "Radio Tower",
             "name": "GruntM GRUNTM (3) GRUNT",
             "team": [
                 {
@@ -46727,6 +46958,7 @@
             ]
         },
         {
+            "area": "Radio Tower",
             "name": "GruntM GRUNTM (6) GRUNT",
             "team": [
                 {
@@ -46789,6 +47021,7 @@
             ]
         },
         {
+            "area": "Radio Tower",
             "b2b": true,
             "name": "GruntF GRUNTF (2) GRUNT",
             "team": [
@@ -46836,6 +47069,7 @@
             ]
         },
         {
+            "area": "Radio Tower",
             "name": "GruntM GRUNTM (4) GRUNT",
             "team": [
                 {
@@ -46893,6 +47127,7 @@
             ]
         },
         {
+            "area": "Radio Tower",
             "name": "GruntM GRUNTM (7) GRUNT",
             "team": [
                 {
@@ -46966,6 +47201,7 @@
             ]
         },
         {
+            "area": "Radio Tower",
             "b2b": true,
             "name": "GruntM GRUNTM (8) GRUNT",
             "team": [
@@ -47005,6 +47241,7 @@
             ]
         },
         {
+            "area": "Radio Tower",
             "name": "GruntM GRUNTM (10) GRUNT",
             "team": [
                 {
@@ -47054,6 +47291,7 @@
             ]
         },
         {
+            "area": "Radio Tower",
             "b2b": true,
             "name": "Scientist SCIENTIST (5) RICH",
             "team": [
@@ -47111,6 +47349,7 @@
             ]
         },
         {
+            "area": "Radio Tower",
             "name": "ExecutiveM EXECUTIVEM (3) EXECUTIVE",
             "team": [
                 {
@@ -47190,6 +47429,7 @@
             ]
         },
         {
+            "area": "Radio Tower",
             "name": "GruntM GRUNTM (13) GRUNT",
             "team": [
                 {
@@ -47247,6 +47487,7 @@
             ]
         },
         {
+            "area": "Radio Tower",
             "b2b": true,
             "name": "GruntM GRUNTM (11) GRUNT",
             "team": [
@@ -47294,6 +47535,7 @@
             ]
         },
         {
+            "area": "Radio Tower",
             "name": "Rival1 RIVAL1 (10) ?",
             "team": [
                 {
@@ -47389,6 +47631,7 @@
             ]
         },
         {
+            "area": "Radio Tower",
             "name": "Rival1 RIVAL1 (11) ?",
             "team": [
                 {
@@ -47468,6 +47711,7 @@
             ]
         },
         {
+            "area": "Radio Tower",
             "name": "Rival1 RIVAL1 (12) ?",
             "team": [
                 {
@@ -47563,6 +47807,66 @@
             ]
         },
         {
+            "area": "Radio Tower",
+            "name": "Burglar BURGLAR (2) EDDIE",
+            "team": [
+                {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 14,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
+                    "item": "leftovers",
+                    "level": 63,
+                    "moves": [
+                        "flamethrower",
+                        "megahorn",
+                        "hp-grass",
+                        "double-edge"
+                    ],
+                    "name": "rapidash"
+                },
+                {
+                    "item": "pink-bow",
+                    "level": 63,
+                    "moves": [
+                        "double-edge",
+                        "thunderbolt",
+                        "shadow-ball",
+                        "bubblebeam"
+                    ],
+                    "name": "persian"
+                },
+                {
+                    "item": "miracleberry",
+                    "level": 63,
+                    "moves": [
+                        "hypnosis",
+                        "thunderbolt",
+                        "return",
+                        "psychic"
+                    ],
+                    "name": "girafarig"
+                },
+                {
+                    "item": "quick-claw",
+                    "level": 60,
+                    "moves": [
+                        "explosion",
+                        "sludge-bomb",
+                        "fire-blast",
+                        "thunderbolt"
+                    ],
+                    "name": "weezing"
+                }
+            ]
+        },
+        {
+            "area": "Radio Tower",
+            "b2b": true,
             "name": "Burglar BURGLAR (1) DUNCAN",
             "team": [
                 {
@@ -47628,64 +47932,7 @@
             ]
         },
         {
-            "b2b": true,
-            "name": "Burglar BURGLAR (2) EDDIE",
-            "team": [
-                {
-                    "dvs": {
-                        "atk": 14,
-                        "def": 14,
-                        "hp": 3,
-                        "spa": 15,
-                        "spd": 15,
-                        "spe": 15
-                    },
-                    "item": "leftovers",
-                    "level": 63,
-                    "moves": [
-                        "flamethrower",
-                        "megahorn",
-                        "hp-grass",
-                        "double-edge"
-                    ],
-                    "name": "rapidash"
-                },
-                {
-                    "item": "pink-bow",
-                    "level": 63,
-                    "moves": [
-                        "double-edge",
-                        "thunderbolt",
-                        "shadow-ball",
-                        "bubblebeam"
-                    ],
-                    "name": "persian"
-                },
-                {
-                    "item": "miracleberry",
-                    "level": 63,
-                    "moves": [
-                        "hypnosis",
-                        "thunderbolt",
-                        "return",
-                        "psychic"
-                    ],
-                    "name": "girafarig"
-                },
-                {
-                    "item": "quick-claw",
-                    "level": 60,
-                    "moves": [
-                        "explosion",
-                        "sludge-bomb",
-                        "fire-blast",
-                        "thunderbolt"
-                    ],
-                    "name": "weezing"
-                }
-            ]
-        },
-        {
+            "area": "Radio Tower",
             "name": "GruntM GRUNTM (24) GRUNT",
             "team": [
                 {
@@ -47743,6 +47990,7 @@
             ]
         },
         {
+            "area": "Radio Tower",
             "b2b": true,
             "name": "GruntM GRUNTM (14) GRUNT",
             "team": [
@@ -47779,6 +48027,7 @@
             ]
         },
         {
+            "area": "Radio Tower",
             "b2b": true,
             "name": "GruntM GRUNTM (15) GRUNT",
             "team": [
@@ -47826,6 +48075,7 @@
             ]
         },
         {
+            "area": "Radio Tower",
             "name": "Scientist SCIENTIST (4) MARC",
             "team": [
                 {
@@ -47910,6 +48160,7 @@
             ]
         },
         {
+            "area": "Radio Tower",
             "name": "GruntF GRUNTF (4) GRUNT",
             "team": [
                 {
@@ -47970,6 +48221,7 @@
             ]
         },
         {
+            "area": "Radio Tower",
             "name": "ExecutiveM EXECUTIVEM (2) EXECUTIVE",
             "team": [
                 {
@@ -48057,6 +48309,7 @@
             ]
         },
         {
+            "area": "Radio Tower",
             "name": "ExecutiveF EXECUTIVEF (1) EXECUTIVE",
             "team": [
                 {
@@ -48136,6 +48389,7 @@
             ]
         },
         {
+            "area": "Radio Tower",
             "name": "ExecutiveM EXECUTIVEM (1) EXECUTIVE",
             "team": [
                 {
@@ -48215,6 +48469,7 @@
             ]
         },
         {
+            "area": "Radio Tower",
             "name": "Sage SAGE (10) GAKU",
             "team": [
                 {
@@ -48231,6 +48486,7 @@
             ]
         },
         {
+            "area": "Radio Tower",
             "name": "Sage SAGE (11) MASA",
             "team": [
                 {
@@ -48247,6 +48503,7 @@
             ]
         },
         {
+            "area": "Radio Tower",
             "name": "Sage SAGE (12) KOJI",
             "team": [
                 {
@@ -48271,7 +48528,7 @@
             ]
         },
         {
-            "meta": "Route 44",
+            "area": "Route 44",
             "name": "Fisher FISHER (10) WILTON",
             "team": [
                 {
@@ -48329,6 +48586,7 @@
             ]
         },
         {
+            "area": "Route 44",
             "name": "Psychic PSYCHIC_T (8) PHIL",
             "team": [
                 {
@@ -48416,6 +48674,7 @@
             ]
         },
         {
+            "area": "Route 44",
             "name": "BirdKeeper BIRD_KEEPER (7) VANCE",
             "team": [
                 {
@@ -48472,6 +48731,7 @@
             ]
         },
         {
+            "area": "Route 44",
             "name": "Fisher FISHER (11) EDGAR",
             "team": [
                 {
@@ -48529,6 +48789,7 @@
             ]
         },
         {
+            "area": "Route 44",
             "name": "CooltrainerM COOLTRAINERM (19) ALLEN",
             "team": [
                 {
@@ -48583,6 +48844,7 @@
             ]
         },
         {
+            "area": "Route 44",
             "b2b": true,
             "name": "CooltrainerF COOLTRAINERF (16) CYBIL",
             "team": [
@@ -48660,7 +48922,7 @@
             ]
         },
         {
-            "meta": "Blackthorn city gym",
+            "area": "Blackthorn city gym",
             "name": "CooltrainerM COOLTRAINERM (5) MIKE",
             "team": [
                 {
@@ -48707,6 +48969,7 @@
             ]
         },
         {
+            "area": "Blackthorn city gym",
             "b2b": true,
             "name": "CooltrainerM COOLTRAINERM (3) PAUL",
             "team": [
@@ -48762,6 +49025,7 @@
             ]
         },
         {
+            "area": "Blackthorn city gym",
             "name": "CooltrainerF COOLTRAINERF (3) FRAN",
             "team": [
                 {
@@ -48819,6 +49083,7 @@
             ]
         },
         {
+            "area": "Blackthorn city gym",
             "name": "Clair CLAIR (1) CLAIR",
             "team": [
                 {
@@ -48914,7 +49179,7 @@
             ]
         },
         {
-            "meta": "Route 45",
+            "area": "Route 45",
             "name": "Hiker HIKER (7) ERIK",
             "team": [
                 {
@@ -48972,6 +49237,7 @@
             ]
         },
         {
+            "area": "Route 45",
             "name": "Hiker HIKER (20) PARRY",
             "team": [
                 {
@@ -49036,6 +49302,7 @@
             ]
         },
         {
+            "area": "Route 45",
             "b2b": true,
             "name": "Blackbelt BLACKBELT_T (8) KENJI",
             "team": [
@@ -49083,6 +49350,7 @@
             ]
         },
         {
+            "area": "Route 45",
             "name": "Camper CAMPER (22) QUENTIN",
             "team": [
                 {
@@ -49156,7 +49424,7 @@
             ]
         },
         {
-            "meta": "Route 46",
+            "area": "Route 46",
             "name": "Picnicker PICNICKER (10) ERIN",
             "team": [
                 {
@@ -49233,7 +49501,7 @@
             ]
         },
         {
-            "meta": "Dark Cave",
+            "area": "Dark Cave",
             "name": "Hiker HIKER (8) MICHAEL",
             "team": [
                 {
@@ -49307,6 +49575,7 @@
             ]
         },
         {
+            "area": "Dark Cave",
             "b2b": true,
             "name": "CooltrainerF COOLTRAINERF (7) KELLY",
             "team": [
@@ -49372,6 +49641,7 @@
             ]
         },
         {
+            "area": "Dark Cave",
             "name": "CooltrainerM COOLTRAINERM (8) RYAN",
             "team": [
                 {
@@ -49451,7 +49721,7 @@
             ]
         },
         {
-            "meta": "Dragon’s den",
+            "area": "Dragon’s den",
             "name": "CooltrainerM COOLTRAINERM (20) DARIN",
             "team": [
                 {
@@ -49514,6 +49784,7 @@
             ]
         },
         {
+            "area": "Dragon’s den",
             "name": "CooltrainerF COOLTRAINERF (21) CARA",
             "team": [
                 {
@@ -49593,6 +49864,7 @@
             ]
         },
         {
+            "area": "Dragon’s den",
             "name": "Twins TWINS (9) LEA & PIA",
             "team": [
                 {
@@ -49620,7 +49892,7 @@
             ]
         },
         {
-            "meta": "Route 27",
+            "area": "Route 27",
             "name": "CooltrainerF COOLTRAINERF (11) MEGAN",
             "team": [
                 {
@@ -49689,6 +49961,7 @@
             ]
         },
         {
+            "area": "Route 27",
             "b2b": true,
             "name": "BirdKeeper BIRD_KEEPER (14) JOSE",
             "team": [
@@ -49714,6 +49987,7 @@
             ]
         },
         {
+            "area": "Route 27",
             "name": "CooltrainerM COOLTRAINERM (11) BLAKE",
             "team": [
                 {
@@ -49771,6 +50045,7 @@
             ]
         },
         {
+            "area": "Route 27",
             "b2b": true,
             "name": "CooltrainerF COOLTRAINERF (10) REENA",
             "team": [
@@ -49845,6 +50120,7 @@
             ]
         },
         {
+            "area": "Route 27",
             "name": "CooltrainerM COOLTRAINERM (12) BRIAN",
             "team": [
                 {
@@ -49894,6 +50170,7 @@
             ]
         },
         {
+            "area": "Route 27",
             "b2b": true,
             "name": "Psychic PSYCHIC_T (10) GILBERT",
             "team": [
@@ -49952,7 +50229,7 @@
             ]
         },
         {
-            "meta": "Route 26",
+            "area": "Route 26",
             "name": "CooltrainerM COOLTRAINERM (9) JAKE",
             "team": [
                 {
@@ -50048,6 +50325,7 @@
             ]
         },
         {
+            "area": "Route 26",
             "b2b": true,
             "name": "Fisher FISHER (21) SCOTT",
             "team": [
@@ -50087,6 +50365,7 @@
             ]
         },
         {
+            "area": "Route 26",
             "meta": "(talk to her from the back?)",
             "name": "CooltrainerF COOLTRAINERF (8) JOYCE",
             "team": [
@@ -50191,6 +50470,7 @@
             ]
         },
         {
+            "area": "Route 26",
             "name": "CooltrainerM COOLTRAINERM (10) GAVEN",
             "team": [
                 {
@@ -50294,6 +50574,7 @@
             ]
         },
         {
+            "area": "Route 26",
             "b2b": true,
             "name": "CooltrainerF COOLTRAINERF (9) BETH",
             "team": [
@@ -50341,7 +50622,7 @@
             ]
         },
         {
-            "meta": "Victoary road",
+            "area": "Victoary road",
             "name": "Rival1 RIVAL1 (13) ?",
             "team": [
                 {
@@ -50428,6 +50709,7 @@
             ]
         },
         {
+            "area": "Victoary road",
             "name": "Rival1 RIVAL1 (14) ?",
             "team": [
                 {
@@ -50514,6 +50796,7 @@
             ]
         },
         {
+            "area": "Victoary road",
             "name": "Rival1 RIVAL1 (15) ?",
             "team": [
                 {
@@ -50600,7 +50883,7 @@
             ]
         },
         {
-            "meta": "Elite 4",
+            "area": "Elite 4",
             "name": "Will WILL (1) WILL",
             "team": [
                 {
@@ -50688,6 +50971,7 @@
             ]
         },
         {
+            "area": "Elite 4",
             "name": "Koga KOGA (1) KOGA",
             "team": [
                 {
@@ -50791,6 +51075,7 @@
             ]
         },
         {
+            "area": "Elite 4",
             "name": "Bruno BRUNO (1) BRUNO",
             "team": [
                 {
@@ -50869,6 +51154,7 @@
             ]
         },
         {
+            "area": "Elite 4",
             "name": "Karen KAREN (1) KAREN",
             "team": [
                 {
@@ -50956,6 +51242,7 @@
             ]
         },
         {
+            "area": "Elite 4",
             "name": "Champion CHAMPION (1) LANCE",
             "team": [
                 {
@@ -51035,7 +51322,8 @@
             ]
         },
         {
-            "meta": "S. S. Anne gauntlet",
+            "area": "S. S. Anne",
+            "meta": "gauntlet",
             "name": "Firebreather FIREBREATHER (8) LYLE",
             "team": [
                 {
@@ -51082,6 +51370,7 @@
             ]
         },
         {
+            "area": "S. S. Anne",
             "name": "Sailor SAILOR (9) STANLY",
             "team": [
                 {
@@ -51131,6 +51420,7 @@
             ]
         },
         {
+            "area": "S. S. Anne",
             "name": "Juggler JUGGLER (2) FRITZ",
             "team": [
                 {
@@ -51188,6 +51478,7 @@
             ]
         },
         {
+            "area": "S. S. Anne",
             "name": "Sailor SAILOR (6) JEFF",
             "team": [
                 {
@@ -51237,6 +51528,7 @@
             ]
         },
         {
+            "area": "S. S. Anne",
             "name": "PokefanM POKEFANM (9) COLIN",
             "team": [
                 {
@@ -51291,6 +51583,7 @@
             ]
         },
         {
+            "area": "S. S. Anne",
             "name": "Twins TWINS (7) MEG & PEG",
             "team": [
                 {
@@ -51359,7 +51652,7 @@
             ]
         },
         {
-            "meta": "Vermilion City Gym",
+            "area": "Vermilion City Gym",
             "name": "Gentleman GENTLEMAN (3) GREGORY",
             "team": [
                 {
@@ -51414,6 +51707,7 @@
             ]
         },
         {
+            "area": "Vermilion City Gym",
             "b2b": true,
             "name": "Juggler JUGGLER (3) HORTON",
             "team": [
@@ -51472,6 +51766,7 @@
             ]
         },
         {
+            "area": "Vermilion City Gym",
             "name": "Guitarist GUITARIST (2) VINCENT",
             "team": [
                 {
@@ -51545,6 +51840,7 @@
             ]
         },
         {
+            "area": "Vermilion City Gym",
             "name": "LtSurge LT_SURGE (1) LT.SURGE",
             "team": [
                 {
@@ -51640,7 +51936,7 @@
             ]
         },
         {
-            "meta": "Route 6",
+            "area": "Route 6",
             "name": "PokefanM POKEFANM (13) REX",
             "team": [
                 {
@@ -51687,6 +51983,7 @@
             ]
         },
         {
+            "area": "Route 6",
             "b2b": true,
             "name": "PokefanM POKEFANM (14) ALLAN",
             "team": [
@@ -51760,7 +52057,7 @@
             ]
         },
         {
-            "meta": "Saffron City Gym",
+            "area": "Saffron City Gym",
             "name": "Medium MEDIUM (7) DORIS",
             "team": [
                 {
@@ -51818,6 +52115,7 @@
             ]
         },
         {
+            "area": "Saffron City Gym",
             "name": "Psychic PSYCHIC_T (11) JARED",
             "team": [
                 {
@@ -51867,6 +52165,7 @@
             ]
         },
         {
+            "area": "Saffron City Gym",
             "name": "Medium MEDIUM (6) REBECCA",
             "team": [
                 {
@@ -51924,6 +52223,7 @@
             ]
         },
         {
+            "area": "Saffron City Gym",
             "b2b": true,
             "name": "Psychic PSYCHIC_T (2) FRANKLIN",
             "team": [
@@ -51982,6 +52282,7 @@
             ]
         },
         {
+            "area": "Saffron City Gym",
             "name": "Sabrina SABRINA (1) SABRINA",
             "team": [
                 {
@@ -52077,7 +52378,7 @@
             ]
         },
         {
-            "meta": "Route 8",
+            "area": "Route 8",
             "name": "Biker BIKER (3) DWAYNE",
             "team": [
                 {
@@ -52135,6 +52436,7 @@
             ]
         },
         {
+            "area": "Route 8",
             "b2b": true,
             "name": "Biker BIKER (4) HARRIS",
             "team": [
@@ -52185,6 +52487,7 @@
             ]
         },
         {
+            "area": "Route 8",
             "name": "SuperNerd SUPER_NERD (6) SAM",
             "team": [
                 {
@@ -52250,6 +52553,7 @@
             ]
         },
         {
+            "area": "Route 8",
             "b2b": true,
             "name": "SuperNerd SUPER_NERD (7) TOM",
             "team": [
@@ -52289,7 +52593,8 @@
             ]
         },
         {
-            "meta": "Route 12 (gauntlet)",
+            "area": "Route 12",
+            "meta": "(gauntlet)",
             "name": "Fisher FISHER (14) STEPHEN",
             "team": [
                 {
@@ -52339,6 +52644,7 @@
             ]
         },
         {
+            "area": "Route 12",
             "b2b": true,
             "name": "Fisher FISHER (4) KYLE",
             "team": [
@@ -52389,6 +52695,7 @@
             ]
         },
         {
+            "area": "Route 12",
             "name": "Fisher FISHER (13) MARTIN",
             "team": [
                 {
@@ -52438,7 +52745,7 @@
             ]
         },
         {
-            "meta": "Route 13",
+            "area": "Route 13",
             "name": "BirdKeeper BIRD_KEEPER (15) PERRY",
             "team": [
                 {
@@ -52488,6 +52795,7 @@
             ]
         },
         {
+            "area": "Route 13",
             "name": "PokefanM POKEFANM (12) ALEX",
             "team": [
                 {
@@ -52553,7 +52861,7 @@
             ]
         },
         {
-            "meta": "Route 14",
+            "area": "Route 14",
             "name": "PokefanM POKEFANM (5) CARTER",
             "team": [
                 {
@@ -52635,6 +52943,7 @@
             ]
         },
         {
+            "area": "Route 14",
             "b2b": true,
             "name": "PokefanM POKEFANM (6) TREVOR",
             "team": [
@@ -52693,6 +53002,7 @@
             ]
         },
         {
+            "area": "Route 14",
             "name": "BirdKeeper BIRD_KEEPER (9) ROY",
             "team": [
                 {
@@ -52761,7 +53071,7 @@
             ]
         },
         {
-            "meta": "Route 15",
+            "area": "Route 15",
             "name": "Schoolboy SCHOOLBOY (9) BILLY",
             "team": [
                 {
@@ -52838,6 +53148,7 @@
             ]
         },
         {
+            "area": "Route 15",
             "b2b": true,
             "name": "Teacher TEACHER (1) COLETTE",
             "team": [
@@ -52915,6 +53226,7 @@
             ]
         },
         {
+            "area": "Route 15",
             "name": "Schoolboy SCHOOLBOY (2) KIPP",
             "team": [
                 {
@@ -52950,6 +53262,7 @@
             ]
         },
         {
+            "area": "Route 15",
             "b2b": true,
             "name": "Schoolboy SCHOOLBOY (6) TOMMY",
             "team": [
@@ -53027,6 +53340,7 @@
             ]
         },
         {
+            "area": "Route 15",
             "meta": "end of gauntlet",
             "name": "Teacher TEACHER (2) HILLARY",
             "team": [
@@ -53104,7 +53418,8 @@
             ]
         },
         {
-            "meta": "Fuchsia city gym spikes",
+            "area": "Fuchsia city gym",
+            "meta": "spikes",
             "name": "Janine JANINE (1) JANINE",
             "team": [
                 {
@@ -53184,7 +53499,7 @@
             ]
         },
         {
-            "meta": "Route 17",
+            "area": "Route 17",
             "name": "Biker BIKER (8) JOEL",
             "team": [
                 {
@@ -53269,6 +53584,7 @@
             ]
         },
         {
+            "area": "Route 17",
             "b2b": true,
             "name": "Biker BIKER (9) GLENN",
             "team": [
@@ -53335,6 +53651,7 @@
             ]
         },
         {
+            "area": "Route 17",
             "b2b": true,
             "name": "Biker BIKER (6) CHARLES",
             "team": [
@@ -53401,7 +53718,7 @@
             ]
         },
         {
-            "meta": "Celadon City",
+            "area": "Celadon City",
             "name": "Lass LASS (9) MICHELLE",
             "team": [
                 {
@@ -53456,6 +53773,7 @@
             ]
         },
         {
+            "area": "Celadon City",
             "b2b": true,
             "name": "Picnicker PICNICKER (19) TANYA",
             "team": [
@@ -53511,6 +53829,7 @@
             ]
         },
         {
+            "area": "Celadon City",
             "name": "Beauty BEAUTY (14) JULIA",
             "team": [
                 {
@@ -53576,6 +53895,7 @@
             ]
         },
         {
+            "area": "Celadon City",
             "b2b": true,
             "name": "Twins TWINS (5) JO & ZOE",
             "team": [
@@ -53634,6 +53954,7 @@
             ]
         },
         {
+            "area": "Celadon City",
             "name": "Erika ERIKA (1) ERIKA",
             "team": [
                 {
@@ -53721,7 +54042,7 @@
             ]
         },
         {
-            "meta": "Route 10",
+            "area": "Route 10",
             "name": "Hiker HIKER (17) JIM",
             "team": [
                 {
@@ -53824,7 +54145,7 @@
             ]
         },
         {
-            "meta": "Route 9",
+            "area": "Route 9",
             "name": "Picnicker PICNICKER (13) HEIDI",
             "team": [
                 {
@@ -53890,6 +54211,7 @@
             ]
         },
         {
+            "area": "Route 9",
             "b2b": true,
             "name": "Hiker HIKER (15) SIDNEY",
             "team": [
@@ -53953,6 +54275,7 @@
             ]
         },
         {
+            "area": "Route 9",
             "meta": "towards power plant",
             "name": "Camper CAMPER (7) DEAN",
             "team": [
@@ -54025,6 +54348,7 @@
             ]
         },
         {
+            "area": "Route 9",
             "name": "Camper CAMPER (8) SID",
             "team": [
                 {
@@ -54098,6 +54422,7 @@
             ]
         },
         {
+            "area": "Route 9",
             "b2b": true,
             "name": "Hiker HIKER (13) TIM",
             "team": [
@@ -54164,7 +54489,7 @@
             ]
         },
         {
-            "meta": "Route 24",
+            "area": "Route 24",
             "name": "GruntM GRUNTM (31) GRUNT",
             "team": [
                 {
@@ -54252,7 +54577,7 @@
             ]
         },
         {
-            "meta": "Route 11",
+            "area": "Route 11",
             "name": "Youngster YOUNGSTER (11) OWEN",
             "team": [
                 {
@@ -54302,6 +54627,7 @@
             ]
         },
         {
+            "area": "Route 11",
             "b2b": true,
             "name": "Youngster YOUNGSTER (12) JASON",
             "team": [
@@ -54341,6 +54667,7 @@
             ]
         },
         {
+            "area": "Route 11",
             "b2b": true,
             "name": "Psychic PSYCHIC_T (4) FIDEL",
             "team": [
@@ -54391,6 +54718,7 @@
             ]
         },
         {
+            "area": "Route 11",
             "name": "Psychic PSYCHIC_T (3) HERMAN",
             "team": [
                 {
@@ -54440,7 +54768,7 @@
             ]
         },
         {
-            "meta": "Route 2",
+            "area": "Route 2",
             "name": "BugCatcher BUG_CATCHER (2) ROB",
             "team": [
                 {
@@ -54525,6 +54853,7 @@
             ]
         },
         {
+            "area": "Route 2",
             "b2b": true,
             "name": "BugCatcher BUG_CATCHER (3) ED",
             "team": [
@@ -54602,7 +54931,8 @@
             ]
         },
         {
-            "meta": "Pewter City Gym perma sandstorm",
+            "area": "Pewter City Gym",
+            "meta": "perma sandstorm",
             "name": "Camper CAMPER (18) JERRY",
             "team": [
                 {
@@ -54676,6 +55006,7 @@
             ]
         },
         {
+            "area": "Pewter City Gym",
             "name": "Brock BROCK (1) BROCK",
             "team": [
                 {
@@ -54763,7 +55094,8 @@
             ]
         },
         {
-            "meta": "Route 3 gauntlet",
+            "area": "Route 3",
+            "meta": "gauntlet",
             "name": "Youngster YOUNGSTER (9) WARREN",
             "team": [
                 {
@@ -54837,6 +55169,7 @@
             ]
         },
         {
+            "area": "Route 3",
             "name": "Firebreather FIREBREATHER (4) BURT",
             "team": [
                 {
@@ -54901,6 +55234,7 @@
             ]
         },
         {
+            "area": "Route 3",
             "name": "Firebreather FIREBREATHER (1) OTIS",
             "team": [
                 {
@@ -54958,7 +55292,7 @@
             ]
         },
         {
-            "meta": "Mt. Moon",
+            "area": "Mt. Moon",
             "name": "Rival2 RIVAL2 (1) ?",
             "team": [
                 {
@@ -55038,6 +55372,7 @@
             ]
         },
         {
+            "area": "Mt. Moon",
             "name": "Rival2 RIVAL2 (2) ?",
             "team": [
                 {
@@ -55117,6 +55452,7 @@
             ]
         },
         {
+            "area": "Mt. Moon",
             "name": "Rival2 RIVAL2 (3) ?",
             "team": [
                 {
@@ -55196,7 +55532,7 @@
             ]
         },
         {
-            "meta": "Route 4",
+            "area": "Route 4",
             "name": "BirdKeeper BIRD_KEEPER (8) HANK",
             "team": [
                 {
@@ -55235,6 +55571,7 @@
             ]
         },
         {
+            "area": "Route 4",
             "b2b": true,
             "meta": "end of gauntlet",
             "name": "Picnicker PICNICKER (6) HOPE",
@@ -55294,7 +55631,8 @@
             ]
         },
         {
-            "meta": "Route 25 gauntlet",
+            "area": "Route 25",
+            "meta": "gauntlet",
             "name": "Schoolboy SCHOOLBOY (7) DUDLEY",
             "team": [
                 {
@@ -55349,6 +55687,7 @@
             ]
         },
         {
+            "area": "Route 25",
             "b2b": true,
             "name": "Lass LASS (11) ELLEN",
             "team": [
@@ -55399,6 +55738,7 @@
             ]
         },
         {
+            "area": "Route 25",
             "name": "Schoolboy SCHOOLBOY (8) JOE",
             "team": [
                 {
@@ -55456,6 +55796,7 @@
             ]
         },
         {
+            "area": "Route 25",
             "name": "Lass LASS (7) LAURA",
             "team": [
                 {
@@ -55502,6 +55843,7 @@
             ]
         },
         {
+            "area": "Route 25",
             "b2b": true,
             "name": "Camper CAMPER (6) LLOYD",
             "team": [
@@ -55559,6 +55901,7 @@
             ]
         },
         {
+            "area": "Route 25",
             "name": "Lass LASS (8) SHANNON",
             "team": [
                 {
@@ -55617,6 +55960,7 @@
             ]
         },
         {
+            "area": "Route 25",
             "name": "SuperNerd SUPER_NERD (8) PAT",
             "team": [
                 {
@@ -55688,7 +56032,8 @@
             ]
         },
         {
-            "meta": "Optional",
+            "area": "Route 25",
+            "meta": "optional",
             "name": "CooltrainerM COOLTRAINERM (17) KEVIN",
             "team": [
                 {
@@ -55705,7 +56050,8 @@
             ]
         },
         {
-            "meta": "Cerulean City Gym perma rain",
+            "area": "Cerulean City Gym",
+            "meta": "perma rain",
             "name": "SwimmerM SWIMMERM (21) PARKER",
             "team": [
                 {
@@ -55766,6 +56112,7 @@
             ]
         },
         {
+            "area": "Cerulean City Gym",
             "name": "SwimmerF SWIMMERF (18) DIANA",
             "team": [
                 {
@@ -55826,6 +56173,7 @@
             ]
         },
         {
+            "area": "Cerulean City Gym",
             "b2b": true,
             "name": "SwimmerF SWIMMERF (19) BRIANA",
             "team": [
@@ -55876,6 +56224,7 @@
             ]
         },
         {
+            "area": "Cerulean City Gym",
             "name": "Misty MISTY (1) MISTY",
             "team": [
                 {
@@ -55963,7 +56312,7 @@
             ]
         },
         {
-            "meta": "Route 1",
+            "area": "Route 1",
             "name": "Schoolboy SCHOOLBOY (5) DANNY",
             "team": [
                 {
@@ -56029,6 +56378,7 @@
             ]
         },
         {
+            "area": "Route 1",
             "b2b": true,
             "name": "CooltrainerF COOLTRAINERF (14) QUINN",
             "team": [
@@ -56079,7 +56429,7 @@
             ]
         },
         {
-            "meta": "Route 21",
+            "area": "Route 21",
             "name": "SwimmerF SWIMMERF (17) NIKKI",
             "team": [
                 {
@@ -56137,6 +56487,7 @@
             ]
         },
         {
+            "area": "Route 21",
             "b2b": true,
             "name": "SwimmerM SWIMMERM (18) SETH",
             "team": [
@@ -56206,7 +56557,8 @@
             ]
         },
         {
-            "meta": "Route 19 gauntlet",
+            "area": "Route 19",
+            "meta": "gauntlet",
             "name": "SwimmerM SWIMMERM (14) JEROME",
             "team": [
                 {
@@ -56283,6 +56635,7 @@
             ]
         },
         {
+            "area": "Route 19",
             "name": "SwimmerM SWIMMERM (1) HAROLD",
             "team": [
                 {
@@ -56340,6 +56693,7 @@
             ]
         },
         {
+            "area": "Route 19",
             "name": "SwimmerF SWIMMERF (12) DAWN",
             "team": [
                 {
@@ -56416,7 +56770,7 @@
             ]
         },
         {
-            "meta": "Route 20",
+            "area": "Route 20",
             "name": "SwimmerF SWIMMERF (15) LORI",
             "team": [
                 {
@@ -56476,6 +56830,7 @@
             ]
         },
         {
+            "area": "Route 20",
             "meta": "end of gauntlet",
             "name": "SwimmerF SWIMMERF (14) NICOLE",
             "team": [
@@ -56553,7 +56908,8 @@
             ]
         },
         {
-            "meta": "Cinnabar City Gym perma sun",
+            "area": "Cinnabar City Gym",
+            "meta": "perma sun",
             "name": "Blaine BLAINE (1) BLAINE",
             "team": [
                 {
@@ -56641,7 +56997,7 @@
             ]
         },
         {
-            "meta": "Viridian City Gym",
+            "area": "Viridian City Gym",
             "name": "Blue BLUE (1) BLUE",
             "team": [
                 {
@@ -56721,7 +57077,7 @@
             ]
         },
         {
-            "meta": "Mt. Silver",
+            "area": "Mt. Silver",
             "name": "Will WILL (2) WILL",
             "team": [
                 {
@@ -56825,6 +57181,7 @@
             ]
         },
         {
+            "area": "Mt. Silver",
             "name": "Koga KOGA (2) KOGA",
             "team": [
                 {
@@ -56912,6 +57269,7 @@
             ]
         },
         {
+            "area": "Mt. Silver",
             "name": "Bruno BRUNO (2) BRUNO",
             "team": [
                 {
@@ -56999,6 +57357,7 @@
             ]
         },
         {
+            "area": "Mt. Silver",
             "name": "Karen KAREN (2) KAREN",
             "team": [
                 {
@@ -57086,6 +57445,7 @@
             ]
         },
         {
+            "area": "Mt. Silver",
             "name": "Red RED (1) RED",
             "team": [
                 {
@@ -57173,7 +57533,7 @@
             ]
         },
         {
-            "meta": "Pokémon League",
+            "area": "Pokémon League",
             "name": "Rival2 RIVAL2 (4)",
             "team": [
                 {

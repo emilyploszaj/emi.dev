@@ -26,18 +26,19 @@ function calculateBrings(fights) {
 }
 
 function displayTrainers() {
+	var lastArea = ""
 	var v = "";
 	for (var i = 0; i < data.trainers.length; i++) {
 		var t = data.trainers[i];
-		var meta = "";
-		if (t.meta != undefined) {
-			meta += t.meta;
-		}
 		if (isTrainerB2b(i) == false && isTrainerB2b(i + 1) == true) {
 			v += `<div class="b2b">`;
 		}
-		if (meta) {
-			v += "<h2>" + meta + "</h2>";
+		if (t.area != undefined && t.area != lastArea) {
+			lastArea = t.area
+			v += "<h2>" + lastArea + "</h2>";
+		}
+		if (t.meta != undefined) {
+			v += "<h3>" + t.meta + "</h3>";
 		}
 		v += getTrainerDisplay(t, i);
 		if (isTrainerB2b(i) == true && isTrainerB2b(i + 1) == false) {
