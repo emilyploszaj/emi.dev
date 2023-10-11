@@ -20104,6 +20104,7 @@
                 "endure",
                 "frustration",
                 "solarbeam",
+                "sludge-bomb",
                 "return",
                 "mud-slap",
                 "swagger",
@@ -24421,7 +24422,7 @@
                     "move": "flame-wheel"
                 },
                 {
-                    "level": 37,
+                    "level": 36,
                     "move": "flamethrower"
                 }
             ],
@@ -24803,6 +24804,10 @@
                 {
                     "level": 7,
                     "move": "kinesis"
+                },
+                {
+                    "level": 30,
+                    "move": "recover"
                 },
                 {
                     "level": 90,
@@ -27050,6 +27055,7 @@
                 "attract",
                 "surf",
                 "whirlpool",
+                "waterfall",
                 "ice-beam"
             ],
             "types": [
@@ -29905,6 +29911,10 @@
                     "move": "flamethrower"
                 },
                 {
+                    "level": 48,
+                    "move": "thunderbolt"
+                },
+                {
                     "level": 62,
                     "move": "fire-blast"
                 }
@@ -32547,6 +32557,7 @@
                 "surf",
                 "strength",
                 "whirlpool",
+                "waterfall",
                 "ice-beam"
             ],
             "types": [
@@ -34825,6 +34836,10 @@
                     "move": "sky-attack"
                 },
                 {
+                    "level": 50,
+                    "move": "synthesis"
+                },
+                {
                     "level": 73,
                     "move": "leech-seed"
                 }
@@ -34906,6 +34921,10 @@
                     "move": "sky-attack"
                 },
                 {
+                    "level": 50,
+                    "move": "synthesis"
+                },
+                {
                     "level": 73,
                     "move": "leech-seed"
                 }
@@ -34974,6 +34993,10 @@
                 {
                     "level": 43,
                     "move": "sky-attack"
+                },
+                {
+                    "level": 50,
+                    "move": "synthesis"
                 },
                 {
                     "level": 73,
@@ -37542,7 +37565,7 @@
                     "move": "rock-slide"
                 },
                 {
-                    "level": 64,
+                    "level": 66,
                     "move": "earthquake"
                 }
             ],
@@ -37613,7 +37636,7 @@
                     "move": "ice-beam"
                 },
                 {
-                    "level": 68,
+                    "level": 69,
                     "move": "earthquake"
                 },
                 {
@@ -39672,6 +39695,14 @@
                 {
                     "level": 65,
                     "move": "hyper-beam"
+                },
+                {
+                    "level": 80,
+                    "move": "crunch"
+                },
+                {
+                    "level": 90,
+                    "move": "rock-slide"
                 }
             ],
             "name": "pupitar",
@@ -43583,8 +43614,8 @@
                     "item": "leftovers",
                     "level": 37,
                     "moves": [
-                        "ice-beam",
                         "thunder-wave",
+                        "ice-beam",
                         "thunderbolt",
                         "waterfall"
                     ],
@@ -47536,6 +47567,153 @@
         },
         {
             "area": "Radio Tower",
+            "name": "Burglar BURGLAR (1) DUNCAN",
+            "team": [
+                {
+                    "item": "miracleberry",
+                    "level": 63,
+                    "moves": [
+                        "hi-jump-kick",
+                        "earthquake",
+                        "rock-slide",
+                        "mach-punch"
+                    ],
+                    "name": "hitmonchan"
+                },
+                {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 14,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
+                    "item": "leftovers",
+                    "level": 63,
+                    "moves": [
+                        "flamethrower",
+                        "psychic",
+                        "hp-grass",
+                        "iron-tail"
+                    ],
+                    "name": "ninetales"
+                },
+                {
+                    "dvs": {
+                        "atk": 13,
+                        "def": 13,
+                        "hp": 15,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
+                    "item": "miracleberry",
+                    "level": 63,
+                    "moves": [
+                        "earthquake",
+                        "rock-slide",
+                        "hp-bug",
+                        "submission"
+                    ],
+                    "name": "pinsir"
+                },
+                {
+                    "item": "berserk-gene",
+                    "level": 61,
+                    "moves": [
+                        "earthquake",
+                        "sludge-bomb",
+                        "lovely-kiss",
+                        "thunderbolt"
+                    ],
+                    "name": "nidoking"
+                }
+            ]
+        },
+        {
+            "area": "Radio Tower",
+            "b2b": true,
+            "name": "Burglar BURGLAR (2) EDDIE",
+            "team": [
+                {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 14,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
+                    "item": "leftovers",
+                    "level": 63,
+                    "moves": [
+                        "flamethrower",
+                        "megahorn",
+                        "hp-grass",
+                        "double-edge"
+                    ],
+                    "name": "rapidash"
+                },
+                {
+                    "item": "pink-bow",
+                    "level": 63,
+                    "moves": [
+                        "double-edge",
+                        "thunderbolt",
+                        "shadow-ball",
+                        "bubblebeam"
+                    ],
+                    "name": "persian"
+                },
+                {
+                    "item": "miracleberry",
+                    "level": 63,
+                    "moves": [
+                        "hypnosis",
+                        "thunderbolt",
+                        "return",
+                        "psychic"
+                    ],
+                    "name": "girafarig"
+                },
+                {
+                    "item": "quick-claw",
+                    "level": 60,
+                    "moves": [
+                        "explosion",
+                        "sludge-bomb",
+                        "fire-blast",
+                        "thunderbolt"
+                    ],
+                    "name": "weezing"
+                },
+                {
+                    "item": "miracleberry",
+                    "level": 63,
+                    "moves": [
+                        "waterfall",
+                        "ice-beam",
+                        "toxic",
+                        "earthquake"
+                    ],
+                    "name": "politoed"
+                },
+                {
+                    "item": "miracleberry",
+                    "level": 63,
+                    "moves": [
+                        "flamethrower",
+                        "thunderpunch",
+                        "earthquake",
+                        "submission"
+                    ],
+                    "name": "typhlosion"
+                }
+            ]
+        },
+        {
+            "area": "Radio Tower",
             "name": "Rival1 RIVAL1 (10) ?",
             "team": [
                 {
@@ -47803,131 +47981,6 @@
                         "crunch"
                     ],
                     "name": "feraligatr"
-                }
-            ]
-        },
-        {
-            "area": "Radio Tower",
-            "name": "Burglar BURGLAR (2) EDDIE",
-            "team": [
-                {
-                    "dvs": {
-                        "atk": 14,
-                        "def": 14,
-                        "hp": 3,
-                        "spa": 15,
-                        "spd": 15,
-                        "spe": 15
-                    },
-                    "item": "leftovers",
-                    "level": 63,
-                    "moves": [
-                        "flamethrower",
-                        "megahorn",
-                        "hp-grass",
-                        "double-edge"
-                    ],
-                    "name": "rapidash"
-                },
-                {
-                    "item": "pink-bow",
-                    "level": 63,
-                    "moves": [
-                        "double-edge",
-                        "thunderbolt",
-                        "shadow-ball",
-                        "bubblebeam"
-                    ],
-                    "name": "persian"
-                },
-                {
-                    "item": "miracleberry",
-                    "level": 63,
-                    "moves": [
-                        "hypnosis",
-                        "thunderbolt",
-                        "return",
-                        "psychic"
-                    ],
-                    "name": "girafarig"
-                },
-                {
-                    "item": "quick-claw",
-                    "level": 60,
-                    "moves": [
-                        "explosion",
-                        "sludge-bomb",
-                        "fire-blast",
-                        "thunderbolt"
-                    ],
-                    "name": "weezing"
-                }
-            ]
-        },
-        {
-            "area": "Radio Tower",
-            "b2b": true,
-            "name": "Burglar BURGLAR (1) DUNCAN",
-            "team": [
-                {
-                    "item": "miracleberry",
-                    "level": 63,
-                    "moves": [
-                        "hi-jump-kick",
-                        "earthquake",
-                        "rock-slide",
-                        "mach-punch"
-                    ],
-                    "name": "hitmonchan"
-                },
-                {
-                    "dvs": {
-                        "atk": 14,
-                        "def": 14,
-                        "hp": 3,
-                        "spa": 15,
-                        "spd": 15,
-                        "spe": 15
-                    },
-                    "item": "leftovers",
-                    "level": 63,
-                    "moves": [
-                        "flamethrower",
-                        "psychic",
-                        "hp-grass",
-                        "iron-tail"
-                    ],
-                    "name": "ninetales"
-                },
-                {
-                    "dvs": {
-                        "atk": 13,
-                        "def": 13,
-                        "hp": 15,
-                        "spa": 15,
-                        "spd": 15,
-                        "spe": 15
-                    },
-                    "item": "miracleberry",
-                    "level": 63,
-                    "moves": [
-                        "earthquake",
-                        "rock-slide",
-                        "hp-bug",
-                        "submission"
-                    ],
-                    "name": "pinsir"
-                },
-                {
-                    "item": "berserk-gene",
-                    "level": 61,
-                    "moves": [
-                        "earthquake",
-                        "sludge-bomb",
-                        "lovely-kiss",
-                        "thunderbolt"
-                    ],
-                    "name": "nidoking"
                 }
             ]
         },
