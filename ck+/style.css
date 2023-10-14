@@ -64,6 +64,10 @@ lb {
 	height: 10px;
 }
 
+a {
+	color:var(--stat-bar-fill-amazing);
+}
+
 body {
 	padding-left: calc(50% - 516px);
 	padding-right: calc(50% - 516px);
@@ -96,6 +100,11 @@ button:disabled {
 	visibility: hidden;
 }
 
+h6 {
+	font-size: 26px;
+	margin: 12px 0px;
+}
+
 #top-bar {
 	display: flex;
 	flex-wrap: nowrap;
@@ -108,22 +117,38 @@ button:disabled {
 }
 
 #tab-selection {
-	display: inline-flexbox;
-	flex-wrap: nowrap;
-	margin-right: 200px;
+	display: flex;
+	gap: 12px;
+	width: 100%;
+}
+
+#tab-select-right {
+	margin-left: auto;
+}
+
+.vs-recorder-polling {
+	border-color: var(--speed-tied);
+}
+
+.vs-recorder-disconnected {
+	border-color: var(--speed-slower);
+	color: var(var(--speed-slower));
 }
 
 #history {
-	direction: rtl;
-	display: inline-block;
-	margin-left: auto;
-	align-content: flex-end;
-	overflow-x: hidden;
+	display: block;
+	overflow: hidden;
+	position: absolute;
+	margin-top: 48px;
+	left: calc(50% + 532px);
+	right: 18px;
+	max-height: 404px;
 }
 
 #history button {
+	display: block;
 	font-size: 16px;
-	margin-left: 4px;
+	margin-bottom: 4px;
 }
 
 img {
@@ -162,7 +187,7 @@ input[type="checkbox"], input[type="file"] {
 	border-style: solid;
 	border-color: var(--grouping-background);
 	cursor: pointer;
-	margin-top: 3px;
+	margin-bottom: 0px;
 }
 
 input:checked + .fake-checkbox {
@@ -298,7 +323,11 @@ input:checked + .fake-checkbox {
 	display: none;
 }
 
-#full-encounter, #full-move, #full-item, #full-trainer {
+#settings .fake-checkbox {
+	margin-bottom: -6px;
+}
+
+#settings, #full-encounter, #full-move, #full-item, #full-trainer {
 	padding: 10px;
 	background-color: var(--box-background);
 }

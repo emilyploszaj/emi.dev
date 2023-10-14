@@ -23,6 +23,9 @@
 				<button class="tab-select" onclick="setTab('box')">Box</button>
 				<button class="tab-select" onclick="setTab('trainers')">Trainers</button>
 				<button class="tab-select" onclick="setTab('map')">Map</button>
+				<span id="tab-select-right"></span>
+				<button class="tab-select vs-recorder-polling" id="update-vs-recorder" style="display:none;"  onclick="updateVsRecorder()">Sync</button>
+				<button class="tab-select" onclick="setTab('settings')">Settings</button>
 			</div>
 			<div id="history"></div>
 		</div>
@@ -221,6 +224,21 @@
 				<div class="extra-calc-teams"></div>
 				<br style="clear:both;"/>
 			</div>
+		</div>
+		<div id="settings" class="tab">
+			<h6>Vs. Recorder</h6>
+			<p>
+				<input id="enable-vs-recorder" type="checkbox" onchange="updateSettings()"/>
+				<label for="enable-vs-recorder" class="fake-checkbox"></label>
+				<label for="enable-vs-recorder" style="cursor:pointer;">Enable Vs. Recorder syncing</label>
+				<lb></lb>
+				Adds a button that can be used to load box from the currently open game. This imports all the data a .sav import would normally do.
+				<lb></lb>
+				Vs. Recorder can be downloaded <a href="https://github.com/emilyploszaj/vs-recorder" target="_blank">here</a>.
+			</p>
+			<h6>Credits</h6>
+			<p>Calc, Vs. Recorder, and related software written by Emi.</p>
+			<p>Miscellaneous data collection by Drazerk.</p>
 		</div>
 		<div id="full-poke" class="tab">
 			<div id="main-poke" class="pokemon-display">

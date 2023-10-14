@@ -20,6 +20,23 @@ function setTab(name) {
 	document.getElementById(name).style.display = "block";
 }
 
+var settings = {};
+
+function updateSettings() {
+	settings.enableVsRecorder = document.getElementById("enable-vs-recorder").checked;
+	applySettings();
+}
+
+function applySettings() {
+	document.getElementById("enable-vs-recorder").checked = settings.enableVsRecorder == true;
+	if (settings.enableVsRecorder) {
+		document.getElementById("update-vs-recorder").style.display = "block";
+	} else {
+		document.getElementById("update-vs-recorder").style.display = "none";
+	}
+	localStorage.setItem("settings", JSON.stringify(settings));
+}
+
 document.getElementById("search-box").oninput = function (event) {
 	var v = event.target.value;
 	updateSearch(v);
@@ -84,3 +101,8 @@ document.getElementById("badges").value = badges;
 updateSearch(document.getElementById("search-box").value);
 
 fetchData();
+
+if (localStorage.getItem("settings")) {
+	settings = JSON.parse(localStorage.getItem("settings"));
+	applySettings();
+}

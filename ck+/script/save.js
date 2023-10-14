@@ -1,4 +1,8 @@
-function readNewbox(bytes, start) {
+var vsRecorderStatus = 0; // 1 = connected, -1 = disconnected
+var pingsWithoutResponse = 0;
+var outstandingPingTimeout;
+
+function readNewbox(bytes, start, db1, db2) {
 	var pokemon = [];
 	var banks = [];
 	for (var i = 0; i < 3; i++) {
@@ -14,9 +18,9 @@ function readNewbox(bytes, start) {
 			continue;
 		}
 		b--;
-		var p = 0x4000;
+		var p = db1;
 		if (banks[i]) {
-			p = 0x6000;
+			p = db2;
 		}
 		p += b * 0x2F;
 		var item = bytes[p + 0x01];
@@ -128,17 +132,44 @@ function readPokemonList(bytes, start, capacity, increment) {
 	return pokemon;
 }
 
+function parseBadges(badgeMask) {
+	badges = 0;
+	for (var i = 0; i < 16; i++) {
+		if ((badgeMask & 1) == 1) {
+			badges++;
+		}
+		badgeMask >>= 1;
+	}
+	document.getElementById("badges").value = badges;
+	updateBadges();
+}
+
+function finishParse(title) {
+	if (box.length > 0) {
+		setPlayer(0);
+	}
+	updateBox();
+	var popup = '<div onclick="closePopup()" class="save-success">' + title;
+	popup += '<lb></lb>Encounters: ' + pokemon.length;
+	if (deadPokemon.length > 0) {
+		popup += ' (+' + deadPokemon.length + ' fainted)';
+	}
+	popup += '<lb></lb>Badges: ' + badges;
+	popup += '</div>';
+	document.getElementById("info-popup").innerHTML = popup;
+}
+
 function readFile(file) {
 	var reader = new FileReader();
 	reader.onload = function (e) {
 		var bytes = new Uint8Array(e.target.result);
 		if (bytes.length > 32000 && bytes[0x2008] == 99 && bytes[0x2d0f] == 127) {
 			try {
-				pokemon = [];
-				deadPokemon = [];
+				var pokemon = [];
+				var deadPokemon = [];
 				pokemon = pokemon.concat(readPokemonList(bytes, 0x2865, 6, 48));
 				for (var i = 0; i < 16; i++) {
-					var l = readNewbox(bytes, 0x2f20 + i * 0x21);
+					var l = readNewbox(bytes, 0x2f20 + i * 0x21, 0x4000, 0x6000);
 					if (i >= 12) {
 						deadPokemon = deadPokemon.concat(l);
 					} else {
@@ -147,29 +178,10 @@ function readFile(file) {
 				}
 				box = pokemon;
 				deadBox = deadPokemon;
-				var badgeMask = (bytes[0x23e5] << 8) | bytes[0x23e6];
-				badges = 0;
-				for (var i = 0; i < 16; i++) {
-					if ((badgeMask & 1) == 1) {
-						badges++;
-					}
-					badgeMask >>= 1;
-				}
-				document.getElementById("badges").value = badges;
-				updateBadges();
-				if (box.length > 0) {
-					setPlayer(0);
-				}
-				updateBox();
-				var popup = '<div onclick="closePopup()" class="save-success">Successfully parsed save!';
-				popup += '<lb></lb>Encounters: ' + pokemon.length;
-				if (deadPokemon.length > 0) {
-					popup += ' (+' + deadPokemon.length + ' fainted)';
-				}
-				popup += '<lb></lb>Badges: ' + badges;
-				popup += '</div>';
-				document.getElementById("info-popup").innerHTML = popup;
+				parseBadges((bytes[0x23e5] << 8) | bytes[0x23e6]);
+				finishParse("Successfully parsed save!");
 			} catch (e) {
+				console.log(e);
 				document.getElementById("info-popup").innerHTML = '<div onclick="closePopup()" class="save-error">Error while parsing save!<lb></lb>Is this a valid file?<lb></lb>See console for details</div>';
 			}
 		} else {
@@ -181,3 +193,110 @@ function readFile(file) {
 	};
 	reader.readAsArrayBuffer(file);
 }
+
+function hexToBytes(hex) {
+    var bytes = [];
+    for (var c = 0; c < hex.length; c += 2) {
+        bytes.push(parseInt(hex.substr(c, 2), 16));
+    }
+    return bytes;
+}
+
+function vsRecorderComplete(event) {
+	try {
+		connectToVsRecorder();
+		var response = event.target.responseText;
+		var values = [...response.matchAll(/(\w+)\:\s*(.+)/g)];
+		var obj = {}
+		for (const v of values) {
+			obj[v[1]] = v[2]
+		}
+		pokemon = [];
+		deadPokemon = [];
+		pokemon = pokemon.concat(readPokemonList(hexToBytes(obj.Party), 0, 6, 48));
+		var newboxBytes = hexToBytes(obj.NewboxMetadata);
+		var db1 = newboxBytes.length;
+		newboxBytes = newboxBytes.concat(hexToBytes(obj.NewboxDatabase1));
+		var db2 = newboxBytes.length;
+		newboxBytes = newboxBytes.concat(hexToBytes(obj.NewboxDatabase2));
+		for (var i = 0; i < 16; i++) {
+			var l = readNewbox(newboxBytes, 0x00 + i * 0x21, db1, db2);
+			if (i >= 12) {
+				deadPokemon = deadPokemon.concat(l);
+			} else {
+				pokemon = pokemon.concat(l);
+			}
+		}
+		box = pokemon;
+		deadBox = deadPokemon;
+		var inventoryBytes = hexToBytes(obj.InventoryData);
+		parseBadges((inventoryBytes[0x0F] << 8) | inventoryBytes[0x10]);
+		finishParse("Successfully read Vs. Recorder!");
+	} catch (e) {
+		console.log(e);
+		document.getElementById("info-popup").innerHTML = '<div onclick="closePopup()" class="save-error">Error while parsing Vs. Recorder!<lb></lb>See console for details</div>';
+	}
+}
+
+function vsRecorderFailed(event) {
+	console.log(event);
+	document.getElementById("info-popup").innerHTML = '<div onclick="closePopup()" class="save-error">Request for data failed!<lb></lb>Is Vs. Recorder running?</div>';
+}
+
+function updateVsRecorder() {
+	var req = new XMLHttpRequest();
+	req.addEventListener("load", vsRecorderComplete);
+	req.addEventListener("error", vsRecorderFailed);
+	req.addEventListener("abort", vsRecorderFailed);
+	req.open("GET", "http://localhost:31123/update");
+	req.send();
+}
+
+function vsRecorderPingComplete(event) {
+	connectToVsRecorder();
+	clearTimeout(outstandingPingTimeout);
+}
+
+function vsRecorderPingFailed(event) {
+	clearTimeout(outstandingPingTimeout);
+}
+
+function pingVsRecorder() {
+	var req = new XMLHttpRequest();
+	req.addEventListener("load", vsRecorderPingComplete);
+	req.addEventListener("error", vsRecorderPingFailed);
+	req.addEventListener("abort", vsRecorderPingFailed);
+	req.open("GET", "http://localhost:31123/ping");
+	req.send();
+	outstandingPingTimeout = setTimeout(function() {
+		vsRecorderPingFailed(null);
+		req.abort();
+	}, 1000);
+}
+
+function connectToVsRecorder() {
+	pingsWithoutResponse = 0;
+	if (vsRecorderStatus != 1) {
+		vsRecorderStatus = 1;
+		document.getElementById("update-vs-recorder").classList.remove("vs-recorder-polling");
+		document.getElementById("update-vs-recorder").classList.remove("vs-recorder-disconnected");
+	}
+}
+
+setInterval(function() {
+	if (!settings.enableVsRecorder) {
+		return;
+	}
+	if ((pingsWithoutResponse & (pingsWithoutResponse - 1)) == 0) {
+		pingVsRecorder();
+	}
+	pingsWithoutResponse++;
+	if (pingsWithoutResponse >= 3) {
+		if (vsRecorderStatus != -1) {
+			vsRecorderStatus = -1;
+			document.getElementById("update-vs-recorder").classList.remove("vs-recorder-polling");
+			document.getElementById("update-vs-recorder").classList.add("vs-recorder-disconnected");
+		}
+	}
+}, 1000);
+connectToVsRecorder();
