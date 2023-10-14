@@ -144,7 +144,7 @@ function parseBadges(badgeMask) {
 	updateBadges();
 }
 
-function finishParse(title) {
+function finishParse(title, pokemon, deadPokemon) {
 	if (box.length > 0) {
 		setPlayer(0);
 	}
@@ -179,7 +179,7 @@ function readFile(file) {
 				box = pokemon;
 				deadBox = deadPokemon;
 				parseBadges((bytes[0x23e5] << 8) | bytes[0x23e6]);
-				finishParse("Successfully parsed save!");
+				finishParse("Successfully parsed save!", pokemon, deadPokemon);
 			} catch (e) {
 				console.log(e);
 				document.getElementById("info-popup").innerHTML = '<div onclick="closePopup()" class="save-error">Error while parsing save!<lb></lb>Is this a valid file?<lb></lb>See console for details</div>';
@@ -211,8 +211,8 @@ function vsRecorderComplete(event) {
 		for (const v of values) {
 			obj[v[1]] = v[2]
 		}
-		pokemon = [];
-		deadPokemon = [];
+		var pokemon = [];
+		var deadPokemon = [];
 		pokemon = pokemon.concat(readPokemonList(hexToBytes(obj.Party), 0, 6, 48));
 		var newboxBytes = hexToBytes(obj.NewboxMetadata);
 		var db1 = newboxBytes.length;
@@ -231,7 +231,7 @@ function vsRecorderComplete(event) {
 		deadBox = deadPokemon;
 		var inventoryBytes = hexToBytes(obj.InventoryData);
 		parseBadges((inventoryBytes[0x0F] << 8) | inventoryBytes[0x10]);
-		finishParse("Successfully read Vs. Recorder!");
+		finishParse("Successfully read Vs. Recorder!", pokemon, deadPokemon);
 	} catch (e) {
 		console.log(e);
 		document.getElementById("info-popup").innerHTML = '<div onclick="closePopup()" class="save-error">Error while parsing Vs. Recorder!<lb></lb>See console for details</div>';
