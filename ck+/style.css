@@ -100,9 +100,52 @@ button:disabled {
 	visibility: hidden;
 }
 
-h6 {
+h6, .h6 {
+	font-weight: bold;
 	font-size: 26px;
-	margin: 12px 0px;
+	margin: 8px 0px;
+}
+
+.tab-header {
+	display: flex;
+	padding: auto;
+}
+
+.tab-button {
+	display: inline-block;
+	font-size: 26px;
+	padding: 6px;
+	background-color: var(--box-background);
+	border-color: var(--grouping-background);
+	border-width: 2px;
+	border-style: solid;
+	cursor: pointer;
+	min-width: 100px;
+	text-align: center;
+}
+
+.tab-button:hover {
+	color: var(--highlighted);
+}
+
+.selected-tab-button {
+	background-color: var(--background);
+}
+
+.tab-body {
+	display: block;
+	padding-top: 10px;
+}
+
+.tab-contents {
+	display: none;
+}
+
+.scroll-padding-anchor {
+	position: absolute;
+	visibility: hidden;
+	width: 1px;
+	height: calc(100vh - 60px);
 }
 
 #top-bar {
@@ -204,13 +247,18 @@ input:checked + .fake-checkbox {
 	color: var(--highlighted);
 }
 
+.poke-types {
+	display: flex;
+	gap: 4px;
+}
+
 .type {
 	text-align: center !important;
 	font-weight: bold;
 	color: #eeeeee;
-	width: 110px;
+	width: 102px;
 	padding: 4px !important;
-	margin: 4px !important;
+	margin: 4px 0px !important;
 	text-shadow: 2px 2px black;
 }
 
@@ -311,8 +359,10 @@ input:checked + .fake-checkbox {
 }
 
 .gender-bar {
+	display: inline-block;
 	width: 200px;
 	height: 20px;
+	margin-bottom: -2px;
 }
 
 .unknown-gender {

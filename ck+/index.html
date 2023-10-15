@@ -57,7 +57,10 @@
 						</tr>
 					</table>
 					<div style="display:flex;">
-						<div class="poke-icon"></div>
+						<div style="display:block;">
+							<div class="poke-icon"></div>
+							<div class="poke-types"></div>
+						</div>
 						<div>
 							<div class="calc-stats">
 								<table>
@@ -74,9 +77,6 @@
 								</div>
 							</div>
 						</div>
-					</div>
-					<div>
-						<span class="poke-types"></span>
 					</div>
 					<div class="calc-moves"></div>
 				</div>
@@ -120,7 +120,10 @@
 					</tr>
 				</table>
 				<div style="display:flex;">
-					<div class="poke-icon"></div>
+					<div style="display:block;">
+						<div class="poke-icon"></div>
+						<div class="poke-types"></div>
+					</div>
 					<div>
 						<div class="calc-stats">
 							<table>
@@ -147,9 +150,6 @@
 							</table>
 						</div>
 					</div>
-				</div>
-				<div>
-					<span class="poke-types"></span>
 				</div>
 				<div class="calc-moves"></div>
 				<div class="calc-team"></div>
@@ -208,10 +208,10 @@
 							</table>
 						</div>
 					</div>
-					<div class="poke-icon"></div>
-				</div>
-				<div>
-					<span class="poke-types"></span>
+					<div style="display:block;">
+						<div class="poke-icon"></div>
+						<div class="poke-types"></div>
+					</div>
 				</div>
 				<div class="calc-moves"></div>
 				<div class="calc-team"></div>
@@ -247,31 +247,30 @@
 					<span> - </span>
 					<span class="poke-name"></span>
 				</div>
-				<div style="display:flex;">
-					<div class="poke-icon"></div>
+				<div style="display:flex;gap:12px;">
+					<div style="display:block;">
+						<div class="poke-icon"></div>
+						<div class="poke-types"></div>
+					</div>
 					<div>
 						<div class="poke-stats">
 							<table>
-								<tr class="poke-hp"><td>HP</td><td><div class="stat-num"></div></td><td><div class="stat-bar"><div class="full-stat-bar"></div></div></td><td></tr>
-								<tr class="poke-atk"><td>Atk</td><td><div class="stat-num"></div></td><td><div class="stat-bar"><div class="full-stat-bar"></div></div></td><td></tr>
-								<tr class="poke-def"><td>Def</td><td><div class="stat-num"></div></td><td><div class="stat-bar"><div class="full-stat-bar"></div></div></td><td></tr>
-								<tr class="poke-spa"><td>SpA</td><td><div class="stat-num"></div></td><td><div class="stat-bar"><div class="full-stat-bar"></div></div></td><td></tr>
-								<tr class="poke-spd"><td>SpD</td><td><div class="stat-num"></div></td><td><div class="stat-bar"><div class="full-stat-bar"></div></div></td><td></tr>
-								<tr class="poke-spe"><td>Spe</td><td><div class="stat-num"></div></td><td><div class="stat-bar"><div class="full-stat-bar"></div></div></td><td></tr>
+								<tr class="poke-hp"><td>HP</td><td><div class="stat-num"></div></td><td><div class="stat-bar"><div class="full-stat-bar"></div></div></td></tr>
+								<tr class="poke-atk"><td>Atk</td><td><div class="stat-num"></div></td><td><div class="stat-bar"><div class="full-stat-bar"></div></div></td></tr>
+								<tr class="poke-def"><td>Def</td><td><div class="stat-num"></div></td><td><div class="stat-bar"><div class="full-stat-bar"></div></div></td></tr>
+								<tr class="poke-spa"><td>SpA</td><td><div class="stat-num"></div></td><td><div class="stat-bar"><div class="full-stat-bar"></div></div></td></tr>
+								<tr class="poke-spd"><td>SpD</td><td><div class="stat-num"></div></td><td><div class="stat-bar"><div class="full-stat-bar"></div></div></td></tr>
+								<tr class="poke-spe"><td>Spe</td><td><div class="stat-num"></div></td><td><div class="stat-bar"><div class="full-stat-bar"></div></div></td></tr>
 							</table>
 						</div>
 					</div>
+					<div>
+						<div class="poke-genders"></div>
+						<div class="poke-evolution"></div>
+						<div class="poke-items"></div>
+					</div>
 				</div>
-				<div>
-					<span class="poke-types"></span>
-				</div>
-				<div class="poke-genders"></div>
-				<div class="poke-items"></div>
-				<div class="poke-evolution"></div>
-				<div class="encounters"></div>
-				<div class="statistics"></div>
-				<div class="learnset"></div>
-				<div class="tmhm"></div>
+				<div class="poke-tabs"></div>
 			</div>
 		</div>
 		<div id="full-encounter" class="tab">

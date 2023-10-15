@@ -115,11 +115,10 @@ function displayCalcPokemon(root, poke, opponent, right) {
 			root.getElementsByClassName("speed-indicator")[0].innerHTML = '<div class="speed-slower">&laquo;</div>' + prio;
 		}
 	}
-	var types = '<div style="display:flex">' + prettyType(p.types[0]);
+	var types = prettyType(p.types[0]);
 	if (p.types.length > 1) {
 		types += " " + prettyType(p.types[1]);
 	}
-	types += "</div>";
 	root.getElementsByClassName("poke-types")[0].innerHTML = types;
 	var moves = '<table class="move-calcs">';
 	for (var i = 0; i < 4; i++) {
@@ -257,11 +256,10 @@ function displayPokemon(root, i) {
 	root.getElementsByClassName("poke-name")[0].innerHTML = pokeLink(p);
 	root.getElementsByClassName("poke-dex-num")[0].innerHTML = "#" + padNumber(p.pokedex);
 	root.getElementsByClassName("poke-icon")[0].innerHTML = '<img src="' + getPokeImage(p) + '">';
-	var types = '<div style="display:flex">' + prettyType(p.types[0]);
+	var types = prettyType(p.types[0]);
 	if (p.types.length > 1) {
 		types += " " + prettyType(p.types[1]);
 	}
-	types += "</div>";
 	root.getElementsByClassName("poke-types")[0].innerHTML = types;
 	displayStat(root.getElementsByClassName("poke-hp")[0], p.stats.hp);
 	displayStat(root.getElementsByClassName("poke-atk")[0], p.stats.atk);
@@ -273,21 +271,27 @@ function displayPokemon(root, i) {
 		var female = parseFloat(p.gender.substring(1));
 
 		var m = parseInt(female * 16 / 100);
-		document.getElementsByClassName("poke-genders")[0].innerHTML = '<div>Gender: ' + m + ' Female, ' + (16 - m) + ' Male</div>'
+		document.getElementsByClassName("poke-genders")[0].innerHTML =
+			'<div class="h6">Gender '
 			+ '<div class="gender-bar" style="background: '
 			+ 'linear-gradient(90deg, var(--gender-female) 0%, var(--gender-female) '
 			+ female + '%, var(--gender-male) ' + female + '%, var(--gender-male) 100%)">'
-			+ '</div><lb></lb>';
+			+ '</div></div>'
+			+ '<div class="rolls"><center>' + m + ' Female, ' + (16 - m) + ' Male</center></div>';
 	} else {
-		document.getElementsByClassName("poke-genders")[0].innerHTML = '<div>Gender: Unknown</div><div class="gender-bar unknown-gender"></div><lb></lb>';
+		document.getElementsByClassName("poke-genders")[0].innerHTML =
+			'<div class="h6">Gender <div class="gender-bar unknown-gender"></div></div>'
+			+ '<div class="rolls"><center>Unknown</center></div>';
 	}
-	var items = "<div>Wild Held Items: ";
-	for (var i = 0; i < p.items.length; i++) {
-		items += itemLink(p.items[i].item) + " " + (p.items[i].chance * 100) + "% ";
+	var items = "";
+	if (p.items.length > 0) {
+		items = "<h6>Wild Held Items</h6>";
+		for (var i = 0; i < p.items.length; i++) {
+			items += `<div>${itemLink(p.items[i].item)} ${p.items[i].chance * 100}%`;
+		}
 	}
-	items += "</div><lb></lb>";
 	document.getElementsByClassName("poke-items")[0].innerHTML = items;
-	var evo = "<div>Evolutions:</div>";
+	var evo = "<h6>Evolutions</h6>";
 	for (let index in data.pokemon) {
 		var v = data.pokemon[index];
 		if (!v.evolutions) {
@@ -323,35 +327,77 @@ function displayPokemon(root, i) {
 			evo += "<div>" + before + " -> " + pokeLink(evolution.into) + "</div>"
 		}
 	}
-	if (evo != "<div>Evolutions:</div>") {
-		evo += "<lb></lb>"
+	if (evo != "<h6>Evolutions</h6>") {
 		root.getElementsByClassName("poke-evolution")[0].innerHTML = evo;
 	} else {
 		root.getElementsByClassName("poke-evolution")[0].innerHTML = "";
 	}
+
+	root.getElementsByClassName("poke-tabs")[0].innerHTML = `
+	<div class="tab-collection">
+		<div class="tab-header">
+			<div class="tab-button selected-tab-button" onclick="selectTab(event)">Learnset</div>
+			<div class="tab-button" onclick="selectTab(event)">TM/HM</div>
+			<div class="tab-button" onclick="selectTab(event)">Encounters</div>
+			<div class="tab-button" onclick="selectTab(event)">Statistics</div>
+		</div>
+		<div class="scroll-padding-anchor"></div>
+		<div class="tab-body">
+			<div class="tab-contents" style="display:block;">${getPokemonLearnsetDisplay(p)}</div>
+			<div class="tab-contents">${getPokemonTmHmDisplay(p)}</div>
+			<div class="tab-contents">${getPokemonEncountersDisplay(p)}</div>
+			<div class="tab-contents">${getPokemonStatsDisplay(p)}</div>
+		</div>
+	</div>`;
+}
+
+function getPokemonLearnsetDisplay(p) {
+	var v = "";
+	v += '<table class="move-table">';
+	for (let mi in p.learnset) {
+		var m = p.learnset[mi];
+		v += getMoveDisplay(movesByName.get(m.move), m.level);
+	}
+	v += "</table>";
+	return v;
+}
+
+function getPokemonTmHmDisplay(p) {
+	var v = "";
+	v += '<table class="move-table">';
+	for (let mi in p.tmhm) {
+		var m = p.tmhm[mi];
+		v += getMoveDisplay(movesByName.get(m));
+	}
+	v += "</table>";
+	return v;
+}
+
+function getPokemonEncountersDisplay(p) {
 	var encounters = pokemonEncounters.get(p.name);
 	if (encounters) {
-		var e = "<details><summary>Encounters</summary>";
+		var v = "";
 		for (const en of encounters.entries()) {
 			var area = en[0];
 			var parts = en[1];
-			e += "<div>";
-			e += "<span class=\"poke-link\" onclick=\"focusEncounter(" + encountersByName.get(area) + ")\">"
+			v += "<div>";
+			v += "<span class=\"poke-link\" onclick=\"focusEncounter(" + encountersByName.get(area) + ")\">"
 				+ fullCapitalize(area) + "</span> - ";
 			for (var i = 0; i < parts.length; i++) {
 				var part = parts[i];
-				e += "<span>";
-				e += part.chance + "%";
-				e += "</span> ";
+				v += "<span>";
+				v += part.chance + "%";
+				v += "</span> ";
 			}
-			e += "</div>";
+			v += "</div>";
 		}
-		e += "</details>"
-		root.getElementsByClassName("encounters")[0].innerHTML = e + "<br>";
+		return v;
 	} else {
-		root.getElementsByClassName("encounters")[0].innerHTML = "";
+		return "";
 	}
+}
 
+function getPokemonStatsDisplay(p) {
 	var usageLines = "";
 	var usagePoints = "";
 
@@ -363,43 +409,20 @@ function displayPokemon(root, i) {
 		if (b && b.brings.has(p.name)) {
 			usage = b.brings.get(p.name) * 100 / b.total;
 		}
+		var trainerName = getTrainerName(t.name);
 		if (t.name == "Champion CHAMPION (1) LANCE") {
-			usageLines += `<div class="poke-statistics-line e4r1" onclick="focusTrainer(${i})" style="left:calc(2px + ${i * 100 / hTotal}%)"><div class="rolls"><center>${t.name}</center></div></div>`;
+			usageLines += `<div class="poke-statistics-line e4r1" onclick="focusTrainer(${i})" style="left:calc(2px + ${i * 100 / hTotal}%)"><div class="rolls"><center>${trainerName}</center></div></div>`;
 		}
 		if (statisticsSplits.has(t.name)) {
-			usageLines += `<div class="poke-statistics-line" onclick="focusTrainer(${i})" style="left:calc(2px + ${i * 100 / hTotal}%)"><div class="rolls"><center>${t.name}</center></div></div>`;
+			usageLines += `<div class="poke-statistics-line" onclick="focusTrainer(${i})" style="left:calc(2px + ${i * 100 / hTotal}%)"><div class="rolls"><center>${trainerName}</center></div></div>`;
 		}
-		usagePoints += `<div class="usage-point" onclick="focusTrainer(${i})" style="left:${i * 100 / hTotal}%;bottom:${usage}%;"><div class="rolls"><center>${t.name}</center></div></div>`;
+		usagePoints += `<div class="usage-point" onclick="focusTrainer(${i})" style="left:${i * 100 / hTotal}%;bottom:${usage}%;"><div class="rolls"><center>${trainerName}</center></div></div>`;
 	}
 
-	var stats = `
-	<details>
-		<summary>Usage Statistics</summary>
-		<div class="poke-usage-statistics">
-			<div class="poke-usage-statistics-inner"">${usageLines}${usagePoints}</div>
-		</div>
-	</details>
-	<br>
-	`;
-
-	root.getElementsByClassName("statistics")[0].innerHTML = stats;
-
-	var l = "";
-	l += '<div>Learnset:</div><table class="move-table">';
-	for (let mi in p.learnset) {
-		var m = p.learnset[mi];
-		l += getMoveDisplay(movesByName.get(m.move), m.level);
-	}
-	l += "</table>";
-	root.getElementsByClassName("learnset")[0].innerHTML = l;
-	l = "";
-	l += '<div>TM/HM:</div><table class="move-table">';
-	for (let mi in p.tmhm) {
-		var m = p.tmhm[mi];
-		l += getMoveDisplay(movesByName.get(m));
-	}
-	l += "</table>";
-	root.getElementsByClassName("tmhm")[0].innerHTML = l;
+	return `
+	<div class="poke-usage-statistics">
+		<div class="poke-usage-statistics-inner"">${usageLines}${usagePoints}</div>
+	</div>`;
 }
 
 function displayStat(div, stat) {
@@ -701,6 +724,30 @@ document.getElementById("player-current-level").oninput = function(event) {
 	}
 	updateCalc();
 	updateBox();
+}
+
+function selectTab(event) {
+	var headers = event.target.parentElement;
+	var index = 0;
+	var i = 0;
+	for (const p of headers.getElementsByClassName("tab-button")) {
+		if (p === event.target) {
+			index = i;
+			p.classList.add("selected-tab-button");
+		} else {
+			p.classList.remove("selected-tab-button");
+		}
+		i++;
+	}
+	i = 0;
+	for (const p of headers.parentElement.getElementsByClassName("tab-contents")) {
+		if (i == index) {
+			p.style.display = "block";
+		} else {
+			p.style.display = "none";
+		}
+		i++;
+	}
 }
 
 function setItemMenu() {
