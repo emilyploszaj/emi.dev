@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Emily Ploszaj">
+	<meta name="color-scheme" content="dark light">
+	<meta property="og:title" content="A Case for Crafters: A World Without Stacking">
+	<meta property="og:description" content="The flaws of the Crafter block, and what can be done to resolve them.">
+	<meta property="og:site_name" content="emi.dev">
+	<meta name="theme-color" content="#dc9eff">
+	<title>Emi's Blog</title>
+	<link rel="stylesheet" href="https://fonts.bunny.net/css?family=Fira+Sans:400,700&display=block">
+	<link rel="stylesheet" href="https://fonts.bunny.net/css?family=Ubuntu+Mono:400,700&display=block">
+	<link rel="stylesheet" type="text/css" href="/blog/style.css">
+</head>
+<body>
+	<h1>Emi's Blog</h2>
+	<h3><a href="/blog/">&lt- Back to blog</a></h3>
+	
+	<h1>A Case for Crafters: A World Without Stacking</h1>
+	<p>
+		Today Mojang released <a href="https://www.minecraft.net/en-us/article/minecraft-snapshot-23w42a">Snapshot 23w42a</a> which introduced a brand new experimental feature: Crafters!
+		They were briefly shown off just a few days prior in Minecraft Live.
+		I was so excited for them in fact, two days ago, I wrote a mod that implemented them and built a ton of designs based on my assumptions on how they worked based on the video.
+		I had a ton of fun!
+		In fact, I may have had too much fun, over the last two days, I've built up a graveyard of dozens of designs used to craft almost every recipe in the game, trying to keep them as fast and small as possible.
+	</p>
+	<center>
+		<img id="graveyard" src="graveyard.png" width="682" height="384">
+	</center>
+	<p>
+		The feature looked really exciting, accessible to both highly technical players and less experienced players.
+		I was highly optimistic, but then just two days later today, the snapshot came out.
+	</p>
+	<h2>What changed?</h2>
+	<p>
+		Technically nothing changed, I had implemented a feature with a handful of assumptions that I thought were reasonable based on presentation.
+		Instead, what are the differences?
+		There were a handful of small things that I could go over, my handling of remainders, some of my timing, of course I had to remake the textures so they were different.
+		The by far biggest difference however was the way automated insertion worked.
+		Based on the <a href="https://www.youtube.com/watch?v=8jwAtfyxhlk">presentation in Minecraft Live</a>, hoppers seemed to fill items only into empty slots, so that's how I implemented it.
+		However, the actual implementation has hoppers inserting into the least populated applicable slot, filling up to the stack size over time.
+		I imagine it functions like this to be more approachable for less experienced players.
+		I'm going to be arguing the opposite, in addition to making designs less interesting, automated stack insertion makes a lot of designs <i>harder</i> and less approachable for players.
+	</p>
+	<h2>What makes a design interesting?</h2>
+	<p>
+		While I think making a lot of designs less approachable is the more serious issue, I do think making designs less interesting is also a bad thing.
+		The release version of crafters have a relatively simple and straightforward design that can craft almost ever recipe in the game no problem.
+	</p>
+	<center>
+		<img src="universal-design.png" width="384" height="384">
+	</center>
+	<p>
+		As long as your recipe uses 4 or fewer unique ingredients and doesn't use non-stackable items, this design will work.
+		All normal vanilla recipes use 4 or fewer ingredients, so that's taken care of, and only a handful of recipes use non-stackable items, like cake.
+		Worst case you'll have to lengthen the clock for recipes with a lot of a single ingredient, like ender chests.
+		For everything else, this design not only works, but is also going to be really fast.
+		To make a faster design for a majority of recipes, you'd need to have really complex circuits, rapidly firing dispensers, or multi-input setups.
+		I'm going to call this "The Universal Design". 
+	</p>
+	<h2>The Universal Design</h2>
+	<p>
+		First off, you can definitely make this idea work with a smaller footprint, the core idea is simple.
+		You set your recipe up in the grid, and hook up anywhere from 1 to 4 hoppers each with a unique resource and let them saturate the crafter.
+		You hook up a comparator to every hopper, and if any runs out of resources, that means there's slightly less than a stack inside the crafter.
+		You craft on a clock (or you can rework to be on a pulse if desired), and there is a circuit that prevents the clock from running whenever any of the input hoppers is empty.
+		It's simple, it's elegant, and it's really fast because all the hoppers can run at once and you don't need to time anything.
+	</p>
+	<p>
+		Despite being the easy solution to most problems, it's also commonly going to be the best.
+		You'd be hard pressed to design a crossbow crafter that's faster than this in a comparable footprint.
+		The only downside this design has is that it requires you fill the crafter.
+		This inverts the expected difficulty curve for the crafter.
+	</p>
+	<p>
+		If you're a highly advanced technical player, you probaly measure your resources in shulker boxes and would not scoff at paying the upfront cost to kickstart this design, so you have an easy solution to every problem.
+		If you're a reasonably settled or intermediate player, you'll probably be able to stomach the cost, but may be encouraged to try and use a timing based design to save resources.
+		If you're a novice player, it's unlikely you have mass quantities of the stuff you're trying to automate, so this design is either going to be expensive or you will be forced to use a much more complex design.
+		As a designer, you probably want the opposite curve, a system should be approachable for less skilled players, but reward players who engage with it with more complex challenges.
+	</p>
+	<h2>Stacking complexity</h2>
+	<p>
+		Overall, stackable slots make for a much less interesting challenge for intermediate or higher skill players, and punish beginners for not being situated with automated resources.
+		But, they also do something worse, making designs taking into consideration stackable slots (the thing being pushed more towards less situated players) is <i>more</i> complex.
+	</p>
+	<p>		
+		Here's a simple example, the design shown is a crafter that handles crafting bows.
+		It'd be reasonable to have an auto bow crafter in your base, you could press a button and it'd instantly craft a bow for you!
+		If you ever wanted to get your resources back, you wouldn't be stuck with bows, crafting on demand!
+	</p>
+	<center>
+		<img src="bow-crafter.png" width="384" height="384">
+		<img src="harder-bow-crafter.png" width="384" height="384">
+	</center>
+	<p>
+		The design on the left shows what you'd have to do with slots that couldn't stack, it simply locks the hoppers if any of them get empty, so that it doesn't misplace any items.
+		When it gets the inputs again, it'll get right back to crafting.
+		The design on the right shows what you'd have to do with slots that could stack, in addition to the lock from before, you have to read the state of the table and prevent it from inserting any more items when a bow is already ready to craft.
+		You can't just let it stack because eventually you might run out of a resource and the hoppers would start filling the empty slots, requiring manual effort to fix.
+	</p>
+	<p>
+		With non-stacking slots, you'd also be able to use the first design to craft TNT.
+		However, since you can stack in slots, over time you'll build up more and more sand, and will either have to make a circuit to power the sand hopper, or fully saturate the input and use The Universal Design.
+	</p>
+	<p>
+		This is a trend in designs that don't follow the principles of The Universal Design, instead of utilizing stacking slots, you have to <i>prevent</i> slots from stacking, because otherwise you have no clue what's happening inside the crafter.
+		It's also worth considering safer designs that stop themselves when the output starts backing up.
+		With non-stacking slots, all you'd have to do is prevent the craft mechanism from firing, locking a repeater or pulling out a block are options.
+		With stacking slots, you have to prevent overstacking, so you'd need to lock all of the input hoppers, which can be quite messy.
+	</p>
+	<h2>Going further</h2>
+	<p>
+		Obviously I think automation like hoppers shouldn't be able to stack items in crafters, I've made my case.
+		But, instead of just complaining, I'll also offer a way to make the crafter more user friendly to novice players which could be added with or without the change to stacking slots.
+		Currently, a big problem is preventing items from entering the crafter, temporarily shutting off the system (and anything that activates when the comparator output changes).
+	</p>
+	<p>
+		Introducing: locking the crafter.
+		In my implementaiton of the crafter from two days ago, I made a bold assumption.
+		In the Minecraft Live, the crafter was shown having two response states to getting powered.
+		The lights on its back corners will light up whenever it's getting power, but the grid on top, face, and arms on the side will jolt up for a handful of ticks immediately after being powered while it's crafting something.
+		I assumed that this meant that its powered state did something else, and the only conclusion I could come to was that this locked the crafter, preventing items from flowing into it.
+	</p>
+	<h2>An easy off switch</h2>
+	<p>
+		This makes designs a lot easier to make safer in edge cases that would otherwise break setups.
+		If you run out of inputs in droppers or the output starts filling up, all you have to do is power the crafter on the same block you'd use for performing a craft operation.
+		This essentially freezes time.
+		The moment inputs come back or the output empties, the crafter will unlock and start accepting items from hoppers again, without huge headaches.
+	</p>
+	<p>
+		To emphasize this difference, here are two designs for concrete powder crafters, in both designs the blue segment remains the same, while the purple and green segments change.
+		Only the version on the right has an orange segment.
+	</p>
+	<center>
+		<img src="concrete-crafter.png" width="384" height="384">
+		<img src="harder-concrete-crafter.png" width="384" height="384">
+	</center>
+	<p>
+		The design on the left is a bit simpler in some aspects.
+		First off, whatever recipe you're doing, the purple segment doesn't really need to change much.
+		When I was designing builds two days ago, I called the purple segments like this in my builds the "LCL"s.
+		They handled preventing overfilling the output, and were really easy to add to builds.
+		If you look at <a href="#graveyard">my design graveyard</a>, every bit of purple is an LCL, and they're typically reusing the same handful of small, simple designs.
+	</p>
+	<p>
+		The green segment is responsible for shutting off the crafting process if the recipe runs out of dye.
+		It's not necessary to check the amount of sand and gravel, as the recipe will just pause while waiting for more.
+		The more droppers you need in a recipe, the more shut off switches like this you need.
+	</p>
+	<p>
+		The orange segment, unique to the design with stackable slots, is required on most designs that have two or more ingredients from hoppers like this one.
+		It's responsible for powering the hopper while outputting the recipe, while the comparator switches over from 9 to 0 and locks the hopper itself.
+		When you're first trying to make a design that crafts beds, concrete powder, or tools, the simple design is to just toggle both hoppers when the input hits a certain fill level.
+		However, since the second hopper is going to have a few ticks before it gets shut off when switching from 9 to 0, it adds a bit of weird complexity to these recipes.
+	</p>
+	<p>
+		Overall I believe having powered crafters not accept input while powered makes designing fill level based designs like this much more intuitive and approachable for beginners.
+		It gives reasonable use to the currently aesthetic only <code>triggered</code> blockstate while powered, and finally makes debugging crafter designs a bit easier.
+		Instead of having to power all of the hoppers while you fill them with items, you can just power the crafter with a lever while you're building your design, and flick it off to test.
+	</p>
+	<h2>Conclusion</h2>
+	<p>
+		Overall I believe the crafter with 2 changes would be an excellent addition to the game.
+		As it stands it has some pretty notable problems that make it disappointing compared to what it appeared to be in Minecraft Live.
+	</p>
+	<p>
+		Making automation not able to stack in slots would make constructing several designs more intuitive to less skilled players.
+		It'd also up the complexity for advanced players, making unique recipes require unique solutions if the goal is being fast and small, rather than allowing them to repeat the same design everywhere.
+		This wouldn't really change single input recipes like compressing or uncompressing resource blocks, crafting things with wood, and so on.
+		While The Universal Design would work on them, there are much easier, intuitive designs that can be leveraged in both systems.
+	</p>
+	<p>
+		Additionally, having the <code>triggered</code> blockstate prevent items from being inserted while active would further make crafters convenient and approachable, without sacrificing interesting depth and complexity.
+	</p>
+	<h2>A note</h2>
+	<p>
+		I tried to not bog down the post with too many examples, hopefully I picked some good ones that emphasize my points.
+		They represent trends rather than specific case problems.
+		At this point I've designed crafters for near every recipe in the game in one way or another, so I attempted to choose recipes that best show off these issues.
+	</p>
+	<p>
+		Hopefully through iteration the crafer can become even better than I've imagined.
+	</p>
+</body>
