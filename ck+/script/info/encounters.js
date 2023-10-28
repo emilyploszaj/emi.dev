@@ -1,65 +1,60 @@
-function addPoolList(map, name, t, list) {
-	for (var i = 0; i < list.length; i++) {
-		var p = list[i];
-		var poke = p.pokemon;
-		if (!map.has(poke)) {
-			map.set(poke, new Map());
+var encounterIcons = new Map([
+	["walking", "images/encounters/walking.png"],
+	["rock", "images/encounters/rock_smash.png"],
+	["bug-catching-contest", "images/items/silverpowder.png"],
+	["surfing", "images/encounters/surfing.png"],
+	["old-rod", "images/items/old_rod.png"],
+	["good-rod", "images/items/good_rod.png"],
+	["super-rod", "images/items/super_rod.png"],
+	["static", "images/items/leftovers.png"],
+	["headbutt", "images/encounters/headbutt.png"],
+	["gift", "images/items/master_ball.png"],
+	["swarm", "images/encounters/swarm.png"],
+	["swarm-old-rod", "images/encounters/swarm_old_rod.png"],
+	["swarm-good-rod", "images/encounters/swarm_good_rod.png"],
+	["swarm-super-rod", "images/encounters/swarm_super_rod.png"],
+	["trade", "images/items/exp_share.png"],
+	["buy", "images/items/coin_case.png"]
+]);
+
+function inflateEncounterPool(p) {
+	if (typeof p === "string") {
+		var pool = encounterPools;
+		for (let part of p.split(/\./)) {
+			pool = pool[part];
 		}
-		var areas = map.get(poke);
-		if (!areas.has(name)) {
-			areas.set(name, []);
+		return pool;
+	}
+	return p;
+}
+
+function addPoolList(map, name, t, p) {
+	p = inflateEncounterPool(p);
+	if (!Array.isArray(p)) {
+		var keys = Object.keys(p);
+		for (let key of keys) {
+			addPoolList(map, name, t, p[key]);
 		}
-		areas.get(name).push({ chance: p.chance, type: t });
+	} else {
+		for (var i = 0; i < p.length; i++) {
+			var p = p[i];
+			var poke = p.pokemon;
+			if (!map.has(poke)) {
+				map.set(poke, new Map());
+			}
+			var areas = map.get(poke);
+			if (!areas.has(name)) {
+				areas.set(name, []);
+			}
+			areas.get(name).push({ chance: p.chance, type: t });
+		}
 	}
 }
 
 function addPoolInfo(pools) {
 	var name = pools.area;
-	if (pools.normal) {
-		addPoolList(pokemonEncounters, name, "Walking", pools.normal.day);
-		addPoolList(pokemonEncounters, name, "Walking", pools.normal.night);
-		addPoolList(pokemonEncounters, name, "Walking", pools.normal.morning);
-	}
-	if (pools.surf) {
-		addPoolList(pokemonEncounters, name, "Surfing", pools.surf);
-	}
-	if (pools.headbutt) {
-		var pool = headbuttPools.get(pools.headbutt);
-		addPoolList(pokemonEncounters, name, "Headbutt", pool.headbutt);
-	}
-	if (pools.fishing) {
-		var pool = fishingPools.get(pools.fishing);
-		addPoolList(pokemonEncounters, name, "Old Rod", pool.old.day);
-		addPoolList(pokemonEncounters, name, "Old Rod", pool.old.night);
-		addPoolList(pokemonEncounters, name, "Good Rod", pool.good.day);
-		addPoolList(pokemonEncounters, name, "Good Rod", pool.good.night);
-		addPoolList(pokemonEncounters, name, "Super Rod", pool.super.day);
-		addPoolList(pokemonEncounters, name, "Super Rod", pool.super.night);
-	}
-	if (pools.rock) {
-		var pool = rockPools.get(pools.rock);
-		addPoolList(pokemonEncounters, name, "Rock Smash", pool.rock);
-	}
-	if (pools.special) {
-		for (let i = 0; i < pools.special.length; i++) {
-			var pool = pools.special[i];
-			if (pool.type == "swarm") {
-				addPoolList(pokemonEncounters, name, "Swarm", pool.day);
-				addPoolList(pokemonEncounters, name, "Swarm", pool.night);
-				addPoolList(pokemonEncounters, name, "Swarm", pool.morning);
-			} else if (pool.type == "bug-catching-contest") {
-				addPoolList(pokemonEncounters, name, "Bug Catching Contest", pool.pool);
-			} else if (pool.type == "fishing-swarm") {
-				addPoolList(pokemonEncounters, name, "Swarm Old Rod", pool.old.day);
-				addPoolList(pokemonEncounters, name, "Swarm Old Rod", pool.old.night);
-				addPoolList(pokemonEncounters, name, "Swarm Good Rod", pool.good.day);
-				addPoolList(pokemonEncounters, name, "Swarm Good Rod", pool.good.night);
-				addPoolList(pokemonEncounters, name, "Swarm Super Rod", pool.super.day);
-				addPoolList(pokemonEncounters, name, "Swarm Super Rod", pool.super.night);
-			} else {
-				addPoolList(pokemonEncounters, name, "Special", pool.pool);
-			}
-		}
+	for (let p of pools.pools) {
+		addPoolList(pokemonEncounters, name, p.type, p.pool)
 	}
 }
 
@@ -79,7 +74,7 @@ function getEncounterDisplay(pools) {
 	v += '<div class="encounter-minimap">' + getMapDisplay(w, h, -center.x + w / scale / 2, -center.y + h / scale / 2, scale, landmark.name) + '</div>';
 	if (pools.area) {
 		v += "<h3>" + fullCapitalize(pools.area) + "</h3>";
-		v += "<p>Areas:</p>";
+		v += "<h6>Areas</h6>";
 		for (var i = 0; i < landmark.locations.length; i++) {
 			var e = encountersByName.get(landmark.locations[i]);
 			v += '<div class="poke-link" onclick="focusEncounter(' + e + ')">';
@@ -97,87 +92,65 @@ function getEncounterDisplay(pools) {
 		v += "</details>";
 	}
 	v += '<br style="clear:both;"/></div>';
-	if (pools.area) {
-		if (pools.normal) {
-			v += getWalkingPoolDisplay(pools.normal, "Walking");
+	if (pools.area && pools.pools) {
+		var tabHeader = "";
+		var tabBody = "";
+		for (let pool of pools.pools) {
+			tabHeader += `<div class="tab-button" onclick="selectTab(event)"><img src="${encounterIcons.get(pool.type)}">${fullCapitalize(pool.type)}</div>`;
+			tabBody += `<div class="tab-contents">${getEncounterPoolGroupDisplay(pool.pool)}</div>`;
 		}
-		if (pools.surf) {
-			v += "<p>Surfing (Lvl " + pools.surf[0].level + "):</p>";
-			v += getEncounterPoolDisplay(pools.surf, "any");
-		}
-		if (pools.headbutt) {
-			var pool = headbuttPools.get(pools.headbutt);
-			v += "<p>Headbutt (Lvl " + pool.headbutt[0].level + "):</p>";
-			v += getEncounterPoolDisplay(pool.headbutt, "any");
-		}
-		if (pools.fishing) {
-			v += getFishingPoolDisplay(fishingPools.get(pools.fishing), "");
-		}
-		if (pools.rock) {
-			var pool = rockPools.get(pools.rock);
-			v += "<p>Rock Smash (Lvl " + pool.rock[0].level + "):</p>";
-			v += getEncounterPoolDisplay(pool.rock, "any");
-		}
-		if (pools.special) {
-			for (let i = 0; i < pools.special.length; i++) {
-				var pool = pools.special[i];
-				if (pool.type == "swarm") {
-					v += getWalkingPoolDisplay(pool, "Swarm");
-				} else if (pool.type == "fishing-swarm") {
-					v += getFishingPoolDisplay(pool, "Swarm ");
-				} else if (pool.type == "bug-catching-contest") {
-					v += "<p>Bug Catching Contest:</p>";
-					v += getEncounterPoolDisplay(pool.pool, "any");
-				} else {
-					v += "<p>Special:</p>";
-					v += getEncounterPoolDisplay(pool.pool, "any");
-				}
-			}
-		}
-	}
-	return v;
-}
-
-function getWalkingPoolDisplay(p, name) {
-	let v = "<p>" + name + " (Lvl " + p.day[0].level + "):</p>";
-	if (arePoolsEqual(p.day, p.night) && arePoolsEqual(p.night, p.morning)) {
-		v += getEncounterPoolDisplay(p.day, "any");
-	} else {
-		v += getEncounterPoolDisplay(p.day, "day");
-		v += getEncounterPoolDisplay(p.night, "night");
-		v += getEncounterPoolDisplay(p.morning, "morning");
-	}
-	return v;
-}
-
-function getFishingPoolDisplay(pool, name) {
-	let v = "";
-	v += "<p>" + name + "Old Rod (Lvl " + pool.old.day[0].level + "):</p>";
-	if (arePoolsEqual(pool.old.day, pool.old.night)) {
-		v += getEncounterPoolDisplay(pool.old.day, "any");
-	} else {
-		v += getEncounterPoolDisplay(pool.old.day, "day");
-		v += getEncounterPoolDisplay(pool.old.night, "night");
-	}
-	v += "<p>" + name + "Good Rod (Lvl " + pool.good.day[0].level + "):</p>";
-	if (arePoolsEqual(pool.good.day, pool.good.night)) {
-		v += getEncounterPoolDisplay(pool.good.day, "any");
-	} else {
-		v += getEncounterPoolDisplay(pool.good.day, "day");
-		v += getEncounterPoolDisplay(pool.good.night, "night");
-	}
-	v += "<p>" + name + "Super Rod (Lvl " + pool.super.day[0].level + "):</p>";
-	if (arePoolsEqual(pool.super.day, pool.super.night)) {
-		v += getEncounterPoolDisplay(pool.super.day, "any");
-	} else {
-		v += getEncounterPoolDisplay(pool.super.day, "day");
-		v += getEncounterPoolDisplay(pool.super.night, "night");
+		v += selectTabInDisplay(`
+		<div class="tab-collection">
+			<div class="tab-header">
+				${tabHeader}
+			</div>
+			<div class="scroll-padding-anchor"></div>
+			<div class="tab-body">
+				${tabBody}
+			</div>
+		</div>`, 0);
 	}
 	return v;
 }
 
 function arePoolsEqual(a, b) {
 	return JSON.stringify(a) === JSON.stringify(b);
+}
+
+function trimLevelFromPool(p) {
+	p = JSON.parse(JSON.stringify(p));
+	if (p.pool.level) {
+		delete p.pool.level;
+	} else {
+		for (let key of Object.keys(p.pool)) {
+			if (p.pool[key].level) {
+				delete p.pool[key].level;
+			}
+		}
+	}
+	return p;
+}
+
+function arePoolsEqualIgnoreLevel(a, b) {
+	return arePoolsEqual(trimLevelFromPool(a), trimLevelFromPool(b));
+}
+
+function getEncounterPoolGroupDisplay(p) {
+	p = inflateEncounterPool(p);
+	if (Array.isArray(p)) {
+		return `<h6>(Lvl ${p[0].level}):</h6>${getEncounterPoolDisplay(p, "any")}`;
+	}
+	var keys = Object.keys(p);
+	var v = `<h6>(Lvl ${p[keys[0]][0].level})</h6>`;
+	for (var i = 1; i < keys.length; i++) {
+		if (!arePoolsEqual(keys[i], keys[0])) {
+			for (let key of keys) {
+				v += getEncounterPoolDisplay(p[key], key);
+			}
+			return v;
+		}
+	}
+	return v + getEncounterPoolDisplay(p.day, "any");
 }
 
 function getEncounterPoolDisplay(pool, time) {
@@ -223,4 +196,48 @@ function getEncounterPoolDisplay(pool, time) {
 	v += '</div>';
 	v += '</div>';
 	return v;
+}
+
+function getPoolOfType(area, type) {
+	var pools = data.encounters[encountersByName.get(area)].pools;
+	for (let pool of pools) {
+		if (pool.type == type) {
+			return pool;
+		}
+	}
+	return null;
+}
+
+function getUniqueEncountersForPokemon(p) {
+	var encounters = pokemonEncounters.get(p.name);
+	if (encounters) {
+		var condense = new Map();
+		for (const en of encounters.entries()) {
+			var area = en[0];
+			var parts = en[1];
+			var types = new Set();
+			partsLabel:
+			for (var i = 0; i < parts.length; i++) {
+				var type = parts[i].type;
+				if (!types.has(type)) {
+					types.add(type);
+					if (!condense.has(type)) {
+						condense.set(type, []);
+					}
+					var pool = getPoolOfType(area, type);
+					for (let c of condense.get(type)) {
+						if (arePoolsEqualIgnoreLevel(c.pool, pool)) {
+							c.areas.push(area);
+							continue partsLabel;
+						}
+					}
+					condense.get(type).push({
+						"areas": [area],
+						"pool": pool
+					});
+				}
+			}
+		}
+		return condense;
+	}
 }

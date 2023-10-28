@@ -72,7 +72,7 @@ body {
 	padding-left: calc(50% - 516px);
 	padding-right: calc(50% - 516px);
 	min-width: 1024px;
-	overflow-x: scroll;
+	overflow-y: scroll;
 }
 
 img {
@@ -108,7 +108,7 @@ h6, .h6 {
 
 .tab-header {
 	display: flex;
-	padding: auto;
+	flex-wrap: wrap;
 }
 
 .tab-button {
@@ -126,6 +126,12 @@ h6, .h6 {
 
 .tab-button:hover {
 	color: var(--highlighted);
+}
+
+.tab-button > img {
+	display: inline-block;
+	pointer-events: none;
+	margin-right: 4px;
 }
 
 .selected-tab-button {
@@ -418,7 +424,7 @@ input:checked + .fake-checkbox {
 	display: none;
 	position: relative;
 	top: -28px;
-	margin-bottom: -28px;
+	margin-bottom: -27px;
 }
 
 .learnset-pool {
@@ -498,10 +504,7 @@ input:checked + .fake-checkbox {
 	display: flex;
 	flex-wrap: wrap;
 	padding: 10px;
-}
-
-#box-pokes .tiny-poke {
-	margin: 10px;
+	gap: 12px;
 }
 
 .poke-usage-statistics .rolls {
@@ -566,6 +569,7 @@ input:checked + .fake-checkbox {
 .trainer {
 	background-color: var(--grouping-background);
 	margin: 10px 0px;
+	width: 982px;
 	padding: 4px;
 }
 
@@ -580,27 +584,27 @@ input:checked + .fake-checkbox {
 	display: flex;
 	flex-wrap: wrap;
 	padding: 0px;
-}
-
-.trainer-pokes .tiny-poke {
-	margin: 8px;
+	margin: 4px;
+	gap: 10px;
 }
 
 #tiny-pokes {
 	display: flex;
 	flex-wrap: wrap;
 	padding: 10px;
-}
-
-#tiny-pokes .tiny-poke {
-	margin: 10px;
+	gap: 10px;
 }
 
 .tiny-poke {
-	width: 470px;
-	display: flex;
+	width: 310px;
+	display: block;
 	padding: 4px;
 	background-color: var(--box-background);
+	font-size: 20px;
+}
+
+.tiny-poke-header {
+	display: flex;
 }
 
 .tiny-poke-icon img {
@@ -614,15 +618,37 @@ input:checked + .fake-checkbox {
 
 .tiny-poke-info {
 	display: block;
-	font-size: 20px;
+	width: 186px;
 }
 
-.tiny-poke-info table {
+.tiny-poke-level {
+	margin-left: auto;
+}
+
+.tiny-poke-moves table {
 	margin-top: 4px;
 }
 
-.tiny-poke-info td {
-	min-width: 160px;
+.tiny-poke-moves td {
+	min-width: 150px;
+}
+
+.tiny-poke-types {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px;
+}
+
+.tiny-poke-types .type {
+	display: inline-block;
+	width: 86px;
+	padding: 1px !important;
+	margin: 1px 0px !important;
+	text-shadow: 2px 2px black;
+}
+
+.tiny-poke-dvs {
+	font-size: 20px;
 }
 
 #calc {

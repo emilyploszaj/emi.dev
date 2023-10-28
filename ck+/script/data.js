@@ -38,9 +38,7 @@ var movesByIndex = new Map();
 var movesByLearnset = new Map();
 var movesByTMHM = new Map();
 var itemsByName = new Map();
-var fishingPools = new Map();
-var headbuttPools = new Map();
-var rockPools = new Map();
+var encounterPools = new Map();
 var landmarksByIndex = new Map();
 var landmarksByName = new Map();
 var landmarksByLocation = new Map();
@@ -300,18 +298,7 @@ function fetchData() {
 			encountersByName.set(e.area, i);
 			searchResults.set(e.area.replace(/-/g, " "), 'focusEncounter(' + i + ')');
 		}
-		for (let i in j.encounter_pools.fishing) {
-			var p = j.encounter_pools.fishing[i];
-			fishingPools.set(p.area, p);
-		}
-		for (let i in j.encounter_pools.headbutt) {
-			var p = j.encounter_pools.headbutt[i];
-			headbuttPools.set(p.area, p);
-		}
-		for (let i in j.encounter_pools.rock) {
-			var p = j.encounter_pools.rock[i];
-			rockPools.set(p.area, p);
-		}
+		encounterPools = j.encounter_pools;
 		for (let i in j.encounters) {
 			addPoolInfo(j.encounters[i]);
 		}

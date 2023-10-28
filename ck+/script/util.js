@@ -1,15 +1,22 @@
 function getTinyPokemonDisplay(tp, extra = "") {
 	var p = pokemonByName.get(tp.name);
 	var v = '<div class="tiny-poke">';
+	v += '<div class="tiny-poke-header">';
 	v += '<div class="tiny-poke-icon"><img src="' + getPokeImage(tp) + '"></div>';
 	v += '<div class="tiny-poke-info">';
-	v += "<table><tr>";
-	v += `<td>${pokeLink(p.name)}</td><td>${itemLink(tp.item)}</td></tr><tr>`;
-	if (tp.dvs) {
-		v += `<td>Lvl ${tp.level}</td><td>${tp.dvs.hp} ${tp.dvs.atk}/${tp.dvs.def} ${tp.dvs.spa}/${tp.dvs.spd} ${tp.dvs.spe}</td></tr><tr>`;
-	} else {
-		v += `<td>Lvl ${tp.level}</td><td>15 15/15 15/15 15</td></tr><tr>`;
+	v += `<div style="display:flex;flex-wrap:wrap;">${pokeLink(p.name)} <span class="tiny-poke-level">Lvl ${tp.level}</span></div>`;
+	var typeDisplay = "";
+	for (let t of p.types) {
+		typeDisplay += prettyType(t);
 	}
+	v += `<div class="tiny-poke-types">${typeDisplay}</div>`;
+	v += `<div>${itemLink(tp.item)}</div>`;
+	if (tp.dvs) {
+		v += `<div class="tiny-poke-dvs">${tp.dvs.hp} ${tp.dvs.atk}/${tp.dvs.def} ${tp.dvs.spa}/${tp.dvs.spd} ${tp.dvs.spe}</div>`;
+	} else {
+		v += `<div class="tiny-poke-dvs">15 15/15 15/15 15</div>`;
+	}
+	v += `</div></div><div class="tiny-poke-moves"><table><tr>`;
 	for (var i = 0; i < 4; i++) {
 		if (i == 2) {
 			v += "</tr><tr>";
@@ -250,4 +257,11 @@ function updateBadges() {
 
 function closePopup() {
 	document.getElementById("info-popup").innerHTML = "";
+}
+
+function selectTabInDisplay(content, tab) {
+	var doc = new DOMParser().parseFromString(content, "text/html");
+	doc.getElementsByClassName("tab-button")[tab].classList.add("selected-tab-button");
+	doc.getElementsByClassName("tab-contents")[tab].style.display = "block";
+	return doc.body.innerHTML;
 }

@@ -333,22 +333,22 @@ function displayPokemon(root, i) {
 		root.getElementsByClassName("poke-evolution")[0].innerHTML = "";
 	}
 
-	root.getElementsByClassName("poke-tabs")[0].innerHTML = `
+	root.getElementsByClassName("poke-tabs")[0].innerHTML = selectTabInDisplay(`
 	<div class="tab-collection">
 		<div class="tab-header">
-			<div class="tab-button selected-tab-button" onclick="selectTab(event)">Learnset</div>
+			<div class="tab-button" onclick="selectTab(event)">Learnset</div>
 			<div class="tab-button" onclick="selectTab(event)">TM/HM</div>
 			<div class="tab-button" onclick="selectTab(event)">Encounters</div>
 			<div class="tab-button" onclick="selectTab(event)">Statistics</div>
 		</div>
 		<div class="scroll-padding-anchor"></div>
 		<div class="tab-body">
-			<div class="tab-contents" style="display:block;">${getPokemonLearnsetDisplay(p)}</div>
+			<div class="tab-contents">${getPokemonLearnsetDisplay(p)}</div>
 			<div class="tab-contents">${getPokemonTmHmDisplay(p)}</div>
 			<div class="tab-contents">${getPokemonEncountersDisplay(p)}</div>
 			<div class="tab-contents">${getPokemonStatsDisplay(p)}</div>
 		</div>
-	</div>`;
+	</div>`, 0);
 }
 
 function getPokemonLearnsetDisplay(p) {
@@ -664,7 +664,7 @@ function updateBox() {
 		document.getElementById("box-pokes").innerHTML += getTinyPokemonDisplay(box[i],
 			'<div><button onclick="editBox(' + i + ')">Edit</button><button onclick="moveToBoxStart('
 			+ i + ')">Move to Start</button><button onclick="calcFromBox('
-			+ i + ')">Show in Calc</button><button onclick="removeFromBox('
+			+ i + ')">Calc Vs</button><button onclick="removeFromBox('
 			+ i + ')">Delete</button></div>');
 	}
 	localStorage.setItem("box", JSON.stringify(box));
