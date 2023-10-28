@@ -29,9 +29,6 @@ function inflateEncounterPool(p) {
 }
 
 function addPoolList(map, name, t, p) {
-	if (name == "national-park") {
-		console.log(t, p);
-	}
 	p = inflateEncounterPool(p);
 	if (!Array.isArray(p)) {
 		var keys = Object.keys(p);
@@ -143,7 +140,21 @@ function getEncounterPoolGroupDisplay(p) {
 	if (Array.isArray(p)) {
 		return `<h6>(Lvl ${p[0].level}):</h6>${getEncounterPoolDisplay(p, "any")}`;
 	}
-	var keys = Object.keys(p);
+	var rawKeys = Object.keys(p);
+	var keys = [];
+	if (rawKeys.includes("day")) {
+		keys.push("day");
+		rawKeys.splice(rawKeys.indexOf("day"), 1);
+	}
+	if (rawKeys.includes("night")) {
+		keys.push("night");
+		rawKeys.splice(rawKeys.indexOf("night"), 1);
+	}
+	if (rawKeys.includes("morn")) {
+		keys.push("morn");
+		rawKeys.splice(rawKeys.indexOf("morn"), 1);
+	}
+	keys = keys.concat(rawKeys);
 	var v = `<h6>(Lvl ${p[keys[0]][0].level})</h6>`;
 	for (var i = 1; i < keys.length; i++) {
 		if (!arePoolsEqual(keys[i], keys[0])) {
