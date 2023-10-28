@@ -29,6 +29,9 @@ function inflateEncounterPool(p) {
 }
 
 function addPoolList(map, name, t, p) {
+	if (name == "national-park") {
+		console.log(t, p);
+	}
 	p = inflateEncounterPool(p);
 	if (!Array.isArray(p)) {
 		var keys = Object.keys(p);
@@ -37,8 +40,8 @@ function addPoolList(map, name, t, p) {
 		}
 	} else {
 		for (var i = 0; i < p.length; i++) {
-			var p = p[i];
-			var poke = p.pokemon;
+			var pp = p[i];
+			var poke = pp.pokemon;
 			if (!map.has(poke)) {
 				map.set(poke, new Map());
 			}
@@ -46,7 +49,7 @@ function addPoolList(map, name, t, p) {
 			if (!areas.has(name)) {
 				areas.set(name, []);
 			}
-			areas.get(name).push({ chance: p.chance, type: t });
+			areas.get(name).push({ chance: pp.chance, type: t });
 		}
 	}
 }
