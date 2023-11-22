@@ -50,6 +50,14 @@ function focusMove(i) {
 	setTab("full-move");
 }
 
+function focusType(i) {
+	addHistory(fullCapitalize(i), () => focusType(i));
+	document.getElementById("search-box").value = "";
+	updateSearch("");
+	document.getElementById("full-type").innerHTML = getFullTypeDisplay(i);
+	setTab("full-type");
+}
+
 function statCheckCurrentTrainer() {
 	focusTrainer(lastTrainer);
 }
@@ -83,7 +91,11 @@ function pokeLink(p) {
 }
 
 function prettyType(t) {
-	return '<div class="type" style="background-color:' + typeColors.get(t) + ';">' + fullCapitalize(t) + '</div>';
+	return `<div class="type" onclick="focusType('${t}')" style="background-color:${typeColor(t)};">${fullCapitalize(t)}</div>`;
+}
+
+function typeColor(t) {
+	return typeColors.get(t);
 }
 
 function itemLink(item) {

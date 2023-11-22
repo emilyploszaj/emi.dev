@@ -319,6 +319,10 @@ function fetchData() {
 		}
 		document.getElementById("move-names-list").innerHTML = moveDataList;
 
+		for (let e of typeColors) {
+			searchResults.set(e[0], `focusType('${e[0]}')`);
+		}
+
 		for (const t of j.trainers) {
 			trainersByName.set(t.name, t);
 		}

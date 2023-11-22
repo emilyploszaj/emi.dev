@@ -186,10 +186,10 @@ function getEncounterPoolDisplay(pool, time) {
 		var family = hasFamily(pokemonFamilies.get(pokemonByName.get(pool[i].pokemon).pokedex));
 		var percent = parseInt(pool[i].chance / 100 * 10000) / 100;
 		var adjustedPercent = "Dupe";
+		var extraClasses = undefined;
 		if (family) {
-			v += '<div class="encounter-poke dupe-encounter">';
+			extraClasses = "dupe-encounter";
 		} else {
-			v += '<div class="encounter-poke">';
 			adjustedPercent = parseInt(pool[i].chance / totalWeight * 10000) / 100 + "%";
 		}
 		var tt = "";
@@ -197,15 +197,13 @@ function getEncounterPoolDisplay(pool, time) {
 			tt += ' <div class="extra-info" title="' + pool[i].extra + '">?</div>';
 		}
 
-		v += '<div><ruby>' + percent + '%' + tt + '<rt>(' + adjustedPercent + ')';
+		var header = '<div><ruby>' + percent + '%' + tt + '<rt>(' + adjustedPercent + ')';
 		if (showLevel) {
-			v += " Lvl " + pool[i].level;
+			header += " Lvl " + pool[i].level;
 		}
-		v += '</rt></ruby></div>';
-		v += '<img style="cursor:pointer;" onclick="focusPokeByName(\'' + pool[i].pokemon
-			+ '\')" src="' + getPokeImage(pool[i].pokemon, i) + '">';
-		v += '<div class="wild-calc"><button onclick="calcWild(' + pokemonByName.get(pool[i].pokemon).pokedex + ', ' + pool[i].level + ')">Calc</button></div>';
-		v += '</div>';
+		header += '</rt></ruby></div>';
+		var footer = '<div class="wild-calc"><button onclick="calcWild(' + pokemonByName.get(pool[i].pokemon).pokedex + ', ' + pool[i].level + ')">Calc</button></div>';
+		v += getEncounterPoke(pool[i].pokemon, header, footer, extraClasses);
 	}
 	v += '</div>';
 	v += '</div>';

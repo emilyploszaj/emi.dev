@@ -259,6 +259,7 @@ input:checked + .fake-checkbox {
 }
 
 .type {
+	cursor: pointer;
 	text-align: center !important;
 	font-weight: bold;
 	color: #eeeeee;
@@ -383,7 +384,7 @@ input:checked + .fake-checkbox {
 	margin-bottom: -6px;
 }
 
-#settings, #full-encounter, #full-move, #full-item, #full-trainer {
+#settings, #full-encounter, #full-move, #full-item, #full-trainer, #full-type {
 	padding: 10px;
 	background-color: var(--box-background);
 }
@@ -645,6 +646,18 @@ input:checked + .fake-checkbox {
 	padding: 1px !important;
 	margin: 1px 0px !important;
 	text-shadow: 2px 2px black;
+}
+
+.type-slices {
+	display: flex;
+	margin-top: 4px;
+	gap: 4px;
+}
+
+.type-slice {
+	cursor: pointer;
+	height: 8px;
+	flex-grow: 1;
 }
 
 .tiny-poke-dvs {

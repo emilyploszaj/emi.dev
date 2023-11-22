@@ -97,10 +97,7 @@ function getTrainerStats(i) {
 				ht += '<div>' + f.runner + " (Patch: " + f.patch + ")</div>";
 				ht += '<div class="learnset-pool">'
 				for (const p of pokes) {
-					ht += '<div class="encounter-poke">';
-					ht += '<img style="cursor:pointer;" onclick="focusPokeByName(\'' + p
-						+ '\')" src="' + getPokeImage(p) + '">';
-					ht += '</div>';
+					ht += getEncounterPoke(p);
 				}
 				ht += '</div>';
 			}
@@ -123,11 +120,7 @@ function getBringsDisplay(brings, total, maxShown) {
 		if (ba >= maxShown) {
 			break;
 		}
-		v += '<div class="encounter-poke">';
-		v += parseInt(e[1] * 100 / total) + "%";
-		v += '<img style="cursor:pointer;" onclick="focusPokeByName(\'' + e[0]
-			+ '\')" src="' + getPokeImage(e[0]) + '">';
-		v += '</div>';
+		v += getEncounterPoke(e[0], e[1] * 100 / total + "%");
 		ba++;
 	}
 	v += '</div>';

@@ -467,11 +467,7 @@ function getFullItemDisplay(item) {
 		v += "<p>Wild Held Item (" + list.length + "):</p>";
 		v += '<div class="learnset-pool">'
 		for (var i = 0; i < list.length; i++) {
-			v += '<div class="encounter-poke">';
-			v += list[i].chance * 100 + "%";
-			v += '<img style="cursor:pointer;" onclick="focusPokeByName(\'' + list[i].pokemon
-				+ '\')" src="' + getPokeImage(list[i].pokemon) + '">';
-			v += '</div>';
+			v += getEncounterPoke(list[i].pokemon, list[i].chance * 100 + "%");
 		}
 		v += '</div>';
 	}
@@ -510,11 +506,7 @@ function getFullMoveDisplay(move) {
 		v += "<p>By Learnset (" + list.length + "):</p>";
 		v += '<div class="learnset-pool">'
 		for (var i = 0; i < list.length; i++) {
-			v += '<div class="encounter-poke">';
-			v += " Lvl " + list[i].level;
-			v += '<img style="cursor:pointer;" onclick="focusPokeByName(\'' + list[i].pokemon
-				+ '\')" src="' + getPokeImage(list[i].pokemon) + '">';
-			v += '</div>';
+			v += getEncounterPoke(list[i].pokemon, `Lvl ${list[i].level}`);
 		}
 		v += '</div>';
 	}
@@ -525,10 +517,7 @@ function getFullMoveDisplay(move) {
 		for (var i = 0; i < list.length; i++) {
 			v += '<div class="learnset-pool">'
 			for (var i = 0; i < list.length; i++) {
-				v += '<div class="encounter-poke">';
-				v += '<img style="cursor:pointer;" onclick="focusPokeByName(\'' + list[i]
-					+ '\')" src="' + getPokeImage(list[i]) + '">';
-				v += '</div>';
+				v += getEncounterPoke(list[i]);
 			}
 			v += '</div>';
 		}
@@ -561,6 +550,64 @@ function getMoveDisplay(move, level = undefined) {
 		v += '<td></td>';
 	}
 	v += '</tr>';
+	return v;
+}
+
+function getFullTypeDisplay(type) {
+	var v = "";
+	v += `<div class="tab-contents">`;
+	v += '<div class="learnset-pool">'
+	for (var p of data.pokemon) {
+		if (p.types.indexOf(type) > -1) {
+			v += getEncounterPoke(p);
+		}
+	}
+	v += `</div></div>`;
+	v += `<div class="tab-contents">`;
+	v += `<table class="move-table">`;
+	for (var m of data.moves) {
+		if (m.type == type) {
+			v += getMoveDisplay(m);
+		}
+	}
+	v += `</table>`;
+	v += `</div>`;
+
+	return selectTabInDisplay(`
+	${prettyType(type)}
+	<div class="tab-collection">
+		<div class="tab-header">
+			<div class="tab-button" onclick="selectTab(event)">Pokemon</div>
+			<div class="tab-button" onclick="selectTab(event)">Moves</div>
+		</div>
+		<div class="scroll-padding-anchor"></div>
+		<div class="tab-body">
+			${v}
+		</div>
+	</div>`, 0);
+	return v;
+}
+
+function getEncounterPoke(poke, header, footer, extraClasses) {
+	if (!poke.types) {
+		poke = pokemonByName.get(poke);
+	}
+	v = "";
+	v += `<div class="encounter-poke${extraClasses ? " " + extraClasses : ""}">`;
+	if (header) {
+		v += header;
+	}
+	v += '<img style="cursor:pointer;" onclick="focusPokeByName(\'' + poke.name
+		+ '\')" src="' + getPokeImage(poke.name) + '">';
+	if (footer) {
+		v += footer;
+	}
+	v += `<div class="type-slices">`;
+	for (var t of poke.types) {
+		v += `<div class="type-slice" onclick="focusType('${t}')" style="background-color: ${typeColor(t)};"></div>`;
+	}
+	v += '</div>';
+	v += '</div>';
 	return v;
 }
 
