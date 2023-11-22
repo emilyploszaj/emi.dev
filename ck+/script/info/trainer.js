@@ -120,7 +120,7 @@ function getBringsDisplay(brings, total, maxShown) {
 		if (ba >= maxShown) {
 			break;
 		}
-		v += getEncounterPoke(e[0], e[1] * 100 / total + "%");
+		v += getEncounterPoke(e[0], parseInt(e[1] * 100 / total) + "%");
 		ba++;
 	}
 	v += '</div>';
