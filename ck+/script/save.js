@@ -23,6 +23,9 @@ function readNewbox(bytes, start, db1, db2) {
 			p = db2;
 		}
 		p += b * 0x2F;
+		if (bytes[p + 0x1d] == 0xfd) { // Egg
+			continue;
+		}
 		var item = bytes[p + 0x01];
 		if (itemsById.has(item)) {
 			item = itemsById.get(item);
@@ -83,7 +86,7 @@ function readPokemonList(bytes, start, capacity, increment) {
 	var pokemon = [];
 	for (var i = 0; i < count; i++) {
 		species[i].level = bytes[p + 0x1f];
-		if (bytes[p] != species[i] && species[i] != 0xfd) {
+		if (bytes[p] != species[i]) { // Mismatching species or egg
 			return;
 		}
 		var item = bytes[p + 0x01];
