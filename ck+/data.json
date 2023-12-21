@@ -45646,6 +45646,24 @@
         },
         {
             "area": "Route 39",
+            "name": "PokefanF POKEFANF (2) RUTH",
+            "team": [
+                {
+                    "item": "leftovers",
+                    "level": 50,
+                    "moves": [
+                        "quick-attack",
+                        "ice-punch",
+                        "fire-punch",
+                        "thunderpunch"
+                    ],
+                    "name": "furret"
+                }
+            ]
+        },
+        {
+            "area": "Route 39",
+            "meta": "end of gauntlet",
             "name": "Sailor SAILOR (1) EUGENE",
             "team": [
                 {
@@ -45680,24 +45698,6 @@
                         "sludge-bomb"
                     ],
                     "name": "octillery"
-                }
-            ]
-        },
-        {
-            "area": "Route 39",
-            "meta": "end of gauntlet",
-            "name": "PokefanF POKEFANF (2) RUTH",
-            "team": [
-                {
-                    "item": "leftovers",
-                    "level": 50,
-                    "moves": [
-                        "quick-attack",
-                        "ice-punch",
-                        "fire-punch",
-                        "thunderpunch"
-                    ],
-                    "name": "furret"
                 }
             ]
         },
