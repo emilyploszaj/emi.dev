@@ -374,27 +374,36 @@ function getPokemonTmHmDisplay(p) {
 }
 
 function getPokemonEncountersDisplay(p) {
-	var encounters = pokemonEncounters.get(p.name);
+	var encounters = getRelativeEncounterChances(p.name);
 	if (encounters) {
-		var v = "";
-		for (const en of encounters.entries()) {
+		var v = "<table class='poke-encounters'>";
+		for (const en of Object.entries(encounters)) {
 			var area = en[0];
-			var parts = en[1];
-			v += "<div>";
-			v += "<span class=\"poke-link\" onclick=\"focusEncounter(" + encountersByName.get(area) + ")\">"
-				+ fullCapitalize(area) + "</span> - ";
-			for (var i = 0; i < parts.length; i++) {
-				var part = parts[i];
-				v += "<span>";
-				v += part.chance + "%";
-				v += "</span> ";
+			if (caughtLandmarks.has(landmarksByLocation.get(area).name)) {
+				v += `<tr class="poke-encounters-dupe">`;
+			} else {
+				v += "<tr>";
 			}
-			v += "</div>";
+			v += "<td><span class=\"poke-link\" onclick=\"focusEncounter(" + encountersByName.get(area) + ")\">"
+				+ fullCapitalize(area) + "</span></td>";
+			for (const el of Object.entries(en[1])) {
+				var type = el[0];
+				var chances = el[1];
+				v += "<td>";
+				v += `<img style="display:inline;" src="${encounterIcons.get(type)}">`;
+				v += `<span class="poke-encounters-percentage">`
+				if (chances.base != chances.dupe) {
+					v += `<ruby>${chances.base}%<rt>(${chances.dupe}%)</rt></ruby>`;
+				} else {
+					v += `${chances.base}%`;
+				}
+				v += "</span></td>";
+			}
+			v += "</tr>";
 		}
 		return v;
-	} else {
-		return "";
 	}
+	return "";
 }
 
 function getPokemonStatsDisplay(p) {
@@ -611,7 +620,12 @@ function getEncounterPoke(poke, header, footer, extraClasses) {
 	return v;
 }
 
-function setMap(xOffset = 0, yOffset = 0, scale = 48) {
+function setMap(xOffset = undefined, yOffset = 0, scale = 48) {
+	if (xOffset == undefined) {
+		xOffset = orElse(savedData["last-map"], 0);
+	}
+	savedData["last-map"] = xOffset;
+	writeLocalStorage();
 	var th = 17 * scale;
 	var v = "";
 	v += '<button onclick="setMap(0)">Johto</button>';
@@ -714,8 +728,9 @@ function updateBox() {
 			+ i + ')">Calc Vs</button><button onclick="removeFromBox('
 			+ i + ')">Delete</button></div>');
 	}
-	localStorage.setItem("box", JSON.stringify(box));
-	localStorage.setItem("dead-box", JSON.stringify(deadBox));
+	savedData["box"] = box;
+	savedData["dead-box"] = deadBox;
+	writeLocalStorage();
 	caughtLandmarks.clear();
 	for (var i = 0; i < box.length; i++) {
 		caughtLandmarks.add(box[i].caught);

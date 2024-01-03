@@ -62,11 +62,12 @@ function getPokeImage(poke, unownExtra = undefined) {
 	return 'https://img.pokemondb.net/sprites/crystal/' + shiny + '/' + poke + '.png';
 }
 
-function getMoveName(move) {
-	if (nameFormatting.has(move)) {
-		return nameFormatting.get(move);
+function orElse(some, other) {
+	if (some) {
+		return some;
+	} else {
+		return other;
 	}
-	return fullCapitalize(move.replace(/-/g, " "));
 }
 
 function padNumber(s) {
@@ -85,6 +86,13 @@ function fullCapitalize(s) {
 		return nameFormatting.get(s);
 	}
 	return s.replace(/[-_]/g, " ").replace(/\w\S*/g, (word) => (word.replace(/^\w/, (c) => c.toUpperCase())));
+}
+
+function getMoveName(move) {
+	if (nameFormatting.has(move)) {
+		return nameFormatting.get(move);
+	}
+	return fullCapitalize(move.replace(/-/g, " "));
 }
 
 function getTrainerName(s) {
@@ -249,10 +257,33 @@ function assignStage(stages, s, v) {
 }
 
 function updateBadges() {
-	this.badges = parseInt(document.getElementById("badges").value);
-	localStorage.setItem("badges", badges);
+	badges = parseInt(document.getElementById("badges").value);
+	savedData["badges"] = badges;
+	writeLocalStorage();
 	updateCalc();
 	updateBox();
+}
+
+function setTab(name) {
+	if (name == "map") {
+		setMap();
+	}
+	if (name != "edit") {
+		editing = -1;
+	} else {
+		if (editing == -1) {
+			copyEditedMoves = true;
+			clearEdits();
+		} else {
+			copyEditedMoves = false;
+		}
+		updateEdit();
+	}
+	var tabs = document.getElementsByClassName("tab");
+	for (var i = 0; i < tabs.length; i++) {
+		tabs[i].style.display = "none";
+	}
+	document.getElementById(name).style.display = "block";
 }
 
 function closePopup() {

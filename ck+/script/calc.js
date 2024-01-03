@@ -168,12 +168,12 @@ function getDamage(attacker, defender, attackerStages, defenderStages, move, pla
 	v = parseInt(parseInt(v * a) / d);
 
 	v = parseInt(v / 50);
-	if (crit) {
-		v *= 2;
-	}
 	if (typeEnhancements.has(ni) && typeEnhancements.get(ni) == type) {
 		v *= 1.1;
 		v = parseInt(v);
+	}
+	if (crit) {
+		v *= 2;
 	}
 	v += 2;
 
@@ -332,8 +332,9 @@ function calcTrainer(i) {
 		calcTrainer(i - 1);
 		return;
 	}
-	localStorage.setItem("last-trainer", i);
 	lastTrainer = i;
+	savedData["last-trainer"] = lastTrainer;
+	writeLocalStorage();
 	enemyTeam = data.trainers[i].team;
 	document.getElementById("current-trainer-name").innerHTML =
 		`${getTrainerName(data.trainers[i].name)}`;

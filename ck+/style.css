@@ -22,6 +22,7 @@
 
 	--highlighted: #49adff;
 	--dupe-background: #531414;
+	--dupe-text: var(--crit-text);
 
 	--stat-bar-fill-terrible: #ec6868;
 	--stat-bar-fill-mediocre: #ecb768;
@@ -374,6 +375,20 @@ input:checked + .fake-checkbox {
 
 .unknown-gender {
 	background-color: var(--gender-unknown);
+}
+
+.poke-encounters {
+	border-spacing: 16px 4px;
+}
+
+.poke-encounters-dupe {
+	color: var(--dupe-text);
+}
+
+.poke-encounters-percentage {
+	display: inline-block;
+	width: 80px;
+	text-align: center;
 }
 
 .tab {

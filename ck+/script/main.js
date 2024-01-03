@@ -1,26 +1,34 @@
-function setTab(name) {
-	if (name == "map") {
-		setMap();
-	}
-	if (name != "edit") {
-		editing = -1;
+var savedData = {};
+var settings = {};
+
+function readLocalStorage() {
+	if (localStorage.getItem("calc/ck+")) {
+		savedData = JSON.parse(localStorage.getItem("calc/ck+"));
 	} else {
-		if (editing == -1) {
-			copyEditedMoves = true;
-			clearEdits();
-		} else {
-			copyEditedMoves = false;
+		if (localStorage.getItem("box")) {
+			savedData["box"] = JSON.parse(localStorage.getItem("box"));
 		}
-		updateEdit();
+		if (localStorage.getItem("dead-box")) {
+			savedData["dead-box"] = JSON.parse(localStorage.getItem("dead-box"));
+		}
+		if (localStorage.getItem("badges")) {
+			savedData["badges"] = parseInt(localStorage.getItem("badges"));
+		}
+		if (localStorage.getItem("settings")) {
+			savedData["settings"] = JSON.parse(localStorage.getItem("settings"));
+		}
 	}
-	var tabs = document.getElementsByClassName("tab");
-	for (var i = 0; i < tabs.length; i++) {
-		tabs[i].style.display = "none";
-	}
-	document.getElementById(name).style.display = "block";
+	savedData = orElse(savedData, {});
+	box = orElse(savedData["box"], []);
+	deadBox = orElse(savedData["dead-box"], []);
+	badges = orElse(savedData["badges"], 0);
+	settings = orElse(savedData["settings"], {});
+	applySettings();
 }
 
-var settings = {};
+function writeLocalStorage() {
+	localStorage.setItem("calc/ck+", JSON.stringify(savedData));
+}
 
 function updateSettings() {
 	settings.enableVsRecorder = document.getElementById("enable-vs-recorder").checked;
@@ -34,7 +42,8 @@ function applySettings() {
 	} else {
 		document.getElementById("update-vs-recorder").style.display = "none";
 	}
-	localStorage.setItem("settings", JSON.stringify(settings));
+	savedData["settings"] = settings;
+	writeLocalStorage();
 }
 
 document.getElementById("search-box").oninput = function (event) {
@@ -72,17 +81,7 @@ document.getElementById("badges").oninput = function (event) {
 	updateBadges();
 }
 
-if (localStorage.getItem("box")) {
-	box = JSON.parse(localStorage.getItem("box"));
-}
-
-if (localStorage.getItem("dead-box")) {
-	deadBox = JSON.parse(localStorage.getItem("dead-box"));
-}
-
-if (localStorage.getItem("badges")) {
-	badges = parseInt(localStorage.getItem("badges"));
-}
+readLocalStorage();
 
 setItemMenu();
 
@@ -101,8 +100,3 @@ document.getElementById("badges").value = badges;
 updateSearch(document.getElementById("search-box").value);
 
 fetchData();
-
-if (localStorage.getItem("settings")) {
-	settings = JSON.parse(localStorage.getItem("settings"));
-	applySettings();
-}

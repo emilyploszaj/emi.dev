@@ -220,36 +220,46 @@ function getPoolOfType(area, type) {
 	return null;
 }
 
-function getUniqueEncountersForPokemon(p) {
-	var encounters = pokemonEncounters.get(p.name);
+function getRelativeEncounterChances(poke) {
+	var encounters = pokemonEncounters.get(orElse(poke.name, poke));
+	var ret = {};
 	if (encounters) {
-		var condense = new Map();
 		for (const en of encounters.entries()) {
 			var area = en[0];
-			var parts = en[1];
-			var types = new Set();
-			partsLabel:
-			for (var i = 0; i < parts.length; i++) {
-				var type = parts[i].type;
-				if (!types.has(type)) {
-					types.add(type);
-					if (!condense.has(type)) {
-						condense.set(type, []);
-					}
-					var pool = getPoolOfType(area, type);
-					for (let c of condense.get(type)) {
-						if (arePoolsEqualIgnoreLevel(c.pool, pool)) {
-							c.areas.push(area);
-							continue partsLabel;
+			var pools = data.encounters[encountersByName.get(area)].pools;
+			ret[area] = {};
+			for (const p of pools) {
+				var pool = inflateEncounterPool(p.pool);
+				var bestChance = 0;
+				var bestDupeChance = 0;
+				if (Array.isArray(pool)) {
+					pool = [pool];
+				} else {
+					pool = Object.values(pool);
+				}
+				for (const time of pool) {
+					var chance = 0;
+					var totalChance = 0;
+					for (const m of time) {
+						if (m.pokemon == poke) {
+							chance += m.chance;
+						} else if (hasFamily(pokemonFamilies.get(pokemonByName.get(m.pokemon).pokedex))) {
+							continue;
 						}
+						totalChance += m.chance;
 					}
-					condense.get(type).push({
-						"areas": [area],
-						"pool": pool
-					});
+					var dupeChance = chance / totalChance * 100;
+					dupeChance = parseInt(dupeChance / 100 * 10000) / 100;
+					if (totalChance > 0 && dupeChance > bestDupeChance) {
+						bestChance = chance;
+						bestDupeChance = dupeChance;
+					}
+				}
+				if (bestChance > 0) {
+					ret[area][p.type] = {base: bestChance, dupe: bestDupeChance};
 				}
 			}
 		}
-		return condense;
 	}
+	return ret;
 }
