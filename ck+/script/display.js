@@ -401,6 +401,7 @@ function getPokemonEncountersDisplay(p) {
 			}
 			v += "</tr>";
 		}
+		v += "</table>"
 		return v;
 	}
 	return "";
@@ -594,7 +595,6 @@ function getFullTypeDisplay(type) {
 			${v}
 		</div>
 	</div>`, 0);
-	return v;
 }
 
 function getEncounterPoke(poke, header, footer, extraClasses) {
