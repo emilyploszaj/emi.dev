@@ -20044,19 +20044,19 @@
                 {
                     "description": "Turn 3",
                     "effects": {
-                        "multiplier": 3
+                        "multiplier": 4
                     }
                 },
                 {
                     "description": "Turn 4",
                     "effects": {
-                        "multiplier": 4
+                        "multiplier": 8
                     }
                 },
                 {
                     "description": "Turn 5",
                     "effects": {
-                        "multiplier": 5
+                        "multiplier": 16
                     }
                 }
             ]
@@ -21511,19 +21511,19 @@
                 {
                     "description": "Turn 3",
                     "effects": {
-                        "multiplier": 3
+                        "multiplier": 4
                     }
                 },
                 {
                     "description": "Turn 4",
                     "effects": {
-                        "multiplier": 4
+                        "multiplier": 8
                     }
                 },
                 {
                     "description": "Turn 5",
                     "effects": {
-                        "multiplier": 5
+                        "multiplier": 16
                     }
                 }
             ]
