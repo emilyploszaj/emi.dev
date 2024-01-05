@@ -1,3 +1,153 @@
+class BattlePoke {
+	#player;
+	#stages;
+
+	constructor(player, poke, stages) {
+		this.#player = player;
+		this.poke = poke;
+		this.#stages = stages;
+	}
+
+	isPlayer() {
+		return this.#player;
+	}
+
+	get currentHp() {
+		if (this.#player) {
+			return parseInt(document.getElementsByClassName("player-current-hp")[0].value);
+		} else {
+			return parseInt(document.getElementsByClassName("enemy-current-hp")[0].value);
+		}
+	}
+
+	get status() {
+		if (this.#player) {
+			return document.getElementById("player").getElementsByClassName("status-select")[0].value;
+		} else {
+			return document.getElementById("opponent").getElementsByClassName("status-select")[0].value;
+		}
+	}
+
+	get mon() {
+		return pokemonByName.get(this.poke.name);
+	}
+
+	get stages() {
+		return this.#stages;
+	}
+
+	get item() {
+		return this.poke.item;
+	}
+
+	get level() {
+		return this.poke.level;
+	}
+
+	get name() {
+		return this.poke.name;
+	}
+
+	getStat(stat) {
+		return getPokeStat(this.poke, stat);
+	}
+
+	getModifiedStat(stat) {
+		return getModifiedStat(this.poke, this.#stages, stat);
+	}
+
+	hasScreen(screen) {
+		if (this.#player) {
+			if (screen == "reflect") {
+				return document.getElementById("player-reflect").checked;
+			} else if (screen == "light-screen") {
+				return document.getElementById("player-light-screen").checked;
+			}
+		} else {
+			if (screen == "reflect") {
+				return document.getElementById("enemy-reflect").checked;
+			} else if (screen == "light-screen") {
+				return document.getElementById("enemy-light-screen").checked;
+			}
+		}
+	}
+
+	hasBadgeBoost() {
+		return hasBadgeBoost(this.poke, this.#player)
+	}
+}
+
+class BattleMove {
+	#user;
+	#variant;
+
+	constructor(user, move, variant, crit) {
+		this.#user = user;
+		this.move = move;
+		this.#variant = orElse(orElse(move.variants, [])[variant], {});
+		this.crit = crit;
+	}
+
+	get name() {
+		return this.move.name;
+	}
+
+	get type() {
+		if (this.move.name == "hidden-power") {
+			var hp = getHiddenPower(this.#user);
+			return hp.type;
+		} else {
+			return orElse(this.#variant.type, this.move.type);
+		}
+	}
+
+	get power() {
+		if (this.move.name == "hidden-power") {
+			var hp = getHiddenPower(this.#user);
+			return hp.power;
+		} else if (this.move.name == "flail" || this.move.name == "reversal") {
+			var mhp = this.#user.getStat("hp");
+			var chp = this.#user.currentHp;
+			var ratio = chp / mhp;
+			if (ratio < 0.0417) {
+				return 200;
+			} else if (ratio < 0.1042) {
+				return 150;
+			} else if (ratio < 0.2083) {
+				return 100;
+			} else if (ratio < 0.3542) {
+				return 80;
+			} else if (ratio < 0.6875) {
+				return 40;
+			} else {
+				return 20;
+			}
+		}
+		return orElse(this.#variant.power, this.move.power);
+	}
+
+	get hits() {
+		return orElse(orElse(orElse(this.#variant.effects, {}).hits, orElse(this.move.effects, {}).hits), 1);
+	}
+
+	get multiplier() {
+		return orElse(orElse(orElse(this.#variant.effects, {}).multiplier, orElse(this.move.effects, {}).multiplier), 1);
+	}
+}
+
+class CalcResult {
+
+	constructor(rolls, min, max) {
+		this.rolls = rolls;
+		this.min = min;
+		this.max = max;
+	}
+
+	static of(mono) {
+		return new CalcResult([mono], mono, mono);
+	}
+}
+
 function updateCalc() {
 	try {
 		displayCalcPokemon(document.getElementById("player"), myPoke, theirPoke, false);
@@ -40,58 +190,23 @@ function getEnemyTeamDisplay(enemyTeam, trainer) {
 	return v;
 }
 
-function getDamage(attacker, defender, attackerStages, defenderStages, move, player, crit, low, giveAll = false) {
-	if (defender == undefined) {
-		return 0;
+/**
+ * @param {BattlePoke} attacker
+ * @param {BattlePoke} defender
+ * @param {BattleMove} move
+ * @return {CalcResult}
+ */
+function getDamage(attacker, defender, move) {
+	if (defender.poke == undefined) {
+		return CalcResult.of(0);
 	}
-	var power = move.power;
-	var type = move.type;
-	if (move.name == "magnitude") {
-		if (giveAll) {
-			power = 70
-		} else {
-			if (low) {
-				power = 10;
-			} else {
-				power = 150;
-			}
-		}
+	if (move.power == 0) {
+		return CalcResult.of(0);
 	}
-	if (move.name == "hidden-power") {
-		var hp = getHiddenPower(attacker);
-		power = hp.power;
-		type = hp.type;
-	}
-	if (move.name == "flail" || move.name == "reversal") {
-		var mhp = getPokeStat(attacker, "hp");
-		var chp = parseInt(document.getElementsByClassName("player-current-hp")[0].value);
-		if (!player) {
-			chp = parseInt(document.getElementsByClassName("enemy-current-hp")[0].value);
-		}
-		var ratio = chp / mhp;
-		if (ratio < 0.0417) {
-			power = 200;
-		} else if (ratio < 0.1042) {
-			power = 150;
-		} else if (ratio < 0.2083) {
-			power = 100;
-		} else if (ratio < 0.3542) {
-			power = 80;
-		} else if (ratio < 0.6875) {
-			power = 40;
-		} else {
-			power = 20;
-		}
-	}
-	if (power == 0) {
-		return 0;
-	}
-	var ap = pokemonByName.get(attacker.name);
-	var dp = pokemonByName.get(defender.name);
 	var v = parseInt(attacker.level * 2 / 5) + 2;
-	v *= power;
+	v *= move.power;
 
-	var special = specialTypes.has(type);
+	var special = specialTypes.has(move.type);
 	var statOff = 0;
 	if (special) {
 		statOff = 1;
@@ -99,57 +214,40 @@ function getDamage(attacker, defender, attackerStages, defenderStages, move, pla
 	var attackStat = ["atk", "spa"][statOff];
 	var defenseStat = ["def", "spd"][statOff];
 
-	var a = getModifiedStat(attacker, attackerStages, attackStat);
-	var d = getModifiedStat(defender, defenderStages, defenseStat);
+	var a = attacker.getModifiedStat(attackStat);
+	var d = defender.getModifiedStat(defenseStat);
 	var ignoreBoosts = false;
-	if (crit) {
-		if (defenderStages[defenseStat] >= attackerStages[attackStat]) {
-			a = getPokeStat(attacker, attackStat);
-			d = getPokeStat(defender, defenseStat);
-			ignoreBoosts = true;
-		}
-	}
-	if (move.name == "explosion" || move.name == "selfdestruct") {
-		d = Math.max(1, parseInt(d / 2));
+	if (move.crit && defender.stages[defenseStat] >= attacker.stages[attackStat]) {
+		ignoreBoosts = true;
+		a = attacker.getStat(attackStat);
+		d = defender.getStat(defenseStat);
 	}
 
 	if (!ignoreBoosts) {
-		// Burn
-		if (!special) {
-			if (player && document.getElementById("player").getElementsByClassName("status-select")[0].value == "brn") {
-				a = (parseInt(a / 2));
-			} else if (!player && document.getElementById("opponent").getElementsByClassName("status-select")[0].value == "brn") {
-				a = (parseInt(a / 2));
+		// Badge boost
+		if (attacker.hasBadgeBoost()) {
+			if (!special && badges >= attackBadges) {
+				a = parseInt(a * 1.125);
+			} else if (special && badges >= specialBadges) {
+				a = parseInt(a * 1.125);
 			}
 		}
-		// Badge boost
-		var attackerBoost = hasBadgeBoost(attacker, player);
-		var defenderBoost = hasBadgeBoost(defender, !player);
-		if (attackerBoost && !special && badges >= attackBadges) {
-			a = parseInt(a * 1.125);
+		if (defender.hasBadgeBoost()) {
+			if (!special && badges >= defenseBadges) {
+				d = parseInt(d * 1.125);
+			} else if (special && badges >= specialBadges) {
+				d = parseInt(d * 1.125);
+			}
 		}
-		if (defenderBoost && !special && badges >= defenseBadges) {
-			d = parseInt(d * 1.125);
-		}
-		if (attackerBoost && special && badges >= specialBadges) {
-			a = parseInt(a * 1.125);
-		}
-		if (defenderBoost && special && badges >= specialBadges) {
-			d = parseInt(d * 1.125);
+		// Burn
+		if (!special && attacker.status == "brn") {
+			a = (parseInt(a / 2));
 		}
 		// Screens
-		if (player) {
-			if (!special && document.getElementById("enemy-reflect").checked) {
-				d *= 2;
-			} else if (special && document.getElementById("enemy-light-screen").checked) {
-				d *= 2;
-			}
-		} else {
-			if (!special && document.getElementById("player-reflect").checked) {
-				d *= 2;
-			} else if (special && document.getElementById("player-light-screen").checked) {
-				d *= 2;
-			}
+		if (special && defender.hasScreen("light-screen")) {
+			d *= 2;
+		} else if (!special && defender.hasScreen("reflect")) {
+			d *= 2;
 		}
 	}
 
@@ -165,30 +263,50 @@ function getDamage(attacker, defender, attackerStages, defenderStages, move, pla
 	if ((defender.name == "ditto" || defender.transformStats) && ndi == "metal-powder") {
 		d = d * 1.5;
 	}
+
+	// Gen 2 passes modified stats as ratios in 8 bit registers
+	// If either exceeds 255, both are divided by 4 to fit
+	if (a > 255 || d > 255) {
+		a = parseInt(a / 4);
+		d = parseInt(d / 4);
+	}
+	a = a & 0xFF;
+	d = d & 0xFF;
+
+	if (move.name == "explosion" || move.name == "selfdestruct") {
+		d = Math.max(1, parseInt(d / 2));
+	}
+
 	v = parseInt(parseInt(v * a) / d);
 
 	v = parseInt(v / 50);
-	if (typeEnhancements.has(ni) && typeEnhancements.get(ni) == type) {
+	if (typeEnhancements.has(ni) && typeEnhancements.get(ni) == move.type) {
 		v *= 1.1;
 		v = parseInt(v);
 	}
-	if (crit) {
+	if (move.crit) {
 		v *= 2;
 	}
 	v += 2;
 
-	if (move.name == "triple-kick" && !giveAll) {
-		return getModdedDamage(v, attacker, defender, ap, dp, power, type, move, player, crit, low, giveAll, 1)
-			+ getModdedDamage(v, attacker, defender, ap, dp, power, type, move, player, crit, low, giveAll, 2)
-			+ getModdedDamage(v, attacker, defender, ap, dp, power, type, move, player, crit, low, giveAll, 3);
+	if (move.name == "triple-kick") {
+		// TODO do triple kick again
+		var tk1 = getModdedDamage(v, attacker, defender, move);
+		var tk2 = getModdedDamage(v * 2, attacker, defender, move);
+		var tk3 = getModdedDamage(v * 3, attacker, defender, move);
+		return new CalcResult(tk1.rolls, tk1.min + tk2.min + tk3.min, tk1.max + tk2.max + tk3.max);
 	}
 
-	return getModdedDamage(v, attacker, defender, ap, dp, power, type, move, player, crit, low, giveAll, 1);
+	return getModdedDamage(v, attacker, defender, move);
 }
 
-function getModdedDamage(v, attacker, defender, ap, dp, power, type, move, player, crit, low, giveAll, tk) {
-	v *= tk;
-
+/**
+ * @param {BattlePoke} attacker
+ * @param {BattlePoke} defender
+ * @param {BattleMove} move
+ * @return {CalcResult}
+ */
+function getModdedDamage(v, attacker, defender, move) {
 	var weather = document.getElementById("current-weather").value;
 	if (weather == "rain") {
 		if (move.type == "fire" || move.name == "solar-beam") {
@@ -204,64 +322,47 @@ function getModdedDamage(v, attacker, defender, ap, dp, power, type, move, playe
 		}
 	}
 
-	// TODO if (weather)
-
-	if (player && badgeTypes.has(type) && badgeTypes.get(type) <= badges) {
+	if (attacker.isPlayer() && badgeTypes.has(move.type) && badgeTypes.get(move.type) <= badges) {
 		v = parseInt(v * 1.125);
 	}
 
+	var ap = attacker.mon;
+	var dp = defender.mon;
 	// STAB
-	if (type == ap.types[0] || (ap.types.length > 1 && type == ap.types[1])) {
+	if (move.type == ap.types[0] || (ap.types.length > 1 && move.type == ap.types[1])) {
 		v = parseInt(v * 1.5);
 	}
 
 	var eff = 1;
-	eff *= getMatchup(type, dp.types[0]);
+	eff *= getMatchup(move.type, dp.types[0]);
 	if (dp.types.length > 1) {
-		eff *= getMatchup(type, dp.types[1]);
+		eff *= getMatchup(move.type, dp.types[1]);
 	}
 	if (eff == 0) {
-		return 0;
+		return CalcResult.of(0);
 	}
-	v *= eff;
+	v = parseInt(v * eff);
 
 	if (move.name == "dragon-rage") {
-		return 40;
+		return CalcResult.of(40);
 	} else if (move.name == "sonicboom") {
-		return 20;
+		return CalcResult.of(20);
 	} if (move.name == "seismic-toss" || move.name == "night-shade" || move.name == "psywave") {
-		return attacker.level;
+		return CalcResult.of(attacker.level);
 	}
 	// Unhandled special move
-	if (power == 1) {
-		return -1;
+	if (move.power == 1) {
+		return CalcResult.of(-1);
 	}
+	v *= move.multiplier;
 
-	if (giveAll) {
-		var rolls = [];
-		for (var i = 217; i <= 255; i++) {
-			rolls.push(Math.max(1, parseInt(v * i / 255)));
-		}
-		return rolls;
+	var rolls = [];
+	for (var i = 217; i <= 255; i++) {
+		rolls.push(Math.max(1, parseInt(v * i / 255)));
 	}
-
-	var r = 255;
-	if (low) {
-		r = 217;
-	}
-	v = parseInt(v * r / 255);
-
-	var times = 1;
-	if (doubleHitMoves.has(move.name)) {
-		times = 2;
-	} else if (multiHitMoves.has(move.name)) {
-		if (low) {
-			times = 2;
-		} else {
-			times = 5;
-		}
-	}
-	return Math.max(1, v) * times;
+	var min = rolls[0] * move.hits;
+	var max = rolls[rolls.length - 1] * move.hits;
+	return new CalcResult(rolls, min, max);
 }
 
 function hasBadgeBoost(poke, player) {

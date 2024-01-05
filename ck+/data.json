@@ -9633,7 +9633,7 @@
                         {
                             "chance": 100,
                             "extra": "Requires squirtbottle after Whitney",
-                            "level": 20,
+                            "level": 35,
                             "pokemon": "sudowoodo"
                         }
                     ],
@@ -18659,7 +18659,15 @@
             "name": "pursuit",
             "power": 40,
             "pp": 20,
-            "type": "dark"
+            "type": "dark",
+            "variants": [
+                {
+                    "description": "Switch out",
+                    "effects": {
+                        "multiplier": 2
+                    }
+                }
+            ]
         },
         {
             "accuracy": 100,
@@ -18684,6 +18692,9 @@
         },
         {
             "accuracy": 100,
+            "effects": {
+                "hits": 2
+            },
             "extra": [
                 "Hits 2-5 times"
             ],
@@ -18691,7 +18702,34 @@
             "name": "pin-missile",
             "power": 20,
             "pp": 20,
-            "type": "bug"
+            "roll_variants": true,
+            "type": "bug",
+            "variants": [
+                {
+                    "description": "Hits 2 times",
+                    "effects": {
+                        "hits": 2
+                    }
+                },
+                {
+                    "description": "Hits 3 times",
+                    "effects": {
+                        "hits": 3
+                    }
+                },
+                {
+                    "description": "Hits 4 times",
+                    "effects": {
+                        "hits": 4
+                    }
+                },
+                {
+                    "description": "Hits 5 times",
+                    "effects": {
+                        "hits": 5
+                    }
+                }
+            ]
         },
         {
             "accuracy": 100,
@@ -18816,6 +18854,9 @@
         },
         {
             "accuracy": 100,
+            "effects": {
+                "hits": 2
+            },
             "extra": [
                 "Hits 2-5 times"
             ],
@@ -18823,7 +18864,34 @@
             "name": "fury-attack",
             "power": 15,
             "pp": 20,
-            "type": "normal"
+            "roll_variants": true,
+            "type": "normal",
+            "variants": [
+                {
+                    "description": "Hits 2 times",
+                    "effects": {
+                        "hits": 2
+                    }
+                },
+                {
+                    "description": "Hits 3 times",
+                    "effects": {
+                        "hits": 3
+                    }
+                },
+                {
+                    "description": "Hits 4 times",
+                    "effects": {
+                        "hits": 4
+                    }
+                },
+                {
+                    "description": "Hits 5 times",
+                    "effects": {
+                        "hits": 5
+                    }
+                }
+            ]
         },
         {
             "accuracy": 100,
@@ -19272,6 +19340,9 @@
         },
         {
             "accuracy": 100,
+            "effects": {
+                "hits": 2
+            },
             "extra": [
                 "Hits 2-5 times"
             ],
@@ -19279,7 +19350,34 @@
             "name": "fury-swipes",
             "power": 18,
             "pp": 15,
-            "type": "normal"
+            "roll_variants": true,
+            "type": "normal",
+            "variants": [
+                {
+                    "description": "Hits 2 times",
+                    "effects": {
+                        "hits": 2
+                    }
+                },
+                {
+                    "description": "Hits 3 times",
+                    "effects": {
+                        "hits": 3
+                    }
+                },
+                {
+                    "description": "Hits 4 times",
+                    "effects": {
+                        "hits": 4
+                    }
+                },
+                {
+                    "description": "Hits 5 times",
+                    "effects": {
+                        "hits": 5
+                    }
+                }
+            ]
         },
         {
             "accuracy": 100,
@@ -19772,6 +19870,9 @@
         },
         {
             "accuracy": 100,
+            "effects": {
+                "hits": 2
+            },
             "extra": [
                 "Hits 2-5 times"
             ],
@@ -19779,7 +19880,34 @@
             "name": "comet-punch",
             "power": 18,
             "pp": 15,
-            "type": "normal"
+            "roll_variants": true,
+            "type": "normal",
+            "variants": [
+                {
+                    "description": "Hits 2 times",
+                    "effects": {
+                        "hits": 2
+                    }
+                },
+                {
+                    "description": "Hits 3 times",
+                    "effects": {
+                        "hits": 3
+                    }
+                },
+                {
+                    "description": "Hits 4 times",
+                    "effects": {
+                        "hits": 4
+                    }
+                },
+                {
+                    "description": "Hits 5 times",
+                    "effects": {
+                        "hits": 5
+                    }
+                }
+            ]
         },
         {
             "accuracy": 100,
@@ -19857,6 +19985,9 @@
         },
         {
             "accuracy": 100,
+            "effects": {
+                "hits": 2
+            },
             "extra": [
                 "Hits 2-5 times"
             ],
@@ -19864,7 +19995,34 @@
             "name": "bone-rush",
             "power": 25,
             "pp": 10,
-            "type": "ground"
+            "roll_variants": true,
+            "type": "ground",
+            "variants": [
+                {
+                    "description": "Hits 2 times",
+                    "effects": {
+                        "hits": 2
+                    }
+                },
+                {
+                    "description": "Hits 3 times",
+                    "effects": {
+                        "hits": 3
+                    }
+                },
+                {
+                    "description": "Hits 4 times",
+                    "effects": {
+                        "hits": 4
+                    }
+                },
+                {
+                    "description": "Hits 5 times",
+                    "effects": {
+                        "hits": 5
+                    }
+                }
+            ]
         },
         {
             "accuracy": 100,
@@ -19875,7 +20033,33 @@
             "name": "rollout",
             "power": 30,
             "pp": 1,
-            "type": "rock"
+            "type": "rock",
+            "variants": [
+                {
+                    "description": "Turn 2",
+                    "effects": {
+                        "multiplier": 2
+                    }
+                },
+                {
+                    "description": "Turn 3",
+                    "effects": {
+                        "multiplier": 3
+                    }
+                },
+                {
+                    "description": "Turn 4",
+                    "effects": {
+                        "multiplier": 4
+                    }
+                },
+                {
+                    "description": "Turn 5",
+                    "effects": {
+                        "multiplier": 5
+                    }
+                }
+            ]
         },
         {
             "accuracy": 100,
@@ -19937,6 +20121,9 @@
         },
         {
             "accuracy": 100,
+            "effects": {
+                "hits": 2
+            },
             "extra": [
                 "Hits 2-5 times"
             ],
@@ -19944,7 +20131,34 @@
             "name": "doubleslap",
             "power": 15,
             "pp": 10,
-            "type": "normal"
+            "roll_variants": true,
+            "type": "normal",
+            "variants": [
+                {
+                    "description": "Hits 2 times",
+                    "effects": {
+                        "hits": 2
+                    }
+                },
+                {
+                    "description": "Hits 3 times",
+                    "effects": {
+                        "hits": 3
+                    }
+                },
+                {
+                    "description": "Hits 4 times",
+                    "effects": {
+                        "hits": 4
+                    }
+                },
+                {
+                    "description": "Hits 5 times",
+                    "effects": {
+                        "hits": 5
+                    }
+                }
+            ]
         },
         {
             "accuracy": 100,
@@ -19970,6 +20184,9 @@
         },
         {
             "accuracy": 100,
+            "effects": {
+                "hits": 2
+            },
             "extra": [
                 "Hits 2 times"
             ],
@@ -20171,9 +20388,40 @@
             ],
             "index": 222,
             "name": "magnitude",
-            "power": 1,
+            "power": 70,
             "pp": 30,
-            "type": "ground"
+            "roll_variants": true,
+            "type": "ground",
+            "variants": [
+                {
+                    "description": "Magnitude 4 (5%)",
+                    "power": 10
+                },
+                {
+                    "description": "Magnitude 5 (10%)",
+                    "power": 30
+                },
+                {
+                    "description": "Magnitude 6 (20%)",
+                    "power": 50
+                },
+                {
+                    "description": "Magnitude 7 (30%)",
+                    "power": 70
+                },
+                {
+                    "description": "Magnitude 8 (20%)",
+                    "power": 90
+                },
+                {
+                    "description": "Magnitude 9 (10%)",
+                    "power": 110
+                },
+                {
+                    "description": "Magnitude 10 (5%)",
+                    "power": 150
+                }
+            ]
         },
         {
             "accuracy": 100,
@@ -20188,6 +20436,9 @@
         },
         {
             "accuracy": 100,
+            "effects": {
+                "hits": 2
+            },
             "extra": [
                 "Hits 2-5 times"
             ],
@@ -20195,7 +20446,34 @@
             "name": "spike-cannon",
             "power": 20,
             "pp": 15,
-            "type": "normal"
+            "roll_variants": true,
+            "type": "normal",
+            "variants": [
+                {
+                    "description": "Hits 2 times",
+                    "effects": {
+                        "hits": 2
+                    }
+                },
+                {
+                    "description": "Hits 3 times",
+                    "effects": {
+                        "hits": 3
+                    }
+                },
+                {
+                    "description": "Hits 4 times",
+                    "effects": {
+                        "hits": 4
+                    }
+                },
+                {
+                    "description": "Hits 5 times",
+                    "effects": {
+                        "hits": 5
+                    }
+                }
+            ]
         },
         {
             "accuracy": 100,
@@ -20278,6 +20556,9 @@
         },
         {
             "accuracy": 100,
+            "effects": {
+                "hits": 2
+            },
             "extra": [
                 "Hits 2 times"
             ],
@@ -20611,6 +20892,9 @@
         },
         {
             "accuracy": 100,
+            "effects": {
+                "hits": 2
+            },
             "extra": [
                 "Hits 2-5 times"
             ],
@@ -20618,7 +20902,34 @@
             "name": "barrage",
             "power": 15,
             "pp": 20,
-            "type": "normal"
+            "roll_variants": true,
+            "type": "normal",
+            "variants": [
+                {
+                    "description": "Hits 2 times",
+                    "effects": {
+                        "hits": 2
+                    }
+                },
+                {
+                    "description": "Hits 3 times",
+                    "effects": {
+                        "hits": 3
+                    }
+                },
+                {
+                    "description": "Hits 4 times",
+                    "effects": {
+                        "hits": 4
+                    }
+                },
+                {
+                    "description": "Hits 5 times",
+                    "effects": {
+                        "hits": 5
+                    }
+                }
+            ]
         },
         {
             "accuracy": 70,
@@ -21189,7 +21500,33 @@
             "name": "fury-cutter",
             "power": 15,
             "pp": 20,
-            "type": "bug"
+            "type": "bug",
+            "variants": [
+                {
+                    "description": "Turn 2",
+                    "effects": {
+                        "multiplier": 2
+                    }
+                },
+                {
+                    "description": "Turn 3",
+                    "effects": {
+                        "multiplier": 3
+                    }
+                },
+                {
+                    "description": "Turn 4",
+                    "effects": {
+                        "multiplier": 4
+                    }
+                },
+                {
+                    "description": "Turn 5",
+                    "effects": {
+                        "multiplier": 5
+                    }
+                }
+            ]
         },
         {
             "accuracy": 100,
@@ -52322,7 +52659,7 @@
             ]
         },
         {
-            "area": "Victoary road",
+            "area": "Victory road",
             "name": "Rival1 RIVAL1 (13) ?",
             "team": [
                 {
@@ -52409,7 +52746,7 @@
             ]
         },
         {
-            "area": "Victoary road",
+            "area": "Victory road",
             "name": "Rival1 RIVAL1 (14) ?",
             "team": [
                 {
@@ -52496,7 +52833,7 @@
             ]
         },
         {
-            "area": "Victoary road",
+            "area": "Victory road",
             "name": "Rival1 RIVAL1 (15) ?",
             "team": [
                 {

@@ -587,13 +587,24 @@ input:checked + .fake-checkbox {
 	margin: 10px 0px;
 	width: 982px;
 	padding: 4px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .b2b {
-	border-top: 6px dashed white;
-	border-right: 6px dashed white;
-	border-bottom: 6px dashed white;
-	margin-bottom: 10px;
+	background: repeating-linear-gradient(
+		-45deg,
+		var(--box-background) 0px,
+		var(--box-background) 10px,
+		var(--background) 10px,
+		var(--background) 20px
+	) !important;
+	margin: 4px 0px;
+	padding: 8px 0px;
+}
+
+.b2b + .b2b {
+	margin-top: 20px;
 }
 
 .trainer-pokes {
@@ -731,13 +742,34 @@ input:checked + .fake-checkbox {
 }
 
 .move-calc {
-	padding: 0px 6px;
+	padding: 0px 0px;
 	border-width: 3px;
 	border-style: dashed;
 	border-color: transparent;
 	height: 50px;
-	min-width: 140px;
-	max-width: 140px;
+	min-width: 152px;
+	max-width: 152px;
+}
+
+.move-calc-variants {
+	float: none !important;
+	display: flex;
+	width: auto;
+	height: 8px;
+	margin-top: 4px;
+	margin-bottom: -12px;
+	gap: 4px;
+}
+
+.move-calc-variant {
+	cursor: pointer;
+	border-radius: 3px;
+	background-color: var(--gender-unknown);
+	flex-grow: 1;
+}
+
+.move-calc-variant-selected {
+	background-color: var(--highlighted);
 }
 
 .rolls {

@@ -1,4 +1,6 @@
 var menuOpen;
+var playerMoveVariants = [-1, -1, -1, -1];
+var enemyMoveVariants = [-1, -1, -1, -1];
 
 function displayCalcPokemon(root, poke, opponent, right) {
 	var player = !right;
@@ -56,8 +58,10 @@ function displayCalcPokemon(root, poke, opponent, right) {
 			}
 			root.getElementsByClassName("status-info")[0].innerHTML = '<span>' + base + 'n<div class="rolls"><center>' + inner + '</center></div></span>';
 		} else if (status == "cnf") {
-			var move = {"name": "confusion-self-hit", "type": "curse", "power": 40}
-			var max = getDamage(poke, poke, getStages(myStages), getStages(myStages), move, player, false, false);
+			var move = {"name": "confusion-self-hit", "type": "curse", "power": 40};
+			var attacker = new BattlePoke(true, poke, getStages(myStages));
+			var rolls = getDamage(attacker, attacker, new BattleMove(attacker, move, -1, false));
+			var max = rolls[rolls.length - 1];
 			var maxPercent = Math.round(1000 * max / getPokeStat(poke, "hp")) / 10;
 			var desc = `<span>${max}</span>`;
 			root.getElementsByClassName("status-info")[0].innerHTML = desc;
@@ -121,13 +125,37 @@ function displayCalcPokemon(root, poke, opponent, right) {
 	}
 	root.getElementsByClassName("poke-types")[0].innerHTML = types;
 	var moves = '<table class="move-calcs">';
+	var variantArray = player ? playerMoveVariants : enemyMoveVariants;
+	var attacker = new BattlePoke(player, poke, getStages(myStages));
+	var defender = new BattlePoke(!player, opponent, getStages(theirStages));
 	for (var i = 0; i < 4; i++) {
 		if (i < poke.moves.length) {
-			var p1 = `<td class="move-calc">${moveLink(poke.moves[i])}</td>`;
 			var move = movesByName.get(poke.moves[i]);
-			var min = getDamage(poke, opponent, getStages(myStages), getStages(theirStages), move, player, false, true);
-			var max = getDamage(poke, opponent, getStages(myStages), getStages(theirStages), move, player, false, false);
-			var rolls = getDamage(poke, opponent, getStages(myStages), getStages(theirStages), move, player, false, false, true);
+			var variants = "";
+			if (move.variants && move.variants.length > 0) {
+				var variantCount = move.variants.length;
+				variants += `<div class="move-calc-variants">`;
+				for (var vr = 0; vr < variantCount; vr++) {
+					var varClasses = "move-calc-variant"
+					if (vr == variantArray[i]) {
+						varClasses += " move-calc-variant-selected";
+					}
+					variants += `<div title="${move.variants[vr].description}" onclick="setMoveVariant(${player}, ${i}, ${vr});" class="${varClasses}"></div>`;
+				}
+				variants += `</div>`;
+			}
+			var p1 = `<td class="move-calc">${moveLink(poke.moves[i])}${variants}</td>`;
+			var result = getDamage(attacker, defender, new BattleMove(attacker, move, variantArray[i], false));
+			var rolls = result.rolls;
+			var min = result.min;
+			var max = result.max;
+			if (variantArray[i] < 0 && move.roll_variants) {
+				for (var vr = 0; vr < move.variants.length; vr++) {
+					var vRes = getDamage(attacker, defender, new BattleMove(attacker, move, vr, false));
+					min = Math.min(vRes.min, min);
+					max = Math.max(vRes.max, max);
+				}
+			}
 			var minPercent = Math.round(1000 * min / hp) / 10;
 			var maxPercent = Math.round(1000 * max / hp) / 10;
 			var extra = "";
@@ -147,9 +175,17 @@ function displayCalcPokemon(root, poke, opponent, right) {
 			if (opponent == undefined) {
 				p2 = `<td class="move-calc">-</td>`;
 			}
-			var min = getDamage(poke, opponent, getStages(myStages), getStages(theirStages), move, player, true, true);
-			var max = getDamage(poke, opponent, getStages(myStages), getStages(theirStages), move, player, true, false);
-			var rolls = getDamage(poke, opponent, getStages(myStages), getStages(theirStages), move, player, true, false, true);
+			var result = getDamage(attacker, defender, new BattleMove(attacker, move, variantArray[i], true));
+			var rolls = result.rolls;
+			var min = result.min;
+			var max = result.max;
+			if (variantArray[i] < 0 && move.roll_variants) {
+				for (var vr = 0; vr < move.variants.length; vr++) {
+					var vRes = getDamage(attacker, defender, new BattleMove(attacker, move, vr, true));
+					min = Math.min(vRes.min, min);
+					max = Math.max(vRes.max, max);
+				}
+			}
 			var minPercent = Math.round(1000 * min / hp) / 10;
 			var maxPercent = Math.round(1000 * max / hp) / 10;
 			var extra = " crit";
@@ -742,6 +778,7 @@ function updateBox() {
 }
 
 function clearPlayerStages() {
+	playerMoveVariants = [-1, -1, -1, -1];
 	document.getElementById("player").getElementsByClassName("status-select")[0].value = "none";
 	var inputs = document.getElementsByClassName("player-stages");
 	for (var i = 0; i < inputs.length; i++) {
@@ -752,12 +789,30 @@ function clearPlayerStages() {
 }
 
 function clearEnemyStages() {
+	enemyMoveVariants = [-1, -1, -1, -1];
 	document.getElementById("opponent").getElementsByClassName("status-select")[0].value = "none";
 	var inputs = document.getElementsByClassName("enemy-stages");
 	for (var i = 0; i < inputs.length; i++) {
 		inputs[i].value = "0";
 	}
 	document.getElementsByClassName("enemy-current-hp")[0].value = "";
+	updateCalc();
+}
+
+function setMoveVariant(player, move, variant) {
+	if (player) {
+		if (playerMoveVariants[move] == variant) {
+			playerMoveVariants[move] = -1;
+		} else {
+			playerMoveVariants[move] = variant;
+		}
+	} else {
+		if (enemyMoveVariants[move] == variant) {
+			enemyMoveVariants[move] = -1;
+		} else {
+			enemyMoveVariants[move] = variant;
+		}
+	}
 	updateCalc();
 }
 
