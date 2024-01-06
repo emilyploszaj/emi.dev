@@ -208,20 +208,13 @@ var statisticsSplits = new Set([
 var priorityMoves = new Set([
 	"quick-attack", "mach-punch", "extremespeed", "protect", "detect", "endure"
 ]);
-var multiHitMoves = new Set([
-	"barrage", "bone-rush", "comet-punch", "doubleslap",
-	"fury-attack", "fury-swipes", "pin-missile", "spike-cannon"
-]);
-var doubleHitMoves = new Set([
-	"bonemerang", "double-hit", "double-kick", "twineedle"
-]);
 
 function fetchData() {
 	fetch("./data.json")
 	.then(response => response.text())
 	.then(text => {
 		for (let i in trueNames) {
-			var lower = trueNames[i].toLowerCase().replace(/-/g, " ");
+			var lower = trueNames[i].toLowerCase().replace(/ /g, "-");
 			nameFormatting.set(lower, trueNames[i]);
 		}
 		nameFormatting.set("kings-rock", "King's Rock");

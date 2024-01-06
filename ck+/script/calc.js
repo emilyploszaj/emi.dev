@@ -94,7 +94,7 @@ class BattleMove {
 
 	get type() {
 		if (this.move.name == "hidden-power") {
-			var hp = getHiddenPower(this.#user);
+			var hp = getHiddenPower(this.#user.poke);
 			return hp.type;
 		} else {
 			return orElse(this.#variant.type, this.move.type);
