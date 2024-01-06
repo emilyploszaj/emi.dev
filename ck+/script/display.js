@@ -387,6 +387,48 @@ function displayPokemon(root, i) {
 	</div>`, 0);
 }
 
+function updateCalc() {
+	try {
+		displayCalcPokemon(document.getElementById("player"), myPoke, theirPoke, false);
+		displayCalcPokemon(document.getElementById("opponent"), theirPoke, myPoke, true);
+		var v = "";
+		for (var i = 0; i < box.length && i < box.length; i++) {
+			var img = '<img src="' + getPokeImage(box[i]) + '">';
+			v += '<div onclick="setPlayer(' + i + ')">' + img + "</div>";
+		}
+		document.getElementById("player").getElementsByClassName("calc-team")[0].innerHTML = v;
+		document.getElementById("opponent").getElementsByClassName("calc-team")[0].innerHTML = getEnemyTeamDisplay(enemyTeam, lastTrainer);
+		var extraTrainers = "";
+		for (var i = lastTrainer + 1; isTrainerB2b(i); i++) {
+			extraTrainers += `<div class="calc-team">${getEnemyTeamDisplay(data.trainers[i].team, i)}</div>`;
+			extraTrainers += `<div class="calc-navigation"><span>${getTrainerName(data.trainers[i].name)} </span>`;
+			extraTrainers += `<button onclick="focusTrainer(${i})">Stats</button> `;
+			extraTrainers += `<button disabled=true onclick="navigateBattle(-1)">Previous</button> `;
+			extraTrainers += `<button disabled=true onclick="navigateBattle(1)">Next</button> `;
+			extraTrainers += `</div>`
+		}
+		document.getElementById("opponent").getElementsByClassName("extra-calc-teams")[0].innerHTML = extraTrainers;
+	} catch(e) {
+		console.log(e);
+	}
+}
+
+function getEnemyTeamDisplay(enemyTeam, trainer) {
+	var v = "";
+	for (let i in enemyTeam) {
+		var prio = getSwitchPriority(enemyTeam[i], myPoke);
+		var prioClass = "neutral-switch-priority";
+		if (prio < 0) {
+			prioClass = "low-switch-priority";
+		} else if (prio > 0) {
+			prioClass = "high-switch-priority";
+		}
+		var img = '<img class="' + prioClass + '" src="' + getPokeImage(enemyTeam[i]) + '">';
+		v += `<div onclick="setEnemy(${trainer}, ${i})">${img}</div>`;
+	}
+	return v;
+}
+
 function getPokemonLearnsetDisplay(p) {
 	var v = "";
 	v += '<table class="move-table">';

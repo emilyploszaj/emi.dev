@@ -18745,7 +18745,7 @@
         {
             "accuracy": 100,
             "extra": [
-                "User faints\nWill not be used if enemies' last pokemon unless you are also on last pokemon. Otherwise discouraged by 90% when enemy HP is full"
+                "User faints\nDismissed if any move (including Explosion) will KO the player\nWill not be used if enemies' last pokemon unless you are also on last pokemon. Otherwise discouraged by 90% when enemy HP is full"
             ],
             "index": 153,
             "name": "explosion",
@@ -20254,7 +20254,7 @@
         {
             "accuracy": 100,
             "extra": [
-                "User faints\nWill not be used if enemies' last pokemon unless you are also on last pokemon. Otherwise discouraged by 90% when enemy HP is full"
+                "User faints\nDismissed if any move (including SelfDestruct) will KO the player\nWill not be used if enemies' last pokemon unless you are also on last pokemon. Otherwise discouraged by 90% when enemy HP is full"
             ],
             "index": 120,
             "name": "selfdestruct",
@@ -20944,8 +20944,11 @@
         },
         {
             "accuracy": 100,
+            "effects": {
+                "hits": 2
+            },
             "extra": [
-                "Hits 2-5 times\n20% chance to poison opponents (including steel types)"
+                "Hits 2 times\n20% chance to poison opponents (including steel types)"
             ],
             "index": 41,
             "name": "twineedle",
