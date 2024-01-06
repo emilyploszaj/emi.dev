@@ -60,8 +60,8 @@ function displayCalcPokemon(root, poke, opponent, right) {
 		} else if (status == "cnf") {
 			var move = {"name": "confusion-self-hit", "type": "curse", "power": 40};
 			var attacker = new BattlePoke(true, poke, getStages(myStages));
-			var rolls = getDamage(attacker, attacker, new BattleMove(attacker, move, -1, false));
-			var max = rolls[rolls.length - 1];
+			var res = getDamage(attacker, attacker, new BattleMove(attacker, move, -1, false));
+			var max = res.max;
 			var maxPercent = Math.round(1000 * max / getPokeStat(poke, "hp")) / 10;
 			var desc = `<span>${max}</span>`;
 			root.getElementsByClassName("status-info")[0].innerHTML = desc;
