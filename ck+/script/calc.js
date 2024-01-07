@@ -103,7 +103,7 @@ class BattleMove {
 
 	get power() {
 		if (this.move.name == "hidden-power") {
-			var hp = getHiddenPower(this.#user);
+			var hp = getHiddenPower(this.#user.poke);
 			return hp.power;
 		} else if (this.move.name == "flail" || this.move.name == "reversal") {
 			var mhp = this.#user.getStat("hp");
