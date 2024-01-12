@@ -218,7 +218,7 @@ function getDamage(attacker, defender, move) {
 	if (attacker.name == "pikachu" && ni == "light-ball" && special) {
 		a *= 2;
 	}
-	if ((defender.name == "ditto" || defender.transformStats) && ndi == "metal-powder") {
+	if ((defender.name == "ditto" || defender.poke.transformStats) && ndi == "metal-powder") {
 		d = d * 1.5;
 	}
 
