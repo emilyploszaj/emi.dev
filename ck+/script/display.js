@@ -174,7 +174,7 @@ function displayCalcPokemon(root, poke, opponent, right) {
 	}
 	moves += "</table>"
 	root.getElementsByClassName("calc-moves")[0].innerHTML = moves;
-	if (!right) {
+	if (!right && opponent) {
 		displayResiduals(root, attacker, defender);
 	}
 }
