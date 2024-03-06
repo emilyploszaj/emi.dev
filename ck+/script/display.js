@@ -5,6 +5,14 @@ var enemyMoveVariants = [-1, -1, -1, -1];
 function displayCalcPokemon(root, poke, opponent, right) {
 	var player = !right;
 	var p = pokemonByName.get(poke.name);
+	var attackerStages = getStages("player-stages");
+	var defenderStages = getStages("enemy-stages");
+	if (!player) {
+		var attackerStages = getStages("enemy-stages");
+		var defenderStages = getStages("player-stages");
+	}
+	var attacker = BattlePoke.of(player, poke, attackerStages);
+	var defender = BattlePoke.of(!player, opponent, defenderStages);
 
 	root.getElementsByClassName("poke-name")[0].innerHTML = pokeLink(p);
 	if (poke.transformStats) {
@@ -27,12 +35,6 @@ function displayCalcPokemon(root, poke, opponent, right) {
 			inner += "<p>" + parseInt(exp / i) + " exp to " + i + " Pokemon</p>";
 		}
 		root.getElementsByClassName("experience")[0].innerHTML = "<span> (" + exp + " exp)<div class='rolls'><center>" + inner + "</center></div></span>";
-	}
-	var myStages = "player-stages";
-	var theirStages = "enemy-stages";
-	if (!player) {
-		myStages = "enemy-stages";
-		theirStages = "player-stages";
 	}
 	var hp = 10;
 	if (opponent) {
@@ -59,8 +61,7 @@ function displayCalcPokemon(root, poke, opponent, right) {
 			root.getElementsByClassName("status-info")[0].innerHTML = '<span>' + base + 'n<div class="rolls"><center>' + inner + '</center></div></span>';
 		} else if (status == "cnf") {
 			var move = {"name": "confusion-self-hit", "type": "curse", "power": 40};
-			var attacker = new BattlePoke(true, poke, getStages(myStages));
-			var res = getDamage(attacker, attacker, new BattleMove(attacker, move, -1, false));
+			var res = engine.getDamage(attacker, attacker, BattleMove.of(attacker, move, -1, false));
 			var max = res.max;
 			var maxPercent = Math.round(1000 * max / getPokeStat(poke, "hp")) / 10;
 			var desc = `<span>${max}</span>`;
@@ -85,29 +86,15 @@ function displayCalcPokemon(root, poke, opponent, right) {
 	var myCurrentHp = cHp.value;
 	var opponentCurrentHp = oHp.value;
 
-	displayCalcStat(root.getElementsByClassName("calc-hp")[0], poke, "hp");
-	displayCalcStat(root.getElementsByClassName("calc-atk")[0], poke, "atk");
-	displayCalcStat(root.getElementsByClassName("calc-def")[0], poke, "def");
-	displayCalcStat(root.getElementsByClassName("calc-spa")[0], poke, "spa");
-	displayCalcStat(root.getElementsByClassName("calc-spd")[0], poke, "spd");
-	displayCalcStat(root.getElementsByClassName("calc-spe")[0], poke, "spe", player);
+	displayCalcStat(root.getElementsByClassName("calc-hp")[0], attacker, "hp");
+	displayCalcStat(root.getElementsByClassName("calc-atk")[0], attacker, "atk");
+	displayCalcStat(root.getElementsByClassName("calc-def")[0], attacker, "def");
+	displayCalcStat(root.getElementsByClassName("calc-spa")[0], attacker, "spa");
+	displayCalcStat(root.getElementsByClassName("calc-spd")[0], attacker, "spd");
+	displayCalcStat(root.getElementsByClassName("calc-spe")[0], attacker, "spe");
 	if (opponent) {
-		var mySpe = getModifiedStat(poke, getStages(myStages), "spe");
-		var theirSpe = getModifiedStat(opponent, getStages(theirStages), "spe");
-		if (badges >= speedBadges) {
-			if (hasBadgeBoost(poke, player)) {
-				mySpe = parseInt(mySpe * 1.125);
-			}
-			if (hasBadgeBoost(opponent, !player)) {
-				theirSpe = parseInt(theirSpe * 1.125);
-			}
-		}
-		if (status == "prz") {
-			mySpe = parseInt(mySpe / 4);
-		}
-		if (enemyStatus == "prz") {
-			theirSpe = parseInt(theirSpe / 4);
-		}
+		var mySpe = attacker.getEffectiveStat("spe");
+		var theirSpe = defender.getEffectiveStat("spe");
 		if (mySpe > theirSpe) {
 			var prio = hasPriority(opponent) ? '<span class="has-priority">*</span>' : "";
 			root.getElementsByClassName("speed-indicator")[0].innerHTML = '<div class="speed-faster">&laquo;</div>' + prio;
@@ -126,8 +113,6 @@ function displayCalcPokemon(root, poke, opponent, right) {
 	root.getElementsByClassName("poke-types")[0].innerHTML = types;
 	var moves = '<table class="move-calcs">';
 	var variantArray = player ? playerMoveVariants : enemyMoveVariants;
-	var attacker = new BattlePoke(player, poke, getStages(myStages));
-	var defender = new BattlePoke(!player, opponent, getStages(theirStages));
 	for (var i = 0; i < 4; i++) {
 		if (i < poke.moves.length) {
 			var move = movesByName.get(poke.moves[i]);
@@ -145,13 +130,13 @@ function displayCalcPokemon(root, poke, opponent, right) {
 				variants += `</div>`;
 			}
 			var p1 = `<td class="move-calc">${moveLink(poke.moves[i])}${variants}</td>`;
-			var result = getDamage(attacker, defender, new BattleMove(attacker, move, variantArray[i], false));
+			var result = engine.getDamage(attacker, defender, BattleMove.of(attacker, move, variantArray[i], false));
 			var rolls = result.rolls;
 			var min = result.min;
 			var max = result.max;
 			if (variantArray[i] < 0 && move.roll_variants) {
 				for (var vr = 0; vr < move.variants.length; vr++) {
-					var vRes = getDamage(attacker, defender, new BattleMove(attacker, move, vr, false));
+					var vRes = engine.getDamage(attacker, defender, BattleMove.of(attacker, move, vr, false));
 					min = Math.min(vRes.min, min);
 					max = Math.max(vRes.max, max);
 				}
@@ -175,13 +160,13 @@ function displayCalcPokemon(root, poke, opponent, right) {
 			if (opponent == undefined) {
 				p2 = `<td class="move-calc">-</td>`;
 			}
-			var result = getDamage(attacker, defender, new BattleMove(attacker, move, variantArray[i], true));
+			var result = engine.getDamage(attacker, defender, BattleMove.of(attacker, move, variantArray[i], true));
 			var rolls = result.rolls;
 			var min = result.min;
 			var max = result.max;
 			if (variantArray[i] < 0 && move.roll_variants) {
 				for (var vr = 0; vr < move.variants.length; vr++) {
-					var vRes = getDamage(attacker, defender, new BattleMove(attacker, move, vr, true));
+					var vRes = engine.getDamage(attacker, defender, BattleMove.of(attacker, move, vr, true));
 					min = Math.min(vRes.min, min);
 					max = Math.max(vRes.max, max);
 				}
@@ -274,21 +259,14 @@ function prettyRolls(rolls, myHp, myCurrentHp, killHp, effects) {
 	return v;
 }
 
-function displayCalcStat(div, poke, stat, player = false) {
-	var s = getPokeStat(poke, stat);
-	var o = s;
-	if (badges >= speedBadges && stat == "spe") {
-		if (hasBadgeBoost(poke, player)) {
-			s = parseInt(s * 1.125);
-		}
-		div.getElementsByClassName("stat-num")[0].innerHTML = "<ruby>" + s + "<rt>" + o + "</rt></ruby>";
-	} else {
-		div.getElementsByClassName("stat-num")[0].innerHTML = s;
-	}
+function displayCalcStat(div, battlePoke, stat) {
+	var s = battlePoke.getEffectiveStat(stat);
+	div.getElementsByClassName("stat-num")[0].innerHTML = s;
+	//div.getElementsByClassName("stat-num")[0].innerHTML = "<ruby>" + s + "<rt>" + o + "</rt></ruby>";
 }
 
 function displayPokemon(root, i) {
-	var p = data.pokemon[i];
+	var p = pokemonByPokedex.get(i);
 	root.getElementsByClassName("poke-name")[0].innerHTML = pokeLink(p);
 	root.getElementsByClassName("poke-dex-num")[0].innerHTML = "#" + padNumber(p.pokedex);
 	root.getElementsByClassName("poke-icon")[0].innerHTML = '<img src="' + getPokeImage(p) + '">';
@@ -303,6 +281,18 @@ function displayPokemon(root, i) {
 	displayStat(root.getElementsByClassName("poke-spa")[0], p.stats.spa);
 	displayStat(root.getElementsByClassName("poke-spd")[0], p.stats.spd);
 	displayStat(root.getElementsByClassName("poke-spe")[0], p.stats.spe);
+	if (p.abilities && p.abilities.length == 3) {
+		var abil = `<table>
+			<tr>
+				<td>${fullCapitalize(p.abilities[0])}</td>
+				<td>${fullCapitalize(p.abilities[1])}</td>
+			</tr>
+			<tr>
+				<td colspan="2">${fullCapitalize(p.abilities[2])}</td>
+			</tr>
+		</table>`;
+		root.getElementsByClassName("poke-abilities")[0].innerHTML = abil;
+	}
 	if (p.gender.startsWith("f")) {
 		var female = parseFloat(p.gender.substring(1));
 

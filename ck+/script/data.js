@@ -17,13 +17,8 @@ var typeColors = new Map([
 	["dragon", "#7038f8"],
 	["dark", "#705848"],
 	["steel", "#b8b8d0"],
+	["fairy", "#fc88cf"],
 	["curse", "#68a090"]
-]);
-const NVE = 0.5;
-const SE = 2;
-const IMU = 0;
-var specialTypes = new Set([
-	"fire", "water", "electric", "grass", "ice", "psychic", "dragon", "dark"
 ]);
 var typeMatchups = new Map();
 var searchResults = new Map();
@@ -57,47 +52,6 @@ var badges = 0;
 var lastTrainer = 17;
 var editReturn;
 var caughtLandmarks = new Set();
-const attackBadges = 1;
-const defenseBadges = 7;
-const specialBadges = 6;
-const speedBadges = 3;
-const badgeTypes = new Map([
-	["flying", 1],
-	["bug", 2],
-	["normal", 3],
-	["ghost", 4],
-	["fighting", 5],
-	["ice", 6],
-	["steel", 7],
-	["dragon", 8],
-	["electric", 9],
-	["psychic", 10],
-	["poison", 11],
-	["grass", 12],
-	["rock", 13],
-	["water", 14],
-	["fire", 15],
-	["ground", 16],
-]);
-var typeEnhancements = new Map([
-	["pink-bow", "normal"],
-	["charcoal", "fire"],
-	["mystic-water", "water"],
-	["magnet", "electric"],
-	["miracle-seed", "grass"],
-	["nevermeltice", "ice"],
-	["blackbelt", "fighting"],
-	["poison-barb", "poison"],
-	["soft-sand", "ground"],
-	["sharp-beak", "flying"],
-	["twistedspoon", "psychic"],
-	["silverpowder", "bug"],
-	["hard-stone", "rock"],
-	["spell-tag", "ghost"],
-	["dragon-fang", "dragon"],
-	["blackglasses", "dark"],
-	["metal-coat", "steel"]
-]);
 var itemsById = new Map([
 	[0x03, "brightpowder"],
 	[0x1e, "lucky-punch"],
@@ -218,130 +172,8 @@ function fetchData() {
 			nameFormatting.set(lower, trueNames[i]);
 		}
 		nameFormatting.set("kings-rock", "King's Rock");
-		var j = JSON.parse(text);
-		for (let i in j.pokemon) {
-			var p = j.pokemon[i];
-			pokemonByName.set(p.name, p);
-			pokemonByPokedex.set(p.pokedex, p);
-			searchResults.set(p.name, 'focusPokemon(' + (p.pokedex) + ')');
-			for (let j in p.items) {
-				if (!pokemonByItem.has(p.items[j].item)) {
-					pokemonByItem.set(p.items[j].item, []);
-				}
-				pokemonByItem.get(p.items[j].item).push({pokemon: p.name, chance: p.items[j].chance});
-			}
-		}
-		var family = 0;
-		for (let i in j.pokemon) {
-			var p = j.pokemon[i]
-			if (!pokemonFamilies.has(p.pokedex)) {
-				addToFamily(p, family);
-				family++;
-			}
-			for (var l = 0; l < p.learnset.length; l++) {
-				var m = p.learnset[l];
-				if (!movesByLearnset.has(m.move)) {
-					movesByLearnset.set(m.move, []);
-				}
-				movesByLearnset.get(m.move).push({pokemon: p.name, level: m.level})
-			}
-			for (var l = 0; l < p.tmhm.length; l++) {
-				var m = p.tmhm[l];
-				if (!movesByTMHM.has(m)) {
-					movesByTMHM.set(m, []);
-				}
-				movesByTMHM.get(m).push(p.name);
-			}
-		}
-		for (let i in j.moves) {
-			var m = j.moves[i];
-			movesByName.set(m.name, m);
-			if (m.index) {
-				movesByIndex.set(m.index, m);
-			}
-			searchResults.set(m.name.replace(/-/g, " "), 'focusMove(' + (m.index) + ')');
-		}
-		for (let i in j.type_matchups) {
-			var m = j.type_matchups[i];
-			if (!typeMatchups.has(m.attacker)) {
-				typeMatchups.set(m.attacker, new Map());
-			}
-			var map = typeMatchups.get(m.attacker);
-			map.set(m.defender, m.multiplier);
-		}
-		for (let i in j.landmarks) {
-			landmarksByIndex.set(j.landmarks[i].id, j.landmarks[i]);
-			landmarksByName.set(j.landmarks[i].name, j.landmarks[i]);
-			for (var k = 0; k < j.landmarks[i].locations.length; k++) {
-				landmarksByLocation.set(j.landmarks[i].locations[k], j.landmarks[i]);
-			}
-			for (var k = 0; k < j.landmarks[i].items.length; k++) {
-				if (!landmarksByItem.has(j.landmarks[i].items[k].item)) {
-					landmarksByItem.set(j.landmarks[i].items[k].item, []);
-				}
-				landmarksByItem.get(j.landmarks[i].items[k].item).push(j.landmarks[i]);
-			}
-		}
-		for (const i of j.items) {
-			itemsByName.set(i.name, i);
-			searchResults.set(i.name.replace(/-/g, " "), 'focusItem(\'' + i.name + '\')');
-		}
-		for (let i in j.encounters) {
-			var e = j.encounters[i];
-			encountersByName.set(e.area, i);
-			searchResults.set(e.area.replace(/-/g, " "), 'focusEncounter(' + i + ')');
-		}
-		encounterPools = j.encounter_pools;
-		for (let i in j.encounters) {
-			addPoolInfo(j.encounters[i]);
-		}
-
-		var pokemonDataList;
-		for (const p of pokemonByName.keys()) {
-			pokemonDataList += `<option value="${fullCapitalize(p)}" />`
-		}
-		document.getElementById("pokemon-names-list").innerHTML = pokemonDataList;
-		var itemDataList;
-		for (const i of itemsByName.keys()) {
-			itemDataList += `<option value="${fullCapitalize(i)}" />`
-		}
-		document.getElementById("item-names-list").innerHTML = itemDataList;
-		var moveDataList;
-		for (const m of movesByName.keys()) {
-			moveDataList += `<option value="${fullCapitalize(m)}" />`
-		}
-		document.getElementById("move-names-list").innerHTML = moveDataList;
-
-		for (let e of typeColors) {
-			searchResults.set(e[0], `focusType('${e[0]}')`);
-		}
-
-		for (const t of j.trainers) {
-			trainersByName.set(t.name, t);
-		}
-		for (let i in j.trainers) {
-			searchResults.set(getTrainerName(j.trainers[i].name).toLowerCase(), `focusTrainer(${i})`);
-		}
-		data = j;
-		var a = j.trainers[0].team[0];
-		myPoke = JSON.parse(JSON.stringify(a));
-		if (box.length > 0) {
-			myPoke = box[0];
-		}
-		var lt = parseInt(orElse(savedData["last-trainer"], 0));
-		if (lt >= 0 && lt < j.trainers.length) {
-			calcTrainer(lt);
-		} else {
-			calcTrainer(0);
-		}
-		updateCalc();
-		updateBox();
-		displayTrainers();
-		if (box.length > 0) {
-			setTab("calc");
-		} else {
-			setTab("box");
-		}
+		data = JSON.parse(text);
+		loadEngine("script/engine/ck+.js");
 	});
 
 	fetch("./fights.json")
@@ -360,6 +192,142 @@ function fetchData() {
 			bringsByTrainer.set(t, calculateBrings(f));
 		}
 	});
+}
+
+function loadEngine(src) {
+	var script = document.createElement("script");
+	script.onload = function() {
+		startup();
+	};
+	script.src = src;
+	document.body.appendChild(script);
+}
+
+function startup() {
+	var j = data;
+	for (let i in j.pokemon) {
+		var p = j.pokemon[i];
+		pokemonByName.set(p.name, p);
+		pokemonByPokedex.set(p.pokedex, p);
+		searchResults.set(p.name, 'focusPokemon(' + (p.pokedex) + ')');
+		for (let j in p.items) {
+			if (!pokemonByItem.has(p.items[j].item)) {
+				pokemonByItem.set(p.items[j].item, []);
+			}
+			pokemonByItem.get(p.items[j].item).push({pokemon: p.name, chance: p.items[j].chance});
+		}
+	}
+	var family = 0;
+	for (let i in j.pokemon) {
+		var p = j.pokemon[i]
+		if (!pokemonFamilies.has(p.pokedex)) {
+			addToFamily(p, family);
+			family++;
+		}
+		for (var l = 0; l < p.learnset.length; l++) {
+			var m = p.learnset[l];
+			if (!movesByLearnset.has(m.move)) {
+				movesByLearnset.set(m.move, []);
+			}
+			movesByLearnset.get(m.move).push({pokemon: p.name, level: m.level})
+		}
+		for (var l = 0; l < p.tmhm.length; l++) {
+			var m = p.tmhm[l];
+			if (!movesByTMHM.has(m)) {
+				movesByTMHM.set(m, []);
+			}
+			movesByTMHM.get(m).push(p.name);
+		}
+	}
+	for (let i in j.moves) {
+		var m = j.moves[i];
+		movesByName.set(m.name, m);
+		if (m.index) {
+			movesByIndex.set(m.index, m);
+		}
+		searchResults.set(m.name.replace(/-/g, " "), 'focusMove(' + (m.index) + ')');
+	}
+	for (let i in j.type_matchups) {
+		var m = j.type_matchups[i];
+		if (!typeMatchups.has(m.attacker)) {
+			typeMatchups.set(m.attacker, new Map());
+		}
+		var map = typeMatchups.get(m.attacker);
+		map.set(m.defender, m.multiplier);
+	}
+	for (let i in j.landmarks) {
+		landmarksByIndex.set(j.landmarks[i].id, j.landmarks[i]);
+		landmarksByName.set(j.landmarks[i].name, j.landmarks[i]);
+		for (var k = 0; k < j.landmarks[i].locations.length; k++) {
+			landmarksByLocation.set(j.landmarks[i].locations[k], j.landmarks[i]);
+		}
+		for (var k = 0; k < j.landmarks[i].items.length; k++) {
+			if (!landmarksByItem.has(j.landmarks[i].items[k].item)) {
+				landmarksByItem.set(j.landmarks[i].items[k].item, []);
+			}
+			landmarksByItem.get(j.landmarks[i].items[k].item).push(j.landmarks[i]);
+		}
+	}
+	for (const i of j.items) {
+		itemsByName.set(i.name, i);
+		searchResults.set(i.name.replace(/-/g, " "), 'focusItem(\'' + i.name + '\')');
+	}
+	for (let i in j.encounters) {
+		var e = j.encounters[i];
+		encountersByName.set(e.area, i);
+		searchResults.set(e.area.replace(/-/g, " "), 'focusEncounter(' + i + ')');
+	}
+	encounterPools = j.encounter_pools;
+	for (let i in j.encounters) {
+		addPoolInfo(j.encounters[i]);
+	}
+
+	var pokemonDataList;
+	for (const p of pokemonByName.keys()) {
+		pokemonDataList += `<option value="${fullCapitalize(p)}" />`
+	}
+	document.getElementById("pokemon-names-list").innerHTML = pokemonDataList;
+	var itemDataList;
+	for (const i of itemsByName.keys()) {
+		itemDataList += `<option value="${fullCapitalize(i)}" />`
+	}
+	document.getElementById("item-names-list").innerHTML = itemDataList;
+	var moveDataList;
+	for (const m of movesByName.keys()) {
+		moveDataList += `<option value="${fullCapitalize(m)}" />`
+	}
+	document.getElementById("move-names-list").innerHTML = moveDataList;
+
+	for (let e of typeColors) {
+		searchResults.set(e[0], `focusType('${e[0]}')`);
+	}
+
+	for (const t of j.trainers) {
+		trainersByName.set(t.name, t);
+	}
+	for (let i in j.trainers) {
+		searchResults.set(getTrainerName(j.trainers[i].name).toLowerCase(), `focusTrainer(${i})`);
+	}
+	data = j;
+	var a = j.trainers[0].team[0];
+	myPoke = JSON.parse(JSON.stringify(a));
+	if (box.length > 0) {
+		myPoke = box[0];
+	}
+	var lt = parseInt(orElse(savedData["last-trainer"], 0));
+	if (lt >= 0 && lt < j.trainers.length) {
+		calcTrainer(lt);
+	} else {
+		calcTrainer(0);
+	}
+	updateCalc();
+	updateBox();
+	displayTrainers();
+	if (box.length > 0) {
+		setTab("calc");
+	} else {
+		setTab("box");
+	}
 }
 
 function addToFamily(p, family) {

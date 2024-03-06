@@ -38,14 +38,7 @@ function getTinyPokemonDisplay(tp, extra = "") {
 		}
 	}
 	v += "</tr>"
-	//v += "<tr><td>HP</td><td>" + p.stats.hp + "</td><td> </td><td>SpA</td><td>" + p.stats.spa + "</td></tr>";
-	//v += "<tr><td>Atk</td><td>" + p.stats.atk + "</td><td> </td><td>SpD</td><td>" + p.stats.spd + "</td></tr>";
-	//v += "<tr><td>Def</td><td>" + p.stats.atk + "</td><td> </td><td>Spe</td><td>" + p.stats.spe + "</td></tr>";
 	v += "</table>";
-	//var s = getPokeStat(tp, "spe");
-	//if (extra != "" && badges >= speedBadges) {
-	//	s = parseInt(s * 1.125);
-	//}
 	v += extra;
 	v += "</div></div>";
 	return v;
@@ -68,6 +61,15 @@ function orElse(some, other) {
 	} else {
 		return other;
 	}
+}
+
+function contains(list, value) {
+	for (let i of list) {
+		if (i == value) {
+			return true;
+		}
+	}
+	return false;
 }
 
 function padNumber(s) {

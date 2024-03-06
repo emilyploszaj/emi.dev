@@ -427,6 +427,8 @@ input:checked + .fake-checkbox {
 }
 
 .encounter-poke img {
+	image-rendering: pixelated;
+	object-fit: cover;
 	width: 112px;
 	height: 112px;
 	margin-right: 20px;
@@ -481,6 +483,8 @@ input:checked + .fake-checkbox {
 }
 
 .poke-icon img {
+	image-rendering: pixelated;
+	object-fit: cover;
 	width: 224px;
 	height: 224px;
 	min-width: 224px;
@@ -514,6 +518,11 @@ input:checked + .fake-checkbox {
 
 .poke-stats table {
 	border-spacing: 0px;
+}
+
+.poke-abilities table td {
+	text-align: center;
+	min-width: 160px;
 }
 
 #box-pokes {
@@ -636,6 +645,7 @@ input:checked + .fake-checkbox {
 
 .tiny-poke-icon img {
 	image-rendering: pixelated;
+	object-fit: cover;
 	width: 112px;
 	height: 112px;
 	min-width: 112px;

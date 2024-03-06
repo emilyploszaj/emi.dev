@@ -143764,6 +143764,19 @@
             ],
             "runner": "Pokemonchallenges",
             "trainer": "Officer OFFICER (2) DIRK"
+        },
+        {
+            "patch": "Release 5",
+            "pokemon": [
+                "heracross",
+                "ditto",
+                "gyarados",
+                "haunter",
+                "kabuto",
+                "wobbuffet"
+            ],
+            "runner": "Drazerk",
+            "trainer": "Whitney WHITNEY (1) WHITNEY"
         }
     ]
 }

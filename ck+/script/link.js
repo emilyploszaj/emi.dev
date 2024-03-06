@@ -75,10 +75,10 @@ function focusPokeByName(name) {
 }
 
 function focusPokemon(i) {
-	addHistory(fullCapitalize(data.pokemon[i - 1].name), () => focusPokemon(i));
+	addHistory(fullCapitalize(pokemonByPokedex.get(i).name), () => focusPokemon(i));
 	document.getElementById("search-box").value = "";
 	updateSearch("");
-	displayPokemon(document.getElementById("main-poke"), i - 1);
+	displayPokemon(document.getElementById("main-poke"), i);
 	setTab("full-poke");
 }
 
