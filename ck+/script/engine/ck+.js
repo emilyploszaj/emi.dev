@@ -141,9 +141,8 @@ function getDamage(attacker, defender, move) {
 	var defenseStat = !special ? "def" : "spd";
 
 	var a = getModifiedStat(attacker.poke, attacker.stages, attackStat);
-	var d = getModifiedStat(defender.poke, attacker.stages, defenseStat);
+	var d = getModifiedStat(defender.poke, defender.stages, defenseStat);
 	var ignoreBoosts = false;
-	var special = false;
 	if (move.crit && defender.stages[defenseStat] >= attacker.stages[attackStat]) {
 		ignoreBoosts = true;
 		a = attacker.getStat(attackStat);
