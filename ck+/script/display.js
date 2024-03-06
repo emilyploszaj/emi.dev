@@ -49,26 +49,6 @@ function displayCalcPokemon(root, poke, opponent, right) {
 		if (!player) {
 			enemyStatus = document.getElementById("player").getElementsByClassName("status-select")[0].value;
 		}
-		if (status == "brn" || status == "psn") {
-			var dealt = Math.max(1, parseInt(myHp / 8));
-			root.getElementsByClassName("status-info")[0].innerHTML = dealt + "";
-		} else if (status == "tox") {
-			var inner = "<h1>Toxic Damage</h1>"
-			var base = parseInt(myHp / 16);
-			for (var i = 1; i <= 20; i++) {
-				inner += '<p>Turn ' + i + ': ' + Math.max(1, base * i) + ' HP</p>';
-			}
-			root.getElementsByClassName("status-info")[0].innerHTML = '<span>' + base + 'n<div class="rolls"><center>' + inner + '</center></div></span>';
-		} else if (status == "cnf") {
-			var move = {"name": "confusion-self-hit", "type": "curse", "power": 40};
-			var res = engine.getDamage(attacker, attacker, BattleMove.of(attacker, move, -1, false));
-			var max = res.max;
-			var maxPercent = Math.round(1000 * max / getPokeStat(poke, "hp")) / 10;
-			var desc = `<span>${max}</span>`;
-			root.getElementsByClassName("status-info")[0].innerHTML = desc;
-		} else {
-			root.getElementsByClassName("status-info")[0].innerHTML = "";
-		}
 	}
 
 	document.getElementById("player-current-level").value = myPoke.level;
@@ -194,6 +174,9 @@ function displayCalcPokemon(root, poke, opponent, right) {
 	}
 	moves += "</table>"
 	root.getElementsByClassName("calc-moves")[0].innerHTML = moves;
+	if (!right) {
+		displayResiduals(root, attacker, defender);
+	}
 }
 
 function moveDisplay(min, max, minPercent, maxPercent, classes, tooltip, power) {
@@ -256,6 +239,65 @@ function prettyRolls(rolls, myHp, myCurrentHp, killHp, effects) {
 		}
 	}
 	v += "</center></div>";
+	return v;
+}
+
+function displayResiduals(root, left, right) {
+	var div = document.getElementById("residual-damage");
+	if (left && right) {
+		var v = `<table>`;
+		v += `<tr>`;
+		var move = {"name": "confusion-self-hit", "type": "curse", "power": 40};
+		var res = engine.getDamage(left, left, BattleMove.of(left, move, -1, false));
+		v += residualRoll(left, res.max);
+		v += `<td>Confusion self hit</td>`;
+		var res = engine.getDamage(right, right, BattleMove.of(right, move, -1, false));
+		v += residualRoll(right, res.max);
+		v += `</tr><tr>`;
+		v += residualFractional(left, 1 / 16, residualToxicTooltip(left));
+		v += `<td>
+			<div class="residual-percent">6.25% (1/16)</div>
+			Bind, Toxic, Sandstorm, Leftovers, etc.
+		</td>`;
+		v += residualFractional(right, 1 / 16, residualToxicTooltip(right));
+		v += `</tr><tr>`;
+		v += residualFractional(left, 1 / 8);
+		v += `<td>
+			<div class="residual-percent">12.5% (1/8)</div>
+			Poison, Burn, Spikes, Leech Seed, etc.
+		</td>`;
+		v += residualFractional(right, 1 / 8);
+		v += `</tr>`;
+		v += `</table>`;
+		div.innerHTML = v;
+	}
+}
+
+function residualFractional(battlePoke, fraction, tooltip) {
+	var base = Math.max(1, parseInt(getPokeStat(battlePoke.poke, "hp") * fraction));
+	return residualRoll(battlePoke, base, tooltip);
+}
+
+function residualRoll(battlePoke, damage, tooltip) {
+	var percent = Math.round(1000 * damage / getPokeStat(battlePoke.poke, "hp")) / 10;
+	if (!tooltip) {
+		tooltip = "";
+	}
+	return `<td><ruby>${damage}<rt>${percent}%</rt></ruby>${tooltip}</td>`;
+}
+
+function residualToxicTooltip(battlePoke) {
+	var base = Math.max(1, parseInt(getPokeStat(battlePoke.poke, "hp") * (1 / 16)));
+	var v = `<div class="rolls">Toxic Turns<table><tr>`;
+	for (var i = 1; i < 17; i++) {
+		var damage = base * i;
+		var percent = Math.round(1000 * damage / getPokeStat(battlePoke.poke, "hp")) / 10;
+		v += `<td><ruby>${damage}<rt>${percent}%</rt></ruby></td>`;
+		if ((i) % 4 == 0) {
+			v += `</tr><tr>`;
+		}
+	}
+	v += `</tr></table></div>`;
 	return v;
 }
 

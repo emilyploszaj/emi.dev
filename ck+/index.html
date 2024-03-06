@@ -137,9 +137,8 @@
 										<option value="tox">Tox</option>
 										<option value="frz">Frz</option>
 										<option value="slp">Slp</option>
-										<option value="cnf">Cnf</option>
 									</select></td>
-									<td class="status-info"></td>
+									<td></td>
 								</tr>
 								<tr class="calc-hp"><td>HP</td><td><div class="stat-num"></div></td><td><input class="player-current-hp" type="number" oninput="updateCalc()"></td><td><button onclick="clearPlayerStages()">Clear</button></td></tr>
 								<tr class="calc-atk"><td>Atk</td><td><div class="stat-num"></div></td><td><input class="player-stages" type="number" value="0" min="-6" max="6" oninput="updateCalc()"></td></tr>
@@ -162,7 +161,9 @@
 					<option value="sun">Harsh Sun</option>
 					<option value="sand">Sandstorm</option>
 				</select>
+				<button id="residual-damage-button" onclick="openMenu('residual-damage')">Residual Damage</button>
 			</div>
+			<div id="residual-damage"></div>
 			<div id="opponent">
 				<table class="poke-title">
 					<tr>
@@ -186,7 +187,7 @@
 						<div class="calc-stats">
 							<table>
 								<tr>
-									<td class="status-info"></td>
+									<td></td>
 									<td><select class="status-select" onchange="updateCalc()">
 										<option value="none">-</option>
 										<option value="brn">Brn</option>
@@ -195,7 +196,6 @@
 										<option value="tox">Tox</option>
 										<option value="frz">Frz</option>
 										<option value="slp">Slp</option>
-										<option value="cnf">Cnf</option>
 									</select></td>
 									<td colspan=2>Status</td>
 								</tr>
