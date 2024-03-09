@@ -257,14 +257,14 @@ function displayResiduals(root, left, right) {
 		v += residualFractional(left, 1 / 16, residualToxicTooltip(left));
 		v += `<td>
 			<div class="residual-percent">6.25% (1/16)</div>
-			Bind, Toxic, Sandstorm, Leftovers, etc.
+			Bind, Toxic, Leftovers, etc.
 		</td>`;
 		v += residualFractional(right, 1 / 16, residualToxicTooltip(right));
 		v += `</tr><tr>`;
 		v += residualFractional(left, 1 / 8);
 		v += `<td>
 			<div class="residual-percent">12.5% (1/8)</div>
-			Poison, Burn, Spikes, Leech Seed, etc.
+			Poison, Burn, Sandstorm, Spikes, Leech Seed, etc.
 		</td>`;
 		v += residualFractional(right, 1 / 8);
 		v += `</tr>`;
