@@ -110,9 +110,9 @@ class BattleMoveImpl extends BattleMove {
 	}
 
 	get category() {
-		if (this.move.power == 0) {
+		if (this.power == 0) {
 			return "status";
-		} else if (specialTypes.has(this.move.type)) {
+		} else if (specialTypes.has(this.type)) {
 			return "special";
 		} else {
 			return "physical";
@@ -256,6 +256,8 @@ function getModdedDamage(v, attacker, defender, move) {
 	if (dp.types.length > 1) {
 		eff *= getMatchup(move.type, dp.types[1]);
 	}
+	console.log(move.name);
+	console.log(eff);
 	if (eff == 0) {
 		return CalcResult.of(0);
 	}
