@@ -256,8 +256,6 @@ function getModdedDamage(v, attacker, defender, move) {
 	if (dp.types.length > 1) {
 		eff *= getMatchup(move.type, dp.types[1]);
 	}
-	console.log(move.name);
-	console.log(eff);
 	if (eff == 0) {
 		return CalcResult.of(0);
 	}
