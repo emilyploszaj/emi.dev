@@ -509,7 +509,7 @@ input:checked + .fake-checkbox {
 .poke-title {
 	column-width: 100px;
 	border-spacing: 0px;
-	height: 88px;
+	height: 99px;
 }
 
 .poke-title td:first-child {
