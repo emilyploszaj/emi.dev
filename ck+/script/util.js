@@ -123,11 +123,19 @@ function isShiny(poke) {
 }
 
 function getGender(poke) {
-	atk = getDv(poke, "atk");
 	p = pokemonByName.get(poke.name);
 	if (p.gender.startsWith("f")) {
+		var atk = getDv(poke, "atk");
+		var def = getDv(poke, "def");
+		var spa = getDv(poke, "spa");
+		var spe = getDv(poke, "spe");
+		var sum = 15;
+		sum = (sum ^ atk) & 15;
+		sum = (sum ^ ((def << 1) | (def >> 3))) & 15;
+		sum = (sum ^ ((spe << 2) | (spe >> 2))) & 15;
+		sum = (sum ^ ((spa << 3) | (spa >> 1))) & 15;
 		var m = parseInt(parseFloat(p.gender.substring(1)) * 16 / 100);
-		if (atk >= m) {
+		if (sum >= m) {
 			return 2;
 		} else {
 			return 1;
