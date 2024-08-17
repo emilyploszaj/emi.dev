@@ -15,71 +15,135 @@ function updateHistory() {
 	document.getElementById("history").innerHTML = v;
 }
 
-function focusLandmark(i) {
-	var d = encountersByName.get(landmarksByIndex.get(i).locations[0]);
-	if (d !== undefined) {
-		focusEncounter(d);
-	} else {
-		addHistory(fullCapitalize(landmarksByIndex.get(i).name), () => focusLandmark(i));
-		document.getElementById("full-encounter").innerHTML = getEncounterDisplay(landmarksByIndex.get(i).name);
-		setTab("full-encounter");
+function getLinkState() {
+	var state = {
+		tabs: []
+	}
+	for (const tc of document.getElementsByClassName("tab-collection")) {
+		var tabData = {};
+		var i = 0;
+		for (const tab of tc.getElementsByClassName("tab-button")) {
+			if (tab.classList.contains("selected-tab-button")) {
+				tabData.selected = i;
+				break;
+			}
+			i++;
+		}
+		state.tabs.push(tabData);
+	}
+	return state;
+}
+
+function applyLinkState(state) {
+	if (state.tabs) {
+		var i = 0;
+		for (const tc of document.getElementsByClassName("tab-collection")) {
+			if (state.tabs[i] && state.tabs[i].selected) {
+				var j = 0;
+				for (const tab of tc.getElementsByClassName("tab-button")) {
+					if (j == state.tabs[i].selected) {
+						tab.classList.add("selected-tab-button")
+					} else {
+						tab.classList.remove("selected-tab-button")
+					}
+					j++;
+				}
+				j = 0;
+				for (const p of tc.getElementsByClassName("tab-contents")) {
+					if (j == state.tabs[i].selected) {
+						p.style.display = "block";
+					} else {
+						p.style.display = "none";
+					}
+					j++;
+				}
+			}
+			i++;
+		}
 	}
 }
 
-function focusEncounter(i) {
-	addHistory(fullCapitalize(data.encounters[i].area), () => focusEncounter(i));
-	document.getElementById("search-box").value = "";
-	updateSearch("");
-	document.getElementById("full-encounter").innerHTML = getEncounterDisplay(data.encounters[i]);
-	setTab("full-encounter");
+function updateLinkState() {
+	history.replaceState(getLinkState(), "", window.location.hash);
 }
 
-function focusItem(i) {
-	addHistory(fullCapitalize(i), () => focusItem(i));
-	document.getElementById("search-box").value = "";
-	updateSearch("");
-	document.getElementById("full-item").innerHTML = getFullItemDisplay(i);
-	setTab("full-item");
+function clickLink(event) {
+	var path = event.target.closest("a").href;
+	path = path.substring(path.indexOf("#"));
+	// There is no better API for determining if the user is attempting to open page in a new tab. Oh well.
+	if (!event.ctrlKey && !event.shiftKey) {
+		event.preventDefault();
+		var hash = path;
+		if (hash != window.location.hash) {
+			history.replaceState(getLinkState(), "", window.location.hash);
+			navigate(hash);
+			if (hash.endsWith("#/calc/")) {
+				hash = window.location.href.split("#")[0];
+			}
+			history.pushState(getLinkState(), "", hash);
+		}
+	}
 }
 
-function focusMove(i) {
-	addHistory(fullCapitalize(movesByIndex.get(i).name), () => focusMove(i));
-	document.getElementById("search-box").value = "";
-	updateSearch("");
-	document.getElementById("full-move").innerHTML = getFullMoveDisplay(movesByIndex.get(i));
-	setTab("full-move");
+function navigate(url) {
+	var parts = url.split("/");
+	for (var i = 0; i < parts.length; i++) {
+		if (!parts[i]) {
+			parts.splice(i, 1);
+		}
+	}
+	if (parts.length > 0 && parts[0] == "#") {
+		parts.splice(0, 1);
+		if (parts.length >= 2) {
+			if (parts[0] == "pokemon") {
+				displayPokemon(document.getElementById("main-poke"), pokemonByName.get(parts[1]).pokedex);
+				setTab("full-poke");
+			} else if (parts[0] == "item") {
+				document.getElementById("full-item").innerHTML = getFullItemDisplay(parts[1]);
+				setTab("full-item");
+			} else if (parts[0] == "move") {
+				document.getElementById("full-move").innerHTML = getFullMoveDisplay(movesByName.get(parts[1]));
+				setTab("full-move");
+			} else if (parts[0] == "type") {
+				document.getElementById("full-type").innerHTML = getFullTypeDisplay(parts[1]);
+				setTab("full-type");
+			} else if (parts[0] == "area") {
+				document.getElementById("full-encounter").innerHTML = getEncounterDisplay(data.encounters[encountersByName.get(parts[1])]);
+				setTab("full-encounter");
+			} else if (parts[0] == "trainer") {
+				document.getElementById("full-trainer").innerHTML = getTrainerStats(trainersByName.get(parts[1]));
+				setTab("full-trainer");
+			}
+		} else if (parts.length >= 1) {
+			if (parts[0] == "calc") {
+				setTab("calc");
+			} else if (parts[0] == "box") {
+				setTab("box")
+			} else if (parts[0] == "trainers") {
+				setTab("trainers")
+			} else if (parts[0] == "map") {
+				setTab("map")
+			}
+		}
+	} else {
+		setTab("calc");
+	}
 }
 
-function focusType(i) {
-	addHistory(fullCapitalize(i), () => focusType(i));
-	document.getElementById("search-box").value = "";
-	updateSearch("");
-	document.getElementById("full-type").innerHTML = getFullTypeDisplay(i);
-	setTab("full-type");
+addEventListener("popstate", function(event) {
+	navigate(window.location.hash);
+	var state = event.state;
+	if (state) {
+		applyLinkState(state);
+	}
+});
+
+function createLink(path, text) {
+	return `<a class="poke-link" href="${path}" onclick="clickLink(event)">${text}</a>`;
 }
 
-function statCheckCurrentTrainer() {
-	focusTrainer(lastTrainer);
-}
-
-function focusTrainer(i) {
-	addHistory(getTrainerName(data.trainers[i].name), () => focusTrainer(i));
-	document.getElementById("search-box").value = "";
-	updateSearch("");
-	document.getElementById("full-trainer").innerHTML = getTrainerStats(i);
-	setTab("full-trainer");
-}
-
-function focusPokeByName(name) {
-	focusPokemon(pokemonByName.get(name).pokedex);
-}
-
-function focusPokemon(i) {
-	addHistory(fullCapitalize(pokemonByPokedex.get(i).name), () => focusPokemon(i));
-	document.getElementById("search-box").value = "";
-	updateSearch("");
-	displayPokemon(document.getElementById("main-poke"), i);
-	setTab("full-poke");
+function customLink(path, params, text) {
+	return `<a ${params} href="${path}" onclick="clickLink(event)">${text}</a>`;
 }
 
 function pokeLink(p) {
@@ -87,11 +151,11 @@ function pokeLink(p) {
 	if (p.name) {
 		name = p.name;
 	}
-	return '<span class="poke-link" onclick="focusPokeByName(\'' + name + '\')">' + fullCapitalize(name) + '</span>'
+	return createLink(`#/pokemon/${name}/`, fullCapitalize(name));
 }
 
 function prettyType(t) {
-	return `<div class="type" onclick="focusType('${t}')" style="background-color:${typeColor(t)};">${fullCapitalize(t)}</div>`;
+	return createLink(`#/type/${t}/`, `<div class="type" style="background-color:${typeColor(t)};">${fullCapitalize(t)}</div>`);
 }
 
 function typeColor(t) {
@@ -103,7 +167,7 @@ function itemLink(item) {
 		return "";
 	}
 	item = item.replace(" ", "-");
-	return '<span class="poke-link" onclick="focusItem(\'' + item + '\')">' + itemImage(item) + fullCapitalize(item) + '</span>'
+	return createLink(`#/item/${item}/`, itemImage(item) + fullCapitalize(item));
 }
 
 function itemImage(item) {
@@ -112,15 +176,18 @@ function itemImage(item) {
 }
 
 function landmarkLink(landmark) {
-	return '<span class="poke-link" onclick="focusLandmark(' + landmark.id + ')">' + fullCapitalize(landmark.name) + '</span>'
+	return areaLink(landmark.locations[0]);
+}
+
+function areaLink(location) {
+	return createLink(`#/area/${location}/`, fullCapitalize(location));
 }
 
 function moveLink(move) {
 	if (move.name) {
 		move = move.name;
 	}
-	var i = movesByName.get(move).index;
-	return '<span class="poke-link" onclick="focusMove(' + i + ')">' + fullCapitalize(move) + '</span>'
+	return createLink(`#/move/${move}/`, fullCapitalize(move));
 }
 
 function calcWild(p, level) {

@@ -434,7 +434,7 @@ function updateCalc() {
 		for (var i = lastTrainer + 1; isTrainerB2b(i); i++) {
 			extraTrainers += `<div class="calc-team">${getEnemyTeamDisplay(data.trainers[i].team, i)}</div>`;
 			extraTrainers += `<div class="calc-navigation"><span>${getTrainerName(data.trainers[i].name)} </span>`;
-			extraTrainers += `<button onclick="focusTrainer(${i})">Stats</button> `;
+			extraTrainers += createLink(`#/trainer/${data.trainers[i].name}/`, `<button>Stats</button>`) + " ";
 			extraTrainers += `<button disabled=true onclick="navigateBattle(-1)">Previous</button> `;
 			extraTrainers += `<button disabled=true onclick="navigateBattle(1)">Next</button> `;
 			extraTrainers += `</div>`
@@ -494,8 +494,7 @@ function getPokemonEncountersDisplay(p) {
 			} else {
 				v += "<tr>";
 			}
-			v += "<td><span class=\"poke-link\" onclick=\"focusEncounter(" + encountersByName.get(area) + ")\">"
-				+ fullCapitalize(area) + "</span></td>";
+			v += "<td>"	+ areaLink(area) + "</span></td>";
 			for (const el of Object.entries(en[1])) {
 				var type = el[0];
 				var chances = el[1];
@@ -530,13 +529,13 @@ function getPokemonStatsDisplay(p) {
 			usage = b.brings.get(p.name) * 100 / b.total;
 		}
 		var trainerName = getTrainerName(t.name);
-		if (t.name == "Champion CHAMPION (1) LANCE") {
-			usageLines += `<div class="poke-statistics-line e4r1" onclick="focusTrainer(${i})" style="left:calc(2px + ${i * 100 / hTotal}%)"><div class="rolls"><center>${trainerName}</center></div></div>`;
+		if (t.name.startsWith("champion-")) {
+			usageLines += createLink(`#/trainer/${t.name}/`, `<div class="poke-statistics-line e4r1" style="left:calc(2px + ${i * 100 / hTotal}%)"><div class="rolls"><center>${trainerName}</center></div></div>`);
 		}
-		if (statisticsSplits.has(t.name)) {
-			usageLines += `<div class="poke-statistics-line" onclick="focusTrainer(${i})" style="left:calc(2px + ${i * 100 / hTotal}%)"><div class="rolls"><center>${trainerName}</center></div></div>`;
+		if (t.name.startsWith("leader-")) {
+			usageLines += createLink(`#/trainer/${t.name}/`, `<div class="poke-statistics-line" style="left:calc(2px + ${i * 100 / hTotal}%)"><div class="rolls"><center>${trainerName}</center></div></div>`);
 		}
-		usagePoints += `<div class="usage-point" onclick="focusTrainer(${i})" style="left:${i * 100 / hTotal}%;bottom:${usage}%;"><div class="rolls"><center>${trainerName}</center></div></div>`;
+		usagePoints += createLink(`#/trainer/${t.name}/`, `<div class="usage-point" style="left:${i * 100 / hTotal}%;bottom:${usage}%;"><div class="rolls"><center>${trainerName}</center></div></div>`);
 	}
 
 	return `
@@ -716,14 +715,13 @@ function getEncounterPoke(poke, header, footer, extraClasses) {
 	if (header) {
 		v += header;
 	}
-	v += '<img style="cursor:pointer;" onclick="focusPokeByName(\'' + poke.name
-		+ '\')" src="' + getPokeImage(poke.name) + '">';
+	v += createLink(`#/pokemon/${poke.name}/`, '<img src="' + getPokeImage(poke.name) + '">');
 	if (footer) {
 		v += footer;
 	}
 	v += `<div class="type-slices">`;
 	for (var t of poke.types) {
-		v += `<div class="type-slice" onclick="focusType('${t}')" style="background-color: ${typeColor(t)};"></div>`;
+		v += customLink(`#/type/${t}/`, `class="type-slice" style="background-color: ${typeColor(t)};"`, "");
 	}
 	v += '</div>';
 	v += '</div>';
@@ -784,7 +782,7 @@ function getMapDisplay(width, height, xOffset = 0, yOffset = 0, scale = 48, focu
 			}
 			width -= border * 2;
 			height -= border * 2;
-			v += '<div onclick=focusLandmark(' + lc.id + ') class="landmark ' + cl + '" style="left:' + x + 'px;top:' + y + 'px;width:' + width + 'px;height:' + height + 'px;border-width:' + border + 'px;"></div>';
+			v += createLink(`#/area/${lc.locations[0]}`, '<div class="landmark ' + cl + '" style="left:' + x + 'px;top:' + y + 'px;width:' + width + 'px;height:' + height + 'px;border-width:' + border + 'px;"></div>');
 		}
 	}
 	v += "</div>";
@@ -811,6 +809,11 @@ function getMapCenter(landmark) {
 	return {x: xo, y: yo};
 }
 
+function clearSearch() {
+	document.getElementById("search-box").value = "";
+	updateSearch("");
+}
+
 function updateSearch(v) {
 	v = v.toLowerCase();
 	var res = "";
@@ -818,7 +821,7 @@ function updateSearch(v) {
 	if (v.length > 0) {
 		for (const n of searchResults.entries()) {
 			if (n[0].includes(v)) {
-				res += '<div class="search-suggestion" onmousedown="' + n[1] + '">' + fullCapitalize(n[0]) + '</div>';
+				res += createLink(n[1].link, `<div class="search-suggestion" onclick="clearSearch()">${fullCapitalize(n[0])}</div>`);
 				amount++;
 				if (amount >= 12) {
 					break;
@@ -830,6 +833,7 @@ function updateSearch(v) {
 }
 
 function updateBox() {
+	// TODO this can cause slowdowns with like a few hundred mons and doesn't need to work like this
 	document.getElementById("box-pokes").innerHTML = "";
 	for (var i = 0; i < box.length; i++) {
 		document.getElementById("box-pokes").innerHTML += getTinyPokemonDisplay(box[i],
@@ -939,6 +943,7 @@ function selectTab(event) {
 		}
 		i++;
 	}
+	updateLinkState();
 }
 
 function setItemMenu() {

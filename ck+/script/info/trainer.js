@@ -53,7 +53,7 @@ function getTrainerDisplay(trainer, i) {
 	t += '<div class="trainer">'
 	t += '<div>' + getTrainerName(trainer.name);
 	t += '<button style="float:right;" onclick="calcTrainer(' + i + ')">Calc</button>';
-	t += '<button style="float:right;" onclick="focusTrainer(' + i + ')">Statistics</button>';
+	t += createLink(`#/trainer/${trainer.name}/`, '<button style="float:right;">Statistics</button>');
 	t += '</div>';
 	t += '<div class="trainer-pokes">';
 	t += getTeamDisplay(trainer);
@@ -70,15 +70,17 @@ function getTeamDisplay(t) {
 	return v;
 }
 
-function getTrainerStats(i) {
-	var trainer = data.trainers[i];
+function getTrainerStats(trainer) {
+	var i = parseInt(trainer.index);
+	var previous = orElse(data.trainers[i - 1], {"name": trainer.name}).name;
+	var next = orElse(data.trainers[i + 1], {"name": trainer.name}).name;
 	var v = `
 		<h3>
 			${getTrainerName(trainer.name)}
 			<span style = "float:right;">
 			<button onclick="calcTrainer(${i})">Calc</button>
-			<button onclick="focusTrainer(${i - 1})">Previous</button>
-			<button onclick="focusTrainer(${i + 1})">Next</button>
+			${createLink(`#/trainer/${previous}/`, `<button>Previous</button>`)}
+			${createLink(`#/trainer/${next}/`, `<button>Next</button>`)}
 			</span>
 		</h3>
 	`;

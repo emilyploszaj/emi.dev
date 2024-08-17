@@ -195,8 +195,8 @@ function calcTrainer(i) {
 	savedData["last-trainer"] = lastTrainer;
 	writeLocalStorage();
 	enemyTeam = data.trainers[i].team;
-	document.getElementById("current-trainer-name").innerHTML =
-		`${getTrainerName(data.trainers[i].name)}`;
+	document.getElementById("current-trainer-name").innerHTML = `${getTrainerName(data.trainers[i].name)}`;
+	document.getElementById("current-trainer-navigate").href = `#/trainer/${data.trainers[i].name}/`;
 	setEnemy(lastTrainer, 0);
 	setTab("calc");
 }

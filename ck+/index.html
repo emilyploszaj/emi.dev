@@ -19,10 +19,10 @@
 		</div>
 		<div id="top-bar">
 			<div id="tab-selection">
-				<button class="tab-select" onclick="setTab('calc')">Calc</button>
-				<button class="tab-select" onclick="setTab('box')">Box</button>
-				<button class="tab-select" onclick="setTab('trainers')">Trainers</button>
-				<button class="tab-select" onclick="setTab('map')">Map</button>
+				<a class="poke-link" onclick="clickLink(event)" href="#/calc/"><button class="tab-select">Calc</button></a>
+				<a class="poke-link" onclick="clickLink(event)" href="#/box/"><button class="tab-select">Box</button></a>
+				<a class="poke-link" onclick="clickLink(event)" href="#/trainers/"><button class="tab-select">Trainers</button></a>
+				<a class="poke-link" onclick="clickLink(event)" href="#/map/"><button class="tab-select">Map</button></a>
 				<span id="tab-select-right"></span>
 				<button class="tab-select vs-recorder-polling" id="update-vs-recorder" style="display:none;"  onclick="updateVsRecorder()">Sync</button>
 				<button class="tab-select" onclick="setTab('settings')">Settings</button>
@@ -217,7 +217,7 @@
 				<div class="calc-team"></div>
 				<div class="calc-naviation">
 					<span id="current-trainer-name"></span>
-					<button onclick="statCheckCurrentTrainer()">Stats</button>
+					<a id="current-trainer-navigate"><button>Stats</button></a>
 					<button onclick="navigateBattle(-1)">Previous</button>
 					<button onclick="navigateBattle(1)">Next</button>
 				</div>

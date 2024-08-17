@@ -140,25 +140,6 @@ var trueNames = [
 ];
 var nameFormatting = new Map();
 
-var statisticsSplits = new Set([
-	"Falkner FALKNER (1) FALKNER",
-	"Bugsy BUGSY (1) BUGSY",
-	"Whitney WHITNEY (1) WHITNEY",
-	"Morty MORTY (1) MORTY",
-	"Chuck CHUCK (1) CHUCK",
-	"Pryce PRYCE (1) PRYCE",
-	"Jasmine JASMINE (1) JASMINE",
-	"Clair CLAIR (1) CLAIR",
-	"LtSurge LT_SURGE (1) LT.SURGE",
-	"Sabrina SABRINA (1) SABRINA",
-	"Janine JANINE (1) JANINE",
-	"Erika ERIKA (1) ERIKA",
-	"Brock BROCK (1) BROCK",
-	"Misty MISTY (1) MISTY",
-	"Blaine BLAINE (1) BLAINE",
-	"Blue BLUE (1) BLUE"
-]);
-
 var priorityMoves = new Set([
 	"quick-attack", "mach-punch", "extremespeed", "protect", "detect", "endure"
 ]);
@@ -209,7 +190,7 @@ function startup() {
 		var p = j.pokemon[i];
 		pokemonByName.set(p.name, p);
 		pokemonByPokedex.set(p.pokedex, p);
-		searchResults.set(p.name, 'focusPokemon(' + (p.pokedex) + ')');
+		searchResults.set(p.name, {link: `#/pokemon/${p.name}/`});
 		for (let j in p.items) {
 			if (!pokemonByItem.has(p.items[j].item)) {
 				pokemonByItem.set(p.items[j].item, []);
@@ -245,7 +226,7 @@ function startup() {
 		if (m.index) {
 			movesByIndex.set(m.index, m);
 		}
-		searchResults.set(m.name.replace(/-/g, " "), 'focusMove(' + (m.index) + ')');
+		searchResults.set(m.name.replace(/-/g, " "), {link: `#/move/${m.name}/`});
 	}
 	for (let i in j.type_matchups) {
 		var m = j.type_matchups[i];
@@ -270,12 +251,12 @@ function startup() {
 	}
 	for (const i of j.items) {
 		itemsByName.set(i.name, i);
-		searchResults.set(i.name.replace(/-/g, " "), 'focusItem(\'' + i.name + '\')');
+		searchResults.set(i.name.replace(/-/g, " "), {link: `#/item/${i.name}/`});
 	}
 	for (let i in j.encounters) {
 		var e = j.encounters[i];
 		encountersByName.set(e.area, i);
-		searchResults.set(e.area.replace(/-/g, " "), 'focusEncounter(' + i + ')');
+		searchResults.set(e.area.replace(/-/g, " "), {link: `#/area/${e.area}/`});
 	}
 	encounterPools = j.encounter_pools;
 	for (let i in j.encounters) {
@@ -299,14 +280,14 @@ function startup() {
 	document.getElementById("move-names-list").innerHTML = moveDataList;
 
 	for (let e of typeColors) {
-		searchResults.set(e[0], `focusType('${e[0]}')`);
+		searchResults.set(e[0], {link: `#/type/${e[0]}/`});
 	}
 
-	for (const t of j.trainers) {
-		trainersByName.set(t.name, t);
-	}
 	for (let i in j.trainers) {
-		searchResults.set(getTrainerName(j.trainers[i].name).toLowerCase(), `focusTrainer(${i})`);
+		var t = j.trainers[i];
+		t.index = parseInt(i);
+		trainersByName.set(t.name, t);
+		searchResults.set(getTrainerName(j.trainers[i].name).toLowerCase(), {link: `#/trainer/${t.name}/`});
 	}
 	data = j;
 	var a = j.trainers[0].team[0];
@@ -328,6 +309,7 @@ function startup() {
 	} else {
 		setTab("box");
 	}
+	navigate(window.location.hash);
 }
 
 function addToFamily(p, family) {

@@ -98,24 +98,7 @@ function getMoveName(move) {
 }
 
 function getTrainerName(s) {
-	var m = s.match(/([^\s]+) ([^\s]+) \((\d+)\) ([^\s]+)/);
-	if (m) {
-		var tc = fullCapitalize(m[2]);
-		var cn = fullCapitalize(m[3]);
-		var tn = fullCapitalize(m[4]);
-		if (tc == tn) {
-			tn = "";
-		}
-		if (cn == "1") {
-			if (!trainersByName.has(s.replace(/\(1\)/, "(2)"))) {
-				cn = "";
-			}
-		} else if (!trainersByName.has(s.replace(/\(\d+\)/, "(1)"))) {
-			cn = "";
-		}
-		return `${tc} ${tn} ${cn}`;
-	}
-	return s;
+	return fullCapitalize(s);
 }
 
 function isShiny(poke) {

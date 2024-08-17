@@ -76,10 +76,7 @@ function getEncounterDisplay(pools) {
 		v += "<h3>" + fullCapitalize(pools.area) + "</h3>";
 		v += "<h6>Areas</h6>";
 		for (var i = 0; i < landmark.locations.length; i++) {
-			var e = encountersByName.get(landmark.locations[i]);
-			v += '<div class="poke-link" onclick="focusEncounter(' + e + ')">';
-			v += fullCapitalize(landmark.locations[i]);
-			v += '</div>';
+			v += `<div>${areaLink(landmark.locations[i])}</div>`;
 		}
 	} else {
 		v += "<h3>" + fullCapitalize(pools) + "</h3>";

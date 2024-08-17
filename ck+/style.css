@@ -69,6 +69,15 @@ a {
 	color:var(--stat-bar-fill-amazing);
 }
 
+.poke-link {
+	color: var(--text);
+	text-decoration: none;
+}
+
+.poke-link:hover {
+	color: var(--highlighted);
+}
+
 body {
 	padding-left: calc(50% - 516px);
 	padding-right: calc(50% - 516px);
@@ -244,11 +253,6 @@ input:checked + .fake-checkbox {
 	background-color: var(--highlighted);
 }
 
-.poke-link:hover {
-	cursor: pointer;
-	color: var(--highlighted);
-}
-
 .extra-info:hover {
 	cursor: help;
 	color: var(--highlighted);
@@ -332,6 +336,10 @@ input:checked + .fake-checkbox {
 }
 
 #search-box:focus ~ #search-suggestions {
+	display: block;
+}
+
+#search-suggestions:hover {
 	display: block;
 }
 
@@ -509,7 +517,7 @@ input:checked + .fake-checkbox {
 .poke-title {
 	column-width: 100px;
 	border-spacing: 0px;
-	height: 88px;
+	height: 96px;
 }
 
 .poke-title td:first-child {
