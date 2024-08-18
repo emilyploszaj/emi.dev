@@ -114,9 +114,9 @@ function getGender(poke) {
 		var spe = getDv(poke, "spe");
 		var sum = 15;
 		sum = (sum ^ atk) & 15;
-		sum = (sum ^ ((def << 1) | (def >> 3))) & 15;
+		sum = (sum ^ ((def << 3) | (def >> 1))) & 15;
 		sum = (sum ^ ((spe << 2) | (spe >> 2))) & 15;
-		sum = (sum ^ ((spa << 3) | (spa >> 1))) & 15;
+		sum = (sum ^ ((spa << 1) | (spa >> 3))) & 15;
 		var m = parseInt(parseFloat(p.gender.substring(1)) * 16 / 100);
 		if (sum >= m) {
 			return 2;
