@@ -4565,12 +4565,12 @@
                             {
                                 "chance": 10,
                                 "level": 39,
-                                "pokemon": "sneasel"
+                                "pokemon": "golbat"
                             },
                             {
                                 "chance": 5,
                                 "level": 39,
-                                "pokemon": "sneasel"
+                                "pokemon": "golbat"
                             },
                             {
                                 "chance": 4,
@@ -8709,7 +8709,7 @@
                     "pool": [
                         {
                             "chance": 60,
-                            "level": 15,
+                            "level": 20,
                             "pokemon": "tentacool"
                         },
                         {
@@ -9884,26 +9884,6 @@
                         ]
                     },
                     "type": "walking"
-                },
-                {
-                    "pool": [
-                        {
-                            "chance": 60,
-                            "level": 30,
-                            "pokemon": "yanma"
-                        },
-                        {
-                            "chance": 30,
-                            "level": 30,
-                            "pokemon": "yanma"
-                        },
-                        {
-                            "chance": 10,
-                            "level": 30,
-                            "pokemon": "yanma"
-                        }
-                    ],
-                    "type": "surfing"
                 },
                 {
                     "pool": "fishing.shore.old",
@@ -22781,6 +22761,10 @@
                 },
                 {
                     "level": 28,
+                    "move": "encore"
+                },
+                {
+                    "level": 28,
                     "move": "giga-drain"
                 },
                 {
@@ -28363,11 +28347,11 @@
                     "move": "thunder-wave"
                 },
                 {
-                    "level": 36,
+                    "level": 37,
                     "move": "spark"
                 },
                 {
-                    "level": 39,
+                    "level": 44,
                     "move": "hidden-power"
                 },
                 {
@@ -31039,11 +31023,11 @@
                 },
                 {
                     "level": 17,
-                    "move": "stun-spore"
+                    "move": "mega-drain"
                 },
                 {
                     "level": 24,
-                    "move": "mega-drain"
+                    "move": "stun-spore"
                 },
                 {
                     "level": 28,
@@ -31800,11 +31784,11 @@
                 },
                 {
                     "level": 8,
-                    "move": "quick-attack"
+                    "move": "false-swipe"
                 },
                 {
                     "level": 14,
-                    "move": "false-swipe"
+                    "move": "quick-attack"
                 },
                 {
                     "level": 24,
@@ -31883,6 +31867,10 @@
                 {
                     "level": 18,
                     "move": "ice-punch"
+                },
+                {
+                    "level": 30,
+                    "move": "psybeam"
                 },
                 {
                     "level": 35,
@@ -34695,7 +34683,7 @@
                     "move": "cross-chop"
                 },
                 {
-                    "level": 100,
+                    "level": 85,
                     "move": "ancientpower"
                 }
             ],
@@ -39837,11 +39825,11 @@
                 },
                 {
                     "level": 58,
-                    "move": "earthquake"
+                    "move": "ice-beam"
                 },
                 {
-                    "level": 63,
-                    "move": "ice-beam"
+                    "level": 66,
+                    "move": "earthquake"
                 },
                 {
                     "level": 99,
@@ -47056,7 +47044,7 @@
                 },
                 {
                     "item": "magnet",
-                    "level": 43,
+                    "level": 44,
                     "moves": [
                         "mach-punch",
                         "flamethrower",
@@ -49077,7 +49065,7 @@
                         "spe": 15
                     },
                     "item": "quick-claw",
-                    "level": 58,
+                    "level": 57,
                     "moves": [
                         "reflect",
                         "thunderbolt",
@@ -49099,7 +49087,7 @@
                 },
                 {
                     "item": "leftovers",
-                    "level": 58,
+                    "level": 57,
                     "moves": [
                         "tri-attack",
                         "ice-beam",
@@ -49118,7 +49106,7 @@
                         "spe": 15
                     },
                     "item": "quick-claw",
-                    "level": 58,
+                    "level": 57,
                     "moves": [
                         "light-screen",
                         "metal-claw",
