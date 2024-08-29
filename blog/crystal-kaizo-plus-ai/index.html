@@ -192,7 +192,8 @@
 	</table>
 	<p>
 		This is a lot of routines, and a lot of them are vague.
-		As said, they are layers which can be applied individually and in combination with others, so let's take a look at a table of what trainer classes use what AI layers.
+		As said, they are layers which can be applied individually and in combination with others, vanilla Crystal has a variety of groups of them for every trainer class.
+		So let's take a look at a table of what trainer classes use what AI layers.
 	</p>
 	<table class="centered">
 		<thead>
@@ -631,7 +632,7 @@
 			</tr>
 			<tr>
 				<td>SolarBeam</td>
-				<td>If it is sunny, 80% chance to <b>greatly encourage (-2)</b><br>If it is sunny, 90% chance to <b>greatly discourage (+2)</b></td>
+				<td>If it is sunny, 80% chance to <b>greatly encourage (-2)</b><br>If it is raining, 90% chance to <b>greatly discourage (+2)</b></td>
 			</tr>
 			<tr>
 				<td>Thunder</td>
@@ -667,7 +668,7 @@
 		<li>75% of the time if the AI is above 50% HP but not full</li>
 	</ul>
 	<p>
-		Additionally, if the AI's HP is between 50% and full and *doesn't* dismiss the move, it will be instead <b>encouraged (-2)</b>.
+		Additionally, if the AI's HP is between 50% and full and *doesn't* dismiss the move, it will be instead <b>greatly encouraged (-2)</b>.
 		Most of these conditions make sense, as the AI's HP goes down, its chance to boom goes up.
 		There is a notable quirk with encouraging only occurring between 50% and 100% which was likely an oversight.
 		However, there are 2 large problems with Boom AI.
