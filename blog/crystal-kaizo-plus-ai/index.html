@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Emily Ploszaj">
+	<meta name="color-scheme" content="dark light">
+	<meta property="og:title" content="Trainer AI in Crystal Kaizo+">
+	<meta property="og:description" content="How the trainer AI in Crystal Kaizo+ works and why it's completely broken.">
+	<meta property="og:site_name" content="emi.dev">
+	<meta name="theme-color" content="#dc9eff">
+	<title>Emi's Blog</title>
+	<link rel="stylesheet" href="https://fonts.bunny.net/css?family=Fira+Sans:400,700&display=block">
+	<link rel="stylesheet" href="https://fonts.bunny.net/css?family=Ubuntu+Mono:400,700&display=block">
+	<link rel="stylesheet" type="text/css" href="/blog/style.css">
+</head>
+<body>
+	<h1>Emi's Blog</h2>
+	<h4><a href="/blog/">&lt- Back to blog</a></h4>
+	
+	<h1>Trainer AI in Crystal Kaizo+</h1>
+	<p>
+		Pokemon Crystal Kaizo+ is a romhack and spiritual successor to <a href="https://www.pokecommunity.com/threads/pok%C3%A9mon-crystal-kaizo-the-official-sequel-to-blue-kaizo.334713/">Pokemon Crystal Kaizo</a>, a romhack of <a href="https://en.wikipedia.org/wiki/Pok%C3%A9mon_Crystal">Pokemon Crystal</a>, and the sequel to <a href="https://www.pokecommunity.com/threads/pokemon-blue-kaizo-update-4-5-very-challenging-experience.322127/">Pokemon Blue Kaizo</a>.
+		Crystal Kaizo was made by the developer <a href="https://www.youtube.com/user/SinisterHoodedFigure">SinisterHoodedFigure</a>, and is designed to be a more challenging version of Crystal.
+		Crystal Kaizo+, on the other hand, was designed to focus more tightly on the core gameplay elements of battling, taking major inspiration from SHF's later work, <a href="https://www.pokecommunity.com/threads/pokemon-emerald-kaizo.395830/">Pokemon Emerald Kaizo</a>.
+	</p>
+	<p>
+		Both games are broadly similar, but they do have some notable differences.
+		Crystal Kaizo was made using rudimentary tools and raw hex editing, meaning while a lot of the game was available to be tweaked, plenty of changes were simply infeasible.
+		Crystal Kaizo+, made 8 years later by a different team, utilized the <a href="https://github.com/pret/pokecrystal">pokecrystal</a> disassembly project.
+		This disassembly, crucially, meant while anything that was accomplished in CK was possible, and often easier, there were significantly fewer limitations.
+		One of the most significant changes CK+ was able to make that CK couldn't was adjusting the AI of the enemy trainers.
+	</p>
+	<h2>
+		My role
+	</h2>
+	<p>
+		I was not involved when CK+ was developed, unfortunately.
+		My primary contribution to the community of players is my <a href="https://emi.dev/ck+/">damage calculator</a>, which is more than just that, but out of scope to go over.
+		Beyond this, I've been responsible for a vast amount of technical investigations and experiments in the community.
+		My analysis of the <a href="https://gbdev.io/pandocs/CPU_Instruction_Set.html">assembly</a> code responsible for trainer AI, both original and added by CK+, has been crucial for informing how players play the game.
+	</p>
+	<p>
+		In this post, I'll be going over a hefty chunk of the game's AI behaviors, detouring to explain both intended behaviors and the real, bugged behavior that has plagued runners for years.
+		Many of the quirks the AI maintains are interesting both behaviorally and from a design perspective.
+		A decent technical knowledge base is not expected, but may make certain parts easier to grasp.
+	</p>
+	<h2>
+		Why is this important?
+	</h2>
+	<p>
+		Oh, right, motivation.
+		CK+ was designed to be played under <a href="https://docs.google.com/document/d/1J15ihcAWkfF237gh8KRP871lqDVTFPkvYBGh4I8xQsM/edit#heading=h.t8a3d81iwcbe">Hardcore Nuzlocke Rules</a>, a variant of standard gameplay that restricts the player's team members and resources to hopefully create gameplay that is both difficult and engaging.
+		Under these rules, CK+ is a very difficult game.
+		At the time of writing, CK+ has been out for over 2 years and, despite this, only 27 players have beaten the game (while recording).
+		Players use resources, like documentation and damage calculators, to engage with a full information puzzle game.
+	</p>
+	<p>
+		A skilled player will plan out entire fights based on all the possibilities that can occur in game, down to precise damage numbers, and execute their plans.
+		The goal is to not lose team members and beat every fight, which is not something that can be guaranteed.
+		Creatively finding interesting interactions to optimize away risk and making value calls when otherwise necessary is engaging for a certain kind of person.
+	</p>
+	<p>
+		To this end, players find it valuable to understand what the enemy can do every turn, given some game state.
+		Fortunately, in game AI is quite predictable.
+		There is a good bit of chance to play around, but being able to assess that chance and play around it possible.
+	</p>
+	<h2 id="ai-basics">AI Basics</h2>
+	<p>
+		When deciding what to do in a turn, the trainer AI assigns each of its moves a score through a variety of processes, and picks the lowest value, resolving ties randomly.
+		Scores start at 20, and a variety of "AI layers" compound on the score.
+		Let's take a look at an example.
+		Most everything here won't be super clear, but it'll make sense by the end of all of this.
+	</p>
+	<table class="centered">
+		<thead>
+			<tr>
+				<td>Move</td>
+				<td>Damage</td>
+				<td>Roll</td>
+				<td>Basic</td>
+				<td>Aggressive</td>
+				<td>Smart</td>
+				<td>Status</td>
+				<td>Score</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Psychic</td>
+				<td>83-98</td>
+				<td>96</td>
+				<td>-</td>
+				<td>+2</td>
+				<td>-</td>
+				<td>0</td>
+				<td>22</td>
+			</tr>
+			<tr>
+				<td>Thunderbolt</td>
+				<td>88-104</td>
+				<td>99</td>
+				<td>-</td>
+				<td>0</td>
+				<td>-</td>
+				<td>0</td>
+				<td>20</td>
+			</tr>
+			<tr>
+				<td>Hypnosis</td>
+				<td>-</td>
+				<td>-</td>
+				<td>0</td>
+				<td>+2</td>
+				<td>0</td>
+				<td>0</td>
+				<td>22</td>
+			</tr>
+			<tr>
+				<td>Shadow Ball</td>
+				<td>36-43</td>
+				<td>37</td>
+				<td>-</td>
+				<td>+2</td>
+				<td>-</td>
+				<td>0</td>
+				<td>22</td>
+			</tr>
+		</tbody>
+	</table>
+	<p>
+		If we ignore most everything, we can see that Thunderbolt has is always going to be scored as 20, the lowest score.
+		In reality, the rolls chosen for Psychic and Thunderbolt may be different, and the scores would look different if Psychic if was the highest damaging move.
+		But that's a discussion for later.
+		Runners can figure out these AI scores, or at least some representation of them, by just seeing the two columns on the left, which a damage calculator can output.
+	</p>
+	<h2>AI Layers</h2>
+	<p>
+		An AI layer is a routine run on all moves that scores them given some criteria.
+		Many routines are only applicable to a subset of moves, such as only caring about damaging moves, or only caring about moves with type interactions.
+		Every trainer class in the game, represented as a unique sprite and title for the trainers, has a list of AI layers that apply to them in battle.
+		Pokemon Crystal has 10 unique AI layers, which were named in the pokecrystal disassembly based on their behaviors.
+	</p>
+	<table>
+		<thead>
+			<tr>
+				<td>AI Layer</td>
+				<td>Description</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Basic</td>
+				<td>Avoid using moves that would be contextually useless</td>
+			</tr>
+			<tr>
+				<td>Setup</td>
+				<td>Use moves that modify stats early, avoid using them later on</td>
+			</tr>
+			<tr>
+				<td>Aggressive</td>
+				<td>Use the strongest attacks, rather than the weaker ones</td>
+			</tr>
+			<tr>
+				<td>Smart</td>
+				<td>Look up one of 77 unique, short, move-specific scoring contexts</td>
+			</tr>
+			<tr>
+				<td>Status</td>
+				<td>Avoid moves that would be ineffective on the target</td>
+			</tr>
+			<tr>
+				<td>Types</td>
+				<td>Use the type chart, super-effective is king</td>
+			</tr>
+			<tr>
+				<td>Offensive</td>
+				<td>Avoid moves that don't deal damage</td>
+			</tr>
+			<tr>
+				<td>Opportunist</td>
+				<td>Avoid "stall" moves more and more as the AI's health gets low</td>
+			</tr>
+			<tr>
+				<td>Cautious</td>
+				<td>Avoid moves with "residual effects" after the AI's first turn</td>
+			</tr>
+			<tr>
+				<td>Risky</td>
+				<td>Use moves that can KO the player, unless they're "risky"</td>
+			</tr>
+		</tbody>
+	</table>
+	<p>
+		This is a lot of routines, and a lot of them are vague.
+		As said, they are layers which can be applied individually and in combination with others, so let's take a look at a table of what trainer classes use what AI layers.
+	</p>
+	<table class="centered">
+		<thead>
+			<tr>
+				<td>Class</td>
+				<td>Basic</td>
+				<td>Setup</td>
+				<td>Aggressive</td>
+				<td>Smart</td>
+				<td>Status</td>
+				<td>Types</td>
+				<td>Offensive</td>
+				<td>Opportunist</td>
+				<td>Cautious</td>
+				<td>Risky</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>All</td>
+				<td>Used</td>
+				<td>-</td>
+				<td>Used</td>
+				<td>Used</td>
+				<td>Used</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+			</tr>
+		</tbody>
+	</table>
+	<p>
+		Cool, we can discard more than half of them and only discuss the 4 AI layers that every trainer uses, <a href="#basic">Basic</a>, <a href="#aggressive">Aggressive</a>, <a href="#smart">Smart</a>, and <a href="#types">Types</a>.
+		This style of AI design is pretty common in difficulty hacks.
+		It's easier to design one set of cohesive AI that is difficult to play around than to design several interesting layers.
+		Additionally, a lot of hacks devs don't have the ability to write their own AI routines, and a lot of the vanilla ones aren't particularly useful.
+		In CK+'s case, the devs did write custom modifications to the AI layers they used.
+	</p>
+	<h3>Choosing a Move</h3>
+	<p>
+		After all the AI layers have scored moves, the AI additionally does a pass checking to see if moves are either out of PP or disabled.
+		Moves that are get assigned a flat score of 80.
+		There is no way to get anywhere near this high with normal AI layers, so these effectively make moves unselectable.
+		After this, the lowest score is determined, and a random move of that score is selected randomly.
+		If a single move has the lowest score, it will always be selected, if multiple moves have the lowest score, they each have an equal chance of being selected.
+	</p>
+	<p>
+		It is notable that AI layers do not check to see if a move is usable before scoring it, leading to situations where certain layers, like <a href="#aggressive">Aggressive</a>, will pick a move as the strongest move, and then have that move set to 80 at the end.
+	</p>
+	<h2 id="basic">Basic AI</h2>
+	<p>
+		Basic AI has 2 relatively simple parts.
+		For each move on the AI's set, it checks if it's in one of 2 categories: potentially redundant, or status.
+	</p>
+	<h3>Redundant</h3>
+	<p>
+		Potentially redundant moves are status moves which have active effects that would not do anything if used while already active.
+		Some examples are weather setting moves like rain dance which would do nothing in the rain, nightmare and dream eater which can only be used on sleeping targets, healing moves like recover which can't heal a full HP pokemon, and hazards like spikes or screens like reflect, which can only be set up once.
+		There are a handful more, and all of their redundant conditions should be straightforward.
+		<details>
+			<summary>Full List</summary>
+			Dream Eater, Nightmare, Snore, Sleep Talk, Recover, Milk Drink, Softboiled, Rest, Morning Sun, Synthesis, Moonlight, Sandstorm, Rain Dance, Sunny Day, Light Screen, Reflect, Safeguard, Mist, Focus Energy, Transform, Substitute, Leech Seed, Disable, Encore, Mean Look, Spikes, Foresight, Perish Song, Attract, Teleport, Swagger, Future Sight
+		</details>
+	</p>
+	<p>
+		Moves that are determined to be redundant based on their conditions are <b>dismissed (+10)</b>.
+	</p>
+	<h3>Status</h3>
+	<p>
+		If a move is not potentially redundant and is, instead, a status move, that is, directly causes poisoning, toxic poisoning, paralysis, or sleep, then it goes through the status check.
+		<details>
+			<summary>Full List</summary>
+			PoisonPowder, Poison Gas, Toxic, Stun Spore, Thunder Wave, Glare, Sleep Powder, Sing, Hypnosis, Lovely Kiss, Spore
+		</details>
+	</p>
+	<p>
+		If the player is either already statused, or has set up safeguard (which would prevent the status), moves that match this check are <b>dismissed (+10)</b>.
+	</p>
+	<h3>Summary</h3>
+	<p>
+		And... that's it for Basic!
+		CK+ seems to not have changed Basic AI from vanilla Crystal.
+		This is pretty reasonable, Basic AI is, tastefully, basic.
+		All the decisions the AI makes are very clearly correct, assuming the player doesn't switch out (which no AI routine takes into consideration).
+	</p>
+	<h2 id="status">Status AI</h2>
+	<p>
+		Jumping forward to the next simple AI, Status AI is a bit misnamed and improperly documented.
+		It is responsible for making the AI avoid ineffective moves.
+		A lot of these checks target moves that do not deal damage, but, it does additionally handle damaging moves.
+		Below are the rules and their applications
+	</p>
+	<h3 id="status-poisoning">Poisoning moves</h3>
+	<p>
+		Moves that cause poisoning or toxic poisoning (PoisonPowder, Poison Gas, Toxic) will be <b>dismissed (+10)</b> if the player is using a poison type.
+		Otherwise, they will progress on to the <a href="#status-immunity">type immunity</a> section.
+	</p>
+	<h3 id="status-leech-seed">Leech Seed</h3>
+	<p>
+		Leech Seed will be <b>dismissed (+10)</b> if the player is using a grass type.
+		Otherwise, Leech Seed will progress on to the <a href="#status-immunity">type immunity</a> section.
+	</p>
+	<h3 id="status-immunity">Type Immunity</h3>
+	<p>
+		Several types of moves progress on to checking type immunity.
+	</p>
+	<ul>
+		<li>All moves from the <a href="#status-poisoning">poisoning</a> and <a href="#status-leech-seed">leech seed</a> sections (if not already dismissed)</li>
+		<li>Status moves that cause paralysis or sleep (Stun Spore, Thunder Wave, Glare, Sleep Powder, Sing, Hypnosis, Lovely Kiss, Spore)</li>
+		<li>All damaging moves</li>
+	</ul>
+	<p>
+		These moves will be <b>dismissed (+10)</b> if the player's pokemon is immune to the type of the move.
+		It is important to note, while these immunities are real for a majority of the moves checked (including all damaging moves), there are a handful of moves checked that produce incorrect behavior.
+		Hypnosis is a psychic type move, and dark types are immune to psychic type attacks.
+		Despite this, since Hypnosis is a status move, it is able to be used on dark types, and Status AI will dismiss the move.
+		Similarly, Sing and Lovely Kiss are normal type moves, and ghost types are immune to normal type attacks.
+		Again, despite this, these moves are status moves and would be able to hit ghost types, despite being dismissed here.
+		Interestingly, Glare is also a normal type status move, but is affected by type immunity until later games in the series, so this behavior is correct for it here.
+	</p>
+	<p>
+		Status moves that are not dismissed by this step progress on to the <a href="#status-substitute">substitute</a> section.
+	</p>
+	<h3>Substitute</h3>
+	<p>
+		In addition to all the status moves from the previous section, any status move that confuses the target or directly lowers stats are checked for and <b>dismissed (+10)</b> if the player's pokemon is behind a substitute.
+		<details>
+			<summary>Full List</summary>
+			PoisonPowder, Poison Gas, Toxic,
+			Leech Seed,
+			Stun Spore, Thunder Wave, Glare, Sleep Powder, Sing, Hypnosis, Lovely Kiss, Spore,
+			Supersonic, Confuse Ray, Sweet Kiss,
+			Growl, Charm,
+			Tail Whip, Leer, Screech,
+			String Shot, Cotton Spore, Scary Face,
+			Flash, Sand Attack, Smokescreen, Kinesis,
+			Sweet Scent
+		</details>
+	</p>
+	<h3>Summary</h3>
+	<p>
+		Status AI (or, probably better called "Immunity AI"), for the most part, avoids using moves that would do nothing on the target.
+		This is with the exception of Hypnosis being dismissed against dark types and sing or lovely kiss being dismissed against ghost types.
+		Status AI mostly exists as is in Crystal.
+		CK+, however, was responsible for both leech seed and substitute checking.
+		Both of these additions make Status AI more effective in its goal.
+	</p>
+	<h2 id="smart">Smart AI</h2>
+	<p>
+		Smart AI consists of 77 small routines. Going over all of them would take quite a while, so here are brief descriptions of several.
+		Some complex routines are not fully summarized, and more may be added to properly fill out the list in the future.
+		Identical routines are merged together.
+		I honestly don't recommend reading them all, if you'd like, you can skip past the table to the <a href="#smart-boom">interesting one</a>.
+	</p>
+	<table>
+		<thead>
+			<tr>
+				<td>Moves</td>
+				<td>Effect</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Sleep Powder<br>Sing<br>Hypnosis<br>Lovely Kiss<br>Spore</td>
+				<td>If the AI also knows Dream Eater or Nightmare, it has a 50% chance to <b>greatly encourage (-2)</b> the move</td>
+			</tr>
+			<tr>
+				<td>SelfDestruct<br>Explosion</td>
+				<td>See <a href="#smart-boom">Boom AI</a> below</td>
+			</tr>
+			<tr>
+				<td>Dream Eater</td>
+				<td>90% chance to <b>very greatly encourage (-3)</b></td>
+			</tr>
+			<tr>
+				<td>Mirror Move</td>
+				<td>If the player did not use a move last turn, <b>dismiss (+10)</b> if the AI is faster than the player<br>
+				If the player did use a move last turn and it was <a href="#smart-useful-moves">useful</a>, 50% chance to <b>encourage (-1)</b> with a further 90% chance to <b>encourage again (-1)</b> if the AI is faster</td>
+			</tr>
+			<tr>
+				<td>Double Team<br>Minimize</td>
+				<td>If the AI can't raise evasion further, <b>dismiss (+10)</b><br>
+				Otherwise, move is encouraged or discouraged through a lengthy comparison of current player and AI HP, player toxic/leech seed status, and if the player is locked in to Fury Cutter or Rollout, scores anywhere from +2 to -2</td>
+			</tr>
+			<tr>
+				<td>Flash<br>Sand Attack<br>Smokescreen<br>Kinesis</td>
+				<td>Lengthy comparison of player and AI HP, player toxic/leech seed status, and if the player is locked in to Fury Cutter or Rollout, scores anywhere from +2 to -2</td>
+			</tr>
+			<tr>
+				<td>Swift<br>Faint Attack<br>Vital Throw</td>
+				<td>If the AI's accuracy has been lowered, or the player's evasion has been raised, 80% chance to <b>greatly encourage (-2)</b></td>
+			</tr>
+			<tr>
+				<td>Haze</td>
+				<td>If either any of the AI's stats are lower than -2 or any of the player's stats are higher than +2, 85% chance to <b>encourage (-1)</b><br>Otherwise, <b>discourage (+1)</b></td>
+			</tr>
+			<tr>
+				<td>Bide</td>
+				<td>If the AI's HP is not full, 90% chance to <b>discourage (+1)</b></td>
+			</tr>
+			<tr>
+				<td>Roar<br>Whirlwind</td>
+				<td>If the AI would like to switch more than neutral, <b>encourage (-1)</b></td>
+			</tr>
+			<tr>
+				<td>Recover<br>Milk Drink<br>Softboiled<br>Rest<br>Morning Sun<br>Synthesis<br>Moonlight</td>
+				<td>If the AI's HP is above 50%, <b>discourage (+1)</b><br>
+				If the AI is below 25% HP, 90% chance to <b>greatly encourage (-2)</b></td>
+			</tr>
+			<tr>
+				<td>Toxic<br>Leech Seed</td>
+				<td>If the player is below 50% HP, <b>discourage (+1)</b></td>
+			</tr>
+			<tr>
+				<td>Reflect<br>Light Screen</td>
+				<td>If the AI's HP is not full, 50% chance to <b>discourage (+1)</b></td>
+			</tr>
+			<tr>
+				<td>Horn Drill<br>Fissure<br>Guillotine</td>
+				<td>If the AI's level is lower than the player's, <b>dismiss (+10)</b>, otherwise, if the player's HP is below 50%, <b>discourage (+1)</b></td>
+			</tr>
+			<tr>
+				<td>Razor Wind</td>
+				<td>If the Player has Protect, <b>dismiss (+6)</b><br>If the AI will faint from Perish Song this turn, <b>discourage (+1)</b><br>If the AI is confused, 20% chance to <b>discourage (+1)</b></td>
+			</tr>
+			<tr>
+				<td>Super Fang</td>
+				<td>If the player's HP is below 25%, <b>discourage (+1)</b></td>
+			</tr>
+			<tr>
+				<td>Bind<br>Wrap<br>Fire Spin<br>Whirlpool<br>Clamp</td>
+				<td>If the player is not already trapped and it is either the AI's first turn, or the player is affected by toxic, attract, nightmare, is stuck in Rollout, or is identified, 50% chance to <b>greatly encourage (-2)</b><br>
+				Otherwise, 50% chance to <b>discourage (+1)</b></td>
+			</tr>
+			<tr>
+				<td>Supersonic<br>Confuse Ray<br>Sweet Kiss</td>
+				<td>If the player has less than 50% HP, 90% chance to <b>discourage (+1)</b><br>
+				Additionally, if the player has less than 25% HP, <b>discourage again (+1)</b></td>
+			</tr>
+			<!--
+			<tr>
+				<td>Amnesia</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Stun Spore<br>Thunder Wave<br>Glare</td>
+				<td></td>
+			</tr>
+			-->
+			<tr>
+				<td>Icy Wind<br>Constrict<br>Bubble<br>Bubblebeam</td>
+				<td>If it is the player's pokemon's first turn out, the AI has more than 25% HP, and the player is faster than the AI, 90% chance to <b>greatly encourage (-2)</b></td>
+			</tr>
+			<tr>
+				<td>Substitute</td>
+				<td>If the AI has less than 50% HP, <b>dismiss (+10)</b></td>
+			</tr>
+			<tr>
+				<td>Hyper Beam</td>
+				<td>If the AI has less than 25% HP, 50% chance to <b>encourage (-1)</b><br>
+				If the AI has more than 50% HP, 42.5% chance to <b>discourage (+1)</b> or 42.5% chance to <b>greatly discourage (+1)</b></td>
+			</tr>
+			<tr>
+				<td>Rage</td>
+				<td>If the AI has not used Rage yet and has less than 50% HP, <b>discourage (+1)</b><br>
+				Otherwise, if the AI has used Rage, 50% chance to <b>encourage (-1)</b>, plus an additional <b>encourage (-1)</b> for each having a rage counter above 2 and 3</td>
+			</tr>
+			<!--
+			<tr>
+				<td>Mimic</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Disable</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Counter</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Encore</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Pain Split</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Snore</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Conversion2</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Lock On<br>Mind Reader</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>(None)</td>
+				<td>(Intended for moves that defrost the opponent)</td>
+			</tr>
+			<tr>
+				<td>Sleep Talk</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Destiny Bond</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Reversal<br>Skull Bash</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Spite</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Heal Bell</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Quick Attack<br>ExtremeSpeed<br>Mach Punch</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Thief</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Mean Look<br>Spider Web</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Nightmare</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Flame Wheel</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Curse</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Protect</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Foresight</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Perish Song</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Sandstorm</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Endure</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Rollout</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Swagger</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Fury Cutter</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Attract</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Safeguard</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Baton Pass</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Pursuit</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Rapid Spin</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Belly Drum</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Psych Up</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Mirror Coat</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Rain Dance<br>Sunny Day</td>
+				<td></td>
+			</tr>
+			-->
+			<tr>
+				<td>Earthquake<br>Magnitude</td>
+				<td>If the player is currently underground and the AI is faster than the player, <b>greatly encourage (-2)</b></td>
+			</tr>
+			<tr>
+				<td>Future Sight</td>
+				<td>If the player is currently flying or underground and slower than the AI, <b>greatly encourage (-2)</b></td>
+			</tr>
+			<tr>
+				<td>Gust<br>Twister</td>
+				<td>If the player is currently flying and the AI is faster than the player, <b>greatly encourage (-2)</b><br>
+				Otherwise, if the enemy is slower than the player and just used Fly, 50% chance to <b>encourage (-1)</b></td>
+			</tr>
+			<tr>
+				<td>Stomp</td>
+				<td>If the player has used Minimize, 80% chance to <b>encourage (-1)</b></td>
+			</tr>
+			<tr>
+				<td>SolarBeam</td>
+				<td>If it is sunny, 80% chance to <b>greatly encourage (-2)</b><br>If it is sunny, 90% chance to <b>greatly discourage (+2)</b></td>
+			</tr>
+			<tr>
+				<td>Thunder</td>
+				<td>If it is sunny, 90% chance to <b>discourage (+1)</b></td>
+			</tr>
+			<tr>
+				<td>Fly<br>Dig</td>
+				<td>If the enemy is currently flying or underground and slower than the AI, <b>very greatly encourage (-3)</b></td>
+			</tr>
+		</tbody>
+	</table>
+	<h3 id="smart-useful-moves">Useful Moves</h3>
+	<p>
+		This is a collection of moves some Smart AI routines consider "useful".
+		It is mostly a subset of high damaging moves and decent status options.
+	</p>
+	<details>
+		<summary>Full List</summary>
+		Flamethrower, Fire Blast, Ice Beam, Blizzard, Thunderbolt, Thunder, Surf, Hydro Pump, Earthquake, Psychic, Hyper Beam, Double Edge, Super Fang,
+		Sing, Hypnosis, Sleep Powder, Toxic,
+		Recover, Softboiled
+	</details>
+	<h3 id="smart-boom">Boom AI</h3>
+	<p>
+		Smart AI runs "Boom AI" for SelfDestruct and Explosion.
+		This is an entirely custom routine added to CK+.
+		There are a handful of conditions that will cause Boom AI to <b>dismiss (+10)</b> SelfDestruct or Explosion.
+	</p>
+	<ul>
+		<li>The AI is on its last pokemon, and the player has more than one left</li>
+		<li>Any of the AI's moves was scored as an OHKO in <a href="#aggressive">Aggressive AI</a> (covered later)</li>
+		<li>90% of the time if the AI has full HP</li>
+		<li>75% of the time if the AI is above 50% HP but not full</li>
+	</ul>
+	<p>
+		Additionally, if the AI's HP is between 50% and full and *doesn't* dismiss the move, it will be instead <b>encouraged (-2)</b>.
+		Most of these conditions make sense, as the AI's HP goes down, its chance to boom goes up.
+		There is a notable quirk with encouraging only occurring between 50% and 100% which was likely an oversight.
+		However, there are 2 large problems with Boom AI.
+	</p>
+	<p>
+		First and foremost, the AI's condition of dismissing boom if there are any moves that can OHKO is flawed.
+		Obviously, it was intended to not have the AI blow up its pokemon if it has another option that can handle the player's pokemon.
+		However, as will be gone over later in <a href="#aggressive">Aggressive AI</a>, the game will happily score SelfDestruct and Explosion as OHKOs if they deal enough damage.
+		This means, if either move will always deal all of the player's remaining HP or more, it will dismiss the move, and never choose it outside of rare circumstances where all other options are exhausted.
+		This was not intended, trainers in game who used pokemon with SelfDestruct and Explosion were intended to be difficult challenges where the player had limited tools to prevent them from using those moves, which can KO a majority of the player's team.
+	</p>
+	<p>
+		More minorly, due to an unknowable reason, each time SelfDestruct or Explosion is dismissed, the game will run a copy of <a href="#aggressive">Aggressive AI</a> with tweaks that do nothing except, ironically, not count SelfDestruct or Explosion as OHKOs, which would have fixed bug if used in place of normal Aggressive AI.
+		This second pass of Aggressive AI does not often impact the results of a turn, but it certainly makes exhaustively calculating possibilities more tedious.
+	</p>
+	<h3>Conclusion</h3>
+	<p>
+		Smart AI is, overall, mostly reasonable.
+		Many of the rules seem to follow inconsistent priorities and levels of complexity, but overall encourage enemy trainers to use their moves effectively.
+		However, Boom AI in particular would ironically achieve the goals of its designers better were it to simply not exist.
+		It is competing for most broken AI routine in the game and, were this page to end on this sentence, would easily claim the title.
+		Unfortunately, that was not the last sentence, so I'll need to go into <a href="#aggressive">Aggressive AI</a>, the most important routine in the game.
+	</p>
+	<h2 id="aggressive">Aggressive AI</h2>
+	<p>
+		Core to a threatening AI and the bread and butter of hardcore nuzlocke gameplay, Aggressive AI is responsible for making sure the AI uses the damaging move that does the most damage.
+		Most every iteration of Pokemon has a routine for this, and Crystal is no different.
+		However, CK+ modified Aggressive AI to further encourage OHKO moves over status moves.
+	</p>
+	<h3>Intention</h3>
+	<p>
+		Briefly, Aggressive AI intends to <b>greatly encourage (-2)</b> every move that OHKOs the player and, unless there are multiple moves that OHKO, <b>discourage (+2)</b> every damaging move except the highest damaging move.
+		Vanilla Crystal only <b>discouraged (+2)</b> moves that weren't the highest damaging.
+		CK+'s Aggressive AI almost works.
+	</p>
+	<h3>Procedure</h3>
+	<p>
+		The first part of Aggressive AI, common for all iterations, is to take every damaging move the AI has, and calculate how much damage it will do.
+		This is done using the standard damage calculation in the engine.
+		Double hit moves double the move's power, and multi hit moves triple it.
+		This is distinct from the actual game's effect of calculating each hit independently, which, due to rounding, will result in some slight differences.
+		Magnitude assumes a power of 70.
+	</p>
+	<p>
+		Moves calculated by the AI will never be a critical hit, however, they still will be affected by the random damage variation, the multiplier between 85% and 100% of the move's damage.
+		Players often call the different values damage can take on after the random variation "rolls".
+		Interestingly, Flail and Reversal are calculated by AI this way, including a damage variation, despite the fact that in battle, these moves both cannot be a critical hit and are unaffected by damage variation.
+	</p>
+	<p>
+		After rolling damage, the game will determine if that damage is enough to KO the player's pokemon.
+		If so, the move is immediately <b>greatly encouraged (-2)</b> and the counter for number of moves that OHKO the player is incremented.
+		This is the crux of Boom AI's biggest flaw, both SelfDestruct and Explosion can get this far and get scored as an OHKO.
+		The modified version of Aggressive AI that Boom AI calls will correctly not count SelfDestruct and Explosion as OHKOs.
+		If the move is not SelfDestruct or Explosion, the AI will then compare it against the highest damaging move so far, breaking ties with the latest move, keeping track of both the damage the move did, and what slot it is in.
+	</p>
+	<p>
+		After the first stage of aggressive AI, the moves have been scored for being OHKOs, the number of moves that OHKO has been counted, and the highest damaging move's damage and move slot are recorded.
+		Moving on, the final stage, in both Crystal and CK+, is supposed to go through each move and, if it deals damage and was not determined to be the highest damaging, <b>discourage (+2)</b> it.
+		There is an exception to this, moves which are "reckless" will not be discouraged.
+		In Crystal, this is a medium sized list, however, in CK+, it only contains SelfDestruct, Explosion, and Destiny Bond.
+		It is worth mentioning that Destiny Bond is not a damaging move, and would've not been discouraged regardless.
+		CK+ has a check before this step, skipping it entirely if multiple moves were scored as OHKOs, to prevent discouraging one of the moves that OHKOs.
+	</p>
+	<h3>The Mistake</h3>
+	<p>
+		So far, CK+'s AI has been mostly serviceable.
+		Any errors or quirks were isolated to individual moves.
+		That's going to change.
+	</p>
+	<p>
+		Crystal's discourage phase works correctly.
+		Every move that's not the highest damaging and not reckless is <b>discouraged (+2)</b>.
+		CK+'s changes cause some confusion.
+		If the AI attempts to discourage a move, it will succeed, however, it will misalign its variables.
+		The game keeps track of 3 variables when it's iterating moves.
+	</p>
+	<table>
+		<thead>
+			<tr>
+				<td>Variable</td>
+				<td>Uses</td>
+				<td>Alignment</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Move Slot</td>
+				<td>Determines whether or not move is the highest damaging</td>
+				<td>Always iterated correctly</td>
+			</tr>
+			<tr>
+				<td>Move</td>
+				<td>Determines if the move is damaging or reckless</td>
+				<td>Not incremented if move gets discouraged</td>
+			</tr>
+			<tr>
+				<td>Move Score</td>
+				<td>Determines what move is being scored</td>
+				<td>Always iterated correctly</td>
+			</tr>
+		</tbody>
+	</table>
+	<p>
+		Here's a more clear example from earlier, annotated with info relevant to Aggressive AI.
+	</p>
+	<table class="centered">
+		<thead>
+			<tr>
+				<td>Real Move</td>
+				<td>Damage</td>
+				<td>Roll</td>
+				<td>Slot</td>
+				<td>Seen Move</td>
+				<td>Real Score</td>
+				<td>Correct Score</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Psychic</td>
+				<td>83-98</td>
+				<td>96</td>
+				<td>1</td>
+				<td>Psychic (+0)</td>
+				<td>+2</td>
+				<td>+2</td>
+			</tr>
+			<tr>
+				<td>Thunderbolt</td>
+				<td>88-104</td>
+				<td>99</td>
+				<td>2</td>
+				<td>Psychic (+1)</td>
+				<td>0</td>
+				<td>0</td>
+			</tr>
+			<tr>
+				<td>Hypnosis</td>
+				<td>-</td>
+				<td>-</td>
+				<td>3</td>
+				<td>Thunderbolt (+0)</td>
+				<td>+2</td>
+				<td>-</td>
+			</tr>
+			<tr>
+				<td>Shadow Ball</td>
+				<td>36-43</td>
+				<td>37</td>
+				<td>4</td>
+				<td>Thunderbolt (+0)</td>
+				<td>+2</td>
+				<td>+2</td>
+			</tr>
+		</tbody>
+	</table>
+	<p>
+		As seen, Aggressive AI will always correctly skip the highest damaging move, since the slot number always increments correctly.
+		However, whenever Aggressive AI encounters a damaging move that not reckless or highest damaging, it will get stuck.
+		The move will be correctly discouraged, but every move afterwards will be treated as if it was that same move.
+		There is one exception, if the first non-reckless damaging move is before the highest damaging move, it will remain stuck until the highest damaging move.
+		At this point, the move pointer will increment, but it will already be misaligned and will continue smearing the incorrect moves down the list once it settles on another damaging move.
+		It is worth noting that the AI got stuck on Thunderbolt, despite it being the highest damaging move, because it only ever checks the move slot to determine highest damaging move.
+	</p>
+	<p>
+		Let's take a look at further examples.
+	</p>
+	<table class="centered">
+		<thead>
+			<tr>
+				<td>Real Move</td>
+				<td>Damage</td>
+				<td>Roll</td>
+				<td>Slot</td>
+				<td>Seen Move</td>
+				<td>Real Score</td>
+				<td>Correct Score</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Waterfall</td>
+				<td>32-38</td>
+				<td>33</td>
+				<td>1</td>
+				<td>Waterfall (+0)</td>
+				<td>+2</td>
+				<td>+2</td>
+			</tr>
+			<tr>
+				<td>Toxic</td>
+				<td>-</td>
+				<td>-</td>
+				<td>2</td>
+				<td>Waterfall (+0)</td>
+				<td>+2</td>
+				<td>-</td>
+			</tr>
+			<tr>
+				<td>HP Grass</td>
+				<td>32-38</td>
+				<td>38</td>
+				<td>3</td>
+				<td>Waterfall (+1)</td>
+				<td>0</td>
+				<td>0</td>
+			</tr>
+			<tr>
+				<td>Ice Beam</td>
+				<td>21-25</td>
+				<td>24</td>
+				<td>4</td>
+				<td>Toxic (+1)</td>
+				<td>-</td>
+				<td>+2</td>
+			</tr>
+		</tbody>
+	</table>
+	<p>
+		Here something very incorrect happens.
+		Toxic, which should be <b>ignored (-)</b>, is being seen as Waterfall and being <b>greatly discouraged (+2)</b>.
+		At the same time, Ice Beam is being seen as Toxic and being <b>ignored (-)</b> instead of being <b>greatly discouraged (+2)</b>.
+		If Pokemon had 5 or more moves, the smearing would continue, every move afterwards being seen as HP Grass and being <b>greatly discouraged (+2)</b> with no way to break out.
+	</p>
+	<h3>Shorthand Rules</h3>
+	<p>
+		Aggressive AI is far from intuitive.
+		Shorthand rules help for understanding it, so, here are some.
+		All rules assume fewer than 2 moves OHKO the player.
+	</p>
+	<ul>
+		<li>Slot 1 is always scored correctly</li>
+		<li>The AI's highest damaging move and its first move that's not its highest damaging move will always be scored correctly (one will be the 1st)</li>
+		<li>Every move before the the first non-boom damaging move that isn't the highest damaging will be scored correctly</li>
+		<li>If the AI only has non-boom damaging moves, all moves are scored correctly</li>
+		<li>If the AI has all of its boom or status moves before all of its non-boom damaging moves, all moves are scored correctly</li>
+		<li>If the AI has multiple damaging moves that are not boom, status moves in slot 4 will be <b>discouraged (+2)</b> unless there is boom or a status move in slot 2 and the AI's highest damaging move is in slot 3</li>
+		<li>If the AI has a non-boom damaging move in slot 1, a status move in slot 2, and its highest damaging move in slot 3, then slot 4 will be be <b>ignored (-)</b></li>
+	</ul>
+	<h3>Summary</h3>
+	<p>
+		Aggressive AI is highly broken.
+		While it's possible to organize any moveset to not run into any issues, many of the game's movesets are not organized like this.
+	</p>
+	<h2>Additional Quirks</h2>
+	<p>
+		Outside of AI layers, CK+ also has a custom anti-stall mechanism built in.
+		If the player goes 4 turns in a row without taking damage from moves, the AI will ignore its move scores and pick its move randomly.
+		If this is triggered, the AI is also skips some checks discouraging it from switching.
+	</p>
+	<h2>Layer Examples</h2>
+	<p>
+		Now that most everything has been illuminated, let's go over a handful of examples.
+	</p>
+	<table class="centered">
+		<thead>
+			<tr>
+				<td>Move</td>
+				<td>Damage</td>
+				<td>Roll</td>
+				<td>Basic</td>
+				<td>Aggressive</td>
+				<td>Smart</td>
+				<td>Status</td>
+				<td>Score</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Razor Leaf</td>
+				<td>49-58</td>
+				<td>50</td>
+				<td>-</td>
+				<td>+2</td>
+				<td>-</td>
+				<td>0</td>
+				<td>22</td>
+			</tr>
+			<tr>
+				<td>Lovely Kiss</td>
+				<td>-</td>
+				<td>-</td>
+				<td>0</td>
+				<td>+2</td>
+				<td>-</td>
+				<td>+10</td>
+				<td>32</td>
+			</tr>
+			<tr>
+				<td>Steel Wing</td>
+				<td>65-77</td>
+				<td>75</td>
+				<td>-</td>
+				<td>0</td>
+				<td>-</td>
+				<td>0</td>
+				<td>20</td>
+			</tr>
+			<tr>
+				<td>Substitute</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>0</td>
+				<td>-</td>
+				<td>20</td>
+			</tr>
+		</tbody>
+	</table>
+	<p>
+		AI is at 100% HP and player's pokemon is Gengar at 200 (100%) HP.
+	</p>
+	<p>
+		In this example, Lovely Kiss is improperly <b>discouraged (+2)</b> by Aggressive AI, and Substitute is correctly but accidentally <b>ignored (-)</b> by Aggressive AI, as it is seen as Lovely Kiss, which is a status move.
+		Lovely Kiss is additionally seen as ineffective against Gengar, being a ghost type, despite Lovely Kiss being able to affect ghost types.
+	</p>
+	<table class="centered">
+		<thead>
+			<tr>
+				<td>Move</td>
+				<td>Damage</td>
+				<td>Roll</td>
+				<td>Basic</td>
+				<td>Aggressive</td>
+				<td>Smart</td>
+				<td>Status</td>
+				<td>Score</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Ice Beam</td>
+				<td>66-78</td>
+				<td>70</td>
+				<td>-</td>
+				<td>+2</td>
+				<td>-</td>
+				<td>0</td>
+				<td>22</td>
+			</tr>
+			<tr>
+				<td>Thunderbolt</td>
+				<td>75-89</td>
+				<td>89</td>
+				<td>-</td>
+				<td>+2</td>
+				<td>-</td>
+				<td>0</td>
+				<td>22</td>
+			</tr>
+			<tr>
+				<td>Mud Slap</td>
+				<td>10-12</td>
+				<td>10</td>
+				<td>-</td>
+				<td>+2</td>
+				<td>-</td>
+				<td>0</td>
+				<td>22</td>
+			</tr>
+			<tr>
+				<td>Flamethrower</td>
+				<td>150-177</td>
+				<td>152</td>
+				<td>-</td>
+				<td>0</td>
+				<td>-</td>
+				<td>0</td>
+				<td>20</td>
+		</tbody>
+	</table>
+	<p>
+		AI is at 100% HP and player's pokemon is at 200 (100%) HP.
+	</p>
+	<p>
+		This one of the more common situations in CK+.
+		A moveset of four damaging moves.
+		Despite every move being seen as Ice Beam, Aggressive AI correctly <b>dismisses (+2)</b> every move except Flamethrower, which does the most damage.
+		The position of the moves does not matter for the scoring.
+		Though, were Flamethrower in a lower slot, every move after it would be seen as Flamethrower, again to no effect.
+	</p>
+	<table class="centered">
+		<thead>
+			<tr>
+				<td>Move</td>
+				<td>Damage</td>
+				<td>Roll</td>
+				<td>Basic</td>
+				<td>Aggressive</td>
+				<td>Smart</td>
+				<td>Status</td>
+				<td>Boom Aggressive</td>
+				<td>Score</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Explosion</td>
+				<td>123-145</td>
+				<td>144</td>
+				<td>-</td>
+				<td>-2</td>
+				<td>+10</td>
+				<td>0</td>
+				<td>0</td>
+				<td>28</td>
+			</tr>
+			<tr>
+				<td>Acid</td>
+				<td>0-0</td>
+				<td>0</td>
+				<td>-</td>
+				<td>0</td>
+				<td>-</td>
+				<td>+10</td>
+				<td>+2</td>
+				<td>32</td>
+			</tr>
+			<tr>
+				<td>Surf</td>
+				<td>96-114</td>
+				<td>112</td>
+				<td>-</td>
+				<td>-2</td>
+				<td>-</td>
+				<td>0</td>
+				<td>-2</td>
+				<td>16</td>
+			</tr>
+			<tr>
+				<td>Toxic</td>
+				<td>-</td>
+				<td>-</td>
+				<td>+10</td>
+				<td>-</td>
+				<td>+1</td>
+				<td>+10</td>
+				<td>+2</td>
+				<td>43</td>
+			</tr>
+		</tbody>
+	</table>
+	<p>
+		AI is at 100% HP and player's pokemon is a burned Magneton at 96 (40%) HP.
+	</p>
+	<p>
+		This is perhaps the most contrived AI scenario I can create.
+		Going layer by layer, Basic <b>dismisses (+10)</b> Toxic because the player is currently burned.
+		Aggressive sees both Explosion and Surf as OHKOs, <b>greatly encouraging (-2)</b> both and, because multiple moves are OHKO, skips the discourage phase.
+		Smart AI <b>discourages (+1)</b> Toxic because the player's pokemon is below 50% HP, and <b>dismisses (+10)</b> Explosion because there are OHKOs.
+		Because Boom AI dismissed a move, the modified aggressive routine runs.
+		Boom Aggressive doesn't count Explosion as a KO and, thus, only <b>greatly encourages (-2)</b> Surf as an OHKO.
+		Because only one move OHKO'd, the Aggressive discourage phase occurs, skipping Explosion as a reckless move.
+		Acid is <b>greatly discouraged (+2)</b> as a damaging move, smearing the move onto Surf.
+		Surf is seen as Acid but is also the highest damaging move, being ignored and incrementing the move properly.
+		Toxic is seen as Surf, a damaging move, and is <b>greatly discouraged (+2)</b>.
+		Finally, Status AI sees both Acid and Toxic as poison moves targeting an immune player, a steel type, and <b>dismisses (+10)</b> both.
+	</p>
+	<h2>AI Conclusion</h2>
+	<p>
+		Trainer AI in CK+ is highly broken.
+		This may be an understatement.
+		Despite this, you could fix the largest problems with a single line at the start of Aggressive AI (jumping to the Boom Aggressive routine) and a semicolon at the start of a line in the Aggressive discourage phase (commenting out a jump that misaligns variables).
+	</p>
+	<p>
+		This page is lacking any discussion about switch AI.
+		Its Smart AI section is also incomplete.
+		I'd like to include more information in this post about both of these in the future.
+	</p>
+	<p>
+		Hopefully you fall into one of the categories below.
+	</p>
+	<ul>
+		<li>CK+ runner who would like to understand how to play around the enemy trainer AI, now learned</li>
+		<li>Game designer interested in seeing how games like CK+ implement enemy trainer AI, potentially for inspiration, context, and a warning, now with broadened horizons</li>
+		<li>Code interested or other variant of technical weirdo, now satisfied</li>
+	</ul>
+	<p>
+		Fate permitting, games like CK+ will continue being released with a bunch of broken mechanics and quirks to be investigated.
+		Until then.
+	</p>
+</body>
+</html>

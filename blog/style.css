@@ -29,6 +29,19 @@ body {
 
 h1 {
 	text-align: center;
+	font-size: 32px;
+}
+
+h2 {
+	font-size: 28px;
+}
+
+h3 {
+	font-size: 24px;
+}
+
+h4 {
+	font-size: 20px;
 }
 
 p, ol, ul {
@@ -90,6 +103,10 @@ table {
 	border-spacing: 0px;
 	width: 100%;
 	margin-bottom: 8px;
+}
+
+table.centered {
+	text-align: center;
 }
 
 thead {
@@ -172,5 +189,9 @@ tr:nth-child(2n), thead tr {
 }
 
 #minecraft:target ~ #posts .post:not(.minecraft) {
+	display: none;
+}
+
+#pokemon:target ~ #posts .post:not(.pokemon) {
 	display: none;
 }
