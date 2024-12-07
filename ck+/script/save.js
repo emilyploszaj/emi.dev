@@ -188,6 +188,18 @@ function readFile(file) {
 				document.getElementById("info-popup").innerHTML = '<div onclick="closePopup()" class="save-error">Error while parsing save!<lb></lb>Is this a valid file?<lb></lb>See console for details</div>';
 			}
 		} else {
+			if (file.name.endsWith(".json")) {
+				try {
+					var text = new TextDecoder().decode(bytes);
+					var j = JSON.parse(text);
+					localStorage.setItem("calc/custom-data", text);
+					document.getElementById("info-popup").innerHTML = '<div onclick="closePopup()" class="save-success">Successfully parsed JSON<lb></lb>Loaded as custom game</div>';
+				} catch (e) {
+					console.log(e);
+					document.getElementById("info-popup").innerHTML = '<div onclick="closePopup()" class="save-error">Error while parsing JSON!<lb></lb>Is this a valid file?<lb></lb>See console for details</div>';
+				}
+				return;
+			}
 			console.log("File doesn't appear to be a save file!");
 			console.log(bytes[0x2008]);
 			console.log(bytes[0x2d0f]);

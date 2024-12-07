@@ -99,4 +99,4 @@ document.getElementById("badges").value = badges;
 
 updateSearch(document.getElementById("search-box").value);
 
-fetchData();
+initGame();

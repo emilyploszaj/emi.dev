@@ -86,6 +86,10 @@ function fullCapitalize(s) {
 	s = s.toLowerCase();
 	if (nameFormatting.has(s)) {
 		return nameFormatting.get(s);
+	} else if (s.startsWith("tm-")) {
+		return s.replace("tm-", "TM");
+	} else if (s.startsWith("hm-")) {
+		return s.replace("hm-", "HM");
 	}
 	return s.replace(/[-_]/g, " ").replace(/\w\S*/g, (word) => (word.replace(/^\w/, (c) => c.toUpperCase())));
 }

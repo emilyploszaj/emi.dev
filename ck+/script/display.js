@@ -375,6 +375,8 @@ function displayPokemon(root, i) {
 				before = itemLink(evolution.item);
 			} else if (evolution.method == "level") {
 				before = "Level " + evolution.level;
+			} else if (evolution.method == "hitmonlee" || evolution.method == "hitmonchan" || evolution.method == "hitmontop") {
+				before = "Level 25";
 			} else {
 				before = evolution.method;
 			}
@@ -389,6 +391,8 @@ function displayPokemon(root, i) {
 				before = itemLink(evolution.item);
 			} else if (evolution.method == "level") {
 				before = "Level " + evolution.level;
+			} else if (evolution.method == "hitmonlee" || evolution.method == "hitmonchan" || evolution.method == "hitmontop") {
+				before = "Level 25";
 			} else {
 				before = evolution.method;
 			}
@@ -438,6 +442,10 @@ function updateCalc() {
 			extraTrainers += `<button disabled=true onclick="navigateBattle(-1)">Previous</button> `;
 			extraTrainers += `<button disabled=true onclick="navigateBattle(1)">Next</button> `;
 			extraTrainers += `</div>`
+		}
+		i--; // last trainer of the gauntlet
+		if (data.trainers[i].meta != undefined) {
+			extraTrainers += `<div style="padding-top:10px;">${data.trainers[i].meta}</div>`;
 		}
 		document.getElementById("opponent").getElementsByClassName("extra-calc-teams")[0].innerHTML = extraTrainers;
 	} catch(e) {
@@ -565,7 +573,7 @@ function displayStat(div, stat) {
 }
 
 function getFullItemDisplay(item) {
-	var v = "<h3>" + `<img class="item-icon" src="./images/items/${item.replace("-", "_")}.png">` + fullCapitalize(item) + "</h3>";
+	var v = "<h3>" + itemImage(item) + fullCapitalize(item) + "</h3>";
 	var it = itemsByName.get(item);
 	v += "<p>" + it.description + "</p>"
 	var locs = landmarksByItem.get(item);

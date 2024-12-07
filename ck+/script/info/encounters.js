@@ -139,6 +139,10 @@ function getEncounterPoolGroupDisplay(p) {
 	}
 	var rawKeys = Object.keys(p);
 	var keys = [];
+	if (rawKeys.includes("morning")) {
+		keys.push("morning");
+		rawKeys.splice(rawKeys.indexOf("morning"), 1);
+	}
 	if (rawKeys.includes("day")) {
 		keys.push("day");
 		rawKeys.splice(rawKeys.indexOf("day"), 1);
@@ -146,10 +150,6 @@ function getEncounterPoolGroupDisplay(p) {
 	if (rawKeys.includes("night")) {
 		keys.push("night");
 		rawKeys.splice(rawKeys.indexOf("night"), 1);
-	}
-	if (rawKeys.includes("morn")) {
-		keys.push("morn");
-		rawKeys.splice(rawKeys.indexOf("morn"), 1);
 	}
 	keys = keys.concat(rawKeys);
 	var v = `<h6>(Lvl ${p[keys[0]][0].level})</h6>`;

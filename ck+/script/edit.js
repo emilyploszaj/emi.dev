@@ -132,8 +132,9 @@ function editBox(i, ret = "box") {
 	document.getElementById("edit-spa").value = getDv(poke, "spa");
 	document.getElementById("edit-spd").value = getDv(poke, "spd");
 	document.getElementById("edit-spe").value = getDv(poke, "spe");
-	setTab("edit");
 	editReturn = ret;
+	navigate("#/edit/");
+	history.pushState(getLinkState(), "", "#/edit/");
 }
 
 function editCalc() {
@@ -165,6 +166,6 @@ function saveEdited() {
 		orig.moves = poke.moves;
 		orig.dvs = poke.dvs;
 		updateBox();
-		setTab(editReturn);
+		history.back();
 	}
 }

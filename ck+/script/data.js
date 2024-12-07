@@ -1,4 +1,5 @@
 var data;
+var game;
 var typeColors = new Map([
 	["normal", "#a8a878"],
 	["fire", "#f08030"],
@@ -144,34 +145,61 @@ var priorityMoves = new Set([
 	"quick-attack", "mach-punch", "extremespeed", "protect", "detect", "endure"
 ]);
 
-function fetchData() {
-	fetch("./data.json")
-	.then(response => response.text())
-	.then(text => {
-		for (let i in trueNames) {
-			var lower = trueNames[i].toLowerCase().replace(/ /g, "-");
-			nameFormatting.set(lower, trueNames[i]);
-		}
-		nameFormatting.set("kings-rock", "King's Rock");
-		data = JSON.parse(text);
-		loadEngine("script/engine/ck+.js");
-	});
+function loadData(text) {
+	for (let i in trueNames) {
+		var lower = trueNames[i].toLowerCase().replace(/ /g, "-");
+		nameFormatting.set(lower, trueNames[i]);
+	}
+	nameFormatting.set("kings-rock", "King's Rock");
+	nameFormatting.set("dragons-den", "Dragon's Den");
+	data = JSON.parse(text);
+	loadEngine("script/engine/ck+.js");
+}
 
-	fetch("./fights.json")
-	.then(response => response.text())
-	.then(text => {
-		var j = JSON.parse(text);
-		for (const f of j.fights) {
-			var t = f.trainer.toLowerCase();
-			if (!fightsByTrainer.has(t)) {
-				fightsByTrainer.set(t, []);
-			}
-			fightsByTrainer.get(t).push(f);
+function loadFights(text) {
+	var j = JSON.parse(text);
+	for (const f of j.fights) {
+		var t = f.trainer.toLowerCase();
+		if (!fightsByTrainer.has(t)) {
+			fightsByTrainer.set(t, []);
 		}
-		for (const f of fightsByTrainer.values()) {
-			var t = f[0].trainer;
-			bringsByTrainer.set(t, calculateBrings(f));
-		}
+		fightsByTrainer.get(t).push(f);
+	}
+	for (const f of fightsByTrainer.values()) {
+		var t = f[0].trainer;
+		bringsByTrainer.set(t, calculateBrings(f));
+	}
+}
+
+function initGame() {
+	game = {};
+	if (window.location.search == "?custom") {
+		game.name = "custom";
+		loadData(localStorage.getItem("calc/custom-data"));
+		return;
+	} else if (window.location.search == "?xp") {
+		game.name = "ck+xp";
+		fetchData("ck+xp.json");
+	} else {
+		game.name = "ck+";
+		fetchData("data.json");
+		fetchFights("fights.json");
+	}
+}
+
+function fetchData(file) {
+	fetch(file)
+		.then(response => response.text())
+		.then(text => {
+			loadData(text);
+	});
+}
+
+function fetchFights(file) {
+	fetch(file)
+		.then(response => response.text())
+		.then(text => {
+			loadFights(text);
 	});
 }
 

@@ -35,7 +35,11 @@ function displayTrainers() {
 		}
 		if (t.area != undefined && t.area != lastArea) {
 			lastArea = t.area
-			v += "<h2>" + lastArea + "</h2>";
+			var areaName = lastArea;
+			if (lastArea.includes("-")) {
+				areaName = fullCapitalize(areaName);
+			}
+			v += "<h2>" + areaName + "</h2>";
 		}
 		if (t.meta != undefined) {
 			v += "<h3>" + t.meta + "</h3>";

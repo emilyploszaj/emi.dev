@@ -123,6 +123,8 @@ function navigate(url) {
 				setTab("trainers")
 			} else if (parts[0] == "map") {
 				setTab("map")
+			} else if (parts[0] == "edit") {
+				setTab("edit");
 			}
 		}
 	} else {
@@ -171,7 +173,13 @@ function itemLink(item) {
 }
 
 function itemImage(item) {
+	if (item.name) {
+		item = item.name;
+	}
 	item = item.replace(" ", "-");
+	if (item.startsWith("tm-") || item.startsWith("hm-")) {
+		item = "tm_hm"
+	}
 	return `<img class="item-icon" src="./images/items/${item.replace("-", "_")}.png">`;
 }
 
