@@ -247,7 +247,7 @@ function getModdedDamage(v, attacker, defender, move) {
 	var ap = attacker.mon;
 	var dp = defender.mon;
 	// STAB
-	if (contains(ap.types, move.type)) {
+	if (move.name != "struggle" && contains(ap.types, move.type)) {
 		v = parseInt(v * 1.5);
 	}
 

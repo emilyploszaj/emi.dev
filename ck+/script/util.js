@@ -47,7 +47,14 @@ function getTinyPokemonDisplay(tp, extra = "") {
 function getPokeImage(poke, unownExtra = undefined) {
 	var shiny = poke.name && isShiny(poke) ? "shiny" : "normal";
 	if (poke.name) {
-		poke = poke.name;
+		if (poke.name == "unown" && !unownExtra) {
+			var letter = ((getDv(poke, "atk") & 0b0110) << 5) | ((getDv(poke, "def") & 0b0110) << 3) | ((getDv(poke, "spe") & 0b0110) << 1) | ((getDv(poke, "spa") & 0b0110) >> 1);
+			letter = (letter / 10) | 0;
+			letter = String.fromCharCode(97 + letter);
+			poke = poke.name + "-" + letter;
+		} else {
+			poke = poke.name;
+		}
 	}
 	if (unownExtra !== undefined && poke == "unown") {
 		poke += ["-b", "-u", "-n", "-n", "-y", "-q", "-t"][unownExtra];
