@@ -1153,10 +1153,6 @@
                         ]
                     },
                     "type": "walking"
-                },
-                {
-                    "pool": "fishing.dratini.old",
-                    "type": "old-rod"
                 }
             ]
         },
@@ -1278,10 +1274,6 @@
                         ]
                     },
                     "type": "walking"
-                },
-                {
-                    "pool": "fishing.dratini.old",
-                    "type": "old-rod"
                 }
             ]
         },
@@ -1403,10 +1395,6 @@
                         ]
                     },
                     "type": "walking"
-                },
-                {
-                    "pool": "fishing.dratini.old",
-                    "type": "old-rod"
                 }
             ]
         },
@@ -1528,10 +1516,6 @@
                         ]
                     },
                     "type": "walking"
-                },
-                {
-                    "pool": "fishing.dratini.old",
-                    "type": "old-rod"
                 }
             ]
         },
@@ -1653,10 +1637,6 @@
                         ]
                     },
                     "type": "walking"
-                },
-                {
-                    "pool": "fishing.dratini.old",
-                    "type": "old-rod"
                 }
             ]
         },
@@ -2346,30 +2326,6 @@
                         ]
                     },
                     "type": "walking"
-                },
-                {
-                    "pool": [
-                        {
-                            "chance": 60,
-                            "level": 10,
-                            "pokemon": "poliwag"
-                        },
-                        {
-                            "chance": 30,
-                            "level": 10,
-                            "pokemon": "remoraid"
-                        },
-                        {
-                            "chance": 10,
-                            "level": 10,
-                            "pokemon": "goldeen"
-                        }
-                    ],
-                    "type": "surfing"
-                },
-                {
-                    "pool": "fishing.pond.old",
-                    "type": "old-rod"
                 },
                 {
                     "pool": "headbutt.route",
@@ -3093,10 +3049,6 @@
                     "type": "walking"
                 },
                 {
-                    "pool": "fishing.shore.old",
-                    "type": "old-rod"
-                },
-                {
                     "pool": "headbutt.town",
                     "type": "headbutt"
                 }
@@ -3494,6 +3446,26 @@
         {
             "area": "dragons-den-b1f",
             "pools": [
+                {
+                    "pool": [
+                        {
+                            "chance": 60,
+                            "level": 10,
+                            "pokemon": "seadra"
+                        },
+                        {
+                            "chance": 30,
+                            "level": 10,
+                            "pokemon": "dratini"
+                        },
+                        {
+                            "chance": 10,
+                            "level": 10,
+                            "pokemon": "chinchou"
+                        }
+                    ],
+                    "type": "surfing"
+                },
                 {
                     "pool": "fishing.dratini.old",
                     "type": "old-rod"
@@ -4419,6 +4391,11 @@
                     "amount": "1",
                     "info": "Near the house",
                     "item": "sharp-beak"
+                },
+                {
+                    "amount": "1",
+                    "info": "Near the center",
+                    "item": "hm-06"
                 }
             ],
             "locations": [
@@ -14797,7 +14774,7 @@
             "evolutions": [
                 {
                     "into": "muk",
-                    "level": 37,
+                    "level": 31,
                     "method": "level"
                 }
             ],
@@ -14834,15 +14811,15 @@
                     "move": "sludge-bomb"
                 },
                 {
-                    "level": 37,
+                    "level": 31,
                     "move": "shadow-ball"
                 },
                 {
-                    "level": 46,
+                    "level": 41,
                     "move": "flamethrower"
                 },
                 {
-                    "level": 50,
+                    "level": 45,
                     "move": "sludge-bomb"
                 }
             ],
@@ -14903,15 +14880,15 @@
                     "move": "sludge-bomb"
                 },
                 {
-                    "level": 39,
+                    "level": 34,
                     "move": "giga-drain"
                 },
                 {
-                    "level": 44,
+                    "level": 41,
                     "move": "flamethrower"
                 },
                 {
-                    "level": 48,
+                    "level": 45,
                     "move": "sludge-bomb"
                 },
                 {
@@ -15820,7 +15797,7 @@
                     "move": "selfdestruct"
                 },
                 {
-                    "level": 34,
+                    "level": 33,
                     "move": "thunderbolt"
                 },
                 {
@@ -15873,7 +15850,7 @@
                     "move": "spark"
                 },
                 {
-                    "level": 34,
+                    "level": 33,
                     "move": "thunderbolt"
                 },
                 {
@@ -17277,6 +17254,14 @@
                     "move": "waterfall"
                 },
                 {
+                    "level": 14,
+                    "move": "aurora-beam"
+                },
+                {
+                    "level": 27,
+                    "move": "dragonbreath"
+                },
+                {
                     "level": 35,
                     "move": "dragon-rage"
                 },
@@ -18595,23 +18580,11 @@
                     "move": "ice-beam"
                 },
                 {
-                    "level": 46,
-                    "move": "haze"
-                },
-                {
-                    "level": 52,
-                    "move": "attract"
-                },
-                {
-                    "level": 64,
+                    "level": 47,
                     "move": "recover"
                 },
                 {
-                    "level": 73,
-                    "move": "growth"
-                },
-                {
-                    "level": 100,
+                    "level": 52,
                     "move": "baton-pass"
                 }
             ],
@@ -18695,10 +18668,6 @@
                 {
                     "level": 52,
                     "move": "hidden-power"
-                },
-                {
-                    "level": 99,
-                    "move": "sing"
                 }
             ],
             "name": "jolteon",
@@ -18778,19 +18747,11 @@
                 },
                 {
                     "level": 53,
-                    "move": "iron-tail"
+                    "move": "extremespeed"
                 },
                 {
                     "level": 59,
                     "move": "sacred-fire"
-                },
-                {
-                    "level": 72,
-                    "move": "extremespeed"
-                },
-                {
-                    "level": 84,
-                    "move": "baton-pass"
                 }
             ],
             "name": "flareon",
@@ -20322,7 +20283,7 @@
             "evolutions": [
                 {
                     "into": "typhlosion",
-                    "level": 36,
+                    "level": 31,
                     "method": "level"
                 }
             ],
@@ -25822,15 +25783,15 @@
                     "move": "return"
                 },
                 {
-                    "level": 52,
+                    "level": 45,
                     "move": "rock-slide"
                 },
                 {
-                    "level": 58,
+                    "level": 50,
                     "move": "earthquake"
                 },
                 {
-                    "level": 63,
+                    "level": 60,
                     "move": "ice-beam"
                 },
                 {
@@ -28328,6 +28289,43 @@
         },
         {
             "area": "route-45",
+            "name": "camper-quentin",
+            "team": [
+                {
+                    "item": "mystic-water",
+                    "level": 13,
+                    "moves": [
+                        "smokescreen",
+                        "aurora-beam",
+                        "psybeam",
+                        "bubblebeam"
+                    ],
+                    "name": "remoraid"
+                },
+                {
+                    "item": "berry",
+                    "level": 13,
+                    "moves": [
+                        "sleep-powder",
+                        "moonlight",
+                        "giga-drain"
+                    ],
+                    "name": "oddish"
+                },
+                {
+                    "item": "light-ball",
+                    "level": 14,
+                    "moves": [
+                        "thunder-wave",
+                        "surf",
+                        "thunderpunch"
+                    ],
+                    "name": "pichu"
+                }
+            ]
+        },
+        {
+            "area": "route-45",
             "name": "hiker-parry",
             "team": [
                 {
@@ -28421,7 +28419,7 @@
                         "spd": 15,
                         "spe": 15
                     },
-                    "item": "miracleberry",
+                    "item": "burnt-berry",
                     "level": 15,
                     "moves": [
                         "stun-spore",
@@ -28432,7 +28430,7 @@
                     "name": "hoppip"
                 },
                 {
-                    "item": "miracleberry",
+                    "item": "mint-berry",
                     "level": 15,
                     "moves": [
                         "rest",
@@ -28451,7 +28449,7 @@
                         "spd": 15,
                         "spe": 15
                     },
-                    "item": "miracleberry",
+                    "item": "przcureberry",
                     "level": 15,
                     "moves": [
                         "swagger",
@@ -28470,7 +28468,7 @@
                         "spd": 15,
                         "spe": 15
                     },
-                    "item": "miracleberry",
+                    "item": "psncureberry",
                     "level": 15,
                     "moves": [
                         "skull-bash",
@@ -28479,6 +28477,54 @@
                         "hp-fire"
                     ],
                     "name": "squirtle"
+                }
+            ]
+        },
+        {
+            "area": "dark-cave",
+            "name": "super-nerd-jay",
+            "team": [
+                {
+                    "item": "miracleberry",
+                    "level": 14,
+                    "moves": [
+                        "dig",
+                        "horn-attack",
+                        "peck"
+                    ],
+                    "name": "nidoran-m"
+                },
+                {
+                    "item": "berry-juice",
+                    "level": 17,
+                    "moves": [
+                        "harden",
+                        "string-shot",
+                        "psychic",
+                        "giga-drain"
+                    ],
+                    "name": "metapod"
+                },
+                {
+                    "item": "berry-juice",
+                    "level": 17,
+                    "moves": [
+                        "harden",
+                        "string-shot",
+                        "twineedle",
+                        "sludge-bomb"
+                    ],
+                    "name": "kakuna"
+                },
+                {
+                    "item": "berry",
+                    "level": 14,
+                    "moves": [
+                        "doubleslap",
+                        "sing",
+                        "rollout"
+                    ],
+                    "name": "jigglypuff"
                 }
             ]
         },
@@ -28517,6 +28563,108 @@
             ]
         },
         {
+            "area": "dark-cave",
+            "name": "pokemaniac-calvin",
+            "team": [
+                {
+                    "dvs": {
+                        "atk": 8,
+                        "def": 10,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 13
+                    },
+                    "item": "poison-barb",
+                    "level": 14,
+                    "moves": [
+                        "hp-poison"
+                    ],
+                    "name": "unown"
+                },
+                {
+                    "dvs": {
+                        "atk": 8,
+                        "def": 8,
+                        "hp": 3,
+                        "spa": 11,
+                        "spd": 11,
+                        "spe": 13
+                    },
+                    "item": "blackbelt",
+                    "level": 14,
+                    "moves": [
+                        "hp-fighting"
+                    ],
+                    "name": "unown"
+                },
+                {
+                    "dvs": {
+                        "atk": 11,
+                        "def": 12,
+                        "hp": 11,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
+                    "item": "twistedspoon",
+                    "level": 14,
+                    "moves": [
+                        "hp-psychic"
+                    ],
+                    "name": "unown"
+                },
+                {
+                    "dvs": {
+                        "atk": 14,
+                        "def": 11,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 13
+                    },
+                    "item": "magnet",
+                    "level": 14,
+                    "moves": [
+                        "hp-electric"
+                    ],
+                    "name": "unown"
+                },
+                {
+                    "dvs": {
+                        "atk": 11,
+                        "def": 11,
+                        "hp": 15,
+                        "spa": 11,
+                        "spd": 11,
+                        "spe": 13
+                    },
+                    "item": "blackglasses",
+                    "level": 14,
+                    "moves": [
+                        "hp-dark"
+                    ],
+                    "name": "unown"
+                },
+                {
+                    "dvs": {
+                        "atk": 13,
+                        "def": 9,
+                        "hp": 15,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 13
+                    },
+                    "item": "silverpowder",
+                    "level": 14,
+                    "moves": [
+                        "hp-bug"
+                    ],
+                    "name": "unown"
+                }
+            ]
+        },
+        {
             "area": "route-45",
             "name": "bird-keeper-perry",
             "team": [
@@ -28530,12 +28678,21 @@
                     "name": "murkrow"
                 },
                 {
-                    "item": "pink-bow",
+                    "dvs": {
+                        "atk": 14,
+                        "def": 15,
+                        "hp": 7,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
+                    "item": "berry",
                     "level": 15,
                     "moves": [
-                        "pound",
-                        "peck",
-                        "psywave"
+                        "confuse-ray",
+                        "psywave",
+                        "hp-electric",
+                        "wing-attack"
                     ],
                     "name": "psyduck"
                 },
@@ -28643,6 +28800,28 @@
             ]
         },
         {
+            "area": "dragons-den",
+            "name": "twins-lea-pia",
+            "team": [
+                {
+                    "item": "metal-powder",
+                    "level": 15,
+                    "moves": [
+                        "transform"
+                    ],
+                    "name": "ditto"
+                },
+                {
+                    "item": "metal-powder",
+                    "level": 15,
+                    "moves": [
+                        "transform"
+                    ],
+                    "name": "ditto"
+                }
+            ]
+        },
+        {
             "area": "blackthorn-city",
             "name": "cooltrainerm-paul",
             "team": [
@@ -28669,6 +28848,44 @@
                         "pursuit"
                     ],
                     "name": "aerodactyl"
+                }
+            ]
+        },
+        {
+            "area": "blackthorn-city",
+            "name": "cooltrainerm-mike",
+            "team": [
+                {
+                    "item": "miracleberry",
+                    "level": 15,
+                    "moves": [
+                        "dragonbreath",
+                        "icy-wind",
+                        "bubblebeam"
+                    ],
+                    "name": "horsea"
+                },
+                {
+                    "item": "berry",
+                    "level": 15,
+                    "moves": [
+                        "cotton-spore",
+                        "dragonbreath",
+                        "spark",
+                        "fire-punch"
+                    ],
+                    "name": "flaaffy"
+                },
+                {
+                    "item": "miracleberry",
+                    "level": 15,
+                    "moves": [
+                        "scary-face",
+                        "dragonbreath",
+                        "rock-throw",
+                        "magnitude"
+                    ],
+                    "name": "rhyhorn"
                 }
             ]
         },
@@ -28993,6 +29210,42 @@
         },
         {
             "area": "route-44",
+            "name": "youngster-warren",
+            "team": [
+                {
+                    "item": "metal-coat",
+                    "level": 30,
+                    "moves": [
+                        "reflect",
+                        "light-screen",
+                        "fire-punch",
+                        "iron-tail"
+                    ],
+                    "name": "ampharos"
+                },
+                {
+                    "item": "gold-berry",
+                    "level": 29,
+                    "moves": [
+                        "hypnosis",
+                        "dream-eater",
+                        "nightmare",
+                        "future-sight"
+                    ],
+                    "name": "noctowl"
+                },
+                {
+                    "item": "pink-bow",
+                    "level": 29,
+                    "moves": [
+                        "double-edge"
+                    ],
+                    "name": "furret"
+                }
+            ]
+        },
+        {
+            "area": "route-44",
             "name": "fisher-wilton",
             "team": [
                 {
@@ -29015,6 +29268,16 @@
                         "fury-cutter"
                     ],
                     "name": "kabutops"
+                },
+                {
+                    "item": "miracleberry",
+                    "level": 29,
+                    "moves": [
+                        "stun-spore",
+                        "solarbeam",
+                        "skull-bash"
+                    ],
+                    "name": "tangela"
                 }
             ]
         },
@@ -29079,6 +29342,60 @@
                         "night-shade"
                     ],
                     "name": "xatu"
+                }
+            ]
+        },
+        {
+            "area": "route-43",
+            "name": "teacher-colette",
+            "team": [
+                {
+                    "item": "twistedspoon",
+                    "level": 30,
+                    "moves": [
+                        "thunder-wave",
+                        "mimic",
+                        "reflect",
+                        "future-sight"
+                    ],
+                    "name": "mr-mime"
+                },
+                {
+                    "item": "pink-bow",
+                    "level": 32,
+                    "moves": [
+                        "struggle"
+                    ],
+                    "name": "ditto"
+                },
+                {
+                    "dvs": {
+                        "atk": 13,
+                        "def": 13,
+                        "hp": 15,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
+                    "item": "silverpowder",
+                    "level": 31,
+                    "moves": [
+                        "twineedle",
+                        "giga-drain",
+                        "sludge"
+                    ],
+                    "name": "beedrill"
+                },
+                {
+                    "item": "stick",
+                    "level": 28,
+                    "moves": [
+                        "aeroblast",
+                        "cross-chop",
+                        "razor-leaf",
+                        "slash"
+                    ],
+                    "name": "farfetchd"
                 }
             ]
         },
@@ -29167,6 +29484,91 @@
                         "selfdestruct"
                     ],
                     "name": "qwilfish"
+                }
+            ]
+        },
+        {
+            "area": "route-43",
+            "name": "picnicker-tiffany",
+            "team": [
+                {
+                    "item": "charcoal",
+                    "level": 32,
+                    "moves": [
+                        "sunny-day",
+                        "light-screen",
+                        "reflect",
+                        "fire-blast"
+                    ],
+                    "name": "sunflora"
+                },
+                {
+                    "item": "miracleberry",
+                    "level": 32,
+                    "moves": [
+                        "solarbeam",
+                        "dynamicpunch",
+                        "body-slam",
+                        "flamethrower"
+                    ],
+                    "name": "clefable"
+                },
+                {
+                    "item": "mysteryberry",
+                    "level": 32,
+                    "moves": [
+                        "attract",
+                        "defense-curl",
+                        "rollout"
+                    ],
+                    "name": "wigglytuff"
+                }
+            ]
+        },
+        {
+            "area": "route-43",
+            "name": "camper-spencer",
+            "team": [
+                {
+                    "item": "gold-berry",
+                    "level": 32,
+                    "moves": [
+                        "toxic",
+                        "rain-dance",
+                        "softboiled",
+                        "psychic"
+                    ],
+                    "name": "togetic"
+                },
+                {
+                    "item": "metal-coat",
+                    "level": 32,
+                    "moves": [
+                        "return",
+                        "iron-tail",
+                        "thunder",
+                        "seismic-toss"
+                    ],
+                    "name": "raichu"
+                },
+                {
+                    "dvs": {
+                        "atk": 13,
+                        "def": 13,
+                        "hp": 15,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
+                    "item": "twistedspoon",
+                    "level": 32,
+                    "moves": [
+                        "sleep-powder",
+                        "whirlwind",
+                        "giga-drain",
+                        "hp-bug"
+                    ],
+                    "name": "butterfree"
                 }
             ]
         },
@@ -29264,6 +29666,112 @@
         },
         {
             "area": "lake-of-rage",
+            "name": "fisher-andre",
+            "team": [
+                {
+                    "item": "gold-berry",
+                    "level": 42,
+                    "moves": [
+                        "disable",
+                        "waterfall",
+                        "ice-beam",
+                        "cross-chop"
+                    ],
+                    "name": "golduck"
+                },
+                {
+                    "item": "miracleberry",
+                    "level": 42,
+                    "moves": [
+                        "outrage",
+                        "ice-beam",
+                        "octazooka",
+                        "hyper-beam"
+                    ],
+                    "name": "kingdra"
+                },
+                {
+                    "item": "leftovers",
+                    "level": 42,
+                    "moves": [
+                        "confuse-ray",
+                        "ice-beam",
+                        "surf",
+                        "thunderbolt"
+                    ],
+                    "name": "lanturn"
+                },
+                {
+                    "item": "soft-sand",
+                    "level": 42,
+                    "moves": [
+                        "earthquake",
+                        "waterfall",
+                        "sludge-bomb",
+                        "recover"
+                    ],
+                    "name": "quagsire"
+                }
+            ]
+        },
+        {
+            "area": "lake-of-rage",
+            "name": "cooltrainerm-aaron",
+            "team": [
+                {
+                    "item": "blackbelt",
+                    "level": 42,
+                    "moves": [
+                        "curse",
+                        "mach-punch",
+                        "earthquake",
+                        "rock-slide"
+                    ],
+                    "name": "primeape"
+                },
+                {
+                    "item": "miracleberry",
+                    "level": 41,
+                    "moves": [
+                        "recover",
+                        "light-screen",
+                        "counter",
+                        "seismic-toss"
+                    ],
+                    "name": "wigglytuff"
+                },
+                {
+                    "dvs": {
+                        "atk": 12,
+                        "def": 12,
+                        "hp": 3,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
+                    "item": "poison-barb",
+                    "level": 42,
+                    "moves": [
+                        "swords-dance",
+                        "shadow-ball",
+                        "sludge-bomb",
+                        "hp-fighting"
+                    ],
+                    "name": "gengar"
+                },
+                {
+                    "item": "miracleberry",
+                    "level": 41,
+                    "moves": [
+                        "ancientpower",
+                        "synthesis"
+                    ],
+                    "name": "meganium"
+                }
+            ]
+        },
+        {
+            "area": "lake-of-rage",
             "name": "fisher-raymond",
             "team": [
                 {
@@ -29312,9 +29820,21 @@
                     "level": 42,
                     "moves": [
                         "wrap",
-                        "hyper-beam"
+                        "hyper-beam",
+                        "outrage"
                     ],
                     "name": "dragonair"
+                },
+                {
+                    "item": "miracleberry",
+                    "level": 42,
+                    "moves": [
+                        "sludge-bomb",
+                        "glare",
+                        "iron-tail",
+                        "bind"
+                    ],
+                    "name": "arbok"
                 }
             ]
         },
@@ -29439,25 +29959,6 @@
                 {
                     "dvs": {
                         "atk": 13,
-                        "def": 13,
-                        "hp": 15,
-                        "spa": 15,
-                        "spd": 15,
-                        "spe": 15
-                    },
-                    "item": "silverpowder",
-                    "level": 42,
-                    "moves": [
-                        "agility",
-                        "wing-attack",
-                        "ancientpower",
-                        "hp-bug"
-                    ],
-                    "name": "yanma"
-                },
-                {
-                    "dvs": {
-                        "atk": 13,
                         "def": 14,
                         "hp": 11,
                         "spa": 15,
@@ -29475,6 +29976,25 @@
                     "name": "poliwrath"
                 },
                 {
+                    "dvs": {
+                        "atk": 13,
+                        "def": 13,
+                        "hp": 15,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
+                    "item": "silverpowder",
+                    "level": 42,
+                    "moves": [
+                        "stun-spore",
+                        "psychic",
+                        "giga-drain",
+                        "hp-bug"
+                    ],
+                    "name": "butterfree"
+                },
+                {
                     "item": "miracleberry",
                     "level": 42,
                     "moves": [
@@ -29489,19 +30009,9 @@
         },
         {
             "area": "route-42",
+            "b2b": true,
             "name": "hiker-benjamin",
             "team": [
-                {
-                    "item": "mint-berry",
-                    "level": 42,
-                    "moves": [
-                        "return",
-                        "shadow-ball",
-                        "submission",
-                        "iron-tail"
-                    ],
-                    "name": "aipom"
-                },
                 {
                     "item": "berserk-gene",
                     "level": 41,
@@ -29541,6 +30051,89 @@
                         "psywave"
                     ],
                     "name": "weezing"
+                },
+                {
+                    "item": "scope-lens",
+                    "level": 42,
+                    "moves": [
+                        "return",
+                        "shadow-ball",
+                        "submission",
+                        "iron-tail"
+                    ],
+                    "name": "aipom"
+                }
+            ]
+        },
+        {
+            "area": "mount-mortar",
+            "name": "bug-catcher-ken",
+            "team": [
+                {
+                    "item": "mint-berry",
+                    "level": 43,
+                    "moves": [
+                        "sandstorm",
+                        "protect",
+                        "bide",
+                        "rest"
+                    ],
+                    "name": "shuckle"
+                },
+                {
+                    "item": "charcoal",
+                    "level": 42,
+                    "moves": [
+                        "sandstorm",
+                        "recover",
+                        "fire-blast",
+                        "rock-slide"
+                    ],
+                    "name": "magcargo"
+                },
+                {
+                    "item": "leftovers",
+                    "level": 42,
+                    "moves": [
+                        "sandstorm",
+                        "spikes",
+                        "pin-missile",
+                        "double-edge"
+                    ],
+                    "name": "forretress"
+                },
+                {
+                    "item": "gold-berry",
+                    "level": 42,
+                    "moves": [
+                        "sandstorm",
+                        "steel-wing",
+                        "fly",
+                        "dig"
+                    ],
+                    "name": "gligar"
+                },
+                {
+                    "item": "blackglasses",
+                    "level": 42,
+                    "moves": [
+                        "sandstorm",
+                        "crunch",
+                        "hyper-beam",
+                        "ancientpower"
+                    ],
+                    "name": "pupitar"
+                },
+                {
+                    "item": "metal-coat",
+                    "level": 42,
+                    "moves": [
+                        "sandstorm",
+                        "wing-attack",
+                        "metal-claw",
+                        "submission"
+                    ],
+                    "name": "scizor"
                 }
             ]
         },
@@ -29589,6 +30182,53 @@
                         "transform"
                     ],
                     "name": "ditto"
+                }
+            ]
+        },
+        {
+            "area": "mount-mortar",
+            "name": "super-nerd-markus",
+            "team": [
+                {
+                    "item": "brightpowder",
+                    "level": 42,
+                    "moves": [
+                        "spikes",
+                        "earthquake",
+                        "explosion",
+                        "pin-missile"
+                    ],
+                    "name": "forretress"
+                },
+                {
+                    "item": "quick-claw",
+                    "level": 42,
+                    "moves": [
+                        "explosion",
+                        "psychic",
+                        "giga-drain",
+                        "ancientpower"
+                    ],
+                    "name": "exeggutor"
+                },
+                {
+                    "dvs": {
+                        "atk": 15,
+                        "def": 13,
+                        "hp": 15,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
+                    "item": "focus-band",
+                    "level": 42,
+                    "moves": [
+                        "agility",
+                        "hp-ice",
+                        "zap-cannon",
+                        "explosion"
+                    ],
+                    "name": "magneton"
                 }
             ]
         },
@@ -29742,29 +30382,29 @@
                     "level": 44,
                     "moves": [
                         "cross-chop",
-                        "fire-punch",
+                        "fire-blast",
                         "thunderpunch",
                         "earthquake"
                     ],
                     "name": "typhlosion"
                 },
                 {
-                    "item": "blackbelt",
+                    "item": "gold-berry",
                     "level": 44,
                     "moves": [
-                        "hypnosis",
-                        "curse",
+                        "lovely-kiss",
+                        "ice-beam",
                         "submission",
                         "waterfall"
                     ],
                     "name": "poliwrath"
                 },
                 {
-                    "item": "blackbelt",
+                    "item": "quick-claw",
                     "level": 45,
                     "moves": [
                         "endure",
-                        "counter",
+                        "shadow-ball",
                         "reversal",
                         "hi-jump-kick"
                     ],
@@ -29879,10 +30519,10 @@
                     "item": "berserk-gene",
                     "level": 55,
                     "moves": [
-                        "ancientpower",
-                        "sky-attack",
-                        "earthquake",
-                        "fire-blast"
+                        "agility",
+                        "dynamicpunch",
+                        "rock-slide",
+                        "earthquake"
                     ],
                     "name": "hitmonchan"
                 },
@@ -30001,6 +30641,93 @@
                         "megahorn"
                     ],
                     "name": "rhydon"
+                }
+            ]
+        },
+        {
+            "area": "rocket-hideout",
+            "name": "scientist-marc",
+            "team": [
+                {
+                    "item": "brightpowder",
+                    "level": 53,
+                    "moves": [
+                        "spider-web",
+                        "substitute",
+                        "baton-pass"
+                    ],
+                    "name": "ariados"
+                },
+                {
+                    "item": "leftovers",
+                    "level": 53,
+                    "moves": [
+                        "encore",
+                        "destiny-bond",
+                        "counter",
+                        "mirror-coat"
+                    ],
+                    "name": "wobbuffet"
+                },
+                {
+                    "item": "nevermeltice",
+                    "level": 53,
+                    "moves": [
+                        "psychic",
+                        "ice-punch",
+                        "thunderbolt",
+                        "giga-drain"
+                    ],
+                    "name": "gengar"
+                },
+                {
+                    "item": "leftovers",
+                    "level": 53,
+                    "moves": [
+                        "mean-look",
+                        "charm",
+                        "moonlight",
+                        "baton-pass"
+                    ],
+                    "name": "umbreon"
+                },
+                {
+                    "dvs": {
+                        "atk": 13,
+                        "def": 13,
+                        "hp": 15,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
+                    "item": "focus-band",
+                    "level": 54,
+                    "moves": [
+                        "ancientpower",
+                        "earthquake",
+                        "sludge-bomb",
+                        "hp-bug"
+                    ],
+                    "name": "dugtrio"
+                },
+                {
+                    "dvs": {
+                        "atk": 13,
+                        "def": 15,
+                        "hp": 15,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
+                    "item": "metal-coat",
+                    "level": 54,
+                    "moves": [
+                        "confuse-ray",
+                        "thunderbolt",
+                        "hp-steel",
+                        "tri-attack"
+                    ],
+                    "name": "magneton"
                 }
             ]
         },
@@ -30240,6 +30967,56 @@
         },
         {
             "area": "mahogany-town",
+            "name": "boarder-ronald",
+            "team": [
+                {
+                    "item": "pink-bow",
+                    "level": 57,
+                    "moves": [
+                        "light-screen",
+                        "reflect",
+                        "thunder-wave",
+                        "explosion"
+                    ],
+                    "name": "electrode"
+                },
+                {
+                    "item": "leftovers",
+                    "level": 57,
+                    "moves": [
+                        "belly-drum",
+                        "perish-song",
+                        "submission",
+                        "double-edge"
+                    ],
+                    "name": "azumarill"
+                },
+                {
+                    "item": "blackbelt",
+                    "level": 57,
+                    "moves": [
+                        "attract",
+                        "submission",
+                        "megahorn",
+                        "wing-attack"
+                    ],
+                    "name": "heracross"
+                },
+                {
+                    "item": "gold-berry",
+                    "level": 57,
+                    "moves": [
+                        "substitute",
+                        "ice-beam",
+                        "waterfall",
+                        "tri-attack"
+                    ],
+                    "name": "cloyster"
+                }
+            ]
+        },
+        {
+            "area": "mahogany-town",
             "name": "skier-clarissa",
             "team": [
                 {
@@ -30263,6 +31040,17 @@
                         "sludge-bomb"
                     ],
                     "name": "bellossom"
+                },
+                {
+                    "item": "gold-berry",
+                    "level": 58,
+                    "moves": [
+                        "psychic",
+                        "double-edge",
+                        "hi-jump-kick",
+                        "blizzard"
+                    ],
+                    "name": "stantler"
                 },
                 {
                     "dvs": {
@@ -30298,6 +31086,72 @@
         },
         {
             "area": "mahogany-town",
+            "name": "boarder-douglas",
+            "team": [
+                {
+                    "dvs": {
+                        "atk": 15,
+                        "def": 13,
+                        "hp": 15,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
+                    "item": "sharp-beak",
+                    "level": 58,
+                    "moves": [
+                        "screech",
+                        "sky-attack",
+                        "hp-ice",
+                        "sludge-bomb"
+                    ],
+                    "name": "crobat"
+                },
+                {
+                    "item": "nevermeltice",
+                    "level": 57,
+                    "moves": [
+                        "earthquake",
+                        "icy-wind",
+                        "ancientpower",
+                        "double-edge"
+                    ],
+                    "name": "donphan"
+                },
+                {
+                    "item": "magnet",
+                    "level": 57,
+                    "moves": [
+                        "confuse-ray",
+                        "thunder-wave",
+                        "waterfall",
+                        "thunderbolt"
+                    ],
+                    "name": "lanturn"
+                },
+                {
+                    "dvs": {
+                        "atk": 15,
+                        "def": 13,
+                        "hp": 15,
+                        "spa": 15,
+                        "spd": 15,
+                        "spe": 15
+                    },
+                    "item": "leftovers",
+                    "level": 57,
+                    "moves": [
+                        "glare",
+                        "iron-tail",
+                        "earthquake",
+                        "hp-ice"
+                    ],
+                    "name": "steelix"
+                }
+            ]
+        },
+        {
+            "area": "mahogany-town",
             "name": "pryce",
             "team": [
                 {
@@ -30328,7 +31182,7 @@
                         "spd": 15,
                         "spe": 15
                     },
-                    "item": "mystic-water",
+                    "item": "miracle-seed",
                     "level": 58,
                     "moves": [
                         "blizzard",

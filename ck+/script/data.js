@@ -177,7 +177,7 @@ function initGame() {
 		game.name = "custom";
 		loadData(localStorage.getItem("calc/custom-data"));
 		return;
-	} else if (window.location.search == "?xp") {
+	} else if (window.location.search == "?xp" || window.location.search == "?xp=") {
 		game.name = "ck+xp";
 		fetchData("ck+xp.json");
 	} else {
