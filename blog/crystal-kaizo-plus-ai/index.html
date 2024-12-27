@@ -719,7 +719,10 @@
 	</p>
 	<p>
 		After rolling damage, the game will determine if that damage is enough to KO the player's pokemon.
-		If so, the move is immediately <b>greatly encouraged (-2)</b> and the counter for number of moves that OHKO the player is incremented.
+		If so, the move is immediately encouraged based on its accuracy and the counter for number of moves that OHKO the player is incremented.
+		Moves that have 100% accuracy are <b>greatly encouraged (-2)</b>.
+		Moves that have less than 100% accuracy but at least 75% accuracy are <b>encouraged (-1)</b>.
+		Moves that have less than 75% accuracy are <b>unmodified (0)</b>.
 		This is the crux of Boom AI's biggest flaw, both SelfDestruct and Explosion can get this far and get scored as an OHKO.
 		The modified version of Aggressive AI that Boom AI calls will correctly not count SelfDestruct and Explosion as OHKOs.
 		If the move is not SelfDestruct or Explosion, the AI will then compare it against the highest damaging move so far, breaking ties with the latest move, keeping track of both the damage the move did, and what slot it is in.
