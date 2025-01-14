@@ -6,6 +6,7 @@ body {
 }
 
 #method {
+	display: block;
 	min-height: 60px;
 }
 
@@ -26,8 +27,18 @@ input {
 	font-size: 16px;
 }
 
+select {
+	min-width: 80px;
+	margin-bottom: 20px;
+	background-color: #2b2b2b;
+	color: white;
+	border: none;
+	padding: 2px;
+	font-size: 16px;
+}
+
 code, input, pre {
-	font-family: "Ubuntu Mono", "Lucida Console";
+	font-family: "Ubuntu Mono", "Lucida Console", monospace;
 }
 
 .keyword {

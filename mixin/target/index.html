@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="./style.css">
 </head>
 <body>
+		<label for="version">Minecraft version: </label><select id="version" onchange="pickVersion()"></select><br>
 		<p>Redirect the method call</p>
 		<pre><code lang="java" id="method"></code></pre>
 		<pre id="corrections">
@@ -22,7 +23,7 @@
 		<input id="next_button" type="button" onclick="generateMethod()" value="Next">
 		<br>
 		<label for="package">Package prefix: </label><input id="package" type="text"><br>
-		<label for="allow_unmapped">Allow unmapped: </label><input id="allow_unmapped" type="checkbox">
+		<label for="allow_unmapped">Allow unmapped: </label><input id="allow_unmapped" type="checkbox"><br>
 </body>
 </html>
 <script src="./script.js"></script>

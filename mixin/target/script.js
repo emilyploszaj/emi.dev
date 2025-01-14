@@ -8,24 +8,72 @@ var paramDefaults = new Map([
 	["ItemStack", "stack"],
 	["MatrixStack", "matrices"]
 ]);
+var latestVersionBuilds = new Map();
 var classes = new Map();
 var methods = [];
 var properSignature = "";
 
-fetch("./yarn.tiny")
+fetch("https://maven.fabricmc.net/net/fabricmc/yarn/maven-metadata.xml")
 	.then(response => response.text())
 	.then(text => {
-		var lines = text.split('\n');
-		for (var i = 0; i < lines.length; i++) {
-			var parts = lines[i].split('\t');
-			if (parts[0] == "CLASS") {
-				classes.set(parts[1], "L" + parts[3] + ";");
-			} else if (parts[0] == "METHOD") {
-				methods.push(lines[i]);
+		var xml = new DOMParser().parseFromString(text, "text/xml");
+		var versions = [];
+		for (const tag of xml.getElementsByTagName("versions")[0].getElementsByTagName("version")) {
+			var t = tag.innerHTML.toLowerCase();
+			var m = t.match(/^(\d+\.\d+(\.\d+)?)\+build\.(\d+)$/);
+			if (m) {
+				var build = parseInt(m[3]);
+				t = m[1];
+				if (!latestVersionBuilds.has(t)) {
+					versions.push(t);
+				}
+				latestVersionBuilds.set(t, build);
+			} else if (t.match(/\d\dw/) || t.includes("pre") || t.includes("rc") || t.includes("experimental") || t.includes("combat") || t.includes("3d")) {
+				// Ignore
+			} else {
+				console.log("Unrecognized version format found: " + t);
 			}
 		}
-		generateMethod();
+		var options = "";
+		for (const version of versions) {
+			options = `<option value="${version}">${version}</option>` + options;
+		}
+		document.getElementById("version").innerHTML = options;
+		pickVersion(versions[versions.length - 1]);
 	});
+
+function loadVersion(version, build) {
+	fetch(`https://maven.fabricmc.net/net/fabricmc/yarn/${version}%2Bbuild.${build}/yarn-${version}%2Bbuild.${build}-tiny.gz`)
+		.then(response => response.blob())
+		.then(blob => parseGzip(blob))
+		.then(text => {
+			initTiny(text);
+		});
+}
+
+async function parseGzip(blob) {
+	var stream = blob.stream().pipeThrough(new DecompressionStream("gzip"));
+	var chunks = [];
+	for await (const chunk of stream) {
+		chunks.push(chunk);
+	}
+	return new TextDecoder().decode(new Uint8Array(await new Blob(chunks).arrayBuffer()));
+}
+
+function initTiny(tiny) {
+	classes.clear();
+	methods.length = 0;
+	var lines = tiny.split('\n');
+	for (var i = 0; i < lines.length; i++) {
+		var parts = lines[i].split('\t');
+		if (parts[0] == "CLASS") {
+			classes.set(parts[1], "L" + parts[3] + ";");
+		} else if (parts[0] == "METHOD") {
+			methods.push(lines[i]);
+		}
+	}
+	generateMethod();
+}
 
 function inputKey(event) {
 	console.log(event);
@@ -36,6 +84,12 @@ function inputKey(event) {
 			submitValue();
 		}
 	}
+}
+
+function pickVersion(event) {
+	document.getElementById("method").innerHTML = "";
+	var version = document.getElementById("version").value;
+	loadVersion(version, latestVersionBuilds.get(version));
 }
 
 function submitValue() {
@@ -70,9 +124,16 @@ function submitValue() {
 function compareSplit(s) {
 	var ret = [];
 	var start = 0;
+	console.log(s);
 	for (var i = 0; i < s.length; i++) {
-		if (s[i] == ";" || s[i] == "." || s[i] == ")" || s[i] == "(") {
+		if (s[i] == ";") {
 			ret.push(s.substring(start, i + 1));
+			start = i + 1;
+		} else if (s[i] == "." || s[i] == ")" || s[i] == "(") {
+			if (start != i) {
+				ret.push(s.substring(start, i));
+			}
+			ret.push(s[i]);
 			start = i + 1;
 		}
 	}
