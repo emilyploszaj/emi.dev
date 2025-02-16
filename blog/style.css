@@ -159,6 +159,14 @@ tr:nth-child(2n), thead tr {
 	--text: var(--date);
 }
 
+.post-footer a.fiction-link {
+	--text: #99ebdd;
+}
+
+.post-footer a.nonfiction-link {
+	--text: #9f99eb;
+}
+
 #clear-tag {
 	padding-top: 8px;
 	visibility: hidden;
@@ -182,6 +190,14 @@ tr:nth-child(2n), thead tr {
 
 :target ~ #clear-tag {
 	visibility: visible;
+}
+
+#fiction:target ~ #posts .post:not(.fiction) {
+	display: none;
+}
+
+#nonfiction:target ~ #posts .post:not(.nonfiction) {
+	display: none;
 }
 
 #programming:target ~ #posts .post:not(.programming) {
