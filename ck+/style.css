@@ -175,6 +175,36 @@ h6, .h6 {
 	font-size: 24px;
 }
 
+#dragged, #drop-indicator {
+	position: absolute;
+	pointer-events: none;
+}
+
+#dragged div {
+	background-color: var(--background);
+	padding: 5px;
+	margin: 2px;
+}
+
+#dragged img {
+	transform: scaleX(-1);
+	border-width: 3px;
+	border-style: dashed;
+	border-color: transparent;
+}
+
+
+#drop-indicator {
+	width: 4px;
+	background: repeating-linear-gradient(
+		to bottom,
+		var(--gender-male) 0px,
+		var(--gender-male) 8px,
+		transparent 8px,
+		transparent 16px
+	) !important;
+}
+
 #tab-selection {
 	display: flex;
 	gap: 12px;
@@ -520,7 +550,11 @@ input:checked + .fake-checkbox {
 	height: 96px;
 }
 
-.poke-title td:first-child {
+#player .poke-title td:first-child {
+	width: 200px;
+}
+
+#opponent .poke-title td:nth-child(2) {
 	width: 200px;
 }
 
@@ -575,7 +609,7 @@ input:checked + .fake-checkbox {
 }
 
 #item-menu td {
-	width: unset;
+	width: unset !important;
 }
 
 .rolls {
@@ -726,13 +760,13 @@ input:checked + .fake-checkbox {
 	overflow: auto;
 }
 
-#player, #opponent, #edited-poke, #edit-fields {
+#player, #opponent {
 	width: 470px;
 	padding: 20px;
 	background-color: var(--box-background);
 }
 
-#player img, #edited-poke img {
+#player img {
 	transform: scaleX(-1);
 }
 
@@ -869,8 +903,27 @@ rt {
 #residual-damage .rolls table {
 	margin: 0px auto;
 }
+
 #residual-damage .rolls td {
 	font-size: 20px;
+}
+
+#edit {
+	display: none;
+	position: absolute;
+	z-index: 100;
+	margin: 240px auto 0px auto;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	padding: 6px;
+	max-width: 960px;
+	width: max-content;
+	border-width: 4px;
+	border-style: solid;
+	border-color: var(--grouping-background);
+	background-color: var(--box-background);
+	text-align: center;
 }
 
 .residual-percent {

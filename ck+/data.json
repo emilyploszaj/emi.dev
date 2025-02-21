@@ -16239,10 +16239,34 @@
         },
         {
             "description": "Increases the damage of normal type moves by 10% ",
+            "effects": {
+                "attack": {
+                    "condition": {
+                        "move": {
+                            "type": "normal"
+                        }
+                    },
+                    "modifiers": {
+                        "item-boost": "+10%"
+                    }
+                }
+            },
             "name": "pink-bow"
         },
         {
             "description": "Increases the damage of water type moves by 10% ",
+            "effects": {
+                "attack": {
+                    "condition": {
+                        "move": {
+                            "type": "water"
+                        }
+                    },
+                    "modifiers": {
+                        "item-boost": "+10%"
+                    }
+                }
+            },
             "name": "mystic-water"
         },
         {
@@ -16267,10 +16291,34 @@
         },
         {
             "description": "Increases the damage of grass type moves by 10%",
+            "effects": {
+                "attack": {
+                    "condition": {
+                        "move": {
+                            "type": "grass"
+                        }
+                    },
+                    "modifiers": {
+                        "item-boost": "+10%"
+                    }
+                }
+            },
             "name": "miracle-seed"
         },
         {
             "description": "Increases the damage of poison type moves by 10%",
+            "effects": {
+                "attack": {
+                    "condition": {
+                        "move": {
+                            "type": "poison"
+                        }
+                    },
+                    "modifiers": {
+                        "item-boost": "+10%"
+                    }
+                }
+            },
             "name": "poison-barb"
         },
         {
@@ -16283,10 +16331,34 @@
         },
         {
             "description": "Increases the damage of fire type moves by 10%",
+            "effects": {
+                "attack": {
+                    "condition": {
+                        "move": {
+                            "type": "fire"
+                        }
+                    },
+                    "modifiers": {
+                        "item-boost": "+10%"
+                    }
+                }
+            },
             "name": "charcoal"
         },
         {
             "description": "Increases the damage of psychic type moves by 10%",
+            "effects": {
+                "attack": {
+                    "condition": {
+                        "move": {
+                            "type": "psychic"
+                        }
+                    },
+                    "modifiers": {
+                        "item-boost": "+10%"
+                    }
+                }
+            },
             "name": "twistedspoon"
         },
         {
@@ -16299,6 +16371,18 @@
         },
         {
             "description": "Increases the damage of ground type moves by 10%",
+            "effects": {
+                "attack": {
+                    "condition": {
+                        "move": {
+                            "type": "ground"
+                        }
+                    },
+                    "modifiers": {
+                        "item-boost": "+10%"
+                    }
+                }
+            },
             "name": "soft-sand"
         },
         {
@@ -16363,6 +16447,18 @@
         },
         {
             "description": "Increases the damage of rock type moves by 10% ",
+            "effects": {
+                "attack": {
+                    "condition": {
+                        "move": {
+                            "type": "rock"
+                        }
+                    },
+                    "modifiers": {
+                        "item-boost": "+10%"
+                    }
+                }
+            },
             "name": "hard-stone"
         },
         {
@@ -16371,6 +16467,18 @@
         },
         {
             "description": "Increases the damage of electric type moves by 10% ",
+            "effects": {
+                "attack": {
+                    "condition": {
+                        "move": {
+                            "type": "electric"
+                        }
+                    },
+                    "modifiers": {
+                        "item-boost": "+10%"
+                    }
+                }
+            },
             "name": "magnet"
         },
         {
@@ -16379,6 +16487,18 @@
         },
         {
             "description": "Increases the damage of flying type moves by 10% ",
+            "effects": {
+                "attack": {
+                    "condition": {
+                        "move": {
+                            "type": "flying"
+                        }
+                    },
+                    "modifiers": {
+                        "item-boost": "+10%"
+                    }
+                }
+            },
             "name": "sharp-beak"
         },
         {
@@ -16399,10 +16519,34 @@
         },
         {
             "description": "Increases the damage of fighting type moves by 10%",
+            "effects": {
+                "attack": {
+                    "condition": {
+                        "move": {
+                            "type": "fighting"
+                        }
+                    },
+                    "modifiers": {
+                        "item-boost": "+10%"
+                    }
+                }
+            },
             "name": "blackbelt"
         },
         {
             "description": "Increases the damage of Ice type moves by 10%",
+            "effects": {
+                "attack": {
+                    "condition": {
+                        "move": {
+                            "type": "ice"
+                        }
+                    },
+                    "modifiers": {
+                        "item-boost": "+10%"
+                    }
+                }
+            },
             "name": "nevermeltice"
         },
         {
@@ -16411,14 +16555,50 @@
         },
         {
             "description": "Increases the damage of ghost type moves by 10%",
+            "effects": {
+                "attack": {
+                    "condition": {
+                        "move": {
+                            "type": "ghost"
+                        }
+                    },
+                    "modifiers": {
+                        "item-boost": "+10%"
+                    }
+                }
+            },
             "name": "spell-tag"
         },
         {
             "description": "Increases the damage of dragon type moves by 10%",
+            "effects": {
+                "attack": {
+                    "condition": {
+                        "move": {
+                            "type": "dragon"
+                        }
+                    },
+                    "modifiers": {
+                        "item-boost": "+10%"
+                    }
+                }
+            },
             "name": "dragon-fang"
         },
         {
             "description": "Increases the damage of dark type moves by 10% ",
+            "effects": {
+                "attack": {
+                    "condition": {
+                        "move": {
+                            "type": "dark"
+                        }
+                    },
+                    "modifiers": {
+                        "item-boost": "+10%"
+                    }
+                }
+            },
             "name": "blackglasses"
         },
         {
@@ -16443,10 +16623,34 @@
         },
         {
             "description": "Increases the damage of steel type moves by 10%",
+            "effects": {
+                "attack": {
+                    "condition": {
+                        "move": {
+                            "type": "steel"
+                        }
+                    },
+                    "modifiers": {
+                        "item-boost": "+10%"
+                    }
+                }
+            },
             "name": "metal-coat"
         },
         {
             "description": "Increases the damage of bug type moves by 10%",
+            "effects": {
+                "attack": {
+                    "condition": {
+                        "move": {
+                            "type": "bug"
+                        }
+                    },
+                    "modifiers": {
+                        "item-boost": "+10%"
+                    }
+                }
+            },
             "name": "silverpowder"
         },
         {
@@ -16479,14 +16683,73 @@
         },
         {
             "description": "Doubles the attack of Marowak, Cubone, or any pokemon transformed into them ",
+            "effects": {
+                "attack": [
+                    {
+                        "condition": {
+                            "attacker": {
+                                "name": [
+                                    "cubone",
+                                    "marowak"
+                                ]
+                            },
+                            "move": {
+                                "category": "physical"
+                            }
+                        },
+                        "modifiers": {
+                            "attack-boost": "+100%"
+                        }
+                    }
+                ]
+            },
             "name": "thick-club"
         },
         {
             "description": "Doubles the Special attack of Pikachu, or any pokemon transformed into them ",
+            "effects": {
+                "attack": {
+                    "condition": {
+                        "attacker": {
+                            "name": "pikachu"
+                        },
+                        "move": {
+                            "category": "special"
+                        }
+                    },
+                    "modifiers": {
+                        "attack-boost": "+100%"
+                    }
+                }
+            },
             "name": "light-ball"
         },
         {
             "description": "Increases the Defence and Special Defence of Ditto by 50%, and any pokemon it is transformed into ",
+            "effects": {
+                "defend": [
+                    {
+                        "condition": {
+                            "defender": {
+                                "name": "ditto"
+                            }
+                        },
+                        "modifiers": {
+                            "defense-boost": "+50%"
+                        }
+                    },
+                    {
+                        "condition": {
+                            "defender": {
+                                "transformed": true
+                            }
+                        },
+                        "modifiers": {
+                            "defense-boost": "+50%"
+                        }
+                    }
+                ]
+            },
             "name": "metal-powder"
         },
         {
@@ -20233,7 +20496,26 @@
             "name": "present",
             "power": 1,
             "pp": 15,
-            "type": "normal"
+            "roll_variants": true,
+            "type": "normal",
+            "variants": [
+                {
+                    "description": "Heal 25% target max (20%)",
+                    "power": 0
+                },
+                {
+                    "description": "40BP (40%)",
+                    "power": 40
+                },
+                {
+                    "description": "80BP (30%)",
+                    "power": 80
+                },
+                {
+                    "description": "120BP (10%)",
+                    "power": 120
+                }
+            ]
         },
         {
             "accuracy": 100,

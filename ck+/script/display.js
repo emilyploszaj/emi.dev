@@ -20,7 +20,7 @@ function displayCalcPokemon(root, poke, opponent, right) {
 	}
 	root.getElementsByClassName("poke-level")[0].innerHTML = "Lvl " + poke.level;
 	root.getElementsByClassName("poke-item")[0].innerHTML = itemLink(poke.item);
-	root.getElementsByClassName("poke-icon")[0].innerHTML = '<img src="' + getPokeImage(poke) + '">';
+	root.getElementsByClassName("poke-icon")[0].innerHTML = '<img draggable="false" src="' + getPokeImage(poke) + '">';
 	root.getElementsByClassName("poke-gender")[0].innerHTML = ["∅", "♀", "♂"][getGender(poke)];
 	if (right && root.getElementsByClassName("experience").length > 0) {
 		var exp = p.base_experience;
@@ -311,7 +311,7 @@ function displayPokemon(root, i) {
 	var p = pokemonByPokedex.get(i);
 	root.getElementsByClassName("poke-name")[0].innerHTML = pokeLink(p);
 	root.getElementsByClassName("poke-dex-num")[0].innerHTML = "#" + padNumber(p.pokedex);
-	root.getElementsByClassName("poke-icon")[0].innerHTML = '<img src="' + getPokeImage(p) + '">';
+	root.getElementsByClassName("poke-icon")[0].innerHTML = '<img draggable="false" src="' + getPokeImage(p) + '">';
 	var types = prettyType(p.types[0]);
 	if (p.types.length > 1) {
 		types += " " + prettyType(p.types[1]);
@@ -429,8 +429,8 @@ function updateCalc() {
 		displayCalcPokemon(document.getElementById("opponent"), theirPoke, myPoke, true);
 		var v = "";
 		for (var i = 0; i < box.length && i < box.length; i++) {
-			var img = '<img src="' + getPokeImage(box[i]) + '">';
-			v += '<div onclick="setPlayer(' + i + ')">' + img + "</div>";
+			var img = '<img draggable="false" src="' + getPokeImage(box[i]) + '">';
+			v += '<div class="drag-sortable" onclick="setPlayer(' + i + ')">' + img + "</div>";
 		}
 		document.getElementById("player").getElementsByClassName("calc-team")[0].innerHTML = v;
 		document.getElementById("opponent").getElementsByClassName("calc-team")[0].innerHTML = getEnemyTeamDisplay(enemyTeam, lastTrainer);
@@ -463,7 +463,7 @@ function getEnemyTeamDisplay(enemyTeam, trainer) {
 		} else if (prio > 0) {
 			prioClass = "high-switch-priority";
 		}
-		var img = '<img class="' + prioClass + '" src="' + getPokeImage(enemyTeam[i]) + '">';
+		var img = '<img draggable="false" class="' + prioClass + '" src="' + getPokeImage(enemyTeam[i]) + '">';
 		v += `<div onclick="setEnemy(${trainer}, ${i})">${img}</div>`;
 	}
 	return v;
@@ -723,7 +723,7 @@ function getEncounterPoke(poke, header, footer, extraClasses) {
 	if (header) {
 		v += header;
 	}
-	v += createLink(`#/pokemon/${poke.name}/`, '<img src="' + getPokeImage(poke.name) + '">');
+	v += createLink(`#/pokemon/${poke.name}/`, '<img draggable="false" src="' + getPokeImage(poke.name) + '">');
 	if (footer) {
 		v += footer;
 	}
@@ -905,6 +905,10 @@ function setMoveVariant(player, move, variant) {
 function openMenu(name) {
 	var el = document.getElementById(name);
 	if (!el.classList.contains("visible-selection-menu")) {
+		var init = el.getAttribute("menu-init");
+		if (init) {
+			eval(init);
+		}
 		el.classList.add("visible-selection-menu");
 		menuOpen = Date.now();
 	}
@@ -913,6 +917,9 @@ function openMenu(name) {
 document.onclick = function(event) {
 	if (Math.abs(menuOpen - Date.now()) > 30) {
 		for (let el of document.getElementsByClassName("visible-selection-menu")) {
+			if (el.contains(event.target) && el.id != "item-menu") {
+				return;
+			}
 			if (el && el.classList) {
 				el.classList.remove("visible-selection-menu")
 			}
@@ -975,8 +982,8 @@ function setItemMenu() {
 		"pink-bow",
 		"quick-claw",
 		"kings-rock",
-		"stick",
 		"thick-club",
+		"metal-powder",
 		"berry",
 		"berry-juice",
 		"gold-berry",

@@ -40,7 +40,7 @@ class BattlePoke {
 	}
 
 	get item() {
-		return this.poke.item;
+		return this.poke.item.toLowerCase().replace(/ /g, "-");
 	}
 
 	get level() {

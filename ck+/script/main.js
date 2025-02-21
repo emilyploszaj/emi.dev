@@ -85,16 +85,6 @@ readLocalStorage();
 
 setItemMenu();
 
-var editInputs = document.getElementsByClassName("poke-edit-input");
-for (let i in editInputs) {
-	editInputs[i].oninput = function (event) {
-		if (event.target.id.includes("edit-move")) {
-			copyEditedMoves = false;
-		}
-		updateEdit();
-	}
-}
-
 document.getElementById("badges").value = badges;
 
 updateSearch(document.getElementById("search-box").value);

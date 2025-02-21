@@ -33,7 +33,7 @@
 		</div>
 		<div id="box" class="tab">
 			<label for="badges">Badges:</label><input id="badges" type="number" min="0" value="0" max="16">
-			<button onclick="setTab('edit')">Add Pokemon to Box</button>
+			<button onclick="addPokemonToBox()">Add Pokemon to Box</button>
 			<label class="fake-file-upload" for="sav-upload">Upload .sav</label>
 			<input id="sav-upload" type="file" accept=".sav"></input>
 			<button style="float:right;" onclick="clearData()">Clear Data</button>
@@ -42,73 +42,12 @@
 		</div>
 		<div id="map" class="tab">
 		</div>
-		<div id="edit" class="tab">
-			<div style="display:flex;justify-content:space-between;">
-				<div id="edited-poke">
-					<table class="poke-title">
-						<tr>
-							<td><span class="poke-name"></span> <span class="poke-gender"></span></td>
-						</tr>
-						<tr>
-							<td><span class="poke-item"></span></td>
-						</tr>
-						<tr>
-							<td><span class="poke-level"></span></td>
-						</tr>
-					</table>
-					<div style="display:flex;">
-						<div style="display:block;">
-							<div class="poke-icon"></div>
-							<div class="poke-types"></div>
-						</div>
-						<div>
-							<div class="calc-stats">
-								<table>
-									<tr class="calc-hp"><td>HP</td><td><div class="stat-num"></div></td></tr>
-									<tr class="calc-atk"><td>Atk</td><td><div class="stat-num"></div></td></tr>
-									<tr class="calc-def"><td>Def</td><td><div class="stat-num"></div></td></tr>
-									<tr class="calc-spa"><td>SpA</td><td><div class="stat-num"></div></td></tr>
-									<tr class="calc-spd"><td>SpD</td><td><div class="stat-num"></div></td></tr>
-									<tr class="calc-spe"><td>Spe</td><td><div class="stat-num"></div></td></tr>
-								</table>
-								<div style="margin-left:10px;">
-									<div>Hidden Power:</div>
-									<div id="edit-hidden-power"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="calc-moves"></div>
-				</div>
-				<div id="edit-fields">
-					<button id="add-poke" onclick="addEditedPoke()">Add to Box</button>
-					<button id="save-poke" onclick="saveEdited()">Save</button>
-					<table>
-						<tr><td>Name</td><td><input class="poke-edit-input" type="text" id="edit-name" list="pokemon-names-list"></td></tr>
-						<tr><td>Item</td><td><input class="poke-edit-input" type="text" id="edit-item" list="item-names-list"></td></tr>
-						<tr><td>Lvl</td><td><input class="poke-edit-input" type="number" value="5" min="1" max="100" id="edit-lvl"></td></tr>
-						<tr><td></td></tr>
-						<tr><td>Move</td><td><input class="poke-edit-input" type="text" id="edit-move-1" list="move-names-list"></td></tr>
-						<tr><td>Move</td><td><input class="poke-edit-input" type="text" id="edit-move-2" list="move-names-list"></td></tr>
-						<tr><td>Move</td><td><input class="poke-edit-input" type="text" id="edit-move-3" list="move-names-list"></td></tr>
-						<tr><td>Move</td><td><input class="poke-edit-input" type="text" id="edit-move-4" list="move-names-list"></td></tr>
-						<tr><td></td></tr>
-						<tr><td>HP</td><td><input class="poke-edit-input" type="number" value="0" min="0" max="15" id="edit-hp"></td></tr>
-						<tr><td>Atk</td><td><input class="poke-edit-input" type="number" value="0" min="0" max="15" id="edit-atk"></td></tr>
-						<tr><td>Def</td><td><input class="poke-edit-input" type="number" value="0" min="0" max="15" id="edit-def"></td></tr>
-						<tr><td>SpA</td><td><input class="poke-edit-input" type="number" value="0" min="0" max="15" id="edit-spa"></td></tr>
-						<tr><td>SpD</td><td><input class="poke-edit-input" type="number" value="0" min="0" max="15" id="edit-spd"></td></tr>
-						<tr><td>Spe</td><td><input class="poke-edit-input" type="number" value="0" min="0" max="15" id="edit-spe"></td></tr>
-					</table>
-				</div>
-			</div>
-		</div>
 		<div id="calc" class="tab">
 			<div id="player">
 				<table class="poke-title">
 					<tr>
 						<td><span class="poke-name"></span> <span class="poke-gender"></span></td>
-						<td><button onclick="editCalc()">Edit</button></td>
+						<td><button onclick="editPlayer()">Edit</button></td>
 					</tr>
 					<tr>
 						<td><span class="poke-item"></span></td>
@@ -151,7 +90,7 @@
 					</div>
 				</div>
 				<div class="calc-moves"></div>
-				<div class="calc-team"></div>
+				<div class="calc-team drag-sort-container" drag-swap="swapBox(from, to)"></div>
 			</div>
 			<div id="weather">
 				<div>Weather</div>
@@ -167,7 +106,7 @@
 			<div id="opponent">
 				<table class="poke-title">
 					<tr>
-						<td></td>
+						<td><button onclick="editEnemy()">Edit</button></td>
 						<td><span class="poke-gender"></span> <span class="poke-name"></span></td>
 					</tr>
 					<tr>
@@ -175,8 +114,7 @@
 						<td><span class="poke-item"></span></td>
 					</tr>
 					<tr>
-						<td></td>
-						<td>
+						<td colspan="2">
 							<span class="experience"></span>
 							<span class="poke-level"></span>
 						</td>
@@ -284,13 +222,73 @@
 		</div>
 		<div id="full-type" class="tab">
 		</div>
+		<div id="edit" oninput="changeEdit()">
+			<table style="margin-left:auto;margin-right:auto;">
+				<tr>
+					<td>
+						<td>Name</td>
+						<td><input class="poke-edit-input" type="text" id="edit-name" list="pokemon-names-list"></td>
+					</td>
+					<td>
+						<td>Lvl</td>
+						<td><input class="poke-edit-input" type="number" value="5" min="1" max="100" id="edit-lvl"></td>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<td>Item</td>
+						<td><input class="poke-edit-input" type="text" id="edit-item" list="item-names-list"></td>
+					</td>
+				</tr>
+				<tr>
+			</table>
+			<table style="margin-left:auto;margin-right:auto;">
+				<tr>
+					<td>Moves</td>
+					<td colspan="2">DVs</td>
+				</tr>
+				<tr>
+					<td>
+						<table>
+							<tr><td><input class="poke-edit-input" type="text" id="edit-move-1" list="move-names-list"></td></tr>
+							<tr><td><input class="poke-edit-input" type="text" id="edit-move-2" list="move-names-list"></td></tr>
+							<tr><td><input class="poke-edit-input" type="text" id="edit-move-3" list="move-names-list"></td></tr>
+							<tr><td><input class="poke-edit-input" type="text" id="edit-move-4" list="move-names-list"></td></tr>
+						</table>
+					</td>
+					<td>
+						<table>
+							<tr><td>HP</td><td><input class="poke-edit-input" type="number" value="0" min="0" max="15" id="edit-hp"></td></tr>
+							<tr><td>Atk</td><td><input class="poke-edit-input" type="number" value="0" min="0" max="15" id="edit-atk"></td></tr>
+							<tr><td>Def</td><td><input class="poke-edit-input" type="number" value="0" min="0" max="15" id="edit-def"></td></tr>
+						</table>
+					</td>
+					<td>
+						<table>
+							<tr><td>SpA</td><td><input class="poke-edit-input" type="number" value="0" min="0" max="15" id="edit-spa"></td></tr>
+							<tr><td>SpD</td><td><input class="poke-edit-input" type="number" value="0" min="0" max="15" id="edit-spd"></td></tr>
+							<tr><td>Spe</td><td><input class="poke-edit-input" type="number" value="0" min="0" max="15" id="edit-spe"></td></tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>Hidden Power</td>
+					<td colspan="2" id="edit-hidden-power"></td>
+				</tr>
+			</table>
+			<button onclick="undoEdit()">Undo Edits</button>
+			<button onclick="addEditCopy()">Add Copy</button>
+		</div>
 		<div id="info-popup"></div>
+		<div id="drop-indicator"></div>
+		<div id="dragged"></div>
 	</body>
 	<datalist id="pokemon-names-list"></datalist>
 	<datalist id="item-names-list"></datalist>
 	<datalist id="move-names-list"></datalist>
 	<script src="script/data.js"></script>
 	<script src="script/engine/engine.js"></script>
+	<script src="script/engine/effects.js"></script>
 	<script src="script/util.js"></script>
 	<script src="script/link.js"></script>
 	<script src="script/edit.js"></script>

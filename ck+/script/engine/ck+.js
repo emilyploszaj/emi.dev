@@ -20,25 +20,6 @@ var badgeTypes = new Map([
 	["fire", 15],
 	["ground", 16],
 ]);
-var typeEnhancements = new Map([
-	["pink-bow", "normal"],
-	["charcoal", "fire"],
-	["mystic-water", "water"],
-	["magnet", "electric"],
-	["miracle-seed", "grass"],
-	["nevermeltice", "ice"],
-	["blackbelt", "fighting"],
-	["poison-barb", "poison"],
-	["soft-sand", "ground"],
-	["sharp-beak", "flying"],
-	["twistedspoon", "psychic"],
-	["silverpowder", "bug"],
-	["hard-stone", "rock"],
-	["spell-tag", "ghost"],
-	["dragon-fang", "dragon"],
-	["blackglasses", "dark"],
-	["metal-coat", "steel"]
-]);
 var specialTypes = new Set([
 	"fire", "water", "electric", "grass", "ice", "psychic", "dragon", "dark"
 ]);
@@ -135,6 +116,8 @@ function getDamage(attacker, defender, move) {
 	if (defender.poke == undefined || move.category == "status" || move.power == 0) {
 		return CalcResult.of(0);
 	}
+	var effects = BattleEffects.of(attacker, defender, move);
+
 	var v = parseInt(attacker.level * 2 / 5) + 2;
 	v *= move.power;
 
@@ -179,18 +162,8 @@ function getDamage(attacker, defender, move) {
 		}
 	}
 
-	var ni = attacker.item.toLowerCase().replace(/ /g, "-");
-	var ndi = defender.item.toLowerCase().replace(/ /g, "-");
-
-	if ((attacker.name == "cubone" || attacker.name == "marowak") && ni == "thick-club" && !special) {
-		a *= 2;
-	}
-	if (attacker.name == "pikachu" && ni == "light-ball" && special) {
-		a *= 2;
-	}
-	if ((defender.name == "ditto" || defender.poke.transformStats) && ndi == "metal-powder") {
-		d = d * 1.5;
-	}
+	a = effects.getModifier(attacker, defender, move, "attack-boost", a, 999);
+	d = effects.getModifier(attacker, defender, move, "defense-boost", d, 999);
 
 	// Gen 2 passes modified stats as ratios in 8 bit registers
 	// If either exceeds 255, both are divided by 4 to fit
@@ -208,10 +181,10 @@ function getDamage(attacker, defender, move) {
 	v = parseInt(parseInt(v * a) / d);
 
 	v = parseInt(v / 50);
-	if (typeEnhancements.has(ni) && typeEnhancements.get(ni) == move.type) {
-		v *= 1.1;
-		v = parseInt(v);
-	}
+
+	// Item boost
+	v = effects.getModifier(attacker, defender, move, "item-boost", v, v);
+
 	if (move.crit) {
 		v *= 2;
 	}

@@ -89,6 +89,14 @@ function padNumber(s) {
 	return s;
 }
 
+/**
+ * @param {String} s 
+ * @returns {String}
+ */
+function normalize(s) {
+	return s.toLowerCase().replaceAll(/[ _]/g, "-")
+}
+
 function fullCapitalize(s) {
 	s = s.toLowerCase();
 	if (nameFormatting.has(s)) {
@@ -271,17 +279,6 @@ function updateBadges() {
 function setTab(name) {
 	if (name == "map") {
 		setMap();
-	}
-	if (name != "edit") {
-		editing = -1;
-	} else {
-		if (editing == -1) {
-			copyEditedMoves = true;
-			clearEdits();
-		} else {
-			copyEditedMoves = false;
-		}
-		updateEdit();
 	}
 	var tabs = document.getElementsByClassName("tab");
 	for (var i = 0; i < tabs.length; i++) {
