@@ -9,6 +9,7 @@
 		<title>Emi's Crystal Kaizo+ Calc</title>
 		<link rel="stylesheet" href="https://fonts.bunny.net/css?family=Ubuntu+Mono:400,700&display=block">
 		<link rel="stylesheet" type="text/css" href="./style.css">
+		<style id="dynamic-style"></style>
 	</head>
 	<body>
 		<h1>Emi's Crystal Kaizo+ Calc</h1>
@@ -60,7 +61,7 @@
 				</table>
 				<div style="display:flex;">
 					<div style="display:block;">
-						<div class="poke-icon"></div>
+						<div class="poke-icon" drop-accept="box" drop="setPlayer(from)"></div>
 						<div class="poke-types"></div>
 					</div>
 					<div>
@@ -90,7 +91,7 @@
 					</div>
 				</div>
 				<div class="calc-moves"></div>
-				<div class="calc-team drag-sort-container" drag-swap="swapBox(from, to)"></div>
+				<div class="calc-team drag-sort-container" drag-type="box" drag-swap="swapBox(from, to)"></div>
 			</div>
 			<div id="weather">
 				<div>Weather</div>
@@ -100,7 +101,7 @@
 					<option value="sun">Harsh Sun</option>
 					<option value="sand">Sandstorm</option>
 				</select>
-				<button id="residual-damage-button" onclick="openMenu('residual-damage')">Residual Damage</button>
+				<button id="residual-damage-button" onclick="openMenu('residual-damage')">Chip</button>
 			</div>
 			<div id="residual-damage"></div>
 			<div id="opponent">
@@ -147,7 +148,7 @@
 						</div>
 					</div>
 					<div style="display:block;">
-						<div class="poke-icon"></div>
+						<div class="poke-icon" drop-accept="box" drop="calcEnemyFromBox(from)"></div>
 						<div class="poke-types"></div>
 					</div>
 				</div>
@@ -155,7 +156,7 @@
 				<div class="calc-team"></div>
 				<div class="calc-naviation">
 					<span id="current-trainer-name"></span>
-					<a id="current-trainer-navigate"><button>Stats</button></a>
+					<a id="current-trainer-navigate"><button>Info</button></a>
 					<button onclick="navigateBattle(-1)">Previous</button>
 					<button onclick="navigateBattle(1)">Next</button>
 				</div>
@@ -173,6 +174,16 @@
 				Adds a button that can be used to load box from the currently open game. This imports all the data a .sav import would normally do.
 				<lb></lb>
 				Vs. Recorder can be downloaded <a href="https://github.com/emilyploszaj/vs-recorder" target="_blank">here</a>.
+			</p>
+			<h6>Statistics</h6>
+			<p>
+				<input id="enable-statistics" type="checkbox" onchange="updateSettings()"/>
+				<label for="enable-statistics" class="fake-checkbox"></label>
+				<label for="enable-statistics" style="cursor:pointer;">Enable statistics</label>
+				<lb></lb>
+				Displays historic fight data and usage statistics. Not all games have data.
+				<lb></lb>
+				While this data was not added for fight planning, some may prefer to not have it visible to avoid having their planning be influenced.
 			</p>
 			<h6>Credits</h6>
 			<p>Calc, Vs. Recorder, and related software written by Emi.</p>
@@ -240,44 +251,91 @@
 						<td><input class="poke-edit-input" type="text" id="edit-item" list="item-names-list"></td>
 					</td>
 				</tr>
+				<tr class="engine-flag-ability">
+					<td>
+						<td>Ability</td>
+						<td><input class="poke-edit-input" type="text" id="edit-ability" list="ability-names-list"></td>
+					</td>
+				</tr>
 				<tr>
 			</table>
 			<table style="margin-left:auto;margin-right:auto;">
 				<tr>
-					<td>Moves</td>
-					<td colspan="2">DVs</td>
-				</tr>
-				<tr>
 					<td>
 						<table>
+							<tr><td>Moves</td></tr>
 							<tr><td><input class="poke-edit-input" type="text" id="edit-move-1" list="move-names-list"></td></tr>
 							<tr><td><input class="poke-edit-input" type="text" id="edit-move-2" list="move-names-list"></td></tr>
 							<tr><td><input class="poke-edit-input" type="text" id="edit-move-3" list="move-names-list"></td></tr>
 							<tr><td><input class="poke-edit-input" type="text" id="edit-move-4" list="move-names-list"></td></tr>
 						</table>
 					</td>
-					<td>
-						<table>
-							<tr><td>HP</td><td><input class="poke-edit-input" type="number" value="0" min="0" max="15" id="edit-hp"></td></tr>
-							<tr><td>Atk</td><td><input class="poke-edit-input" type="number" value="0" min="0" max="15" id="edit-atk"></td></tr>
-							<tr><td>Def</td><td><input class="poke-edit-input" type="number" value="0" min="0" max="15" id="edit-def"></td></tr>
-						</table>
-					</td>
-					<td>
-						<table>
-							<tr><td>SpA</td><td><input class="poke-edit-input" type="number" value="0" min="0" max="15" id="edit-spa"></td></tr>
-							<tr><td>SpD</td><td><input class="poke-edit-input" type="number" value="0" min="0" max="15" id="edit-spd"></td></tr>
-							<tr><td>Spe</td><td><input class="poke-edit-input" type="number" value="0" min="0" max="15" id="edit-spe"></td></tr>
+					<td rowspan="3">
+						<table id="edit-stats">
+							<tr>
+								<td colspan="2">Stats</td>
+								<td class="engine-flag-dvs">DVs</td>
+								<td class="engine-flag-evs">EVs</td>
+								<td colspan="2" class="engine-flag-nature">Nat</td>
+							</tr>
+							<tr>
+								<td>HP</td>
+								<td id="edit-hp"></td>
+								<td class="engine-flag-dvs"><input class="poke-edit-input" type="number" value="0" min="0" max="15" id="edit-hp-dv"></td>
+								<td class="engine-flag-evs"><input class="poke-edit-input" type="number" value="0" min="0" max="255" id="edit-hp-ev"></td>
+								<td class="engine-flag-nature"> </td>
+							</tr>
+							<tr>
+								<td>Atk</td>
+								<td id="edit-atk"></td>
+								<td class="engine-flag-dvs"><input class="poke-edit-input" type="number" value="0" min="0" max="15" id="edit-atk-dv"></td>
+								<td class="engine-flag-evs"><input class="poke-edit-input" type="number" value="0" min="0" max="255" id="edit-atk-ev"></td>
+								<td class="engine-flag-nature">-</td>
+								<td class="engine-flag-nature">+</td>
+							</tr>
+							<tr>
+								<td>Def</td>
+								<td id="edit-def"></td>
+								<td class="engine-flag-dvs"><input class="poke-edit-input" type="number" value="0" min="0" max="15" id="edit-def-dv"></td>
+								<td class="engine-flag-evs"><input class="poke-edit-input" type="number" value="0" min="0" max="255" id="edit-def-ev"></td>
+								<td class="engine-flag-nature">-</td>
+								<td class="engine-flag-nature">+</td>
+							</tr>
+							<tr>
+								<td>SpA</td>
+								<td id="edit-spa"></td>
+								<td class="engine-flag-dvs"><input class="poke-edit-input" type="number" value="0" min="0" max="15" id="edit-spa-dv"></td>
+								<td class="engine-flag-evs"><input class="poke-edit-input" type="number" value="0" min="0" max="255" id="edit-spa-ev"></td>
+								<td class="engine-flag-nature">-</td>
+								<td class="engine-flag-nature">+</td>
+							</tr>
+							<tr>
+								<td>SpD</td>
+								<td id="edit-spd"></td>
+								<td class="engine-flag-dvs"><input class="poke-edit-input" type="number" value="0" min="0" max="15" id="edit-spd-dv"></td>
+								<td class="engine-flag-evs"><input class="poke-edit-input" type="number" value="0" min="0" max="255" id="edit-spd-ev"></td>
+								<td class="engine-flag-nature">-</td>
+								<td class="engine-flag-nature">+</td>
+							</tr>
+							<tr>
+								<td>Spe</td>
+								<td id="edit-spe"></td>
+								<td class="engine-flag-dvs"><input class="poke-edit-input" type="number" value="0" min="0" max="15" id="edit-spe-dv"></td>
+								<td class="engine-flag-evs"><input class="poke-edit-input" type="number" value="0" min="0" max="255" id="edit-spe-ev"></td>
+								<td class="engine-flag-nature">-</td>
+								<td class="engine-flag-nature">+</td>
+							</tr>
 						</table>
 					</td>
 				</tr>
+				<tr><td>HP <span id="edit-hidden-power"></span></td></tr>
 				<tr>
-					<td>Hidden Power</td>
-					<td colspan="2" id="edit-hidden-power"></td>
+					<td>
+						<button onclick="undoEdit()">Undo Edits</button>
+						<button onclick="addEditCopy()">Add Copy</button>
+					</td>
 				</tr>
 			</table>
-			<button onclick="undoEdit()">Undo Edits</button>
-			<button onclick="addEditCopy()">Add Copy</button>
 		</div>
 		<div id="info-popup"></div>
 		<div id="drop-indicator"></div>

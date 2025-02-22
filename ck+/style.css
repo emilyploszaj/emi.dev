@@ -193,16 +193,30 @@ h6, .h6 {
 	border-color: transparent;
 }
 
-
 #drop-indicator {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+.drop-indicator-internal {
+	position: absolute;
 	width: 4px;
 	background: repeating-linear-gradient(
 		to bottom,
-		var(--gender-male) 0px,
-		var(--gender-male) 8px,
+		var(--highlighted) 0px,
+		var(--highlighted) 8px,
 		transparent 8px,
 		transparent 16px
 	) !important;
+}
+
+.drop-indicator-external {
+	position: absolute;
+	margin: -4px;
+	border-width: 4px;
+	border-style: dashed;
+	border-color: var(--highlighted);
 }
 
 #tab-selection {
@@ -534,6 +548,10 @@ input:checked + .fake-checkbox {
 	margin: 5px;
 }
 
+.poke-icon {
+	margin-top: 10px;
+}
+
 .poke-icon img {
 	image-rendering: pixelated;
 	object-fit: cover;
@@ -541,7 +559,6 @@ input:checked + .fake-checkbox {
 	height: 224px;
 	min-width: 224px;
 	min-height: 224px;
-	margin-top: 10px;
 }
 
 .poke-title {
@@ -912,7 +929,7 @@ rt {
 	display: none;
 	position: absolute;
 	z-index: 100;
-	margin: 240px auto 0px auto;
+	margin: 230px auto 0px auto;
 	left: 0px;
 	right: 0px;
 	top: 0px;
@@ -924,6 +941,16 @@ rt {
 	border-color: var(--grouping-background);
 	background-color: var(--box-background);
 	text-align: center;
+}
+
+#edit-stats tr:not(:first-child) td:first-child {
+	padding-right: 10px;
+	text-align: left;
+}
+
+#edit-stats tr:not(:first-child) td:nth-child(2) {
+	width: 40px;
+	text-align: left;
 }
 
 .residual-percent {

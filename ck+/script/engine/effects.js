@@ -239,7 +239,7 @@ function checkStringCondition(condition, value) {
 	return false;
 }
 
-function checkPercentNumberCondition(condition, value, max) {
+function checkNumberCondition(condition, value, max) {
 	if (typeof condition === "number") {
 		return condition == value;
 	} else if (Array.isArray(condition)) {

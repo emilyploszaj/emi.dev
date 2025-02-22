@@ -411,14 +411,14 @@ function displayPokemon(root, i) {
 			<div class="tab-button" onclick="selectTab(event)">Learnset</div>
 			<div class="tab-button" onclick="selectTab(event)">TM/HM</div>
 			<div class="tab-button" onclick="selectTab(event)">Encounters</div>
-			<div class="tab-button" onclick="selectTab(event)">Statistics</div>
+			<div class="engine-flag-statistics tab-button" onclick="selectTab(event)">Statistics</div>
 		</div>
 		<div class="scroll-padding-anchor"></div>
 		<div class="tab-body">
 			<div class="tab-contents">${getPokemonLearnsetDisplay(p)}</div>
 			<div class="tab-contents">${getPokemonTmHmDisplay(p)}</div>
 			<div class="tab-contents">${getPokemonEncountersDisplay(p)}</div>
-			<div class="tab-contents">${getPokemonStatsDisplay(p)}</div>
+			<div class="engine-flag-statistics tab-contents">${getPokemonStatsDisplay(p)}</div>
 		</div>
 	</div>`, 0);
 }
@@ -438,7 +438,7 @@ function updateCalc() {
 		for (var i = lastTrainer + 1; isTrainerB2b(i); i++) {
 			extraTrainers += `<div class="calc-team">${getEnemyTeamDisplay(data.trainers[i].team, i)}</div>`;
 			extraTrainers += `<div class="calc-navigation"><span>${getTrainerName(data.trainers[i].name)} </span>`;
-			extraTrainers += createLink(`#/trainer/${data.trainers[i].name}/`, `<button>Stats</button>`) + " ";
+			extraTrainers += createLink(`#/trainer/${data.trainers[i].name}/`, `<button>Info</button>`) + " ";
 			extraTrainers += `<button disabled=true onclick="navigateBattle(-1)">Previous</button> `;
 			extraTrainers += `<button disabled=true onclick="navigateBattle(1)">Next</button> `;
 			extraTrainers += `</div>`
@@ -547,7 +547,7 @@ function getPokemonStatsDisplay(p) {
 	}
 
 	return `
-	<div class="poke-usage-statistics">
+	<div class="engine-flag-statistics poke-usage-statistics">
 		<div class="poke-usage-statistics-inner"">${usageLines}${usagePoints}</div>
 	</div>`;
 }
@@ -1005,4 +1005,20 @@ function setItemMenu() {
 	}
 	v += `</tr></table>`;
 	document.getElementById("item-menu").innerHTML = v;
+}
+
+function setEngineDisplayFlags(enabled) {
+	var flags = ["dvs", "evs", "nature", "ability", "statistics"];
+	var sheet = document.getElementById("dynamic-style");
+	var content = "";
+	for (const flag of flags) {
+		if (enabled.indexOf(flag) == -1) {
+			content += `
+				.engine-flag-${flag} {
+					display: none;
+				}
+			`;
+		}
+	}
+	sheet.textContent = content;
 }

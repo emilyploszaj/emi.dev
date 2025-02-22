@@ -185,6 +185,15 @@ function initGame() {
 		fetchData("data.json");
 		fetchFights("fights.json");
 	}
+	updateEngineFlags();
+}
+
+function updateEngineFlags() {
+	var flags = ["dvs"];
+	if (settings.enableStatistics) {
+		flags.push("statistics");
+	}
+	setEngineDisplayFlags(flags);
 }
 
 function fetchData(file) {

@@ -57,7 +57,7 @@ function getTrainerDisplay(trainer, i) {
 	t += '<div class="trainer">'
 	t += '<div>' + getTrainerName(trainer.name);
 	t += '<button style="float:right;" onclick="calcTrainer(' + i + ')">Calc</button>';
-	t += createLink(`#/trainer/${trainer.name}/`, '<button style="float:right;">Statistics</button>');
+	t += createLink(`#/trainer/${trainer.name}/`, '<button style="float:right;">Info</button>');
 	t += '</div>';
 	t += '<div class="trainer-pokes">';
 	t += getTeamDisplay(trainer);
@@ -93,6 +93,7 @@ function getTrainerStats(trainer) {
 	v += getTeamDisplay(trainer);
 	v += '</div>';
 	v += '</div>';
+	v += `<div class="engine-flag-statistics">`;
 	var fights = fightsByTrainer.get(trainer.name.toLowerCase());
 	if (fights) {
 		var ht = "";
@@ -115,6 +116,7 @@ function getTrainerStats(trainer) {
 		v += getBringsDisplay(b.brings, fights.length, 21);
 		v += ht;
 	}
+	v += `</div>`;
 	return v;
 }
 

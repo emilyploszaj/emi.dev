@@ -23,6 +23,9 @@ function readLocalStorage() {
 	deadBox = orElse(savedData["dead-box"], []);
 	badges = orElse(savedData["badges"], 0);
 	settings = orElse(savedData["settings"], {});
+	if (!settings.enableStatistics) {
+		settings.enableStatistics = true;
+	}
 	applySettings();
 }
 
@@ -32,6 +35,7 @@ function writeLocalStorage() {
 
 function updateSettings() {
 	settings.enableVsRecorder = document.getElementById("enable-vs-recorder").checked;
+	settings.enableStatistics = document.getElementById("enable-statistics").checked;
 	applySettings();
 }
 
@@ -42,6 +46,7 @@ function applySettings() {
 	} else {
 		document.getElementById("update-vs-recorder").style.display = "none";
 	}
+	updateEngineFlags();
 	savedData["settings"] = settings;
 	writeLocalStorage();
 }

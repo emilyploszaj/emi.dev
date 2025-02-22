@@ -65,9 +65,9 @@ function initEdit(poke) {
 	}
 	for (const stat of STATS) {
 		if (poke.dvs && poke.dvs[stat]) {
-			document.getElementById("edit-" + stat).value = poke.dvs[stat];
+			document.getElementById("edit-" + stat + "-dv").value = poke.dvs[stat];
 		} else {
-			document.getElementById("edit-" + stat).value = 15;
+			document.getElementById("edit-" + stat + "-dv").value = 15;
 		}
 	}
 	updateEdits();
@@ -130,13 +130,16 @@ function updateEdits() {
 	validate("edit-move-2", v => v == "" || movesByName.has(v));
 	validate("edit-move-3", v => v == "" || movesByName.has(v));
 	validate("edit-move-4", v => v == "" || movesByName.has(v));
-	validate("edit-hp", v => v >= 0 && v < 16);
-	validate("edit-atk", v => v >= 0 && v < 16);
-	validate("edit-def", v => v >= 0 && v < 16);
-	validate("edit-spa", v => v >= 0 && v < 16);
-	validate("edit-spd", v => v >= 0 && v < 16);
-	validate("edit-spe", v => v >= 0 && v < 16);
-	var hiddenPower = getHiddenPower(getEditedPoke());
+	for (const stat of STATS) {
+		validate("edit-" + stat + "-dv", v => v >= 0 && v < 16);
+		validate("edit-" + stat + "-ev", v => v >= 0 && v < 256);
+	}
+	var poke = getEditedPoke();
+	var bp = BattlePoke.of(editingType != "enemy", poke, getEmptyStages());
+	var hiddenPower = getHiddenPower(poke);
+	for (const stat of STATS) {
+		document.getElementById("edit-" + stat).innerHTML = bp.getEffectiveStat(stat);
+	}
 	document.getElementById("edit-hidden-power").innerHTML = fullCapitalize(hiddenPower.type) + " " + hiddenPower.power;
 }
 
@@ -152,12 +155,12 @@ function getEditedPoke() {
 			document.getElementById("edit-move-4").getAttribute("last-valid")
 		].filter(v => v && v.length > 0),
 		dvs: {
-			hp: parseInt(document.getElementById("edit-hp").getAttribute("last-valid")),
-			atk: parseInt(document.getElementById("edit-atk").getAttribute("last-valid")),
-			def: parseInt(document.getElementById("edit-def").getAttribute("last-valid")),
-			spa: parseInt(document.getElementById("edit-spa").getAttribute("last-valid")),
-			spd: parseInt(document.getElementById("edit-spd").getAttribute("last-valid")),
-			spe: parseInt(document.getElementById("edit-spe").getAttribute("last-valid"))
+			hp: parseInt(document.getElementById("edit-hp-dv").getAttribute("last-valid")),
+			atk: parseInt(document.getElementById("edit-atk-dv").getAttribute("last-valid")),
+			def: parseInt(document.getElementById("edit-def-dv").getAttribute("last-valid")),
+			spa: parseInt(document.getElementById("edit-spa-dv").getAttribute("last-valid")),
+			spd: parseInt(document.getElementById("edit-spd-dv").getAttribute("last-valid")),
+			spe: parseInt(document.getElementById("edit-spe-dv").getAttribute("last-valid"))
 		}
 	};
 }
@@ -195,6 +198,7 @@ function setPlayerItem(item) {
 }
 
 var dragContainer = null;
+var dragType = "";
 var dragTarget = null;
 var dragStatus = -1;
 var dragLocation = {};
@@ -218,6 +222,7 @@ document.onmousemove = function(event) {
 		var distance = Math.sqrt(Math.pow(dragLocation.x - event.pageX, 2) + Math.pow(dragLocation.y - event.pageY, 2));
 		if (distance > 32) {
 			dragContainer = dragTarget.closest(".drag-sort-container");
+			dragType = orElse(dragContainer.getAttribute("drag-type"), "");
 			document.getElementById("dragged").style.visibility = "visible";
 			document.getElementById("dragged").innerHTML = dragTarget.outerHTML;
 			dragStatus = 1;
@@ -232,16 +237,22 @@ document.onmousemove = function(event) {
 		if (dropInfo) {
 			var del = document.getElementById("drop-indicator");
 			rect = dropInfo.element.getBoundingClientRect();
-			del.style.visibility = "visible";
-			del.style.left = (dropInfo.side == "left" ? rect.left : rect.right) + "px";
-			if (dropInfo.previousElement && dropInfo.side == "left") {
-				var previousRect = dropInfo.previousElement.getBoundingClientRect();
-				if (previousRect.y == rect.y) {
-					del.style.left = previousRect.right + "px";
+			if (dropInfo.type == "external") {
+				del.style.visibility = "visible";
+				del.innerHTML = `<div class="drop-indicator-external" style="left:${rect.left}px;top:${rect.top + scrollY}px;width:${rect.width}px;height:${rect.height}px;"></div>`;
+			} else if (dropInfo.distance < 100) {
+				del.style.visibility = "visible";
+				var left = dropInfo.side == "left" ? rect.left : rect.right;
+				if (dropInfo.previousElement && dropInfo.side == "left") {
+					var previousRect = dropInfo.previousElement.getBoundingClientRect();
+					if (previousRect.y == rect.y) {
+						left = previousRect.right;
+					}
 				}
+				del.innerHTML = `<div class="drop-indicator-internal" style="left:${left}px;top:${rect.top + scrollY}px;width:4px;height:${rect.height}px;"></div>`;
+			} else {
+				del.style.visibility = "hidden";
 			}
-			del.style.top = rect.top + scrollY + "px";
-			del.style.height = rect.height + "px";
 		}
 	}
 }
@@ -261,10 +272,17 @@ document.onmouseup = function(event) {
 				index++;
 			}
 		}
-		if (start != -1 && end != -1) {
-			var from = start;
-			var to = end;
-			eval(dragContainer.getAttribute("drag-swap"));
+		if (dropInfo.type == "external") {
+			if (start != -1) {
+				var from = start;
+				eval(dropInfo.element.getAttribute("drop"));
+			}
+		} else {
+			if (dropInfo.distance < 100 && start != -1 && end != -1) {
+				var from = start;
+				var to = end;
+				eval(dragContainer.getAttribute("drag-swap"));
+			}
 		}
 	}
 	dragTarget = null;
@@ -276,6 +294,7 @@ document.onmouseup = function(event) {
 function getDropInfo(cx, cy) {
 	var scrollY = document.documentElement.scrollTop;
 	var bestDistance = 9999999;
+	var bestActualDistance;
 	var bestLeft = false;
 	var bestNearest = null;
 	var bestPrevious = null;
@@ -287,17 +306,31 @@ function getDropInfo(cx, cy) {
 		var distance = Math.abs(sy - cy) * 4096 + Math.abs(sx - cx);
 		if (distance < bestDistance) {
 			bestDistance = distance;
+			bestActualDistance = Math.sqrt(Math.pow(sx - cx, 2) + Math.pow(sy - cy, 2));
 			bestNearest = s;
 			bestLeft = cx < sx;
 			bestPrevious = previous;
 		}
 		previous = s;
 	}
+	var dropAccept = null;
+	for (const el of document.querySelectorAll(":hover")) {
+		if (el.getAttribute("drop-accept") == dragType) {
+			dropAccept = el;
+		}
+	}
+	if (dropAccept) {
+		return {
+			type: "external",
+			element: dropAccept
+		};
+	}
 	if (bestNearest) {
 		return {
+			type: "internal",
 			element: bestNearest,
 			previousElement: bestPrevious,
-			distance: bestDistance,
+			distance: bestActualDistance,
 			side: bestLeft ? "left" : "right"
 		};
 	}
@@ -319,5 +352,10 @@ function swapBox(from, to) {
 	}
 	box.splice(to, 0, el);
 	updateBox();
+	updateCalc();
+}
+
+function calcEnemyFromBox(from) {
+	theirPoke = box[from];
 	updateCalc();
 }
