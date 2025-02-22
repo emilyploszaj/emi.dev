@@ -64,7 +64,7 @@ function initEdit(poke) {
 		}
 	}
 	for (const stat of STATS) {
-		if (poke.dvs && poke.dvs[stat]) {
+		if (poke.dvs !== undefined && poke.dvs[stat] !== undefined) {
 			document.getElementById("edit-" + stat + "-dv").value = poke.dvs[stat];
 		} else {
 			document.getElementById("edit-" + stat + "-dv").value = 15;
