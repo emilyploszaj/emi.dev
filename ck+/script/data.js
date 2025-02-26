@@ -51,7 +51,6 @@ var editing = -1;
 var copyEditedMoves = false;
 var badges = 0;
 var lastTrainer = 17;
-var editReturn;
 var caughtLandmarks = new Set();
 var itemsById = new Map([
 	[0x03, "brightpowder"],
@@ -257,8 +256,7 @@ function startup() {
 			movesByTMHM.get(m).push(p.name);
 		}
 	}
-	for (let i in j.moves) {
-		var m = j.moves[i];
+	for (const m of j.moves) {
 		movesByName.set(m.name, m);
 		if (m.index) {
 			movesByIndex.set(m.index, m);
@@ -288,7 +286,7 @@ function startup() {
 	}
 	for (const i of j.items) {
 		itemsByName.set(i.name, i);
-		searchResults.set(i.name.replace(/-/g, " "), {link: `#/item/${i.name}/`});
+		searchResults.set(i.name.replace(/-/g, " "), {link: `#/item/${i.name}/`, display: () => prettyItem(i)});
 	}
 	for (let i in j.encounters) {
 		var e = j.encounters[i];
@@ -299,22 +297,6 @@ function startup() {
 	for (let i in j.encounters) {
 		addPoolInfo(j.encounters[i]);
 	}
-
-	var pokemonDataList;
-	for (const p of pokemonByName.keys()) {
-		pokemonDataList += `<option value="${fullCapitalize(p)}" />`
-	}
-	document.getElementById("pokemon-names-list").innerHTML = pokemonDataList;
-	var itemDataList;
-	for (const i of itemsByName.keys()) {
-		itemDataList += `<option value="${fullCapitalize(i)}" />`
-	}
-	document.getElementById("item-names-list").innerHTML = itemDataList;
-	var moveDataList;
-	for (const m of movesByName.keys()) {
-		moveDataList += `<option value="${fullCapitalize(m)}" />`
-	}
-	document.getElementById("move-names-list").innerHTML = moveDataList;
 
 	for (let e of typeColors) {
 		searchResults.set(e[0], {link: `#/type/${e[0]}/`});
@@ -347,6 +329,17 @@ function startup() {
 		setTab("box");
 	}
 	navigate(window.location.hash);
+}
+
+function getFamily(poke) {
+	var family = pokemonFamilies.get(poke.pokedex);
+	var result = [];
+	for (const p of data.pokemon) {
+		if (pokemonFamilies.get(p.pokedex) == family) {
+			result.push(p);
+		}
+	}
+	return result;
 }
 
 function addToFamily(p, family) {

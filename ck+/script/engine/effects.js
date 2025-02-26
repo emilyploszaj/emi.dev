@@ -234,7 +234,7 @@ function checkStringCondition(condition, value) {
 	if (typeof condition === "string") {
 		return condition == value;
 	} else if (Array.isArray(condition)) {
-		return condition.indexOf(value) != -1;
+		return condition.contains(value);
 	}
 	return false;
 }
@@ -243,7 +243,7 @@ function checkNumberCondition(condition, value, max) {
 	if (typeof condition === "number") {
 		return condition == value;
 	} else if (Array.isArray(condition)) {
-		return condition.indexOf(value) != -1;
+		return condition.contains(value);
 	} else if (typeof condition === "string") {
 		var m = condition.match(/^(<|<=|>|>=|!=|=|==|)([0-9.]+)(%)$/);
 		var op = m[1];

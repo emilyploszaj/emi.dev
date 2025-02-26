@@ -99,20 +99,20 @@ function navigate(url) {
 				displayPokemon(document.getElementById("main-poke"), pokemonByName.get(parts[1]).pokedex);
 				setTab("full-poke");
 			} else if (parts[0] == "item") {
-				document.getElementById("full-item").innerHTML = getFullItemDisplay(parts[1]);
-				setTab("full-item");
+				document.getElementById("full-page").innerHTML = getFullItemDisplay(parts[1]);
+				setTab("full-page");
 			} else if (parts[0] == "move") {
-				document.getElementById("full-move").innerHTML = getFullMoveDisplay(movesByName.get(parts[1]));
-				setTab("full-move");
+				document.getElementById("full-page").innerHTML = getFullMoveDisplay(movesByName.get(parts[1]));
+				setTab("full-page");
 			} else if (parts[0] == "type") {
-				document.getElementById("full-type").innerHTML = getFullTypeDisplay(parts[1]);
-				setTab("full-type");
+				document.getElementById("full-page").innerHTML = getFullTypeDisplay(parts[1]);
+				setTab("full-page");
 			} else if (parts[0] == "area") {
-				document.getElementById("full-encounter").innerHTML = getEncounterDisplay(data.encounters[encountersByName.get(parts[1])]);
-				setTab("full-encounter");
+				document.getElementById("full-page").innerHTML = getEncounterDisplay(data.encounters[encountersByName.get(parts[1])]);
+				setTab("full-page");
 			} else if (parts[0] == "trainer") {
-				document.getElementById("full-trainer").innerHTML = getTrainerStats(trainersByName.get(parts[1]));
-				setTab("full-trainer");
+				document.getElementById("full-page").innerHTML = getTrainerStats(trainersByName.get(parts[1]));
+				setTab("full-page");
 			}
 		} else if (parts.length >= 1) {
 			if (parts[0] == "calc") {
@@ -123,8 +123,6 @@ function navigate(url) {
 				setTab("trainers")
 			} else if (parts[0] == "map") {
 				setTab("map")
-			} else if (parts[0] == "edit") {
-				setTab("edit");
 			}
 		}
 	} else {
@@ -157,7 +155,16 @@ function pokeLink(p) {
 }
 
 function prettyType(t) {
-	return createLink(`#/type/${t}/`, `<div class="type" style="background-color:${typeColor(t)};">${fullCapitalize(t)}</div>`);
+	return createLink(`#/type/${t}/`, unlinkedTypeIcon(t));
+}
+
+function unlinkedTypeIcon(t) {
+	return `<div class="type" style="background-color:${typeColor(t)};">${fullCapitalize(t)}</div>`;
+}
+
+function getTypeEmblem(type) {
+	color = typeColors.get(type);
+	return `<span class="move-emblem" style="background-color:${color};"></span>`;
 }
 
 function typeColor(t) {
@@ -165,11 +172,25 @@ function typeColor(t) {
 }
 
 function itemLink(item) {
+	if (item.name) {
+		item = item.name;
+	}
 	if (item.length == 0 || item == "no-item") {
 		return "";
 	}
 	item = item.replace(" ", "-");
-	return createLink(`#/item/${item}/`, itemImage(item) + fullCapitalize(item));
+	return createLink(`#/item/${item}/`, prettyItem(item));
+}
+
+function prettyItem(item) {
+	if (item.name) {
+		item = item.name;
+	}
+	if (item.length == 0 || item == "no-item") {
+		return "";
+	}
+	item = item.replace(" ", "-");
+	return itemImage(item) + fullCapitalize(item);
 }
 
 function itemImage(item) {
@@ -184,7 +205,11 @@ function itemImage(item) {
 }
 
 function landmarkLink(landmark) {
-	return areaLink(landmark.locations[0]);
+	if (landmark.locations.length > 0) {
+		return areaLink(landmark.locations[0]);
+	} else {
+		return fullCapitalize(landmark.name);
+	}
 }
 
 function areaLink(location) {

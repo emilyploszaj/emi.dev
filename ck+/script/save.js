@@ -87,7 +87,7 @@ function readPokemonList(bytes, start, capacity, increment) {
 	for (var i = 0; i < count; i++) {
 		species[i].level = bytes[p + 0x1f];
 		if (bytes[p] != species[i]) { // Mismatching species or egg
-			return;
+			continue;
 		}
 		var item = bytes[p + 0x01];
 		if (itemsById.has(item)) {

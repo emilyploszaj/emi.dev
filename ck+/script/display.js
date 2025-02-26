@@ -243,33 +243,35 @@ function prettyRolls(rolls, myHp, myCurrentHp, killHp, effects) {
 }
 
 function displayResiduals(root, left, right) {
-	var div = document.getElementById("residual-damage");
+	var move = {"name": "confusion-self-hit", "type": "curse", "power": 40};
 	if (left && right) {
-		var v = `<table>`;
-		v += `<tr>`;
-		var move = {"name": "confusion-self-hit", "type": "curse", "power": 40};
-		var res = engine.getDamage(left, left, BattleMove.of(left, move, -1, false));
-		v += residualRoll(left, res.max);
-		v += `<td>Confusion self hit</td>`;
-		var res = engine.getDamage(right, right, BattleMove.of(right, move, -1, false));
-		v += residualRoll(right, res.max);
-		v += `</tr><tr>`;
-		v += residualFractional(left, 1 / 16, residualToxicTooltip(left));
-		v += `<td>
-			<div class="residual-percent">6.25% (1/16)</div>
-			Bind, Toxic, Leftovers, etc.
-		</td>`;
-		v += residualFractional(right, 1 / 16, residualToxicTooltip(right));
-		v += `</tr><tr>`;
-		v += residualFractional(left, 1 / 8);
-		v += `<td>
-			<div class="residual-percent">12.5% (1/8)</div>
-			Poison, Burn, Sandstorm, Spikes, Leech Seed, etc.
-		</td>`;
-		v += residualFractional(right, 1 / 8);
-		v += `</tr>`;
-		v += `</table>`;
-		div.innerHTML = v;
+		var leftSelfHit = engine.getDamage(left, left, BattleMove.of(left, move, -1, false));
+		var rightSelfHit = engine.getDamage(right, right, BattleMove.of(right, move, -1, false));
+		document.getElementById("residual-damage").innerHTML = `
+			<table>
+				<tr>
+					${residualRoll(left, leftSelfHit.max)}
+					<td>Confusion self hit</td>
+					${residualRoll(right, rightSelfHit.max)}
+				</tr>
+				<tr>
+					${residualFractional(left, 1 / 16, residualToxicTooltip(left))}
+					<td>
+						<div class="residual-percent">6.25% (1/16)</div>
+						Bind, Toxic, Leftovers, etc.
+					</td>
+					${residualFractional(right, 1 / 16, residualToxicTooltip(right))}
+				</tr>
+				<tr>
+					${residualFractional(left, 1 / 8)}
+					<td>
+						<div class="residual-percent">12.5% (1/8)</div>
+						Poison, Burn, Sandstorm, Spikes, Leech Seed, etc.
+					</td>
+					${residualFractional(right, 1 / 8)}
+				</tr>
+			</table>
+		`;
 	}
 }
 
@@ -279,11 +281,8 @@ function residualFractional(battlePoke, fraction, tooltip) {
 }
 
 function residualRoll(battlePoke, damage, tooltip) {
-	var percent = Math.round(1000 * damage / getPokeStat(battlePoke.poke, "hp")) / 10;
-	if (!tooltip) {
-		tooltip = "";
-	}
-	return `<td><ruby>${damage}<rt>${percent}%</rt></ruby>${tooltip}</td>`;
+	var percent = toPercent(damage / getPokeStat(battlePoke.poke, "hp"));
+	return `<td><ruby>${damage}<rt>${percent}%</rt></ruby>${orElse(tooltip, "")}</td>`;
 }
 
 function residualToxicTooltip(battlePoke) {
@@ -456,39 +455,27 @@ function updateCalc() {
 function getEnemyTeamDisplay(enemyTeam, trainer) {
 	var v = "";
 	for (let i in enemyTeam) {
-		var prio = getSwitchPriority(enemyTeam[i], myPoke);
-		var prioClass = "neutral-switch-priority";
-		if (prio < 0) {
-			prioClass = "low-switch-priority";
-		} else if (prio > 0) {
-			prioClass = "high-switch-priority";
-		}
-		var img = '<img draggable="false" class="' + prioClass + '" src="' + getPokeImage(enemyTeam[i]) + '">';
+		var prioClass = ["low", "neutral", "high"][Math.sign(getSwitchPriority(enemyTeam[i], myPoke)) + 1];
+		var img = `<img draggable="false" class="${prioClass}-switch-priority" src="${getPokeImage(enemyTeam[i])}">`;
 		v += `<div onclick="setEnemy(${trainer}, ${i})">${img}</div>`;
 	}
 	return v;
 }
 
 function getPokemonLearnsetDisplay(p) {
-	var v = "";
-	v += '<table class="move-table">';
-	for (let mi in p.learnset) {
-		var m = p.learnset[mi];
-		v += getMoveDisplay(movesByName.get(m.move), m.level);
-	}
-	v += "</table>";
-	return v;
+	return `
+		<table class="move-table">
+			${p.learnset.displayMap(m => getMoveDisplay(movesByName.get(m.move), m.level))}
+		</table>
+	`;
 }
 
 function getPokemonTmHmDisplay(p) {
-	var v = "";
-	v += '<table class="move-table">';
-	for (let mi in p.tmhm) {
-		var m = p.tmhm[mi];
-		v += getMoveDisplay(movesByName.get(m));
-	}
-	v += "</table>";
-	return v;
+	return `
+		<table class="move-table">
+			${p.tmhm.displayMap(m => getMoveDisplay(movesByName.get(m)))}
+		</table>
+	`;
 }
 
 function getPokemonEncountersDisplay(p) {
@@ -602,104 +589,55 @@ function getFullItemDisplay(item) {
 }
 
 function getItemLocationDescription(desc) {
-	var l = "<div>";
-	l += itemLink(desc.item) + " " + desc.amount;
-	l += "</div>";
-	l += "<div>";
-	l += desc.info;
-	l += "</div>";
-	return l;
+	return `
+		<div>${itemLink(desc.item)} ${desc.amount}</div>
+		<div>${desc.info}</div>
+	`;
 }
 
 function getFullMoveDisplay(move) {
-	var v = "<h3>" + getMoveName(move.name) + "</h3>";
-	if (move.extra) {
-		for (var i = 0; i < move.extra.length; i++) {
-			v += "<p>";
-			var me = move.extra[i].split("\n");
-			for (var i = 0; i < me.length; i++) {
-				v += "<div>";
-				v += me[i];
-				v += "</div>";
-			}
-			v += "</p>";
-		}
-	}
-	v += "<div><table>";
-	v += getMoveDisplay(move);
-	v += "</table></div>";
-	if (movesByLearnset.has(move.name)) {
-		var list = movesByLearnset.get(move.name);
-		v += "<p>By Learnset (" + list.length + "):</p>";
-		v += '<div class="learnset-pool">'
-		for (var i = 0; i < list.length; i++) {
-			v += getEncounterPoke(list[i].pokemon, `Lvl ${list[i].level}`);
-		}
-		v += '</div>';
-	}
-	if (movesByTMHM.has(move.name)) {
-		var list = movesByTMHM.get(move.name);
-		v += "<p>By TMHM (" + list.length + "):</p>";
-		v += "<div>";
-		for (var i = 0; i < list.length; i++) {
-			v += '<div class="learnset-pool">'
-			for (var i = 0; i < list.length; i++) {
-				v += getEncounterPoke(list[i]);
-			}
-			v += '</div>';
-		}
-		v += '</div>';
-	}
-	return v;
+	var byLearnset = movesByLearnset.get(move.name);
+	var byTMHM = movesByTMHM.get(move.name);
+	return `
+		<h3>${getMoveName(move.name)}</h3>
+		${move.extra ?
+			move.extra.displayMap(e => `<p>${e.split("\n").displayMap(l => `<div>${l}</div>`)}</p>`)
+		: ""}
+		<div>
+			<table>
+				${getMoveDisplay(move)}
+			</table>
+		</div>
+		${byLearnset ? `
+			<p>By Learnset (${byLearnset.length}):</p>
+			<div class="learnset-pool">
+				${byLearnset.displayMap(e => getEncounterPoke(e.pokemon, `Lvl ${e.level}`))}
+			</div>
+		` : ""}
+		${byTMHM ? `
+			<p>By TMHM (${byTMHM.length}):</p>
+			<div class="learnset-pool">
+				${byTMHM.displayMap(p => getEncounterPoke(p))}
+			</div>
+		` : ""}
+	`;
 }
 
 function getMoveDisplay(move, level = undefined) {
-	var v = '<tr>';
-	if (level != undefined) {
-		v += '<td>' + level + '</td>';
-	}
-	v += '<td>' + prettyType(move.type) + '</td>';
-	v += '<td>' + moveLink(move.name) + '</td>';
-	if (move.power == 0) {
-		v += '<td>-</td>';
-	} else {
-		v += '<td>' + move.power + '</td>';
-	}
-	v += '<td>' + move.accuracy + '%</td>';
-	v += '<td>' + move.pp + 'pp</td>';
-	if (move.extra && move.extra.length > 0) {
-		var alt = "";
-		for (var i = 0; i < move.extra.length; i++) {
-			alt += move.extra[i];
-		}
-		v += '<td class="extra-info" title="' + alt + '">?</td>';
-	} else {
-		v += '<td></td>';
-	}
-	v += '</tr>';
-	return v;
+	return `
+		<tr>
+			${level != undefined ? `<td>${level}</td>` : ``}
+			<td>${prettyType(move.type)}</td>
+			<td>${moveLink(move.name)}</td>
+			<td>${move.power == 0 ? "-" : move.power}</td>
+			<td>${move.accuracy}%</td>
+			<td>${move.pp}pp</td>
+			${(move.extra && move.extra.length > 0) ? `<td class="extra-info" title="${move.extra.join("")}">?</td>` : ""}
+		</tr>
+	`;
 }
 
 function getFullTypeDisplay(type) {
-	var v = "";
-	v += `<div class="tab-contents">`;
-	v += '<div class="learnset-pool">'
-	for (var p of data.pokemon) {
-		if (p.types.indexOf(type) > -1) {
-			v += getEncounterPoke(p);
-		}
-	}
-	v += `</div></div>`;
-	v += `<div class="tab-contents">`;
-	v += `<table class="move-table">`;
-	for (var m of data.moves) {
-		if (m.type == type) {
-			v += getMoveDisplay(m);
-		}
-	}
-	v += `</table>`;
-	v += `</div>`;
-
 	return selectTabInDisplay(`
 	${prettyType(type)}
 	<div class="tab-collection">
@@ -709,7 +647,16 @@ function getFullTypeDisplay(type) {
 		</div>
 		<div class="scroll-padding-anchor"></div>
 		<div class="tab-body">
-			${v}
+			<div class="tab-contents">
+				<div class="learnset-pool">
+					${data.pokemon.filter(p => p.types.contains(type)).displayMap(p => getEncounterPoke(p))}
+				</div>
+			</div>
+			<div class="tab-contents">
+				<table class="move-table">
+					${data.moves.filter(m => m.type == type).displayMap(m => getMoveDisplay(m))}
+				</table>
+			</div>
 		</div>
 	</div>`, 0);
 }
@@ -718,22 +665,16 @@ function getEncounterPoke(poke, header, footer, extraClasses) {
 	if (!poke.types) {
 		poke = pokemonByName.get(poke);
 	}
-	v = "";
-	v += `<div class="encounter-poke${extraClasses ? " " + extraClasses : ""}">`;
-	if (header) {
-		v += header;
-	}
-	v += createLink(`#/pokemon/${poke.name}/`, '<img draggable="false" src="' + getPokeImage(poke.name) + '">');
-	if (footer) {
-		v += footer;
-	}
-	v += `<div class="type-slices">`;
-	for (var t of poke.types) {
-		v += customLink(`#/type/${t}/`, `class="type-slice" style="background-color: ${typeColor(t)};"`, "");
-	}
-	v += '</div>';
-	v += '</div>';
-	return v;
+	return `
+		<div class="encounter-poke${extraClasses ? " " + extraClasses : ""}">
+			${orElse(header, "")}
+			${createLink(`#/pokemon/${poke.name}/`, '<img draggable="false" src="' + getPokeImage(poke.name) + '">')}
+			${orElse(footer, "")}
+			<div class="type-slices">
+				${poke.types.displayMap(t => customLink(`#/type/${t}/`, `class="type-slice" style="background-color: ${typeColor(t)};"`, ""))}
+			</div>
+		</div>
+	`;
 }
 
 function setMap(xOffset = undefined, yOffset = 0, scale = 48) {
@@ -817,39 +758,18 @@ function getMapCenter(landmark) {
 	return {x: xo, y: yo};
 }
 
-function clearSearch() {
-	document.getElementById("search-box").value = "";
-	updateSearch("");
-}
-
-function updateSearch(v) {
-	v = v.toLowerCase();
-	var res = "";
-	var amount = 0;
-	if (v.length > 0) {
-		for (const n of searchResults.entries()) {
-			if (n[0].includes(v)) {
-				res += createLink(n[1].link, `<div class="search-suggestion" onclick="clearSearch()">${fullCapitalize(n[0])}</div>`);
-				amount++;
-				if (amount >= 12) {
-					break;
-				}
-			}
-		}
-	}
-	document.getElementById("search-suggestions").innerHTML = res;
-}
-
 function updateBox() {
-	// TODO this can cause slowdowns with like a few hundred mons and doesn't need to work like this
-	document.getElementById("box-pokes").innerHTML = "";
+	var v = ``;
 	for (var i = 0; i < box.length; i++) {
-		document.getElementById("box-pokes").innerHTML += getTinyPokemonDisplay(box[i],
-			'<div><button onclick="editBox(' + i + ')">Edit</button><button onclick="moveToBoxStart('
-			+ i + ')">Move to Start</button><button onclick="calcFromBox('
-			+ i + ')">Calc Vs</button><button onclick="removeFromBox('
-			+ i + ')">Delete</button></div>');
+		v += getTinyPokemonDisplay(box[i],
+			`<div>
+				<button onclick="editBox(${i})">Edit</button>
+				<button onclick="moveToBoxStart(${i})">Move to Start</button>
+				<button onclick="calcFromBox(${i})">Calc Vs</button>
+				<button onclick="removeFromBox(${i})">Delete</button>
+			</div>`);
 	}
+	document.getElementById("box-pokes").innerHTML = v;
 	savedData["box"] = box;
 	savedData["dead-box"] = deadBox;
 	writeLocalStorage();
@@ -915,6 +835,9 @@ function openMenu(name) {
 }
 
 document.onclick = function(event) {
+	if (OptionSelect.lastClickInside || event.target.parentElement == null || event.target.closest("#option-select") || (event.target && event.target.classList && event.target.classList.contains("option-list-option"))) {
+		return;
+	}
 	if (Math.abs(menuOpen - Date.now()) > 30) {
 		for (let el of document.getElementsByClassName("visible-selection-menu")) {
 			if (el.contains(event.target) && el.id != "item-menu") {
@@ -1012,7 +935,7 @@ function setEngineDisplayFlags(enabled) {
 	var sheet = document.getElementById("dynamic-style");
 	var content = "";
 	for (const flag of flags) {
-		if (enabled.indexOf(flag) == -1) {
+		if (!enabled.contains(flag)) {
 			content += `
 				.engine-flag-${flag} {
 					display: none;

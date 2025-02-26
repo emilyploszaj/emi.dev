@@ -1,3 +1,5 @@
+const STATS = ["hp", "atk", "def", "spa", "spd", "spe"];
+
 function getTinyPokemonDisplay(tp, extra = "") {
 	var p = pokemonByName.get(tp.name);
 	var v = '<div class="tiny-poke">';
@@ -22,16 +24,15 @@ function getTinyPokemonDisplay(tp, extra = "") {
 			v += "</tr><tr>";
 		}
 		if (i < tp.moves.length) {
-			var color = "#ffffff";
+			var type = "curse";
 			if (movesByName.has(tp.moves[i])) {
 				var type = movesByName.get(tp.moves[i]).type
 				if (tp.moves[i] == "hidden-power") {
 					type = getHiddenPower(tp).type;
 				}
-				color = typeColors.get(type);
 			}
 			//v += `<td class="move-emblem" style="--type-color:${color};">${moveLink(tp.moves[i])}</td>`;
-			v += `<td><span class="move-emblem" style="background-color:${color};"></span>${moveLink(tp.moves[i])}</td>`;
+			v += `<td>${getTypeEmblem(type)}${moveLink(tp.moves[i])}</td>`;
 		} else {
 			// Zero width space to force formatting
 			v += "<td>​</td>"
@@ -63,7 +64,7 @@ function getPokeImage(poke, unownExtra = undefined) {
 }
 
 function orElse(some, other) {
-	if (some) {
+	if (some != undefined && some != null) {
 		return some;
 	} else {
 		return other;
@@ -297,3 +298,27 @@ function selectTabInDisplay(content, tab) {
 	doc.getElementsByClassName("tab-contents")[tab].style.display = "block";
 	return doc.body.innerHTML;
 }
+
+function toPercent(number) {
+	return Math.round((1000 * number) / 10);
+}
+
+function doesElementContain(el, x, y) {
+	var rect = el.getBoundingClientRect();
+	if (x >= rect.left && x <= rect.right && y >= rect.top && y <= rect.bottom) {
+		return true;
+	}
+	return false;
+}
+
+Object.defineProperty(Array.prototype, "contains", {
+	value: function(some) {
+		return this.indexOf(some) != -1;
+	}
+});
+
+Object.defineProperty(Array.prototype, "displayMap", {
+	value: function(func) {
+		return this.map(func).join("");
+	}
+});

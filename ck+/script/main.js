@@ -52,11 +52,6 @@ function applySettings() {
 	writeLocalStorage();
 }
 
-document.getElementById("search-box").oninput = function (event) {
-	var v = event.target.value;
-	updateSearch(v);
-}
-
 document.ondrop = function (event) {
 	if (event.dataTransfer.files) {
 		var file = event.dataTransfer.files[0];
@@ -93,6 +88,6 @@ setItemMenu();
 
 document.getElementById("badges").value = badges;
 
-updateSearch(document.getElementById("search-box").value);
+SearchBox.update();
 
 initGame();

@@ -53,25 +53,22 @@ function displayTrainers() {
 }
 
 function getTrainerDisplay(trainer, i) {
-	var t = "";
-	t += '<div class="trainer">'
-	t += '<div>' + getTrainerName(trainer.name);
-	t += '<button style="float:right;" onclick="calcTrainer(' + i + ')">Calc</button>';
-	t += createLink(`#/trainer/${trainer.name}/`, '<button style="float:right;">Info</button>');
-	t += '</div>';
-	t += '<div class="trainer-pokes">';
-	t += getTeamDisplay(trainer);
-	t += '</div>';
-	t += '</div>';
-	return t;
+	return `
+		<div class="trainer">
+			<div>
+				${getTrainerName(trainer.name)}
+				<button style="float:right;" onclick="calcTrainer(' + i + ')">Calc</button>
+				${createLink(`#/trainer/${trainer.name}/`, '<button style="float:right;">Info</button>')}
+			</div>
+			<div class="trainer-pokes">
+				${getTeamDisplay(trainer)}
+			</div>
+		</div>
+	`;
 }
 
 function getTeamDisplay(t) {
-	var v = "";
-	for (var i = 0; i < t.team.length; i++) {
-		v += getTinyPokemonDisplay(t.team[i]);
-	}
-	return v;
+	return t.team.displayMap(p => getTinyPokemonDisplay(p));
 }
 
 function getTrainerStats(trainer) {
@@ -87,12 +84,12 @@ function getTrainerStats(trainer) {
 			${createLink(`#/trainer/${next}/`, `<button>Next</button>`)}
 			</span>
 		</h3>
+		<div class="trainer">
+			<div class="trainer-pokes">
+				${getTeamDisplay(trainer)}
+			</div>
+		</div>
 	`;
-	v += '<div class="trainer">';
-	v += '<div class="trainer-pokes">';
-	v += getTeamDisplay(trainer);
-	v += '</div>';
-	v += '</div>';
 	v += `<div class="engine-flag-statistics">`;
 	var fights = fightsByTrainer.get(trainer.name.toLowerCase());
 	if (fights) {
