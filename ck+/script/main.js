@@ -51,7 +51,7 @@ function applySettings() {
 	} else {
 		document.getElementById("update-vs-recorder").style.display = "none";
 	}
-	document.getElementById("extra-dupes").value = settings.extraDupes.join(" ");
+	document.getElementById("extra-dupes").value = orElse(settings.extraDupes, []).join(" ");
 	updateEngineFlags();
 	savedData["settings"] = settings;
 	writeLocalStorage();
