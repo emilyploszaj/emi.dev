@@ -274,7 +274,7 @@ img {
 	image-rendering: pixelated;
 }
 
-input {
+input, textarea {
 	font-family: "Ubuntu Mono";
 	font-size: 20px;
 	color: var(--text);
@@ -282,6 +282,10 @@ input {
 	border-width: 2px;
 	border-style: solid;
 	border-color: var(--border-color);
+}
+
+textarea {
+	background-color: var(--background);
 }
 
 summary:hover {
@@ -479,6 +483,11 @@ input:checked + .fake-checkbox {
 #settings, #full-page {
 	padding: 10px;
 	background-color: var(--box-background);
+}
+
+#extra-dupes-preview {
+	display: flex;
+	flex-wrap: wrap;
 }
 
 #full-page td {
@@ -1003,13 +1012,13 @@ rt {
 	flex-wrap: wrap;
 }
 
-.calc-team div {
+.micro-mon {
 	background-color: var(--background);
 	padding: 5px;
 	margin: 2px;
 }
 
-.calc-team img {
+.micro-mon img {
 	border-width: 3px;
 	border-style: dashed;
 	border-color: transparent;
@@ -1238,6 +1247,13 @@ rt {
 	overflow-y: scroll;
 	background-color: var(--search-suggestion);
 	padding: 4px;
+
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+#option-list::-webkit-scrollbar {
+	display: none;
 }
 
 #suggested-option-list {

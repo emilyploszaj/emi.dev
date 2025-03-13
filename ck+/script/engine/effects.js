@@ -18,6 +18,15 @@ class BattleEffects {
 			}
 		}
 		var effects = [];
+		if (move.effects) {
+			if (Array.isArray(move.effects)) {
+				for (const v of move.effects) {
+					addIfValid(effects, BattleEffect.parse("attack", v));
+				}
+			} else {
+				addIfValid(effects, BattleEffect.parse("attack", move.effects));
+			}
+		}
 		if (itemsByName.has(attacker.item)) {
 			var ai = itemsByName.get(attacker.item);
 			if (ai.effects) {
@@ -61,6 +70,31 @@ class BattleEffects {
 			if (mod != null) {
 				result = parseInt(mod(result, base, max));
 			}
+		}
+		return result;
+	}
+
+	/**
+	 * @param {BattlePoke} attacker
+	 * @param {BattlePoke} defender
+	 * @param {BattleMove} move
+	 * @param {String} modifier
+	 * @param {Number} base
+	 * @param {Number} max
+	 * @returns {Number}
+	 */
+	getModifierFloat(attacker, defender, move, modifier, base, max, def = undefined) {
+		var result = base;
+		var modified = false;
+		for (const e of this.effects) {
+			var mod = e.getModifier(attacker, defender, move, modifier);
+			if (mod != null) {
+				result = mod(result, base, max);
+				modified = true;
+			}
+		}
+		if (!modified && def !== undefined) {
+			return def;
 		}
 		return result;
 	}
@@ -133,7 +167,7 @@ class Modifier {
 	 * @returns {Modifier}
 	 */
 	static of(i) {
-		return (value, base, max) => base * i;
+		return (value, base, max) => i;
 	}
 
 	/**
@@ -141,7 +175,7 @@ class Modifier {
 	 */
 	static parse(v) {
 		if (typeof v === "number") {
-			return of(v);
+			return Modifier.of(v);
 		} else if (typeof v === "string") {
 			var m = v.match(/^(\+|\-|=)([0-9.]+)(%?)$/);
 			var op = m[1];
@@ -155,16 +189,16 @@ class Modifier {
 					case "-":
 						return (value, base, max) => value - base * number;
 					case "=":
-						return (value, base, max) => base * (number / 100);
+						return (value, base, max) => base * number;
 				}
 			} else {
 				switch (op) {
 					case "+":
-						return (value, base, max) => value + i;
+						return (value, base, max) => value + number;
 					case "-":
-						return (value, base, max) => value - i;
+						return (value, base, max) => value - number;
 					case "=":
-						return (value, base, max) => i;
+						return (value, base, max) => number;
 				}
 			}
 		}
@@ -194,6 +228,9 @@ class Condition {
 	 * @returns {boolean}
 	 */
 	checkConditions(attacker, defender, move) {
+		if (!this.json) {
+			return true; // Unconditional
+		}
 		var checkCondition = this.checkCondition;
 		var recursive = function(obj, key) {
 			for (const k of Object.keys(obj)) {
@@ -291,6 +328,8 @@ function initConditions() {
 	addForBoth("level", (condition, poke, opponent, move) => checkNumberCondition(condition, poke.level));
 	addForBoth("transformed", (condition, poke, opponent, move) => checkBooleanCondition(condition, (poke.poke.transformStats != undefined)));
 	addForBoth("hp", (condition, poke, opponent, move) => checkNumberCondition(condition, poke.currentHp(), poke.getStat("hp")));
+	addForBoth("statused", (condition, poke, opponent, move) => checkBooleanCondition(condition, poke.status != ""));
+	addForBoth("status", (condition, poke, opponent, move) => checkStringCondition(condition, poke.status));
 }
 
 initConditions();

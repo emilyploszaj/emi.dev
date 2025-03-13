@@ -108,12 +108,8 @@ class BattleMove {
 		return orElse(this.#variant.power, this.move.power);
 	}
 
-	get hits() {
-		return orElse(orElse(orElse(this.#variant.effects, {}).hits, orElse(this.move.effects, {}).hits), 1);
-	}
-
-	get multiplier() {
-		return orElse(orElse(orElse(this.#variant.effects, {}).multiplier, orElse(this.move.effects, {}).multiplier), 1);
+	get effects() {
+		return orElse(this.#variant.effects, this.move.effects);
 	}
 }
 
@@ -198,7 +194,8 @@ function calcTrainer(i) {
 	document.getElementById("current-trainer-name").innerHTML = `${getTrainerName(data.trainers[i].name)}`;
 	document.getElementById("current-trainer-navigate").href = `#/trainer/${data.trainers[i].name}/`;
 	setEnemy(lastTrainer, 0);
-	setTab("calc");
+	navigate("#/calc/");
+	history.pushState(getLinkState(), "", "#/calc/");
 }
 
 function transform(right) {

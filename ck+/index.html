@@ -39,7 +39,9 @@
 			<button onclick="addPokemonToBox()">Add Pokemon to Box</button>
 			<label class="fake-file-upload" for="sav-upload">Upload .sav</label>
 			<input id="sav-upload" type="file" accept=".sav"></input>
-			<button style="float:right;" onclick="clearData()">Clear Data</button>
+			<span style="float:right;">
+				<button onclick="clearData()">Clear Data</button>
+			</span>
 			<div id="box-pokes"></div>
 			<p>Drag your .sav file on this page to fill with your party and boxes 1-12. Boxes 13-16 are considered dead.</p>
 		</div>
@@ -186,6 +188,10 @@
 				<lb></lb>
 				While this data was not added for fight planning, some may prefer to not have it visible to avoid having their planning be influenced.
 			</p>
+			<h6>Dupes</h6>
+			<p>Extra dupes</p>
+			<textarea id="extra-dupes" oninput="updateExtraDupes()" onchange="updateSettings()" rows="4", cols="80"></textarea>
+			<div id="extra-dupes-preview"></div>
 			<h6>Credits</h6>
 			<p>Calc, Vs. Recorder, and related software written by Emi.</p>
 			<p>Miscellaneous data collection by Drazerk.</p>

@@ -190,16 +190,6 @@ function getDamage(attacker, defender, move) {
 	}
 	v += 2;
 
-	return getModdedDamage(v, attacker, defender, move);
-}
-
-/**
- * @param {BattlePoke} attacker
- * @param {BattlePoke} defender
- * @param {BattleMove} move
- * @return {CalcResult}
- */
-function getModdedDamage(v, attacker, defender, move) {
 	var weather = document.getElementById("current-weather").value;
 	if (weather == "rain") {
 		if (move.type == "fire" || move.name == "solar-beam") {
@@ -247,20 +237,30 @@ function getModdedDamage(v, attacker, defender, move) {
 	if (move.power == 1) {
 		return CalcResult.of(-1);
 	}
-	v *= move.multiplier;
+	v = effects.getModifier(attacker, defender, move, "damage", v, v);
 
 	var rolls = [];
 	for (var i = 217; i <= 255; i++) {
 		rolls.push(Math.max(1, parseInt(v * i / 255)));
 	}
-	var min = rolls[0] * move.hits;
-	var max = rolls[rolls.length - 1] * move.hits;
+	var hits = effects.getModifier(attacker, defender, move, "hits", 1, 1);
+	var min = rolls[0] * hits;
+	var max = rolls[rolls.length - 1] * hits;
 	// TODO make nicer
 	if (move.name == "triple-kick") {
 		min = min * 6;
 		max = max * 6;
 	}
-	return new CalcResult(rolls, min, max);
+	var result = new CalcResult(rolls, min, max);
+	var drain = effects.getModifierFloat(attacker, defender, move, "drain", 1, 1, 0);
+	if (drain != 0) {
+		result.drain = drain;
+	}
+	var recoil = effects.getModifierFloat(attacker, defender, move, "recoil", 1, 1, 0);
+	if (recoil != 0) {
+		result.recoil = recoil;
+	}
+	return result;
 }
 
 function getModifiedStat(poke, stages, stat) {

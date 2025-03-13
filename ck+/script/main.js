@@ -26,6 +26,9 @@ function readLocalStorage() {
 	if (settings.enableStatistics == undefined) {
 		settings.enableStatistics = true;
 	}
+	if (settings.extraDupes == undefined) {
+		settings.enableStatistics = [];
+	}
 	applySettings();
 }
 
@@ -36,6 +39,7 @@ function writeLocalStorage() {
 function updateSettings() {
 	settings.enableVsRecorder = document.getElementById("enable-vs-recorder").checked;
 	settings.enableStatistics = document.getElementById("enable-statistics").checked;
+	settings.extraDupes = getExtraDupes();
 	applySettings();
 }
 
@@ -47,9 +51,27 @@ function applySettings() {
 	} else {
 		document.getElementById("update-vs-recorder").style.display = "none";
 	}
+	document.getElementById("extra-dupes").value = settings.extraDupes.join(" ");
 	updateEngineFlags();
 	savedData["settings"] = settings;
 	writeLocalStorage();
+}
+
+function getExtraDupes() {
+	return document.getElementById("extra-dupes").value.split(/[ ,\n\t]+/).map(e => normalize(e)).filter(e => pokemonByName.has(e));
+}
+
+function updateExtraDupes() {
+	var dupes = getExtraDupes();
+	var v = "";
+	for (const dupe of dupes) {
+		if (pokemonByName.has(dupe)) {
+			v += `<div class="micro-mon drag-sortable">
+				<img draggable="false" src="${getPokeImage(pokemonByName.get(dupe))}">
+			</div>`;
+		}
+	}
+	document.getElementById("extra-dupes-preview").innerHTML = v;
 }
 
 document.ondrop = function (event) {

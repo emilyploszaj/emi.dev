@@ -57,7 +57,7 @@ function getTrainerDisplay(trainer, i) {
 		<div class="trainer">
 			<div>
 				${getTrainerName(trainer.name)}
-				<button style="float:right;" onclick="calcTrainer(' + i + ')">Calc</button>
+				<button style="float:right;" onclick="calcTrainer(${i})">Calc</button>
 				${createLink(`#/trainer/${trainer.name}/`, '<button style="float:right;">Info</button>')}
 			</div>
 			<div class="trainer-pokes">

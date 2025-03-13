@@ -18933,7 +18933,9 @@
                 {
                     "description": "Switch out",
                     "effects": {
-                        "multiplier": 2
+                        "modifiers": {
+                            "damage": "=200%"
+                        }
                     }
                 }
             ]
@@ -18961,9 +18963,6 @@
         },
         {
             "accuracy": 100,
-            "effects": {
-                "hits": 2
-            },
             "extra": [
                 "Hits 2-5 times"
             ],
@@ -18971,34 +18970,8 @@
             "name": "pin-missile",
             "power": 20,
             "pp": 20,
-            "roll_variants": true,
-            "type": "bug",
-            "variants": [
-                {
-                    "description": "Hits 2 times",
-                    "effects": {
-                        "hits": 2
-                    }
-                },
-                {
-                    "description": "Hits 3 times",
-                    "effects": {
-                        "hits": 3
-                    }
-                },
-                {
-                    "description": "Hits 4 times",
-                    "effects": {
-                        "hits": 4
-                    }
-                },
-                {
-                    "description": "Hits 5 times",
-                    "effects": {
-                        "hits": 5
-                    }
-                }
-            ]
+            "template": "multi-hit",
+            "type": "bug"
         },
         {
             "accuracy": 100,
@@ -19046,9 +19019,6 @@
         },
         {
             "accuracy": 100,
-            "effects": {
-                "recoil": 0.333299999999999985
-            },
             "extra": [
                 "User takes 33% of damage dealt as recoil"
             ],
@@ -19056,6 +19026,7 @@
             "name": "sky-attack",
             "power": 120,
             "pp": 5,
+            "template": "recoil-third",
             "type": "flying"
         },
         {
@@ -19123,9 +19094,6 @@
         },
         {
             "accuracy": 100,
-            "effects": {
-                "hits": 2
-            },
             "extra": [
                 "Hits 2-5 times"
             ],
@@ -19133,34 +19101,8 @@
             "name": "fury-attack",
             "power": 15,
             "pp": 20,
-            "roll_variants": true,
-            "type": "normal",
-            "variants": [
-                {
-                    "description": "Hits 2 times",
-                    "effects": {
-                        "hits": 2
-                    }
-                },
-                {
-                    "description": "Hits 3 times",
-                    "effects": {
-                        "hits": 3
-                    }
-                },
-                {
-                    "description": "Hits 4 times",
-                    "effects": {
-                        "hits": 4
-                    }
-                },
-                {
-                    "description": "Hits 5 times",
-                    "effects": {
-                        "hits": 5
-                    }
-                }
-            ]
+            "template": "multi-hit",
+            "type": "normal"
         },
         {
             "accuracy": 100,
@@ -19497,9 +19439,6 @@
         },
         {
             "accuracy": 100,
-            "effects": {
-                "recoil": 0.333299999999999985
-            },
             "extra": [
                 "User takes 33% of damage dealt as recoil"
             ],
@@ -19507,6 +19446,7 @@
             "name": "hi-jump-kick",
             "power": 110,
             "pp": 20,
+            "template": "recoil-third",
             "type": "fighting"
         },
         {
@@ -19584,9 +19524,6 @@
         },
         {
             "accuracy": 100,
-            "effects": {
-                "drain": 0.5
-            },
             "extra": [
                 "Can only hit sleeping targets, user heals 50% damage dealt"
             ],
@@ -19594,6 +19531,7 @@
             "name": "dream-eater",
             "power": 100,
             "pp": 15,
+            "template": "drain-half",
             "type": "psychic"
         },
         {
@@ -19609,9 +19547,6 @@
         },
         {
             "accuracy": 100,
-            "effects": {
-                "hits": 2
-            },
             "extra": [
                 "Hits 2-5 times"
             ],
@@ -19619,34 +19554,8 @@
             "name": "fury-swipes",
             "power": 18,
             "pp": 15,
-            "roll_variants": true,
-            "type": "normal",
-            "variants": [
-                {
-                    "description": "Hits 2 times",
-                    "effects": {
-                        "hits": 2
-                    }
-                },
-                {
-                    "description": "Hits 3 times",
-                    "effects": {
-                        "hits": 3
-                    }
-                },
-                {
-                    "description": "Hits 4 times",
-                    "effects": {
-                        "hits": 4
-                    }
-                },
-                {
-                    "description": "Hits 5 times",
-                    "effects": {
-                        "hits": 5
-                    }
-                }
-            ]
+            "template": "multi-hit",
+            "type": "normal"
         },
         {
             "accuracy": 100,
@@ -19672,9 +19581,6 @@
         },
         {
             "accuracy": 100,
-            "effects": {
-                "recoil": 0.333299999999999985
-            },
             "extra": [
                 "User takes 33% of damage dealt as recoil"
             ],
@@ -19682,6 +19588,7 @@
             "name": "double-edge",
             "power": 120,
             "pp": 15,
+            "template": "recoil-third",
             "type": "normal"
         },
         {
@@ -19752,9 +19659,6 @@
         },
         {
             "accuracy": 100,
-            "effects": {
-                "drain": 0.5
-            },
             "extra": [
                 "User heals 50% of damage dealt"
             ],
@@ -19762,6 +19666,7 @@
             "name": "absorb",
             "power": 20,
             "pp": 20,
+            "template": "drain-half",
             "type": "grass"
         },
         {
@@ -19875,7 +19780,9 @@
         {
             "accuracy": 100,
             "effects": {
-                "recoil": 0.25
+                "modifiers": {
+                    "recoil": "=25%"
+                }
             },
             "extra": [
                 "User takes 25% of damage dealt as recoil"
@@ -19888,9 +19795,6 @@
         },
         {
             "accuracy": 85,
-            "effects": {
-                "recoil": 0.333299999999999985
-            },
             "extra": [
                 "User takes 33% of damage dealt as recoil"
             ],
@@ -19898,6 +19802,7 @@
             "name": "take-down",
             "power": 90,
             "pp": 20,
+            "template": "recoil-third",
             "type": "normal"
         },
         {
@@ -20139,9 +20044,6 @@
         },
         {
             "accuracy": 100,
-            "effects": {
-                "hits": 2
-            },
             "extra": [
                 "Hits 2-5 times"
             ],
@@ -20149,34 +20051,8 @@
             "name": "comet-punch",
             "power": 18,
             "pp": 15,
-            "roll_variants": true,
-            "type": "normal",
-            "variants": [
-                {
-                    "description": "Hits 2 times",
-                    "effects": {
-                        "hits": 2
-                    }
-                },
-                {
-                    "description": "Hits 3 times",
-                    "effects": {
-                        "hits": 3
-                    }
-                },
-                {
-                    "description": "Hits 4 times",
-                    "effects": {
-                        "hits": 4
-                    }
-                },
-                {
-                    "description": "Hits 5 times",
-                    "effects": {
-                        "hits": 5
-                    }
-                }
-            ]
+            "template": "multi-hit",
+            "type": "normal"
         },
         {
             "accuracy": 100,
@@ -20254,9 +20130,6 @@
         },
         {
             "accuracy": 100,
-            "effects": {
-                "hits": 2
-            },
             "extra": [
                 "Hits 2-5 times"
             ],
@@ -20264,34 +20137,8 @@
             "name": "bone-rush",
             "power": 25,
             "pp": 10,
-            "roll_variants": true,
-            "type": "ground",
-            "variants": [
-                {
-                    "description": "Hits 2 times",
-                    "effects": {
-                        "hits": 2
-                    }
-                },
-                {
-                    "description": "Hits 3 times",
-                    "effects": {
-                        "hits": 3
-                    }
-                },
-                {
-                    "description": "Hits 4 times",
-                    "effects": {
-                        "hits": 4
-                    }
-                },
-                {
-                    "description": "Hits 5 times",
-                    "effects": {
-                        "hits": 5
-                    }
-                }
-            ]
+            "template": "multi-hit",
+            "type": "ground"
         },
         {
             "accuracy": 100,
@@ -20307,25 +20154,33 @@
                 {
                     "description": "Turn 2",
                     "effects": {
-                        "multiplier": 2
+                        "modifiers": {
+                            "damage": "=200%"
+                        }
                     }
                 },
                 {
                     "description": "Turn 3",
                     "effects": {
-                        "multiplier": 4
+                        "modifiers": {
+                            "damage": "=400%"
+                        }
                     }
                 },
                 {
                     "description": "Turn 4",
                     "effects": {
-                        "multiplier": 8
+                        "modifiers": {
+                            "damage": "=800%"
+                        }
                     }
                 },
                 {
                     "description": "Turn 5",
                     "effects": {
-                        "multiplier": 16
+                        "modifiers": {
+                            "damage": "=1600%"
+                        }
                     }
                 }
             ]
@@ -20354,9 +20209,6 @@
         },
         {
             "accuracy": 100,
-            "effects": {
-                "drain": 0.5
-            },
             "extra": [
                 "User heals 50% of damage dealt"
             ],
@@ -20364,6 +20216,7 @@
             "name": "mega-drain",
             "power": 40,
             "pp": 10,
+            "template": "drain-half",
             "type": "grass"
         },
         {
@@ -20390,9 +20243,6 @@
         },
         {
             "accuracy": 100,
-            "effects": {
-                "hits": 2
-            },
             "extra": [
                 "Hits 2-5 times"
             ],
@@ -20400,34 +20250,8 @@
             "name": "doubleslap",
             "power": 15,
             "pp": 10,
-            "roll_variants": true,
-            "type": "normal",
-            "variants": [
-                {
-                    "description": "Hits 2 times",
-                    "effects": {
-                        "hits": 2
-                    }
-                },
-                {
-                    "description": "Hits 3 times",
-                    "effects": {
-                        "hits": 3
-                    }
-                },
-                {
-                    "description": "Hits 4 times",
-                    "effects": {
-                        "hits": 4
-                    }
-                },
-                {
-                    "description": "Hits 5 times",
-                    "effects": {
-                        "hits": 5
-                    }
-                }
-            ]
+            "template": "multi-hit",
+            "type": "normal"
         },
         {
             "accuracy": 100,
@@ -20453,9 +20277,6 @@
         },
         {
             "accuracy": 100,
-            "effects": {
-                "hits": 2
-            },
             "extra": [
                 "Hits 2 times"
             ],
@@ -20463,6 +20284,7 @@
             "name": "double-kick",
             "power": 30,
             "pp": 30,
+            "template": "double-hit",
             "type": "fighting"
         },
         {
@@ -20724,9 +20546,6 @@
         },
         {
             "accuracy": 100,
-            "effects": {
-                "hits": 2
-            },
             "extra": [
                 "Hits 2-5 times"
             ],
@@ -20734,34 +20553,8 @@
             "name": "spike-cannon",
             "power": 20,
             "pp": 15,
-            "roll_variants": true,
-            "type": "normal",
-            "variants": [
-                {
-                    "description": "Hits 2 times",
-                    "effects": {
-                        "hits": 2
-                    }
-                },
-                {
-                    "description": "Hits 3 times",
-                    "effects": {
-                        "hits": 3
-                    }
-                },
-                {
-                    "description": "Hits 4 times",
-                    "effects": {
-                        "hits": 4
-                    }
-                },
-                {
-                    "description": "Hits 5 times",
-                    "effects": {
-                        "hits": 5
-                    }
-                }
-            ]
+            "template": "multi-hit",
+            "type": "normal"
         },
         {
             "accuracy": 100,
@@ -20798,9 +20591,6 @@
         },
         {
             "accuracy": 100,
-            "effects": {
-                "drain": 0.5
-            },
             "extra": [
                 "User heals 50% of damage dealt"
             ],
@@ -20808,6 +20598,7 @@
             "name": "leech-life",
             "power": 40,
             "pp": 15,
+            "template": "drain-half",
             "type": "bug"
         },
         {
@@ -20844,9 +20635,6 @@
         },
         {
             "accuracy": 100,
-            "effects": {
-                "hits": 2
-            },
             "extra": [
                 "Hits 2 times"
             ],
@@ -20854,6 +20642,7 @@
             "name": "bonemerang",
             "power": 50,
             "pp": 10,
+            "template": "double-hit",
             "type": "ground"
         },
         {
@@ -21180,9 +20969,6 @@
         },
         {
             "accuracy": 100,
-            "effects": {
-                "hits": 2
-            },
             "extra": [
                 "Hits 2-5 times"
             ],
@@ -21190,34 +20976,8 @@
             "name": "barrage",
             "power": 15,
             "pp": 20,
-            "roll_variants": true,
-            "type": "normal",
-            "variants": [
-                {
-                    "description": "Hits 2 times",
-                    "effects": {
-                        "hits": 2
-                    }
-                },
-                {
-                    "description": "Hits 3 times",
-                    "effects": {
-                        "hits": 3
-                    }
-                },
-                {
-                    "description": "Hits 4 times",
-                    "effects": {
-                        "hits": 4
-                    }
-                },
-                {
-                    "description": "Hits 5 times",
-                    "effects": {
-                        "hits": 5
-                    }
-                }
-            ]
+            "template": "multi-hit",
+            "type": "normal"
         },
         {
             "accuracy": 70,
@@ -21232,9 +20992,6 @@
         },
         {
             "accuracy": 100,
-            "effects": {
-                "hits": 2
-            },
             "extra": [
                 "Hits 2 times\n20% chance to poison opponents (including steel types)"
             ],
@@ -21242,6 +20999,7 @@
             "name": "twineedle",
             "power": 35,
             "pp": 20,
+            "template": "double-hit",
             "type": "bug"
         },
         {
@@ -21268,9 +21026,6 @@
         },
         {
             "accuracy": 100,
-            "effects": {
-                "drain": 0.5
-            },
             "extra": [
                 "User heals 50% of damage dealt"
             ],
@@ -21278,6 +21033,7 @@
             "name": "giga-drain",
             "power": 75,
             "pp": 10,
+            "template": "drain-half",
             "type": "grass"
         },
         {
@@ -21796,25 +21552,33 @@
                 {
                     "description": "Turn 2",
                     "effects": {
-                        "multiplier": 2
+                        "modifiers": {
+                            "damage": "=200%"
+                        }
                     }
                 },
                 {
                     "description": "Turn 3",
                     "effects": {
-                        "multiplier": 4
+                        "modifiers": {
+                            "damage": "=400%"
+                        }
                     }
                 },
                 {
                     "description": "Turn 4",
                     "effects": {
-                        "multiplier": 8
+                        "modifiers": {
+                            "damage": "=800%"
+                        }
                     }
                 },
                 {
                     "description": "Turn 5",
                     "effects": {
-                        "multiplier": 16
+                        "modifiers": {
+                            "damage": "=1600%"
+                        }
                     }
                 }
             ]
@@ -42552,6 +42316,73 @@
             ]
         }
     ],
+    "templates": {
+        "move": {
+            "double-hit": {
+                "effects": {
+                    "modifiers": {
+                        "hits": 2
+                    }
+                }
+            },
+            "drain-half": {
+                "effects": {
+                    "modifiers": {
+                        "drain": "=50%"
+                    }
+                }
+            },
+            "multi-hit": {
+                "effects": {
+                    "modifiers": {
+                        "hits": 2
+                    }
+                },
+                "roll_variants": true,
+                "variants": [
+                    {
+                        "description": "Hits 2 times",
+                        "effects": {
+                            "modifiers": {
+                                "hits": 2
+                            }
+                        }
+                    },
+                    {
+                        "description": "Hits 3 times",
+                        "effects": {
+                            "modifiers": {
+                                "hits": 3
+                            }
+                        }
+                    },
+                    {
+                        "description": "Hits 4 times",
+                        "effects": {
+                            "modifiers": {
+                                "hits": 4
+                            }
+                        }
+                    },
+                    {
+                        "description": "Hits 5 times",
+                        "effects": {
+                            "modifiers": {
+                                "hits": 5
+                            }
+                        }
+                    }
+                ]
+            },
+            "recoil-third": {
+                "effects": {
+                    "modifiers": {
+                        "recoil": "=33.33%"
+                    }
+                }
+            }
+        }
+    },
     "trainers": [
         {
             "area": "Cherrygrove City",
@@ -60171,17 +60002,17 @@
         {
             "attacker": "fire",
             "defender": "grass",
-            "multiplier": 2
+            "multiplier": 2.0
         },
         {
             "attacker": "fire",
             "defender": "ice",
-            "multiplier": 2
+            "multiplier": 2.0
         },
         {
             "attacker": "fire",
             "defender": "bug",
-            "multiplier": 2
+            "multiplier": 2.0
         },
         {
             "attacker": "fire",
@@ -60196,12 +60027,12 @@
         {
             "attacker": "fire",
             "defender": "steel",
-            "multiplier": 2
+            "multiplier": 2.0
         },
         {
             "attacker": "water",
             "defender": "fire",
-            "multiplier": 2
+            "multiplier": 2.0
         },
         {
             "attacker": "water",
@@ -60216,12 +60047,12 @@
         {
             "attacker": "water",
             "defender": "ground",
-            "multiplier": 2
+            "multiplier": 2.0
         },
         {
             "attacker": "water",
             "defender": "rock",
-            "multiplier": 2
+            "multiplier": 2.0
         },
         {
             "attacker": "water",
@@ -60231,7 +60062,7 @@
         {
             "attacker": "electric",
             "defender": "water",
-            "multiplier": 2
+            "multiplier": 2.0
         },
         {
             "attacker": "electric",
@@ -60246,12 +60077,12 @@
         {
             "attacker": "electric",
             "defender": "ground",
-            "multiplier": 0
+            "multiplier": 0.0
         },
         {
             "attacker": "electric",
             "defender": "flying",
-            "multiplier": 2
+            "multiplier": 2.0
         },
         {
             "attacker": "electric",
@@ -60266,7 +60097,7 @@
         {
             "attacker": "grass",
             "defender": "water",
-            "multiplier": 2
+            "multiplier": 2.0
         },
         {
             "attacker": "grass",
@@ -60281,7 +60112,7 @@
         {
             "attacker": "grass",
             "defender": "ground",
-            "multiplier": 2
+            "multiplier": 2.0
         },
         {
             "attacker": "grass",
@@ -60296,7 +60127,7 @@
         {
             "attacker": "grass",
             "defender": "rock",
-            "multiplier": 2
+            "multiplier": 2.0
         },
         {
             "attacker": "grass",
@@ -60316,7 +60147,7 @@
         {
             "attacker": "ice",
             "defender": "grass",
-            "multiplier": 2
+            "multiplier": 2.0
         },
         {
             "attacker": "ice",
@@ -60326,17 +60157,17 @@
         {
             "attacker": "ice",
             "defender": "ground",
-            "multiplier": 2
+            "multiplier": 2.0
         },
         {
             "attacker": "ice",
             "defender": "flying",
-            "multiplier": 2
+            "multiplier": 2.0
         },
         {
             "attacker": "ice",
             "defender": "dragon",
-            "multiplier": 2
+            "multiplier": 2.0
         },
         {
             "attacker": "ice",
@@ -60351,12 +60182,12 @@
         {
             "attacker": "fighting",
             "defender": "normal",
-            "multiplier": 2
+            "multiplier": 2.0
         },
         {
             "attacker": "fighting",
             "defender": "ice",
-            "multiplier": 2
+            "multiplier": 2.0
         },
         {
             "attacker": "fighting",
@@ -60381,22 +60212,22 @@
         {
             "attacker": "fighting",
             "defender": "rock",
-            "multiplier": 2
+            "multiplier": 2.0
         },
         {
             "attacker": "fighting",
             "defender": "dark",
-            "multiplier": 2
+            "multiplier": 2.0
         },
         {
             "attacker": "fighting",
             "defender": "steel",
-            "multiplier": 2
+            "multiplier": 2.0
         },
         {
             "attacker": "poison",
             "defender": "grass",
-            "multiplier": 2
+            "multiplier": 2.0
         },
         {
             "attacker": "poison",
@@ -60421,17 +60252,17 @@
         {
             "attacker": "poison",
             "defender": "steel",
-            "multiplier": 0
+            "multiplier": 0.0
         },
         {
             "attacker": "ground",
             "defender": "fire",
-            "multiplier": 2
+            "multiplier": 2.0
         },
         {
             "attacker": "ground",
             "defender": "electric",
-            "multiplier": 2
+            "multiplier": 2.0
         },
         {
             "attacker": "ground",
@@ -60441,12 +60272,12 @@
         {
             "attacker": "ground",
             "defender": "poison",
-            "multiplier": 2
+            "multiplier": 2.0
         },
         {
             "attacker": "ground",
             "defender": "flying",
-            "multiplier": 0
+            "multiplier": 0.0
         },
         {
             "attacker": "ground",
@@ -60456,12 +60287,12 @@
         {
             "attacker": "ground",
             "defender": "rock",
-            "multiplier": 2
+            "multiplier": 2.0
         },
         {
             "attacker": "ground",
             "defender": "steel",
-            "multiplier": 2
+            "multiplier": 2.0
         },
         {
             "attacker": "flying",
@@ -60471,17 +60302,17 @@
         {
             "attacker": "flying",
             "defender": "grass",
-            "multiplier": 2
+            "multiplier": 2.0
         },
         {
             "attacker": "flying",
             "defender": "fighting",
-            "multiplier": 2
+            "multiplier": 2.0
         },
         {
             "attacker": "flying",
             "defender": "bug",
-            "multiplier": 2
+            "multiplier": 2.0
         },
         {
             "attacker": "flying",
@@ -60496,17 +60327,17 @@
         {
             "attacker": "psychic",
             "defender": "dark",
-            "multiplier": 0
+            "multiplier": 0.0
         },
         {
             "attacker": "psychic",
             "defender": "fighting",
-            "multiplier": 2
+            "multiplier": 2.0
         },
         {
             "attacker": "psychic",
             "defender": "poison",
-            "multiplier": 2
+            "multiplier": 2.0
         },
         {
             "attacker": "psychic",
@@ -60526,7 +60357,7 @@
         {
             "attacker": "bug",
             "defender": "grass",
-            "multiplier": 2
+            "multiplier": 2.0
         },
         {
             "attacker": "bug",
@@ -60546,7 +60377,7 @@
         {
             "attacker": "bug",
             "defender": "psychic",
-            "multiplier": 2
+            "multiplier": 2.0
         },
         {
             "attacker": "bug",
@@ -60556,7 +60387,7 @@
         {
             "attacker": "bug",
             "defender": "dark",
-            "multiplier": 2
+            "multiplier": 2.0
         },
         {
             "attacker": "bug",
@@ -60566,12 +60397,12 @@
         {
             "attacker": "rock",
             "defender": "fire",
-            "multiplier": 2
+            "multiplier": 2.0
         },
         {
             "attacker": "rock",
             "defender": "ice",
-            "multiplier": 2
+            "multiplier": 2.0
         },
         {
             "attacker": "rock",
@@ -60586,12 +60417,12 @@
         {
             "attacker": "rock",
             "defender": "flying",
-            "multiplier": 2
+            "multiplier": 2.0
         },
         {
             "attacker": "rock",
             "defender": "bug",
-            "multiplier": 2
+            "multiplier": 2.0
         },
         {
             "attacker": "rock",
@@ -60601,12 +60432,12 @@
         {
             "attacker": "ghost",
             "defender": "normal",
-            "multiplier": 0
+            "multiplier": 0.0
         },
         {
             "attacker": "ghost",
             "defender": "psychic",
-            "multiplier": 2
+            "multiplier": 2.0
         },
         {
             "attacker": "ghost",
@@ -60621,12 +60452,12 @@
         {
             "attacker": "ghost",
             "defender": "ghost",
-            "multiplier": 2
+            "multiplier": 2.0
         },
         {
             "attacker": "dragon",
             "defender": "dragon",
-            "multiplier": 2
+            "multiplier": 2.0
         },
         {
             "attacker": "dragon",
@@ -60641,12 +60472,12 @@
         {
             "attacker": "dark",
             "defender": "psychic",
-            "multiplier": 2
+            "multiplier": 2.0
         },
         {
             "attacker": "dark",
             "defender": "ghost",
-            "multiplier": 2
+            "multiplier": 2.0
         },
         {
             "attacker": "dark",
@@ -60676,12 +60507,12 @@
         {
             "attacker": "steel",
             "defender": "ice",
-            "multiplier": 2
+            "multiplier": 2.0
         },
         {
             "attacker": "steel",
             "defender": "rock",
-            "multiplier": 2
+            "multiplier": 2.0
         },
         {
             "attacker": "steel",
@@ -60691,17 +60522,17 @@
         {
             "attacker": "normal",
             "defender": "ghost",
-            "multiplier": 0
+            "multiplier": 0.0
         },
         {
             "attacker": "fighting",
             "defender": "ghost",
-            "multiplier": 0
+            "multiplier": 0.0
         },
         {
             "attacker": "psychic",
             "defender": "dark",
-            "multiplier": 0
+            "multiplier": 0.0
         }
     ]
 }

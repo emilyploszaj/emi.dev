@@ -256,7 +256,12 @@ function startup() {
 			movesByTMHM.get(m).push(p.name);
 		}
 	}
-	for (const m of j.moves) {
+	for (let m of j.moves) {
+		if (m.template) {
+			var template = j.templates.move[m.template];
+			delete m.template;
+			Object.assign(m, template);
+		}
 		movesByName.set(m.name, m);
 		if (m.index) {
 			movesByIndex.set(m.index, m);
@@ -357,6 +362,11 @@ function hasFamily(family) {
 	}
 	for (let i in deadBox) {
 		if (pokemonFamilies.get(pokemonByName.get(deadBox[i].name).pokedex) == family) {
+			return true;
+		}
+	}
+	for (const d of orElse(settings.extraDupes, [])) {
+		if (pokemonFamilies.get(pokemonByName.get(d).pokedex) == family) {
 			return true;
 		}
 	}

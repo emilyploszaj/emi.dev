@@ -589,7 +589,7 @@ class OptionSelect {
 		if (this.target == null) {
 			return;
 		}
-		var text = document.getElementById("option-search").value.toLowerCase();
+		var text = normalize(document.getElementById("option-search").value);
 		var list = document.getElementById("option-list");
 		for (const child of list.children) {
 			if (child.getAttribute("search").indexOf(text) != -1) {
@@ -719,7 +719,7 @@ class SearchBox {
 	}
 
 	static update() {
-		var v = document.getElementById("search-box").value.toLowerCase();
+		var v = normalize(document.getElementById("search-box").value);
 		var res = "";
 		var i = 0;
 		if (v.length > 0) {
