@@ -1131,6 +1131,682 @@
 		Toxic is seen as Surf, a damaging move, and is <b>greatly discouraged (+2)</b>.
 		Finally, Status AI sees both Acid and Toxic as poison moves targeting an immune player, a steel type, and <b>dismisses (+10)</b> both.
 	</p>
+	<h2 id="switch-ai">Switch AI</h2>
+	<p>
+		Move selection AI is only part of the puzzle when it comes to trainer AI.
+		The rest of the pieces come together with two forms of switch AI: Post-KO and mid-turn switch AI.
+		The former governs what pokemon should come out after the player has defeated one of the AI's pokemon.
+		The latter governs whether the AI should switch out instead of opting to attack, and if so, to which pokemon.
+		Both use completely distinct routines.
+	</p>
+	<h2>Post-KO Switch AI</h2>
+	<p>
+		Post-KO switch AI is the most common form of switch AI the player will interact with.
+		Since every battle with 2 or more pokemon will require it occur at least once, a majority of battles in the game will have it occur 1-5 times.
+		Fortunately, it is by far the simpler AI, basic and stateless enough to allow tools like the <a href="https://emi.dev/ck+/">damage calculator</a> to indicate it with no trouble.
+	</p>
+	<p>
+		Every living pokemon is individually assigned a score from -1 to 1.
+		From there, the highest score is determined, and the first pokemon with that score in party order is sent out.
+		In the case that every single living AI pokemon scores -1, the switch becomes random.
+		Each pokemon is scored thusly:
+	</p>
+	<ul>
+		<li>Start at 0</li>
+		<li>If any of the enemy's moves (including status moves) have a type advantage against the player, +1</li>
+		<li>If either of the player's types are super effective against the enemy, -1</li>
+	</ul>
+	<p>
+		That's it.
+		Two basic super effective checks, considering the enemy's moves and the player's types.
+		There are some obvious flaws here, of course, the consideration of status moves, the lack of consideration for the player's moves.
+		At the very least, it can be assumed that this is slightly smarter than simply going in party order.
+	</p>
+	<h3>Post-KO Switch AI Examples</h3>
+	<p>
+		While it's quite simple, there's no harm going through some basic examples.
+		Suppose the player has out a Growlithe.
+		As we know, its moveset does not matter.
+		Technically the AI cannot have 6 switch candidates, as one pokemon needs to faint to proc this AI.
+		6 candidates are used here for a better example.
+	</p>
+	<table class="centered">
+		<thead>
+			<tr>
+				<td>Pokemon</td>
+				<td colspan="4">Moves</td>
+				<td>Score</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Mankey</td>
+				<td>Karate Chop</td>
+				<td>Endure</td>
+				<td>-</td>
+				<td>-</td>
+				<td>0</td>
+			</tr>
+			<tr>
+				<td>Mantine</td>
+				<td>Water Gun</td>
+				<td>Surf</td>
+				<td>Bubble</td>
+				<td>Bubblebeam</td>
+				<td>+1</td>
+			</tr>
+			<tr>
+				<td>Meganium</td>
+				<td>Petal Dance</td>
+				<td>Earthquake</td>
+				<td>-</td>
+				<td>-</td>
+				<td>0</td>
+			</tr>
+			<tr>
+				<td>Remoraid</td>
+				<td>Rain Dance</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>+1</td>
+			</tr>
+			<tr>
+				<td>Oddish</td>
+				<td>Stun Spore</td>
+				<td>Sleep Powder</td>
+				<td>Moonlight</td>
+				<td>Tackle</td>
+				<td>-1</td>
+			</tr>
+			<tr>
+				<td>Magnemite</td>
+				<td>Thunder</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-1</td>
+			</tr>
+		</tbody>
+	</table>
+	<p>
+		In this scenario, Mankey has no super effective moves against Growlithe, but Fire is not super effective against Fighting, so Mankey is scored 0.
+		Mantine resist's Growlithe's Fire type and deals super effective damage with all of its attacks, so it is scored +1.
+		Meganium takes super effective damage against Fire, however, it also deals super effective damage back to Growlithe with Earthquake, so, it is scored 0.
+		Remoraid does not take super effective damage, and Rain Dance, as a water type move, is considered to be super effective against Growlithe, so it is scored +1.
+		Oddish is the type of pokemon the AI wants to send out the least, taking super effective damage from fire and not dealing super effective damage against it in return, it is scored -1.
+		Similarly, it also would love to not send out Magnemite, whose Steel typing is weak to Fire and whose Thunder deals neutral damage to Growlithe, earning another score of -1.
+	</p>
+	<p>
+		With these scores, we can see that Mantine will be sent out first, since it is the first pokemon in party order to have a score of 1.
+		Were Mantine and Remoraid to both be KO'd by Growlithe, the game would then send out Mankey, then Meganium, and with final reluctance, either Oddish or Magnemite would be sent out, randomly.
+	</p>
+	<p>
+		Hopefully this is simple to understand.
+		Additionally, since the damage calculator handles this simple switch AI, most runners don't even need to consider it.
+	</p>
+	<h2>Mid-Turn Switch AI</h2>
+	<p>
+		Now this is the special one.
+		Of all routines in CK+, mid-turn switch AI survived cloaked in mystery the longest.
+		However, finally, it's untangled and can be laid bare, but be careful, it's a doozy.
+	</p>
+	<p>
+		Mid-turn switch AI returns 2 separate scores.
+		One score determining the chance that a switch should occur, and one determining, if it were to happen, which target to switch to.
+		The first score comes in a range of 0 to 3.
+		What this score means depends on the the switch flag set on the trainer class the player is facing.
+	</p>
+	<table class="centered">
+		<thead>
+			<tr>
+				<td>Switch AI Flag</td>
+				<td>Score 0</td>
+				<td>Score 1</td>
+				<td>Score 2</td>
+				<td>Score 3</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Never</td>
+				<td>0%</td>
+				<td>0%</td>
+				<td>0%</td>
+				<td>0%</td>
+			</tr>
+			<tr>
+				<td>Rarely</td>
+				<td>0%</td>
+				<td>8%</td>
+				<td>12%</td>
+				<td>20%</td>
+			</tr>
+			<tr>
+				<td>Sometimes</td>
+				<td>0%</td>
+				<td>20%</td>
+				<td>50%</td>
+				<td>80%</td>
+			</tr>
+			<tr>
+				<td>Often</td>
+				<td>0%</td>
+				<td>20%</td>
+				<td>50%</td>
+				<td>80%</td>
+			</tr>
+		</tbody>
+	</table>
+	<p>
+		It is worth noting that these values are rounded and Often has very slightly higher chances than Sometimes (by about 0.6%).
+		With this in mind, you might think that you'd have to memorize this table... but fortunately CK+ saves the day again!
+		Every trainer in the game has the switch flag set to Often, unlike in vanilla where only certain classes (like jugglers) would have this elusive flag.
+	</p>
+	<h3>Mid-Turn Switch AI Routine</h3>
+	<p>
+		The first thing the AI does is pick one of 4 sub-routines to use for switch AI based on the current conditions of the battle.
+		The simplest condition is the AI only has 1 pokemon alive, in which case it exits the routine and has <b>no (0%)</b> chance to switch.
+		Using the same logic as move selection AI, if the enemy has not dealt direct damage to the player in 4 consecutive turns, the AI uses <a href="#random-switch-ai">Random Switch AI</a>.
+		If the enemy is afflicted with perish song and has 1 turn remaining at time of checking, the AI will use <a href="#perish-song-ai">Perish Song AI</a>.
+		Failing this all, the AI continues to <a href="#basic-switch-ai">Basic Switch AI</a>.
+	</p>
+	<p>
+		These routines will reuse a handful of concepts.
+		For one, the player's "last attack" is the non-status move used the last time the player had the chance to act.
+		If nothing fits this description, the player has no last attack.
+		Another one of these is the generic switch target.
+	</p>
+	<h3 id="generic-switch-target">Generic Switch Target</h3>
+	<p>
+		At several points in routines, the AI will attempt to find a generic switch target.
+		These come in two forms, either a standard generic switch target, or a preferred generic switch target.
+		In order to qualify, four checks are made on each pokemon in the party, and the best candidate is selected in party order.
+	</p>
+	<p>
+		The first and most basic check is whether this pokemon is alive, having more than 0 HP, and not the current pokemon being used to battle.
+		There are some errors in what the AI will return if it has no actual candidates that match this, spitting out garbage, but later routines accidentally correct this, so it's of no consequence.
+	</p>
+	<p>
+		The second check is whether the enemy has a "quarter" of its HP remaining.
+		That sounds simple, they made it not simple.
+	</p>
+	<h3 id="quarter-mirrored-shifting">Quarter Mirrored Shifting</h3>
+	<p>
+		In order to determine if a pokemon has at least a quarter of its HP it takes its max HP and compares it against its current HP ran through a formula.
+		It was intended that this formula would quadruple the value.
+		Instead, the formula outputs uncorrelated behavior that even fails for pokemon who have taken no damage.
+		The following formula rounds down after all operations and <code>%</code> represents the modulo operation.
+	</p>
+	<code>(hp / 256 * 1024) + (hp % 256 / 4) + (hp % 1 * 512) + (hp % 2 / 2 * 256)</code>
+	<p>
+		Sorry if you were expecting <code>hp * 4</code>.
+		The reason for this happening is not that complicated.
+		HP on the GameBoy Color is stored as 2 separate bytes, a low byte and a high byte.
+		In order to quadruple two bytes, each byte needs to be doubled twice separately and, if the low byte overflows, it should enter in the high byte.
+		This is a common procedure.
+		Shift the low byte left, shift the high byte left with carry, now you've doubled your two byte value.
+		Do this twice to quadruple.
+		The devs of Crystal made a mistake.
+		They, instead, shifted the low byte right, then shifted the high byte left with carry.
+	</p>
+	<table class="centered">
+		<thead>
+			<tr>
+				<td colspan="2">Before</td>
+				<td colspan="2">Intended After</td>
+				<td colspan="2">Actual After</td>
+				<td>Error</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><code>0000000a</code> <code>b000000c</code></td>
+				<td>-</td>
+				<td><code>00000ab0</code> <code>00000c00</code></td>
+				<td>-</td>
+				<td><code>00000ac0</code> <code>00b00000</code></td>
+				<td>-</td>
+				<td>-</td>
+			</tr>
+			<tr>
+				<td><code>00000000</code> <code>00001010</code></td>
+				<td>(10)</td>
+				<td><code>00000000</code> <code>00101000</code></td>
+				<td>(40)</td>
+				<td><code>00000001</code> <code>00000010</code></td>
+				<td>(258)</td>
+				<td>+218</td>
+			</tr>
+			<tr>
+				<td><code>00000000</code> <code>00001000</code></td>
+				<td>(8)</td>
+				<td><code>00000000</code> <code>00100000</code></td>
+				<td>(32)</td>
+				<td><code>00000000</code> <code>00000010</code></td>
+				<td>(2)</td>
+				<td>-30</td>
+			</tr>
+			<tr>
+				<td><code>00000000</code> <code>00000001</code></td>
+				<td>(1)</td>
+				<td><code>00000000</code> <code>00000100</code></td>
+				<td>(4)</td>
+				<td><code>00000010</code> <code>00000000</code></td>
+				<td>(512)</td>
+				<td>+508</td>
+			</tr>
+			<tr>
+				<td><code>00000001</code> <code>00000000</code></td>
+				<td>(256)</td>
+				<td><code>00000100</code> <code>00000000</code></td>
+				<td>(1024)</td>
+				<td><code>00000100</code> <code>00000000</code></td>
+				<td>(1024)</td>
+				<td>0</td>
+			</tr>
+			<tr>
+				<td><code>00000001</code> <code>00000010</code></td>
+				<td>(258)</td>
+				<td><code>00000100</code> <code>00001000</code></td>
+				<td>(1032)</td>
+				<td><code>00000101</code> <code>00000000</code></td>
+				<td>(1280)</td>
+				<td>+248</td>
+			</tr>
+		</tbody>
+	</table>
+	<p>
+		Well oops, that's not quadrupling.
+		As stated, behavior is very erratic, and adjacent values are not correlated.
+		Intuitively, the most important factors are whether the high byte is 0 (<code>HP &lt; 256</code>), and whether either of the two low bits are set (<code>HP % 4 != 0</code>).
+		The behavior can be broadly categorized into 4 groups.
+	</p>
+	<table class="centered">
+		<thead>
+			<tr>
+				<td>Condition</td>
+				<td>Effect</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><code>HP &lt; 256 & HP % 4 == 0</code></td>
+				<td>Divides by 4 instead of multiplying by 4</td>
+			</tr>
+			<tr>
+				<td><code>HP &lt; 256 & HP % 4 != 0</code></td>
+				<td>Value explodes massively, in the range of 256-831</td>
+			</tr>
+			<tr>
+				<td><code>HP &gt;= 256 & HP % 4 == 0</code></td>
+				<td>Multiplies by between 3-4 approximately</td>
+			</tr>
+			<tr>
+				<td><code>HP &gt;= 256 & HP % 4 != 0</code></td>
+				<td>Multiplies by between 4-7 approximately</td>
+			</tr>
+		</tbody>
+	</table>
+	<p>
+		Practically, about 1/4 pokemon cannot be selected as generic switch targets despite being at full health.
+		At least, until base HP starts exceeding 255, past that point all candidates at full HP will be considered healthy enough.
+	</p>
+	<h3>Generic Switch Target Result</h3>
+	<p>
+		After that detour and a good chunk of pokemon arbitrarily discounted, the final 2 checks are comparatively simple.
+		Each pokemon checks its type effectiveness against the player's hypothetical attacks and is removed if it is hit super effective.
+		If the player has a last attack, that type is checked against the AI.
+		Otherwise, the player's types are checked instead.
+	</p>
+	<p>
+		Finally each remaining candidate checks its moves type effectiveness against the player.
+		During this check, moves with no power are skipped.
+		The first of the AI's pokemon which has a super effective move against the player, if any, is chosen as the <b>preferred generic switch target</b>.
+		Otherwise, the first of the AI's pokemon which has a neutral move against the player, if any, is chosen as the <b>generic switch target</b>.
+		Failing this, no candidate is selected.
+	</p>
+	<h3>Matchup Score</h3>
+	<p>
+		The first task of <a href="#basic-switch-ai">basic switch AI</a> is determining the "matchup score" of the enemy pokemon against the player's pokemon.
+		This is used to determine if the AI wants to switch and, if so, how much.
+		There are a handful of factors that determine what the matchup score is, which can be split into several simple steps.
+	</p>
+	<ul>
+		<li>Start with a score of 10</li>
+		<li>
+			If the player has revealed any moves (used them and not switched out)
+			<ul>
+				<li>If the player has revealed no damaging moves, +0</li>
+				<li>If the AI is immune to all of the player's revealed damaging moves, +2</li>
+				<li>If the AI only takes not very effective or immune damage from the player's revealed damaging moves, +1</li>
+				<li>If the player has any revealed damaging moves which are super effective against the AI, each scores -1</li>
+			</ul>
+		</li>
+		<li>
+			Otherwise, if the player has not revealed any moves
+			<ul>
+				<li>For each of the player's unique types, if it is super effective against the AI, -1</li>
+			</ul>
+		</li>
+		<li>
+			Find the best type matchup of the AI's damaging moves against the player
+			<ul>
+				<li>If the best matchup is super effective, +1</li>
+				<li>If the best matchup is neutral, +0</li>
+				<li>If the best matchup is not very effective, -1</li>
+				<li>If the best matchup is ineffective, or the AI has no damaging moves -2</li>
+			</ul>
+		</li>
+	</ul>
+	<h3>Matchup Score Examples</h3>
+	<p>
+		Let's run through some examples.
+	</p>
+	<table class="centered">
+		<thead>
+			<tr>
+				<td>Player Pokemon</td>
+				<td>Revealed Moves</td>
+				<td>AI Pokemon</td>
+				<td>AI Moves</td>
+				<td>Player Score</td>
+				<td>AI Score</td>
+				<td>Total Score</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Cyndaquil</td>
+				<td>
+					-
+				</td>
+				<td>Chikorita</td>
+				<td>
+					Tackle<br>
+					Razor Leaf
+				</td>
+				<td>-1</td>
+				<td>0</td>
+				<td>9</td>
+			</tr>
+			<tr>
+				<td>Cyndaquil</td>
+				<td>
+					Ember
+				</td>
+				<td>Chikorita</td>
+				<td>
+					Tackle<br>
+					Razor Leaf
+				</td>
+				<td>-1</td>
+				<td>0</td>
+				<td>9</td>
+			</tr>
+			<tr>
+				<td>Cyndaquil</td>
+				<td>
+					Tacle
+				</td>
+				<td>Chikorita</td>
+				<td>
+					Tackle<br>
+					Razor Leaf
+				</td>
+				<td>0</td>
+				<td>0</td>
+				<td>10</td>
+			</tr>
+			<tr>
+				<td>Cyndaquil</td>
+				<td>
+					ThunderPunch
+				</td>
+				<td>Chikorita</td>
+				<td>
+					Tackle<br>
+					Razor Leaf
+				</td>
+				<td>+1</td>
+				<td>0</td>
+				<td>11</td>
+			</tr>
+			<tr>
+				<td>Cyndaquil</td>
+				<td>
+					Sunny Day<br>
+					Ember<br>
+					Tackle<br>
+					ThunderPunch
+				</td>
+				<td>Chikorita</td>
+				<td>
+					Tackle<br>
+					Razor Leaf
+				</td>
+				<td>-1</td>
+				<td>0</td>
+				<td>9</td>
+			</tr>
+			<tr>
+				<td>Cyndaquil</td>
+				<td>
+					Ember<br>
+					Fire Punch<br>
+					Flame Wheel<br>
+					Flamethrower
+				</td>
+				<td>Chikorita</td>
+				<td>
+					Tackle<br>
+					Razor Leaf
+				</td>
+				<td>-4</td>
+				<td>0</td>
+				<td>6</td>
+			</tr>
+			<tr>
+				<td>Gastly</td>
+				<td>
+					-
+				</td>
+				<td>Togepi</td>
+				<td>
+					Metronome
+				</td>
+				<td>0</td>
+				<td>-2</td>
+				<td>8</td>
+			</tr>
+			<tr>
+				<td>Gastly</td>
+				<td>
+					Shadow Ball
+				</td>
+				<td>Togepi</td>
+				<td>
+					Metronome
+				</td>
+				<td>+2</td>
+				<td>-2</td>
+				<td>10</td>
+			</tr>
+			<tr>
+				<td>Gastly</td>
+				<td>
+					Shadow Ball
+				</td>
+				<td>Togepi</td>
+				<td>
+					Shadow Ball
+				</td>
+				<td>+2</td>
+				<td>+1</td>
+				<td>13</td>
+			</tr>
+		</tbody>
+	</table>
+	<h3 id="basic-switch-ai">Basic Switch AI</h3>
+	<p>
+		With the stage set, here is the routine for basic switch AI.
+	</p>
+	<ul>
+		<li>
+			If the matchup score &gt; 10
+			Set the switch target to <b>no (0%)</b> chance and return
+		</li>
+		<li>
+			If the player's last move exists and there is an AI pokemon immune to it
+			<ul>
+				<li>
+					If there are any AI pokemon with a super effective move against the player
+					<ul>
+						<li>
+							If the matchup score &lt; 10
+							<ul>
+								<li>Set the first valid target in party order as the switch target with a <b>good (50%)</b> chance</li>
+							</ul>
+						</li>
+						<li>
+							Otherwise if the matchup score == 10
+							<ul>
+								<li>Set the first valid target in party order as the switch target with an <b>unlikely (20%)</b> chance</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>
+					Otherwise, if there are any AI pokemon with at least a neutral move against the player
+					<ul>
+						<li>
+							If the matchup score &lt; 10
+							<ul>
+								<li>Set the first valid target in party order as the switch target with an <b>unlikely (20%)</b> chance</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li>
+			Otherwise, if no previous switch scores were set
+			<ul>
+				<li>
+					If the matchup score &lt; 10
+					<ul>
+						<li>Set the <a href="#generic-switch-target">preferred generic switch target</a>, if available, as the switch target with an <b>unlikely (20%)</b> chance</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	<h3>Basic Switch AI Examples</h3>
+	<p>
+		These examples are a little complicated.
+		For the sake of simplification, all of the matchups will have a pre-calculated matchup score and only show a single option.
+		Additionally, all options will assume to not proc the <a href="#quarter-mirrored-shifting">quarter mirrored shifting bug</a>.
+		It can be assumed that, if there were multiple valid options, the provided option is the best.
+		Because mid-turn switch AI is deterministic, there is no need to worry about ties.
+	</p>
+	<table class="centered">
+		<thead>
+			<tr>
+				<td>Player Pokemon</td>
+				<td>Last Move</td>
+				<td>Matchup Score</td>
+				<td>AI Pokemon</td>
+				<td>AI Moves</td>
+				<td>Switch chance</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Charmander</td>
+				<td>-</td>
+				<td>9</td>
+				<td>Unown</td>
+				<td>Hidden Power</td>
+				<td>0%</td>
+			</tr>
+			<tr>
+				<td>Charmander</td>
+				<td>-</td>
+				<td>9</td>
+				<td>Chikorita</td>
+				<td>Earthquake</td>
+				<td>0%</td>
+			</tr>
+			<tr>
+				<td>Charmander</td>
+				<td>-</td>
+				<td>10</td>
+				<td>Phanpy</td>
+				<td>Mud Slap</td>
+				<td>0%</td>
+			</tr>
+			<tr>
+				<td>Charmander</td>
+				<td>-</td>
+				<td>9</td>
+				<td>Phanpy</td>
+				<td>Mud Slap</td>
+				<td>20%</td>
+			</tr>
+			<tr>
+				<td>Charmander</td>
+				<td>Scratch</td>
+				<td>9</td>
+				<td>Gastly</td>
+				<td>Mud Slap</td>
+				<td>50%</td>
+			</tr>
+			<tr>
+				<td>Charmander</td>
+				<td>Scratch</td>
+				<td>9</td>
+				<td>Gastly</td>
+				<td>Shadow Ball</td>
+				<td>20%</td>
+			</tr>
+			<tr>
+				<td>Charmander</td>
+				<td>Scratch</td>
+				<td>9</td>
+				<td>Gastly</td>
+				<td>Confuse Ray</td>
+				<td>0%</td>
+			</tr>
+		</tbody>
+	</table>
+	<h3 id="random-switch-ai">Random Switch AI</h3>
+	<p>
+		Random AI brings with it more confusing behaviors.
+		First, the AI looks for a pokemon to switch to which is immune to the last attack the player used.
+		If present, the first pokemon in party order is sent out with a <b>good (50%)</b> chance.
+		If Random AI does not do this, it falls back to switching to the AI's <a href="#generic-switch-target">generic switch target</a> with an <b>unlikely (20%)</b> chance.
+	</p>
+	<p>
+		This AI routine has a unique bug, however.
+		For all previous routines, it was left unstated that the pokemon that is currently out is not a valid switch target.
+		That is not the case for random switch AI's immunity check.
+		Instead, it dismisses the pokemon before the currently out pokemon, in party order.
+		This means both that an incorrect pokemon gets dismissed, but also that a pokemon can switch into itself in the right scenarios.
+		The game does handle this and treats it as the AI's turn.
+	</p>
+	<h3 id="perish-song-ai">Perish Song AI</h3>
+	<p>
+		Perish Song AI is a delight.
+		If the AI has a <a href="#generic-switch-target">preferred generic switch target</a>, then the AI will switch to that with a <b>great (80%)</b> chance.
+		Otherwise, the AI will pick the first alive pokemon and switch to that with a <b>great (80%)</b> chance.
+	</p>
+	<p>
+		However, there is a crucial detail unmentioned.
+		Perish Song AI only triggers if, when switch AI is run, the enemy's perish counter is at 1.
+		Unluckily for the AI, post-turn effects like decrementing perish counters occurs after scoring the next turn's switch.
+		What this means is while the AI is completely capable of recognizing when it is in lethal danger of Perish Song, due to the order of operations, it'll realize it should probably switch out and then immediately faint.
+		So, in practice, this AI routine does nothing.
+	</p>
 	<h2>AI Conclusion</h2>
 	<p>
 		Trainer AI in CK+ is highly broken.
@@ -1138,9 +1814,8 @@
 		Despite this, you could fix the largest problems with a single line at the start of Aggressive AI (jumping to the Boom Aggressive routine) and a semicolon at the start of a line in the Aggressive discourage phase (commenting out a jump that misaligns variables).
 	</p>
 	<p>
-		This page is lacking any discussion about switch AI.
-		Its Smart AI section is also incomplete.
-		I'd like to include more information in this post about both of these in the future.
+		This page's Smart AI section is incomplete.
+		I'd like to include more information in this post in the future.
 	</p>
 	<p>
 		Hopefully you fall into one of the categories below.
