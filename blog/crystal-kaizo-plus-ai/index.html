@@ -1338,7 +1338,7 @@
 		Instead, the formula outputs uncorrelated behavior that even fails for pokemon who have taken no damage.
 		The following formula rounds down after all operations and <code>%</code> represents the modulo operation.
 	</p>
-	<code>(hp / 256 * 1024) + (hp % 256 / 4) + (hp % 1 * 512) + (hp % 2 / 2 * 256)</code>
+	<code>(hp / 256 * 1024) + (hp % 256 / 4) + (hp % 2 * 512) + (hp % 4 / 2 * 256)</code>
 	<p>
 		Sorry if you were expecting <code>hp * 4</code>.
 		The reason for this happening is not that complicated.
