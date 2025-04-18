@@ -256,6 +256,10 @@ function startup() {
 			movesByTMHM.get(m).push(p.name);
 		}
 	}
+
+	for (let e of typeColors) {
+		addSearchResult(e[0], {link: `#/type/${e[0]}/`});
+	}
 	for (let m of j.moves) {
 		if (m.template) {
 			var template = j.templates.move[m.template];
@@ -266,7 +270,7 @@ function startup() {
 		if (m.index) {
 			movesByIndex.set(m.index, m);
 		}
-		searchResults.set(m.name.replace(/-/g, " "), {link: `#/move/${m.name}/`});
+		addSearchResult(m.name, {link: `#/move/${m.name}/`});
 	}
 	for (let i in j.type_matchups) {
 		var m = j.type_matchups[i];
@@ -291,27 +295,23 @@ function startup() {
 	}
 	for (const i of j.items) {
 		itemsByName.set(i.name, i);
-		searchResults.set(i.name.replace(/-/g, " "), {link: `#/item/${i.name}/`, display: () => prettyItem(i)});
+		addSearchResult(i.name, {link: `#/item/${i.name}/`, display: () => prettyItem(i)});
 	}
 	for (let i in j.encounters) {
 		var e = j.encounters[i];
 		encountersByName.set(e.area, i);
-		searchResults.set(e.area.replace(/-/g, " "), {link: `#/area/${e.area}/`});
+		addSearchResult(e.area, {link: `#/area/${e.area}/`});
 	}
 	encounterPools = j.encounter_pools;
 	for (let i in j.encounters) {
 		addPoolInfo(j.encounters[i]);
 	}
 
-	for (let e of typeColors) {
-		searchResults.set(e[0], {link: `#/type/${e[0]}/`});
-	}
-
 	for (let i in j.trainers) {
 		var t = j.trainers[i];
 		t.index = parseInt(i);
 		trainersByName.set(t.name, t);
-		searchResults.set(getTrainerName(j.trainers[i].name).toLowerCase(), {link: `#/trainer/${t.name}/`});
+		addSearchResult(getTrainerName(j.trainers[i].name), {link: `#/trainer/${t.name}/`});
 	}
 	data = j;
 	var a = j.trainers[0].team[0];
@@ -334,6 +334,10 @@ function startup() {
 		setTab("box");
 	}
 	navigate(window.location.hash);
+}
+
+function addSearchResult(name, value) {
+	searchResults.set(normalize(name), value);
 }
 
 function getFamily(poke) {

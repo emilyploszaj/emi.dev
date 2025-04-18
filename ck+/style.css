@@ -86,7 +86,7 @@ body {
 	padding-left: calc(50% - 516px);
 	padding-right: calc(50% - 516px);
 	margin: 0px;
-	min-width: 1024px;
+	min-width: 1032px;
 	display: flex;
 	flex-direction: column;
 	height: 100%;
