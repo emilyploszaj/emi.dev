@@ -44,11 +44,11 @@ class BattlePokeImpl extends BattlePoke {
 	getEffectiveStat(stat) {
 		var v = getModifiedStat(this.poke, this.stages, stat);
 		if (stat == "spe") {
-			if (this.hasBadgeBoost() && badges >= speedBadges) {
-				v = parseInt(v * 1.125);
-			}
 			if (this.status == "prz") {
 				v = parseInt(v / 4);
+			}
+			if (this.hasBadgeBoost() && badges >= speedBadges) {
+				v = parseInt(v * 1.125);
 			}
 		}
 		return v;
