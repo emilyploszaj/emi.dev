@@ -211,20 +211,23 @@ function getDamage(attacker, defender, move) {
 
 	var ap = attacker.mon;
 	var dp = defender.mon;
-	// STAB
-	if (move.name != "struggle" && contains(ap.types, move.type)) {
-		v = parseInt(v * 1.5);
-	}
+	// Struggle doesn't have stab or effectiveness
+	if (move.name != "struggle") {
+		// STAB
+		if (contains(ap.types, move.type)) {
+			v = parseInt(v * 1.5);
+		}
 
-	var eff = 1;
-	eff *= getMatchup(move.type, dp.types[0]);
-	if (dp.types.length > 1) {
-		eff *= getMatchup(move.type, dp.types[1]);
+		var eff = 1;
+		eff *= getMatchup(move.type, dp.types[0]);
+		if (dp.types.length > 1) {
+			eff *= getMatchup(move.type, dp.types[1]);
+		}
+		if (eff == 0) {
+			return CalcResult.of(0);
+		}
+		v = parseInt(v * eff);
 	}
-	if (eff == 0) {
-		return CalcResult.of(0);
-	}
-	v = parseInt(v * eff);
 
 	if (move.name == "dragon-rage") {
 		return CalcResult.of(40);
