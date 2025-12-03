@@ -419,7 +419,7 @@
 			</tr>
 			<tr>
 				<td>Razor Wind</td>
-				<td>If the Player has Protect, <b>dismiss (+6)</b><br>If the AI will faint from Perish Song this turn, <b>discourage (+1)</b><br>If the AI is confused, 20% chance to <b>discourage (+1)</b></td>
+				<td>If the Player has Protect or Detect, <b>dismiss (+6)</b><br>If the AI will faint from Perish Song this turn, <b>discourage (+1)</b><br>If the AI is confused, 20% chance to <b>discourage (+1)</b></td>
 			</tr>
 			<tr>
 				<td>Super Fang</td>
@@ -435,16 +435,17 @@
 				<td>If the player has less than 50% HP, 90% chance to <b>discourage (+1)</b><br>
 				Additionally, if the player has less than 25% HP, <b>discourage again (+1)</b></td>
 			</tr>
-			<!--
 			<tr>
 				<td>Amnesia</td>
-				<td></td>
+				<td>If the AI's HP is lower than half, <b>discourage (+1)</b><br>
+				Otherwise, if the AI's SpD is at +4 or higher, <b>discourage (+1)</b><br>
+				Otherwise, if the AI's SpD is at +1 or lower and either of its types are special types, 80% chance to <b>greatly encourage (-2)</b></td>
 			</tr>
 			<tr>
 				<td>Stun Spore<br>Thunder Wave<br>Glare</td>
-				<td></td>
+				<td>If the player's HP is at or below 25% HP, <b>discourage (+1)</b><br>
+				Otherwise, if the AI is slower than the player and has greater than 25% HP, 80% chance to <b>greatly encourage (-2)</b></td>
 			</tr>
-			-->
 			<tr>
 				<td>Icy Wind<br>Constrict<br>Bubble<br>Bubblebeam</td>
 				<td>If it is the player's pokemon's first turn out, the AI has more than 25% HP, and the player is faster than the AI, 90% chance to <b>greatly encourage (-2)</b></td>
@@ -463,156 +464,227 @@
 				<td>If the AI has not used Rage yet and has less than 50% HP, <b>discourage (+1)</b><br>
 				Otherwise, if the AI has used Rage, 50% chance to <b>encourage (-1)</b>, plus an additional <b>encourage (-1)</b> for each having a rage counter above 2 and 3</td>
 			</tr>
-			<!--
 			<tr>
 				<td>Mimic</td>
-				<td></td>
+				<td>If the AI is faster and the the player did not use a move last turn, <b>dismiss (+10)</b><br>
+				If the AI is slower and the player did not use a move last turn, <b>discourage (+1)</b><br>
+				Otherwise, check the type matchup of the player's last move against the player and, if the move is not very effective or ineffective, <b>discourage (+1)</b><br>
+				If the move is super effective, have a 50% chance to <b>encourage (-1)</b><br>
+				And, if the move is effective of super effective, and the move is <a href="#smart-useful-moves">useful</a>, have a 50% chance to <b>encourage (-1)</b></td>
 			</tr>
 			<tr>
 				<td>Disable</td>
-				<td></td>
+				<td>If the AI is slower than the player, 92% chance to <b>discourage (+1)</b><br>
+				Otherwise, if the move is <a href="#smart-useful-moves">useful</a>, 60% chance to <b>encourage (-1)</b><br>
+				Otherwise, if the move is a status move and not <a href="#smart-useful-moves">useful</a>, 92% chance to <b>discourage (+1)</b></td>
 			</tr>
 			<tr>
 				<td>Counter</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>Encore</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>Pain Split</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>Snore</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>Conversion2</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>Lock On<br>Mind Reader</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>(None)</td>
-				<td>(Intended for moves that defrost the opponent)</td>
-			</tr>
-			<tr>
-				<td>Sleep Talk</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>Destiny Bond</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>Reversal<br>Skull Bash</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>Spite</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>Heal Bell</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>Quick Attack<br>ExtremeSpeed<br>Mach Punch</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>Thief</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>Mean Look<br>Spider Web</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>Nightmare</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>Flame Wheel</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>Curse</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>Protect</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>Foresight</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>Perish Song</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>Sandstorm</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>Endure</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>Rollout</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>Swagger</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>Fury Cutter</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>Attract</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>Safeguard</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>Baton Pass</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>Pursuit</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>Rapid Spin</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>Belly Drum</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>Psych Up</td>
-				<td></td>
+				<td>If the player has revealed no physical damaging moves, <b>discourage (+1)</b><br>
+				If the player has revealed at least 3 physical damaging moves, 60% chance to <b>encourage (-1)</b><br>
+				Otherwise, if the player has revealed 1 or 2 physical damaging moves, and its last attack was a physical damaging mvoe, 60% chance to <b>encourage (-1)</b></td>
 			</tr>
 			<tr>
 				<td>Mirror Coat</td>
-				<td></td>
+				<td>If the player has revealed no special damaging moves, <b>discourage (+1)</b><br>
+				If the player has revealed at least 3 special damaging moves, 60% chance to <b>encourage (-1)</b><br>
+				Otherwise, if the player has revealed 1 or 2 special damaging moves, and its last attack was a special damaging mvoe, 60% chance to <b>encourage (-1)</b></td>
 			</tr>
 			<tr>
-				<td>Rain Dance<br>Sunny Day</td>
-				<td></td>
+				<td>Encore</td>
+				<td>If the player is faster than the AI, <b>very greatly discourage (+3)</b><br>
+				Otherwise, if the player did not use a move last turn, <b>dismiss (+10)</b><br>
+				Otherwise, for status moves and super effective damaging moves, if they're in the <a href="encoreable-moves">Encoreable Moves List</a>, 72% chance to <b>greatly encourage (-2)</b>, if not, <b>very greatly discourage (+3)</b>
+				For other damaging moves that the enemy is not immune to, 72% chance to <b>greatly encourage (-2)</b></td>
 			</tr>
-			-->
+			<tr>
+				<td>Pain Split</td>
+				<td>If the AI's HP times 2 is greater than the player's HP, <b>discourage (+1)</b></td>
+			</tr>
+			<tr>
+				<td>Snore<br>Sleep Talk</td>
+				<td>If the AI is asleep, <b>very greatly encourage (-3)</b><br>
+				Otherwise, if the AI is awake, <b>very greatly discourage (+3)</b></td>
+			</tr>
+			<tr>
+				<td>Conversion2</td>
+				<td>If the player did not use a move last turn, 90% chance to <b>discourage (+1)</b><br>
+				Otherwise, check the type matchup of the player's last move against the AI<br>
+				If the move is not very effective, 90% chance to <b>discourage (+1)</b><br>
+				If the move is super effective, 50% chance to <b>encourage (-1)</b></td>
+			</tr>
+			<tr>
+				<td>Lock On<br>Mind Reader</td>
+				<td>If the player is already affected by Lock On or Mind Reader, <b>dismiss (+10)</b>, and additionally, for all other moves with 70% accuracy or less, <b>greatly encourage (-2)</b><br>
+				Otherwise, if the AI is at or below 25% or is both at or below 50% and slower than the player, <b>discourage (+1)</b><br>
+				Otherwise, if the AI is below -2 Accuracy or the player is above +2 Evasion, 50% chance to <b>greatly encourage (-2)</b><br>
+				Otherwise, if the AI is at -1 or -2 Accuracy or the player is at +1 or +2 Evasion, do <b>nothing (+0)</b><br>
+				Otherwise, if the AI has no moves with 70% accuracy or less that are effective or super effective against the player, <b>discourage (+1)</b></td>
+			</tr>
+			<tr>
+				<td>(None)</td>
+				<td>If the AI is frozen, <b>very greatly encourage (-3)</b><br>
+				Intended for moves with the unique effect of defrosting the target, however, none exist (and the AI would make peculiar decisions if they did)</td>
+			</tr>
+			<tr>
+				<td>Destiny Bond</td>
+				<td>33% chance to <b>greatly encourage (-2)</b></td>
+			</tr>
+			<tr>
+				<td>Reversal<br>Skull Bash</td>
+				<td>If the AI's health is above 25%, <b>discourage (+1)</b><br>
+				Note that this won't override <a href="#aggressive">Aggressive AI</a>, but will break ties</td>
+			</tr>
+			<tr>
+				<td>Spite</td>
+				<td>If the player did not use a move last turn and the AI is faster than the player, <b>dismiss (+10)</b><br>
+				If the player did not use a move last turn and the AI is slower than the player, 50% chance to <b>discourage (+1)</b><br>
+				If the player's last used move has more than 15pp, <b>discourage (+1)</b><br>
+				If the player's last used move has between 6pp and 15pp, 40% chance to <b>discourage (+1)</b><br>
+				If the player's last used move has less than 6pp, 60% chance to <b>greatly encourage (-2)</b></td>
+			</tr>
+			<tr>
+				<td>Heal Bell</td>
+				<td>If none of the AI's pokemon are statused, <b>dismiss (+10)</b><br>
+				Additionally, if the current AI pokemon is frozen or asleep, 50% chance to <b>greatly encourage (-2)</b><br>
+				This segment seems bugged, as though the intention was to check for being frozen or asleep for all enemy pokemon</td>
+			</tr>
+			<tr>
+				<td>Quick Attack<br>ExtremeSpeed<br>Mach Punch</td>
+				<td>If the player is faster than the AI and semi-invulnerable, <b>dismiss (+10)</b><br>
+				If the player is faster than the AI and the move KOs the player, <b>very greatly encourage (-3)</b><br>
+				Damage is calculated using the greatest non-critical roll</td>
+			</tr>
+			<tr>
+				<td>Thief</td>
+				<td>Unconditionally <b>very greatly dismiss (+30)</b><br>
+				In practice, if this move is scored as highest damage, move selection becomes random between other damaging moves</td>
+			</tr>
+			<tr>
+				<td>Mean Look<br>Spider Web</td>
+				<td>If the AI is at or below half HP, <b>discourage (+1)</b><br>
+				Otherwise, if the player is on their last mon, <b>dismiss (+10)</b><br>
+				Otherwise, if the player is afflicted by toxic, afflicted by nightmare, infatuated, identified, or in a rollout, 80% chance to <b>very greatly encourage (-3)</b><br>
+				Otherwise, if the AI's <a href="#matchup-score">switch matchup score</a> against the current player mon is less than 11, <b>discourage (+1)</b></td>
+			</tr>
+			<tr>
+				<td>Nightmare</td>
+				<td>50% chance to <b>encourage (-1)</b><br>
+				Note that <a href="basic">Basic AI</a> will <b>dismiss (+10)</b> Nightmare if the player is not sleeping</td>
+			</tr>
+			<tr>
+				<td>Flame Wheel</td>
+				<td>If the AI is frozen, <b>extremely encourage (-5)</b></td>
+			</tr>
+			<tr>
+				<td>Curse<br>(Ghost)</td>
+				<td>If the player is already afflicted by Curse, <b>dismiss (+10)</b><br>
+				Otherwise, if the player is on their last mon and the AI is not, 50% chance to <b>greatly encourage (-2)</b><br>
+				Otherwise, if the player is not on their last mon and the AI is, <b>extremely greatly discourage (+4)</b><br>
+				Otherwise, if the AI has 25% HP or less, <b>extremely greatly discourage (+4)</b><br>
+				Otherwise, if the AI has 50% HP or less, <b>greatly discourage (+2)</b><br>
+				Otherwise, if the AI has full HP and it's not the player mon's first turn, 50% chance to <b>greatly encourage (-2)</b></td>
+			</tr>
+			<tr>
+				<td>Curse<br>(Not Ghost)</td>
+				<td>If the AI is at or below 50% HP, <b>discourage (+1)</b><br>
+				Otherwise, if the AI's Atk is at +4 or higher, <b>discourage (+1)</b><br>
+				Otherwise, if the AI's Atk is at +2 or +3, do <b>nothing (+0)</b><br>
+				Otherwise, if the player's primary type is Ghost, <b>greatly discourage (+2)</b><br>
+				Otherwise, if neither of the player's types are special, 80% chance to <b>greatly encourage (-2)</b></td>
+			</tr>
+			<tr>
+				<td>Protect<br>Detect</td>
+				<td>If the AI has a protect count or the player is afflicted with Lock On, 92% chance to <b>very greatly discourage (+3)</b>, 8% chance to <b>discourage (+1)</b><br>
+				Otherwise, if the player has used Fury Cutter or Rollout 3 or more times, has charged a two turn move, is afflicted by Toxic, Leech Seed, or Curse, 80% chance to <b>encourage (-1)</b><br>
+				Otherwise, 92% chance to <b>greatly discourage (+2)</b></td>
+			</tr>
+			<tr>
+				<td>Foresight</td>
+				<td>If the AI's Accuracy is below -2, the player's Evasion is above +2, or the player is a Ghost type, 60% chance to <b>greatly encourage (-2)</b><br>
+				Otherwise, 92% chance to <b>discourage (+1)</b></td>
+			</tr>
+			<tr>
+				<td>Perish Song</td>
+				<td>If the AI is on their last mon, <b>extremely discourage (+5)</b><br>
+				Otherwise, if the player's trapped by Mean Look or Spider Web, 50% chance to <b>encourage (-1)</b><br>
+				Otherwise, if the AI's <a href="#matchup-score">switch matchup score</a> against the current player mon is 10 or higher, 50% chance to <b>discourage (+10)</b></td>
+			</tr>
+			<tr>
+				<td>Sandstorm</td>
+				<td>If the player is immune to Sandstorm damage, <b>greatly discourage (+2)</b><br>
+				Otherwise, if the player's HP is at or below 50%, <b>discourage (+1)</b><br>
+				Otherwise, 50% chance to <b>encourage (-1)</b></td>
+			</tr>
+			<tr>
+				<td>Rain Dance</td>
+				<td>If the player is a Water type, <b>very greatly discourage (+3)</b><br>
+				Otherwise, if the player is a Fire type and the player is above half HP and it's either the player or AI's first turn, <b>greatly encourage (-2)</b><br>
+				Otherwise, if the player is not a Fire or Water type and the player's at or below half HP, <b>very greatly discourage (+3)</b><br>
+				Otherwise, if the player is not a Fire or Water type and the AI has a <a href="#useful-rain-moves">useful rain move</a>, 50% chance to <b>encourage (-1)</b><br>
+				Otherwise, if the player is not a Fire or Water type and the AI does not have a <a href="#useful-rain-moves">useful rain move</a>, <b>very greatly discourage (+3)</b></td>
+			</tr>
+			<tr>
+				<td>Sunny Day</td>
+				<td>If the player is a Fire type, <b>very greatly discourage (+3)</b><br>
+				Otherwise, if the player is a Water type and the player is above half HP and it's either the player or AI's first turn, <b>greatly encourage (-2)</b><br>
+				Otherwise, if the player is not a Fire or Water type and the player's at or below half HP, <b>very greatly discourage (+3)</b><br>
+				Otherwise, if the player is not a Fire or Water type and the AI has a <a href="#useful-sun-moves">useful sun move</a>, 50% chance to <b>encourage (-1)</b><br>
+				Otherwise, if the player is not a Fire or Water type and the AI does not have a <a href="#useful-sun-moves">useful sun move</a>, <b>very greatly discourage (+3)</b></td>
+			</tr>
+			<tr>
+				<td>Endure</td>
+				<td>If the AI has a protect count or is at full HP, <b>greatly discourage (+2)</b><br>
+				Otherwise, if the AI has greater than 25%, <b>discourage (+1)</b><br>
+				Otherwise, if the AI has Reversal or Flail, 80% chance to <b>very greatly encourage (-3)</b><br>
+				Otherwise, if the AI is not afflicted by Lock On, 50% chance to <b>greatly encourage (-2)</b></td>
+			</tr>
+			<tr>
+				<td>Fury Cutter</td>
+				<td>If the AI has used Fury Cutter exactly once, <b>encourage (-1)</b><br>
+				If the AI has used Fury Cutter exactly twice, <b>very greatly encourage (-3)</b><br>
+				If the AI has used Fury Cutter three or more times, <b>extremely greatly encourage (-5)</b><br>
+				In all cases, if the AI is infatuated, paralyzed, confused, is at or below 25% HP, has lowered Accuracy, or the player has raised Evasion, 80% chance to <b>discourage (+1)</b><br>
+				Otherwise, 80% chance to <b>greatly encourage (-2)</td>
+			</tr>
+			<tr>
+				<td>Rollout</td>
+				<td>If the AI is infatuated, paralyzed, confused, is at or below 25% HP, has lowered Accuracy, or the player has raised Evasion, 80% chance to <b>discourage (+1)</b><br>
+				Otherwise, 80% chance to <b>greatly encourage (-2)</b></td>
+			</tr>
+			<tr>
+				<td>Swagger<br>Attract</td>
+				<td>If it is the player mon's first turn, 80% chance to <b>encourage (-1)</b><br>
+				Otherwise, 80% chance to <b>discourage (+1)</b></td>
+			</tr>
+			<tr>
+				<td>Safeguard</td>
+				<td>If the player's HP is below 50%, 80% chance to <b>discourage (+1)</b></td>
+			</tr>
+			<tr>
+				<td>Baton Pass</td>
+				<td>If the AI's <a href="#matchup-score">switch matchup score</a> against the current player mon is 10 or higher, <b>discourage (+1)</b></td>
+			</tr>
+			<tr>
+				<td>Pursuit</td>
+				<td>If the player's HP is at or below 25%, 50% chance to <b>greatly encourage (-2)</b><br>
+				Otherwise, 80% chance to <b>discourage (+1)</b></td>
+			</tr>
+			<tr>
+				<td>Rapid Spin</td>
+				<td>If the AI is wrapped, afflicted with Leech Seed, or has spikes on their side of the field, 80% chance to <b>greatly encourage (-2)</b></td>
+			</tr>
+			<tr>
+				<td>Belly Drum</td>
+				<td>If the AI's Atk is +3 or higher, <b>extremely discourage (+5)</b><br>
+				Otherwise, if the AI's HP is at or below 50%, <b>very extremely discourage (+6)</b><br>
+				Otherwise, if the AI's HP is not full, <b>discourage (+1)</b></td>
+			</tr>
+			<tr>
+				<td>Psych Up</td>
+				<td>If the sum of the AI's stat changes are equal or greater than the player's, <b>greatly discourage (+2)</b><br>
+				Otherwise, if the player's Accuracy is not lower than -1 and the Enemy's Evasion is not higher than +0, 80% chance to <b>encourage (-1)</b></td>
+			</tr>
 			<tr>
 				<td>Earthquake<br>Magnitude</td>
 				<td>If the player is currently underground and the AI is faster than the player, <b>greatly encourage (-2)</b></td>
@@ -654,6 +726,34 @@
 		Flamethrower, Fire Blast, Ice Beam, Blizzard, Thunderbolt, Thunder, Surf, Hydro Pump, Earthquake, Psychic, Hyper Beam, Double Edge, Super Fang,
 		Sing, Hypnosis, Sleep Powder, Toxic,
 		Recover, Softboiled
+	</details>
+	<h3 id="encoreable-moves">Encoreable Moves</h3>
+	<p>
+		This is a collection of moves some Smart AI routines consider good options to encore.
+		It is mostly a variety of redundant status moves, some low power damaging moves, and, most peculiar, Aeroblast.
+	</p>
+	<h3 id="useful-rain-moves">Useful Rain Move</h3>
+	<p>
+		This is a collection of moves Smart AI considers valuable to have in rain.
+		It contains every damaging Water move and Thunder.
+	</p>
+	<details>
+		<summary>Full List</summary>
+		Water Gun, Hydro Pump, Surf, Bubblebeam, Waterfall, Clamp, Bubble, Crabhammer, Octazooka, Whirlpool,
+		Thunder
+	</details>
+	<h3 id="useful-sun-moves">Useful Sun Move</h3>
+	<p>
+		This is a collection of moves Smart AI considers valuable to have in sun.
+		It contains every damaging Fire move, SolarBeam, and Morning Sun.
+		It is worth noting that in vanilla, Synthesis, Morning Sun, and Moonlight would all receive the same healing boost that Morning Sun does but are not included.
+		It is also worth noting that in CK+, all three of these moves restore 50% HP always, and so Morning Sun is a faulty leftover inclusion.
+	</p>
+	<details>
+		<summary>Full List</summary>
+		Fire Punch, Ember, Flamethrower, Fire Spin, Fire Blast, Fire Wheel, Sacred Fire,
+		Morning Sun,
+		SolarBeam
 	</details>
 	<h3 id="smart-boom">Boom AI</h3>
 	<p>
@@ -1466,7 +1566,7 @@
 		Otherwise, the first of the AI's pokemon which has a neutral move against the player, if any, is chosen as the <b>generic switch target</b>.
 		Failing this, no candidate is selected.
 	</p>
-	<h3>Matchup Score</h3>
+	<h3 id="matchup-score">Matchup Score</h3>
 	<p>
 		The first task of <a href="#basic-switch-ai">basic switch AI</a> is determining the "matchup score" of the enemy pokemon against the player's pokemon.
 		This is used to determine if the AI wants to switch and, if so, how much.
