@@ -319,7 +319,7 @@ function startup() {
 	if (box.length > 0) {
 		myPoke = box[0];
 	}
-	var lt = parseInt(orElse(savedData["last-trainer"], 0));
+	var lt = parseInt(savedData["last-trainer"] ?? 0);
 	if (lt >= 0 && lt < j.trainers.length) {
 		calcTrainer(lt);
 	} else {
@@ -369,7 +369,7 @@ function hasFamily(family) {
 			return true;
 		}
 	}
-	for (const d of orElse(settings.extraDupes, [])) {
+	for (const d of settings.extraDupes ?? []) {
 		if (pokemonFamilies.get(pokemonByName.get(d).pokedex) == family) {
 			return true;
 		}

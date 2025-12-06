@@ -218,7 +218,7 @@ function getPoolOfType(area, type) {
 }
 
 function getRelativeEncounterChances(poke) {
-	var encounters = pokemonEncounters.get(orElse(poke.name, poke));
+	var encounters = pokemonEncounters.get(poke.name ?? poke);
 	var ret = {};
 	if (encounters) {
 		for (const en of encounters.entries()) {

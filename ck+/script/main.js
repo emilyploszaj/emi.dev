@@ -18,11 +18,11 @@ function readLocalStorage() {
 			savedData["settings"] = JSON.parse(localStorage.getItem("settings"));
 		}
 	}
-	savedData = orElse(savedData, {});
-	box = orElse(savedData["box"], []);
-	deadBox = orElse(savedData["dead-box"], []);
-	badges = orElse(savedData["badges"], 0);
-	settings = orElse(savedData["settings"], {});
+	savedData = savedData ?? {};
+	box = savedData["box"] ?? [];
+	deadBox = savedData["dead-box"] ?? [];
+	badges = savedData["badges"] ?? 0;
+	settings = savedData["settings"] ?? {};
 	if (settings.enableStatistics == undefined) {
 		settings.enableStatistics = true;
 	}
@@ -51,7 +51,7 @@ function applySettings() {
 	} else {
 		document.getElementById("update-vs-recorder").style.display = "none";
 	}
-	document.getElementById("extra-dupes").value = orElse(settings.extraDupes, []).join(" ");
+	document.getElementById("extra-dupes").value = settings.extraDupes?.join(" ") ?? "";
 	updateEngineFlags();
 	savedData["settings"] = settings;
 	writeLocalStorage();

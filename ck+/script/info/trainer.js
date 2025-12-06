@@ -73,8 +73,8 @@ function getTeamDisplay(t) {
 
 function getTrainerStats(trainer) {
 	var i = parseInt(trainer.index);
-	var previous = orElse(data.trainers[i - 1], {"name": trainer.name}).name;
-	var next = orElse(data.trainers[i + 1], {"name": trainer.name}).name;
+	var previous = data.trainers[i - 1]?.name ?? trainer.name;
+	var next = data.trainers[i + 1]?.name ?? trainer.name;
 	var v = `
 		<h3>
 			${getTrainerName(trainer.name)}

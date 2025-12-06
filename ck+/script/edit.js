@@ -268,7 +268,7 @@ class DragDrop {
 				var distance = Math.sqrt(Math.pow(DragDrop.location.x - event.pageX, 2) + Math.pow(DragDrop.location.y - event.pageY, 2));
 				if (distance > 32) {
 					DragDrop.container = DragDrop.target.closest(".drag-sort-container");
-					DragDrop.type = orElse(DragDrop.container.getAttribute("drag-type"), "");
+					DragDrop.type = DragDrop.container.getAttribute("drag-type") ?? "";
 					document.getElementById("dragged").style.visibility = "visible";
 					document.getElementById("dragged").innerHTML = DragDrop.target.outerHTML;
 					DragDrop.status = 1;
@@ -445,13 +445,13 @@ class OptionSelect {
 		var contents = "";
 		if (optionType == "moves") {
 			contents = data.moves.sort((a, b) => a.name.localeCompare(b.name)).displayMap(m => this.getOptionMove(m, true));
-			suggested = suggested.displayMap(m => this.getOptionMove(movesByName.get(m.value), true, orElse(m.extra, "")));
+			suggested = suggested.displayMap(m => this.getOptionMove(movesByName.get(m.value), true, m.extra ?? ""));
 		} else if (optionType == "pokemon") {
 			contents = data.pokemon.sort((a, b) => a.name.localeCompare(b.name)).displayMap(p => this.getOptionPokemon(p, true));
-			suggested = suggested.displayMap(p => this.getOptionPokemon(pokemonByName.get(p.value), true, orElse(p.extra, "")));
+			suggested = suggested.displayMap(p => this.getOptionPokemon(pokemonByName.get(p.value), true, p.extra ?? ""));
 		} else if (optionType == "items") {
 			contents = data.items.sort((a, b) => a.name.localeCompare(b.name)).displayMap(i => this.getOptionItem(i, true));
-			suggested = suggested.displayMap(i => this.getOptionItem(itemsByName.get(i.value), true, orElse(i.extra, "")));
+			suggested = suggested.displayMap(i => this.getOptionItem(itemsByName.get(i.value), true, i.extra ?? ""));
 		}
 		document.getElementById("suggested-option-list").innerHTML = suggested;
 		document.getElementById("option-list").innerHTML = contents;

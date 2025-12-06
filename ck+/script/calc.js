@@ -87,7 +87,7 @@ class BattleMove {
 		var v = engine.createBattleMove();
 		v.user = user;
 		v.move = move;
-		v.#variant = orElse(orElse(move.variants, [])[variant], {});
+		v.#variant = move.variants?.[variant] ?? {};
 		v.crit = crit;
 		return v;
 	}
@@ -97,19 +97,19 @@ class BattleMove {
 	}
 
 	get type() {
-		return orElse(this.#variant.type, this.move.type);
+		return this.#variant.type ?? this.move.type;
 	}
 
 	get category() {
-		return orElse(this.#variant.category, this.move.category);
+		return this.#variant.category ?? this.move.category;
 	}
 
 	get power() {
-		return orElse(this.#variant.power, this.move.power);
+		return this.#variant.power ?? this.move.power;
 	}
 
 	get effects() {
-		return orElse(this.#variant.effects, this.move.effects);
+		return this.#variant.effects ?? this.move.effects;
 	}
 }
 

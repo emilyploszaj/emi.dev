@@ -63,14 +63,6 @@ function getPokeImage(poke, unownExtra = undefined) {
 	return 'https://img.pokemondb.net/sprites/crystal/' + shiny + '/' + poke + '.png';
 }
 
-function orElse(some, other) {
-	if (some != undefined && some != null) {
-		return some;
-	} else {
-		return other;
-	}
-}
-
 function contains(list, value) {
 	for (let i of list) {
 		if (i == value) {

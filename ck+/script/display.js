@@ -282,7 +282,7 @@ function residualFractional(battlePoke, fraction, tooltip) {
 
 function residualRoll(battlePoke, damage, tooltip) {
 	var percent = toPercent(damage / getPokeStat(battlePoke.poke, "hp"));
-	return `<td><ruby>${damage}<rt>${percent}%</rt></ruby>${orElse(tooltip, "")}</td>`;
+	return `<td><ruby>${damage}<rt>${percent}%</rt></ruby>${tooltip ?? ""}</td>`;
 }
 
 function residualToxicTooltip(battlePoke) {
@@ -667,9 +667,9 @@ function getEncounterPoke(poke, header, footer, extraClasses) {
 	}
 	return `
 		<div class="encounter-poke${extraClasses ? " " + extraClasses : ""}">
-			${orElse(header, "")}
+			${header ?? ""}
 			${createLink(`#/pokemon/${poke.name}/`, '<img draggable="false" src="' + getPokeImage(poke.name) + '">')}
-			${orElse(footer, "")}
+			${footer ?? ""}
 			<div class="type-slices">
 				${poke.types.displayMap(t => customLink(`#/type/${t}/`, `class="type-slice" style="background-color: ${typeColor(t)};"`, ""))}
 			</div>
@@ -679,7 +679,7 @@ function getEncounterPoke(poke, header, footer, extraClasses) {
 
 function setMap(xOffset = undefined, yOffset = 0, scale = 48) {
 	if (xOffset == undefined) {
-		xOffset = orElse(savedData["last-map"], 0);
+		xOffset = savedData["last-map"] ?? 0;
 	}
 	savedData["last-map"] = xOffset;
 	writeLocalStorage();
