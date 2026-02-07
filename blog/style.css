@@ -211,3 +211,9 @@ tr:nth-child(2n), thead tr {
 #pokemon:target ~ #posts .post:not(.pokemon) {
 	display: none;
 }
+
+.definition {
+	text-decoration-style: dotted;
+	text-decoration-thickness: 2px;
+	cursor: help;
+}
