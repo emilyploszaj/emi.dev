@@ -1,7 +1,6 @@
 const STATS = ["hp", "atk", "def", "spa", "spd", "spe"];
 
 function getTinyPokemonDisplay(tp, extra = "") {
-	console.log(tp);
 	var p = pokemonByName.get(tp.name);
 	var v = '<div class="tiny-poke">';
 	v += '<div class="tiny-poke-header">';

@@ -228,14 +228,26 @@ function hexToBytes(hex) {
 
 function readGen4Save(bytes) {
 	var pokemon = [];
+	function getFooterOffset(addr, footerOffset) {
+		if (read32(bytes, addr + footerOffset) == 4294967295) {
+			return addr + 0x40000;
+		}
+		if (read32(bytes, addr + footerOffset) < read32(bytes, addr + footerOffset + 0x40000)) {
+			return addr + 0x40000;
+		} else {
+			return addr;
+		}
+	}
+	var small = getFooterOffset(0, 0x0CF18 + 4);
+	var large = getFooterOffset(0x0CF2C, 0x1f0fc - 0x0CF2C);
 	for (var i = 0; i < 6; i++) {
-		var mon = readGen4Mon(bytes, 0x40000 + 0xA0 + 236 * i);
+		var mon = readGen4Mon(bytes, small + 0xA0 + 236 * i);
 		if (mon) {
 			pokemon.push(mon);
 		}
 	}
 	for (var a = 0; a < 18 * 30; a++) {
-		var mon = readGen4Mon(bytes, 0x0CF2C + 0x04 + 136 * a);
+		var mon = readGen4Mon(bytes, large + 0x04 + 136 * a);
 		if (mon) {
 			pokemon.push(mon);
 		}

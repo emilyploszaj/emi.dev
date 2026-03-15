@@ -358,6 +358,14 @@ function displayPokemon(root, i) {
 			</tr>
 		</table>`;
 		root.getElementsByClassName("poke-abilities")[0].innerHTML = abil;
+	} else if (p.abilities && p.abilities.length == 2) {
+		var abil = `<table>
+			<tr>
+				<td>${fullCapitalize(p.abilities[0])}</td>
+				<td>${fullCapitalize(p.abilities[1])}</td>
+			</tr>
+		</table>`;
+		root.getElementsByClassName("poke-abilities")[0].innerHTML = abil;
 	}
 	if (p.gender.startsWith("f")) {
 		var female = parseFloat(p.gender.substring(1));

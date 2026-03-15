@@ -19577,7 +19577,7 @@
         {
             "abilities": [
                 "sand-stream",
-                "sand-stream"
+                "thick-fat"
             ],
             "base_experience": 95,
             "gender": "f50",
@@ -19671,7 +19671,7 @@
         {
             "abilities": [
                 "magic-guard",
-                "magic-guard"
+                "cute-charm"
             ],
             "base_experience": 37,
             "gender": "f75",
@@ -19884,7 +19884,7 @@
         {
             "abilities": [
                 "tinted-lens",
-                "tinted-lens"
+                "swarm"
             ],
             "base_experience": 188,
             "gender": "f99.6094",
@@ -20106,7 +20106,7 @@
         {
             "abilities": [
                 "filter",
-                "filter"
+                "clear-body"
             ],
             "base_experience": 215,
             "gender": "unknown",
@@ -20468,7 +20468,7 @@
         {
             "abilities": [
                 "poison-point",
-                "poison-point"
+                "rivalry"
             ],
             "base_experience": 118,
             "gender": "f0",
@@ -21050,7 +21050,7 @@
         {
             "abilities": [
                 "swift-swim",
-                "swift-swim"
+                "rain-dish"
             ],
             "base_experience": 181,
             "gender": "f50",
@@ -21135,7 +21135,7 @@
         {
             "abilities": [
                 "rock-head",
-                "rock-head"
+                "rough-skin"
             ],
             "base_experience": 73,
             "gender": "f50",
@@ -21257,7 +21257,7 @@
         {
             "abilities": [
                 "filter",
-                "filter"
+                "marvel-scale"
             ],
             "base_experience": 213,
             "gender": "f50",
@@ -21997,7 +21997,7 @@
         {
             "abilities": [
                 "rock-head",
-                "rock-head"
+                "mold-breaker"
             ],
             "base_experience": 99,
             "gender": "f12.5",
@@ -22264,7 +22264,7 @@
         {
             "abilities": [
                 "poison-point",
-                "poison-point"
+                "rivalry"
             ],
             "base_experience": 59,
             "gender": "f99.6094",
@@ -22779,7 +22779,7 @@
         {
             "abilities": [
                 "clear-body",
-                "clear-body"
+                "insomnia"
             ],
             "base_experience": 179,
             "gender": "f50",
@@ -23262,7 +23262,7 @@
         {
             "abilities": [
                 "drizzle",
-                "drizzle"
+                "shed-skin"
             ],
             "base_experience": 144,
             "gender": "f50",
@@ -23387,7 +23387,7 @@
         {
             "abilities": [
                 "overgrow",
-                "overgrow"
+                "shell-armor"
             ],
             "base_experience": 64,
             "gender": "f12.5",
@@ -24423,7 +24423,7 @@
         {
             "abilities": [
                 "swift-swim",
-                "swift-swim"
+                "hyper-cutter"
             ],
             "base_experience": 206,
             "gender": "f50",
@@ -24551,7 +24551,7 @@
         {
             "abilities": [
                 "filter",
-                "filter"
+                "shell-armor"
             ],
             "base_experience": 203,
             "gender": "f50",
@@ -24890,7 +24890,7 @@
         {
             "abilities": [
                 "thick-fat",
-                "thick-fat"
+                "own-tempo"
             ],
             "base_experience": 89,
             "gender": "f50",
@@ -25267,7 +25267,7 @@
         {
             "abilities": [
                 "swift-swim",
-                "swift-swim"
+                "battle-armor"
             ],
             "base_experience": 99,
             "gender": "f12.5",
@@ -26330,7 +26330,7 @@
         {
             "abilities": [
                 "scrappy",
-                "scrappy"
+                "soundproof"
             ],
             "base_experience": 68,
             "gender": "f50",
@@ -26562,7 +26562,7 @@
         {
             "abilities": [
                 "swift-swim",
-                "swift-swim"
+                "ice-body"
             ],
             "base_experience": 176,
             "gender": "f50",
@@ -26700,7 +26700,7 @@
         {
             "abilities": [
                 "magic-guard",
-                "magic-guard"
+                "natural-cure"
             ],
             "base_experience": 106,
             "gender": "unknown",
@@ -26928,7 +26928,7 @@
         {
             "abilities": [
                 "solid-rock",
-                "solid-rock"
+                "ice-body"
             ],
             "base_experience": 187,
             "gender": "f50",
@@ -27138,7 +27138,7 @@
         {
             "abilities": [
                 "thick-fat",
-                "thick-fat"
+                "own-tempo"
             ],
             "base_experience": 164,
             "gender": "f50",
@@ -27412,7 +27412,7 @@
         {
             "abilities": [
                 "swift-swim",
-                "swift-swim"
+                "torrent"
             ],
             "base_experience": 210,
             "gender": "f12.5",
@@ -27794,7 +27794,7 @@
         {
             "abilities": [
                 "swift-swim",
-                "swift-swim"
+                "torrent"
             ],
             "base_experience": 210,
             "gender": "f12.5",
@@ -28372,7 +28372,7 @@
         {
             "abilities": [
                 "magic-guard",
-                "magic-guard"
+                "natural-cure"
             ],
             "base_experience": 196,
             "gender": "f12.5",
@@ -28883,7 +28883,7 @@
         {
             "abilities": [
                 "super-luck",
-                "super-luck"
+                "scrappy"
             ],
             "base_experience": 94,
             "gender": "f50",
@@ -29508,7 +29508,7 @@
         {
             "abilities": [
                 "drought",
-                "drought"
+                "vital-spirit"
             ],
             "base_experience": 78,
             "gender": "f50",
@@ -29726,7 +29726,7 @@
         {
             "abilities": [
                 "drought",
-                "drought"
+                "simple"
             ],
             "base_experience": 88,
             "gender": "f50",
@@ -30183,7 +30183,7 @@
         {
             "abilities": [
                 "natural-cure",
-                "natural-cure"
+                "serene-grace"
             ],
             "base_experience": 255,
             "gender": "f99.6094",
@@ -30502,7 +30502,7 @@
         {
             "abilities": [
                 "swift-swim",
-                "swift-swim"
+                "chlorophyll"
             ],
             "base_experience": 156,
             "gender": "f50",
@@ -30723,7 +30723,7 @@
         {
             "abilities": [
                 "leaf-guard",
-                "leaf-guard"
+                "shell-armor"
             ],
             "base_experience": 141,
             "gender": "f12.5",
@@ -31953,7 +31953,7 @@
         {
             "abilities": [
                 "tinted-lens",
-                "tinted-lens"
+                "shield-dust"
             ],
             "base_experience": 161,
             "gender": "f50",
@@ -32421,7 +32421,7 @@
         {
             "abilities": [
                 "adaptability",
-                "adaptability"
+                "hyper-cutter"
             ],
             "base_experience": 161,
             "gender": "f50",
@@ -33012,7 +33012,7 @@
         {
             "abilities": [
                 "simple",
-                "simple"
+                "unaware"
             ],
             "base_experience": 80,
             "gender": "f50",
@@ -33393,7 +33393,7 @@
         {
             "abilities": [
                 "filter",
-                "filter"
+                "ice-body"
             ],
             "base_experience": 216,
             "gender": "unknown",
@@ -33508,7 +33508,7 @@
         {
             "abilities": [
                 "tinted-lens",
-                "tinted-lens"
+                "levitate"
             ],
             "base_experience": 126,
             "gender": "f50",
@@ -33617,7 +33617,7 @@
         {
             "abilities": [
                 "filter",
-                "filter"
+                "shell-armor"
             ],
             "base_experience": 97,
             "gender": "f50",
@@ -33860,7 +33860,7 @@
         {
             "abilities": [
                 "drizzle",
-                "drizzle"
+                "levitate"
             ],
             "base_experience": 188,
             "gender": "unknown",
@@ -34553,7 +34553,7 @@
         {
             "abilities": [
                 "sand-stream",
-                "sand-stream"
+                "thick-fat"
             ],
             "base_experience": 198,
             "gender": "f50",
@@ -35251,7 +35251,7 @@
         {
             "abilities": [
                 "swift-swim",
-                "swift-swim"
+                "battle-armor"
             ],
             "base_experience": 199,
             "gender": "f12.5",
@@ -35870,7 +35870,7 @@
         {
             "abilities": [
                 "poison-point",
-                "poison-point"
+                "rivalry"
             ],
             "base_experience": 117,
             "gender": "f99.6094",
@@ -36114,7 +36114,7 @@
         {
             "abilities": [
                 "intimidate",
-                "intimidate"
+                "insomnia"
             ],
             "base_experience": 134,
             "gender": "f50",
@@ -36320,7 +36320,7 @@
         {
             "abilities": [
                 "chlorophyll",
-                "chlorophyll"
+                "overgrow"
             ],
             "base_experience": 208,
             "gender": "f12.5",
@@ -36452,7 +36452,7 @@
         {
             "abilities": [
                 "rock-head",
-                "rock-head"
+                "rough-skin"
             ],
             "base_experience": 134,
             "gender": "f50",
@@ -36967,7 +36967,7 @@
         {
             "abilities": [
                 "iron-fist",
-                "iron-fist"
+                "adaptability"
             ],
             "base_experience": 204,
             "gender": "f12.5",
@@ -37818,7 +37818,7 @@
         {
             "abilities": [
                 "simple",
-                "simple"
+                "magic-guard"
             ],
             "base_experience": 164,
             "gender": "f50",
@@ -38742,7 +38742,7 @@
         {
             "abilities": [
                 "chlorophyll",
-                "chlorophyll"
+                "overgrow"
             ],
             "base_experience": 166,
             "gender": "f50",
@@ -38870,7 +38870,7 @@
         {
             "abilities": [
                 "hyper-cutter",
-                "hyper-cutter"
+                "mold-breaker"
             ],
             "base_experience": 200,
             "gender": "f50",
@@ -39128,7 +39128,7 @@
         {
             "abilities": [
                 "swift-swim",
-                "swift-swim"
+                "chlorophyll"
             ],
             "base_experience": 90,
             "gender": "f50",
@@ -39699,7 +39699,7 @@
         {
             "abilities": [
                 "swift-swim",
-                "swift-swim"
+                "rain-dish"
             ],
             "base_experience": 141,
             "gender": "f50",
@@ -39816,7 +39816,7 @@
         {
             "abilities": [
                 "speed-boost",
-                "speed-boost"
+                "tinted-lens"
             ],
             "base_experience": 198,
             "gender": "f50",
@@ -40670,7 +40670,7 @@
         {
             "abilities": [
                 "static",
-                "static"
+                "rough-skin"
             ],
             "base_experience": 197,
             "gender": "f12.5",
@@ -40861,7 +40861,7 @@
         {
             "abilities": [
                 "torrent",
-                "torrent"
+                "shell-armor"
             ],
             "base_experience": 210,
             "gender": "f12.5",
@@ -41122,7 +41122,7 @@
         {
             "abilities": [
                 "magic-guard",
-                "magic-guard"
+                "natural-cure"
             ],
             "base_experience": 207,
             "gender": "unknown",
@@ -41446,7 +41446,7 @@
         {
             "abilities": [
                 "thick-fat",
-                "thick-fat"
+                "ice-body"
             ],
             "base_experience": 75,
             "gender": "f50",
@@ -42709,7 +42709,7 @@
         {
             "abilities": [
                 "sand-stream",
-                "sand-stream"
+                "levitate"
             ],
             "base_experience": 197,
             "gender": "f50",
@@ -42829,7 +42829,7 @@
         {
             "abilities": [
                 "levitate",
-                "levitate"
+                "magnet-pull"
             ],
             "base_experience": 211,
             "gender": "unknown",
@@ -42964,7 +42964,7 @@
         {
             "abilities": [
                 "intimidate",
-                "intimidate"
+                "battle-armor"
             ],
             "base_experience": 210,
             "gender": "f12.5",
@@ -43324,7 +43324,7 @@
         {
             "abilities": [
                 "drought",
-                "drought"
+                "solid-rock"
             ],
             "base_experience": 154,
             "gender": "f50",
@@ -43449,7 +43449,7 @@
         {
             "abilities": [
                 "technician",
-                "technician"
+                "inner-focus"
             ],
             "base_experience": 199,
             "gender": "f50",
@@ -45385,7 +45385,7 @@
         {
             "abilities": [
                 "hyper-cutter",
-                "hyper-cutter"
+                "steadfast"
             ],
             "base_experience": 208,
             "gender": "f0",
@@ -46131,7 +46131,7 @@
         {
             "abilities": [
                 "rock-head",
-                "rock-head"
+                "mold-breaker"
             ],
             "base_experience": 199,
             "gender": "f12.5",
@@ -46489,7 +46489,7 @@
         {
             "abilities": [
                 "chlorophyll",
-                "chlorophyll"
+                "overgrow"
             ],
             "base_experience": 169,
             "gender": "f50",
@@ -46942,7 +46942,7 @@
         {
             "abilities": [
                 "white-smoke",
-                "white-smoke"
+                "shell-armor"
             ],
             "base_experience": 161,
             "gender": "f50",
@@ -47536,7 +47536,7 @@
         {
             "abilities": [
                 "intimidate",
-                "intimidate"
+                "insomnia"
             ],
             "base_experience": 54,
             "gender": "f50",
@@ -48095,7 +48095,7 @@
         {
             "abilities": [
                 "chlorophyll",
-                "chlorophyll"
+                "levitate"
             ],
             "base_experience": 164,
             "gender": "f50",
@@ -48324,7 +48324,7 @@
         {
             "abilities": [
                 "solid-rock",
-                "solid-rock"
+                "rock-head"
             ],
             "base_experience": 196,
             "gender": "f50",
@@ -49123,7 +49123,7 @@
         {
             "abilities": [
                 "swift-swim",
-                "swift-swim"
+                "shell-armor"
             ],
             "base_experience": 99,
             "gender": "f12.5",
@@ -49667,7 +49667,7 @@
         {
             "abilities": [
                 "lightningrod",
-                "lightningrod"
+                "rock-head"
             ],
             "base_experience": 124,
             "gender": "f50",
@@ -49803,7 +49803,7 @@
         {
             "abilities": [
                 "solid-rock",
-                "solid-rock"
+                "clear-body"
             ],
             "base_experience": 217,
             "gender": "unknown",
@@ -50398,7 +50398,7 @@
         {
             "abilities": [
                 "swift-swim",
-                "swift-swim"
+                "battle-armor"
             ],
             "base_experience": 199,
             "gender": "f12.5",
@@ -51003,7 +51003,7 @@
         {
             "abilities": [
                 "magic-guard",
-                "magic-guard"
+                "trace"
             ],
             "base_experience": 208,
             "gender": "f50",
@@ -51638,7 +51638,7 @@
         {
             "abilities": [
                 "hydration",
-                "hydration"
+                "swift-swim"
             ],
             "base_experience": 158,
             "gender": "f50",
@@ -52501,7 +52501,7 @@
         {
             "abilities": [
                 "thick-fat",
-                "thick-fat"
+                "shell-armor"
             ],
             "base_experience": 208,
             "gender": "f12.5",
@@ -52866,7 +52866,7 @@
         {
             "abilities": [
                 "hyper-cutter",
-                "hyper-cutter"
+                "shed-skin"
             ],
             "base_experience": 165,
             "gender": "f50",
@@ -53109,7 +53109,7 @@
         {
             "abilities": [
                 "snow-warning",
-                "snow-warning"
+                "adaptability"
             ],
             "base_experience": 131,
             "gender": "f50",
@@ -53566,7 +53566,7 @@
         {
             "abilities": [
                 "solar-power",
-                "solar-power"
+                "blaze"
             ],
             "base_experience": 209,
             "gender": "f12.5",
@@ -53711,7 +53711,7 @@
         {
             "abilities": [
                 "sand-veil",
-                "sand-veil"
+                "rough-skin"
             ],
             "base_experience": 67,
             "gender": "f50",
@@ -54349,7 +54349,7 @@
         {
             "abilities": [
                 "solid-rock",
-                "solid-rock"
+                "battle-armor"
             ],
             "base_experience": 99,
             "gender": "f12.5",
@@ -55214,7 +55214,7 @@
         {
             "abilities": [
                 "sand-veil",
-                "sand-veil"
+                "sniper"
             ],
             "base_experience": 114,
             "gender": "f50",
@@ -55482,7 +55482,7 @@
         {
             "abilities": [
                 "swift-swim",
-                "swift-swim"
+                "rock-head"
             ],
             "base_experience": 198,
             "gender": "f12.5",
@@ -57732,7 +57732,7 @@
         {
             "abilities": [
                 "poison-heal",
-                "poison-heal"
+                "guts"
             ],
             "base_experience": 193,
             "gender": "f50",
@@ -58013,7 +58013,7 @@
         {
             "abilities": [
                 "compoundeyes",
-                "compoundeyes"
+                "tinted-lens"
             ],
             "base_experience": 75,
             "gender": "f50",
@@ -58510,7 +58510,7 @@
         {
             "abilities": [
                 "drought",
-                "drought"
+                "solid-rock"
             ],
             "base_experience": 175,
             "gender": "f50",
@@ -59336,7 +59336,7 @@
         {
             "abilities": [
                 "swift-swim",
-                "swift-swim"
+                "torrent"
             ],
             "base_experience": 143,
             "gender": "f12.5",
@@ -60047,7 +60047,7 @@
         {
             "abilities": [
                 "drought",
-                "drought"
+                "pressure"
             ],
             "base_experience": 217,
             "gender": "unknown",
@@ -60440,7 +60440,7 @@
         {
             "abilities": [
                 "simple",
-                "simple"
+                "shell-armor"
             ],
             "base_experience": 164,
             "gender": "f50",
@@ -60717,7 +60717,7 @@
         {
             "abilities": [
                 "adaptability",
-                "adaptability"
+                "color-change"
             ],
             "base_experience": 132,
             "gender": "f50",
@@ -61079,7 +61079,7 @@
         {
             "abilities": [
                 "magic-guard",
-                "magic-guard"
+                "inner-focus"
             ],
             "base_experience": 145,
             "gender": "f25",
@@ -61206,7 +61206,7 @@
         {
             "abilities": [
                 "simple",
-                "simple"
+                "poison-point"
             ],
             "base_experience": 137,
             "gender": "f50",
@@ -62729,7 +62729,7 @@
         {
             "abilities": [
                 "snow-warning",
-                "snow-warning"
+                "adaptability"
             ],
             "base_experience": 214,
             "gender": "f50",
@@ -62861,7 +62861,7 @@
         {
             "abilities": [
                 "filter",
-                "filter"
+                "ice-body"
             ],
             "base_experience": 192,
             "gender": "f50",
@@ -62987,7 +62987,7 @@
         {
             "abilities": [
                 "swift-swim",
-                "swift-swim"
+                "rain-dish"
             ],
             "base_experience": 74,
             "gender": "f50",
@@ -63508,7 +63508,7 @@
         {
             "abilities": [
                 "lightningrod",
-                "lightningrod"
+                "rock-head"
             ],
             "base_experience": 87,
             "gender": "f50",
@@ -64128,7 +64128,7 @@
         {
             "abilities": [
                 "swift-swim",
-                "swift-swim"
+                "shell-armor"
             ],
             "base_experience": 199,
             "gender": "f12.5",
@@ -64856,7 +64856,7 @@
         {
             "abilities": [
                 "solid-rock",
-                "solid-rock"
+                "battle-armor"
             ],
             "base_experience": 199,
             "gender": "f12.5",
@@ -65302,7 +65302,7 @@
         {
             "abilities": [
                 "adaptability",
-                "adaptability"
+                "hyper-cutter"
             ],
             "base_experience": 111,
             "gender": "f50",
@@ -65530,7 +65530,7 @@
         {
             "abilities": [
                 "magic-guard",
-                "magic-guard"
+                "inner-focus"
             ],
             "base_experience": 186,
             "gender": "f25",
@@ -65660,7 +65660,7 @@
         {
             "abilities": [
                 "sand-veil",
-                "sand-veil"
+                "shed-skin"
             ],
             "base_experience": 144,
             "gender": "f50",
@@ -65866,7 +65866,7 @@
         {
             "abilities": [
                 "sand-veil",
-                "sand-veil"
+                "hyper-cutter"
             ],
             "base_experience": 204,
             "gender": "f50",
@@ -67233,7 +67233,7 @@
         {
             "abilities": [
                 "rock-head",
-                "rock-head"
+                "shell-armor"
             ],
             "base_experience": 144,
             "gender": "f50",
@@ -67355,7 +67355,7 @@
         {
             "abilities": [
                 "guts",
-                "guts"
+                "quick-feet"
             ],
             "base_experience": 189,
             "gender": "f50",
@@ -67488,7 +67488,7 @@
         {
             "abilities": [
                 "clear-body",
-                "clear-body"
+                "insomnia"
             ],
             "base_experience": 97,
             "gender": "f50",
@@ -67602,7 +67602,7 @@
         {
             "abilities": [
                 "tinted-lens",
-                "tinted-lens"
+                "reckless"
             ],
             "base_experience": 194,
             "gender": "f50",
@@ -67804,7 +67804,7 @@
         {
             "abilities": [
                 "hyper-cutter",
-                "hyper-cutter"
+                "immunity"
             ],
             "base_experience": 165,
             "gender": "f50",
@@ -67937,7 +67937,7 @@
         {
             "abilities": [
                 "lightningrod",
-                "lightningrod"
+                "rock-head"
             ],
             "base_experience": 204,
             "gender": "f50",
@@ -68518,7 +68518,7 @@
         {
             "abilities": [
                 "drizzle",
-                "drizzle"
+                "pressure"
             ],
             "base_experience": 216,
             "gender": "unknown",
@@ -68763,7 +68763,7 @@
         {
             "abilities": [
                 "tinted-lens",
-                "tinted-lens"
+                "shield-dust"
             ],
             "base_experience": 161,
             "gender": "f50",
@@ -69356,7 +69356,7 @@
         {
             "abilities": [
                 "rain-dish",
-                "rain-dish"
+                "clear-body"
             ],
             "base_experience": 205,
             "gender": "f50",
@@ -69841,7 +69841,7 @@
         {
             "abilities": [
                 "poison-point",
-                "poison-point"
+                "rivalry"
             ],
             "base_experience": 60,
             "gender": "f0",
@@ -70228,7 +70228,7 @@
         {
             "abilities": [
                 "solid-rock",
-                "solid-rock"
+                "battle-armor"
             ],
             "base_experience": 218,
             "gender": "f50",
@@ -70621,7 +70621,7 @@
         {
             "abilities": [
                 "iron-fist",
-                "iron-fist"
+                "blaze"
             ],
             "base_experience": 209,
             "gender": "f12.5",
@@ -70934,7 +70934,7 @@
         {
             "abilities": [
                 "guts",
-                "guts"
+                "gluttony"
             ],
             "base_experience": 94,
             "gender": "f12.5",
@@ -71190,7 +71190,7 @@
         {
             "abilities": [
                 "super-luck",
-                "super-luck"
+                "limber"
             ],
             "base_experience": 69,
             "gender": "f50",
@@ -71323,7 +71323,7 @@
         {
             "abilities": [
                 "limber",
-                "limber"
+                "thick-fat"
             ],
             "base_experience": 183,
             "gender": "f75",
@@ -71802,7 +71802,7 @@
         {
             "abilities": [
                 "quick-feet",
-                "quick-feet"
+                "tangled-feet"
             ],
             "base_experience": 158,
             "gender": "f50",
@@ -72173,7 +72173,7 @@
         {
             "abilities": [
                 "simple",
-                "simple"
+                "unaware"
             ],
             "base_experience": 116,
             "gender": "f50",
@@ -72474,7 +72474,7 @@
         {
             "abilities": [
                 "super-luck",
-                "super-luck"
+                "limber"
             ],
             "base_experience": 148,
             "gender": "f50",
@@ -72765,7 +72765,7 @@
         {
             "abilities": [
                 "scrappy",
-                "scrappy"
+                "soundproof"
             ],
             "base_experience": 126,
             "gender": "f50",
@@ -73107,7 +73107,7 @@
         {
             "abilities": [
                 "simple",
-                "simple"
+                "magic-guard"
             ],
             "base_experience": 64,
             "gender": "unknown",
@@ -73538,7 +73538,7 @@
         {
             "abilities": [
                 "snow-cloak",
-                "snow-cloak"
+                "ice-body"
             ],
             "base_experience": 196,
             "gender": "f12.5",
@@ -74214,7 +74214,7 @@
         {
             "abilities": [
                 "simple",
-                "simple"
+                "unaware"
             ],
             "base_experience": 58,
             "gender": "f50",
@@ -74453,7 +74453,7 @@
         {
             "abilities": [
                 "simple",
-                "simple"
+                "unaware"
             ],
             "base_experience": 99,
             "gender": "f50",
@@ -74838,7 +74838,7 @@
         {
             "abilities": [
                 "scrappy",
-                "scrappy"
+                "soundproof"
             ],
             "base_experience": 184,
             "gender": "f50",
@@ -75181,7 +75181,7 @@
         {
             "abilities": [
                 "guts",
-                "guts"
+                "quick-feet"
             ],
             "base_experience": 124,
             "gender": "f50",
@@ -75549,7 +75549,7 @@
         {
             "abilities": [
                 "lightningrod",
-                "lightningrod"
+                "rock-head"
             ],
             "base_experience": 135,
             "gender": "f50",
@@ -77099,7 +77099,7 @@
         {
             "abilities": [
                 "sand-veil",
-                "sand-veil"
+                "rough-skin"
             ],
             "base_experience": 218,
             "gender": "f50",
@@ -77929,7 +77929,7 @@
         {
             "abilities": [
                 "serene-grace",
-                "serene-grace"
+                "shell-armor"
             ],
             "base_experience": 219,
             "gender": "f50",
@@ -78404,7 +78404,7 @@
         {
             "abilities": [
                 "snow-cloak",
-                "snow-cloak"
+                "snow-warning"
             ],
             "base_experience": 215,
             "gender": "unknown",
@@ -78521,7 +78521,7 @@
         {
             "abilities": [
                 "swift-swim",
-                "swift-swim"
+                "battle-armor"
             ],
             "base_experience": 99,
             "gender": "f12.5",
@@ -78628,7 +78628,7 @@
         {
             "abilities": [
                 "rain-dish",
-                "rain-dish"
+                "clear-body"
             ],
             "base_experience": 105,
             "gender": "f50",
