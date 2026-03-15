@@ -341,13 +341,12 @@ function readGen4Mon(bytes, offset) {
 		"gentle",
 		"sassy",
 		"careful",
-		"quirky ",
+		"quirky",
 	][personality % 25];
 	var species = pokemonByPokedex.get(blockA.species);
 	if (species == undefined) {
 		return null;
 	}
-	console.log(blockB);
 	return {
 		name: species.name,
 		moves: blockB.moves.map(v => movesByIndex.get(v)?.name).filter(a => a != undefined),
@@ -444,7 +443,7 @@ function read32(bytes, offset) {
 	return (bytes[offset + 0] << 0) +
 		(bytes[offset + 1] << 8) +
 		(bytes[offset + 2] << 16) +
-		(bytes[offset + 3] << 24);
+		(bytes[offset + 3] * Math.pow(2, 24));
 }
 
 function read24(bytes, offset) {
