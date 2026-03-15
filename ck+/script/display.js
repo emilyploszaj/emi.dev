@@ -649,6 +649,9 @@ function getFullMoveDisplay(move) {
 }
 
 function getMoveDisplay(move, level = undefined) {
+	if (move == undefined) {
+		return `<tr>undefined</tr>`;
+	}
 	return `
 		<tr>
 			${level != undefined ? `<td>${level}</td>` : ``}
