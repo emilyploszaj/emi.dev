@@ -1366,3 +1366,13 @@ rt {
 .nature-radio-selected.nature-radio-minus {
 	color: var(--highlighted);
 }
+
+.dv-plus {
+	font-weight: bold;
+	color: var(--ohko);
+}
+
+.dv-minus {
+	font-weight: lighter;
+	color: var(--highlighted);
+}
