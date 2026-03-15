@@ -36,6 +36,7 @@ var movesByIndex = new Map();
 var movesByLearnset = new Map();
 var movesByTMHM = new Map();
 var abilitiesByName = new Map();
+var abilitiesByIndex = new Map();
 var itemsByName = new Map();
 var encounterPools = new Map();
 var landmarksByIndex = new Map();
@@ -298,6 +299,7 @@ function startup() {
 	if (j.abilities) {
 		for (let a of j.abilities) {
 			abilitiesByName.set(a.name, a);
+			abilitiesByIndex.set(a.index, a);
 			addSearchResult(a.name, {link: `#/ability/${a.name}/`});
 		}
 	}

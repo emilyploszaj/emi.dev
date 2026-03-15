@@ -324,7 +324,7 @@ function readGen4Mon(bytes, offset) {
 		name: species.name,
 		moves: blockB.moves.map(v => movesByIndex.get(v)?.name).filter(a => a != undefined),
 		item: "", // TODO blockA.item,
-		//ability: abilitiesByIndex.get(blockA.ability), // TODO
+		ability: abilitiesByIndex.get(blockA.ability)?.name ?? undefined,
 		dvs: {
 			hp: (blockB.ivs >> 0) & 0b11111,
 			atk: (blockB.ivs >> 5) & 0b11111,
