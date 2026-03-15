@@ -74812,7 +74812,7 @@
                         "water-pulse",
                         "aurora-beam"
                     ],
-                    "name": "shellos-east",
+                    "name": "shellos",
                     "nature": "impish"
                 },
                 {
@@ -76221,7 +76221,7 @@
                         "reflect",
                         "psychic"
                     ],
-                    "name": "mimejr",
+                    "name": "mime-jr",
                     "nature": "adamant"
                 },
                 {
@@ -77125,7 +77125,7 @@
                         "light-screen",
                         "reflect"
                     ],
-                    "name": "mrmime",
+                    "name": "mr-mime",
                     "nature": "calm"
                 },
                 {
@@ -78236,7 +78236,7 @@
                         "hypnosis",
                         "calm-mind"
                     ],
-                    "name": "mrmime",
+                    "name": "mr-mime",
                     "nature": "quirky"
                 },
                 {
@@ -78986,7 +78986,7 @@
                         "metronome",
                         "curse"
                     ],
-                    "name": "mrmime",
+                    "name": "mr-mime",
                     "nature": "rash"
                 },
                 {
@@ -78999,7 +78999,7 @@
                         "ominous-wind",
                         "earthquake"
                     ],
-                    "name": "hooh",
+                    "name": "ho-oh",
                     "nature": "rash"
                 },
                 {
@@ -82894,7 +82894,7 @@
                         "ice-beam",
                         "thunderbolt"
                     ],
-                    "name": "porygonz",
+                    "name": "porygon-z",
                     "nature": "relaxed"
                 }
             ]
@@ -83141,7 +83141,7 @@
                         "dark-pulse",
                         "hp-fire"
                     ],
-                    "name": "porygonz",
+                    "name": "porygon-z",
                     "nature": "hardy"
                 }
             ]
@@ -84698,7 +84698,7 @@
                         "aura-sphere",
                         "hyper-beam"
                     ],
-                    "name": "porygonz",
+                    "name": "porygon-z",
                     "nature": "calm"
                 }
             ]
@@ -88516,7 +88516,7 @@
                         "psychic",
                         "focus-blast"
                     ],
-                    "name": "mrmime",
+                    "name": "mr-mime",
                     "nature": "naughty"
                 },
                 {
@@ -89681,7 +89681,7 @@
                         "focus-blast",
                         "blizzard"
                     ],
-                    "name": "mrmime",
+                    "name": "mr-mime",
                     "nature": "quiet"
                 },
                 {
@@ -90416,7 +90416,7 @@
                         "light-screen",
                         "follow-me"
                     ],
-                    "name": "mrmime",
+                    "name": "mr-mime",
                     "nature": "modest"
                 },
                 {
@@ -90873,7 +90873,7 @@
                         "focus-blast",
                         "teeter-dance"
                     ],
-                    "name": "mrmime",
+                    "name": "mr-mime",
                     "nature": "calm"
                 },
                 {
@@ -92315,7 +92315,7 @@
                         "psychic",
                         "endure"
                     ],
-                    "name": "mrmime",
+                    "name": "mr-mime",
                     "nature": "calm"
                 },
                 {
@@ -95203,7 +95203,7 @@
                         "hp-fire",
                         "solar-beam"
                     ],
-                    "name": "porygonz",
+                    "name": "porygon-z",
                     "nature": "hardy"
                 },
                 {
@@ -95990,7 +95990,7 @@
                         "hyper-beam",
                         "hp-ground"
                     ],
-                    "name": "porygonz",
+                    "name": "porygon-z",
                     "nature": "bashful"
                 },
                 {
@@ -97730,7 +97730,7 @@
                         "thunderbolt",
                         "ice-beam"
                     ],
-                    "name": "porygonz",
+                    "name": "porygon-z",
                     "nature": "serious"
                 },
                 {
@@ -99218,7 +99218,7 @@
                         "thunderbolt",
                         "nasty-plot"
                     ],
-                    "name": "porygonz",
+                    "name": "porygon-z",
                     "nature": "hasty"
                 },
                 {
