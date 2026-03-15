@@ -35,13 +35,14 @@ function addPokemonToBox() {
 		level: 10,
 		item: "",
 		moves: [],
+		ability: "pressure",
 		dvs: {
-			hp: 15,
-			atk: 15,
-			def: 15,
-			spa: 15,
-			spd: 15,
-			spe: 15,
+			hp: MAX_DV,
+			atk: MAX_DV,
+			def: MAX_DV,
+			spa: MAX_DV,
+			spd: MAX_DV,
+			spe: MAX_DV,
 		}
 	});
 	updateBox();
@@ -65,14 +66,56 @@ function initEdit(poke) {
 		}
 		OptionSelect.updateSelector(el);
 	}
+	var nature = NATURE_TABLE[poke.nature ?? "hardy"];
 	for (const stat of STATS) {
-		if (poke.dvs !== undefined && poke.dvs[stat] !== undefined) {
-			document.getElementById("edit-" + stat + "-dv").value = poke.dvs[stat];
-		} else {
-			document.getElementById("edit-" + stat + "-dv").value = 15;
+		document.getElementById("edit-" + stat + "-dv").value = poke?.dvs?.[stat] ?? MAX_DV;
+		if (stat != "hp") {
+			var divPlus = document.getElementById("edit-" + stat + "-nature-plus");
+			var divMinus = document.getElementById("edit-" + stat + "-nature-minus");
+			divPlus.classList.remove("nature-radio-selected")
+			if (nature[0] == stat) {
+				divPlus.classList.add("nature-radio-selected")
+			}
+			divMinus.classList.remove("nature-radio-selected")
+			if (nature[1] == stat) {
+				divMinus.classList.add("nature-radio-selected")
+			}
 		}
 	}
 	updateEdits();
+}
+
+function getEditNature() {
+	var plusDiv = document.querySelector(".nature-radio-selected.nature-radio-plus");
+	var minusDiv = document.querySelector(".nature-radio-selected.nature-radio-minus");
+	if (plusDiv && minusDiv) {
+		return getNature(plusDiv.id.split("edit-")[1].split("-nature")[0], minusDiv.id.split("edit-")[1].split("-nature")[0]);
+	}
+	return "hardy";
+}
+
+function setEditNature(stat, dir) {
+	var nature = [...NATURE_TABLE[getEditNature()]];
+	if (dir == "plus") {
+		nature[0] = stat;
+	} else {
+		nature[1] = stat;
+	}
+	for (const stat of STATS) {
+		if (stat != "hp") {
+			var divPlus = document.getElementById("edit-" + stat + "-nature-plus");
+			var divMinus = document.getElementById("edit-" + stat + "-nature-minus");
+			divPlus.classList.remove("nature-radio-selected")
+			if (nature[0] == stat) {
+				divPlus.classList.add("nature-radio-selected")
+			}
+			divMinus.classList.remove("nature-radio-selected")
+			if (nature[1] == stat) {
+				divMinus.classList.add("nature-radio-selected")
+			}
+		}
+	}
+	changeEdit();
 }
 
 function undoEdit() {
@@ -124,17 +167,18 @@ function updateEdits() {
 	validate("edit-name", v => pokemonByName.has(v));
 	validate("edit-item", v => v == "" || itemsByName.has(v));
 	validate("edit-lvl", v => v <= 100 && v > 0);
+	validate("edit-ability", v => abilitiesByName.has(v));
 	validate("edit-move-1", v => v == "" || movesByName.has(v));
 	validate("edit-move-2", v => v == "" || movesByName.has(v));
 	validate("edit-move-3", v => v == "" || movesByName.has(v));
 	validate("edit-move-4", v => v == "" || movesByName.has(v));
 	for (const stat of STATS) {
-		validate("edit-" + stat + "-dv", v => v >= 0 && v < 16);
+		validate("edit-" + stat + "-dv", v => v >= 0 && v <= MAX_DV);
 		validate("edit-" + stat + "-ev", v => v >= 0 && v < 256);
 	}
 	var poke = getEditedPoke();
 	var bp = BattlePoke.of(editingType != "enemy", poke, getEmptyStages());
-	var hiddenPower = getHiddenPower(poke);
+	var hiddenPower = engine.getHiddenPower(poke);
 	for (const stat of STATS) {
 		document.getElementById("edit-" + stat).innerHTML = bp.getEffectiveStat(stat);
 	}
@@ -145,6 +189,7 @@ function getEditedPoke() {
 	return {
 		name: document.getElementById("edit-name").getAttribute("last-valid"),
 		item: document.getElementById("edit-item").getAttribute("last-valid"),
+		ability: document.getElementById("edit-ability").getAttribute("last-valid"),
 		level: parseInt(document.getElementById("edit-lvl").getAttribute("last-valid")),
 		moves: [
 			document.getElementById("edit-move-1").getAttribute("last-valid"),
@@ -152,6 +197,7 @@ function getEditedPoke() {
 			document.getElementById("edit-move-3").getAttribute("last-valid"),
 			document.getElementById("edit-move-4").getAttribute("last-valid")
 		].filter(v => v && v.length > 0),
+		nature: getEditNature(),
 		dvs: {
 			hp: parseInt(document.getElementById("edit-hp-dv").getAttribute("last-valid")),
 			atk: parseInt(document.getElementById("edit-atk-dv").getAttribute("last-valid")),
@@ -408,6 +454,10 @@ function suggestEditItems() {
 	return [];
 }
 
+function suggestEditAbilities() {
+	return [];
+}
+
 class OptionSelect {
 	static lastClickInside = false;
 	static target = null;
@@ -428,6 +478,8 @@ class OptionSelect {
 			contents = this.getOptionPokemon(pokemonByName.get(value), false);
 		} else if (optionType == "items") {
 			contents = this.getOptionItem(itemsByName.get(value), false);
+		} else if (optionType == "abilities") {
+			contents = this.getOptionAbility(abilitiesByName.get(value), false);
 		}
 		element.innerHTML = contents;
 	}
@@ -452,6 +504,9 @@ class OptionSelect {
 		} else if (optionType == "items") {
 			contents = data.items.sort((a, b) => a.name.localeCompare(b.name)).displayMap(i => this.getOptionItem(i, true));
 			suggested = suggested.displayMap(i => this.getOptionItem(itemsByName.get(i.value), true, i.extra ?? ""));
+		} else if (optionType == "abilities") {
+			contents = data.abilities.sort((a, b) => a.name.localeCompare(b.name)).displayMap(i => this.getOptionAbility(i, true));
+			suggested = suggested.displayMap(i => this.getOptionAbility(abilitiesByName.get(i.value), true, i.extra ?? ""));
 		}
 		document.getElementById("suggested-option-list").innerHTML = suggested;
 		document.getElementById("option-list").innerHTML = contents;
@@ -480,6 +535,13 @@ class OptionSelect {
 			return `<div>​</div>`;
 		}
 		return `<div${option ? ` class="option-list-option" search="${item.name}"` : ""}>${itemImage(item)}${fullCapitalize(item.name)}${extra}</div>`;
+	}
+
+	static getOptionAbility(ability, option, extra = "") {
+		if (!ability) {
+			return `<div>​</div>`;
+		}
+		return `<div${option ? ` class="option-list-option" search="${ability.name}"` : ""}>${fullCapitalize(ability.name)}${extra}</div>`;
 	}
 
 	static cancel() {

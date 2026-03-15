@@ -12,6 +12,23 @@ class BattleEffects {
 	 * @returns {BattleEffects}
 	 */
 	static of(attacker, defender, move) {
+		var pluckFor = function(type, value) {
+			var ret = [];
+			if (value[type]) {
+				if (Array.isArray(value[type])) {
+					ret.concat(value[type]);
+				} else {
+					ret.push(value[type]);
+				}
+			} else if (value.all) {
+				if (Array.isArray(value.all)) {
+					ret.concat(value.all);
+				} else {
+					ret.push(value.all);
+				}
+			}
+			return ret;
+		}
 		var addIfValid = function(effects, effect) {
 			if (effect != null) {
 				effects.push(effect);
@@ -25,6 +42,20 @@ class BattleEffects {
 				}
 			} else {
 				addIfValid(effects, BattleEffect.parse("attack", move.effects));
+			}
+		}
+		if (abilitiesByName.has(attacker.ability.name)) {
+			if (attacker.ability.effects) {
+				for (const v of pluckFor("attack", attacker.ability.effects)) {
+					addIfValid(effects, BattleEffect.parse("attack", v));
+				}
+			}
+		}
+		if (abilitiesByName.has(defender.ability.name)) {
+			if (defender.ability.effects) {
+				for (const v of pluckFor("defend", defender.ability.effects)) {
+					addIfValid(effects, BattleEffect.parse("defend", v));
+				}
 			}
 		}
 		if (itemsByName.has(attacker.item)) {
@@ -64,6 +95,9 @@ class BattleEffects {
 	 * @returns {Number}
 	 */
 	getModifier(attacker, defender, move, modifier, base, max) {
+		if (max == undefined) {
+			max = Number.MAX_VALUE;
+		}
 		var result = base;
 		for (const e of this.effects) {
 			var mod = e.getModifier(attacker, defender, move, modifier);
@@ -84,6 +118,9 @@ class BattleEffects {
 	 * @returns {Number}
 	 */
 	getModifierFloat(attacker, defender, move, modifier, base, max, def = undefined) {
+		if (max == undefined) {
+			max = Number.MAX_VALUE;
+		}
 		var result = base;
 		var modified = false;
 		for (const e of this.effects) {
@@ -327,7 +364,7 @@ function initConditions() {
 	addForBoth("item", (condition, poke, opponent, move) => checkStringCondition(condition, poke.item));
 	addForBoth("level", (condition, poke, opponent, move) => checkNumberCondition(condition, poke.level));
 	addForBoth("transformed", (condition, poke, opponent, move) => checkBooleanCondition(condition, (poke.poke.transformStats != undefined)));
-	addForBoth("hp", (condition, poke, opponent, move) => checkNumberCondition(condition, poke.currentHp(), poke.getStat("hp")));
+	addForBoth("hp", (condition, poke, opponent, move) => checkNumberCondition(condition, poke.currentHp, poke.getStat("hp")));
 	addForBoth("statused", (condition, poke, opponent, move) => checkBooleanCondition(condition, poke.status != ""));
 	addForBoth("status", (condition, poke, opponent, move) => checkStringCondition(condition, poke.status));
 }

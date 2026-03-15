@@ -338,6 +338,16 @@ input:checked + .fake-checkbox {
 	text-shadow: 2px 2px black;
 }
 
+.category {
+	text-align: center !important;
+	font-weight: bold;
+	color: #eeeeee;
+	width: 64px;
+	padding: 4px !important;
+	margin: 4px 0px !important;
+	text-shadow: 2px 2px black;
+}
+
 .speed-indicator {
 	text-align: center;
 	font-size: 40px;
@@ -521,15 +531,33 @@ input:checked + .fake-checkbox {
 	margin-right: 20px;
 }
 
+.gen-4 .encounter-poke {
+	position: relative;
+	background-color: var(--grouping-background);
+	padding: 10px;
+	width: 80px;
+	text-align: center;
+	margin: 2px;
+}
+
+.gen-4 .encounter-poke img {
+	image-rendering: pixelated;
+	object-fit: cover;
+	width: 80px;
+	height: 80px;
+	margin-right: 20px;
+}
+
 .encounter-poke:hover .wild-calc {
 	display: block;
 }
 
 .wild-calc {
 	display: none;
-	position: relative;
-	top: -28px;
-	margin-bottom: -27px;
+	position: absolute;
+	bottom: 20px;
+	left: auto;
+	right: auto;
 }
 
 .learnset-pool {
@@ -826,9 +854,21 @@ input:checked + .fake-checkbox {
 	float: right;
 }
 
-#opponent div {
+#opponent .poke-types {
+	float: right;
+}
+
+#opponent .speed-indicator {
+	float: right;
+}
+
+#opponent .calc-team-footer div {
 	float: right;
 	clear: both;
+}
+
+.gen-4 .calc-team-footer {
+	padding-top: 8px;
 }
 
 .calc-stats {
@@ -843,8 +883,18 @@ input:checked + .fake-checkbox {
 	padding: 0px 10px;
 }
 
+.stat-num {
+	min-width: 36px;
+}
+
 .calc-stats table {
 	border-spacing: 3px;
+}
+
+.calc-ability {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #opponent .fake-checkbox {
@@ -856,6 +906,7 @@ input:checked + .fake-checkbox {
 }
 
 .move-calcs {
+	padding-top: 8px;
 	text-align: center;
 }
 
@@ -876,6 +927,8 @@ input:checked + .fake-checkbox {
 	height: 8px;
 	margin-top: 4px;
 	margin-bottom: -12px;
+	margin-left: auto;
+	margin-right: auto;
 	gap: 4px;
 }
 
@@ -1012,16 +1065,28 @@ rt {
 	flex-wrap: wrap;
 }
 
+.gen-4 .calc-team {
+	margin: 0px -16px;
+}
+
 .micro-mon {
 	background-color: var(--background);
 	padding: 5px;
 	margin: 2px;
 }
 
+.gen-4 .micro-mon {
+	padding: 0px;
+}
+
 .micro-mon img {
 	border-width: 3px;
 	border-style: dashed;
 	border-color: transparent;
+}
+
+.gen-4 .micro-mon img {
+	border: none;
 }
 
 .low-switch-priority {
@@ -1283,4 +1348,21 @@ rt {
 
 .option-list-selected {
 	background-color: var(--search-suggestion-hover);
+}
+
+.nature-radio {
+	cursor: pointer;
+}
+
+.nature-radio {
+	font-weight: bolder;
+	user-select: none;
+}
+
+.nature-radio-selected.nature-radio-plus {
+	color: var(--ohko);
+}
+
+.nature-radio-selected.nature-radio-minus {
+	color: var(--highlighted);
 }

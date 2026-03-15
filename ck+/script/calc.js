@@ -1,6 +1,7 @@
 class BattlePoke {
 	#player;
 	#stages;
+	#ability;
 	poke;
 
 	static of(player, poke, stages) {
@@ -8,6 +9,8 @@ class BattlePoke {
 		v.#player = player;
 		v.poke = poke;
 		v.#stages = stages;
+		var a = abilitiesByName.get(poke.ability) ?? {"name": "none"};
+		v.#ability = BattleAbility.of(v, a, a.variants?.[player ? playerAbilityVariant : enemyAbilityVariant] ?? {});
 		return v;
 	}
 
@@ -49,6 +52,10 @@ class BattlePoke {
 
 	get name() {
 		return this.poke.name;
+	}
+
+	get ability() {
+		return this.#ability;
 	}
 
 	getStat(stat) {
@@ -113,6 +120,26 @@ class BattleMove {
 	}
 }
 
+class BattleAbility {
+	#variant;
+
+	static of(user, ability, variant) {
+		var v = new BattleAbility();
+		v.user = user;
+		v.ability = ability;
+		v.#variant = variant;
+		return v;
+	}
+
+	get name() {
+		return this.ability.name;
+	}
+
+	get effects() {
+		return this.#variant.effects ?? this.ability.effects;
+	}
+}
+
 class CalcResult {
 
 	constructor(rolls, min, max) {
@@ -121,9 +148,68 @@ class CalcResult {
 		this.max = max;
 	}
 
-	static of(mono) {
-		return new CalcResult([mono], mono, mono);
+	static of(value) {
+		if (Array.isArray(value)) {
+			return new CalcResult(value, Math.min(...value), Math.max(...value));
+		} else {
+			return new CalcResult([value], value, value);
+		}
 	}
+
+	modify(func) {
+		for (var i = 0; i < this.rolls.length; i++) {
+			this.rolls[i] = func(this.rolls[i]);
+		}
+		this.min = func(this.min);
+		this.max = func(this.max);
+	}
+}
+
+const NATURE_TABLE = {
+	atk: {
+		atk: "hardy",
+		def: "lonely",
+		spa: "adamant",
+		spd: "naughty",
+		spe: "brave",
+	},
+	def: {
+		atk: "bold",
+		def: "docile",
+		spa: "impish",
+		spd: "lax",
+		spe: "relaxed",
+	},
+	spa: {
+		atk: "modest",
+		def: "mild",
+		spa: "bashful",
+		spd: "rash",
+		spe: "quiet",
+	},
+	spd: {
+		atk: "calm",
+		def: "gentle",
+		spa: "careful",
+		spd: "quirky",
+		spe: "sassy",
+	},
+	spe: {
+		atk: "timid",
+		def: "hasty",
+		spa: "jolly",
+		spd: "naive",
+		spe: "serious",
+	}
+}
+for (const boon of Object.keys(NATURE_TABLE)) {
+	for (const bane of Object.keys(NATURE_TABLE)) {
+		NATURE_TABLE[NATURE_TABLE[boon][bane]] = [boon, bane];
+	}
+}
+
+function getNature(boon, bane) {
+	return NATURE_TABLE[boon]?.[bane] ?? "hardy";
 }
 
 function hasBadgeBoost(poke, player) {
@@ -131,23 +217,7 @@ function hasBadgeBoost(poke, player) {
 }
 
 function getPokeStat(poke, stat) {
-	if (poke.transformStats) {
-		return poke.transformStats[stat];
-	}
-	var p = pokemonByName.get(poke.name);
-	var v = p.stats[stat];
-	if (poke.dvs != undefined) {
-		v += poke.dvs[stat];
-	} else {
-		v += 15;
-	}
-	v = parseInt((v * 2 * poke.level) / 100);
-
-	if (stat == "hp") {
-		return v + poke.level + 10;
-	} else {
-		return v + 5;
-	}
+	return engine.getPokeStat(poke, stat);
 }
 
 function setPlayer(i) {

@@ -67,7 +67,7 @@ function updateExtraDupes() {
 	for (const dupe of dupes) {
 		if (pokemonByName.has(dupe)) {
 			v += `<div class="micro-mon drag-sortable">
-				<img draggable="false" src="${getPokeImage(pokemonByName.get(dupe))}">
+				<img draggable="false" src="${getPokeImage(pokemonByName.get(dupe), "small")}">
 			</div>`;
 		}
 	}

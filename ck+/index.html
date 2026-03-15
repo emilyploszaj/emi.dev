@@ -2,18 +2,18 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<meta property="og:title" content="Emi's Crystal Kaizo+ Calc and Index">
-		<meta property="og:description" content="Emi's Crystal Kaizo+ Calc and Index">
+		<meta property="og:title" content="Emi's Calc">
+		<meta property="og:description" content="Emi's Calc">
 		<meta property="og:site_name" content="emi.dev">
 		<meta name="theme-color" content="#dc9eff">
-		<title>Emi's Crystal Kaizo+ Calc</title>
+		<title>Emi's Calc</title>
 		<link rel="stylesheet" href="https://fonts.bunny.net/css?family=Ubuntu+Mono:400,700&display=block">
 		<link rel="stylesheet" type="text/css" href="./style.css">
 		<style id="dynamic-style"></style>
 	</head>
 	<body>
 		<div id="header">
-			<h1>Emi's Crystal Kaizo+ Calc</h1>
+			<h1>Emi's Calc</h1>
 			<div id="search" style="z-index: 100;">
 				<input id="search-box" type="search" placeholder="Search pokemon or encounters...">
 				<div id="search-suggestions">
@@ -91,10 +91,15 @@
 								<tr class="calc-spe"><td>Spe</td><td><div class="stat-num"></div></td><td><input class="player-stages" type="number" value="0" min="-6" max="6" oninput="updateCalc()"></td><td><div class="speed-indicator"></div></td></tr>
 							</table>
 						</div>
+						<div>
+							<div class="calc-ability"></div>
+						</div>
 					</div>
 				</div>
 				<div class="calc-moves"></div>
-				<div class="calc-team drag-sort-container" drag-type="box" drag-swap="swapBox(from, to)"></div>
+				<div class="calc-team-footer">
+					<div class="calc-team drag-sort-container" drag-type="box" drag-swap="swapBox(from, to)"></div>
+				</div>
 			</div>
 			<div id="weather">
 				<div>Weather</div>
@@ -149,6 +154,9 @@
 								<tr class="calc-spe"><td><div class="speed-indicator"></div></td><td><input class="enemy-stages" type="number" value="0" min="-6" max="6" oninput="updateCalc()"></td><td><div class="stat-num"></div></td><td>Spe</td></tr>
 							</table>
 						</div>
+						<div>
+							<div class="calc-ability"></div>
+						</div>
 					</div>
 					<div style="display:block;">
 						<div class="poke-icon" drop-accept="box" drop="calcEnemyFromBox(from)"></div>
@@ -156,15 +164,17 @@
 					</div>
 				</div>
 				<div class="calc-moves"></div>
-				<div class="calc-team"></div>
-				<div class="calc-naviation">
-					<span id="current-trainer-name"></span>
-					<a id="current-trainer-navigate"><button>Info</button></a>
-					<button onclick="navigateBattle(-1)">Previous</button>
-					<button onclick="navigateBattle(1)">Next</button>
+				<div class="calc-team-footer">
+					<div class="calc-team"></div>
+					<div class="calc-naviation">
+						<span id="current-trainer-name"></span>
+						<a id="current-trainer-navigate"><button>Info</button></a>
+						<button onclick="navigateBattle(-1)">Previous</button>
+						<button onclick="navigateBattle(1)">Next</button>
+					</div>
+					<div class="extra-calc-teams"></div>
+					<br style="clear:both;"/>
 				</div>
-				<div class="extra-calc-teams"></div>
-				<br style="clear:both;"/>
 			</div>
 		</div>
 		<div id="settings" class="tab">
@@ -252,7 +262,7 @@
 				<tr class="engine-flag-ability">
 					<td>
 						<td>Ability</td>
-						<td><button id="edit-ability" class="poke-edit-input option-selector" options="items" empty-option="true" suggested="suggestEditAbilities()" update="changeEdit()"></button></td>
+						<td><button id="edit-ability" class="poke-edit-input option-selector" options="abilities" empty-option="true" suggested="suggestEditAbilities()" update="changeEdit()"></button></td>
 					</td>
 				</tr>
 				<tr>
@@ -279,49 +289,49 @@
 							<tr>
 								<td>HP</td>
 								<td id="edit-hp"></td>
-								<td class="engine-flag-dvs"><input class="poke-edit-input" type="number" value="0" min="0" max="15" id="edit-hp-dv"></td>
+								<td class="engine-flag-dvs"><input class="poke-edit-input" type="number" value="0" min="0" max="31" id="edit-hp-dv"></td>
 								<td class="engine-flag-evs"><input class="poke-edit-input" type="number" value="0" min="0" max="255" id="edit-hp-ev"></td>
 								<td class="engine-flag-nature"> </td>
 							</tr>
 							<tr>
 								<td>Atk</td>
 								<td id="edit-atk"></td>
-								<td class="engine-flag-dvs"><input class="poke-edit-input" type="number" value="0" min="0" max="15" id="edit-atk-dv"></td>
+								<td class="engine-flag-dvs"><input class="poke-edit-input" type="number" value="0" min="0" max="31" id="edit-atk-dv"></td>
 								<td class="engine-flag-evs"><input class="poke-edit-input" type="number" value="0" min="0" max="255" id="edit-atk-ev"></td>
-								<td class="engine-flag-nature">-</td>
-								<td class="engine-flag-nature">+</td>
+								<td class="engine-flag-nature"><div onclick="setEditNature('atk', 'plus')" id="edit-atk-nature-plus" class="nature-radio nature-radio-plus">+</div></td>
+								<td class="engine-flag-nature"><div onclick="setEditNature('atk', 'minus')" id="edit-atk-nature-minus" class="nature-radio nature-radio-minus">-</div></td>
 							</tr>
 							<tr>
 								<td>Def</td>
 								<td id="edit-def"></td>
-								<td class="engine-flag-dvs"><input class="poke-edit-input" type="number" value="0" min="0" max="15" id="edit-def-dv"></td>
+								<td class="engine-flag-dvs"><input class="poke-edit-input" type="number" value="0" min="0" max="31" id="edit-def-dv"></td>
 								<td class="engine-flag-evs"><input class="poke-edit-input" type="number" value="0" min="0" max="255" id="edit-def-ev"></td>
-								<td class="engine-flag-nature">-</td>
-								<td class="engine-flag-nature">+</td>
+								<td class="engine-flag-nature"><div onclick="setEditNature('def', 'plus')" id="edit-def-nature-plus" class="nature-radio nature-radio-plus">+</div></td>
+								<td class="engine-flag-nature"><div onclick="setEditNature('def', 'minus')" id="edit-def-nature-minus" class="nature-radio nature-radio-minus">-</div></td>
 							</tr>
 							<tr>
 								<td>SpA</td>
 								<td id="edit-spa"></td>
-								<td class="engine-flag-dvs"><input class="poke-edit-input" type="number" value="0" min="0" max="15" id="edit-spa-dv"></td>
+								<td class="engine-flag-dvs"><input class="poke-edit-input" type="number" value="0" min="0" max="31" id="edit-spa-dv"></td>
 								<td class="engine-flag-evs"><input class="poke-edit-input" type="number" value="0" min="0" max="255" id="edit-spa-ev"></td>
-								<td class="engine-flag-nature">-</td>
-								<td class="engine-flag-nature">+</td>
+								<td class="engine-flag-nature"><div onclick="setEditNature('spa', 'plus')" id="edit-spa-nature-plus" class="nature-radio nature-radio-plus">+</div></td>
+								<td class="engine-flag-nature"><div onclick="setEditNature('spa', 'minus')" id="edit-spa-nature-minus" class="nature-radio nature-radio-minus">-</div></td>
 							</tr>
 							<tr>
 								<td>SpD</td>
 								<td id="edit-spd"></td>
-								<td class="engine-flag-dvs"><input class="poke-edit-input" type="number" value="0" min="0" max="15" id="edit-spd-dv"></td>
+								<td class="engine-flag-dvs"><input class="poke-edit-input" type="number" value="0" min="0" max="31" id="edit-spd-dv"></td>
 								<td class="engine-flag-evs"><input class="poke-edit-input" type="number" value="0" min="0" max="255" id="edit-spd-ev"></td>
-								<td class="engine-flag-nature">-</td>
-								<td class="engine-flag-nature">+</td>
+								<td class="engine-flag-nature"><div onclick="setEditNature('spd', 'plus')" id="edit-spd-nature-plus" class="nature-radio nature-radio-plus">+</div></td>
+								<td class="engine-flag-nature"><div onclick="setEditNature('spd', 'minus')" id="edit-spd-nature-minus" class="nature-radio nature-radio-minus">-</div></td>
 							</tr>
 							<tr>
 								<td>Spe</td>
 								<td id="edit-spe"></td>
-								<td class="engine-flag-dvs"><input class="poke-edit-input" type="number" value="0" min="0" max="15" id="edit-spe-dv"></td>
+								<td class="engine-flag-dvs"><input class="poke-edit-input" type="number" value="0" min="0" max="31" id="edit-spe-dv"></td>
 								<td class="engine-flag-evs"><input class="poke-edit-input" type="number" value="0" min="0" max="255" id="edit-spe-ev"></td>
-								<td class="engine-flag-nature">-</td>
-								<td class="engine-flag-nature">+</td>
+								<td class="engine-flag-nature"><div onclick="setEditNature('spe', 'plus')" id="edit-spe-nature-plus" class="nature-radio nature-radio-plus">+</div></td>
+								<td class="engine-flag-nature"><div onclick="setEditNature('spe', 'minus')" id="edit-spe-nature-minus" class="nature-radio nature-radio-minus">-</div></td>
 							</tr>
 						</table>
 					</td>

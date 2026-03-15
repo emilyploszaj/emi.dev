@@ -241,11 +241,11 @@ function calcWild(p, level) {
 		"level": level,
 		"dvs": {
 			"hp": 0,
-			"atk": 15,
+			"atk": MAX_DV,
 			"def": 0,
-			"spa": 15,
+			"spa": MAX_DV,
 			"spd": 0,
-			"spe": 15
+			"spe": MAX_DV
 		},
 		"moves": moves
 	}

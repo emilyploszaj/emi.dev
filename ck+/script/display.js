@@ -1,6 +1,8 @@
 var menuOpen;
 var playerMoveVariants = [-1, -1, -1, -1];
 var enemyMoveVariants = [-1, -1, -1, -1];
+var playerAbilityVariant = -1;
+var enemyAbilityVariant = -1;
 
 function displayCalcPokemon(root, poke, opponent, right) {
 	var player = !right;
@@ -20,7 +22,7 @@ function displayCalcPokemon(root, poke, opponent, right) {
 	}
 	root.getElementsByClassName("poke-level")[0].innerHTML = "Lvl " + poke.level;
 	root.getElementsByClassName("poke-item")[0].innerHTML = itemLink(poke.item);
-	root.getElementsByClassName("poke-icon")[0].innerHTML = '<img draggable="false" src="' + getPokeImage(poke) + '">';
+	root.getElementsByClassName("poke-icon")[0].innerHTML = '<img draggable="false" src="' + getPokeImage(poke, "large") + '">';
 	root.getElementsByClassName("poke-gender")[0].innerHTML = ["∅", "♀", "♂"][getGender(poke)];
 	if (right && root.getElementsByClassName("experience").length > 0) {
 		var exp = p.base_experience;
@@ -91,6 +93,29 @@ function displayCalcPokemon(root, poke, opponent, right) {
 		types += " " + prettyType(p.types[1]);
 	}
 	root.getElementsByClassName("poke-types")[0].innerHTML = types;
+	if (game.name == "pk") {
+		if (poke.ability == undefined) {
+			poke.ability = "flash-fire";
+		}
+		var ability = abilitiesByName.get(poke.ability);
+		var variants = "";
+		if (ability.variants) {
+			variants += `<div class="move-calc-variants" style="width:128px;">`;
+			for (var v = 0; v < ability.variants.length; v++) {
+				var variantExtra = "";
+				if ((player ? playerAbilityVariant : enemyAbilityVariant) == v) {
+					variantExtra = "move-calc-variant-selected";
+				}
+				variants += `<div class="move-calc-variant ${variantExtra}" onclick="setAbilityVariant(${player}, ${v})"></div>`
+			}
+			variants += `</div>`;
+		}
+		var abilities = `
+			${fullCapitalize(ability.name)}
+			${variants}
+		`;
+		root.getElementsByClassName("calc-ability")[0].innerHTML = abilities;
+	}
 	var moves = '<table class="move-calcs">';
 	var variantArray = player ? playerMoveVariants : enemyMoveVariants;
 	for (var i = 0; i < 4; i++) {
@@ -310,7 +335,7 @@ function displayPokemon(root, i) {
 	var p = pokemonByPokedex.get(i);
 	root.getElementsByClassName("poke-name")[0].innerHTML = pokeLink(p);
 	root.getElementsByClassName("poke-dex-num")[0].innerHTML = "#" + padNumber(p.pokedex);
-	root.getElementsByClassName("poke-icon")[0].innerHTML = '<img draggable="false" src="' + getPokeImage(p) + '">';
+	root.getElementsByClassName("poke-icon")[0].innerHTML = '<img draggable="false" src="' + getPokeImage(p, "large") + '">';
 	var types = prettyType(p.types[0]);
 	if (p.types.length > 1) {
 		types += " " + prettyType(p.types[1]);
@@ -428,7 +453,7 @@ function updateCalc() {
 		displayCalcPokemon(document.getElementById("opponent"), theirPoke, myPoke, true);
 		var v = "";
 		for (var i = 0; i < box.length && i < box.length; i++) {
-			var img = '<img draggable="false" src="' + getPokeImage(box[i]) + '">';
+			var img = '<img draggable="false" src="' + getPokeImage(box[i], "small") + '">';
 			v += '<div class="micro-mon drag-sortable" onclick="setPlayer(' + i + ')">' + img + "</div>";
 		}
 		document.getElementById("player").getElementsByClassName("calc-team")[0].innerHTML = v;
@@ -456,7 +481,7 @@ function getEnemyTeamDisplay(enemyTeam, trainer) {
 	var v = "";
 	for (let i in enemyTeam) {
 		var prioClass = ["low", "neutral", "high"][Math.sign(getSwitchPriority(enemyTeam[i], myPoke)) + 1];
-		var img = `<img draggable="false" class="${prioClass}-switch-priority" src="${getPokeImage(enemyTeam[i])}">`;
+		var img = `<img draggable="false" class="${prioClass}-switch-priority" src="${getPokeImage(enemyTeam[i], "small")}">`;
 		v += `<div class="micro-mon" onclick="setEnemy(${trainer}, ${i})">${img}</div>`;
 	}
 	return v;
@@ -484,7 +509,7 @@ function getPokemonEncountersDisplay(p) {
 		var v = "<table class='poke-encounters'>";
 		for (const en of Object.entries(encounters)) {
 			var area = en[0];
-			if (caughtLandmarks.has(landmarksByLocation.get(area).name)) {
+			if (caughtLandmarks.has(landmarksByLocation.get(area)?.name)) {
 				v += `<tr class="poke-encounters-dupe">`;
 			} else {
 				v += "<tr>";
@@ -628,6 +653,9 @@ function getMoveDisplay(move, level = undefined) {
 		<tr>
 			${level != undefined ? `<td>${level}</td>` : ``}
 			<td>${prettyType(move.type)}</td>
+			${move.category ? `
+				<td>${prettyCategory(move.category)}</td>
+			`: ""}
 			<td>${moveLink(move.name)}</td>
 			<td>${move.power == 0 ? "-" : move.power}</td>
 			<td>${move.accuracy}%</td>
@@ -637,7 +665,28 @@ function getMoveDisplay(move, level = undefined) {
 	`;
 }
 
+function prettyCategory(category) {
+	var cat = "???";
+	var color = "#68a090"
+	if (category == "physical") {
+		cat = "Phys";
+		color = "#cc4125"
+	} else if (category == "special") {
+		cat = "Spec";
+		color = "#45818e";
+	} else if (category == "status") {
+		cat = "Stat";
+		color = "#999999";
+	}
+	return `<div class="category" style="background-color: ${color}">${cat}</div>`
+}
+
 function getFullTypeDisplay(type) {
+	var specialTypes = new Set([
+		"fire", "water", "electric", "grass", "ice", "psychic", "dragon", "dark"
+	]);
+	var specialOrder = ["special", "physical", "status"];
+	var physicalOrder = ["physical", "special", "status"];
 	return selectTabInDisplay(`
 	${prettyType(type)}
 	<div class="tab-collection">
@@ -649,12 +698,29 @@ function getFullTypeDisplay(type) {
 		<div class="tab-body">
 			<div class="tab-contents">
 				<div class="learnset-pool">
-					${data.pokemon.filter(p => p.types.contains(type)).displayMap(p => getEncounterPoke(p))}
+					${data.pokemon.filter(p => p.types.contains(type)).sort((a, b) => a.pokedex < b.pokedex ? -1 : 1).displayMap(p => getEncounterPoke(p))}
 				</div>
 			</div>
 			<div class="tab-contents">
 				<table class="move-table">
-					${data.moves.filter(m => m.type == type).displayMap(m => getMoveDisplay(m))}
+					${data.moves.filter(m => m.type == type).sort(function(a, b) {
+						if (a.category != b.category) {
+							if (specialTypes.has(a.type)) {
+								return specialOrder.indexOf(a.category) < specialOrder.indexOf(b.category) ? -1 : 1;
+							} else {
+								return physicalOrder.indexOf(a.category) < physicalOrder.indexOf(b.category) ? -1 : 1;
+							}
+						}
+						if (a.power != b.power) {
+							return a.power > b.power ? -1 : 1;
+						}
+						if (a.accuracy != b.accuracy) {
+							return a.accuracy > b.accuracy ? -1 : 1;
+						}
+						if (a.pp != b.pp) {
+							return a.pp > b.pp ? -1 : 1;
+						}
+					}).displayMap(m => getMoveDisplay(m))}
 				</table>
 			</div>
 		</div>
@@ -668,7 +734,7 @@ function getEncounterPoke(poke, header, footer, extraClasses) {
 	return `
 		<div class="encounter-poke${extraClasses ? " " + extraClasses : ""}">
 			${header ?? ""}
-			${createLink(`#/pokemon/${poke.name}/`, '<img draggable="false" src="' + getPokeImage(poke.name) + '">')}
+			${createLink(`#/pokemon/${poke.name}/`, '<img draggable="false" src="' + getPokeImage(poke.name, "medium") + '">')}
 			${footer ?? ""}
 			<div class="type-slices">
 				${poke.types.displayMap(t => customLink(`#/type/${t}/`, `class="type-slice" style="background-color: ${typeColor(t)};"`, ""))}
@@ -785,6 +851,7 @@ function updateBox() {
 
 function clearPlayerStages() {
 	playerMoveVariants = [-1, -1, -1, -1];
+	playerAbilityVariant = -1;
 	document.getElementById("player").getElementsByClassName("status-select")[0].value = "none";
 	var inputs = document.getElementsByClassName("player-stages");
 	for (var i = 0; i < inputs.length; i++) {
@@ -796,6 +863,7 @@ function clearPlayerStages() {
 
 function clearEnemyStages() {
 	enemyMoveVariants = [-1, -1, -1, -1];
+	enemyAbilityVariant = -1;
 	document.getElementById("opponent").getElementsByClassName("status-select")[0].value = "none";
 	var inputs = document.getElementsByClassName("enemy-stages");
 	for (var i = 0; i < inputs.length; i++) {
@@ -817,6 +885,23 @@ function setMoveVariant(player, move, variant) {
 			enemyMoveVariants[move] = -1;
 		} else {
 			enemyMoveVariants[move] = variant;
+		}
+	}
+	updateCalc();
+}
+
+function setAbilityVariant(player, variant) {
+	if (player) {
+		if (playerAbilityVariant == variant) {
+			playerAbilityVariant = -1;
+		} else {
+			playerAbilityVariant = variant;
+		}
+	} else {
+		if (enemyAbilityVariant == variant) {
+			enemyAbilityVariant = -1;
+		} else {
+			enemyAbilityVariant = variant;
 		}
 	}
 	updateCalc();

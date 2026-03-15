@@ -65,23 +65,27 @@ function getEncounterDisplay(pools) {
 	} else {
 		landmark = landmarksByName.get(pools);
 	}
-	var center = getMapCenter(landmark);
-	var v = "";
-	var w = 320;
-	var h = 280;
-	var scale = 40;
-	v += '<div>';
-	v += '<div class="encounter-minimap">' + getMapDisplay(w, h, -center.x + w / scale / 2, -center.y + h / scale / 2, scale, landmark.name) + '</div>';
+	if (landmark) {
+		var center = getMapCenter(landmark);
+		var v = "";
+		var w = 320;
+		var h = 280;
+		var scale = 40;
+		v += '<div>';
+		v += '<div class="encounter-minimap">' + getMapDisplay(w, h, -center.x + w / scale / 2, -center.y + h / scale / 2, scale, landmark.name) + '</div>';
+	}
 	if (pools.area) {
 		v += "<h3>" + fullCapitalize(pools.area) + "</h3>";
-		v += "<h6>Areas</h6>";
-		for (var i = 0; i < landmark.locations.length; i++) {
-			v += `<div>${areaLink(landmark.locations[i])}</div>`;
+		if (landmark) {
+			v += "<h6>Areas</h6>";
+			for (var i = 0; i < landmark.locations.length; i++) {
+				v += `<div>${areaLink(landmark.locations[i])}</div>`;
+			}
 		}
 	} else {
 		v += "<h3>" + fullCapitalize(pools) + "</h3>";
 	}
-	if (landmark.items.length > 0) {
+	if (landmark && landmark.items.length > 0) {
 		v += "<lb></lb><details><summary>Items</summary>";
 		for (var j = 0; j < landmark.items.length; j++) {
 			v += getItemLocationDescription(landmark.items[j]) + "<lb></lb>";

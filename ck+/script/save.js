@@ -166,6 +166,15 @@ function readFile(file) {
 	var reader = new FileReader();
 	reader.onload = function (e) {
 		var bytes = new Uint8Array(e.target.result);
+		if (file.name.endsWith(".sav")) {
+			try {
+				box = readGen4Save(bytes);
+				finishParse("Successfully parsed save!", box, []);
+				return;
+			} catch (e) {
+				console.log(e);
+			}
+		}
 		if (bytes.length > 32000 && bytes[0x2008] == 99 && bytes[0x2d0f] == 127) {
 			try {
 				var pokemon = [];
@@ -215,6 +224,232 @@ function hexToBytes(hex) {
         bytes.push(parseInt(hex.substr(c, 2), 16));
     }
     return bytes;
+}
+
+function readGen4Save(bytes) {
+	var pokemon = [];
+	for (var i = 0; i < 6; i++) {
+		var mon = readGen4Mon(bytes, 0x40000 + 0xA0 + 236 * i);
+		if (mon) {
+			pokemon.push(mon);
+		}
+	}
+	for (var a = 0; a < 18 * 30; a++) {
+		var mon = readGen4Mon(bytes, 0x0CF2C + 0x04 + 136 * a);
+		if (mon) {
+			pokemon.push(mon);
+		}
+	}
+	return pokemon;
+}
+
+function copySlice(arr, start, length) {
+	var ret = [];
+	for (var i = 0; i < length; i++) {
+		ret.push(arr[start + i])
+	}
+	return ret
+}
+
+function readGen4Mon(bytes, offset) {
+	var personality = read32(bytes, offset);
+	var encrypted = copySlice(bytes, offset + 8, 128);
+	var decrypted = gen4DecryptMon(encrypted, read16(bytes, offset + 6), 128);
+	var parts = unshuffleParts([
+		copySlice(decrypted, 32 * 0, 32),
+		copySlice(decrypted, 32 * 1, 32),
+		copySlice(decrypted, 32 * 2, 32),
+		copySlice(decrypted, 32 * 3, 32)
+	], ((personality & 0x3e000) >> 13) % 24);
+	var blockA = parseTemplate(parts[0], 0, [
+		2, "species",
+		2, "item",
+		2, "otId",
+		2, "secretId",
+		4, "experience",
+		1, "friendship",
+		1, "ability",
+		1, "markings",
+		1, "language",
+		1, "hpEv",
+		1, "atkEv",
+		1, "defEv",
+		1, "speEv",
+		1, "spaEv",
+		1, "spdEv",
+		1, "cool",
+		1, "beauty",
+		1, "cute",
+		1, "smart",
+		1, "tough",
+		1, "sheen",
+		4, "sinnohRibbons1"
+	]);
+	var blockB = parseTemplate(parts[1], 0, [
+		[2, 4], "moves",
+		[1, 4], "pp",
+		4, "ivs",
+		4, "hoennRibbons",
+		1, "form",
+		1, "leaves",
+		2, "unused",
+		2, "eggLocationPlatinum",
+		2, "metLocationPlatinum"
+	]);
+	var blockC = parseTemplate(parts[1], 0, [
+		[2, 11], "nickname",
+		1, "unused",
+		1, "game",
+		4, "sinnohRibbons2",
+		4, "unused"
+	]);
+	var blockD = parseTemplate(parts[1], 0, [
+		[2, 8], "otName",
+		3, "eggReceivedDate",
+		3, "metDate",
+		2, "eggLocationDP",
+		2, "metLocationDP",
+		1, "pokerus",
+		1, "pokeball",
+		1, "metLevel",
+		1, "encounterType",
+		1, "ballHGSS",
+		1, "walkingMood"
+	]);
+	var species = pokemonByPokedex.get(blockA.species);
+	if (species == undefined) {
+		return null;
+	}
+	return {
+		name: species.name,
+		moves: blockB.moves.map(v => movesByIndex.get(v)?.name).filter(a => a != undefined),
+		item: "", // TODO blockA.item,
+		//ability: abilitiesByIndex.get(blockA.ability), // TODO
+		dvs: {
+			hp: (blockB.ivs >> 0) & 0b11111,
+			atk: (blockB.ivs >> 5) & 0b11111,
+			def: (blockB.ivs >> 10) & 0b11111,
+			spa: (blockB.ivs >> 20) & 0b11111,
+			spd: (blockB.ivs >> 25) & 0b11111,
+			spe: (blockB.ivs >> 15) & 0b11111,
+		},
+		level: getLevelFromExperience(species, blockA.experience),
+		experience: blockA.experience,
+	};
+}
+
+function getLevelFromExperience(mon, experience) {
+	if (!mon.name) {
+		mon = pokemonByName.get(mon);
+	}
+	var growth = mon.growth;
+	var level = 1;
+	var arr = data.growth[growth];
+	while (level + 1 < arr.length) {
+		if (arr[level + 1] > experience) {
+			break;
+		}
+		level++;
+	}
+	return level;
+
+}
+
+function gen4DecryptMon(bytes, seed, size) {
+	var ret = [];
+	seed = BigInt(seed);
+	for (var i = 0; i < size / 2; i++) {
+		seed = ((BigInt(0x41C64E6D) * seed) + BigInt(0x6073)) & BigInt(0xffffffff);
+		var next = Number(seed);
+		var v = read16(bytes, i * 2)
+		v = v ^ (next >> 16);
+		ret.push((v >> 0) & 0xff);
+		ret.push((v >> 8) & 0xff);
+	}
+	return ret;
+}
+
+function unshuffleParts(parts, variant) {
+	var ordering = [
+		[0, 1, 2, 3],
+		[0, 1, 3, 2],
+		[0, 2, 1, 3],
+		[0, 3, 1, 2],
+		[0, 2, 3, 1],
+		[0, 3, 2, 1],
+		[1, 0, 2, 3],
+		[1, 0, 3, 2],
+		[2, 0, 1, 3],
+		[3, 0, 1, 2],
+		[2, 0, 3, 1],
+		[3, 0, 2, 1],
+		[1, 2, 0, 3],
+		[1, 3, 0, 2],
+		[2, 1, 0, 3],
+		[3, 1, 0, 2],
+		[2, 3, 0, 1],
+		[3, 2, 0, 1],
+		[1, 2, 3, 0],
+		[1, 3, 2, 0],
+		[2, 1, 3, 0],
+		[3, 1, 2, 0],
+		[2, 3, 1, 0],
+		[3, 2, 1, 0]
+	][variant];
+	return [parts[ordering[0]], parts[ordering[1]], parts[ordering[2]], parts[ordering[3]]];
+}
+
+function readN(bytes, offset, size) {
+	if (size == 1) {
+		return bytes[offset];
+	} else if (size == 2) {
+		return read16(bytes, offset);
+	} else if (size == 3) {
+		return read24(bytes, offset);
+	} else if (size == 4) {
+		return read32(bytes, offset)
+	}
+}
+
+function read32(bytes, offset) {
+	return (bytes[offset + 0] << 0) +
+		(bytes[offset + 1] << 8) +
+		(bytes[offset + 2] << 16) +
+		(bytes[offset + 3] << 24);
+}
+
+function read24(bytes, offset) {
+	return (bytes[offset + 0] << 0) +
+		(bytes[offset + 1] << 8) +
+		(bytes[offset + 2] << 16);
+}
+
+function read16(bytes, offset) {
+	return (bytes[offset + 0] << 0) +
+		(bytes[offset + 1] << 8);
+}
+
+function parseTemplate(bytes, offset, template) {
+	var ret = {};
+	for (var i = 0; i < template.length; i++) {
+		var size = template[i++];
+		var key = template[i]
+		var value = bytes[offset];
+		if (Array.isArray(size)) {
+			value = [];
+			var aSize = size[0];
+			var aLength = size[1];
+			for (var a = 0; a < aLength; a++) {
+				value.push(readN(bytes, offset, aSize));
+				offset += aSize;
+			}
+		} else {
+			value = readN(bytes, offset, size);
+			offset += size;
+		}
+		ret[key] = value;
+	}
+	return ret;
 }
 
 function vsRecorderComplete(event) {

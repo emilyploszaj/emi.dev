@@ -59,7 +59,7 @@ class BattleMoveImpl extends BattleMove {
 
 	get type() {
 		if (this.move.name == "hidden-power") {
-			var hp = getHiddenPower(this.user.poke);
+			var hp = engine.getHiddenPower(this.user.poke);
 			return hp.type;
 		} else if (this.move.name == "future-sight") {
 			return "curse";
@@ -69,7 +69,7 @@ class BattleMoveImpl extends BattleMove {
 
 	get power() {
 		if (this.move.name == "hidden-power") {
-			var hp = getHiddenPower(this.user.poke);
+			var hp = engine.getHiddenPower(this.user.poke);
 			return hp.power;
 		} else if (this.move.name == "flail" || this.move.name == "reversal") {
 			var mhp = this.user.getStat("hp");

@@ -1,5 +1,7 @@
+var MAX_DV = 31;
+
 var data;
-var game;
+var game = {};
 var typeColors = new Map([
 	["normal", "#a8a878"],
 	["fire", "#f08030"],
@@ -33,6 +35,7 @@ var movesByName = new Map();
 var movesByIndex = new Map();
 var movesByLearnset = new Map();
 var movesByTMHM = new Map();
+var abilitiesByName = new Map();
 var itemsByName = new Map();
 var encounterPools = new Map();
 var landmarksByIndex = new Map();
@@ -152,7 +155,11 @@ function loadData(text) {
 	nameFormatting.set("kings-rock", "King's Rock");
 	nameFormatting.set("dragons-den", "Dragon's Den");
 	data = JSON.parse(text);
-	loadEngine("script/engine/ck+.js");
+	if (game.name == "pk") {
+		loadEngine("script/engine/gen4.js");
+	} else {
+		loadEngine("script/engine/ck+.js");
+	}
 }
 
 function loadFights(text) {
@@ -172,6 +179,7 @@ function loadFights(text) {
 
 function initGame() {
 	game = {};
+	MAX_DV = 15;
 	if (window.location.search == "?custom") {
 		game.name = "custom";
 		loadData(localStorage.getItem("calc/custom-data"));
@@ -179,6 +187,10 @@ function initGame() {
 	} else if (window.location.search == "?xp" || window.location.search == "?xp=") {
 		game.name = "ck+xp";
 		fetchData("ck+xp.json");
+	} else if (window.location.search == "?pk" || window.location.search == "?pk=") {
+		game.name = "pk";
+		fetchData("pk.json");
+		MAX_DV = 31;
 	} else {
 		game.name = "ck+";
 		fetchData("data.json");
@@ -189,10 +201,21 @@ function initGame() {
 
 function updateEngineFlags() {
 	var flags = ["dvs"];
-	if (settings.enableStatistics) {
+	if (settings.enableStatistics && game.name == "ck+") {
 		flags.push("statistics");
 	}
+	if (game.name == "pk") {
+		flags.push("ability");
+		flags.push("nature");
+		document.body.classList.add("gen-4");
+	}
 	setEngineDisplayFlags(flags);
+	document.getElementById("edit-hp-dv").max = `${MAX_DV}`;
+	document.getElementById("edit-atk-dv").max = `${MAX_DV}`;
+	document.getElementById("edit-def-dv").max = `${MAX_DV}`;
+	document.getElementById("edit-spa-dv").max = `${MAX_DV}`;
+	document.getElementById("edit-spd-dv").max = `${MAX_DV}`;
+	document.getElementById("edit-spe-dv").max = `${MAX_DV}`;
 }
 
 function fetchData(file) {
@@ -271,6 +294,12 @@ function startup() {
 			movesByIndex.set(m.index, m);
 		}
 		addSearchResult(m.name, {link: `#/move/${m.name}/`});
+	}
+	if (j.abilities) {
+		for (let a of j.abilities) {
+			abilitiesByName.set(a.name, a);
+			addSearchResult(a.name, {link: `#/ability/${a.name}/`});
+		}
 	}
 	for (let i in j.type_matchups) {
 		var m = j.type_matchups[i];

@@ -34,11 +34,7 @@ class Engine {
 		}
 		var p = pokemonByName.get(poke.name);
 		var v = p.stats[stat];
-		if (poke.dvs != undefined) {
-			v += poke.dvs[stat];
-		} else {
-			v += 15;
-		}
+		v += poke.dvs?.[stat] ?? MAX_DV;
 		v = parseInt((v * 2 * poke.level) / 100);
 	
 		if (stat == "hp") {
@@ -46,6 +42,26 @@ class Engine {
 		} else {
 			return v + 5;
 		}
+	}
+
+
+	getHiddenPower(poke) {
+		function mod4(stat) {
+			return (getDv(poke, stat) & 0b11);
+		}
+		function mSig(stat) {
+			return (getDv(poke, stat) & 0b1000) >> 3;
+		}
+		var t = (mod4("atk") << 2) | mod4("def");
+		var types = [
+			"fighting", "flying", "poison", "ground",
+			"rock", "bug", "ghost", "steel",
+			"fire", "water", "grass", "electric",
+			"psychic", "ice", "dragon", "dark"
+		];
+		var ty = types[t];
+		var po = (((mSig("spa") + 2 * mSig("spe") + 4 * mSig("def") + 8 * mSig("atk")) * 5 + mod4("spa")) >> 1) + 31;
+		return { type: ty, power: po };
 	}
 }
 

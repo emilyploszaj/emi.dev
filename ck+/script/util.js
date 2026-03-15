@@ -4,7 +4,7 @@ function getTinyPokemonDisplay(tp, extra = "") {
 	var p = pokemonByName.get(tp.name);
 	var v = '<div class="tiny-poke">';
 	v += '<div class="tiny-poke-header">';
-	v += '<div class="tiny-poke-icon"><img src="' + getPokeImage(tp) + '"></div>';
+	v += '<div class="tiny-poke-icon"><img src="' + getPokeImage(tp, "small") + '"></div>';
 	v += '<div class="tiny-poke-info">';
 	v += `<div style="display:flex;flex-wrap:wrap;">${pokeLink(p.name)} <span class="tiny-poke-level">Lvl ${tp.level}</span></div>`;
 	var typeDisplay = "";
@@ -16,7 +16,7 @@ function getTinyPokemonDisplay(tp, extra = "") {
 	if (tp.dvs) {
 		v += `<div class="tiny-poke-dvs">${tp.dvs.hp} ${tp.dvs.atk}/${tp.dvs.def} ${tp.dvs.spa}/${tp.dvs.spd} ${tp.dvs.spe}</div>`;
 	} else {
-		v += `<div class="tiny-poke-dvs">15 15/15 15/15 15</div>`;
+		v += `<div class="tiny-poke-dvs">${MAX_DV} ${MAX_DV}/${MAX_DV} ${MAX_DV}/${MAX_DV} ${MAX_DV}</div>`;
 	}
 	v += `</div></div><div class="tiny-poke-moves"><table><tr>`;
 	for (var i = 0; i < 4; i++) {
@@ -28,7 +28,7 @@ function getTinyPokemonDisplay(tp, extra = "") {
 			if (movesByName.has(tp.moves[i])) {
 				var type = movesByName.get(tp.moves[i]).type
 				if (tp.moves[i] == "hidden-power") {
-					type = getHiddenPower(tp).type;
+					type = engine.getHiddenPower(tp).type;
 				}
 			}
 			//v += `<td class="move-emblem" style="--type-color:${color};">${moveLink(tp.moves[i])}</td>`;
@@ -45,7 +45,7 @@ function getTinyPokemonDisplay(tp, extra = "") {
 	return v;
 }
 
-function getPokeImage(poke, unownExtra = undefined) {
+function getPokeImage(poke, size, unownExtra = undefined) {
 	var shiny = poke.name && isShiny(poke) ? "shiny" : "normal";
 	if (poke.name) {
 		if (poke.name == "unown" && !unownExtra) {
@@ -59,6 +59,9 @@ function getPokeImage(poke, unownExtra = undefined) {
 	}
 	if (unownExtra !== undefined && poke == "unown") {
 		poke += ["-b", "-u", "-n", "-n", "-y", "-q", "-t"][unownExtra];
+	}
+	if (game.name == "pk") {
+		return 'https://img.pokemondb.net/sprites/platinum/' + shiny + '/' + poke + '.png';
 	}
 	return 'https://img.pokemondb.net/sprites/crystal/' + shiny + '/' + poke + '.png';
 }
@@ -87,10 +90,16 @@ function padNumber(s) {
  * @returns {String}
  */
 function normalize(s) {
+	if (s == undefined) {
+		return s;
+	}
 	return s.toLowerCase().replaceAll(/[ _]/g, "-")
 }
 
 function fullCapitalize(s) {
+	if (s == undefined) {
+		return s;
+	}
 	s = s.toLowerCase();
 	if (nameFormatting.has(s)) {
 		return nameFormatting.get(s);
@@ -141,35 +150,13 @@ function getGender(poke) {
 }
 
 function getDv(poke, stat) {
-	if (poke.dvs) {
-		return poke.dvs[stat];
-	}
-	return 15;
+	return poke?.dvs?.[stat] ?? MAX_DV;
 }
 
 function getEmptyStages() {
 	return {
 		"hp": 0, "atk": 0, "def": 0, "spa": 0, "spd": 0, "spe": 0
 	}
-}
-
-function getHiddenPower(poke) {
-	function mod4(stat) {
-		return (getDv(poke, stat) & 0b11);
-	}
-	function mSig(stat) {
-		return (getDv(poke, stat) & 0b1000) >> 3;
-	}
-	var t = (mod4("atk") << 2) | mod4("def");
-	var types = [
-		"fighting", "flying", "poison", "ground",
-		"rock", "bug", "ghost", "steel",
-		"fire", "water", "grass", "electric",
-		"psychic", "ice", "dragon", "dark"
-	];
-	var ty = types[t];
-	var po = (((mSig("spa") + 2 * mSig("spe") + 4 * mSig("def") + 8 * mSig("atk")) * 5 + mod4("spa")) >> 1) + 31;
-	return { type: ty, power: po };
 }
 
 function getSwitchPriority(enemy, player) {
