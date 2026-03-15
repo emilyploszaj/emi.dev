@@ -231,7 +231,7 @@ function getDamage(attacker, defender, move) {
 		}
 		result.modify(v => parseInt(v * eff))
 		if (dp.types.length > 1) {
-			eff = getMatchup(move.type, dp.types[0]);
+			eff = getMatchup(move.type, dp.types[1]);
 			if (eff == 0) {
 				return CalcResult.of(0);
 			}
