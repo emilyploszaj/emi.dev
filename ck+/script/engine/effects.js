@@ -172,7 +172,9 @@ class BattleEffect {
 			}
 		}
 		var map = new Map();
-		recursive(map, json, "");
+		if (json) {
+			recursive(map, json, "");
+		}
 		return map;
 	}
 
