@@ -288,8 +288,8 @@ function readGen4Mon(bytes, offset) {
 	var blockB = parseTemplate(parts[1], 0, [
 		[2, 4], "moves",
 		[1, 4], "pp",
+		4, "hoennRibbons", // PK swapped hoennRibbons and ivs just to fuck with me
 		4, "ivs",
-		4, "hoennRibbons",
 		1, "form",
 		1, "leaves",
 		2, "unused",
@@ -347,6 +347,7 @@ function readGen4Mon(bytes, offset) {
 	if (species == undefined) {
 		return null;
 	}
+	console.log(blockB);
 	return {
 		name: species.name,
 		moves: blockB.moves.map(v => movesByIndex.get(v)?.name).filter(a => a != undefined),
