@@ -176,7 +176,7 @@ function itemLink(item) {
 		item = item.name;
 	}
 	if (item.length == 0 || item == "no-item") {
-		return "";
+		return "<div>No Item</div>";
 	}
 	item = item.replace(" ", "-");
 	return createLink(`#/item/${item}/`, prettyItem(item));

@@ -71027,7 +71027,7 @@
             "team": [
                 {
                     "ability": "shield-dust",
-                    "item": "(none)",
+                    "item": "",
                     "level": 6,
                     "moves": [
                         "bug-bite",
@@ -71039,7 +71039,7 @@
                 },
                 {
                     "ability": "tinted-lens",
-                    "item": "(none)",
+                    "item": "",
                     "level": 6,
                     "moves": [
                         "bug-bite",
@@ -71051,7 +71051,7 @@
                 },
                 {
                     "ability": "shield-dust",
-                    "item": "(none)",
+                    "item": "",
                     "level": 7,
                     "moves": [
                         "bug-bite",
@@ -71064,7 +71064,7 @@
                 },
                 {
                     "ability": "shed-skin",
-                    "item": "(none)",
+                    "item": "",
                     "level": 7,
                     "moves": [
                         "bug-bite",
@@ -71208,7 +71208,7 @@
             "team": [
                 {
                     "ability": "flame-body",
-                    "item": "(none)",
+                    "item": "",
                     "level": 1,
                     "moves": [
                         "will-o-wisp",
@@ -71227,7 +71227,7 @@
             "team": [
                 {
                     "ability": "rough-skin",
-                    "item": "(none)",
+                    "item": "",
                     "level": 5,
                     "moves": [
                         "super-fang",
@@ -71333,7 +71333,7 @@
             "team": [
                 {
                     "ability": "rivalry",
-                    "item": "(none)",
+                    "item": "",
                     "level": 8,
                     "moves": [
                         "shock-wave",
@@ -72153,7 +72153,7 @@
                 },
                 {
                     "ability": "no-guard",
-                    "item": "(none)",
+                    "item": "",
                     "level": 10,
                     "moves": [
                         "smellingsalts",
@@ -72209,7 +72209,7 @@
                 },
                 {
                     "ability": "swift-swim",
-                    "item": "(none)",
+                    "item": "",
                     "level": 12,
                     "moves": [
                         "bug-bite",
@@ -72509,7 +72509,7 @@
             "team": [
                 {
                     "ability": "guts",
-                    "item": "(none)",
+                    "item": "",
                     "level": 15,
                     "moves": [
                         "return",
@@ -72522,7 +72522,7 @@
                 },
                 {
                     "ability": "natural-cure",
-                    "item": "(none)",
+                    "item": "",
                     "level": 15,
                     "moves": [
                         "return",
@@ -72535,7 +72535,7 @@
                 },
                 {
                     "ability": "scrappy",
-                    "item": "(none)",
+                    "item": "",
                     "level": 15,
                     "moves": [
                         "return",
@@ -72548,7 +72548,7 @@
                 },
                 {
                     "ability": "leaf-guard",
-                    "item": "(none)",
+                    "item": "",
                     "level": 16,
                     "moves": [
                         "razor-leaf",
@@ -72560,7 +72560,7 @@
                 },
                 {
                     "ability": "blaze",
-                    "item": "(none)",
+                    "item": "",
                     "level": 15,
                     "moves": [
                         "fake-out",
@@ -72572,7 +72572,7 @@
                 },
                 {
                     "ability": "torrent",
-                    "item": "(none)",
+                    "item": "",
                     "level": 15,
                     "moves": [
                         "aqua-jet",
@@ -72591,7 +72591,7 @@
             "team": [
                 {
                     "ability": "guts",
-                    "item": "(none)",
+                    "item": "",
                     "level": 15,
                     "moves": [
                         "return",
@@ -72604,7 +72604,7 @@
                 },
                 {
                     "ability": "natural-cure",
-                    "item": "(none)",
+                    "item": "",
                     "level": 15,
                     "moves": [
                         "return",
@@ -72617,7 +72617,7 @@
                 },
                 {
                     "ability": "scrappy",
-                    "item": "(none)",
+                    "item": "",
                     "level": 15,
                     "moves": [
                         "return",
@@ -72630,7 +72630,7 @@
                 },
                 {
                     "ability": "overgrow",
-                    "item": "(none)",
+                    "item": "",
                     "level": 15,
                     "moves": [
                         "razor-leaf",
@@ -72642,7 +72642,7 @@
                 },
                 {
                     "ability": "blaze",
-                    "item": "(none)",
+                    "item": "",
                     "level": 16,
                     "moves": [
                         "fake-out",
@@ -72654,7 +72654,7 @@
                 },
                 {
                     "ability": "torrent",
-                    "item": "(none)",
+                    "item": "",
                     "level": 15,
                     "moves": [
                         "aqua-jet",
@@ -72673,7 +72673,7 @@
             "team": [
                 {
                     "ability": "guts",
-                    "item": "(none)",
+                    "item": "",
                     "level": 15,
                     "moves": [
                         "return",
@@ -72686,7 +72686,7 @@
                 },
                 {
                     "ability": "natural-cure",
-                    "item": "(none)",
+                    "item": "",
                     "level": 15,
                     "moves": [
                         "return",
@@ -72699,7 +72699,7 @@
                 },
                 {
                     "ability": "scrappy",
-                    "item": "(none)",
+                    "item": "",
                     "level": 15,
                     "moves": [
                         "return",
@@ -72712,7 +72712,7 @@
                 },
                 {
                     "ability": "overgrow",
-                    "item": "(none)",
+                    "item": "",
                     "level": 15,
                     "moves": [
                         "razor-leaf",
@@ -72724,7 +72724,7 @@
                 },
                 {
                     "ability": "blaze",
-                    "item": "(none)",
+                    "item": "",
                     "level": 15,
                     "moves": [
                         "fake-out",
@@ -72736,7 +72736,7 @@
                 },
                 {
                     "ability": "swift-swim",
-                    "item": "(none)",
+                    "item": "",
                     "level": 16,
                     "moves": [
                         "aqua-jet",
@@ -73405,7 +73405,7 @@
                 },
                 {
                     "ability": "poison-point",
-                    "item": "(none)",
+                    "item": "",
                     "level": 22,
                     "moves": [
                         "poison-jab",

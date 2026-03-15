@@ -32,6 +32,7 @@ function getTinyPokemonDisplay(tp, extra = "") {
 		}
 	}
 	v += "</div>";
+	v += `<div>${fullCapitalize(tp.ability ?? "")}</div>`;
 	v += `</div></div><div class="tiny-poke-moves"><table><tr>`;
 	for (var i = 0; i < 4; i++) {
 		if (i == 2) {
