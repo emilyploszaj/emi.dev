@@ -582,8 +582,8 @@
                     }
                 }
             },
-            "index": -1,
-            "name": "Shell Armor"
+            "index": 75,
+            "name": "shell-armor"
         },
         {
             "effects": {
@@ -975,12 +975,12 @@
         },
         {
             "TODO": "TODO",
-            "index": -1,
-            "name": "Flower Gift"
+            "index": 122,
+            "name": "flower-gift"
         },
         {
-            "index": -1,
-            "name": "Bad Dreams"
+            "index": 123,
+            "name": "bad-dreams"
         }
     ],
     "encounter_pools": [],
