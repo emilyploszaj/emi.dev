@@ -166,7 +166,7 @@ function readFile(file) {
 	var reader = new FileReader();
 	reader.onload = function (e) {
 		var bytes = new Uint8Array(e.target.result);
-		if (file.name.endsWith(".sav")) {
+		if (file.name.endsWith(".sav") || file.name.endsWith(".dsv")) {
 			try {
 				box = readGen4Save(bytes);
 				finishParse("Successfully parsed save!", box, []);
