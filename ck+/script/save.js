@@ -316,6 +316,33 @@ function readGen4Mon(bytes, offset) {
 		1, "ballHGSS",
 		1, "walkingMood"
 	]);
+	var nature = [
+		"hardy",
+		"lonely",
+		"brave",
+		"adamant",
+		"naughty",
+		"bold",
+		"docile",
+		"relaxed",
+		"impish",
+		"lax",
+		"timid",
+		"hasty",
+		"serious",
+		"jolly",
+		"naive",
+		"modest",
+		"mild",
+		"quiet",
+		"bashful",
+		"rash",
+		"calm",
+		"gentle",
+		"sassy",
+		"careful",
+		"quirky ",
+	][personality % 25];
 	var species = pokemonByPokedex.get(blockA.species);
 	if (species == undefined) {
 		return null;
@@ -333,6 +360,7 @@ function readGen4Mon(bytes, offset) {
 			spd: (blockB.ivs >> 25) & 0b11111,
 			spe: (blockB.ivs >> 15) & 0b11111,
 		},
+		nature: nature,
 		level: getLevelFromExperience(species, blockA.experience),
 		experience: blockA.experience,
 	};
