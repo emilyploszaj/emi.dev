@@ -152,6 +152,13 @@ function getDamage(attacker, defender, move) {
 		}
 	}
 
+	var weather = document.getElementById("current-weather").value;
+	if (weather == "sand") {
+		if (defenseStat == "spd" && (defender.mon.types[0] == "rock" || (defender.mon.types.length > 1 &&  defender.mon.types[1] == "rock"))) {
+			d = parseInt(d * 1.5);
+		}
+	}
+
 	a = modifier("attack-boost", a, 999);
 	d = modifier("defense-boost", d, 999);
 
@@ -179,7 +186,6 @@ function getDamage(attacker, defender, move) {
 
 	// TODO target split
 
-	var weather = document.getElementById("current-weather").value;
 	// TODO solar beam other weather drop
 	if (weather == "rain") {
 		if (move.type == "fire" || move.name == "solar-beam") {
