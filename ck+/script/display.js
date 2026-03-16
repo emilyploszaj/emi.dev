@@ -94,27 +94,28 @@ function displayCalcPokemon(root, poke, opponent, right) {
 	}
 	root.getElementsByClassName("poke-types")[0].innerHTML = types;
 	if (game.name == "pk") {
-		if (poke.ability == undefined) {
-			poke.ability = "flash-fire";
-		}
 		var ability = abilitiesByName.get(poke.ability);
-		var variants = "";
-		if (ability.variants) {
-			variants += `<div class="move-calc-variants" style="width:128px;">`;
-			for (var v = 0; v < ability.variants.length; v++) {
-				var variantExtra = "";
-				if ((player ? playerAbilityVariant : enemyAbilityVariant) == v) {
-					variantExtra = "move-calc-variant-selected";
+		if (ability) {
+			var variants = "";
+			if (ability.variants) {
+				variants += `<div class="move-calc-variants" style="width:128px;">`;
+				for (var v = 0; v < ability.variants.length; v++) {
+					var variantExtra = "";
+					if ((player ? playerAbilityVariant : enemyAbilityVariant) == v) {
+						variantExtra = "move-calc-variant-selected";
+					}
+					variants += `<div class="move-calc-variant ${variantExtra}" onclick="setAbilityVariant(${player}, ${v})"></div>`
 				}
-				variants += `<div class="move-calc-variant ${variantExtra}" onclick="setAbilityVariant(${player}, ${v})"></div>`
+				variants += `</div>`;
 			}
-			variants += `</div>`;
+			var abilities = `
+				${fullCapitalize(ability.name)}
+				${variants}
+			`;
+			root.getElementsByClassName("calc-ability")[0].innerHTML = abilities;
+		} else {
+			root.getElementsByClassName("calc-ability")[0].innerHTML = "-";
 		}
-		var abilities = `
-			${fullCapitalize(ability.name)}
-			${variants}
-		`;
-		root.getElementsByClassName("calc-ability")[0].innerHTML = abilities;
 	}
 	var moves = '<table class="move-calcs">';
 	var variantArray = player ? playerMoveVariants : enemyMoveVariants;

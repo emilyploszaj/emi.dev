@@ -421,7 +421,7 @@
         },
         {
             "effects": {
-                "all": {
+                "attack": {
                     "condition": {
                         "user": {
                             "statused": true
@@ -13724,86 +13724,306 @@
         },
         {
             "description": "",
+            "effects": {
+                "defend": {
+                    "condition": {
+                        "move": {
+                            "effectiveness": ">1",
+                            "type": "fire"
+                        }
+                    },
+                    "modifiers": {
+                        "berry-multiplier": "=50%"
+                    }
+                }
+            },
             "index": 184,
             "name": "occa-berry"
         },
         {
             "description": "",
+            "effects": {
+                "defend": {
+                    "condition": {
+                        "move": {
+                            "effectiveness": ">1",
+                            "type": "water"
+                        }
+                    },
+                    "modifiers": {
+                        "berry-multiplier": "=50%"
+                    }
+                }
+            },
             "index": 185,
             "name": "passho-berry"
         },
         {
             "description": "",
+            "effects": {
+                "defend": {
+                    "condition": {
+                        "move": {
+                            "effectiveness": ">1",
+                            "type": "electric"
+                        }
+                    },
+                    "modifiers": {
+                        "berry-multiplier": "=50%"
+                    }
+                }
+            },
             "index": 186,
             "name": "wacan-berry"
         },
         {
             "description": "",
+            "effects": {
+                "defend": {
+                    "condition": {
+                        "move": {
+                            "effectiveness": ">1",
+                            "type": "grass"
+                        }
+                    },
+                    "modifiers": {
+                        "berry-multiplier": "=50%"
+                    }
+                }
+            },
             "index": 187,
             "name": "rindo-berry"
         },
         {
             "description": "",
+            "effects": {
+                "defend": {
+                    "condition": {
+                        "move": {
+                            "effectiveness": ">1",
+                            "type": "ice"
+                        }
+                    },
+                    "modifiers": {
+                        "berry-multiplier": "=50%"
+                    }
+                }
+            },
             "index": 188,
             "name": "yache-berry"
         },
         {
             "description": "",
+            "effects": {
+                "defend": {
+                    "condition": {
+                        "move": {
+                            "effectiveness": ">1",
+                            "type": "fighting"
+                        }
+                    },
+                    "modifiers": {
+                        "berry-multiplier": "=50%"
+                    }
+                }
+            },
             "index": 189,
             "name": "chople-berry"
         },
         {
             "description": "",
+            "effects": {
+                "defend": {
+                    "condition": {
+                        "move": {
+                            "effectiveness": ">1",
+                            "type": "poison"
+                        }
+                    },
+                    "modifiers": {
+                        "berry-multiplier": "=50%"
+                    }
+                }
+            },
             "index": 190,
             "name": "kebia-berry"
         },
         {
             "description": "",
+            "effects": {
+                "defend": {
+                    "condition": {
+                        "move": {
+                            "effectiveness": ">1",
+                            "type": "ground"
+                        }
+                    },
+                    "modifiers": {
+                        "berry-multiplier": "=50%"
+                    }
+                }
+            },
             "index": 191,
             "name": "shuca-berry"
         },
         {
             "description": "",
+            "effects": {
+                "defend": {
+                    "condition": {
+                        "move": {
+                            "effectiveness": ">1",
+                            "type": "flying"
+                        }
+                    },
+                    "modifiers": {
+                        "berry-multiplier": "=50%"
+                    }
+                }
+            },
             "index": 192,
             "name": "coba-berry"
         },
         {
             "description": "",
+            "effects": {
+                "defend": {
+                    "condition": {
+                        "move": {
+                            "effectiveness": ">1",
+                            "type": "psychic"
+                        }
+                    },
+                    "modifiers": {
+                        "berry-multiplier": "=50%"
+                    }
+                }
+            },
             "index": 193,
             "name": "payapa-berry"
         },
         {
             "description": "",
+            "effects": {
+                "defend": {
+                    "condition": {
+                        "move": {
+                            "effectiveness": ">1",
+                            "type": "bug"
+                        }
+                    },
+                    "modifiers": {
+                        "berry-multiplier": "=50%"
+                    }
+                }
+            },
             "index": 194,
             "name": "tanga-berry"
         },
         {
             "description": "",
+            "effects": {
+                "defend": {
+                    "condition": {
+                        "move": {
+                            "effectiveness": ">1",
+                            "type": "rock"
+                        }
+                    },
+                    "modifiers": {
+                        "berry-multiplier": "=50%"
+                    }
+                }
+            },
             "index": 195,
             "name": "charti-berry"
         },
         {
             "description": "",
+            "effects": {
+                "defend": {
+                    "condition": {
+                        "move": {
+                            "effectiveness": ">1",
+                            "type": "ghost"
+                        }
+                    },
+                    "modifiers": {
+                        "berry-multiplier": "=50%"
+                    }
+                }
+            },
             "index": 196,
             "name": "kasib-berry"
         },
         {
             "description": "",
+            "effects": {
+                "defend": {
+                    "condition": {
+                        "move": {
+                            "effectiveness": ">1",
+                            "type": "dragon"
+                        }
+                    },
+                    "modifiers": {
+                        "berry-multiplier": "=50%"
+                    }
+                }
+            },
             "index": 197,
             "name": "haban-berry"
         },
         {
             "description": "",
+            "effects": {
+                "defend": {
+                    "condition": {
+                        "move": {
+                            "effectiveness": ">1",
+                            "type": "dark"
+                        }
+                    },
+                    "modifiers": {
+                        "berry-multiplier": "=50%"
+                    }
+                }
+            },
             "index": 198,
             "name": "colbur-berry"
         },
         {
             "description": "",
+            "effects": {
+                "defend": {
+                    "condition": {
+                        "move": {
+                            "effectiveness": ">1",
+                            "type": "steel"
+                        }
+                    },
+                    "modifiers": {
+                        "berry-multiplier": "=50%"
+                    }
+                }
+            },
             "index": 199,
             "name": "babiri-berry"
         },
         {
             "description": "",
+            "effects": {
+                "defend": {
+                    "condition": {
+                        "move": {
+                            "type": "normal"
+                        }
+                    },
+                    "modifiers": {
+                        "berry-multiplier": "=50%"
+                    }
+                }
+            },
             "index": 200,
             "name": "chilan-berry"
         },

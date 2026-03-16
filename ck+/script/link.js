@@ -176,7 +176,7 @@ function itemLink(item) {
 		item = item.name;
 	}
 	if (item.length == 0 || item == "no-item") {
-		return "<div>No Item</div>";
+		return "<div>-</div>";
 	}
 	item = item.replace(" ", "-");
 	return createLink(`#/item/${item}/`, prettyItem(item));
@@ -200,6 +200,9 @@ function itemImage(item) {
 	item = item.replace(" ", "-");
 	if (item.startsWith("tm-") || item.startsWith("hm-")) {
 		item = "tm_hm"
+	}
+	if (game.name == "pk") {
+		return `<img class="item-icon" src="https://play.pokemonshowdown.com/sprites/itemicons/${item}.png">`;
 	}
 	return `<img class="item-icon" src="./images/items/${item.replace("-", "_")}.png">`;
 }

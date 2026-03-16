@@ -118,6 +118,10 @@ class BattleMove {
 	get effects() {
 		return this.#variant.effects ?? this.move.effects;
 	}
+
+	getEffectiveness(target) {
+		return getMatchup(this.type, target.mon.types[0]) * getMatchup(this.type, target.mon.types[1]);
+	}
 }
 
 class BattleAbility {

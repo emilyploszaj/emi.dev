@@ -321,7 +321,7 @@ function checkNumberCondition(condition, value, max) {
 	} else if (Array.isArray(condition)) {
 		return condition.contains(value);
 	} else if (typeof condition === "string") {
-		var m = condition.match(/^(<|<=|>|>=|!=|=|==|)([0-9.]+)(%)$/);
+		var m = condition.match(/^(<|<=|>|>=|!=|=|==|)([0-9.]+)(%)?$/);
 		var op = m[1];
 		var number = parseFloat(m[2]);
 		var percent = m[3];
@@ -358,6 +358,7 @@ function initConditions() {
 	CONDITION_PREDICATES.set("move.type", (condition, attacker, defender, move) => checkStringCondition(condition, move.type));
 	CONDITION_PREDICATES.set("move.category", (condition, attacker, defender, move) => checkStringCondition(condition, move.category));
 	CONDITION_PREDICATES.set("move.power", (condition, attacker, defender, move) => checkNumberCondition(condition, move.power));
+	CONDITION_PREDICATES.set("move.effectiveness", (condition, attacker, defender, move) => checkNumberCondition(condition, move.getEffectiveness(defender)));
 	var addForBoth = function(name, lambda) {
 		CONDITION_PREDICATES.set("attacker." + name, (condition, attacker, defender, move) => lambda(condition, attacker, defender, move));
 		CONDITION_PREDICATES.set("defender." + name, (condition, attacker, defender, move) => lambda(condition, defender, attacker, move));
