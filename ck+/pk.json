@@ -27553,6 +27553,7 @@
             "power": 30,
             "pp": 10,
             "priority": 0,
+            "template": "double-hit",
             "type": "normal"
         },
         {
@@ -27814,6 +27815,7 @@
             "power": 30,
             "pp": 30,
             "priority": 0,
+            "template": "double-hit",
             "type": "fighting"
         },
         {
@@ -27901,6 +27903,7 @@
             "power": 15,
             "pp": 20,
             "priority": 0,
+            "template": "multi-hit",
             "type": "normal"
         },
         {
@@ -28029,6 +28032,7 @@
             "power": 50,
             "pp": 20,
             "priority": 0,
+            "template": "double-hit",
             "type": "bug"
         },
         {
@@ -28042,6 +28046,7 @@
             "power": 25,
             "pp": 15,
             "priority": 0,
+            "template": "multi-hit",
             "type": "bug"
         },
         {
@@ -29474,6 +29479,7 @@
             "power": 30,
             "pp": 15,
             "priority": 0,
+            "template": "multi-hit",
             "type": "normal"
         },
         {
@@ -29487,6 +29493,7 @@
             "power": 60,
             "pp": 10,
             "priority": 0,
+            "template": "double-hit",
             "type": "rock"
         },
         {
@@ -30042,6 +30049,7 @@
             "power": 25,
             "pp": 10,
             "priority": 0,
+            "template": "multi-hit",
             "type": "ground"
         },
         {
@@ -31745,6 +31753,7 @@
             "power": 25,
             "pp": 30,
             "priority": 0,
+            "template": "multi-hit",
             "type": "grass"
         },
         {
@@ -31771,6 +31780,7 @@
             "power": 25,
             "pp": 30,
             "priority": 0,
+            "template": "multi-hit",
             "type": "ice"
         },
         {
@@ -31990,6 +32000,7 @@
             "power": 25,
             "pp": 8,
             "priority": 0,
+            "template": "multi-hit",
             "type": "rock"
         },
         {
@@ -32899,6 +32910,7 @@
             "power": 25,
             "pp": 15,
             "priority": 0,
+            "template": "multi-hit",
             "type": "ghost"
         },
         {
@@ -33378,6 +33390,7 @@
             "power": 60,
             "pp": 10,
             "priority": 0,
+            "template": "double-hit",
             "type": "normal"
         },
         {

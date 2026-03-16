@@ -14,7 +14,9 @@ var encounterIcons = new Map([
 	["swarm-good-rod", "images/encounters/swarm_good_rod.png"],
 	["swarm-super-rod", "images/encounters/swarm_super_rod.png"],
 	["trade", "images/items/exp_share.png"],
-	["buy", "images/items/coin_case.png"]
+	["buy", "images/items/coin_case.png"],
+	["global-honey-tree", "images/encounters/global_honey_tree.png"],
+	["local-honey-tree", "images/encounters/local_honey_tree.png"],
 ]);
 
 function inflateEncounterPool(p) {
