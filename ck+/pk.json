@@ -14098,6 +14098,7 @@
             "name": "white-herb"
         },
         {
+            "TODO": "TODO",
             "description": "",
             "index": 215,
             "name": "macho-brace"
@@ -14124,6 +14125,18 @@
         },
         {
             "description": "",
+            "effects": {
+                "attack": {
+                    "condition": {
+                        "move": {
+                            "category": "physical"
+                        }
+                    },
+                    "modifiers": {
+                        "attack-boost": "+50%"
+                    }
+                }
+            },
             "index": 220,
             "name": "choice-band"
         },
@@ -14160,16 +14173,19 @@
             "name": "cleanse-tag"
         },
         {
+            "TODO": "TODO",
             "description": "",
             "index": 225,
             "name": "soul-dew"
         },
         {
+            "TODO": "TODO",
             "description": "",
             "index": 226,
             "name": "deep-sea-tooth"
         },
         {
+            "TODO": "TODO",
             "description": "",
             "index": 227,
             "name": "deep-sea-scale"
@@ -14227,6 +14243,7 @@
             "name": "dragon-scale"
         },
         {
+            "TODO": "TODO",
             "description": "",
             "index": 236,
             "name": "light-ball"
@@ -14498,6 +14515,18 @@
         },
         {
             "description": "",
+            "effects": {
+                "attack": {
+                    "condition": {
+                        "move": {
+                            "type": "water"
+                        }
+                    },
+                    "modifiers": {
+                        "item-boost": "+20%"
+                    }
+                }
+            },
             "index": 254,
             "name": "sea-incense"
         },
@@ -14512,11 +14541,13 @@
             "name": "lucky-punch"
         },
         {
+            "TODO": "TODO",
             "description": "",
             "index": 257,
             "name": "metal-powder"
         },
         {
+            "TODO": "TODO",
             "description": "",
             "index": 258,
             "name": "thick-club"
@@ -14592,6 +14623,18 @@
         },
         {
             "description": "",
+            "effects": {
+                "attack": {
+                    "condition": {
+                        "move": {
+                            "effectiveness": ">1"
+                        }
+                    },
+                    "modifiers": {
+                        "item-boost": "+20%"
+                    }
+                }
+            },
             "index": 268,
             "name": "expert-belt"
         },
@@ -14628,6 +14671,7 @@
             "name": "flame-orb"
         },
         {
+            "TODO": "TODO",
             "description": "",
             "index": 274,
             "name": "quick-powder"
@@ -14643,11 +14687,13 @@
             "name": "zoom-lens"
         },
         {
+            "TODO": "TODO",
             "description": "",
             "index": 277,
             "name": "metronome"
         },
         {
+            "TODO": "TODO",
             "description": "",
             "index": 278,
             "name": "iron-ball"
@@ -14693,6 +14739,7 @@
             "name": "grip-claw"
         },
         {
+            "TODO": "TODO",
             "description": "",
             "index": 287,
             "name": "choice-scarf"
@@ -14708,26 +14755,31 @@
             "name": "power-bracer"
         },
         {
+            "TODO": "TODO",
             "description": "",
             "index": 290,
             "name": "power-belt"
         },
         {
+            "TODO": "TODO",
             "description": "",
             "index": 291,
             "name": "power-lens"
         },
         {
+            "TODO": "TODO",
             "description": "",
             "index": 292,
             "name": "power-band"
         },
         {
+            "TODO": "TODO",
             "description": "",
             "index": 293,
             "name": "power-anklet"
         },
         {
+            "TODO": "TODO",
             "description": "",
             "index": 294,
             "name": "power-weight"
@@ -14744,6 +14796,18 @@
         },
         {
             "description": "",
+            "effects": {
+                "attack": {
+                    "condition": {
+                        "move": {
+                            "category": "special"
+                        }
+                    },
+                    "modifiers": {
+                        "attack-boost": "+50%"
+                    }
+                }
+            },
             "index": 297,
             "name": "choice-specs"
         },
@@ -15021,11 +15085,35 @@
         },
         {
             "description": "",
+            "effects": {
+                "attack": {
+                    "condition": {
+                        "move": {
+                            "type": "psychic"
+                        }
+                    },
+                    "modifiers": {
+                        "item-boost": "+20%"
+                    }
+                }
+            },
             "index": 314,
             "name": "odd-incense"
         },
         {
             "description": "",
+            "effects": {
+                "attack": {
+                    "condition": {
+                        "move": {
+                            "type": "rock"
+                        }
+                    },
+                    "modifiers": {
+                        "item-boost": "+20%"
+                    }
+                }
+            },
             "index": 315,
             "name": "rock-incense"
         },
@@ -15036,11 +15124,35 @@
         },
         {
             "description": "",
+            "effects": {
+                "attack": {
+                    "condition": {
+                        "move": {
+                            "type": "water"
+                        }
+                    },
+                    "modifiers": {
+                        "item-boost": "+20%"
+                    }
+                }
+            },
             "index": 317,
             "name": "wave-incense"
         },
         {
             "description": "",
+            "effects": {
+                "attack": {
+                    "condition": {
+                        "move": {
+                            "type": "grass"
+                        }
+                    },
+                    "modifiers": {
+                        "item-boost": "+20%"
+                    }
+                }
+            },
             "index": 318,
             "name": "rose-incense"
         },
