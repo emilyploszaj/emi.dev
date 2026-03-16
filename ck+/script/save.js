@@ -325,8 +325,9 @@ function readGen4Mon(bytes, offset) {
 		1, "pokeball",
 		1, "metLevel",
 		1, "encounterType",
-		1, "ballHGSS",
-		1, "walkingMood"
+		2, "pkEncounterLocation"
+		// 1, "ballHGSS",
+		// 1, "walkingMood"
 	]);
 	var nature = [
 		"hardy",
@@ -359,6 +360,12 @@ function readGen4Mon(bytes, offset) {
 	if (species == undefined) {
 		return null;
 	}
+	console.log(species.name);
+	console.log(blockA);
+	console.log(blockB);
+	console.log(blockC);
+	console.log(blockD);
+	var location = landmarksByIndex.get(blockD.pkEncounterLocation)?.name ?? "unknown";
 	return {
 		name: species.name,
 		moves: blockB.moves.map(v => movesByIndex.get(v)?.name).filter(a => a != undefined),
@@ -375,6 +382,7 @@ function readGen4Mon(bytes, offset) {
 		nature: nature,
 		level: getLevelFromExperience(species, blockA.experience),
 		experience: blockA.experience,
+		caught: location,
 	};
 }
 

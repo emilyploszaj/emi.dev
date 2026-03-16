@@ -770,6 +770,12 @@ function setMap(xOffset = undefined, yOffset = 0, scale = 48) {
 }
 
 function getMapDisplay(width, height, xOffset = 0, yOffset = 0, scale = 48, focus = "") {
+	if (game.name == "pk") {
+		if (yOffset == 0) {
+			yOffset = 1;
+		}
+		scale = parseInt(scale * 0.7);
+	}
 	var border = parseInt(scale / 8);
 	var xo = xOffset * scale;
 	var yo = yOffset * scale;

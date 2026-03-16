@@ -2,6 +2,10 @@ const STATS = ["hp", "atk", "def", "spa", "spd", "spe"];
 
 function getTinyPokemonDisplay(tp, extra = "") {
 	var p = pokemonByName.get(tp.name);
+	if (p == undefined) {
+		console.warn("Tried to render an unknown pokemon " + tp.name);
+		return "";
+	}
 	var v = '<div class="tiny-poke">';
 	v += '<div class="tiny-poke-header">';
 	v += '<div class="tiny-poke-icon"><img src="' + getPokeImage(tp, "small") + '"></div>';
