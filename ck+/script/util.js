@@ -174,6 +174,9 @@ function getEmptyStages() {
 }
 
 function getSwitchPriority(enemy, player) {
+	if (game.name == "pk") {
+		return 0;
+	}
 	var prio = 0;
 	if (hasSuperEffectiveMove(enemy, player))  {
 		prio++;
