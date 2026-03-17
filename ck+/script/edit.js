@@ -54,8 +54,10 @@ function initEdit(poke) {
 	editOriginal = JSON.parse(JSON.stringify(poke));
 	document.getElementById("edit-name").value = fullCapitalize(poke.name);
 	document.getElementById("edit-item").value = fullCapitalize(poke.item);
+	document.getElementById("edit-ability").value = fullCapitalize(poke.ability);
 	document.getElementById("edit-lvl").value = poke.level;
 	OptionSelect.updateSelector(document.getElementById("edit-name"));
+	OptionSelect.updateSelector(document.getElementById("edit-ability"));
 	OptionSelect.updateSelector(document.getElementById("edit-item"));
 	for (var i = 0; i < 4; i++) {
 		var el = document.getElementById("edit-move-" + (i + 1));

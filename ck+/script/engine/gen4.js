@@ -97,6 +97,8 @@ class BattleMoveGen4Impl extends BattleMove {
 			} else if (weather == "hail") {
 				return "ice";
 			}
+		} else if (this.move.name == "future-sight" || this.move.name == "doom-desire") {
+			return "curse";
 		}
 		return super.type;
 	}

@@ -250,7 +250,7 @@
         },
         {
             "effects": {
-                "all": {
+                "attack": {
                     "modifiers": {
                         "attack-boost": "+100%"
                     }
@@ -563,7 +563,7 @@
         },
         {
             "effects": {
-                "all": {
+                "attack": {
                     "modifiers": {
                         "attack-boost": "+100%"
                     }
@@ -123783,7 +123783,7 @@
                     "level": 94,
                     "moves": [
                         "thunder",
-                        "hidden-power-grass",
+                        "hp-grass",
                         "metal-burst",
                         "thunder-wave"
                     ],
@@ -123809,7 +123809,7 @@
                     "level": 91,
                     "moves": [
                         "mud-bomb",
-                        "hidden-power-flying",
+                        "hp-flying",
                         "scald",
                         "yawn"
                     ],
@@ -123950,7 +123950,7 @@
                         "pin-missile",
                         "thunder",
                         "shadow-ball",
-                        "hidden-power-ice"
+                        "hp-ice"
                     ],
                     "name": "jolteon",
                     "nature": "hasty"
@@ -124047,7 +124047,7 @@
                         "hydro-pump",
                         "draco-meteor",
                         "ice-beam",
-                        "hidden-power-electric"
+                        "hp-electric"
                     ],
                     "name": "kingdra",
                     "nature": "quiet"
@@ -124143,7 +124143,7 @@
                     "moves": [
                         "overheat",
                         "dark-pulse",
-                        "hidden-power-grass",
+                        "hp-grass",
                         "nasty-plot"
                     ],
                     "name": "houndoom",
@@ -124421,7 +124421,7 @@
                     "moves": [
                         "flare-blitz",
                         "extreme-speed",
-                        "hidden-power-grass",
+                        "hp-grass",
                         "stone-edge"
                     ],
                     "name": "arcanine",
@@ -124479,7 +124479,7 @@
                     "moves": [
                         "hydro-pump",
                         "giga-drain",
-                        "hidden-power-electric",
+                        "hp-electric",
                         "counter"
                     ],
                     "name": "ludicolo",
@@ -124814,10 +124814,10 @@
                     "item": "brightpowder",
                     "level": 95,
                     "moves": [
-                        "hidden-power-fighting",
-                        "hidden-power-rock",
-                        "hidden-power-dark",
-                        "hidden-power-psychic"
+                        "hp-fighting",
+                        "hp-rock",
+                        "hp-dark",
+                        "hp-psychic"
                     ],
                     "name": "unown",
                     "nature": "sassy"
@@ -124958,7 +124958,7 @@
                     "level": 100,
                     "moves": [
                         "hyper-beam",
-                        "hidden-power-ground",
+                        "hp-ground",
                         "gravity",
                         "recover"
                     ],
@@ -125298,7 +125298,7 @@
                     "level": 100,
                     "moves": [
                         "hyper-beam",
-                        "hidden-power-ground",
+                        "hp-ground",
                         "gravity",
                         "recover"
                     ],
