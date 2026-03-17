@@ -84,6 +84,51 @@ function getPokeImage(poke, size, unownExtra = undefined) {
 	return 'https://img.pokemondb.net/sprites/crystal/' + shiny + '/' + poke + '.png';
 }
 
+function getTargeting(move) {
+	var targetMap = {
+		"self": {
+			grid: [false, false, false, true, false, false]
+		},
+		"adjacent": {
+			grid: [true, true, false, false, true, false]
+		},
+		"adjacent-opponents": {
+			grid: [true, true, false, false, false, false],
+			all: true
+		},
+		"all-opponents": {
+			grid: [true, true, true, false, false, false],
+			all: true
+		},
+		"adjacent-ally": {
+			grid: [false, false, false, false, true, false]
+		},
+		"adjacent-opponent": {
+			grid: [true, true, false, false, false, false]
+		},
+		"all-allies": {
+			grid: [false, false, false, true, true, true],
+			all: true
+		},
+		"user-or-ally": {
+			grid: [false, false, false, true, true, false]
+		},
+		"all-adjacent": {
+			grid: [true, true, false, false, true, false],
+			all: true
+		},
+		"all": {
+			grid: [true, true, true, true, true, true],
+			all: true
+		},
+	}
+	if (targetMap[move.target]) {
+		return targetMap[move.target];
+	} else {
+		return targetMap["adjacent-ally"];
+	}
+}
+
 function contains(list, value) {
 	for (let i of list) {
 		if (i == value) {

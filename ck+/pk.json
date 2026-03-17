@@ -27527,6 +27527,7 @@
             "power": 40,
             "pp": 35,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -27540,6 +27541,7 @@
             "power": 50,
             "pp": 25,
             "priority": 0,
+            "target": "adjacent",
             "type": "fighting"
         },
         {
@@ -27553,6 +27555,7 @@
             "power": 30,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "template": "double-hit",
             "type": "normal"
         },
@@ -27565,6 +27568,7 @@
             "power": 100,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "water"
         },
         {
@@ -27576,6 +27580,7 @@
             "power": 80,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -27589,6 +27594,7 @@
             "power": 40,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -27602,6 +27608,7 @@
             "power": 95,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "fire"
         },
         {
@@ -27615,6 +27622,7 @@
             "power": 95,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "ice"
         },
         {
@@ -27628,6 +27636,7 @@
             "power": 95,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "electric"
         },
         {
@@ -27639,6 +27648,7 @@
             "power": 40,
             "pp": 35,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -27652,6 +27662,7 @@
             "power": 90,
             "pp": 30,
             "priority": 0,
+            "target": "adjacent",
             "type": "water"
         },
         {
@@ -27665,6 +27676,7 @@
             "power": 1,
             "pp": 8,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -27678,6 +27690,7 @@
             "power": 80,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent-opponents",
             "type": "normal"
         },
         {
@@ -27691,6 +27704,7 @@
             "power": 0,
             "pp": 30,
             "priority": 0,
+            "target": "self",
             "type": "normal"
         },
         {
@@ -27702,6 +27716,7 @@
             "power": 50,
             "pp": 30,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -27715,6 +27730,7 @@
             "power": 40,
             "pp": 35,
             "priority": 0,
+            "target": "adjacent",
             "type": "flying"
         },
         {
@@ -27726,6 +27742,7 @@
             "power": 60,
             "pp": 35,
             "priority": 0,
+            "target": "adjacent",
             "type": "flying"
         },
         {
@@ -27739,6 +27756,7 @@
             "power": 0,
             "pp": 20,
             "priority": -6,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -27752,6 +27770,7 @@
             "power": 90,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "flying"
         },
         {
@@ -27765,6 +27784,7 @@
             "power": 75,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "type": "fire"
         },
         {
@@ -27778,6 +27798,7 @@
             "power": 120,
             "pp": 8,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -27789,6 +27810,7 @@
             "power": 35,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "grass"
         },
         {
@@ -27802,6 +27824,7 @@
             "power": 90,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "type": "ground"
         },
         {
@@ -27815,6 +27838,7 @@
             "power": 30,
             "pp": 30,
             "priority": 0,
+            "target": "adjacent",
             "template": "double-hit",
             "type": "fighting"
         },
@@ -27827,6 +27851,7 @@
             "power": 140,
             "pp": 8,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -27840,6 +27865,7 @@
             "power": 120,
             "pp": 25,
             "priority": 0,
+            "target": "adjacent",
             "type": "fighting"
         },
         {
@@ -27853,6 +27879,7 @@
             "power": 60,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "fighting"
         },
         {
@@ -27866,6 +27893,7 @@
             "power": 0,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent",
             "type": "ground"
         },
         {
@@ -27879,6 +27907,7 @@
             "power": 70,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -27890,6 +27919,7 @@
             "power": 100,
             "pp": 25,
             "priority": 0,
+            "target": "adjacent",
             "type": "fire"
         },
         {
@@ -27903,6 +27933,7 @@
             "power": 15,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "template": "multi-hit",
             "type": "normal"
         },
@@ -27917,6 +27948,7 @@
             "power": 1,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -27928,6 +27960,7 @@
             "power": 35,
             "pp": 35,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -27941,6 +27974,7 @@
             "power": 90,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -27954,6 +27988,7 @@
             "power": 15,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -27967,6 +28002,7 @@
             "power": 90,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "template": "recoil-fourth",
             "type": "normal"
         },
@@ -27981,6 +28017,7 @@
             "power": 120,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "template": "recoil-third",
             "type": "normal"
         },
@@ -27995,6 +28032,7 @@
             "power": 140,
             "pp": 8,
             "priority": 0,
+            "target": "adjacent",
             "template": "recoil-third",
             "type": "normal"
         },
@@ -28009,6 +28047,7 @@
             "power": 0,
             "pp": 1,
             "priority": 0,
+            "target": "adjacent-opponents",
             "type": "normal"
         },
         {
@@ -28022,6 +28061,7 @@
             "power": 40,
             "pp": 35,
             "priority": 0,
+            "target": "adjacent",
             "type": "poison"
         },
         {
@@ -28035,6 +28075,7 @@
             "power": 50,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "template": "double-hit",
             "type": "bug"
         },
@@ -28049,6 +28090,7 @@
             "power": 25,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "template": "multi-hit",
             "type": "bug"
         },
@@ -28063,6 +28105,7 @@
             "power": 0,
             "pp": 30,
             "priority": 0,
+            "target": "adjacent-opponents",
             "type": "normal"
         },
         {
@@ -28076,6 +28119,7 @@
             "power": 60,
             "pp": 25,
             "priority": 0,
+            "target": "adjacent",
             "type": "dark"
         },
         {
@@ -28089,6 +28133,7 @@
             "power": 0,
             "pp": 40,
             "priority": 0,
+            "target": "adjacent-opponents",
             "type": "normal"
         },
         {
@@ -28102,6 +28147,7 @@
             "power": 0,
             "pp": 20,
             "priority": -6,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -28115,6 +28161,7 @@
             "power": 0,
             "pp": 8,
             "priority": 0,
+            "target": "all-adjacent",
             "type": "normal"
         },
         {
@@ -28128,6 +28175,7 @@
             "power": 0,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent-opponents",
             "type": "normal"
         },
         {
@@ -28141,6 +28189,7 @@
             "power": 1,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -28154,6 +28203,7 @@
             "power": 0,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -28167,6 +28217,7 @@
             "power": 40,
             "pp": 30,
             "priority": 0,
+            "target": "adjacent-opponents",
             "type": "poison"
         },
         {
@@ -28180,6 +28231,7 @@
             "power": 40,
             "pp": 25,
             "priority": 0,
+            "target": "adjacent",
             "type": "fire"
         },
         {
@@ -28193,6 +28245,7 @@
             "power": 95,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "fire"
         },
         {
@@ -28206,6 +28259,7 @@
             "power": 0,
             "pp": 3,
             "priority": 0,
+            "target": "all-allies",
             "type": "ice"
         },
         {
@@ -28217,6 +28271,7 @@
             "power": 40,
             "pp": 25,
             "priority": 0,
+            "target": "adjacent",
             "type": "water"
         },
         {
@@ -28228,6 +28283,7 @@
             "power": 120,
             "pp": 8,
             "priority": 0,
+            "target": "adjacent",
             "type": "water"
         },
         {
@@ -28241,6 +28297,7 @@
             "power": 95,
             "pp": 15,
             "priority": 0,
+            "target": "all-adjacent",
             "type": "water"
         },
         {
@@ -28254,6 +28311,7 @@
             "power": 95,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "ice"
         },
         {
@@ -28267,6 +28325,7 @@
             "power": 120,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent-opponents",
             "type": "ice"
         },
         {
@@ -28280,6 +28339,7 @@
             "power": 65,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "type": "psychic"
         },
         {
@@ -28293,6 +28353,7 @@
             "power": 65,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "type": "water"
         },
         {
@@ -28306,6 +28367,7 @@
             "power": 60,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "type": "ice"
         },
         {
@@ -28319,6 +28381,7 @@
             "power": 180,
             "pp": 8,
             "priority": 0,
+            "target": "adjacent",
             "template": "recoil-fourth",
             "type": "normal"
         },
@@ -28331,6 +28394,7 @@
             "power": 40,
             "pp": 35,
             "priority": 0,
+            "target": "adjacent",
             "type": "flying"
         },
         {
@@ -28344,6 +28408,7 @@
             "power": 80,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "type": "flying"
         },
         {
@@ -28357,6 +28422,7 @@
             "power": 90,
             "pp": 8,
             "priority": 0,
+            "target": "adjacent",
             "type": "fighting"
         },
         {
@@ -28370,6 +28436,7 @@
             "power": 1,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "type": "fighting"
         },
         {
@@ -28383,6 +28450,7 @@
             "power": 1,
             "pp": 20,
             "priority": -5,
+            "target": "self",
             "type": "fighting"
         },
         {
@@ -28396,6 +28464,7 @@
             "power": 1,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "type": "fighting"
         },
         {
@@ -28407,6 +28476,7 @@
             "power": 80,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -28420,6 +28490,7 @@
             "power": 60,
             "pp": 25,
             "priority": 0,
+            "target": "adjacent",
             "template": "drain-half",
             "type": "dark"
         },
@@ -28434,6 +28505,7 @@
             "power": 40,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "template": "drain-half",
             "type": "grass"
         },
@@ -28448,6 +28520,7 @@
             "power": 0,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "grass"
         },
         {
@@ -28461,6 +28534,7 @@
             "power": 0,
             "pp": 5,
             "priority": 0,
+            "target": "self",
             "type": "normal"
         },
         {
@@ -28474,6 +28548,7 @@
             "power": 60,
             "pp": 25,
             "priority": 0,
+            "target": "adjacent-opponents",
             "type": "grass"
         },
         {
@@ -28487,6 +28562,7 @@
             "power": 120,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "grass"
         },
         {
@@ -28500,6 +28576,7 @@
             "power": 0,
             "pp": 35,
             "priority": 0,
+            "target": "adjacent",
             "type": "poison"
         },
         {
@@ -28513,6 +28590,7 @@
             "power": 0,
             "pp": 30,
             "priority": 0,
+            "target": "adjacent",
             "type": "grass"
         },
         {
@@ -28526,6 +28604,7 @@
             "power": 0,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "grass"
         },
         {
@@ -28539,6 +28618,7 @@
             "power": 100,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent-opponents",
             "type": "grass"
         },
         {
@@ -28552,6 +28632,7 @@
             "power": 0,
             "pp": 40,
             "priority": 0,
+            "target": "adjacent-opponents",
             "type": "bug"
         },
         {
@@ -28565,6 +28646,7 @@
             "power": 1,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "dragon"
         },
         {
@@ -28578,6 +28660,7 @@
             "power": 90,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "fire"
         },
         {
@@ -28591,6 +28674,7 @@
             "power": 40,
             "pp": 30,
             "priority": 0,
+            "target": "adjacent",
             "type": "electric"
         },
         {
@@ -28604,6 +28688,7 @@
             "power": 95,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "electric"
         },
         {
@@ -28617,6 +28702,7 @@
             "power": 0,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "type": "electric"
         },
         {
@@ -28630,6 +28716,7 @@
             "power": 120,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "electric"
         },
         {
@@ -28641,6 +28728,7 @@
             "power": 50,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "rock"
         },
         {
@@ -28654,6 +28742,7 @@
             "power": 100,
             "pp": 10,
             "priority": 0,
+            "target": "all-adjacent",
             "type": "ground"
         },
         {
@@ -28667,6 +28756,7 @@
             "power": 1,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent",
             "type": "ground"
         },
         {
@@ -28678,6 +28768,7 @@
             "power": 60,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "ground"
         },
         {
@@ -28691,6 +28782,7 @@
             "power": 0,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "poison"
         },
         {
@@ -28704,6 +28796,7 @@
             "power": 50,
             "pp": 25,
             "priority": 0,
+            "target": "adjacent",
             "type": "psychic"
         },
         {
@@ -28717,6 +28810,7 @@
             "power": 90,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "psychic"
         },
         {
@@ -28730,6 +28824,7 @@
             "power": 0,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "type": "psychic"
         },
         {
@@ -28743,6 +28838,7 @@
             "power": 0,
             "pp": 1,
             "priority": 0,
+            "target": "self",
             "type": "psychic"
         },
         {
@@ -28756,6 +28852,7 @@
             "power": 0,
             "pp": 1,
             "priority": 0,
+            "target": "self",
             "type": "psychic"
         },
         {
@@ -28769,6 +28866,7 @@
             "power": 40,
             "pp": 30,
             "priority": 1,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -28782,6 +28880,7 @@
             "power": 70,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "type": "fighting",
             "variants": [
                 {
@@ -28805,6 +28904,7 @@
             "power": 0,
             "pp": 20,
             "priority": 1,
+            "target": "self",
             "type": "psychic"
         },
         {
@@ -28818,6 +28918,7 @@
             "power": 1,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "ghost"
         },
         {
@@ -28831,6 +28932,7 @@
             "power": 0,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -28844,6 +28946,7 @@
             "power": 0,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent-opponents",
             "type": "normal"
         },
         {
@@ -28857,6 +28960,7 @@
             "power": 0,
             "pp": 6,
             "priority": 0,
+            "target": "self",
             "type": "normal"
         },
         {
@@ -28870,6 +28974,7 @@
             "power": 0,
             "pp": 10,
             "priority": 0,
+            "target": "self",
             "type": "normal"
         },
         {
@@ -28883,6 +28988,7 @@
             "power": 0,
             "pp": 5,
             "priority": 0,
+            "target": "self",
             "type": "normal"
         },
         {
@@ -28896,6 +29002,7 @@
             "power": 0,
             "pp": 3,
             "priority": 0,
+            "target": "self",
             "type": "normal"
         },
         {
@@ -28909,6 +29016,7 @@
             "power": 0,
             "pp": 5,
             "priority": 0,
+            "target": "all-adjacent",
             "type": "normal"
         },
         {
@@ -28922,6 +29030,7 @@
             "power": 0,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "ghost"
         },
         {
@@ -28935,6 +29044,7 @@
             "power": 0,
             "pp": 5,
             "priority": 0,
+            "target": "self",
             "type": "water"
         },
         {
@@ -28946,6 +29056,7 @@
             "power": 100,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "rock"
         },
         {
@@ -28959,6 +29070,7 @@
             "power": 0,
             "pp": 5,
             "priority": 0,
+            "target": "self",
             "type": "psychic"
         },
         {
@@ -28972,6 +29084,7 @@
             "power": 0,
             "pp": 2,
             "priority": 0,
+            "target": "all-allies",
             "type": "psychic"
         },
         {
@@ -28985,6 +29098,7 @@
             "power": 0,
             "pp": 30,
             "priority": 0,
+            "target": "all",
             "type": "ice"
         },
         {
@@ -28998,6 +29112,7 @@
             "power": 0,
             "pp": 2,
             "priority": 0,
+            "target": "all-allies",
             "type": "psychic"
         },
         {
@@ -29011,6 +29126,7 @@
             "power": 0,
             "pp": 5,
             "priority": 0,
+            "target": "self",
             "type": "normal"
         },
         {
@@ -29024,6 +29140,7 @@
             "power": 1,
             "pp": 10,
             "priority": -1,
+            "target": "adjacent",
             "type": "dark"
         },
         {
@@ -29037,6 +29154,7 @@
             "power": 0,
             "pp": 40,
             "priority": 0,
+            "target": "self",
             "type": "normal"
         },
         {
@@ -29050,6 +29168,7 @@
             "power": 0,
             "pp": 20,
             "priority": 0,
+            "target": "self",
             "type": "flying"
         },
         {
@@ -29063,6 +29182,7 @@
             "power": 200,
             "pp": 5,
             "priority": 0,
+            "target": "all-adjacent",
             "type": "normal"
         },
         {
@@ -29074,6 +29194,7 @@
             "power": 100,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "grass"
         },
         {
@@ -29087,6 +29208,7 @@
             "power": 80,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "ghost"
         },
         {
@@ -29100,6 +29222,7 @@
             "power": 60,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent-opponents",
             "type": "poison"
         },
         {
@@ -29113,6 +29236,7 @@
             "power": 70,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "type": "poison"
         },
         {
@@ -29126,6 +29250,7 @@
             "power": 65,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "type": "rock"
         },
         {
@@ -29139,6 +29264,7 @@
             "power": 120,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent",
             "type": "fire"
         },
         {
@@ -29152,6 +29278,7 @@
             "power": 80,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "water"
         },
         {
@@ -29165,6 +29292,7 @@
             "power": 120,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "water"
         },
         {
@@ -29178,6 +29306,7 @@
             "power": 60,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent-opponents",
             "type": "normal"
         },
         {
@@ -29189,6 +29318,7 @@
             "power": 120,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "grass"
         },
         {
@@ -29200,6 +29330,7 @@
             "power": 100,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "ice"
         },
         {
@@ -29211,6 +29342,7 @@
             "power": 100,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "ice"
         },
         {
@@ -29224,6 +29356,7 @@
             "power": 0,
             "pp": 3,
             "priority": 0,
+            "target": "self",
             "type": "psychic"
         },
         {
@@ -29237,6 +29370,7 @@
             "power": 0,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent-opponents",
             "type": "psychic"
         },
         {
@@ -29250,6 +29384,7 @@
             "power": 0,
             "pp": 25,
             "priority": 0,
+            "target": "self",
             "type": "normal"
         },
         {
@@ -29263,6 +29398,7 @@
             "power": 150,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "type": "fighting"
         },
         {
@@ -29276,6 +29412,7 @@
             "power": 0,
             "pp": 30,
             "priority": 0,
+            "target": "adjacent",
             "type": "dark"
         },
         {
@@ -29289,6 +29426,7 @@
             "power": 100,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "template": "drain-half",
             "type": "psychic"
         },
@@ -29303,6 +29441,7 @@
             "power": 0,
             "pp": 40,
             "priority": 0,
+            "target": "all-adjacent",
             "type": "poison"
         },
         {
@@ -29316,6 +29455,7 @@
             "power": 120,
             "pp": 8,
             "priority": 0,
+            "target": "adjacent",
             "type": "flying"
         },
         {
@@ -29329,6 +29469,7 @@
             "power": 80,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "template": "drain-half",
             "type": "bug"
         },
@@ -29343,6 +29484,7 @@
             "power": 0,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -29356,6 +29498,7 @@
             "power": 120,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent",
             "template": "recoil-third",
             "type": "flying"
         },
@@ -29370,6 +29513,7 @@
             "power": 0,
             "pp": 10,
             "priority": 1,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -29383,6 +29527,7 @@
             "power": 40,
             "pp": 30,
             "priority": 0,
+            "target": "adjacent-opponents",
             "type": "water"
         },
         {
@@ -29396,6 +29541,7 @@
             "power": 100,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -29409,6 +29555,7 @@
             "power": 0,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "grass"
         },
         {
@@ -29422,6 +29569,7 @@
             "power": 0,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -29435,6 +29583,7 @@
             "power": 40,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "ice"
         },
         {
@@ -29446,6 +29595,7 @@
             "power": 70,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "type": "water"
         },
         {
@@ -29459,6 +29609,7 @@
             "power": 0,
             "pp": 1,
             "priority": 0,
+            "target": "self",
             "type": "poison"
         },
         {
@@ -29472,6 +29623,7 @@
             "power": 120,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "water"
         },
         {
@@ -29485,6 +29637,7 @@
             "power": 250,
             "pp": 5,
             "priority": 0,
+            "target": "all-adjacent",
             "type": "normal"
         },
         {
@@ -29498,6 +29651,7 @@
             "power": 30,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "template": "multi-hit",
             "type": "normal"
         },
@@ -29512,6 +29666,7 @@
             "power": 60,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "template": "double-hit",
             "type": "rock"
         },
@@ -29526,6 +29681,7 @@
             "power": 0,
             "pp": 3,
             "priority": 0,
+            "target": "self",
             "type": "psychic"
         },
         {
@@ -29539,6 +29695,7 @@
             "power": 75,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent-opponents",
             "type": "rock"
         },
         {
@@ -29552,6 +29709,7 @@
             "power": 95,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -29565,6 +29723,7 @@
             "power": 0,
             "pp": 3,
             "priority": 0,
+            "target": "self",
             "type": "normal"
         },
         {
@@ -29576,6 +29735,7 @@
             "power": 70,
             "pp": 30,
             "priority": 0,
+            "target": "adjacent",
             "type": "ice"
         },
         {
@@ -29589,6 +29749,7 @@
             "power": 95,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -29602,6 +29763,7 @@
             "power": 1,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "dark"
         },
         {
@@ -29615,6 +29777,7 @@
             "power": 70,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -29628,6 +29791,7 @@
             "power": 0,
             "pp": 2,
             "priority": 0,
+            "target": "self",
             "type": "normal"
         },
         {
@@ -29641,6 +29805,7 @@
             "power": 50,
             "pp": 1,
             "priority": 0,
+            "target": "adjacent",
             "type": "curse"
         },
         {
@@ -29654,6 +29819,7 @@
             "power": 0,
             "pp": 1,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -29667,6 +29833,7 @@
             "power": 30,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "fighting"
         },
         {
@@ -29680,6 +29847,7 @@
             "power": 40,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "dark"
         },
         {
@@ -29693,6 +29861,7 @@
             "power": 0,
             "pp": 10,
             "priority": 1,
+            "target": "adjacent-opponents",
             "type": "bug"
         },
         {
@@ -29706,6 +29875,7 @@
             "power": 0,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -29717,6 +29887,7 @@
             "power": 70,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "ghost"
         },
         {
@@ -29730,6 +29901,7 @@
             "power": 70,
             "pp": 25,
             "priority": 0,
+            "target": "adjacent",
             "type": "fire"
         },
         {
@@ -29743,6 +29915,7 @@
             "power": 80,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -29756,6 +29929,7 @@
             "power": 0,
             "pp": 3,
             "priority": 0,
+            "target": "adjacent",
             "type": "curse"
         },
         {
@@ -29769,6 +29943,7 @@
             "power": 1,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -29782,6 +29957,7 @@
             "power": 0,
             "pp": 30,
             "priority": 0,
+            "target": "self",
             "type": "normal"
         },
         {
@@ -29795,6 +29971,7 @@
             "power": 120,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent",
             "type": "flying"
         },
         {
@@ -29808,6 +29985,7 @@
             "power": 0,
             "pp": 40,
             "priority": 0,
+            "target": "adjacent-opponents",
             "type": "grass"
         },
         {
@@ -29821,6 +29999,7 @@
             "power": 1,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "fighting"
         },
         {
@@ -29834,6 +30013,7 @@
             "power": 0,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "ghost"
         },
         {
@@ -29847,6 +30027,7 @@
             "power": 40,
             "pp": 25,
             "priority": 0,
+            "target": "adjacent-opponents",
             "type": "ice"
         },
         {
@@ -29860,6 +30041,7 @@
             "power": 0,
             "pp": 10,
             "priority": 3,
+            "target": "self",
             "type": "normal"
         },
         {
@@ -29873,6 +30055,7 @@
             "power": 40,
             "pp": 15,
             "priority": 1,
+            "target": "adjacent",
             "type": "fighting"
         },
         {
@@ -29886,6 +30069,7 @@
             "power": 0,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -29899,6 +30083,7 @@
             "power": 60,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "type": "dark"
         },
         {
@@ -29912,6 +30097,7 @@
             "power": 0,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -29925,6 +30111,7 @@
             "power": 0,
             "pp": 1,
             "priority": 0,
+            "target": "self",
             "type": "normal"
         },
         {
@@ -29938,6 +30125,7 @@
             "power": 95,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "poison"
         },
         {
@@ -29951,6 +30139,7 @@
             "power": 20,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "ground"
         },
         {
@@ -29964,6 +30153,7 @@
             "power": 95,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "water"
         },
         {
@@ -29977,6 +30167,7 @@
             "power": 0,
             "pp": 20,
             "priority": 1,
+            "target": "all-opponents",
             "type": "ground"
         },
         {
@@ -29990,6 +30181,7 @@
             "power": 120,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent",
             "type": "electric"
         },
         {
@@ -30003,6 +30195,7 @@
             "power": 0,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -30016,6 +30209,7 @@
             "power": 0,
             "pp": 5,
             "priority": 0,
+            "target": "self",
             "type": "ghost"
         },
         {
@@ -30029,6 +30223,7 @@
             "power": 0,
             "pp": 5,
             "priority": 0,
+            "target": "all",
             "type": "normal"
         },
         {
@@ -30042,6 +30237,7 @@
             "power": 55,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent-opponents",
             "type": "ice"
         },
         {
@@ -30055,6 +30251,7 @@
             "power": 0,
             "pp": 10,
             "priority": 3,
+            "target": "self",
             "type": "fighting"
         },
         {
@@ -30068,6 +30265,7 @@
             "power": 25,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "template": "multi-hit",
             "type": "ground"
         },
@@ -30082,6 +30280,7 @@
             "power": 0,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -30095,6 +30294,7 @@
             "power": 140,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "template": "recoil-half",
             "type": "dragon"
         },
@@ -30109,6 +30309,7 @@
             "power": 0,
             "pp": 1,
             "priority": 0,
+            "target": "all",
             "type": "rock"
         },
         {
@@ -30122,6 +30323,7 @@
             "power": 75,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "template": "drain-half",
             "type": "grass"
         },
@@ -30136,6 +30338,7 @@
             "power": 0,
             "pp": 10,
             "priority": 3,
+            "target": "self",
             "type": "normal"
         },
         {
@@ -30149,6 +30352,7 @@
             "power": 0,
             "pp": 3,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -30160,6 +30364,7 @@
             "power": 40,
             "pp": 5,
             "priority": 1,
+            "target": "adjacent",
             "type": "rock"
         },
         {
@@ -30173,6 +30378,7 @@
             "power": 40,
             "pp": 40,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -30186,6 +30392,7 @@
             "power": 0,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -30199,6 +30406,7 @@
             "power": 0,
             "pp": 10,
             "priority": 0,
+            "target": "self",
             "type": "normal"
         },
         {
@@ -30212,6 +30420,7 @@
             "power": 120,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "template": "recoil-third",
             "type": "electric"
         },
@@ -30226,6 +30435,7 @@
             "power": 30,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "type": "bug"
         },
         {
@@ -30239,6 +30449,7 @@
             "power": 80,
             "pp": 25,
             "priority": 0,
+            "target": "adjacent",
             "type": "steel"
         },
         {
@@ -30252,6 +30463,7 @@
             "power": 0,
             "pp": 5,
             "priority": 1,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -30265,6 +30477,7 @@
             "power": 0,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent-opponents",
             "type": "normal"
         },
         {
@@ -30278,6 +30491,7 @@
             "power": 0,
             "pp": 20,
             "priority": 1,
+            "target": "self",
             "type": "normal"
         },
         {
@@ -30291,6 +30505,7 @@
             "power": 0,
             "pp": 1,
             "priority": 0,
+            "target": "all-allies",
             "type": "normal"
         },
         {
@@ -30302,6 +30517,7 @@
             "power": 121,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -30316,6 +30532,7 @@
             "pp": 15,
             "priority": 0,
             "roll_variants": true,
+            "target": "adjacent",
             "type": "normal",
             "variants": [
                 {
@@ -30345,6 +30562,7 @@
             "power": 121,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -30358,6 +30576,7 @@
             "power": 0,
             "pp": 5,
             "priority": 0,
+            "target": "all-allies",
             "type": "normal"
         },
         {
@@ -30371,6 +30590,7 @@
             "power": 0,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -30384,6 +30604,7 @@
             "power": 120,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent",
             "type": "fire"
         },
         {
@@ -30397,6 +30618,7 @@
             "power": 60,
             "pp": 30,
             "priority": 0,
+            "target": "all-adjacent",
             "type": "ground"
         },
         {
@@ -30410,6 +30632,7 @@
             "power": 120,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent",
             "type": "fighting"
         },
         {
@@ -30423,6 +30646,7 @@
             "power": 120,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "bug"
         },
         {
@@ -30436,6 +30660,7 @@
             "power": 70,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "type": "dragon"
         },
         {
@@ -30449,6 +30674,7 @@
             "power": 0,
             "pp": 40,
             "priority": 1,
+            "target": "self",
             "type": "normal"
         },
         {
@@ -30462,6 +30688,7 @@
             "power": 0,
             "pp": 3,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -30475,6 +30702,7 @@
             "power": 70,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "dark",
             "variants": [
                 {
@@ -30496,6 +30724,7 @@
             "power": 70,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "fire"
         },
         {
@@ -30509,6 +30738,7 @@
             "power": 0,
             "pp": 2,
             "priority": 0,
+            "target": "adjacent-opponents",
             "type": "normal"
         },
         {
@@ -30522,6 +30752,7 @@
             "power": 120,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "steel"
         },
         {
@@ -30535,6 +30766,7 @@
             "power": 50,
             "pp": 35,
             "priority": 0,
+            "target": "adjacent",
             "type": "steel"
         },
         {
@@ -30548,6 +30780,7 @@
             "power": 90,
             "pp": 10,
             "priority": -1,
+            "target": "adjacent",
             "type": "fighting"
         },
         {
@@ -30561,6 +30794,7 @@
             "power": 0,
             "pp": 5,
             "priority": 0,
+            "target": "self",
             "type": "normal"
         },
         {
@@ -30574,6 +30808,7 @@
             "power": 0,
             "pp": 5,
             "priority": 0,
+            "target": "self",
             "type": "grass"
         },
         {
@@ -30587,6 +30822,7 @@
             "power": 0,
             "pp": 5,
             "priority": 0,
+            "target": "self",
             "type": "normal"
         },
         {
@@ -30600,6 +30836,7 @@
             "power": 1,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -30613,6 +30850,7 @@
             "power": 100,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent",
             "type": "fighting"
         },
         {
@@ -30626,6 +30864,7 @@
             "power": 90,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent-opponents",
             "type": "dragon"
         },
         {
@@ -30639,6 +30878,7 @@
             "power": 0,
             "pp": 1,
             "priority": 0,
+            "target": "all",
             "type": "water"
         },
         {
@@ -30652,6 +30892,7 @@
             "power": 0,
             "pp": 1,
             "priority": 0,
+            "target": "all",
             "type": "fire"
         },
         {
@@ -30665,6 +30906,7 @@
             "power": 95,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "dark"
         },
         {
@@ -30678,6 +30920,7 @@
             "power": 1,
             "pp": 20,
             "priority": -5,
+            "target": "self",
             "type": "psychic"
         },
         {
@@ -30691,6 +30934,7 @@
             "power": 0,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -30702,6 +30946,7 @@
             "power": 100,
             "pp": 8,
             "priority": 2,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -30715,6 +30960,7 @@
             "power": 80,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "rock"
         },
         {
@@ -30728,6 +30974,7 @@
             "power": 90,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "ghost"
         },
         {
@@ -30741,6 +30988,7 @@
             "power": 120,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "psychic"
         },
         {
@@ -30754,6 +31002,7 @@
             "power": 40,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "fighting"
         },
         {
@@ -30767,6 +31016,7 @@
             "power": 90,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "water"
         },
         {
@@ -30780,6 +31030,7 @@
             "power": 30,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "dark"
         },
         {
@@ -30793,6 +31044,7 @@
             "power": 40,
             "pp": 5,
             "priority": 3,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -30806,6 +31058,7 @@
             "power": 50,
             "pp": 10,
             "priority": 0,
+            "target": "self",
             "type": "normal"
         },
         {
@@ -30819,6 +31072,7 @@
             "power": 0,
             "pp": 10,
             "priority": 0,
+            "target": "self",
             "type": "normal"
         },
         {
@@ -30830,6 +31084,7 @@
             "power": 70,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "rock"
         },
         {
@@ -30843,6 +31098,7 @@
             "power": 90,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "poison"
         },
         {
@@ -30856,6 +31112,7 @@
             "power": 100,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent-opponents",
             "type": "fire"
         },
         {
@@ -30869,6 +31126,7 @@
             "power": 0,
             "pp": 1,
             "priority": 0,
+            "target": "all",
             "type": "ice"
         },
         {
@@ -30882,6 +31140,7 @@
             "power": 0,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "dark"
         },
         {
@@ -30895,6 +31154,7 @@
             "power": 0,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "dark"
         },
         {
@@ -30908,6 +31168,7 @@
             "power": 0,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "fire"
         },
         {
@@ -30921,6 +31182,7 @@
             "power": 255,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "dark"
         },
         {
@@ -30944,6 +31206,7 @@
             "power": 80,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal",
             "variants": [
                 {
@@ -30967,6 +31230,7 @@
             "power": 150,
             "pp": 20,
             "priority": -3,
+            "target": "adjacent",
             "type": "fighting"
         },
         {
@@ -30990,6 +31254,7 @@
             "power": 90,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal",
             "variants": [
                 {
@@ -31013,6 +31278,7 @@
             "power": 0,
             "pp": 20,
             "priority": 3,
+            "target": "self",
             "type": "normal"
         },
         {
@@ -31026,6 +31292,7 @@
             "power": 0,
             "pp": 20,
             "priority": 0,
+            "target": "self",
             "type": "normal"
         },
         {
@@ -31039,6 +31306,7 @@
             "power": 0,
             "pp": 1,
             "priority": 0,
+            "target": "self",
             "type": "electric"
         },
         {
@@ -31050,6 +31318,7 @@
             "power": 70,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "dark"
         },
         {
@@ -31063,6 +31332,7 @@
             "power": 0,
             "pp": 20,
             "priority": 5,
+            "target": "adjacent-ally",
             "type": "normal"
         },
         {
@@ -31074,6 +31344,7 @@
             "power": 70,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "psychic"
         },
         {
@@ -31087,6 +31358,7 @@
             "power": 0,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "psychic"
         },
         {
@@ -31100,6 +31372,7 @@
             "power": 0,
             "pp": 10,
             "priority": 0,
+            "target": "self",
             "type": "normal"
         },
         {
@@ -31113,6 +31386,7 @@
             "power": 0,
             "pp": 35,
             "priority": 0,
+            "target": "self",
             "type": "normal"
         },
         {
@@ -31126,6 +31400,7 @@
             "power": 0,
             "pp": 1,
             "priority": 0,
+            "target": "self",
             "type": "grass"
         },
         {
@@ -31139,6 +31414,7 @@
             "power": 140,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent",
             "template": "recoil-fourth",
             "type": "fighting"
         },
@@ -31153,6 +31429,7 @@
             "power": 0,
             "pp": 15,
             "priority": 4,
+            "target": "self",
             "type": "psychic"
         },
         {
@@ -31166,6 +31443,7 @@
             "power": 0,
             "pp": 15,
             "priority": 0,
+            "target": "self",
             "type": "normal"
         },
         {
@@ -31179,6 +31457,7 @@
             "power": 60,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "fighting",
             "variants": [
                 {
@@ -31202,6 +31481,7 @@
             "power": 75,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "fighting"
         },
         {
@@ -31215,6 +31495,7 @@
             "power": 0,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -31228,6 +31509,7 @@
             "power": 80,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "type": "dark"
         },
         {
@@ -31241,6 +31523,7 @@
             "power": 1,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent",
             "type": "curse"
         },
         {
@@ -31254,6 +31537,7 @@
             "power": 150,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent-opponents",
             "template": "recoil-third",
             "type": "fire"
         },
@@ -31268,6 +31552,7 @@
             "power": 0,
             "pp": 2,
             "priority": 0,
+            "target": "adjacent",
             "type": "psychic"
         },
         {
@@ -31281,6 +31566,7 @@
             "power": 0,
             "pp": 10,
             "priority": 0,
+            "target": "self",
             "type": "psychic"
         },
         {
@@ -31294,6 +31580,7 @@
             "power": 0,
             "pp": 10,
             "priority": 0,
+            "target": "self",
             "type": "normal"
         },
         {
@@ -31307,6 +31594,7 @@
             "power": 0,
             "pp": 5,
             "priority": 0,
+            "target": "self",
             "type": "ghost"
         },
         {
@@ -31320,6 +31608,7 @@
             "power": 80,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "ground"
         },
         {
@@ -31333,6 +31622,7 @@
             "power": 85,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -31344,6 +31634,7 @@
             "power": 80,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "water"
         },
         {
@@ -31355,6 +31646,7 @@
             "power": 70,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "fighting"
         },
         {
@@ -31368,6 +31660,7 @@
             "power": 0,
             "pp": 20,
             "priority": 0,
+            "target": "self",
             "type": "normal"
         },
         {
@@ -31381,6 +31674,7 @@
             "power": 0,
             "pp": 20,
             "priority": 2,
+            "target": "self",
             "type": "bug"
         },
         {
@@ -31394,6 +31688,7 @@
             "power": 100,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent",
             "type": "psychic"
         },
         {
@@ -31407,6 +31702,7 @@
             "power": 100,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent",
             "type": "psychic"
         },
         {
@@ -31420,6 +31716,7 @@
             "power": 0,
             "pp": 3,
             "priority": 0,
+            "target": "adjacent",
             "type": "flying"
         },
         {
@@ -31433,6 +31730,7 @@
             "power": 0,
             "pp": 20,
             "priority": 0,
+            "target": "all-adjacent",
             "type": "normal"
         },
         {
@@ -31446,6 +31744,7 @@
             "power": 100,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "fire"
         },
         {
@@ -31457,6 +31756,7 @@
             "power": 70,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "ground"
         },
         {
@@ -31470,6 +31770,7 @@
             "power": 120,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "type": "ice"
         },
         {
@@ -31481,6 +31782,7 @@
             "power": 80,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "grass"
         },
         {
@@ -31494,6 +31796,7 @@
             "power": 0,
             "pp": 10,
             "priority": 0,
+            "target": "self",
             "type": "normal"
         },
         {
@@ -31505,6 +31808,7 @@
             "power": 110,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent-opponents",
             "type": "normal"
         },
         {
@@ -31518,6 +31822,7 @@
             "power": 90,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "poison"
         },
         {
@@ -31531,6 +31836,7 @@
             "power": 120,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -31544,6 +31850,7 @@
             "power": 150,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent",
             "template": "recoil-third",
             "type": "fire"
         },
@@ -31558,6 +31865,7 @@
             "power": 150,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent",
             "template": "recoil-third",
             "type": "water"
         },
@@ -31572,6 +31880,7 @@
             "power": 100,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "steel"
         },
         {
@@ -31585,6 +31894,7 @@
             "power": 40,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "ghost"
         },
         {
@@ -31598,6 +31908,7 @@
             "power": 50,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -31611,6 +31922,7 @@
             "power": 0,
             "pp": 1,
             "priority": 0,
+            "target": "all-allies",
             "type": "grass"
         },
         {
@@ -31624,6 +31936,7 @@
             "power": 0,
             "pp": 3,
             "priority": 0,
+            "target": "adjacent",
             "type": "dark"
         },
         {
@@ -31637,6 +31950,7 @@
             "power": 60,
             "pp": 25,
             "priority": 0,
+            "target": "adjacent-opponents",
             "type": "flying"
         },
         {
@@ -31650,6 +31964,7 @@
             "power": 120,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent",
             "template": "recoil-third",
             "type": "fire"
         },
@@ -31664,6 +31979,7 @@
             "power": 0,
             "pp": 40,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -31677,6 +31993,7 @@
             "power": 70,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "rock"
         },
         {
@@ -31690,6 +32007,7 @@
             "power": 80,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent",
             "type": "bug"
         },
         {
@@ -31703,6 +32021,7 @@
             "power": 0,
             "pp": 3,
             "priority": 0,
+            "target": "adjacent-opponents",
             "type": "steel"
         },
         {
@@ -31716,6 +32035,7 @@
             "power": 0,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "grass"
         },
         {
@@ -31729,6 +32049,7 @@
             "power": 0,
             "pp": 6,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -31742,6 +32063,7 @@
             "power": 0,
             "pp": 6,
             "priority": 0,
+            "target": "self",
             "type": "psychic"
         },
         {
@@ -31755,6 +32077,7 @@
             "power": 150,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent-opponents",
             "type": "water"
         },
         {
@@ -31768,6 +32091,7 @@
             "power": 95,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "bug"
         },
         {
@@ -31781,6 +32105,7 @@
             "power": 95,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "type": "ghost"
         },
         {
@@ -31794,6 +32119,7 @@
             "power": 90,
             "pp": 30,
             "priority": 0,
+            "target": "adjacent",
             "type": "psychic"
         },
         {
@@ -31807,6 +32133,7 @@
             "power": 95,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "fighting"
         },
         {
@@ -31820,6 +32147,7 @@
             "power": 90,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "ground"
         },
         {
@@ -31833,6 +32161,7 @@
             "power": 70,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent",
             "type": "ice"
         },
         {
@@ -31846,6 +32175,7 @@
             "power": 95,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent-opponents",
             "type": "water"
         },
         {
@@ -31859,6 +32189,7 @@
             "power": 25,
             "pp": 30,
             "priority": 0,
+            "target": "adjacent",
             "template": "multi-hit",
             "type": "grass"
         },
@@ -31873,6 +32204,7 @@
             "power": 60,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "type": "flying"
         },
         {
@@ -31886,6 +32218,7 @@
             "power": 25,
             "pp": 30,
             "priority": 0,
+            "target": "adjacent",
             "template": "multi-hit",
             "type": "ice"
         },
@@ -31900,6 +32233,7 @@
             "power": 0,
             "pp": 3,
             "priority": 0,
+            "target": "self",
             "type": "steel"
         },
         {
@@ -31913,6 +32247,7 @@
             "power": 0,
             "pp": 5,
             "priority": 7,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -31926,6 +32261,7 @@
             "power": 0,
             "pp": 3,
             "priority": 0,
+            "target": "self",
             "type": "normal"
         },
         {
@@ -31939,6 +32275,7 @@
             "power": 90,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "dragon"
         },
         {
@@ -31952,6 +32289,7 @@
             "power": 150,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent",
             "template": "recoil-third",
             "type": "grass"
         },
@@ -31966,6 +32304,7 @@
             "power": 0,
             "pp": 3,
             "priority": 0,
+            "target": "self",
             "type": "fighting"
         },
         {
@@ -31979,6 +32318,7 @@
             "power": 85,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent",
             "type": "flying"
         },
         {
@@ -31992,6 +32332,7 @@
             "power": 55,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "ground"
         },
         {
@@ -32005,6 +32346,7 @@
             "power": 120,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent",
             "type": "poison"
         },
         {
@@ -32016,6 +32358,7 @@
             "power": 70,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "grass"
         },
         {
@@ -32029,6 +32372,7 @@
             "power": 150,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent",
             "template": "recoil-third",
             "type": "electric"
         },
@@ -32043,6 +32387,7 @@
             "power": 60,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "grass"
         },
         {
@@ -32056,6 +32401,7 @@
             "power": 80,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "water"
         },
         {
@@ -32069,6 +32415,7 @@
             "power": 0,
             "pp": 3,
             "priority": 0,
+            "target": "self",
             "type": "psychic"
         },
         {
@@ -32082,6 +32429,7 @@
             "power": 95,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "grass"
         },
         {
@@ -32095,6 +32443,7 @@
             "power": 0,
             "pp": 1,
             "priority": 0,
+            "target": "self",
             "type": "dragon"
         },
         {
@@ -32108,6 +32457,7 @@
             "power": 25,
             "pp": 8,
             "priority": 0,
+            "target": "adjacent",
             "template": "multi-hit",
             "type": "rock"
         },
@@ -32122,6 +32472,7 @@
             "power": 60,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "electric"
         },
         {
@@ -32135,6 +32486,7 @@
             "power": 60,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "type": "water"
         },
         {
@@ -32148,6 +32500,7 @@
             "power": 250,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent",
             "type": "steel"
         },
         {
@@ -32159,6 +32512,7 @@
             "power": 140,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent",
             "type": "psychic"
         },
         {
@@ -32172,6 +32526,7 @@
             "power": 0,
             "pp": 8,
             "priority": 0,
+            "target": "self",
             "type": "flying"
         },
         {
@@ -32185,6 +32540,7 @@
             "power": 0,
             "pp": 5,
             "priority": 1,
+            "target": "all",
             "type": "psychic"
         },
         {
@@ -32198,6 +32554,7 @@
             "power": 0,
             "pp": 40,
             "priority": 0,
+            "target": "adjacent",
             "type": "psychic"
         },
         {
@@ -32221,6 +32578,7 @@
             "power": 60,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "fighting",
             "variants": [
                 {
@@ -32244,6 +32602,7 @@
             "power": 100,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "fighting"
         },
         {
@@ -32257,6 +32616,7 @@
             "power": 1,
             "pp": 8,
             "priority": 0,
+            "target": "adjacent",
             "type": "steel"
         },
         {
@@ -32268,6 +32628,7 @@
             "power": 70,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "electric"
         },
         {
@@ -32291,6 +32652,7 @@
             "power": 65,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "water",
             "variants": [
                 {
@@ -32314,6 +32676,7 @@
             "power": 1,
             "pp": 1,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -32327,6 +32690,7 @@
             "power": 80,
             "pp": 10,
             "priority": 2,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -32340,6 +32704,7 @@
             "power": 50,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent",
             "type": "flying"
         },
         {
@@ -32353,6 +32718,7 @@
             "power": 0,
             "pp": 30,
             "priority": 5,
+            "target": "all-allies",
             "type": "flying"
         },
         {
@@ -32366,6 +32732,7 @@
             "power": 0,
             "pp": 30,
             "priority": 0,
+            "target": "user-or-ally",
             "type": "normal"
         },
         {
@@ -32379,6 +32746,7 @@
             "power": 1,
             "pp": 10,
             "priority": -2,
+            "target": "self",
             "type": "steel"
         },
         {
@@ -32392,6 +32760,7 @@
             "power": 80,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "type": "bug"
         },
         {
@@ -32405,6 +32774,7 @@
             "power": 120,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent",
             "type": "fighting"
         },
         {
@@ -32418,6 +32788,7 @@
             "power": 60,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "dark",
             "variants": [
                 {
@@ -32441,6 +32812,7 @@
             "power": 70,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "dark",
             "variants": [
                 {
@@ -32464,6 +32836,7 @@
             "power": 0,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "dark"
         },
         {
@@ -32477,6 +32850,7 @@
             "power": 1,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "dark"
         },
         {
@@ -32490,6 +32864,7 @@
             "power": 0,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "psychic"
         },
         {
@@ -32508,6 +32883,7 @@
             "power": 1,
             "pp": 1,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -32521,6 +32897,7 @@
             "power": 70,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent-opponents",
             "type": "water"
         },
         {
@@ -32544,6 +32921,7 @@
             "power": 75,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal",
             "variants": [
                 {
@@ -32567,6 +32945,7 @@
             "power": 0,
             "pp": 10,
             "priority": 0,
+            "target": "self",
             "type": "psychic"
         },
         {
@@ -32580,6 +32959,7 @@
             "power": 0,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "poison"
         },
         {
@@ -32593,6 +32973,7 @@
             "power": 0,
             "pp": 30,
             "priority": 2,
+            "target": "all-allies",
             "type": "normal"
         },
         {
@@ -32606,6 +32987,7 @@
             "power": 0,
             "pp": 20,
             "priority": 1,
+            "target": "opponent",
             "type": "normal"
         },
         {
@@ -32619,6 +33001,7 @@
             "power": 0,
             "pp": 20,
             "priority": 1,
+            "target": "self",
             "type": "normal"
         },
         {
@@ -32632,6 +33015,7 @@
             "power": 0,
             "pp": 3,
             "priority": 0,
+            "target": "adjacent",
             "type": "psychic"
         },
         {
@@ -32645,6 +33029,7 @@
             "power": 0,
             "pp": 3,
             "priority": 0,
+            "target": "adjacent",
             "type": "psychic"
         },
         {
@@ -32658,6 +33043,7 @@
             "power": 1,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent",
             "type": "dark"
         },
         {
@@ -32671,6 +33057,7 @@
             "power": 130,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -32684,6 +33071,7 @@
             "power": 0,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "grass"
         },
         {
@@ -32695,6 +33083,7 @@
             "power": 80,
             "pp": 5,
             "priority": 2,
+            "target": "adjacent",
             "type": "dark"
         },
         {
@@ -32708,6 +33097,7 @@
             "power": 0,
             "pp": 20,
             "priority": 1,
+            "target": "all-opponents",
             "type": "poison"
         },
         {
@@ -32721,6 +33111,7 @@
             "power": 95,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "template": "drain-half",
             "type": "water"
         },
@@ -32735,6 +33126,7 @@
             "power": 0,
             "pp": 20,
             "priority": 0,
+            "target": "self",
             "type": "water"
         },
         {
@@ -32748,6 +33140,7 @@
             "power": 0,
             "pp": 10,
             "priority": 1,
+            "target": "all-allies",
             "type": "electric"
         },
         {
@@ -32761,6 +33154,7 @@
             "power": 120,
             "pp": 8,
             "priority": 0,
+            "target": "adjacent",
             "template": "recoil-third",
             "type": "fire"
         },
@@ -32775,6 +33169,7 @@
             "power": 85,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "fighting"
         },
         {
@@ -32788,6 +33183,7 @@
             "power": 90,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "fighting"
         },
         {
@@ -32801,6 +33197,7 @@
             "power": 0,
             "pp": 1,
             "priority": 0,
+            "target": "self",
             "type": "rock"
         },
         {
@@ -32814,6 +33211,7 @@
             "power": 80,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "type": "poison"
         },
         {
@@ -32827,6 +33225,7 @@
             "power": 80,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "dark"
         },
         {
@@ -32840,6 +33239,7 @@
             "power": 70,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "dark"
         },
         {
@@ -32851,6 +33251,7 @@
             "power": 120,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "water"
         },
         {
@@ -32862,6 +33263,7 @@
             "power": 80,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "grass"
         },
         {
@@ -32875,6 +33277,7 @@
             "power": 75,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "type": "flying"
         },
         {
@@ -32888,6 +33291,7 @@
             "power": 80,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "bug"
         },
         {
@@ -32901,6 +33305,7 @@
             "power": 90,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "bug"
         },
         {
@@ -32914,6 +33319,7 @@
             "power": 90,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "dragon"
         },
         {
@@ -32927,6 +33333,7 @@
             "power": 100,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "dragon"
         },
         {
@@ -32938,6 +33345,7 @@
             "power": 90,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "type": "rock"
         },
         {
@@ -32951,6 +33359,7 @@
             "power": 75,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent",
             "template": "drain-half",
             "type": "fighting"
         },
@@ -32965,6 +33374,7 @@
             "power": 40,
             "pp": 30,
             "priority": 1,
+            "target": "adjacent",
             "type": "fighting"
         },
         {
@@ -32978,6 +33388,7 @@
             "power": 120,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent",
             "type": "fighting"
         },
         {
@@ -32991,6 +33402,7 @@
             "power": 80,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "grass"
         },
         {
@@ -33004,6 +33416,7 @@
             "power": 120,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "flying"
         },
         {
@@ -33017,6 +33430,7 @@
             "power": 90,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "ground"
         },
         {
@@ -33028,6 +33442,7 @@
             "power": 70,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "flying"
         },
         {
@@ -33041,6 +33456,7 @@
             "power": 180,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent",
             "template": "recoil-fourth",
             "type": "normal"
         },
@@ -33055,6 +33471,7 @@
             "power": 0,
             "pp": 1,
             "priority": 0,
+            "target": "self",
             "type": "curse"
         },
         {
@@ -33068,6 +33485,7 @@
             "power": 40,
             "pp": 10,
             "priority": 1,
+            "target": "adjacent",
             "type": "steel"
         },
         {
@@ -33081,6 +33499,7 @@
             "power": 100,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent-opponents",
             "type": "ice"
         },
         {
@@ -33094,6 +33513,7 @@
             "power": 40,
             "pp": 10,
             "priority": 1,
+            "target": "adjacent",
             "type": "ice"
         },
         {
@@ -33107,6 +33527,7 @@
             "power": 25,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "template": "multi-hit",
             "type": "ghost"
         },
@@ -33121,6 +33542,7 @@
             "power": 90,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "electric"
         },
         {
@@ -33134,6 +33556,7 @@
             "power": 90,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "ice"
         },
         {
@@ -33147,6 +33570,7 @@
             "power": 90,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "fire"
         },
         {
@@ -33160,6 +33584,7 @@
             "power": 40,
             "pp": 10,
             "priority": 1,
+            "target": "adjacent",
             "type": "ghost"
         },
         {
@@ -33173,6 +33598,7 @@
             "power": 65,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "ground"
         },
         {
@@ -33186,6 +33612,7 @@
             "power": 90,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "type": "psychic"
         },
         {
@@ -33199,6 +33626,7 @@
             "power": 80,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "psychic"
         },
         {
@@ -33212,6 +33640,7 @@
             "power": 120,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "steel"
         },
         {
@@ -33225,6 +33654,7 @@
             "power": 80,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "steel"
         },
         {
@@ -33238,6 +33668,7 @@
             "power": 90,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "type": "rock"
         },
         {
@@ -33251,6 +33682,7 @@
             "power": 0,
             "pp": 1,
             "priority": 0,
+            "target": "adjacent",
             "type": "flying"
         },
         {
@@ -33264,6 +33696,7 @@
             "power": 0,
             "pp": 1,
             "priority": 7,
+            "target": "all",
             "type": "psychic"
         },
         {
@@ -33277,6 +33710,7 @@
             "power": 140,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent",
             "template": "recoil-fourth",
             "type": "dragon"
         },
@@ -33291,6 +33725,7 @@
             "power": 80,
             "pp": 15,
             "priority": 0,
+            "target": "all-adjacent",
             "type": "electric"
         },
         {
@@ -33304,6 +33739,7 @@
             "power": 80,
             "pp": 15,
             "priority": 0,
+            "target": "all-adjacent",
             "type": "fire"
         },
         {
@@ -33315,6 +33751,7 @@
             "power": 120,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent",
             "type": "grass"
         },
         {
@@ -33328,6 +33765,7 @@
             "power": 120,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "grass"
         },
         {
@@ -33341,6 +33779,7 @@
             "power": 40,
             "pp": 8,
             "priority": 0,
+            "target": "adjacent",
             "type": "rock"
         },
         {
@@ -33354,6 +33793,7 @@
             "power": 95,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "type": "poison"
         },
         {
@@ -33367,6 +33807,7 @@
             "power": 120,
             "pp": 8,
             "priority": 0,
+            "target": "adjacent",
             "type": "poison"
         },
         {
@@ -33380,6 +33821,7 @@
             "power": 80,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "type": "steel"
         },
         {
@@ -33393,6 +33835,7 @@
             "power": 100,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "type": "steel"
         },
         {
@@ -33406,6 +33849,7 @@
             "power": 120,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent",
             "type": "rock"
         },
         {
@@ -33419,6 +33863,7 @@
             "power": 0,
             "pp": 3,
             "priority": 0,
+            "target": "adjacent-opponents",
             "type": "normal"
         },
         {
@@ -33432,6 +33877,7 @@
             "power": 0,
             "pp": 20,
             "priority": 1,
+            "target": "all-opponents",
             "type": "rock"
         },
         {
@@ -33445,6 +33891,7 @@
             "power": 1,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "type": "grass"
         },
         {
@@ -33458,6 +33905,7 @@
             "power": 120,
             "pp": 20,
             "priority": 0,
+            "target": "all-adjacent",
             "type": "flying"
         },
         {
@@ -33471,6 +33919,7 @@
             "power": 120,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -33484,6 +33933,7 @@
             "power": 60,
             "pp": 20,
             "priority": 0,
+            "target": "adjacent",
             "type": "bug"
         },
         {
@@ -33497,6 +33947,7 @@
             "power": 50,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "electric"
         },
         {
@@ -33510,6 +33961,7 @@
             "power": 120,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent",
             "template": "recoil-third",
             "type": "grass"
         },
@@ -33524,6 +33976,7 @@
             "power": 40,
             "pp": 5,
             "priority": 1,
+            "target": "adjacent",
             "type": "water"
         },
         {
@@ -33537,6 +33990,7 @@
             "power": 120,
             "pp": 15,
             "priority": 0,
+            "target": "adjacent-opponents",
             "type": "bug"
         },
         {
@@ -33550,6 +34004,7 @@
             "power": 0,
             "pp": 10,
             "priority": 1,
+            "target": "self",
             "type": "bug"
         },
         {
@@ -33563,6 +34018,7 @@
             "power": 0,
             "pp": 10,
             "priority": 0,
+            "target": "self",
             "type": "bug"
         },
         {
@@ -33576,6 +34032,7 @@
             "power": 150,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent",
             "template": "recoil-half",
             "type": "rock"
         },
@@ -33590,6 +34047,7 @@
             "power": 60,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "template": "double-hit",
             "type": "normal"
         },
@@ -33604,6 +34062,7 @@
             "power": 150,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent-opponents",
             "type": "dragon"
         },
         {
@@ -33617,6 +34076,7 @@
             "power": 120,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent",
             "type": "dragon"
         },
         {
@@ -33630,6 +34090,7 @@
             "power": 0,
             "pp": 10,
             "priority": 1,
+            "target": "self",
             "type": "psychic"
         },
         {
@@ -33643,6 +34104,7 @@
             "power": 150,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -33656,6 +34118,7 @@
             "power": 120,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent",
             "type": "fire"
         },
         {
@@ -33669,6 +34132,7 @@
             "power": 0,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent-opponents",
             "type": "dark"
         },
         {
@@ -33682,6 +34146,7 @@
             "power": 120,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent",
             "type": "grass"
         },
         {
@@ -33695,6 +34160,7 @@
             "power": 80,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent",
             "type": "ghost"
         },
         {
@@ -33708,6 +34174,7 @@
             "power": 120,
             "pp": 5,
             "priority": 0,
+            "target": "adjacent",
             "type": "ghost"
         },
         {
@@ -33721,6 +34188,7 @@
             "power": 60,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "fire"
         },
         {
@@ -33732,6 +34200,7 @@
             "power": 100,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         },
         {
@@ -33743,6 +34212,7 @@
             "power": 100,
             "pp": 10,
             "priority": 0,
+            "target": "adjacent",
             "type": "normal"
         }
     ],

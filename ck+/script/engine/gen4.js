@@ -241,7 +241,9 @@ function getDamage(attacker, defender, move) {
 		v = parseInt(v / 2);
 	}
 
-	// TODO target split
+	if (document.getElementById("doubles").checked && getTargeting(move.move).all) {
+		v = parseInt(v * 0.75);
+	}
 
 	// TODO solar beam other weather drop
 	if (weather == "rain") {

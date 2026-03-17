@@ -632,6 +632,22 @@ function getItemLocationDescription(desc) {
 function getFullMoveDisplay(move) {
 	var byLearnset = movesByLearnset.get(move.name);
 	var byTMHM = movesByTMHM.get(move.name);
+	var targeting = getTargeting(move);
+	var target = `<div class="targets"><div class="target-row">`;
+	var linkClass = targeting.all ? `<div class="target-link-active"></div>` : "";
+	for (var i = 0; i < 6; i++) {
+		target += `<div class="target-block ${targeting.grid[i] ? "target-block-targeted" : ""}">${i == 3 ? "User" : i > 3 ? "Ally" : "Opp"}</div>`;
+		if (i % 3 != 2) {
+			target += `<div class="target-link-horizontal">${targeting.grid[i] && targeting.grid[i + 1] ? linkClass : ""}</div>`;
+		} else if (i == 2) {
+			target += `</div><div class="target-row">`;
+			target += `<div class="target-link-vertical">${targeting.grid[0] && targeting.grid[3] ? linkClass : ""}</div>`;
+			target += `<div class="target-link-vertical">${targeting.grid[1] && targeting.grid[4] ? linkClass : ""}</div>`;
+			target += `<div class="target-link-vertical">${targeting.grid[2] && targeting.grid[5] ? linkClass : ""}</div>`;
+			target += `</div><div class="target-row">`;
+		}
+	}
+	target += "</div></div>";
 	return `
 		<h3>${getMoveName(move.name)}</h3>
 		${move.extra ?
@@ -642,6 +658,11 @@ function getFullMoveDisplay(move) {
 				${getMoveDisplay(move)}
 			</table>
 		</div>
+		${move.priority ?? 0 != 0 ? `
+			<p>Priority: ${move.priority > 0 ? "+" :""}${move.priority}</p>
+		` : ""}
+		<h3>Targeting</h3>
+		${target}
 		${byLearnset ? `
 			<p>By Learnset (${byLearnset.length}):</p>
 			<div class="learnset-pool">

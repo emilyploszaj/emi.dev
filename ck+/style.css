@@ -1376,3 +1376,55 @@ rt {
 	font-weight: lighter;
 	color: var(--highlighted);
 }
+
+.targets {
+	font-size: 24px;
+	font-weight: bold;
+	width: 280px;
+	text-shadow: 2px 2px black;
+}
+
+.target-row {
+	display: flex;
+	margin: 0px;
+	padding: 0px;
+}
+
+.target-row:nth-child(2) {
+	height: 10px;
+	font-size: 0px;
+}
+
+.target-block {
+	background-color: var(--background);
+	text-align: center;
+	width: 70px;
+	padding-top: 4px;
+	padding-bottom: 2px;
+	height: 28px;
+}
+
+.target-link-horizontal {
+	position: relative;
+	height: 20px;
+	width: 10px;
+	padding-top: 7px;
+}
+
+.target-link-vertical {
+	position: relative;
+	height: 10px;
+	width: 40px;
+	padding-left: 15px;
+	padding-right: 25px;
+}
+
+.target-link-active {
+	width: 100%;
+	height: 100%;
+	background-color: #a13737;
+}
+
+.target-block-targeted {
+	background-color: var(--ohko);
+}
