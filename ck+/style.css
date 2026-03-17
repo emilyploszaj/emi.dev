@@ -382,7 +382,8 @@ input:checked + .fake-checkbox {
 }
 
 .move-table td {
-	padding: 0px 30px;
+	padding: 0px !important;
+	padding-right: 32px !important;
 }
 
 .move-emblem {
@@ -501,7 +502,7 @@ input:checked + .fake-checkbox {
 }
 
 #full-page td {
-	padding: 0px 30px;
+	padding-right: 32px;
 }
 
 .item-icon {
@@ -546,6 +547,15 @@ input:checked + .fake-checkbox {
 	width: 80px;
 	height: 80px;
 	margin-right: 20px;
+}
+
+.encounter-level {
+	left: auto;
+	right: auto;
+	width: calc(100% - 20px);
+	margin-right: auto;
+	position: absolute;
+	font-size: 14px;
 }
 
 .encounter-poke:hover .wild-calc {

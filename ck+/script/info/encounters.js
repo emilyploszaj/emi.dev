@@ -141,6 +141,15 @@ function arePoolsEqualIgnoreLevel(a, b) {
 function getEncounterPoolGroupDisplay(p) {
 	p = inflateEncounterPool(p);
 	if (Array.isArray(p)) {
+		var minLevel = p[0].level;
+		var maxLevel = p[0].level;
+		for (const e of p) {
+			minLevel = Math.min(e.level, minLevel);
+			maxLevel = Math.max(e.level, maxLevel);
+		}
+		if (minLevel != maxLevel) {
+			return `<h6>(Lvl ${minLevel}-${maxLevel}):</h6>${getEncounterPoolDisplay(p, "any")}`;
+		}
 		return `<h6>(Lvl ${p[0].level}):</h6>${getEncounterPoolDisplay(p, "any")}`;
 	}
 	var rawKeys = Object.keys(p);
@@ -200,11 +209,10 @@ function getEncounterPoolDisplay(pool, time) {
 			tt += ' <div class="extra-info" title="' + pool[i].extra + '">?</div>';
 		}
 
-		var header = '<div><ruby>' + percent + '%' + tt + '<rt>(' + adjustedPercent + ')';
+		var header = '<div><ruby>' + percent + '%' + tt + '<rt>(' + adjustedPercent + ')</rt></ruby></div>';
 		if (showLevel) {
-			header += " Lvl " + pool[i].level;
+			header += `<div class="encounter-level">Lvl ${pool[i].level}</div>`;
 		}
-		header += '</rt></ruby></div>';
 		var footer = '<div class="wild-calc"><button onclick="calcWild(' + pokemonByName.get(pool[i].pokemon).pokedex + ', ' + pool[i].level + ')">Calc</button></div>';
 		v += getEncounterPoke(pool[i].pokemon, header, footer, extraClasses);
 	}
