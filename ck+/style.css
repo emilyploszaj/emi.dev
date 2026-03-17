@@ -46,14 +46,26 @@
 	--route-dark: #b19d5c;
 	--route-darker: #968344;
 	--route-light: #f8e194;
-	--town: #3e6ff5;
-	--town-dark: #2b51b9;
-	--town-darker: #1d3c92;
-	--town-light: #628bfd;
-	--dungeon: #d85778;
-	--dungeon-dark: #b44460;
-	--dungeon-darker: #8f3149;
-	--dungeon-light: #f8809e;
+	--town: #d85778;
+	--town-dark: #b44460;
+	--town-darker: #8f3149;
+	--town-light: #f8809e;
+	--dungeon: #3e6ff5;
+	--dungeon-dark: #2b51b9;
+	--dungeon-darker: #1d3c92;
+	--dungeon-light: #628bfd;
+	--forest: #3f9443;
+	--forest-dark: #1f5f22;
+	--forest-darker: #144616;
+	--forest-light: #549957;
+	--lake: #5196d6;
+	--lake-dark: #2e69a1;
+	--lake-darker: #1c5080;
+	--lake-light: #68a8e4;
+	--cave: #976536;
+	--cave-dark: #744417;
+	--cave-darker: #4e2d0d;
+	--cave-light: #a7784c;
 }
 
 html {
@@ -1164,6 +1176,27 @@ rt {
 	--dark-landmark-color: var(--town-dark);
 	--darker-landmark-color: var(--town-darker);
 	--light-landmark-color: var(--town-light);
+}
+
+.landmark-forest {
+	--landmark-color: var(--forest);
+	--dark-landmark-color: var(--forest-dark);
+	--darker-landmark-color: var(--forest-darker);
+	--light-landmark-color: var(--forest-light);
+}
+
+.landmark-lake {
+	--landmark-color: var(--lake);
+	--dark-landmark-color: var(--lake-dark);
+	--darker-landmark-color: var(--lake-darker);
+	--light-landmark-color: var(--lake-light);
+}
+
+.landmark-cave {
+	--landmark-color: var(--cave);
+	--dark-landmark-color: var(--cave-dark);
+	--darker-landmark-color: var(--cave-darker);
+	--light-landmark-color: var(--cave-light);
 }
 
 .landmark-caught {

@@ -810,6 +810,13 @@ function getMapDisplay(width, height, xOffset = 0, yOffset = 0, scale = 48, focu
 		} else if (lc.name.includes("city") || lc.name.includes("town")) {
 			cl = "landmark-town";
 		}
+		if (lc.type == "natural") {
+			cl = "landmark-forest";
+		} else if (lc.type == "water") {
+			cl = "landmark-lake";
+		} else if (lc.type == "cave") {
+			cl = "landmark-cave";
+		}
 
 		if (caughtLandmarks.has(lc.name)) {
 			cl += " landmark-caught";

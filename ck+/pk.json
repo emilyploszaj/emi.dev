@@ -27207,6 +27207,96 @@
             ]
         },
         {
+            "id": 40,
+            "items": [],
+            "locations": [
+                "route-225"
+            ],
+            "name": "route-225",
+            "positions": [
+                {
+                    "height": 3,
+                    "x": 19,
+                    "y": 4
+                }
+            ]
+        },
+        {
+            "id": 41,
+            "items": [],
+            "locations": [
+                "route-226"
+            ],
+            "name": "route-226",
+            "positions": [
+                {
+                    "width": 3,
+                    "x": 21,
+                    "y": 4
+                }
+            ]
+        },
+        {
+            "id": 42,
+            "items": [],
+            "locations": [
+                "route-227"
+            ],
+            "name": "route-227",
+            "positions": [
+                {
+                    "height": 2,
+                    "x": 23,
+                    "y": 2
+                }
+            ]
+        },
+        {
+            "id": 43,
+            "items": [],
+            "locations": [
+                "route-228"
+            ],
+            "name": "route-228",
+            "positions": [
+                {
+                    "height": 3,
+                    "x": 24,
+                    "y": 4
+                }
+            ]
+        },
+        {
+            "id": 44,
+            "items": [],
+            "locations": [
+                "route-229"
+            ],
+            "name": "route-229",
+            "positions": [
+                {
+                    "width": 2,
+                    "x": 24,
+                    "y": 7
+                }
+            ]
+        },
+        {
+            "id": 45,
+            "items": [],
+            "locations": [
+                "route-230"
+            ],
+            "name": "route-230",
+            "positions": [
+                {
+                    "width": 3,
+                    "x": 21,
+                    "y": 7
+                }
+            ]
+        },
+        {
             "id": 46,
             "items": [],
             "locations": [
@@ -27216,9 +27306,10 @@
             "positions": [
                 {
                     "x": 9,
-                    "y": 18
+                    "y": 19
                 }
-            ]
+            ],
+            "type": "cave"
         },
         {
             "id": 47,
@@ -27232,7 +27323,8 @@
                     "x": 7,
                     "y": 14
                 }
-            ]
+            ],
+            "type": "natural"
         },
         {
             "id": 48,
@@ -27248,7 +27340,8 @@
                     "x": 6,
                     "y": 10
                 }
-            ]
+            ],
+            "type": "natural"
         },
         {
             "id": 49,
@@ -27282,11 +27375,12 @@
                     "y": 14
                 },
                 {
-                    "height": 7,
+                    "height": 8,
                     "x": 12,
                     "y": 6
                 }
-            ]
+            ],
+            "type": "cave"
         },
         {
             "id": 51,
@@ -27298,7 +27392,8 @@
                     "x": 11,
                     "y": 13
                 }
-            ]
+            ],
+            "type": "cave"
         },
         {
             "id": 52,
@@ -27317,7 +27412,8 @@
                     "x": 19,
                     "y": 18
                 }
-            ]
+            ],
+            "type": "natural"
         },
         {
             "id": 53,
@@ -27331,7 +27427,8 @@
                     "x": 19,
                     "y": 14
                 }
-            ]
+            ],
+            "type": "cave"
         },
         {
             "id": 54,
@@ -27350,7 +27447,8 @@
                     "x": 26,
                     "y": 12
                 }
-            ]
+            ],
+            "type": "cave"
         },
         {
             "id": 56,
@@ -27364,7 +27462,8 @@
                     "x": 13,
                     "y": 15
                 }
-            ]
+            ],
+            "type": "natural"
         },
         {
             "id": 57,
@@ -27378,7 +27477,8 @@
                     "x": 6,
                     "y": 15
                 }
-            ]
+            ],
+            "type": "cave"
         },
         {
             "id": 58,
@@ -27392,7 +27492,8 @@
                     "x": 4,
                     "y": 13
                 }
-            ]
+            ],
+            "type": "natural"
         },
         {
             "id": 59,
@@ -27407,7 +27508,8 @@
                     "x": 7,
                     "y": 17
                 }
-            ]
+            ],
+            "type": "cave"
         },
         {
             "id": 61,
@@ -27422,7 +27524,8 @@
                     "x": 23,
                     "y": 15
                 }
-            ]
+            ],
+            "type": "natural"
         },
         {
             "id": 62,
@@ -27437,7 +27540,8 @@
                     "x": 24,
                     "y": 14
                 }
-            ]
+            ],
+            "type": "cave"
         },
         {
             "id": 64,
@@ -27466,7 +27570,8 @@
                     "x": 10,
                     "y": 12
                 }
-            ]
+            ],
+            "type": "cave"
         },
         {
             "id": 67,
@@ -27480,7 +27585,8 @@
                     "x": 21,
                     "y": 14
                 }
-            ]
+            ],
+            "type": "cave"
         },
         {
             "id": 69,
@@ -27494,7 +27600,8 @@
                     "x": 3,
                     "y": 9
                 }
-            ]
+            ],
+            "type": "cave"
         },
         {
             "id": 70,
@@ -27511,8 +27618,189 @@
             "name": "old-chateau",
             "positions": [
                 {
-                    "x": 3,
+                    "x": 6,
                     "y": 9
+                }
+            ]
+        },
+        {
+            "id": 72,
+            "items": [],
+            "locations": [
+                "verity-lakefront"
+            ],
+            "name": "verity-lakefront",
+            "positions": [
+                {
+                    "width": 2,
+                    "x": 1,
+                    "y": 20
+                }
+            ],
+            "type": "natural"
+        },
+        {
+            "id": 73,
+            "items": [],
+            "locations": [
+                "valor-lakefront"
+            ],
+            "name": "valor-lakefront",
+            "positions": [
+                {
+                    "height": 2,
+                    "x": 22,
+                    "y": 17
+                }
+            ],
+            "type": "natural"
+        },
+        {
+            "id": 74,
+            "items": [],
+            "locations": [
+                "acuity-lakefront"
+            ],
+            "name": "acuity-lakefront",
+            "positions": [
+                {
+                    "width": 2,
+                    "x": 9,
+                    "y": 1
+                }
+            ],
+            "type": "natural"
+        },
+        {
+            "id": 76,
+            "items": [],
+            "locations": [
+                "lake-verity"
+            ],
+            "name": "lake-verity",
+            "positions": [
+                {
+                    "x": 2,
+                    "y": 19
+                }
+            ],
+            "type": "water"
+        },
+        {
+            "id": 77,
+            "items": [],
+            "locations": [
+                "lake-valor"
+            ],
+            "name": "lake-valor",
+            "positions": [
+                {
+                    "x": 21,
+                    "y": 17
+                }
+            ],
+            "type": "water"
+        },
+        {
+            "id": 78,
+            "items": [],
+            "locations": [
+                "lake-acuity"
+            ],
+            "name": "lake-acuity",
+            "positions": [
+                {
+                    "x": 9,
+                    "y": 0
+                }
+            ],
+            "type": "water"
+        },
+        {
+            "id": 83,
+            "items": [],
+            "locations": [
+                "resort-area"
+            ],
+            "name": "resort-area",
+            "positions": [
+                {
+                    "x": 25,
+                    "y": 8
+                }
+            ]
+        },
+        {
+            "id": 84,
+            "items": [],
+            "locations": [
+                "stark-mountain"
+            ],
+            "name": "stark-mountain",
+            "positions": [
+                {
+                    "x": 23,
+                    "y": 1
+                }
+            ],
+            "type": "cave"
+        },
+        {
+            "id": 87,
+            "items": [],
+            "locations": [
+                "verity-cavern"
+            ],
+            "name": "verity-cavern",
+            "positions": [
+                {
+                    "x": 1,
+                    "y": 19
+                }
+            ],
+            "type": "cave"
+        },
+        {
+            "id": 88,
+            "items": [],
+            "locations": [
+                "valor-cavern"
+            ],
+            "name": "valor-cavern",
+            "positions": [
+                {
+                    "x": 21,
+                    "y": 18
+                }
+            ],
+            "type": "cave"
+        },
+        {
+            "id": 89,
+            "items": [],
+            "locations": [
+                "acuity-cavern"
+            ],
+            "name": "acuity-cavern",
+            "positions": [
+                {
+                    "x": 10,
+                    "y": 0
+                }
+            ],
+            "type": "cave"
+        },
+        {
+            "id": 91,
+            "items": [],
+            "locations": [
+                "poketch-company"
+            ],
+            "name": "poketch-company",
+            "positions": [
+                {
+                    "x": 4,
+                    "y": 16
                 }
             ]
         }
