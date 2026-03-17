@@ -86,6 +86,18 @@ class BattleMoveGen4Impl extends BattleMove {
 			return hp.type;
 		}
 		*/
+		if (this.move.name == "weather-ball") {
+			var weather = document.getElementById("current-weather").value;
+			if (weather == "rain") {
+				return "water";
+			} else if (weather == "sun") {
+				return "fire";
+			} else if (weather == "sand") {
+				return "rock";
+			} else if (weather == "hail") {
+				return "ice";
+			}
+		}
 		return super.type;
 	}
 
@@ -110,6 +122,12 @@ class BattleMoveGen4Impl extends BattleMove {
 			} else {
 				return 20;
 			}
+		} else if (this.move.name == "punishment") {
+			return 60;
+		} else if (this.move.name == "low-kick") {
+			return 20;
+		} else if (this.move.name == "gyro-ball") {
+			return 20;
 		}
 		return super.power;
 	}
@@ -127,6 +145,7 @@ function getDamage(attacker, defender, move) {
 	if (defender.poke == undefined || move.category == "status" || move.power == 0) {
 		return CalcResult.of(0);
 	}
+	var weather = document.getElementById("current-weather").value;
 	var effects = BattleEffects.of(attacker, defender, move);
 
 	function modifier(modifier, base, max) {
@@ -138,7 +157,46 @@ function getDamage(attacker, defender, move) {
 	}
 
 	var v = parseInt(attacker.level * 2 / 5) + 2;
-	v *= move.power;
+	var power = move.power;
+
+	if (move.name == "punishment") {
+		power = 60;
+		for (const stat of STATS) {
+			if (defender.stages[stat] > 0) {
+				power += 20 * defender.stages[stat];
+			}
+		}
+	} else if (move.name == "low-kick" || move.name == "grass-knot") {
+		var weight = defender.mon.weight;
+		if (weight == undefined) {
+			return CalcResult.of(0);
+		}
+		if (weight < 10) {
+			power = 20;
+		} else if (weight < 25) {
+			power = 40;
+		} else if (weight < 50) {
+			power = 60;
+		} else if (weight < 100) {
+			power = 80;
+		} else if (weight < 200) {
+			power = 100;
+		} else {
+			power = 120;
+		}
+	} else if (move.name == "gyro-ball") {
+		power = parseInt(Math.min(150, 25 * getModifiedStatGen4(defender.poke, defender.stages, "spe") / getModifiedStatGen4(attacker.poke, attacker.stages, "spe")))
+	} else if (move.name == "water-spout") {
+		power = parseInt(150 * attacker.currentHp / attacker.getStat("hp"));
+	} else if (move.name == "weather-ball") {
+		if (weather != "none") {
+			power = power * 2;
+		}
+	}
+
+	power = modifier("power", power, power);
+
+	v = parseInt(v * power);
 
 	special = move.category == "special";
 	var attackStat = !special ? "atk" : "spa";
@@ -152,7 +210,6 @@ function getDamage(attacker, defender, move) {
 		}
 	}
 
-	var weather = document.getElementById("current-weather").value;
 	if (weather == "sand") {
 		if (defenseStat == "spd" && (defender.mon.types[0] == "rock" || (defender.mon.types.length > 1 &&  defender.mon.types[1] == "rock"))) {
 			d = parseInt(d * 1.5);
@@ -245,6 +302,16 @@ function getDamage(attacker, defender, move) {
 		}
 
 		result.modify(v => parseInt(v * modifierFloat("type-effectiveness-multiplier", eff) / eff));
+	}
+
+	if (move.name == "dragon-rage") {
+		return CalcResult.of(40);
+	} else if (move.name == "sonicboom") {
+		return CalcResult.of(20);
+	} else if (move.name == "seismic-toss" || move.name == "night-shade" || move.name == "psywave") {
+		return CalcResult.of(attacker.level);
+	} else if (move.name == "super-fang") {
+		return CalcResult.of(parseInt(defender.currentHP / 2));
 	}
 
 	result.modify(v => parseInt(v * modifierFloat("expert-belt-boost", 1)));

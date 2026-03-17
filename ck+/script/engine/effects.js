@@ -326,7 +326,7 @@ function checkNumberCondition(condition, value, max) {
 		var number = parseFloat(m[2]);
 		var percent = m[3];
 		if (percent == "%" && max !== undefined) {
-			number = number * 100 / max;
+			number = number * max / 100;
 		}
 		switch (op) {
 			case "==":
