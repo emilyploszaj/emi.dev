@@ -173,7 +173,7 @@
             "effects": {
                 "all": {
                     "flags": {
-                        "user": {
+                        "attacker": {
                             "grounded": false
                         }
                     }
@@ -423,7 +423,7 @@
             "effects": {
                 "attack": {
                     "condition": {
-                        "user": {
+                        "attacker": {
                             "statused": true
                         }
                     },
@@ -440,7 +440,7 @@
             "effects": {
                 "all": {
                     "condition": {
-                        "user": {
+                        "attacker": {
                             "statused": true
                         }
                     },
@@ -740,7 +740,7 @@
             "effects": {
                 "all": {
                     "condition": {
-                        "user": {
+                        "attacker": {
                             "statused": true
                         }
                     },

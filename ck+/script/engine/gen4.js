@@ -218,8 +218,8 @@ function getDamage(attacker, defender, move) {
 		}
 	}
 
-	a = modifier("attack-boost", a, 999);
-	d = modifier("defense-boost", d, 999);
+	a = modifier("attack-boost", a, a);
+	d = modifier("defense-boost", d, d);
 
 	if (move.name == "explosion" || move.name == "selfdestruct") {
 		d = Math.max(1, parseInt(d / 2));

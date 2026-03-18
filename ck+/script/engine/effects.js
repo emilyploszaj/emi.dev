@@ -368,7 +368,7 @@ function initConditions() {
 	addForBoth("level", (condition, poke, opponent, move) => checkNumberCondition(condition, poke.level));
 	addForBoth("transformed", (condition, poke, opponent, move) => checkBooleanCondition(condition, (poke.poke.transformStats != undefined)));
 	addForBoth("hp", (condition, poke, opponent, move) => checkNumberCondition(condition, poke.currentHp, poke.getStat("hp")));
-	addForBoth("statused", (condition, poke, opponent, move) => checkBooleanCondition(condition, poke.status != ""));
+	addForBoth("statused", (condition, poke, opponent, move) => checkBooleanCondition(condition, poke.status != "none"));
 	addForBoth("status", (condition, poke, opponent, move) => checkStringCondition(condition, poke.status));
 }
 
