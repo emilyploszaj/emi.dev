@@ -190,6 +190,15 @@ function isShiny(poke) {
 }
 
 function getGender(poke) {
+	if (poke.gender) {
+		if (poke.gender == "female") {
+			return 1;
+		} else if (poke.gender == "male") {
+			return 2;
+		} else {
+			return 0;
+		}
+	}
 	p = pokemonByName.get(poke.name);
 	if (p.gender.startsWith("f")) {
 		var atk = getDv(poke, "atk");
@@ -288,7 +297,7 @@ function hasPriority(poke) {
 		return true;
 	}
 	for (var i = 0; i < poke.moves.length; i++) {
-		if (priorityMoves.has(poke.moves[i])) {
+		if (poke.moves[i].priority > 0 || priorityMoves.has(poke.moves[i])) {
 			return true;
 		}
 	}

@@ -104,6 +104,9 @@ function navigate(url) {
 			} else if (parts[0] == "move") {
 				document.getElementById("full-page").innerHTML = getFullMoveDisplay(movesByName.get(parts[1]));
 				setTab("full-page");
+			} else if (parts[0] == "ability") {
+				document.getElementById("full-page").innerHTML = getFullAbilityDisplay(abilitiesByName.get(parts[1]));
+				setTab("full-page");
 			} else if (parts[0] == "type") {
 				document.getElementById("full-page").innerHTML = getFullTypeDisplay(parts[1]);
 				setTab("full-page");
@@ -224,6 +227,13 @@ function moveLink(move) {
 		move = move.name;
 	}
 	return createLink(`#/move/${move}/`, fullCapitalize(move));
+}
+
+function abilityLink(ability) {
+	if (ability.name) {
+		ability = ability.name;
+	}
+	return createLink(`#/ability/${ability}/`, fullCapitalize(ability));
 }
 
 function calcWild(p, level) {

@@ -243,6 +243,18 @@ function setPlayerItem(item) {
 	}
 }
 
+function dropCopyMoves(player, from) {
+	var poke = from.poke;
+	if (player) {
+		myPoke = Object.assign({}, myPoke);
+		myPoke.moves = poke.moves;
+	} else {
+		theirPoke = Object.assign({}, theirPoke);
+		theirPoke.moves = poke.moves;
+	}
+	updateCalc()
+}
+
 class DragDrop {
 	static container = null;
 	static type = "";
@@ -258,19 +270,21 @@ class DragDrop {
 		var bestNearest = null;
 		var bestPrevious = null;
 		var previous = null;
-		for (const s of this.container.getElementsByClassName("drag-sortable")) {
-			var rect = s.getBoundingClientRect();
-			var sx = rect.x + (rect.width / 2);
-			var sy = rect.y + (rect.height / 2) + scrollY;
-			var distance = Math.abs(sy - cy) * 4096 + Math.abs(sx - cx);
-			if (distance < bestDistance) {
-				bestDistance = distance;
-				bestActualDistance = Math.sqrt(Math.pow(sx - cx, 2) + Math.pow(sy - cy, 2));
-				bestNearest = s;
-				bestLeft = cx < sx;
-				bestPrevious = previous;
+		if (DragDrop.container) {
+			for (const s of DragDrop.container.getElementsByClassName("drag-sortable")) {
+				var rect = s.getBoundingClientRect();
+				var sx = rect.x + (rect.width / 2);
+				var sy = rect.y + (rect.height / 2) + scrollY;
+				var distance = Math.abs(sy - cy) * 4096 + Math.abs(sx - cx);
+				if (distance < bestDistance) {
+					bestDistance = distance;
+					bestActualDistance = Math.sqrt(Math.pow(sx - cx, 2) + Math.pow(sy - cy, 2));
+					bestNearest = s;
+					bestLeft = cx < sx;
+					bestPrevious = previous;
+				}
+				previous = s;
 			}
-			previous = s;
 		}
 		var dropAccept = null;
 		for (const el of document.querySelectorAll(":hover")) {
@@ -316,10 +330,17 @@ class DragDrop {
 				var distance = Math.sqrt(Math.pow(DragDrop.location.x - event.pageX, 2) + Math.pow(DragDrop.location.y - event.pageY, 2));
 				if (distance > 32) {
 					DragDrop.container = DragDrop.target.closest(".drag-sort-container");
-					DragDrop.type = DragDrop.container.getAttribute("drag-type") ?? "";
-					document.getElementById("dragged").style.visibility = "visible";
-					document.getElementById("dragged").innerHTML = DragDrop.target.outerHTML;
-					DragDrop.status = 1;
+					if (DragDrop.container) {
+						DragDrop.type = DragDrop.container.getAttribute("drag-type") ?? "";
+						document.getElementById("dragged").style.visibility = "visible";
+						document.getElementById("dragged").innerHTML = DragDrop.target.outerHTML;
+						DragDrop.status = 1;
+					} else {
+						DragDrop.type = DragDrop.target.getAttribute("drag-type") ?? "";
+						document.getElementById("dragged").style.visibility = "visible";
+						document.getElementById("dragged").innerHTML = DragDrop.target.outerHTML;
+						DragDrop.status = 1;
+					}
 				}
 			}
 			if (DragDrop.status == 1) {
@@ -347,6 +368,9 @@ class DragDrop {
 					} else {
 						del.style.visibility = "hidden";
 					}
+				} else {
+					var del = document.getElementById("drop-indicator");
+					del.style.visibility = "hidden";
 				}
 			}
 		}
@@ -354,8 +378,8 @@ class DragDrop {
 		document.onmouseup = function(event) {
 			if (DragDrop.target != null && DragDrop.status == 1) {
 				var start = -1, end = -1;
-				{
-					var dropInfo = DragDrop.getDropInfo(event.pageX, event.pageY);
+				var dropInfo = DragDrop.getDropInfo(event.pageX, event.pageY);
+				if (DragDrop.container) {
 					var index = 0;
 					for (const s of DragDrop.container.getElementsByClassName("drag-sortable")) {
 						if (s === DragDrop.target) {
@@ -366,13 +390,28 @@ class DragDrop {
 						index++;
 					}
 				}
-				if (dropInfo.type == "external") {
-					if (start != -1) {
-						var from = start;
+				if (dropInfo?.type == "external") {
+					var content = DragDrop.target.getAttribute("drag-content");
+					if (content) {
+						var parts = content.split("-");
+						var from = {};
+						if (parts[0] == "player") {
+							from = {
+								type: "player",
+								index: start,
+								poke: box[start],
+							}
+						} else if (parts[0] == "enemy") {
+							from = {
+								type: "enemy",
+								index: -1,
+								poke: data.trainers[parseInt(parts[1])].team[parseInt(parts[2])]
+							}
+						}
 						eval(dropInfo.element.getAttribute("drop"));
 					}
 				} else {
-					if (dropInfo.distance < 100 && start != -1 && end != -1) {
+					if (dropInfo?.distance != undefined && dropInfo.distance < 100 && start != -1 && end != -1) {
 						var from = start;
 						var to = end;
 						eval(DragDrop.container.getAttribute("drag-swap"));
@@ -407,8 +446,21 @@ function swapBox(from, to) {
 	updateCalc();
 }
 
-function calcEnemyFromBox(from) {
-	theirPoke = box[from];
+function calcPlayerFromDrop(from) {
+	var poke = from.poke;
+	if (from.type != "player") {
+		poke = Object.assign({}, from.poke);
+	}
+	myPoke = poke;
+	updateCalc();
+}
+
+function calcEnemyFromDrop(from) {
+	var poke = from.poke;
+	if (from.type != "enemy") {
+		poke = Object.assign({}, from.poke);
+	}
+	theirPoke = poke;
 	updateCalc();
 }
 

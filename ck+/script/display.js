@@ -109,7 +109,7 @@ function displayCalcPokemon(root, poke, opponent, right) {
 				variants += `</div>`;
 			}
 			var abilities = `
-				${fullCapitalize(ability.name)}
+				${abilityLink(ability)}
 				${variants}
 			`;
 			root.getElementsByClassName("calc-ability")[0].innerHTML = abilities;
@@ -117,7 +117,7 @@ function displayCalcPokemon(root, poke, opponent, right) {
 			root.getElementsByClassName("calc-ability")[0].innerHTML = "-";
 		}
 	}
-	var moves = '<table class="move-calcs">';
+	var moves = `<table class="move-calcs" drop-accept="box" drop="dropCopyMoves(${player}, from)">`;
 	var variantArray = player ? playerMoveVariants : enemyMoveVariants;
 	for (var i = 0; i < 4; i++) {
 		if (i < poke.moves.length) {
@@ -351,19 +351,19 @@ function displayPokemon(root, i) {
 	if (p.abilities && p.abilities.length == 3) {
 		var abil = `<table>
 			<tr>
-				<td>${fullCapitalize(p.abilities[0])}</td>
-				<td>${fullCapitalize(p.abilities[1])}</td>
+				<td>${abilityLink(p.abilities[0])}</td>
+				<td>${abilityLink(p.abilities[1])}</td>
 			</tr>
 			<tr>
-				<td colspan="2">${fullCapitalize(p.abilities[2])}</td>
+				<td colspan="2">${abilityLink(p.abilities[2])}</td>
 			</tr>
 		</table>`;
 		root.getElementsByClassName("poke-abilities")[0].innerHTML = abil;
 	} else if (p.abilities && p.abilities.length == 2) {
 		var abil = `<table>
 			<tr>
-				<td>${fullCapitalize(p.abilities[0])}</td>
-				<td>${fullCapitalize(p.abilities[1])}</td>
+				<td>${abilityLink(p.abilities[0])}</td>
+				<td>${abilityLink(p.abilities[1])}</td>
 			</tr>
 		</table>`;
 		root.getElementsByClassName("poke-abilities")[0].innerHTML = abil;
@@ -463,7 +463,7 @@ function updateCalc() {
 		var v = "";
 		for (var i = 0; i < box.length && i < box.length; i++) {
 			var img = '<img draggable="false" src="' + getPokeImage(box[i], "small") + '">';
-			v += '<div class="micro-mon drag-sortable" onclick="setPlayer(' + i + ')">' + img + "</div>";
+			v += `<div class="micro-mon drag-sortable" drag-content="player-${i}" onclick="setPlayer(${i})">${img}</div>`;
 		}
 		document.getElementById("player").getElementsByClassName("calc-team")[0].innerHTML = v;
 		document.getElementById("opponent").getElementsByClassName("calc-team")[0].innerHTML = getEnemyTeamDisplay(enemyTeam, lastTrainer);
@@ -491,7 +491,7 @@ function getEnemyTeamDisplay(enemyTeam, trainer) {
 	for (let i in enemyTeam) {
 		var prioClass = ["low", "neutral", "high"][Math.sign(getSwitchPriority(enemyTeam[i], myPoke)) + 1];
 		var img = `<img draggable="false" class="${prioClass}-switch-priority" src="${getPokeImage(enemyTeam[i], "small")}">`;
-		v += `<div class="micro-mon" onclick="setEnemy(${trainer}, ${i})">${img}</div>`;
+		v += `<div class="micro-mon drag-sortable" drag-content="enemy-${trainer}-${i}" drag-type="box" onclick="setEnemy(${trainer}, ${i})">${img}</div>`;
 	}
 	return v;
 }
@@ -695,6 +695,17 @@ function getMoveDisplay(move, level = undefined) {
 			<td>${move.pp}pp</td>
 			${(move.extra && move.extra.length > 0) ? `<td class="extra-info" title="${move.extra.join("")}">?</td>` : ""}
 		</tr>
+	`;
+}
+
+function getFullAbilityDisplay(ability) {
+	return `
+		<h3>${fullCapitalize(ability.name)}</h3>
+		<p>Pokemon with ability:</p>
+		<div class="learnset-pool">
+			${data.pokemon.filter(a => contains(a.abilities ?? [], ability.name)).sort((a, b) => a.pokedex - b.pokedex)
+				.displayMap(e => getEncounterPoke(e, e.abilities.filter(a => a == ability.name).length / e.abilities.length * 100 + "%"))}
+		</div>
 	`;
 }
 

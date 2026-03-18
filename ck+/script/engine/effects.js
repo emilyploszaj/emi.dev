@@ -358,6 +358,7 @@ function initConditions() {
 	CONDITION_PREDICATES.set("move.type", (condition, attacker, defender, move) => checkStringCondition(condition, move.type));
 	CONDITION_PREDICATES.set("move.category", (condition, attacker, defender, move) => checkStringCondition(condition, move.category));
 	CONDITION_PREDICATES.set("move.power", (condition, attacker, defender, move) => checkNumberCondition(condition, move.power));
+	CONDITION_PREDICATES.set("same-gender", (condition, attacker, defender, move) => checkStringCondition(condition, checkBooleanCondition(getGender(attacker) == getGender(defender))));
 	CONDITION_PREDICATES.set("move.effectiveness", (condition, attacker, defender, move) => checkNumberCondition(condition, move.getEffectiveness(defender)));
 	var addForBoth = function(name, lambda) {
 		CONDITION_PREDICATES.set("attacker." + name, (condition, attacker, defender, move) => lambda(condition, attacker, defender, move));

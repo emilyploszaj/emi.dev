@@ -615,7 +615,28 @@
             "name": "motor-drive"
         },
         {
-            "TODO": "TODO",
+            "effects": [
+                {
+                    "attack": {
+                        "condition": {
+                            "same-gender": true
+                        },
+                        "modifiers": {
+                            "power": "+25%"
+                        }
+                    }
+                },
+                {
+                    "attack": {
+                        "condition": {
+                            "same-gender": false
+                        },
+                        "modifiers": {
+                            "power": "-25%"
+                        }
+                    }
+                }
+            ],
             "index": 79,
             "name": "rivalry"
         },

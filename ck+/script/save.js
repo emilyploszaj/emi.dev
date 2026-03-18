@@ -166,13 +166,15 @@ function readFile(file) {
 	var reader = new FileReader();
 	reader.onload = function (e) {
 		var bytes = new Uint8Array(e.target.result);
-		if (file.name.endsWith(".sav") || file.name.endsWith(".dsv")) {
-			try {
-				box = readGen4Save(bytes);
-				finishParse("Successfully parsed save!", box, []);
-				return;
-			} catch (e) {
-				console.log(e);
+		if (game.name == "pk") {
+			if (file.name.endsWith(".sav") || file.name.endsWith(".dsv")) {
+				try {
+					box = readGen4Save(bytes);
+					finishParse("Successfully parsed save!", box, []);
+					return;
+				} catch (e) {
+					console.log(e);
+				}
 			}
 		}
 		if (bytes.length > 32000 && bytes[0x2008] == 99 && bytes[0x2d0f] == 127) {
@@ -300,8 +302,9 @@ function readGen4Mon(bytes, offset) {
 	var blockB = parseTemplate(parts[1], 0, [
 		[2, 4], "moves",
 		[1, 4], "pp",
-		4, "hoennRibbons", // PK swapped hoennRibbons and ivs just to fuck with me
+		[1, 4], "ppUps",
 		4, "ivs",
+		4, "hoennRibbons", // PK swapped hoennRibbons and ivs just to fuck with me
 		1, "form",
 		1, "leaves",
 		2, "unused",
@@ -360,11 +363,13 @@ function readGen4Mon(bytes, offset) {
 	if (species == undefined) {
 		return null;
 	}
-	console.log(species.name);
-	console.log(blockA);
-	console.log(blockB);
-	console.log(blockC);
-	console.log(blockD);
+	var form = blockB.form;
+	var gender = "male";
+	if (form & 0b10) {
+		gender = "female";
+	} else if (form & 0b100) {
+		gender = "unknown";
+	}
 	var location = landmarksByIndex.get(blockD.pkEncounterLocation)?.name ?? "unknown";
 	return {
 		name: species.name,
@@ -383,6 +388,7 @@ function readGen4Mon(bytes, offset) {
 		level: getLevelFromExperience(species, blockA.experience),
 		experience: blockA.experience,
 		caught: location,
+		gender: gender,
 	};
 }
 
