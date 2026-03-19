@@ -470,7 +470,7 @@
                 "attack": {
                     "condition": {
                         "attacker": {
-                            "hp": "<=0.33333333%"
+                            "hp": "<=33.333333%"
                         },
                         "move": {
                             "type": "grass"
@@ -489,7 +489,7 @@
                 "attack": {
                     "condition": {
                         "attacker": {
-                            "hp": "<=0.33333333%"
+                            "hp": "<=33.333333%"
                         },
                         "move": {
                             "type": "fire"
@@ -508,7 +508,7 @@
                 "attack": {
                     "condition": {
                         "attacker": {
-                            "hp": "<=0.33333333%"
+                            "hp": "<=33.333333%"
                         },
                         "move": {
                             "type": "water"
@@ -527,7 +527,7 @@
                 "attack": {
                     "condition": {
                         "attacker": {
-                            "hp": "<=0.33333333%"
+                            "hp": "<=33.333333%"
                         },
                         "move": {
                             "type": "bug"
