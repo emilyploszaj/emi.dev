@@ -28,6 +28,21 @@
             "name": "sturdy"
         },
         {
+            "effects": {
+                "all": {
+                    "condition": {
+                        "move": {
+                            "name": [
+                                "selfdestruct",
+                                "explosion"
+                            ]
+                        }
+                    },
+                    "modifiers": {
+                        "damage": "=0"
+                    }
+                }
+            },
             "index": 6,
             "name": "damp"
         },
@@ -80,7 +95,6 @@
             "name": "oblivious"
         },
         {
-            "TODO": "TODO",
             "effects": {
                 "all": {
                     "flags": {
@@ -152,7 +166,6 @@
             "name": "rough-skin"
         },
         {
-            "TODO": "TODO",
             "effects": {
                 "defend": {
                     "condition": {
@@ -169,13 +182,10 @@
             "name": "wonder-guard"
         },
         {
-            "TODO": "TODO",
             "effects": {
-                "all": {
+                "defend": {
                     "flags": {
-                        "attacker": {
-                            "grounded": false
-                        }
+                        "grounded": false
                     }
                 }
             },
@@ -280,6 +290,7 @@
             "name": "magnet-pull"
         },
         {
+            "TODO": "TODO",
             "effects": {
                 "defend": {
                     "condition": {
@@ -311,7 +322,7 @@
         },
         {
             "effects": {
-                "attack": {
+                "defend": {
                     "condition": {
                         "move": {
                             "type": [
@@ -437,6 +448,7 @@
             "name": "guts"
         },
         {
+            "TODO": "TODO",
             "effects": {
                 "all": {
                     "condition": {
@@ -455,6 +467,7 @@
             "name": "marvel-scale"
         },
         {
+            "TODO": "TODO",
             "effects": {
                 "defend": {
                     "flags": {
@@ -482,7 +495,23 @@
                 }
             },
             "index": 65,
-            "name": "overgrow"
+            "name": "overgrow",
+            "variants": [
+                {
+                    "effects": {
+                        "attack": {
+                            "condition": {
+                                "move": {
+                                    "type": "grass"
+                                }
+                            },
+                            "modifiers": {
+                                "attack-boost": "+50%"
+                            }
+                        }
+                    }
+                }
+            ]
         },
         {
             "effects": {
@@ -501,7 +530,23 @@
                 }
             },
             "index": 66,
-            "name": "blaze"
+            "name": "blaze",
+            "variants": [
+                {
+                    "effects": {
+                        "attack": {
+                            "condition": {
+                                "move": {
+                                    "type": "fire"
+                                }
+                            },
+                            "modifiers": {
+                                "attack-boost": "+50%"
+                            }
+                        }
+                    }
+                }
+            ]
         },
         {
             "effects": {
@@ -520,7 +565,23 @@
                 }
             },
             "index": 67,
-            "name": "torrent"
+            "name": "torrent",
+            "variants": [
+                {
+                    "effects": {
+                        "attack": {
+                            "condition": {
+                                "move": {
+                                    "type": "water"
+                                }
+                            },
+                            "modifiers": {
+                                "attack-boost": "+50%"
+                            }
+                        }
+                    }
+                }
+            ]
         },
         {
             "effects": {
@@ -539,7 +600,23 @@
                 }
             },
             "index": 68,
-            "name": "swarm"
+            "name": "swarm",
+            "variants": [
+                {
+                    "effects": {
+                        "attack": {
+                            "condition": {
+                                "move": {
+                                    "type": "bug"
+                                }
+                            },
+                            "modifiers": {
+                                "attack-boost": "+50%"
+                            }
+                        }
+                    }
+                }
+            ]
         },
         {
             "index": 69,
@@ -681,18 +758,32 @@
             "name": "simple"
         },
         {
-            "effects": {
-                "defend": {
-                    "condition": {
-                        "move": {
-                            "type": "fire"
+            "effects": [
+                {
+                    "defend": {
+                        "condition": {
+                            "move": {
+                                "type": "fire"
+                            }
+                        },
+                        "modifiers": {
+                            "damage": "+25%"
                         }
-                    },
-                    "modifiers": {
-                        "effectiveness": "+25%"
+                    }
+                },
+                {
+                    "defend": {
+                        "condition": {
+                            "move": {
+                                "type": "water"
+                            }
+                        },
+                        "modifiers": {
+                            "damage": "=0"
+                        }
                     }
                 }
-            },
+            ],
             "index": 87,
             "name": "dry-skin"
         },
@@ -701,6 +792,7 @@
             "name": "download"
         },
         {
+            "TODO": "TODO",
             "effects": {
                 "attack": {
                     "condition": {
@@ -734,6 +826,7 @@
             "name": "adaptability"
         },
         {
+            "TODO": "TODO",
             "index": 92,
             "name": "skill-link"
         },
@@ -758,6 +851,7 @@
             "name": "solar-power"
         },
         {
+            "TODO": "TODO",
             "effects": {
                 "all": {
                     "condition": {
@@ -827,11 +921,35 @@
             "name": "leaf-guard"
         },
         {
-            "TODO": "TODO",
+            "effects": {
+                "attack": {
+                    "flags": {
+                        "attacker": {
+                            "ignore-item": true
+                        }
+                    }
+                },
+                "defend": {
+                    "flags": {
+                        "defender": {
+                            "ignore-item": true
+                        }
+                    }
+                }
+            },
             "index": 103,
             "name": "klutz"
         },
         {
+            "effects": {
+                "attack": {
+                    "flags": {
+                        "defender": {
+                            "ignore-ability": true
+                        }
+                    }
+                }
+            },
             "index": 104,
             "name": "mold-breaker"
         },
@@ -852,6 +970,7 @@
             "name": "forewarn"
         },
         {
+            "TODO": "TODO",
             "effects": {
                 "all": {
                     "flags": {
@@ -895,6 +1014,7 @@
             "name": "filter"
         },
         {
+            "TODO": "TODO",
             "index": 112,
             "name": "slow-start",
             "variants": [
@@ -913,6 +1033,7 @@
             ]
         },
         {
+            "TODO": "TODO",
             "effects": {
                 "attack": {
                     "condition": {
@@ -970,6 +1091,7 @@
             "name": "frisk"
         },
         {
+            "TODO": "TODO",
             "effects": {
                 "defend": {
                     "condition": {
@@ -125676,11 +125798,6 @@
             "attacker": "ground",
             "defender": "poison",
             "multiplier": 2.0
-        },
-        {
-            "attacker": "ground",
-            "defender": "flying",
-            "multiplier": 0.0
         },
         {
             "attacker": "ground",

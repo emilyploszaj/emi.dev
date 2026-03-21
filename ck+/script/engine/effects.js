@@ -12,77 +12,121 @@ class BattleEffects {
 	 * @returns {BattleEffects}
 	 */
 	static of(attacker, defender, move) {
-		var pluckFor = function(type, value) {
-			var ret = [];
-			if (value[type]) {
-				if (Array.isArray(value[type])) {
-					ret.concat(value[type]);
-				} else {
-					ret.push(value[type]);
+		function construct(toIgnore) {
+			var pluckFor = function(type, effects) {
+				var values = effects;
+				if (!Array.isArray(values)) {
+					values = [values];
 				}
-			} else if (value.all) {
-				if (Array.isArray(value.all)) {
-					ret.concat(value.all);
-				} else {
-					ret.push(value.all);
+				var ret = [];
+				for (const value of values) {
+					if (value[type]) {
+						if (Array.isArray(value[type])) {
+							ret.concat(value[type]);
+						} else {
+							ret.push(value[type]);
+						}
+					} else if (value.all) {
+						if (Array.isArray(value.all)) {
+							ret.concat(value.all);
+						} else {
+							ret.push(value.all);
+						}
+					}
 				}
+				return ret;
 			}
-			return ret;
-		}
-		var addIfValid = function(effects, effect) {
-			if (effect != null) {
-				effects.push(effect);
-			}
-		}
-		var effects = [];
-		if (move.effects) {
-			if (Array.isArray(move.effects)) {
-				for (const v of move.effects) {
-					addIfValid(effects, BattleEffect.parse("attack", v));
-				}
-			} else {
-				addIfValid(effects, BattleEffect.parse("attack", move.effects));
-			}
-		}
-		if (abilitiesByName.has(attacker.ability.name)) {
-			if (attacker.ability.effects) {
-				for (const v of pluckFor("attack", attacker.ability.effects)) {
-					addIfValid(effects, BattleEffect.parse("attack", v));
+			var addIfValid = function(effects, effect) {
+				if (effect != null) {
+					effects.push(effect);
 				}
 			}
-		}
-		if (abilitiesByName.has(defender.ability.name)) {
-			if (defender.ability.effects) {
-				for (const v of pluckFor("defend", defender.ability.effects)) {
-					addIfValid(effects, BattleEffect.parse("defend", v));
-				}
-			}
-		}
-		if (itemsByName.has(attacker.item)) {
-			var ai = itemsByName.get(attacker.item);
-			if (ai.effects) {
-				if (Array.isArray(ai.effects.attack)) {
-					for (const v of ai.effects.attack) {
+			var effects = [];
+			if (move.effects) {
+				if (Array.isArray(move.effects)) {
+					for (const v of move.effects) {
 						addIfValid(effects, BattleEffect.parse("attack", v));
 					}
 				} else {
-					addIfValid(effects, BattleEffect.parse("attack", ai.effects.attack));
+					addIfValid(effects, BattleEffect.parse("attack", move.effects));
 				}
 			}
-		}
-		if (itemsByName.has(defender.item)) {
-			var ai = itemsByName.get(defender.item);
-			if (ai.effects) {
-				if (Array.isArray(ai.effects.defend)) {
-					for (const v of ai.effects.defend) {
+			if (!ignored.has("attacker.ability") && abilitiesByName.has(attacker.ability.name)) {
+				if (attacker.ability.effects) {
+					for (const v of pluckFor("attack", attacker.ability.effects)) {
+						addIfValid(effects, BattleEffect.parse("attack", v));
+					}
+				}
+			}
+			if (!ignored.has("defender.ability") && abilitiesByName.has(defender.ability.name)) {
+				if (defender.ability.effects) {
+					for (const v of pluckFor("defend", defender.ability.effects)) {
 						addIfValid(effects, BattleEffect.parse("defend", v));
 					}
-				} else {
-					addIfValid(effects, BattleEffect.parse("defend", ai.effects.defend));
 				}
 			}
+			if (!ignored.has("attacker.item") && itemsByName.has(attacker.item)) {
+				var ai = itemsByName.get(attacker.item);
+				if (ai.effects) {
+					if (Array.isArray(ai.effects.attack)) {
+						for (const v of ai.effects.attack) {
+							addIfValid(effects, BattleEffect.parse("attack", v));
+						}
+					} else {
+						addIfValid(effects, BattleEffect.parse("attack", ai.effects.attack));
+					}
+				}
+			}
+			if (!ignored.has("defender.item") && itemsByName.has(defender.item)) {
+				var ai = itemsByName.get(defender.item);
+				if (ai.effects) {
+					if (Array.isArray(ai.effects.defend)) {
+						for (const v of ai.effects.defend) {
+							addIfValid(effects, BattleEffect.parse("defend", v));
+						}
+					} else {
+						addIfValid(effects, BattleEffect.parse("defend", ai.effects.defend));
+					}
+				}
+			}
+			return new BattleEffects(effects);
 		}
-		return new BattleEffects(effects);
+		var ignored = new Set();
+		var effects = construct(ignored);
+		// Progressively ignore more and more effects, one at a time, based on explicit priority
+		while (true) {
+			if (!ignored.has("defender.ability") && effects.getFlag(attacker, defender, move, "defender.ignore-ability")) {
+				ignored.add("defender.ability");
+			} else if (!ignored.has("attacker.ability") && effects.getFlag(attacker, defender, move, "attacker.ignore-ability")) {
+				ignored.add("attacker.ability");
+			} else if (!ignored.has("defender.item") && effects.getFlag(attacker, defender, move, "defender.ignore-item")) {
+				ignored.add("defender.item");
+			} else if (!ignored.has("attacker.item") && effects.getFlag(attacker, defender, move, "attacker.ignore-item")) {
+				ignored.add("attacker.item");
+			} else {
+				return effects;
+			}
+			effects = construct(ignored);
+		}
+	}
+
+	/**
+	 * @param {BattlePoke} attacker
+	 * @param {BattlePoke} defender
+	 * @param {BattleMove} move
+	 * @param {String} modifier
+	 * @param {Boolean} def
+	 * @returns {Boolean}
+	 */
+	getFlag(attacker, defender, move, flag, def = false) {
+		var result = def;
+		for (const e of this.effects) {
+			var mod = e.getFlag(attacker, defender, move, flag);
+			if (mod != null) {
+				result = mod(result);
+			}
+		}
+		return result;
 	}
 
 	/**
@@ -141,11 +185,13 @@ class BattleEffect {
 	#type;
 	#condition;
 	#modifiers;
+	#flags;
 
-	constructor(type, condition, modifiers) {
+	constructor(type, condition, modifiers, flags) {
 		this.#type = type;
 		this.#condition = condition;
 		this.#modifiers = modifiers;
+		this.#flags = flags;
 	}
 
 	/**
@@ -157,7 +203,7 @@ class BattleEffect {
 		if (json == null || json == undefined) {
 			return null;
 		}
-		return new BattleEffect(type, Condition.parse(json.condition), BattleEffect.parseModifiers(json.modifiers));
+		return new BattleEffect(type, Condition.parse(json.condition), BattleEffect.parseModifiers(json.modifiers), BattleEffect.parseFlags(json.flags));
 	}
 
 	static parseModifiers(json) {
@@ -178,6 +224,24 @@ class BattleEffect {
 		return map;
 	}
 
+	static parseFlags(json) {
+		const recursive = function(map, obj, prefix) {
+			for (const k of Object.keys(obj)) {
+				const v = obj[k];
+				if (typeof v === 'object' && !Array.isArray(v) && v !== null) {
+					recursive(map, v, prefix + k + ".");
+				} else {
+					map.set(prefix + k, Flag.parse(v));
+				}
+			}
+		}
+		var map = new Map();
+		if (json) {
+			recursive(map, json, "");
+		}
+		return map;
+	}
+
 	/**
 	 * @param {BattlePoke} attacker
 	 * @param {BattlePoke} defender
@@ -188,6 +252,20 @@ class BattleEffect {
 	getModifier(attacker, defender, move, modifier) {
 		if (this.#modifiers.has(modifier) && this.#condition.checkConditions(attacker, defender, move)) {
 			return this.#modifiers.get(modifier);
+		}
+		return null;
+	}
+
+	/**
+	 * @param {BattlePoke} attacker
+	 * @param {BattlePoke} defender
+	 * @param {BattleMove} move
+	 * @param {String} flag
+	 * @returns {Flag}
+	 */
+	getFlag(attacker, defender, move, flag) {
+		if (this.#flags.has(flag) && this.#condition.checkConditions(attacker, defender, move)) {
+			return this.#flags.get(flag);
 		}
 		return null;
 	}
@@ -242,6 +320,23 @@ class Modifier {
 			}
 		}
 		return null;
+	}
+}
+
+class Flag {
+
+	/**
+	 * @returns {Flag}
+	 */
+	static of(b) {
+		return (previous) => b;
+	}
+
+	/**
+	 * @returns {Flag}
+	 */
+	static parse(v) {
+		return this.of(v && true);
 	}
 }
 
@@ -307,6 +402,7 @@ class Condition {
 }
 
 function checkStringCondition(condition, value) {
+	console.log(condition);
 	if (typeof condition === "string") {
 		return condition == value;
 	} else if (Array.isArray(condition)) {

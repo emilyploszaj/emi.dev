@@ -927,6 +927,15 @@ input:checked + .fake-checkbox {
 	float: left;
 }
 
+.calc-moves {
+	margin-left: -6px;
+	margin-right: -6px;
+}
+
+.calc-moves > table {
+	margin: auto;
+}
+
 .move-calcs {
 	padding-top: 8px;
 	text-align: center;

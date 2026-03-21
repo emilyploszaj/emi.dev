@@ -147,7 +147,6 @@ function getDamage(attacker, defender, move) {
 	if (defender.poke == undefined || move.category == "status" || move.power == 0) {
 		return CalcResult.of(0);
 	}
-	var weather = document.getElementById("current-weather").value;
 	var effects = BattleEffects.of(attacker, defender, move);
 
 	function modifier(modifier, base, max) {
@@ -156,6 +155,15 @@ function getDamage(attacker, defender, move) {
 
 	function modifierFloat(modifier, base, max, def) {
 		return effects.getModifierFloat(attacker, defender, move, modifier, base, max, def);
+	}
+
+	function flag(flag, def = false) {
+		return effects.getFlag(attacker, defender, move, flag, def);
+	}
+
+	var weather = document.getElementById("current-weather").value;
+	if (flag("ignore-weather")) {
+		weather = "none";
 	}
 
 	var v = parseInt(attacker.level * 2 / 5) + 2;
@@ -293,16 +301,17 @@ function getDamage(attacker, defender, move) {
 		}
 
 		var eff = getMatchup(move.type, dp.types[0]);
-		if (eff == 0) {
-			return CalcResult.of(0);
-		}
 		result.modify(v => parseInt(v * eff))
 		if (dp.types.length > 1) {
 			eff = getMatchup(move.type, dp.types[1]);
-			if (eff == 0) {
-				return CalcResult.of(0);
-			}
 			result.modify(v => parseInt(v * eff))
+		}
+
+		if (move.type == "ground" && !flag("grounded", !contains(dp.types, "flying"))) {
+			eff = 0;
+		}
+		if (eff == 0) {
+			return CalcResult.of(0);
 		}
 
 		result.modify(v => parseInt(v * modifierFloat("type-effectiveness-multiplier", eff) / eff));
@@ -334,6 +343,9 @@ function getDamage(attacker, defender, move) {
 		return CalcResult.of(-1);
 	}
 	result.modify(v => modifier("damage", v, v));
+	if (result.max == 0) {
+		return CalcResult.of(0);
+	}
 
 	// Calc specific display
 

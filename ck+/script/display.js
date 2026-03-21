@@ -135,6 +135,7 @@ function displayCalcPokemon(root, poke, opponent, right) {
 				}
 				variants += `</div>`;
 			}
+			var indicator = `<div class="move-calc-indicator" style="--type-color:${typeColors.get(move.type) ?? typeColors.get("curse")};"></div>`;
 			var p1 = `<td class="move-calc">${moveLink(poke.moves[i])}${variants}</td>`;
 			var result = engine.getDamage(attacker, defender, BattleMove.of(attacker, move, variantArray[i], false));
 			var rolls = result.rolls;
@@ -186,7 +187,7 @@ function displayCalcPokemon(root, poke, opponent, right) {
 				extra += ' thko';
 			}
 			var p3 = moveDisplay(min, max, minPercent, maxPercent, extra, prettyRolls(rolls, myHp, myCurrentHp, opponentCurrentHp, result), move.power);
-			moves += "<tr>";
+			moves += `<tr>`;
 			if (right) {
 				moves += p3 + p2 + p1;
 			} else {

@@ -509,7 +509,9 @@ function suggestEditItems() {
 }
 
 function suggestEditAbilities() {
-	return [];
+	var edited = getEditedPoke();
+	var p = pokemonByName.get(edited.name);
+	return p.abilities?.map(a => {return { value: a, extra: ""}}) ?? [];
 }
 
 class OptionSelect {
