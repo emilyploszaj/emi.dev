@@ -482,7 +482,7 @@ function suggestEditPokemon() {
 				} else if (evolution.method == "hitmonlee" || evolution.method == "hitmonchan" || evolution.method == "hitmontop") {
 					text = `Lv25`;
 				} else {
-					break;
+					text = "Evo";
 				}
 				return `<div class="suggestion-level">${text}</div>`;
 			}

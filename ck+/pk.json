@@ -27953,6 +27953,9 @@
             "accuracy": 100,
             "category": "physical",
             "extra": [],
+            "flags": [
+                "contact"
+            ],
             "index": 1,
             "name": "pound",
             "power": 40,
@@ -27967,6 +27970,9 @@
             "extra": [
                 "High crit ratio"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 2,
             "name": "karate-chop",
             "power": 50,
@@ -27980,6 +27986,9 @@
             "category": "physical",
             "extra": [
                 "Hits twice"
+            ],
+            "flags": [
+                "contact"
             ],
             "index": 3,
             "name": "doubleslap",
@@ -28006,6 +28015,10 @@
             "accuracy": 85,
             "category": "physical",
             "extra": [],
+            "flags": [
+                "punch",
+                "contact"
+            ],
             "index": 5,
             "name": "mega-punch",
             "power": 80,
@@ -28034,6 +28047,10 @@
             "extra": [
                 "Chance to Burn"
             ],
+            "flags": [
+                "punch",
+                "contact"
+            ],
             "index": 7,
             "name": "fire-punch",
             "power": 95,
@@ -28047,6 +28064,10 @@
             "category": "physical",
             "extra": [
                 "Chance to Freeze"
+            ],
+            "flags": [
+                "punch",
+                "contact"
             ],
             "index": 8,
             "name": "ice-punch",
@@ -28062,6 +28083,10 @@
             "extra": [
                 "Chance to Paralyze"
             ],
+            "flags": [
+                "punch",
+                "contact"
+            ],
             "index": 9,
             "name": "thunderpunch",
             "power": 95,
@@ -28074,6 +28099,9 @@
             "accuracy": 100,
             "category": "physical",
             "extra": [],
+            "flags": [
+                "contact"
+            ],
             "index": 10,
             "name": "scratch",
             "power": 40,
@@ -28088,6 +28116,9 @@
             "extra": [
                 "Whirlpool effect"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 11,
             "name": "vicegrip",
             "power": 90,
@@ -28101,6 +28132,9 @@
             "category": "physical",
             "extra": [
                 "OHKO"
+            ],
+            "flags": [
+                "contact"
             ],
             "index": 12,
             "name": "guillotine",
@@ -28142,6 +28176,9 @@
             "accuracy": 100,
             "category": "physical",
             "extra": [],
+            "flags": [
+                "contact"
+            ],
             "index": 15,
             "name": "cut",
             "power": 50,
@@ -28168,6 +28205,9 @@
             "accuracy": 100,
             "category": "physical",
             "extra": [],
+            "flags": [
+                "contact"
+            ],
             "index": 17,
             "name": "wing-attack",
             "power": 60,
@@ -28196,6 +28236,9 @@
             "extra": [
                 "Fly effect"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 19,
             "name": "fly",
             "power": 90,
@@ -28209,6 +28252,9 @@
             "category": "special",
             "extra": [
                 "Lowers SpAtk (Attack)"
+            ],
+            "flags": [
+                "contact"
             ],
             "index": 20,
             "name": "mystical-fire",
@@ -28224,6 +28270,9 @@
             "extra": [
                 "Chance to Paralyze"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 21,
             "name": "slam",
             "power": 120,
@@ -28236,6 +28285,9 @@
             "accuracy": 100,
             "category": "physical",
             "extra": [],
+            "flags": [
+                "contact"
+            ],
             "index": 22,
             "name": "vine-whip",
             "power": 35,
@@ -28249,6 +28301,9 @@
             "category": "physical",
             "extra": [
                 "Causes flinch and 2x damage if target has used Minimize"
+            ],
+            "flags": [
+                "contact"
             ],
             "index": 23,
             "name": "stomp",
@@ -28264,6 +28319,9 @@
             "extra": [
                 "Hits twice"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 24,
             "name": "double-kick",
             "power": 30,
@@ -28277,6 +28335,9 @@
             "accuracy": 90,
             "category": "physical",
             "extra": [],
+            "flags": [
+                "contact"
+            ],
             "index": 25,
             "name": "mega-kick",
             "power": 140,
@@ -28291,6 +28352,9 @@
             "extra": [
                 "Deals 1\/2 user's max HP to user if it misses"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 26,
             "name": "jump-kick",
             "power": 120,
@@ -28304,6 +28368,9 @@
             "category": "physical",
             "extra": [
                 "Chance to Flinch"
+            ],
+            "flags": [
+                "contact"
             ],
             "index": 27,
             "name": "rolling-kick",
@@ -28333,6 +28400,9 @@
             "extra": [
                 "Chance to Flinch"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 29,
             "name": "headbutt",
             "power": 70,
@@ -28359,6 +28429,9 @@
             "extra": [
                 "Hits target 2-5 times"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 31,
             "name": "fury-attack",
             "power": 15,
@@ -28374,6 +28447,9 @@
             "extra": [
                 "OHKO"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 32,
             "name": "horn-drill",
             "power": 1,
@@ -28386,6 +28462,9 @@
             "accuracy": 100,
             "category": "physical",
             "extra": [],
+            "flags": [
+                "contact"
+            ],
             "index": 33,
             "name": "tackle",
             "power": 35,
@@ -28399,6 +28478,9 @@
             "category": "physical",
             "extra": [
                 "Chance to Paralyze"
+            ],
+            "flags": [
+                "contact"
             ],
             "index": 34,
             "name": "body-slam",
@@ -28414,6 +28496,9 @@
             "extra": [
                 "Whirlpool effect"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 35,
             "name": "wrap",
             "power": 15,
@@ -28427,6 +28512,9 @@
             "category": "physical",
             "extra": [
                 "1\/4 damage dealt recoil"
+            ],
+            "flags": [
+                "contact"
             ],
             "index": 36,
             "name": "take-down",
@@ -28443,6 +28531,9 @@
             "extra": [
                 "Chance of causing Paralysis; 1\/3 damage dealt recoil"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 37,
             "name": "thrash",
             "power": 120,
@@ -28457,6 +28548,9 @@
             "category": "physical",
             "extra": [
                 "1\/3 damage dealt recoil"
+            ],
+            "flags": [
+                "contact"
             ],
             "index": 38,
             "name": "double-edge",
@@ -28545,6 +28639,9 @@
             "extra": [
                 "Chance to Flinch"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 44,
             "name": "bite",
             "power": 60,
@@ -28558,6 +28655,9 @@
             "category": "status",
             "extra": [
                 "Lowers Atk (Status)"
+            ],
+            "flags": [
+                "sound"
             ],
             "index": 45,
             "name": "growl",
@@ -28573,6 +28673,9 @@
             "extra": [
                 "Whirlwind\/ Roar effect"
             ],
+            "flags": [
+                "sound"
+            ],
             "index": 46,
             "name": "roar",
             "power": 0,
@@ -28587,6 +28690,9 @@
             "extra": [
                 "Causes Sleep"
             ],
+            "flags": [
+                "sound"
+            ],
             "index": 47,
             "name": "sing",
             "power": 0,
@@ -28600,6 +28706,9 @@
             "category": "status",
             "extra": [
                 "Guaranteed Confusion (Status)"
+            ],
+            "flags": [
+                "sound"
             ],
             "index": 48,
             "name": "supersonic",
@@ -28820,6 +28929,9 @@
             "accuracy": 100,
             "category": "physical",
             "extra": [],
+            "flags": [
+                "contact"
+            ],
             "index": 64,
             "name": "peck",
             "power": 40,
@@ -28833,6 +28945,9 @@
             "category": "physical",
             "extra": [
                 "High crit ratio"
+            ],
+            "flags": [
+                "contact"
             ],
             "index": 65,
             "name": "drill-peck",
@@ -28848,6 +28963,9 @@
             "extra": [
                 "Whirlpool effect"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 66,
             "name": "submission",
             "power": 90,
@@ -28861,6 +28979,9 @@
             "category": "physical",
             "extra": [
                 "Inflicts greater damage on heavier targets"
+            ],
+            "flags": [
+                "contact"
             ],
             "index": 67,
             "name": "low-kick",
@@ -28876,6 +28997,9 @@
             "extra": [
                 "2x last amount of damage received"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 68,
             "name": "counter",
             "power": 1,
@@ -28890,6 +29014,9 @@
             "extra": [
                 "Deals damage equal to user's level"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 69,
             "name": "seismic-toss",
             "power": 1,
@@ -28902,6 +29029,9 @@
             "accuracy": 100,
             "category": "physical",
             "extra": [],
+            "flags": [
+                "contact"
+            ],
             "index": 70,
             "name": "strength",
             "power": 80,
@@ -29043,6 +29173,9 @@
             "category": "special",
             "extra": [
                 "Chance to Confuse"
+            ],
+            "flags": [
+                "contact"
             ],
             "index": 80,
             "name": "petal-dance",
@@ -29194,6 +29327,9 @@
             "accuracy": 100,
             "category": "physical",
             "extra": [],
+            "flags": [
+                "contact"
+            ],
             "index": 91,
             "name": "dig",
             "power": 60,
@@ -29292,6 +29428,9 @@
             "extra": [
                 "Priority +1"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 98,
             "name": "quick-attack",
             "power": 40,
@@ -29305,6 +29444,9 @@
             "category": "physical",
             "extra": [
                 "Pursuit effect"
+            ],
+            "flags": [
+                "contact"
             ],
             "index": 99,
             "name": "rage",
@@ -29371,6 +29513,9 @@
             "category": "status",
             "extra": [
                 "Sharply lowers Def (Status)"
+            ],
+            "flags": [
+                "sound"
             ],
             "index": 103,
             "name": "screech",
@@ -29634,6 +29779,9 @@
             "extra": [
                 "Chance to Paralyze"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 122,
             "name": "lick",
             "power": 80,
@@ -29704,6 +29852,9 @@
             "extra": [
                 "Chance to Flinch"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 127,
             "name": "waterfall",
             "power": 80,
@@ -29717,6 +29868,9 @@
             "category": "physical",
             "extra": [
                 "Whirlpool effect"
+            ],
+            "flags": [
+                "contact"
             ],
             "index": 128,
             "name": "clamp",
@@ -29824,6 +29978,9 @@
             "extra": [
                 "Deals 1\/2 user's max HP to user if it misses"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 136,
             "name": "hi-jump-kick",
             "power": 150,
@@ -29894,6 +30051,9 @@
             "category": "physical",
             "extra": [
                 "Damages target; heals user up to 50% of damage dealt"
+            ],
+            "flags": [
+                "contact"
             ],
             "index": 141,
             "name": "leech-life",
@@ -29967,6 +30127,10 @@
             "extra": [
                 "Chance to Confuse"
             ],
+            "flags": [
+                "punch",
+                "contact"
+            ],
             "index": 146,
             "name": "dizzy-punch",
             "power": 100,
@@ -30009,6 +30173,9 @@
             "extra": [
                 "Deals up to user's level x1.5 damage"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 149,
             "name": "triple-axel",
             "power": 40,
@@ -30049,6 +30216,9 @@
             "extra": [
                 "High crit ratio"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 152,
             "name": "crabhammer",
             "power": 120,
@@ -30076,6 +30246,9 @@
             "category": "physical",
             "extra": [
                 "Hits target 2-5 times"
+            ],
+            "flags": [
+                "contact"
             ],
             "index": 154,
             "name": "fury-swipes",
@@ -30135,6 +30308,9 @@
             "extra": [
                 "Chance to Flinch"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 158,
             "name": "hyper-fang",
             "power": 95,
@@ -30189,6 +30365,9 @@
             "extra": [
                 "Deals damage equal to 1\/2 target's current hp"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 162,
             "name": "super-fang",
             "power": 1,
@@ -30202,6 +30381,9 @@
             "category": "physical",
             "extra": [
                 "High crit ratio"
+            ],
+            "flags": [
+                "contact"
             ],
             "index": 163,
             "name": "slash",
@@ -30231,6 +30413,9 @@
             "extra": [
                 "Struggle effect"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 165,
             "name": "struggle",
             "power": 50,
@@ -30259,6 +30444,9 @@
             "extra": [
                 "Hits the target up to 3 times; increases power by 10 with each hit"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 167,
             "name": "triple-kick",
             "power": 30,
@@ -30272,6 +30460,9 @@
             "category": "physical",
             "extra": [
                 "Splash effect"
+            ],
+            "flags": [
+                "contact"
             ],
             "index": 168,
             "name": "thief",
@@ -30327,6 +30518,9 @@
             "extra": [
                 "Thaws user; chance to Burn"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 172,
             "name": "flame-wheel",
             "power": 70,
@@ -30340,6 +30534,9 @@
             "category": "special",
             "extra": [
                 "Can only be used while asleep; chance of causing Flinch"
+            ],
+            "flags": [
+                "sound"
             ],
             "index": 173,
             "name": "snore",
@@ -30368,6 +30565,9 @@
             "category": "physical",
             "extra": [
                 "Higher power the less HP the user has"
+            ],
+            "flags": [
+                "contact"
             ],
             "index": 175,
             "name": "flail",
@@ -30425,6 +30625,9 @@
             "extra": [
                 "Higher power the less HP the user has"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 179,
             "name": "reversal",
             "power": 1,
@@ -30481,6 +30684,10 @@
             "extra": [
                 "Priority +1"
             ],
+            "flags": [
+                "punch",
+                "contact"
+            ],
             "index": 183,
             "name": "mach-punch",
             "power": 40,
@@ -30508,6 +30715,9 @@
             "category": "physical",
             "extra": [
                 "Always hits"
+            ],
+            "flags": [
+                "contact"
             ],
             "index": 185,
             "name": "faint-attack",
@@ -30649,6 +30859,9 @@
             "extra": [
                 "All users on field faint in 3 turns"
             ],
+            "flags": [
+                "sound"
+            ],
             "index": 195,
             "name": "perish-song",
             "power": 0,
@@ -30720,6 +30933,9 @@
             "extra": [
                 "1\/2 damage dealt recoil"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 200,
             "name": "outrage",
             "power": 140,
@@ -30790,6 +31006,9 @@
             "accuracy": 100,
             "category": "physical",
             "extra": [],
+            "flags": [
+                "contact"
+            ],
             "index": 205,
             "name": "rollout",
             "power": 40,
@@ -30803,6 +31022,9 @@
             "category": "physical",
             "extra": [
                 "False Swipe effect"
+            ],
+            "flags": [
+                "contact"
             ],
             "index": 206,
             "name": "false-swipe",
@@ -30846,6 +31068,9 @@
             "extra": [
                 "Chance of causing Paralysis; 1\/3 damage dealt recoil"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 209,
             "name": "wild-charge",
             "power": 120,
@@ -30861,6 +31086,9 @@
             "extra": [
                 "Deals up to user's level x1.5 damage"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 210,
             "name": "fury-cutter",
             "power": 30,
@@ -30874,6 +31102,9 @@
             "category": "physical",
             "extra": [
                 "Chance of raising Def"
+            ],
+            "flags": [
+                "contact"
             ],
             "index": 211,
             "name": "steel-wing",
@@ -30931,6 +31162,9 @@
             "extra": [
                 "Heal Bell effect"
             ],
+            "flags": [
+                "sound"
+            ],
             "index": 215,
             "name": "heal-bell",
             "power": 0,
@@ -30943,6 +31177,9 @@
             "accuracy": 100,
             "category": "physical",
             "extra": [],
+            "flags": [
+                "contact"
+            ],
             "index": 216,
             "name": "return",
             "power": 121,
@@ -30988,6 +31225,9 @@
             "accuracy": 100,
             "category": "physical",
             "extra": [],
+            "flags": [
+                "contact"
+            ],
             "index": 218,
             "name": "frustration",
             "power": 121,
@@ -31058,6 +31298,10 @@
             "extra": [
                 "Chance to Confuse"
             ],
+            "flags": [
+                "punch",
+                "contact"
+            ],
             "index": 223,
             "name": "dynamicpunch",
             "power": 120,
@@ -31071,6 +31315,9 @@
             "category": "physical",
             "extra": [
                 "High crit ratio"
+            ],
+            "flags": [
+                "contact"
             ],
             "index": 224,
             "name": "megahorn",
@@ -31128,6 +31375,9 @@
             "extra": [
                 "Pursuit effect"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 228,
             "name": "pursuit",
             "power": 70,
@@ -31178,6 +31428,9 @@
             "extra": [
                 "Lowers Def (Attack)"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 231,
             "name": "iron-tail",
             "power": 120,
@@ -31192,6 +31445,9 @@
             "extra": [
                 "Chance of raising Atk"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 232,
             "name": "metal-claw",
             "power": 50,
@@ -31205,6 +31461,9 @@
             "category": "physical",
             "extra": [
                 "Always hits"
+            ],
+            "flags": [
+                "contact"
             ],
             "index": 233,
             "name": "vital-throw",
@@ -31276,6 +31535,9 @@
             "extra": [
                 "High crit ratio"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 238,
             "name": "cross-chop",
             "power": 100,
@@ -31332,6 +31594,9 @@
             "extra": [
                 "Lowers Def (Attack)"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 242,
             "name": "crunch",
             "power": 95,
@@ -31372,6 +31637,9 @@
             "accuracy": 100,
             "category": "physical",
             "extra": [],
+            "flags": [
+                "contact"
+            ],
             "index": 245,
             "name": "extremespeed",
             "power": 100,
@@ -31428,6 +31696,9 @@
             "extra": [
                 "Lowers Def (Attack)"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 249,
             "name": "rock-smash",
             "power": 40,
@@ -31470,6 +31741,9 @@
             "extra": [
                 "Guaranteed Flinch; can only be used turn 1"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 252,
             "name": "fake-out",
             "power": 40,
@@ -31483,6 +31757,9 @@
             "category": "special",
             "extra": [
                 "Uproar effect"
+            ],
+            "flags": [
+                "sound"
             ],
             "index": 253,
             "name": "uproar",
@@ -31632,6 +31909,9 @@
             "extra": [
                 "2x power if user is Poisoned; Paralyzed; or Burned."
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 263,
             "name": "facade",
             "power": 80,
@@ -31656,6 +31936,10 @@
             "extra": [
                 "Focus Punch effect"
             ],
+            "flags": [
+                "punch",
+                "contact"
+            ],
             "index": 264,
             "name": "focus-punch",
             "power": 150,
@@ -31679,6 +31963,9 @@
             },
             "extra": [
                 "2x power if target is Paralyzed; cures target of Paralysis"
+            ],
+            "flags": [
+                "contact"
             ],
             "index": 265,
             "name": "smellingsalt",
@@ -31840,6 +32127,9 @@
             "extra": [
                 "1\/4 damage dealt recoil"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 276,
             "name": "superpower",
             "power": 140,
@@ -31883,6 +32173,9 @@
             "extra": [
                 "2x Power if user moves after target"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 279,
             "name": "revenge",
             "power": 60,
@@ -31906,6 +32199,9 @@
             "category": "physical",
             "extra": [
                 "Removes Light Screen\/ Reflect from target's side of the field"
+            ],
+            "flags": [
+                "contact"
             ],
             "index": 280,
             "name": "brick-break",
@@ -31935,6 +32231,9 @@
             "extra": [
                 "Renders the target's held item unusable"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 282,
             "name": "knock-off",
             "power": 80,
@@ -31948,6 +32247,9 @@
             "category": "physical",
             "extra": [
                 "Target's HP becomes equal to the user's current HP"
+            ],
+            "flags": [
+                "contact"
             ],
             "index": 283,
             "name": "endeavor",
@@ -32034,6 +32336,9 @@
             "extra": [
                 "High crit ratio"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 289,
             "name": "drill-run",
             "power": 80,
@@ -32060,6 +32365,9 @@
             "accuracy": 100,
             "category": "physical",
             "extra": [],
+            "flags": [
+                "contact"
+            ],
             "index": 291,
             "name": "dive",
             "power": 80,
@@ -32170,6 +32478,9 @@
             "extra": [
                 "Chance of causing Burn; increased Crit ratio"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 299,
             "name": "blaze-kick",
             "power": 100,
@@ -32196,6 +32507,9 @@
             "extra": [
                 "Always hits in Hail"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 301,
             "name": "ice-ball",
             "power": 120,
@@ -32208,6 +32522,9 @@
             "accuracy": 100,
             "category": "physical",
             "extra": [],
+            "flags": [
+                "contact"
+            ],
             "index": 302,
             "name": "needle-arm",
             "power": 80,
@@ -32234,6 +32551,9 @@
             "accuracy": 100,
             "category": "special",
             "extra": [],
+            "flags": [
+                "sound"
+            ],
             "index": 304,
             "name": "hyper-voice",
             "power": 110,
@@ -32248,6 +32568,9 @@
             "extra": [
                 "Chance of Badly Poisoning"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 305,
             "name": "poison-fang",
             "power": 90,
@@ -32261,6 +32584,9 @@
             "category": "physical",
             "extra": [
                 "Lowers Def (Attack)"
+            ],
+            "flags": [
+                "contact"
             ],
             "index": 306,
             "name": "crush-claw",
@@ -32306,6 +32632,9 @@
             "extra": [
                 "Chance of raising Atk"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 309,
             "name": "meteor-mash",
             "power": 100,
@@ -32319,6 +32648,9 @@
             "category": "physical",
             "extra": [
                 "Chance to Flinch"
+            ],
+            "flags": [
+                "contact"
             ],
             "index": 310,
             "name": "astonish",
@@ -32447,6 +32779,9 @@
             "extra": [
                 "Sharply lowers Spd (Status)"
             ],
+            "flags": [
+                "sound"
+            ],
             "index": 319,
             "name": "metal-sound",
             "power": 0,
@@ -32460,6 +32795,9 @@
             "category": "status",
             "extra": [
                 "Causes Sleep"
+            ],
+            "flags": [
+                "sound"
             ],
             "index": 320,
             "name": "grasswhistle",
@@ -32531,6 +32869,10 @@
             "extra": [
                 "Always hits"
             ],
+            "flags": [
+                "punch",
+                "contact"
+            ],
             "index": 325,
             "name": "shadow-punch",
             "power": 95,
@@ -32558,6 +32900,9 @@
             "category": "physical",
             "extra": [
                 "2x Damage on Pokemon using Bounce\/Fly"
+            ],
+            "flags": [
+                "contact"
             ],
             "index": 327,
             "name": "sky-uppercut",
@@ -32630,6 +32975,9 @@
             "extra": [
                 "Always hits"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 332,
             "name": "aerial-ace",
             "power": 60,
@@ -32687,6 +33035,9 @@
             "extra": [
                 "Raises Atk"
             ],
+            "flags": [
+                "sound"
+            ],
             "index": 336,
             "name": "howl",
             "power": 0,
@@ -32701,6 +33052,9 @@
             "extra": [
                 "High crit ratio"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 337,
             "name": "dragon-claw",
             "power": 90,
@@ -32714,6 +33068,9 @@
             "category": "special",
             "extra": [
                 "Chance of causing Paralysis; 1\/3 damage dealt recoil"
+            ],
+            "flags": [
+                "contact"
             ],
             "index": 338,
             "name": "frenzy-plant",
@@ -32744,6 +33101,9 @@
             "extra": [
                 "Chance to Paralyze"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 340,
             "name": "bounce",
             "power": 85,
@@ -32772,6 +33132,9 @@
             "extra": [
                 "Chance of causing Poison; increased crit ratio"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 342,
             "name": "poison-tail",
             "power": 120,
@@ -32797,6 +33160,9 @@
             "category": "physical",
             "extra": [
                 "Chance of causing Paralysis; 1\/3 damage dealt recoil"
+            ],
+            "flags": [
+                "contact"
             ],
             "index": 344,
             "name": "volt-tackle",
@@ -32854,6 +33220,9 @@
             "category": "physical",
             "extra": [
                 "High crit ratio"
+            ],
+            "flags": [
+                "contact"
             ],
             "index": 348,
             "name": "leaf-blade",
@@ -33004,6 +33373,9 @@
             "extra": [
                 "2x power if target is asleep; wakes up target"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 358,
             "name": "wake-up-slap",
             "power": 60,
@@ -33028,6 +33400,9 @@
             "extra": [
                 "Lowers user's Spd"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 359,
             "name": "hammer-arm",
             "power": 100,
@@ -33041,6 +33416,9 @@
             "category": "physical",
             "extra": [
                 "Power = min(150; (25 x Target's Current Speed \/ User's Current Speed) + 1)"
+            ],
+            "flags": [
+                "contact"
             ],
             "index": 360,
             "name": "gyro-ball",
@@ -33130,6 +33508,9 @@
             "extra": [
                 "Consumes target's berry"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 365,
             "name": "pluck",
             "power": 50,
@@ -33186,6 +33567,9 @@
             "extra": [
                 "Switches user out after dealing damage"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 369,
             "name": "u-turn",
             "power": 80,
@@ -33200,6 +33584,9 @@
             "extra": [
                 "Lowers user's Atk and Def"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 370,
             "name": "close-combat",
             "power": 120,
@@ -33213,6 +33600,9 @@
             "category": "physical",
             "extra": [
                 "2x Power if user moves after target"
+            ],
+            "flags": [
+                "contact"
             ],
             "index": 371,
             "name": "payback",
@@ -33237,6 +33627,9 @@
             "category": "physical",
             "extra": [
                 "2x damage if the target has already taken damage this turn"
+            ],
+            "flags": [
+                "contact"
             ],
             "index": 372,
             "name": "assurance",
@@ -33309,6 +33702,9 @@
             "extra": [
                 "The less PP the move has; the greater its Power"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 376,
             "name": "trump-card",
             "power": 1,
@@ -33322,6 +33718,9 @@
             "category": "physical",
             "extra": [
                 "High crit ratio"
+            ],
+            "flags": [
+                "contact"
             ],
             "index": 377,
             "name": "aqua-cutter",
@@ -33346,6 +33745,9 @@
             },
             "extra": [
                 "2x power if target is at or below 1\/2 HP"
+            ],
+            "flags": [
+                "contact"
             ],
             "index": 378,
             "name": "wring-out",
@@ -33469,6 +33871,9 @@
             "extra": [
                 "Power= 60 + (20x # of stat increases of target)"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 386,
             "name": "punishment",
             "power": 1,
@@ -33482,6 +33887,9 @@
             "category": "physical",
             "extra": [
                 "Fails unless the user has used all of its other moves at least once"
+            ],
+            "flags": [
+                "contact"
             ],
             "index": 387,
             "name": "last-resort",
@@ -33509,6 +33917,9 @@
             "accuracy": 100,
             "category": "physical",
             "extra": [],
+            "flags": [
+                "contact"
+            ],
             "index": 389,
             "name": "sucker-punch",
             "power": 80,
@@ -33580,6 +33991,9 @@
             "extra": [
                 "Chance of causing Burn; 1\/3 damage dealt recoil"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 394,
             "name": "flare-blitz",
             "power": 120,
@@ -33594,6 +34008,9 @@
             "category": "physical",
             "extra": [
                 "Chance to Paralyze"
+            ],
+            "flags": [
+                "contact"
             ],
             "index": 395,
             "name": "force-palm",
@@ -33637,6 +34054,9 @@
             "extra": [
                 "Chance to Poison"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 398,
             "name": "poison-jab",
             "power": 80,
@@ -33665,6 +34085,9 @@
             "extra": [
                 "High crit ratio"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 400,
             "name": "night-slash",
             "power": 70,
@@ -33677,6 +34100,9 @@
             "accuracy": 85,
             "category": "physical",
             "extra": [],
+            "flags": [
+                "contact"
+            ],
             "index": 401,
             "name": "aqua-tail",
             "power": 120,
@@ -33717,6 +34143,9 @@
             "extra": [
                 "High crit ratio"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 404,
             "name": "x-scissor",
             "power": 80,
@@ -33730,6 +34159,9 @@
             "category": "special",
             "extra": [
                 "Lowers SpDef (Attack)"
+            ],
+            "flags": [
+                "sound"
             ],
             "index": 405,
             "name": "bug-buzz",
@@ -33759,6 +34191,9 @@
             "extra": [
                 "Chance to Flinch"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 407,
             "name": "dragon-rush",
             "power": 100,
@@ -33784,6 +34219,10 @@
             "category": "physical",
             "extra": [
                 "Damages target; heals user up to 50% of damage dealt"
+            ],
+            "flags": [
+                "punch",
+                "contact"
             ],
             "index": 409,
             "name": "drain-punch",
@@ -33842,6 +34281,9 @@
             "extra": [
                 "Lowers user's Atk and Def"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 413,
             "name": "brave-bird",
             "power": 120,
@@ -33882,6 +34324,9 @@
             "extra": [
                 "1\/4 damage dealt recoil"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 416,
             "name": "giga-impact",
             "power": 180,
@@ -33910,6 +34355,10 @@
             "category": "physical",
             "extra": [
                 "Priority +1"
+            ],
+            "flags": [
+                "punch",
+                "contact"
             ],
             "index": 418,
             "name": "bullet-punch",
@@ -33953,6 +34402,9 @@
             "extra": [
                 "Hits target 2-5 times"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 421,
             "name": "shadow-claw",
             "power": 25,
@@ -33968,6 +34420,9 @@
             "extra": [
                 "Chance of causing Paralysis; chance of causing Flinch"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 422,
             "name": "thunder-fang",
             "power": 90,
@@ -33981,6 +34436,9 @@
             "category": "physical",
             "extra": [
                 "Chance of causing Freeze; chance of causing Flinch"
+            ],
+            "flags": [
+                "contact"
             ],
             "index": 423,
             "name": "ice-fang",
@@ -33996,6 +34454,9 @@
             "extra": [
                 "Chance of causing Burn; chance of causing Flinch"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 424,
             "name": "fire-fang",
             "power": 90,
@@ -34009,6 +34470,9 @@
             "category": "physical",
             "extra": [
                 "Priority +1"
+            ],
+            "flags": [
+                "contact"
             ],
             "index": 425,
             "name": "shadow-sneak",
@@ -34052,6 +34516,9 @@
             "extra": [
                 "Chance to Flinch"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 428,
             "name": "zen-headbutt",
             "power": 80,
@@ -34093,6 +34560,9 @@
             "category": "physical",
             "extra": [
                 "Chance to Confuse"
+            ],
+            "flags": [
+                "contact"
             ],
             "index": 431,
             "name": "rock-climb",
@@ -34191,6 +34661,9 @@
             "extra": [
                 "High crit ratio"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 438,
             "name": "power-whip",
             "power": 120,
@@ -34219,6 +34692,9 @@
             "extra": [
                 "Chance of causing Poison; increased crit ratio"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 440,
             "name": "cross-poison",
             "power": 95,
@@ -34246,6 +34722,9 @@
             "category": "physical",
             "extra": [
                 "Chance to Flinch"
+            ],
+            "flags": [
+                "contact"
             ],
             "index": 442,
             "name": "iron-head",
@@ -34317,6 +34796,9 @@
             "extra": [
                 "Inflicts greater damage on heavier targets"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 447,
             "name": "grass-knot",
             "power": 1,
@@ -34330,6 +34812,9 @@
             "category": "special",
             "extra": [
                 "Chatter effect"
+            ],
+            "flags": [
+                "sound"
             ],
             "index": 448,
             "name": "chatter",
@@ -34359,6 +34844,9 @@
             "extra": [
                 "Consumes target's berry"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 450,
             "name": "bug-bite",
             "power": 60,
@@ -34387,6 +34875,9 @@
             "extra": [
                 "1\/3 damage dealt recoil"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 452,
             "name": "wood-hammer",
             "power": 120,
@@ -34401,6 +34892,9 @@
             "category": "physical",
             "extra": [
                 "Priority +1"
+            ],
+            "flags": [
+                "contact"
             ],
             "index": 453,
             "name": "aqua-jet",
@@ -34458,6 +34952,9 @@
             "extra": [
                 "1\/2 damage dealt recoil"
             ],
+            "flags": [
+                "contact"
+            ],
             "index": 457,
             "name": "head-smash",
             "power": 150,
@@ -34472,6 +34969,9 @@
             "category": "physical",
             "extra": [
                 "Hits twice"
+            ],
+            "flags": [
+                "contact"
             ],
             "index": 458,
             "name": "double-hit",
@@ -34529,6 +35029,9 @@
             "category": "physical",
             "extra": [
                 "Whirlpool effect"
+            ],
+            "flags": [
+                "contact"
             ],
             "index": 462,
             "name": "crush-grip",
@@ -34599,6 +35102,9 @@
             "category": "physical",
             "extra": [
                 "Shadow Force effect"
+            ],
+            "flags": [
+                "contact"
             ],
             "index": 467,
             "name": "shadow-force",
@@ -34756,7 +35262,14 @@
                 "cute-charm"
             ],
             "base_experience": 37,
-            "evolutions": [],
+            "evolutions": [
+                {
+                    "into": "clefairy",
+                    "level": 15,
+                    "location": "mt-coronet",
+                    "method": "level"
+                }
+            ],
             "gender": "f75",
             "growth": "fast",
             "items": [],
@@ -37162,7 +37675,14 @@
                 "mold-breaker"
             ],
             "base_experience": 99,
-            "evolutions": [],
+            "evolutions": [
+                {
+                    "into": "rampardos",
+                    "level": 40,
+                    "location": "mt-coronet",
+                    "method": "level"
+                }
+            ],
             "gender": "f12.5",
             "growth": "erratic",
             "items": [],
@@ -37397,7 +37917,20 @@
                 "snow-cloak"
             ],
             "base_experience": 61,
-            "evolutions": [],
+            "evolutions": [
+                {
+                    "gender": "female",
+                    "into": "wormadam",
+                    "level": 16,
+                    "method": "level"
+                },
+                {
+                    "gender": "male",
+                    "into": "mothim",
+                    "level": 16,
+                    "method": "level"
+                }
+            ],
             "gender": "f50",
             "growth": "medium-fast",
             "items": [],
@@ -40563,7 +41096,14 @@
                 "battle-armor"
             ],
             "base_experience": 99,
-            "evolutions": [],
+            "evolutions": [
+                {
+                    "into": "kabutops",
+                    "level": 40,
+                    "location": "mt-coronet",
+                    "method": "level"
+                }
+            ],
             "gender": "f12.5",
             "growth": "medium-fast",
             "items": [],
@@ -42023,7 +42563,14 @@
                 "natural-cure"
             ],
             "base_experience": 106,
-            "evolutions": [],
+            "evolutions": [
+                {
+                    "into": "starmie",
+                    "item": "water-stone",
+                    "method": "item",
+                    "time": "night"
+                }
+            ],
             "gender": "unknown",
             "growth": "slow",
             "items": [],
@@ -45613,7 +46160,14 @@
                 "serene-grace"
             ],
             "base_experience": 255,
-            "evolutions": [],
+            "evolutions": [
+                {
+                    "into": "chansey",
+                    "item": "oval-stone",
+                    "method": "item",
+                    "time": "day"
+                }
+            ],
             "gender": "f99.6094",
             "growth": "fast",
             "items": [],
@@ -47328,7 +47882,14 @@
                 "clear-body"
             ],
             "base_experience": 153,
-            "evolutions": [],
+            "evolutions": [
+                {
+                    "into": "metagross",
+                    "level": 100,
+                    "location": "mt-coronet",
+                    "method": "level"
+                }
+            ],
             "gender": "unknown",
             "growth": "slow",
             "items": [],
@@ -48078,7 +48639,14 @@
                 "shed-skin"
             ],
             "base_experience": 144,
-            "evolutions": [],
+            "evolutions": [
+                {
+                    "into": "tyranitar",
+                    "level": 100,
+                    "location": "mt-coronet",
+                    "method": "level"
+                }
+            ],
             "gender": "f50",
             "growth": "slow",
             "items": [],
@@ -49575,7 +50143,14 @@
                 "solid-rock"
             ],
             "base_experience": 99,
-            "evolutions": [],
+            "evolutions": [
+                {
+                    "into": "cradily",
+                    "level": 40,
+                    "location": "mt-coronet",
+                    "method": "level"
+                }
+            ],
             "gender": "f12.5",
             "growth": "erratic",
             "items": [],
@@ -49687,7 +50262,14 @@
                 "sand-veil"
             ],
             "base_experience": 108,
-            "evolutions": [],
+            "evolutions": [
+                {
+                    "into": "gliscor",
+                    "item": "razor-fang",
+                    "method": "item",
+                    "time": "night"
+                }
+            ],
             "gender": "f50",
             "growth": "medium-slow",
             "items": [],
@@ -50389,7 +50971,24 @@
                 "honey-gather"
             ],
             "base_experience": 63,
-            "evolutions": [],
+            "evolutions": [
+                {
+                    "gender": "female",
+                    "into": "vespiquen",
+                    "level": 21,
+                    "method": "level"
+                },
+                {
+                    "gender": "male",
+                    "into": "vespiquen",
+                    "level": 67,
+                    "method": "level"
+                },
+                {
+                    "into": "vespiquen",
+                    "method": "beauty"
+                }
+            ],
             "gender": "f81.25",
             "growth": "medium-slow",
             "items": [],
@@ -51381,7 +51980,14 @@
                 "guts"
             ],
             "base_experience": 67,
-            "evolutions": [],
+            "evolutions": [
+                {
+                    "into": "pupitar",
+                    "level": 45,
+                    "location": "mt-coronet",
+                    "method": "level"
+                }
+            ],
             "gender": "f50",
             "growth": "slow",
             "items": [],
@@ -52097,7 +52703,13 @@
                 "rough-skin"
             ],
             "base_experience": 134,
-            "evolutions": [],
+            "evolutions": [
+                {
+                    "into": "golem",
+                    "method": "partner",
+                    "partner": "machoke"
+                }
+            ],
             "gender": "f50",
             "growth": "medium-slow",
             "items": [],
@@ -52858,6 +53470,18 @@
             "base_experience": 92,
             "evolutions": [
                 {
+                    "into": "leafeon",
+                    "level": 0,
+                    "location": "eterna-forest",
+                    "method": "level"
+                },
+                {
+                    "into": "glaceon",
+                    "level": 0,
+                    "location": "route-217",
+                    "method": "level"
+                },
+                {
                     "into": "jolteon",
                     "item": "thunderstone",
                     "method": "item"
@@ -52977,7 +53601,12 @@
                 "swift-swim"
             ],
             "base_experience": 61,
-            "evolutions": [],
+            "evolutions": [
+                {
+                    "into": "milotic",
+                    "method": "beauty"
+                }
+            ],
             "gender": "f50",
             "growth": "erratic",
             "items": [],
@@ -54476,7 +55105,14 @@
                 "overgrow"
             ],
             "base_experience": 166,
-            "evolutions": [],
+            "evolutions": [
+                {
+                    "into": "tangrowth",
+                    "level": 90,
+                    "location": "eterna-forest",
+                    "method": "level"
+                }
+            ],
             "gender": "f50",
             "growth": "medium-fast",
             "items": [],
@@ -55834,7 +56470,14 @@
                 "levitate"
             ],
             "base_experience": 58,
-            "evolutions": [],
+            "evolutions": [
+                {
+                    "into": "claydol",
+                    "level": 42,
+                    "location": "mt-coronet",
+                    "method": "level"
+                }
+            ],
             "gender": "unknown",
             "growth": "medium-fast",
             "items": [],
@@ -62062,7 +62705,18 @@
                 "shield-dust"
             ],
             "base_experience": 54,
-            "evolutions": [],
+            "evolutions": [
+                {
+                    "into": "silcoon",
+                    "level": 7,
+                    "method": "level"
+                },
+                {
+                    "into": "cascoon",
+                    "level": 7,
+                    "method": "level"
+                }
+            ],
             "gender": "f50",
             "growth": "medium-fast",
             "items": [],
@@ -62597,7 +63251,13 @@
                 "gluttony"
             ],
             "base_experience": 127,
-            "evolutions": [],
+            "evolutions": [
+                {
+                    "into": "lickilicky",
+                    "method": "move",
+                    "move": "power-whip"
+                }
+            ],
             "gender": "f50",
             "growth": "medium-fast",
             "items": [],
@@ -62812,7 +63472,14 @@
                 "magnet-pull"
             ],
             "base_experience": 161,
-            "evolutions": [],
+            "evolutions": [
+                {
+                    "into": "magnezone",
+                    "level": 90,
+                    "location": "mt-coronet",
+                    "method": "level"
+                }
+            ],
             "gender": "unknown",
             "growth": "medium-fast",
             "items": [],
@@ -65175,7 +65842,14 @@
                 "shell-armor"
             ],
             "base_experience": 99,
-            "evolutions": [],
+            "evolutions": [
+                {
+                    "into": "omastar",
+                    "level": 40,
+                    "location": "mt-coronet",
+                    "method": "level"
+                }
+            ],
             "gender": "f12.5",
             "growth": "medium-fast",
             "items": [],
@@ -70571,7 +71245,14 @@
                 "battle-armor"
             ],
             "base_experience": 99,
-            "evolutions": [],
+            "evolutions": [
+                {
+                    "into": "bastiodon",
+                    "level": 40,
+                    "location": "mt-coronet",
+                    "method": "level"
+                }
+            ],
             "gender": "f12.5",
             "growth": "erratic",
             "items": [],
@@ -73287,6 +73968,12 @@
                     "into": "glalie",
                     "level": 33,
                     "method": "level"
+                },
+                {
+                    "gender": "female",
+                    "into": "froslass",
+                    "item": "dawn-stone",
+                    "method": "item"
                 }
             ],
             "gender": "f50",
@@ -75134,7 +75821,14 @@
                 "solid-rock"
             ],
             "base_experience": 108,
-            "evolutions": [],
+            "evolutions": [
+                {
+                    "into": "probopass",
+                    "level": 70,
+                    "location": "mt-coronet",
+                    "method": "level"
+                }
+            ],
             "gender": "f50",
             "growth": "medium-fast",
             "items": [],
@@ -75517,7 +76211,18 @@
                 "compoundeyes"
             ],
             "base_experience": 65,
-            "evolutions": [],
+            "evolutions": [
+                {
+                    "into": "ninjask",
+                    "level": 20,
+                    "method": "level"
+                },
+                {
+                    "into": "shedinja",
+                    "level": 20,
+                    "method": "level"
+                }
+            ],
             "gender": "f50",
             "growth": "erratic",
             "items": [],
@@ -76593,7 +77298,12 @@
                 "natural-cure"
             ],
             "base_experience": 1,
-            "evolutions": [],
+            "evolutions": [
+                {
+                    "into": "blissey",
+                    "method": "happiness"
+                }
+            ],
             "gender": "f99.6094",
             "growth": "slow",
             "items": [],
@@ -77034,7 +77744,14 @@
                 "levitate"
             ],
             "base_experience": 126,
-            "evolutions": [],
+            "evolutions": [
+                {
+                    "into": "gengar",
+                    "item": "twistedspoon",
+                    "method": "item",
+                    "time": "night"
+                }
+            ],
             "gender": "f50",
             "growth": "medium-slow",
             "items": [],
@@ -77551,7 +78268,14 @@
                 "inner-focus"
             ],
             "base_experience": 145,
-            "evolutions": [],
+            "evolutions": [
+                {
+                    "into": "alakazam",
+                    "item": "twistedspoon",
+                    "method": "item",
+                    "time": "day"
+                }
+            ],
             "gender": "f25",
             "growth": "medium-slow",
             "items": [],
@@ -78448,7 +79172,14 @@
                 "snow-cloak"
             ],
             "base_experience": 160,
-            "evolutions": [],
+            "evolutions": [
+                {
+                    "into": "mamoswine",
+                    "level": 80,
+                    "location": "route-217",
+                    "method": "level"
+                }
+            ],
             "gender": "f50",
             "growth": "slow",
             "items": [],
@@ -81076,7 +81807,13 @@
                 "huge-power"
             ],
             "base_experience": 146,
-            "evolutions": [],
+            "evolutions": [
+                {
+                    "into": "machamp",
+                    "method": "partner",
+                    "partner": "graveler"
+                }
+            ],
             "gender": "f25",
             "growth": "medium-slow",
             "items": [],
@@ -82616,7 +83353,23 @@
                 "scrappy"
             ],
             "base_experience": 91,
-            "evolutions": [],
+            "evolutions": [
+                {
+                    "into": "hitmonchan",
+                    "level": 20,
+                    "method": "level"
+                },
+                {
+                    "into": "hitmonlee",
+                    "level": 20,
+                    "method": "level"
+                },
+                {
+                    "into": "hitmontop",
+                    "level": 20,
+                    "method": "level"
+                }
+            ],
             "gender": "f0",
             "growth": "medium-fast",
             "items": [],
@@ -85341,7 +86094,14 @@
                 "inner-focus"
             ],
             "base_experience": 132,
-            "evolutions": [],
+            "evolutions": [
+                {
+                    "into": "weavile",
+                    "item": "razor-claw",
+                    "method": "item",
+                    "time": "night"
+                }
+            ],
             "gender": "f50",
             "growth": "medium-slow",
             "items": [],
@@ -87523,7 +88283,14 @@
                 "clear-body"
             ],
             "base_experience": 103,
-            "evolutions": [],
+            "evolutions": [
+                {
+                    "into": "metang",
+                    "level": 45,
+                    "location": "mt-coronet",
+                    "method": "level"
+                }
+            ],
             "gender": "unknown",
             "growth": "slow",
             "items": [],
@@ -87702,7 +88469,14 @@
                 "gluttony"
             ],
             "base_experience": 94,
-            "evolutions": [],
+            "evolutions": [
+                {
+                    "into": "snorlax",
+                    "level": 70,
+                    "location": "eterna-forest",
+                    "method": "level"
+                }
+            ],
             "gender": "f12.5",
             "growth": "slow",
             "items": [],
@@ -87831,7 +88605,13 @@
                 "technician"
             ],
             "base_experience": 94,
-            "evolutions": [],
+            "evolutions": [
+                {
+                    "into": "ambipom",
+                    "method": "move",
+                    "move": "double-hit"
+                }
+            ],
             "gender": "f50",
             "growth": "fast",
             "items": [],
@@ -91335,6 +92115,11 @@
             "base_experience": 99,
             "evolutions": [
                 {
+                    "into": "slowbro",
+                    "method": "partner",
+                    "partner": "shellder"
+                },
+                {
                     "into": "slowking",
                     "item": "king’s-rock",
                     "method": "item"
@@ -92209,7 +92994,13 @@
                 "swift-swim"
             ],
             "base_experience": 108,
-            "evolutions": [],
+            "evolutions": [
+                {
+                    "into": "mantine",
+                    "method": "partner",
+                    "partner": "remoraid"
+                }
+            ],
             "gender": "f50",
             "growth": "slow",
             "items": [],
@@ -94855,7 +95646,14 @@
                 "shadow-tag"
             ],
             "base_experience": 44,
-            "evolutions": [],
+            "evolutions": [
+                {
+                    "into": "wobbuffet",
+                    "level": 90,
+                    "location": "mt-coronet",
+                    "method": "level"
+                }
+            ],
             "gender": "f50",
             "growth": "slow",
             "items": [],
@@ -95515,7 +96313,14 @@
                 "battle-armor"
             ],
             "base_experience": 99,
-            "evolutions": [],
+            "evolutions": [
+                {
+                    "into": "armaldo",
+                    "level": 40,
+                    "location": "mt-coronet",
+                    "method": "level"
+                }
+            ],
             "gender": "f12.5",
             "growth": "erratic",
             "items": [],

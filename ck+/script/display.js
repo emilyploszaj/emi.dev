@@ -1,3 +1,5 @@
+const genderIcons = ["∅", "♀", "♂"];
+
 var menuOpen;
 var playerMoveVariants = [-1, -1, -1, -1];
 var enemyMoveVariants = [-1, -1, -1, -1];
@@ -23,7 +25,7 @@ function displayCalcPokemon(root, poke, opponent, right) {
 	root.getElementsByClassName("poke-level")[0].innerHTML = "Lvl " + poke.level;
 	root.getElementsByClassName("poke-item")[0].innerHTML = itemLink(poke.item);
 	root.getElementsByClassName("poke-icon")[0].innerHTML = '<img draggable="false" src="' + getPokeImage(poke, "large") + '">';
-	root.getElementsByClassName("poke-gender")[0].innerHTML = ["∅", "♀", "♂"][getGender(poke)];
+	root.getElementsByClassName("poke-gender")[0].innerHTML = genderIcons[getGender(poke)];
 	if (right && root.getElementsByClassName("experience").length > 0) {
 		var exp = p.base_experience;
 		if (poke.transformStats) {
@@ -333,6 +335,36 @@ function displayCalcStat(div, battlePoke, stat) {
 	//div.getElementsByClassName("stat-num")[0].innerHTML = "<ruby>" + s + "<rt>" + o + "</rt></ruby>";
 }
 
+function getEvolutionDescription(evolution) {
+	var desc;
+	if (evolution.method == "item") {
+		desc = itemLink(evolution.item);
+	} else if (evolution.method == "level") {
+		desc = "Level " + evolution.level;
+	} else if (evolution.method == "hitmonlee" || evolution.method == "hitmonchan" || evolution.method == "hitmontop") {
+		desc = "Level 25";
+	} else if (evolution.method == "happiness") {
+		desc = "Max happiness";
+	} else if (evolution.method == "beauty") {
+		desc = "Max beauty";
+	} else if (evolution.method == "partner") {
+		desc = "With " + pokeLink(evolution.partner);
+	} else if (evolution.method == "move") {
+		desc = "Knows " + pokeLink(evolution.move);
+	} else {
+		desc = evolution.method;
+	}
+	if (evolution.gender == "male") {
+		desc += " " + genderIcons[2];
+	} else if (evolution.gender == "female") {
+		desc += " " + genderIcons[1];
+	}
+	if (evolution.location) {
+		desc += ` (${areaLink(evolution.location)})`;
+	}
+	return desc;
+}
+
 function displayPokemon(root, i) {
 	var p = pokemonByPokedex.get(i);
 	root.getElementsByClassName("poke-name")[0].innerHTML = pokeLink(p);
@@ -404,32 +436,14 @@ function displayPokemon(root, i) {
 			if (evolution.into != p.name) {
 				continue;
 			}
-			var before;
-			if (evolution.method == "item") {
-				before = itemLink(evolution.item);
-			} else if (evolution.method == "level") {
-				before = "Level " + evolution.level;
-			} else if (evolution.method == "hitmonlee" || evolution.method == "hitmonchan" || evolution.method == "hitmontop") {
-				before = "Level 25";
-			} else {
-				before = evolution.method;
-			}
+			var before = getEvolutionDescription(evolution);
 			evo += "<div>" + pokeLink(v.name) + " -> " + before + "</div>"
 		}
 	}
 	if (p.evolutions) {
 		for (var i = 0; i < p.evolutions.length; i++) {
 			var evolution = p.evolutions[i];
-			var before;
-			if (evolution.method == "item") {
-				before = itemLink(evolution.item);
-			} else if (evolution.method == "level") {
-				before = "Level " + evolution.level;
-			} else if (evolution.method == "hitmonlee" || evolution.method == "hitmonchan" || evolution.method == "hitmontop") {
-				before = "Level 25";
-			} else {
-				before = evolution.method;
-			}
+			var before = getEvolutionDescription(evolution);
 			evo += "<div>" + before + " -> " + pokeLink(evolution.into) + "</div>"
 		}
 	}
