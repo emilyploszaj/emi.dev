@@ -184,15 +184,21 @@
 			</div>
 		</div>
 		<div id="settings" class="tab">
-			<h6>Vs. Recorder</h6>
+			<h6 class="hide-gen4">Vs. Recorder</h6>
+			<h6 class="show-gen4">Vs. Link Ersatz</h6>
 			<p>
 				<input id="enable-vs-recorder" type="checkbox" onchange="updateSettings()"/>
 				<label for="enable-vs-recorder" class="fake-checkbox"></label>
-				<label for="enable-vs-recorder" style="cursor:pointer;">Enable Vs. Recorder syncing</label>
+				<label for="enable-vs-recorder" style="cursor:pointer;">Enable <span class="hide-gen4">Vs. Recorder</span><span class="show-gen4">Vs. Link Ersatz</span> syncing</label>
 				<lb></lb>
 				Adds a button that can be used to load box from the currently open game. This imports all the data a .sav import would normally do.
 				<lb></lb>
-				Vs. Recorder can be downloaded <a href="https://github.com/emilyploszaj/vs-recorder" target="_blank">here</a>.
+				<span class="hide-gen4">
+					Vs. Recorder can be downloaded <a href="https://github.com/emilyploszaj/vs-recorder" target="_blank">here</a>.
+				</span>
+				<span class="show-gen4">
+					Vs. Link Ersatz can be downloaded <a href="https://github.com/emilyploszaj/vs-link-ersatz" target="_blank">here</a>.
+				</span>
 			</p>
 			<h6>Statistics</h6>
 			<p>

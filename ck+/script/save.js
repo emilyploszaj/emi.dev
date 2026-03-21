@@ -508,34 +508,53 @@ function parseTemplate(bytes, offset, template) {
 
 function vsRecorderComplete(event) {
 	try {
-		connectToVsRecorder();
-		var response = event.target.responseText;
-		var values = [...response.matchAll(/(\w+)\:\s*(.+)/g)];
-		var obj = {}
-		for (const v of values) {
-			obj[v[1]] = v[2]
-		}
-		var pokemon = [];
-		var deadPokemon = [];
-		pokemon = pokemon.concat(readPokemonList(hexToBytes(obj.Party), 0, 6, 48));
-		var newboxBytes = hexToBytes(obj.NewboxMetadata);
-		var db1 = newboxBytes.length;
-		newboxBytes = newboxBytes.concat(hexToBytes(obj.NewboxDatabase1));
-		var db2 = newboxBytes.length;
-		newboxBytes = newboxBytes.concat(hexToBytes(obj.NewboxDatabase2));
-		for (var i = 0; i < 16; i++) {
-			var l = readNewbox(newboxBytes, 0x00 + i * 0x21, db1, db2);
-			if (i >= 12) {
-				deadPokemon = deadPokemon.concat(l);
-			} else {
-				pokemon = pokemon.concat(l);
+		if (game.name == "pk") {
+			var response = JSON.parse(event.target.responseText);
+			var pokemon = [];
+			for (var i = 0; i < 6; i++) {
+				var mon = readGen4Mon(response.party, 0 + 236 * i);
+				if (mon) {
+					pokemon.push(mon);
+				}
 			}
+			for (var a = 0; a < 18 * 30; a++) {
+				var mon = readGen4Mon(response.pc, 136 * a);
+				if (mon) {
+					pokemon.push(mon);
+				}
+			}
+			box = pokemon;
+			finishParse("Successfully read Vs. Link Ersatz!", pokemon, []);
+		} else {
+			connectToVsRecorder();
+			var response = event.target.responseText;
+			var values = [...response.matchAll(/(\w+)\:\s*(.+)/g)];
+			var obj = {}
+			for (const v of values) {
+				obj[v[1]] = v[2]
+			}
+			var pokemon = [];
+			var deadPokemon = [];
+			pokemon = pokemon.concat(readPokemonList(hexToBytes(obj.Party), 0, 6, 48));
+			var newboxBytes = hexToBytes(obj.NewboxMetadata);
+			var db1 = newboxBytes.length;
+			newboxBytes = newboxBytes.concat(hexToBytes(obj.NewboxDatabase1));
+			var db2 = newboxBytes.length;
+			newboxBytes = newboxBytes.concat(hexToBytes(obj.NewboxDatabase2));
+			for (var i = 0; i < 16; i++) {
+				var l = readNewbox(newboxBytes, 0x00 + i * 0x21, db1, db2);
+				if (i >= 12) {
+					deadPokemon = deadPokemon.concat(l);
+				} else {
+					pokemon = pokemon.concat(l);
+				}
+			}
+			box = pokemon;
+			deadBox = deadPokemon;
+			var inventoryBytes = hexToBytes(obj.InventoryData);
+			parseBadges((inventoryBytes[0x0F] << 8) | inventoryBytes[0x10]);
+			finishParse("Successfully read Vs. Recorder!", pokemon, deadPokemon);
 		}
-		box = pokemon;
-		deadBox = deadPokemon;
-		var inventoryBytes = hexToBytes(obj.InventoryData);
-		parseBadges((inventoryBytes[0x0F] << 8) | inventoryBytes[0x10]);
-		finishParse("Successfully read Vs. Recorder!", pokemon, deadPokemon);
 	} catch (e) {
 		console.log(e);
 		document.getElementById("info-popup").innerHTML = '<div onclick="closePopup()" class="save-error">Error while parsing Vs. Recorder!<lb></lb>See console for details</div>';
@@ -552,7 +571,11 @@ function updateVsRecorder() {
 	req.addEventListener("load", vsRecorderComplete);
 	req.addEventListener("error", vsRecorderFailed);
 	req.addEventListener("abort", vsRecorderFailed);
-	req.open("GET", "http://localhost:31123/update");
+	if (game.name == "pk") {
+		req.open("GET", "http://localhost:31123/sync");
+	} else {
+		req.open("GET", "http://localhost:31123/update");
+	}
 	req.send();
 }
 

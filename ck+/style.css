@@ -1480,3 +1480,15 @@ rt {
 .target-block-targeted {
 	background-color: var(--ohko);
 }
+
+.gen-4 .hide-gen4 {
+	display: none;
+}
+
+.show-gen4 {
+	display: none;
+}
+
+.gen-4 .show-gen4 {
+	display: initial;
+}
