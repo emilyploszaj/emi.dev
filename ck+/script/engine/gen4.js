@@ -215,6 +215,9 @@ function getDamage(attacker, defender, move) {
 	var a = getModifiedStatGen4(attacker.poke, attacker.stages, attackStat);
 	var d = getModifiedStatGen4(defender.poke, defender.stages, defenseStat);
 	if (move.crit) {
+		if (attacker.stages[attackStat] < 0) {
+			a = attacker.getStat(attackStat);
+		}
 		if (defender.stages[defenseStat] > 0) {
 			d = defender.getStat(defenseStat);
 		}

@@ -401,8 +401,6 @@ function readGen4Mon(bytes, offset) {
 		},
 	}
 	if (form > 0) {
-		console.log(species);
-		console.log(form);
 		if (formMap[species.name]?.["" + form]) {
 			species = pokemonByName.get(formMap[species.name]["" + form]);
 		}
