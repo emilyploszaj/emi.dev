@@ -99607,7 +99607,7 @@
                     "item": "sitrus-berry",
                     "level": 23,
                     "moves": [
-                        "extreme-speed",
+                        "extremespeed",
                         "belly-drum",
                         "dig"
                     ],
@@ -100491,7 +100491,7 @@
                     "moves": [
                         "aqua-jet",
                         "thunder",
-                        "extreme-speed",
+                        "extremespeed",
                         "dragon-rage"
                     ],
                     "name": "dragonair",
@@ -100755,7 +100755,7 @@
                     "item": "liechi-berry",
                     "level": 23,
                     "moves": [
-                        "extreme-speed",
+                        "extremespeed",
                         "rain-dance",
                         "dragon-rush",
                         "aqua-jet"
@@ -102064,7 +102064,7 @@
                     "item": "choice-band",
                     "level": 32,
                     "moves": [
-                        "extreme-speed"
+                        "extremespeed"
                     ],
                     "name": "linoone",
                     "nature": "careful"
@@ -116328,7 +116328,7 @@
                     "item": "shuca-berry",
                     "level": 73,
                     "moves": [
-                        "extreme-speed",
+                        "extremespeed",
                         "solar-beam",
                         "heat-wave",
                         "close-combat"
@@ -118724,7 +118724,7 @@
                     "level": 84,
                     "moves": [
                         "curse",
-                        "extreme-speed",
+                        "extremespeed",
                         "outrage",
                         "aqua-tail"
                     ],
@@ -125403,7 +125403,7 @@
                     "level": 88,
                     "moves": [
                         "outrage",
-                        "extreme-speed",
+                        "extremespeed",
                         "roost",
                         "dragon-dance"
                     ],
@@ -125488,7 +125488,7 @@
                     "moves": [
                         "draco-meteor",
                         "stone-edge",
-                        "extreme-speed",
+                        "extremespeed",
                         "earthquake"
                     ],
                     "name": "dragonite",
@@ -125500,7 +125500,7 @@
                     "level": 87,
                     "moves": [
                         "flare-blitz",
-                        "extreme-speed",
+                        "extremespeed",
                         "hp-grass",
                         "stone-edge"
                     ],
@@ -125981,7 +125981,7 @@
                     "moves": [
                         "dragon-breath",
                         "aqua-jet",
-                        "extreme-speed",
+                        "extremespeed",
                         "hyper-beam"
                     ],
                     "name": "dragonite",
