@@ -407,6 +407,12 @@ class DragDrop {
 								index: -1,
 								poke: data.trainers[parseInt(parts[1])].team[parseInt(parts[2])]
 							}
+						} else if (parts[0] == "tag") {
+							from = {
+								type: "tag",
+								index: -1,
+								poke: trainersByName.get(playerTagPartners[currentTagPartner]).team[parseInt(parts[1])]
+							}
 						}
 						eval(dropInfo.element.getAttribute("drop"));
 					}

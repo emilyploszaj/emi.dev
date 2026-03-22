@@ -370,6 +370,43 @@ function readGen4Mon(bytes, offset) {
 	} else if (form & 0b100) {
 		gender = "unknown";
 	}
+	form = form >> 3
+	var formMap = {
+		"deoxys": {
+			"0": "deoxys",
+			"1": "deoxys-attack",
+			"2": "deoxys-defense",
+			"3": "deoxys-speed",
+		},
+		"wormadam": {
+			"0": "wormadam",
+			"1": "wormadam-sandy",
+			"2": "wormadam-trash",
+		},
+		"rotom": {
+			"0": "rotom",
+			"1": "rotom-heat",
+			"2": "rotom-wash",
+			"3": "rotom-frost",
+			"4": "rotom-fan",
+			"5": "rotom-mow",
+		},
+		"giratina": {
+			"0": "giratina",
+			"1": "giratina-origin",
+		},
+		"shaymin": {
+			"0": "shaymin",
+			"1": "shaymin-sky",
+		},
+	}
+	if (form > 0) {
+		console.log(species);
+		console.log(form);
+		if (formMap[species.name]?.["" + form]) {
+			species = pokemonByName.get(formMap[species.name]["" + form]);
+		}
+	}
 	var location = landmarksByIndex.get(blockD.pkEncounterLocation)?.name ?? "unknown";
 	return {
 		name: species.name,

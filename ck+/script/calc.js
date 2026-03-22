@@ -224,6 +224,12 @@ function getPokeStat(poke, stat) {
 	return engine.getPokeStat(poke, stat);
 }
 
+function setTagPlayer(i) {
+	myPoke = trainersByName.get(playerTagPartners[currentTagPartner]).team[i];
+	clearPlayerStages();
+	updateCalc();
+}
+
 function setPlayer(i) {
 	myPoke = box[i];
 	clearPlayerStages();
@@ -264,12 +270,45 @@ function calcTrainer(i) {
 	lastTrainer = i;
 	savedData["last-trainer"] = lastTrainer;
 	writeLocalStorage();
+	currentTagPartner = 0;
+	if (data.trainers[i]["player-partners"]) {
+		playerTagPartners = data.trainers[i]["player-partners"];
+	} else {
+		playerTagPartners = [];
+	}
+	calcTagPartners();
 	enemyTeam = data.trainers[i].team;
 	document.getElementById("current-trainer-name").innerHTML = `${getTrainerName(data.trainers[i].name)}`;
 	document.getElementById("current-trainer-navigate").href = `#/trainer/${data.trainers[i].name}/`;
 	setEnemy(lastTrainer, 0);
 	navigate("#/calc/");
 	history.pushState(getLinkState(), "", "#/calc/");
+}
+
+function calcTagPartners() {
+	if (playerTagPartners.length > 0) {
+		document.getElementById("tag-partner-team").style.display = "initial";
+		var partner = trainersByName.get(playerTagPartners[currentTagPartner]);
+		var cycling = "";
+		if (playerTagPartners.length > 1) {
+			cycling = `<div id="tag-cycle-buttons"><button onclick="cycleTagPartner(-1)">Previous</button><button onclick="cycleTagPartner(1)">Next</button></div>`;
+		}
+		document.getElementById("tag-partner-name").innerHTML = `${getTrainerName(partner.name)}${cycling}`
+		document.getElementById("tag-partner-meta").innerHTML = `${partner.meta ?? "Tag Partner"}`
+	} else {
+		document.getElementById("tag-partner-team").style.display = "none";
+	}
+}
+
+function cycleTagPartner(i) {
+	currentTagPartner += i;
+	if (currentTagPartner < 0) {
+		currentTagPartner = playerTagPartners.length - 1;
+	} else if (currentTagPartner >= playerTagPartners.length) {
+		currentTagPartner = 0;
+	}
+	calcTagPartners(i);
+	updateCalc();
 }
 
 function transform(right) {

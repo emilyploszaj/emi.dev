@@ -5078,17 +5078,22 @@
                 {
                     "pool": [
                         {
-                            "chance": 33,
+                            "chance": 25,
                             "level": 17,
                             "pokemon": "pikachu"
                         },
                         {
-                            "chance": 33,
+                            "chance": 25,
                             "level": 17,
                             "pokemon": "elekid"
                         },
                         {
-                            "chance": 33,
+                            "chance": 25,
+                            "level": 15,
+                            "pokemon": "pachirisu"
+                        },
+                        {
+                            "chance": 25,
                             "level": 8,
                             "pokemon": "pichu"
                         }
@@ -97191,7 +97196,7 @@
         {
             "area": "Unknown",
             "meta": "(Player chose Chimchar)",
-            "name": "barry-#2",
+            "name": "barry-2",
             "team": [
                 {
                     "ability": "technician",
@@ -97270,7 +97275,7 @@
         {
             "area": "Unknown",
             "meta": "(Player chose Piplup)",
-            "name": "barry-#2",
+            "name": "barry-2-2",
             "team": [
                 {
                     "ability": "technician",
@@ -97349,7 +97354,7 @@
         {
             "area": "Unknown",
             "meta": "(Player chose Turtwig)",
-            "name": "barry-#2",
+            "name": "barry-2-3",
             "team": [
                 {
                     "ability": "technician",
@@ -98212,6 +98217,11 @@
             "area": "Unknown",
             "meta": "(MULTI BATTLE WITH GALACTIC LUNA)",
             "name": "galacticf-venus",
+            "player-partners": [
+                "trainer-dawn\/lucas",
+                "trainer-dawn\/lucas-2",
+                "trainer-dawn\/lucas-3"
+            ],
             "team": [
                 {
                     "ability": "drought",
@@ -98269,8 +98279,14 @@
         },
         {
             "area": "Unknown",
+            "b2b": true,
             "meta": "(MULTI BATTLE WITH GALACTIC VENUS)",
             "name": "galactic-luna",
+            "player-partners": [
+                "trainer-dawn\/lucas",
+                "trainer-dawn\/lucas-2",
+                "trainer-dawn\/lucas-3"
+            ],
             "team": [
                 {
                     "ability": "magic-guard",
@@ -98328,8 +98344,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(TAG PARTNER",
-            "name": "\"trainer-dawn\/lucas",
+            "meta": "(TAG PARTNER, Player selected Chimchar)",
+            "name": "trainer-dawn\/lucas",
             "team": [
                 {
                     "ability": "guts",
@@ -98411,8 +98427,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(TAG PARTNER",
-            "name": "\"trainer-dawn\/lucas",
+            "meta": "(TAG PARTNER, Player selected Piplup)",
+            "name": "trainer-dawn\/lucas-2",
             "team": [
                 {
                     "ability": "guts",
@@ -98494,8 +98510,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(TAG PARTNER",
-            "name": "\"trainer-dawn\/lucas",
+            "meta": "(TAG PARTNER, Player selected Turtwig)",
+            "name": "trainer-dawn\/lucas-3",
             "team": [
                 {
                     "ability": "guts",
@@ -99746,6 +99762,9 @@
             "area": "Unknown",
             "meta": "(MULTI BATTLE With Galactic Bianca)",
             "name": "galacticfophelia",
+            "player-partners": [
+                "trainer-cheryl"
+            ],
             "team": [
                 {
                     "ability": "clear-body",
@@ -99790,8 +99809,12 @@
         },
         {
             "area": "Unknown",
+            "b2b": true,
             "meta": "(MULTI BATTLE With Galactic Ophelia)",
             "name": "galacticfbianca",
+            "player-partners": [
+                "trainer-cheryl"
+            ],
             "team": [
                 {
                     "ability": "aftermath",
@@ -99836,8 +99859,11 @@
         },
         {
             "area": "Unknown",
-            "meta": "(MULTI BATTLE With Galactic Sycorax",
-            "name": "\"galactic-setebos",
+            "meta": "(MULTI BATTLE With Galactic Sycorax, between the trees on the top path)",
+            "name": "galactic-setebos",
+            "player-partners": [
+                "trainer-cheryl"
+            ],
             "team": [
                 {
                     "ability": "rough-skin",
@@ -99882,8 +99908,12 @@
         },
         {
             "area": "Unknown",
-            "meta": "(MULTI BATTLE With Galactic Setebos",
-            "name": "\"galacticfsycorax",
+            "b2b": true,
+            "meta": "(MULTI BATTLE With Galactic Setebos, between the trees on the top path)",
+            "name": "galacticfsycorax",
+            "player-partners": [
+                "trainer-cheryl"
+            ],
             "team": [
                 {
                     "ability": "levitate",
@@ -99928,8 +99958,11 @@
         },
         {
             "area": "Unknown",
-            "meta": "(MULTI BATTLE With Galactic Miranda",
-            "name": "\"galactic-prospero",
+            "meta": "(MULTI BATTLE With Galactic Miranda, at the bottom path)",
+            "name": "galactic-prospero",
+            "player-partners": [
+                "trainer-cheryl"
+            ],
             "team": [
                 {
                     "ability": "levitate",
@@ -99974,8 +100007,12 @@
         },
         {
             "area": "Unknown",
-            "meta": "(MULTI BATTLE With Galactic Prospero",
-            "name": "\"galacticfmiranda",
+            "b2b": true,
+            "meta": "(MULTI BATTLE With Galactic Prospero, at the bottom path)",
+            "name": "galacticfmiranda",
+            "player-partners": [
+                "trainer-cheryl"
+            ],
             "team": [
                 {
                     "ability": "unburden",
@@ -100022,6 +100059,9 @@
             "area": "Unknown",
             "meta": "(Next to the sign)",
             "name": "galactic-puck",
+            "player-partners": [
+                "trainer-cheryl"
+            ],
             "team": [
                 {
                     "ability": "levitate",
@@ -100081,6 +100121,9 @@
             "area": "Unknown",
             "meta": "(Bottom right corner)",
             "name": "galactic-trinculo",
+            "player-partners": [
+                "trainer-cheryl"
+            ],
             "team": [
                 {
                     "ability": "levitate",
@@ -100139,7 +100182,10 @@
         {
             "area": "Unknown",
             "meta": "(Above Trinculo)",
-            "name": "galactic-mercury",
+            "name": "galactic-mercury-2",
+            "player-partners": [
+                "trainer-cheryl"
+            ],
             "team": [
                 {
                     "ability": "drought",
@@ -100210,6 +100256,9 @@
             "area": "Unknown",
             "meta": "(Above the trees on the right)",
             "name": "galacticfvenus",
+            "player-partners": [
+                "trainer-cheryl"
+            ],
             "team": [
                 {
                     "ability": "swarm",
@@ -100280,8 +100329,11 @@
         },
         {
             "area": "Unknown",
-            "meta": "(MULTI BATTLE With Galactic Francisco",
-            "name": "\"galacticfuranus",
+            "meta": "(MULTI BATTLE With Galactic Francisco, Left of the trees)",
+            "name": "galacticfuranus",
+            "player-partners": [
+                "trainer-cheryl"
+            ],
             "team": [
                 {
                     "ability": "snow-warning",
@@ -100326,8 +100378,12 @@
         },
         {
             "area": "Unknown",
-            "meta": "(MULTI BATTLE With Galactic Uranus",
-            "name": "\"galactic-francisco",
+            "b2b": true,
+            "meta": "(MULTI BATTLE With Galactic Uranus, Left of the trees)",
+            "name": "galactic-francisco",
+            "player-partners": [
+                "trainer-cheryl"
+            ],
             "team": [
                 {
                     "ability": "magic-guard",
@@ -100372,8 +100428,11 @@
         },
         {
             "area": "Unknown",
-            "meta": "(MULTI BATTLE With Galactic Neptune",
-            "name": "\"galactic-triton",
+            "meta": "(MULTI BATTLE With Galactic Neptune, Right of the trees)",
+            "name": "galactic-triton",
+            "player-partners": [
+                "trainer-cheryl"
+            ],
             "team": [
                 {
                     "ability": "swift-swim",
@@ -100418,8 +100477,12 @@
         },
         {
             "area": "Unknown",
-            "meta": "(MULTI BATTLE With Galactic Triton",
-            "name": "\"galactic-neptune",
+            "b2b": true,
+            "meta": "(MULTI BATTLE With Galactic Triton, Right of the trees)",
+            "name": "galactic-neptune",
+            "player-partners": [
+                "trainer-cheryl"
+            ],
             "team": [
                 {
                     "ability": "drizzle",
@@ -100465,7 +100528,10 @@
         {
             "area": "Unknown",
             "meta": "(MULTI BATTLE With Galactic Luna)",
-            "name": "galacticfterra",
+            "name": "galacticfterra-2",
+            "player-partners": [
+                "trainer-cheryl"
+            ],
             "team": [
                 {
                     "ability": "trace",
@@ -100523,8 +100589,12 @@
         },
         {
             "area": "Unknown",
+            "b2b": true,
             "meta": "(MULTI BATTLE With Galactic Terra)",
-            "name": "galactic-luna",
+            "name": "galactic-luna-2",
+            "player-partners": [
+                "trainer-cheryl"
+            ],
             "team": [
                 {
                     "ability": "bad-dreams",
@@ -101637,6 +101707,7 @@
         },
         {
             "area": "Unknown",
+            "b2b": true,
             "meta": "(MULTI BATTLE With Cyclist Axel)",
             "name": "cyclist-john",
             "team": [
@@ -101700,6 +101771,7 @@
         },
         {
             "area": "Unknown",
+            "b2b": true,
             "meta": "(MULTI BATTLE With Cyclist Megan)",
             "name": "cyclistfnicole",
             "team": [
@@ -103175,8 +103247,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(Also Appears in Room 5",
-            "name": "\"leader-fantina-?",
+            "meta": "(Also Appears in Room 5, Separate Fight)",
+            "name": "leader-fantina-?",
             "team": [
                 {
                     "ability": "pressure",
@@ -103555,7 +103627,7 @@
         {
             "area": "Unknown",
             "meta": "(FOG)",
-            "name": "idol-catherine",
+            "name": "idol-catherine-2",
             "team": [
                 {
                     "ability": "super-luck",
@@ -103614,7 +103686,7 @@
         {
             "area": "Unknown",
             "meta": "(FOG)",
-            "name": "ninja-boy-donny",
+            "name": "ninja-boy-donny-2",
             "team": [
                 {
                     "ability": "sand-veil",
@@ -103850,7 +103922,7 @@
         {
             "area": "Unknown",
             "meta": "(Player picked Chimchar)",
-            "name": "barry-#3",
+            "name": "barry-3",
             "team": [
                 {
                     "ability": "guts",
@@ -103935,7 +104007,7 @@
         {
             "area": "Unknown",
             "meta": "(Player picked Piplup)",
-            "name": "barry-#3",
+            "name": "barry-3-2",
             "team": [
                 {
                     "ability": "guts",
@@ -104020,7 +104092,7 @@
         {
             "area": "Unknown",
             "meta": "(Player picked Turtwig)",
-            "name": "barry-#3",
+            "name": "barry-3-3",
             "team": [
                 {
                     "ability": "guts",
@@ -105061,8 +105133,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(DOUBLE BATTLE",
-            "name": "\"twins-teri-&-tia",
+            "meta": "(DOUBLE BATTLE, RAIN)",
+            "name": "twins-teri-&-tia",
             "team": [
                 {
                     "ability": "minus",
@@ -105277,8 +105349,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(OPTIONAL",
-            "name": "\"jogger-scott",
+            "meta": "(OPTIONAL, RAIN)",
+            "name": "jogger-scott",
             "team": [
                 {
                     "ability": "heatproof",
@@ -105647,8 +105719,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(TAG PARTNER",
-            "name": "\"trainer-dawn\/lucas",
+            "meta": "(TAG PARTNER, Player selected Chimchar)",
+            "name": "trainer-dawn\/lucas-4",
             "team": [
                 {
                     "ability": "guts",
@@ -105732,8 +105804,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(TAG PARTNER",
-            "name": "\"trainer-dawn\/lucas",
+            "meta": "(TAG PARTNER, Player selected Piplup)",
+            "name": "trainer-dawn\/lucas-5",
             "team": [
                 {
                     "ability": "guts",
@@ -105817,8 +105889,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(TAG PARTNER",
-            "name": "\"trainer-dawn\/lucas",
+            "meta": "(TAG PARTNER, Player selected Turtwig)",
+            "name": "trainer-dawn\/lucas-6",
             "team": [
                 {
                     "ability": "guts",
@@ -106458,6 +106530,7 @@
         },
         {
             "area": "Unknown",
+            "b2b": true,
             "meta": "(MULTI BATTLE With Psychic Abigail)",
             "name": "psychic-mitchell",
             "team": [
@@ -107006,6 +107079,7 @@
         },
         {
             "area": "Unknown",
+            "b2b": true,
             "meta": "(MULTI BATTLE With BirdKeeper Billie)",
             "name": "ruin-maniac-bruno",
             "team": [
@@ -107072,6 +107146,7 @@
         },
         {
             "area": "Unknown",
+            "b2b": true,
             "meta": "(MULTI BATTLE With Sailor Gene)",
             "name": "pokekid-jerry",
             "team": [
@@ -107138,6 +107213,7 @@
         },
         {
             "area": "Unknown",
+            "b2b": true,
             "meta": "(MULTI BATTLE With Guitarist Kenny)",
             "name": "idol-dolly",
             "team": [
@@ -107204,6 +107280,7 @@
         },
         {
             "area": "Unknown",
+            "b2b": true,
             "meta": "(MULTI BATTLE With Beauty Britney)",
             "name": "dragon-tamer-elton",
             "team": [
@@ -107810,8 +107887,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(Player picked Chimchar",
-            "name": "\"barry-#4",
+            "meta": "(Player picked Chimchar, outside of Pastoria Gym)",
+            "name": "barry-4",
             "team": [
                 {
                     "ability": "reckless",
@@ -107895,8 +107972,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(Player picked Piplup",
-            "name": "\"barry-#4",
+            "meta": "(Player picked Piplup, outside of Pastoria Gym)",
+            "name": "barry-4-2",
             "team": [
                 {
                     "ability": "reckless",
@@ -107980,8 +108057,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(Player picked Turtwig",
-            "name": "\"barry-#4",
+            "meta": "(Player picked Turtwig, outside of Pastoria Gym)",
+            "name": "barry-4-3",
             "team": [
                 {
                     "ability": "reckless",
@@ -108737,7 +108814,7 @@
         },
         {
             "area": "Unknown",
-            "name": "galactic-io",
+            "name": "galactic-io-2",
             "team": [
                 {
                     "ability": "drought",
@@ -109374,8 +109451,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(FOG",
-            "name": "\"galactic-valetudo",
+            "meta": "(FOG, OPTIONAL, POTENTIAL MULTI BATTLE WITH GALACTIC TERRA)*",
+            "name": "galactic-valetudo",
             "team": [
                 {
                     "ability": "mold-breaker",
@@ -109459,8 +109536,9 @@
         },
         {
             "area": "Unknown",
-            "meta": "(FOG",
-            "name": "\"galacticf-terra",
+            "b2b": true,
+            "meta": "(FOG, POTENTIAL MULTI BATTLE WITH GALACTIC VALETUDO)",
+            "name": "galacticf-terra",
             "team": [
                 {
                     "ability": "heatproof",
@@ -109545,7 +109623,7 @@
         {
             "area": "Unknown",
             "meta": "(FOG)",
-            "name": "galacticf-venus",
+            "name": "galacticf-venus-2",
             "team": [
                 {
                     "ability": "aftermath",
@@ -109629,8 +109707,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(FOG",
-            "name": "\"galacticf-leda",
+            "meta": "(FOG, DOUBLE BATTLE)",
+            "name": "galacticf-leda",
             "team": [
                 {
                     "ability": "levitate",
@@ -109884,8 +109962,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(FOG",
-            "name": "\"galactic-themisto",
+            "meta": "(FOG, DOUBLE BATTLE)",
+            "name": "galactic-themisto",
             "team": [
                 {
                     "ability": "dry-skin",
@@ -109967,8 +110045,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(FOG",
-            "name": "\"galacticf-dia",
+            "meta": "(FOG, OPTIONAL)*",
+            "name": "galacticf-dia",
             "team": [
                 {
                     "ability": "synchronize",
@@ -110223,7 +110301,7 @@
         {
             "area": "Unknown",
             "meta": "(FOG)",
-            "name": "galactic-callisto",
+            "name": "galactic-callisto-2",
             "team": [
                 {
                     "ability": "solid-rock",
@@ -110393,7 +110471,7 @@
         {
             "area": "Unknown",
             "meta": "(FOG)",
-            "name": "galactic-pluto",
+            "name": "galactic-pluto-2",
             "team": [
                 {
                     "ability": "solid-rock",
@@ -110478,7 +110556,7 @@
         {
             "area": "Unknown",
             "meta": "(FOG)",
-            "name": "galactic-ganymede",
+            "name": "galactic-ganymede-2",
             "team": [
                 {
                     "ability": "filter",
@@ -110562,8 +110640,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(FOG",
-            "name": "\"galacticf-io",
+            "meta": "(FOG, DOUBLE BATTLE)",
+            "name": "galacticf-io",
             "team": [
                 {
                     "ability": "intimidate",
@@ -110645,8 +110723,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(FOG",
-            "name": "\"commander-jupiter",
+            "meta": "(FOG, DOUBLE BATTLE)",
+            "name": "commander-jupiter-2",
             "team": [
                 {
                     "ability": "intimidate",
@@ -110730,7 +110808,7 @@
         },
         {
             "area": "Unknown",
-            "name": "galactic-mercury",
+            "name": "galactic-mercury-3",
             "team": [
                 {
                     "ability": "levitate",
@@ -111098,8 +111176,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(Player picked Chimchar",
-            "name": "\"barry-#5",
+            "meta": "(Player picked Chimchar, on Canalave Bridge)",
+            "name": "barry-5",
             "team": [
                 {
                     "ability": "reckless",
@@ -111183,8 +111261,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(Player picked Piplup",
-            "name": "\"barry-#5",
+            "meta": "(Player picked Piplup, on Canalave Bridge)",
+            "name": "barry-5-2",
             "team": [
                 {
                     "ability": "reckless",
@@ -111268,8 +111346,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(Player picked Turtwig",
-            "name": "\"barry-#5",
+            "meta": "(Player picked Turtwig, on Canalave Bridge)",
+            "name": "barry-5-3",
             "team": [
                 {
                     "ability": "reckless",
@@ -111484,6 +111562,7 @@
         },
         {
             "area": "Unknown",
+            "b2b": true,
             "meta": "(MULTI BATTLE With Galactic Calypso)",
             "name": "galactic-thalassa",
             "team": [
@@ -111602,6 +111681,7 @@
         },
         {
             "area": "Unknown",
+            "b2b": true,
             "meta": "(MULTI BATTLE With Galactic Despina)",
             "name": "galacticf-galatea",
             "team": [
@@ -111720,6 +111800,7 @@
         },
         {
             "area": "Unknown",
+            "b2b": true,
             "meta": "(MULTI BATTLE With Galactic Hippocamp)",
             "name": "galactic-psamanthe",
             "team": [
@@ -111838,6 +111919,7 @@
         },
         {
             "area": "Unknown",
+            "b2b": true,
             "meta": "(MULTI BATTLE With Galactic Naid)",
             "name": "galacticf-nereid",
             "team": [
@@ -111956,6 +112038,7 @@
         },
         {
             "area": "Unknown",
+            "b2b": true,
             "meta": "(MULTI BATTLE With Galactic Halimede)",
             "name": "galactic-proteus",
             "team": [
@@ -112071,6 +112154,7 @@
         },
         {
             "area": "Unknown",
+            "b2b": true,
             "meta": "(MULTI BATTLE With Galactic Sao)",
             "name": "galactic-neso",
             "team": [
@@ -112189,6 +112273,7 @@
         },
         {
             "area": "Unknown",
+            "b2b": true,
             "meta": "(MULTI BATTLE With Galactic Larissa)",
             "name": "galacticf-laomedeia",
             "team": [
@@ -112249,7 +112334,7 @@
         {
             "area": "Unknown",
             "meta": "(MULTI BATTLE With Galactic Neptune)",
-            "name": "galactic-triton",
+            "name": "galactic-triton-2",
             "team": [
                 {
                     "ability": "swift-swim",
@@ -112307,8 +112392,9 @@
         },
         {
             "area": "Unknown",
+            "b2b": true,
             "meta": "(MULTI BATTLE With Galactic Triton)",
-            "name": "galactic-neptune",
+            "name": "galactic-neptune-2",
             "team": [
                 {
                     "ability": "magic-guard",
@@ -112832,8 +112918,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(RAIN",
-            "name": "\"galactic-pan",
+            "meta": "(RAIN, MULTI BATTLE With Galactic Daphnis)",
+            "name": "galactic-pan",
             "team": [
                 {
                     "ability": "dry-skin",
@@ -112891,8 +112977,9 @@
         },
         {
             "area": "Unknown",
-            "meta": "(RAIN",
-            "name": "\"galactic-daphnis",
+            "b2b": true,
+            "meta": "(RAIN, MULTI BATTLE With Galactic Pan)",
+            "name": "galactic-daphnis",
             "team": [
                 {
                     "ability": "swift-swim",
@@ -113009,6 +113096,7 @@
         },
         {
             "area": "Unknown",
+            "b2b": true,
             "meta": "(MULTI BATTLE With Galactic Epimetheus)",
             "name": "galactic-prometheus",
             "team": [
@@ -113068,8 +113156,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(RAIN",
-            "name": "\"galacticf-phoebe",
+            "meta": "(RAIN, MULTI BATTLE With Galactic Iapetus)",
+            "name": "galacticf-phoebe",
             "team": [
                 {
                     "ability": "shadow-tag",
@@ -113114,8 +113202,9 @@
         },
         {
             "area": "Unknown",
-            "meta": "(RAIN",
-            "name": "\"galactic-iapetus",
+            "b2b": true,
+            "meta": "(RAIN, MULTI BATTLE With Galactic Phoebe)",
+            "name": "galactic-iapetus",
             "team": [
                 {
                     "ability": "heatproof",
@@ -113225,6 +113314,7 @@
         },
         {
             "area": "Unknown",
+            "b2b": true,
             "meta": "(MULTI BATTLE With Galactic Enceladus)",
             "name": "galacticf-mimas",
             "team": [
@@ -113284,8 +113374,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(RAIN",
-            "name": "\"galacticf-pandora",
+            "meta": "(RAIN, MULTI BATTLE With Galactic Dione)",
+            "name": "galacticf-pandora",
             "team": [
                 {
                     "ability": "intimidate",
@@ -113330,8 +113420,9 @@
         },
         {
             "area": "Unknown",
-            "meta": "(RAIN",
-            "name": "\"galacticf-dione",
+            "b2b": true,
+            "meta": "(RAIN, MULTI BATTLE WITH Galactic Pandora)",
+            "name": "galacticf-dione",
             "team": [
                 {
                     "ability": "lightning-rod",
@@ -113422,6 +113513,7 @@
         },
         {
             "area": "Unknown",
+            "b2b": true,
             "meta": "(MULTI BATTLE With Galactic Atlas)",
             "name": "galactic-hyperion",
             "team": [
@@ -113466,8 +113558,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(RAIN",
-            "name": "\"galacticf-tethys",
+            "meta": "(RAIN, MULTI BATTLE With Galactic Rhea)",
+            "name": "galacticf-tethys",
             "team": [
                 {
                     "ability": "swift-swim",
@@ -113525,8 +113617,9 @@
         },
         {
             "area": "Unknown",
-            "meta": "(RAIN",
-            "name": "\"galacticf-rhea",
+            "b2b": true,
+            "meta": "(RAIN, MULTI BATTLE With Galactic Tethys)",
+            "name": "galacticf-rhea",
             "team": [
                 {
                     "ability": "natural-cure",
@@ -113584,8 +113677,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(RAIN",
-            "name": "\"commander-saturn",
+            "meta": "(RAIN, MULTI BATTLE WITH GALACTIC TITAN)",
+            "name": "commander-saturn",
             "team": [
                 {
                     "ability": "levitate",
@@ -113656,8 +113749,9 @@
         },
         {
             "area": "Unknown",
-            "meta": "(RAIN",
-            "name": "\"galactic-titan",
+            "b2b": true,
+            "meta": "(RAIN, MULTI BATTLE WITH GALACTIC SATURN)",
+            "name": "galactic-titan",
             "team": [
                 {
                     "ability": "guts",
@@ -113716,7 +113810,7 @@
         {
             "area": "Unknown",
             "meta": "(TAG PARTNER)",
-            "name": "trainer-dawn\/lucas",
+            "name": "trainer-dawn\/lucas-7",
             "team": [
                 {
                     "ability": "serene-grace",
@@ -113801,7 +113895,7 @@
         {
             "area": "Unknown",
             "meta": "(MULTI BATTLE with Galactic Venus)",
-            "name": "galactic-mercury",
+            "name": "galactic-mercury-4",
             "team": [
                 {
                     "ability": "limber",
@@ -113859,8 +113953,9 @@
         },
         {
             "area": "Unknown",
+            "b2b": true,
             "meta": "(MULTI BATTLE with Galactic Mercury)",
-            "name": "galacticf-venus",
+            "name": "galacticf-venus-3",
             "team": [
                 {
                     "ability": "drought",
@@ -113919,7 +114014,7 @@
         {
             "area": "Unknown",
             "meta": "(MULTI BATTLE with Galactic Pluto)",
-            "name": "galacticf-luna",
+            "name": "galacticf-luna-2",
             "team": [
                 {
                     "ability": "levitate",
@@ -113977,8 +114072,9 @@
         },
         {
             "area": "Unknown",
+            "b2b": true,
             "meta": "(MULTI BATTLE with Galactic Luna)",
-            "name": "galactic-pluto",
+            "name": "galactic-pluto-3",
             "team": [
                 {
                     "ability": "snow-warning",
@@ -114037,7 +114133,7 @@
         {
             "area": "Unknown",
             "meta": "(MULTI BATTLE with Galactic Squad Phobos)",
-            "name": "galactic-squad-deimos",
+            "name": "galactic-squad-deimos-2",
             "team": [
                 {
                     "ability": "trace",
@@ -114121,8 +114217,9 @@
         },
         {
             "area": "Unknown",
+            "b2b": true,
             "meta": "(MULTI BATTLE with Galactic Squad Deimos)",
-            "name": "galactic-squad-phobos",
+            "name": "galactic-squad-phobos-2",
             "team": [
                 {
                     "ability": "sand-stream",
@@ -114207,7 +114304,7 @@
         {
             "area": "Unknown",
             "meta": "(MULTI BATTLE with Galactic Terra)",
-            "name": "commander-mars",
+            "name": "commander-mars-2",
             "team": [
                 {
                     "ability": "sand-stream",
@@ -114291,8 +114388,9 @@
         },
         {
             "area": "Unknown",
+            "b2b": true,
             "meta": "(MULTI BATTLE with Commander Mars)",
-            "name": "galacticf-terra",
+            "name": "galacticf-terra-2",
             "team": [
                 {
                     "ability": "levitate",
@@ -114658,8 +114756,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(OPTIONAL",
-            "name": "\"ace-trainer-blake",
+            "meta": "(OPTIONAL, HAIL)*",
+            "name": "ace-trainer-blake",
             "team": [
                 {
                     "ability": "technician",
@@ -114881,8 +114979,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(OPTIONAL",
-            "name": "\"ace-trainer-olivia",
+            "meta": "(OPTIONAL, HAIL)",
+            "name": "ace-trainer-olivia",
             "team": [
                 {
                     "ability": "swift-swim",
@@ -114966,8 +115064,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(OPTIONAL",
-            "name": "\"ninja-boy-ethan",
+            "meta": "(OPTIONAL, HAIL)",
+            "name": "ninja-boy-ethan",
             "team": [
                 {
                     "ability": "snow-cloak",
@@ -115051,8 +115149,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(OPTIONAL",
-            "name": "\"skier-madison",
+            "meta": "(OPTIONAL, HAIL)",
+            "name": "skier-madison",
             "team": [
                 {
                     "ability": "forecast",
@@ -115136,8 +115234,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(OPTIONAL",
-            "name": "\"blackbelt-luke",
+            "meta": "(OPTIONAL, HAIL)",
+            "name": "blackbelt-luke",
             "team": [
                 {
                     "ability": "super-luck",
@@ -115221,8 +115319,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(OPTIONAL",
-            "name": "\"ace-trainer-dalton",
+            "meta": "(OPTIONAL, HAIL)",
+            "name": "ace-trainer-dalton",
             "team": [
                 {
                     "ability": "iron-fist",
@@ -115306,8 +115404,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(OPTIONAL",
-            "name": "\"ninja-boy-matthew",
+            "meta": "(OPTIONAL, HAIL)",
+            "name": "ninja-boy-matthew",
             "team": [
                 {
                     "ability": "wonder-guard",
@@ -115388,8 +115486,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(OPTIONAL",
-            "name": "\"skier-bjorn",
+            "meta": "(OPTIONAL, HAIL)",
+            "name": "skier-bjorn",
             "team": [
                 {
                     "ability": "overgrow",
@@ -115408,8 +115506,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(OPTIONAL",
-            "name": "\"skier-shawn",
+            "meta": "(OPTIONAL, HAIL)",
+            "name": "skier-shawn",
             "team": [
                 {
                     "ability": "adaptability",
@@ -115493,8 +115591,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(OPTIONAL",
-            "name": "\"veteran-anton",
+            "meta": "(OPTIONAL, HAIL)",
+            "name": "veteran-anton",
             "team": [
                 {
                     "ability": "thick-fat",
@@ -115637,8 +115735,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(OPTIONAL",
-            "name": "\"skier-mirabelle",
+            "meta": "(OPTIONAL, HAIL)",
+            "name": "skier-mirabelle",
             "team": [
                 {
                     "ability": "serene-grace",
@@ -115709,8 +115807,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(OPTIONAL",
-            "name": "\"skier-isaiah",
+            "meta": "(OPTIONAL, HAIL)",
+            "name": "skier-isaiah",
             "team": [
                 {
                     "ability": "shell-armor",
@@ -115781,8 +115879,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(OPTIONAL",
-            "name": "\"skier-savannah",
+            "meta": "(OPTIONAL, HAIL)",
+            "name": "skier-savannah",
             "team": [
                 {
                     "ability": "rough-skin",
@@ -116010,8 +116108,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(SUN",
-            "name": "\"guitarist-cole",
+            "meta": "(SUN, MULTI BATTLE With Bird Keeper Nicola)",
+            "name": "guitarist-cole",
             "team": [
                 {
                     "ability": "scrappy",
@@ -116056,8 +116154,9 @@
         },
         {
             "area": "Unknown",
-            "meta": "(SUN",
-            "name": "\"birdkeeper-nicola",
+            "b2b": true,
+            "meta": "(SUN, MULTI BATTLE With Guitarist Cole)",
+            "name": "birdkeeper-nicola",
             "team": [
                 {
                     "ability": "serene-grace",
@@ -116174,8 +116273,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(SUN",
-            "name": "\"rich-boy-trey",
+            "meta": "(SUN, MULTI BATTLE With Policeman Thomas)",
+            "name": "rich-boy-trey",
             "team": [
                 {
                     "ability": "solar-power",
@@ -116220,8 +116319,9 @@
         },
         {
             "area": "Unknown",
-            "meta": "(SUN",
-            "name": "\"policeman-thomas",
+            "b2b": true,
+            "meta": "(SUN, MULTI BATTLE With Rich Boy Trey)",
+            "name": "policeman-thomas",
             "team": [
                 {
                     "ability": "intimidate",
@@ -116266,8 +116366,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(SUN",
-            "name": "\"belle-&-pa-scout-&-atticus",
+            "meta": "(SUN, DOUBLE BATTLE)",
+            "name": "belle-&-pa-scout-&-atticus",
             "team": [
                 {
                     "ability": "intimidate",
@@ -116456,8 +116556,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(SUN",
-            "name": "\"sailor-jack",
+            "meta": "(SUN, MULTI BATTLE With Lady Rose)",
+            "name": "sailor-jack",
             "team": [
                 {
                     "ability": "unburden",
@@ -116502,8 +116602,9 @@
         },
         {
             "area": "Unknown",
-            "meta": "(SUN",
-            "name": "\"lady-rose",
+            "b2b": true,
+            "meta": "(SUN, MULTI BATTLE with Sailor Jack)",
+            "name": "lady-rose",
             "team": [
                 {
                     "ability": "lightning-rod",
@@ -116548,8 +116649,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(SUN",
-            "name": "\"interviewers-barbara-&-walter",
+            "meta": "(SUN, DOUBLE)",
+            "name": "interviewers-barbara-&-walter",
             "team": [
                 {
                     "ability": "chlorophyll",
@@ -116620,8 +116721,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(SUN",
-            "name": "\"socialite-alec",
+            "meta": "(SUN, MULTI BATTLE With Gentleman Luther)",
+            "name": "socialite-alec",
             "team": [
                 {
                     "ability": "chlorophyll",
@@ -116666,8 +116767,9 @@
         },
         {
             "area": "Unknown",
-            "meta": "(SUN",
-            "name": "\"gentleman-luther",
+            "b2b": true,
+            "meta": "(SUN, MULTI BATTLE with Socialite Alec)",
+            "name": "gentleman-luther",
             "team": [
                 {
                     "ability": "truant",
@@ -116712,8 +116814,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(SUN",
-            "name": "\"tuberf-holly",
+            "meta": "(SUN, OPTIONAL)",
+            "name": "tuberf-holly",
             "team": [
                 {
                     "ability": "sniper",
@@ -116817,6 +116919,7 @@
         },
         {
             "area": "Unknown",
+            "b2b": true,
             "meta": "(MULTI BATTLE with Pokefan Liz)",
             "name": "pokefan-rj",
             "team": [
@@ -117135,6 +117238,7 @@
         },
         {
             "area": "Unknown",
+            "b2b": true,
             "meta": "(MULTI BATTLE with Worker Hugh)",
             "name": "waiter-reynolds",
             "team": [
@@ -117524,7 +117628,7 @@
         },
         {
             "area": "Unknown",
-            "name": "pkmn-ranger-allison",
+            "name": "pkmn-ranger-allison-2",
             "team": [
                 {
                     "ability": "reckless",
@@ -117543,7 +117647,7 @@
         },
         {
             "area": "Unknown",
-            "name": "pkmn-ranger-taylor",
+            "name": "pkmn-ranger-taylor-2",
             "team": [
                 {
                     "ability": "swift-swim",
@@ -117562,8 +117666,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(RAIN",
-            "name": "\"swimmerf-wang",
+            "meta": "(RAIN, OPTIONAL)*",
+            "name": "swimmerf-wang",
             "team": [
                 {
                     "ability": "swift-swim",
@@ -117621,8 +117725,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(RAIN",
-            "name": "\"swimmerf-wang",
+            "meta": "(RAIN, OPTIONAL)*",
+            "name": "swimmerf-wang-2",
             "team": [
                 {
                     "ability": "swift-swim",
@@ -117680,8 +117784,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(RAIN",
-            "name": "\"swimmerf-wang",
+            "meta": "(RAIN, OPTIONAL)*",
+            "name": "swimmerf-wang-3",
             "team": [
                 {
                     "ability": "swift-swim",
@@ -117739,8 +117843,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(RAIN",
-            "name": "\"swimmerf-wang",
+            "meta": "(RAIN, OPTIONAL)*",
+            "name": "swimmerf-wang-4",
             "team": [
                 {
                     "ability": "swift-swim",
@@ -118013,8 +118117,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(MULTI BATTLE with Clown Bob",
-            "name": "\"collector-gerald",
+            "meta": "(MULTI BATTLE with Clown Bob, GAUNTLET)*",
+            "name": "collector-gerald",
             "team": [
                 {
                     "ability": "adaptability",
@@ -118059,8 +118163,9 @@
         },
         {
             "area": "Unknown",
-            "meta": "(MULTI BATTLE with Collector Gerald",
-            "name": "\"clown-bob",
+            "b2b": true,
+            "meta": "(MULTI BATTLE with Collector Gerald, GAUNTLET)",
+            "name": "clown-bob",
             "team": [
                 {
                     "ability": "unburden",
@@ -118105,8 +118210,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(MULTI BATTLE with Picknicker Tori",
-            "name": "\"camper-parker",
+            "meta": "(MULTI BATTLE with Picknicker Tori, GAUNTLET)",
+            "name": "camper-parker",
             "team": [
                 {
                     "ability": "truant",
@@ -118138,8 +118243,9 @@
         },
         {
             "area": "Unknown",
-            "meta": "(MULTI BATTLE with Camper Parker",
-            "name": "\"picknicker-tori",
+            "b2b": true,
+            "meta": "(MULTI BATTLE with Camper Parker, GAUNTLET)",
+            "name": "picknicker-tori",
             "team": [
                 {
                     "ability": "compound-eyes",
@@ -118171,8 +118277,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(MULTI BATTLE with Camper Mike",
-            "name": "\"bug-catcher-adalbert",
+            "meta": "(MULTI BATTLE with Camper Mike, GAUNTLET)",
+            "name": "bug-catcher-adalbert",
             "team": [
                 {
                     "ability": "tinted-lens",
@@ -118204,8 +118310,9 @@
         },
         {
             "area": "Unknown",
-            "meta": "(MULTI BATTLE with Bug Catcher Adalbert",
-            "name": "\"camper-mike",
+            "b2b": true,
+            "meta": "(MULTI BATTLE with Bug Catcher Adalbert, GAUNTLET)",
+            "name": "camper-mike",
             "team": [
                 {
                     "ability": "adaptability",
@@ -118237,8 +118344,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(MULTI BATTLE with Youngster Butch",
-            "name": "\"lass-cassidy",
+            "meta": "(MULTI BATTLE with Youngster Butch, GAUNTLET)",
+            "name": "lass-cassidy",
             "team": [
                 {
                     "ability": "natural-cure",
@@ -118270,8 +118377,9 @@
         },
         {
             "area": "Unknown",
-            "meta": "(MULTI BATTLE with Lass Cassidy",
-            "name": "\"youngster-butch",
+            "b2b": true,
+            "meta": "(MULTI BATTLE with Lass Cassidy, GAUNTLET)",
+            "name": "youngster-butch",
             "team": [
                 {
                     "ability": "filter",
@@ -118303,8 +118411,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(MULTI BATTLE with Hiker Lorenzo",
-            "name": "\"hiker-reginald",
+            "meta": "(MULTI BATTLE with Hiker Lorenzo, GAUNTLET)",
+            "name": "hiker-reginald",
             "team": [
                 {
                     "ability": "intimidate",
@@ -118349,8 +118457,9 @@
         },
         {
             "area": "Unknown",
-            "meta": "(MULTI BATTLE with Hiker Reginald",
-            "name": "\"hiker-lorenzo",
+            "b2b": true,
+            "meta": "(MULTI BATTLE with Hiker Reginald, GAUNTLET)",
+            "name": "hiker-lorenzo",
             "team": [
                 {
                     "ability": "filter",
@@ -118395,8 +118504,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(MULTI BATTLE with Lady Caitlin",
-            "name": "\"castle-valet-darach",
+            "meta": "(MULTI BATTLE with Lady Caitlin, GAUNTLET END)",
+            "name": "castle-valet-darach",
             "team": [
                 {
                     "ability": "hyper-cutter",
@@ -118441,8 +118550,9 @@
         },
         {
             "area": "Unknown",
-            "meta": "(MULTI BATTLE with Castle Valet Darach",
-            "name": "\"lady-caitlin",
+            "b2b": true,
+            "meta": "(MULTI BATTLE with Castle Valet Darach, GAUNTLET END)",
+            "name": "lady-caitlin",
             "team": [
                 {
                     "ability": "magic-guard",
@@ -118604,6 +118714,7 @@
         },
         {
             "area": "Unknown",
+            "b2b": true,
             "meta": "(MULTI BATTLE with Galactic Portia)",
             "name": "galacticfcressida",
             "team": [
@@ -118650,7 +118761,7 @@
         },
         {
             "area": "Unknown",
-            "name": "galactic-trinculo",
+            "name": "galactic-trinculo-2",
             "team": [
                 {
                     "ability": "battle-armor",
@@ -118767,8 +118878,9 @@
         },
         {
             "area": "Unknown",
+            "b2b": true,
             "meta": "(MULTI BATTLE with Galactic Umbriel)",
-            "name": "galactic-francisco",
+            "name": "galactic-francisco-2",
             "team": [
                 {
                     "ability": "poison-heal",
@@ -118814,7 +118926,7 @@
         {
             "area": "Unknown",
             "meta": "(MULTI BATTLE with Galactic Ferdinand)",
-            "name": "galacticfmiranda",
+            "name": "galacticfmiranda-2",
             "team": [
                 {
                     "ability": "levitate",
@@ -118859,6 +118971,7 @@
         },
         {
             "area": "Unknown",
+            "b2b": true,
             "meta": "(MULTI BATTLE with Galactic Miranda)",
             "name": "galactic-ferdinand",
             "team": [
@@ -119036,6 +119149,7 @@
         },
         {
             "area": "Unknown",
+            "b2b": true,
             "meta": "(MULTI BATTLE with Galactic Magaret)",
             "name": "galacticfcupid",
             "team": [
@@ -119153,8 +119267,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(MULTI BATTLE with Galactic Sycorax",
-            "name": "\"galactic-setebos",
+            "meta": "(MULTI BATTLE with Galactic Sycorax, Up)*",
+            "name": "galactic-setebos-2",
             "team": [
                 {
                     "ability": "drizzle",
@@ -119212,8 +119326,9 @@
         },
         {
             "area": "Unknown",
-            "meta": "(MULTI BATTLE with Galactic Setebos",
-            "name": "\"galacticfsycorax",
+            "b2b": true,
+            "meta": "(MULTI BATTLE with Galactic Setebos, Up)*",
+            "name": "galacticfsycorax-2",
             "team": [
                 {
                     "ability": "levitate",
@@ -119245,8 +119360,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(MULTI BATTLE with Galactic Bianca",
-            "name": "\"galacticfariel",
+            "meta": "(MULTI BATTLE with Galactic Bianca, Right)*",
+            "name": "galacticfariel",
             "team": [
                 {
                     "ability": "serene-grace",
@@ -119291,8 +119406,9 @@
         },
         {
             "area": "Unknown",
-            "meta": "(MULTI BATTLE with Galactic Ariel",
-            "name": "\"galacticfbianca",
+            "b2b": true,
+            "meta": "(MULTI BATTLE with Galactic Ariel, Right)*",
+            "name": "galacticfbianca-2",
             "team": [
                 {
                     "ability": "drizzle",
@@ -119797,8 +119913,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(Optional Bottom Path",
-            "name": "\"galactic-oberon",
+            "meta": "(Optional Bottom Path, MULTI BATTLE with Galactic Puck)*",
+            "name": "galactic-oberon",
             "team": [
                 {
                     "ability": "snow-warning",
@@ -119843,8 +119959,9 @@
         },
         {
             "area": "Unknown",
-            "meta": "(Optional Bottom Path",
-            "name": "\"galactic-puck",
+            "b2b": true,
+            "meta": "(Optional Bottom Path, MULTI BATTLE with Galactic Oberon)*",
+            "name": "galactic-puck-2",
             "team": [
                 {
                     "ability": "magic-guard",
@@ -119881,7 +119998,7 @@
         },
         {
             "area": "Unknown",
-            "name": "galactic-prospero",
+            "name": "galactic-prospero-2",
             "team": [
                 {
                     "ability": "drought",
@@ -119965,8 +120082,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(Right Door",
-            "name": "\"galactic-alborix",
+            "meta": "(Right Door, OPTIONAL)",
+            "name": "galactic-alborix",
             "team": [
                 {
                     "ability": "filter",
@@ -120024,8 +120141,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(Right Door",
-            "name": "\"galactic-skymir",
+            "meta": "(Right Door, OPTIONAL)",
+            "name": "galactic-skymir",
             "team": [
                 {
                     "ability": "wonder-guard",
@@ -120070,8 +120187,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(Right Door",
-            "name": "\"galactic-loge",
+            "meta": "(Right Door, OPTIONAL)",
+            "name": "galactic-loge",
             "team": [
                 {
                     "ability": "drought",
@@ -120116,8 +120233,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(Left Door",
-            "name": "\"galactic-hyperion",
+            "meta": "(Left Door, MULTI BATTLE with Galactic Prometheus)*",
+            "name": "galactic-hyperion-2",
             "team": [
                 {
                     "ability": "drought",
@@ -120162,8 +120279,9 @@
         },
         {
             "area": "Unknown",
-            "meta": "(Left Door",
-            "name": "\"galactic-prometheus",
+            "b2b": true,
+            "meta": "(Left Door, MULTI BATTLE with Galactic Hyperion)*",
+            "name": "galactic-prometheus-2",
             "team": [
                 {
                     "ability": "blaze",
@@ -120208,8 +120326,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(Middle Door",
-            "name": "\"galacticftethys",
+            "meta": "(Middle Door, MULTI BATTLE with GalacticfDione)*",
+            "name": "galacticftethys",
             "team": [
                 {
                     "ability": "serene-grace",
@@ -120254,8 +120372,9 @@
         },
         {
             "area": "Unknown",
-            "meta": "(Middle Door",
-            "name": "\"galacticfdione",
+            "b2b": true,
+            "meta": "(Middle Door, MULTI BATTLE with GalacticfTethys)*",
+            "name": "galacticfdione",
             "team": [
                 {
                     "ability": "drizzle",
@@ -120300,7 +120419,7 @@
         },
         {
             "area": "Unknown",
-            "name": "galactic-titan",
+            "name": "galactic-titan-2",
             "team": [
                 {
                     "ability": "thick-fat",
@@ -120385,7 +120504,7 @@
         {
             "area": "Unknown",
             "meta": "(MULTI BATTLE with Galactic Pandora)",
-            "name": "galactic-epimetheus",
+            "name": "galactic-epimetheus-2",
             "team": [
                 {
                     "ability": "rock-head",
@@ -120430,6 +120549,7 @@
         },
         {
             "area": "Unknown",
+            "b2b": true,
             "meta": "(MULTI BATTLE with Galactic Epimetheus)",
             "name": "galacticfpandora",
             "team": [
@@ -120476,8 +120596,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(Up",
-            "name": "\"galactic-enceladus",
+            "meta": "(Up, MULTI BATTLE with Galactic Mimas)*",
+            "name": "galactic-enceladus-2",
             "team": [
                 {
                     "ability": "snow-warning",
@@ -120522,8 +120642,9 @@
         },
         {
             "area": "Unknown",
-            "meta": "(Up",
-            "name": "\"galacticfmimas",
+            "b2b": true,
+            "meta": "(Up, MULTI BATTLE with Galactic Enceladus)*",
+            "name": "galacticfmimas",
             "team": [
                 {
                     "ability": "rain-dish",
@@ -120568,8 +120689,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(Middle",
-            "name": "\"galacticfdaphnis",
+            "meta": "(Middle, MULTI BATTLE with Galactic Pan)*",
+            "name": "galacticfdaphnis",
             "team": [
                 {
                     "ability": "scrappy",
@@ -120614,8 +120735,9 @@
         },
         {
             "area": "Unknown",
-            "meta": "(Middle",
-            "name": "\"galacticfpan",
+            "b2b": true,
+            "meta": "(Middle, MULTI BATTLE with Galactic Daphnis)*",
+            "name": "galacticfpan",
             "team": [
                 {
                     "ability": "rough-skin",
@@ -120660,8 +120782,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(To the right",
-            "name": "\"galactic-kari",
+            "meta": "(To the right, Path 1)*",
+            "name": "galactic-kari",
             "team": [
                 {
                     "ability": "sand-stream",
@@ -120732,8 +120854,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(MULTI BATTLE with Galactic Greip",
-            "name": "\"galactic-geirrod",
+            "meta": "(MULTI BATTLE with Galactic Greip, Path 1)",
+            "name": "galactic-geirrod",
             "team": [
                 {
                     "ability": "dry-skin",
@@ -120778,8 +120900,9 @@
         },
         {
             "area": "Unknown",
-            "meta": "(MULTI BATTLE with Galactic Geirrod",
-            "name": "\"galactic-greip",
+            "b2b": true,
+            "meta": "(MULTI BATTLE with Galactic Geirrod, Path 1)",
+            "name": "galactic-greip",
             "team": [
                 {
                     "ability": "drizzle",
@@ -120824,8 +120947,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(Up",
-            "name": "\"galactic-iapetus",
+            "meta": "(Up, MULTI BATTLE with Galactic Phoebe, Path 2)*",
+            "name": "galactic-iapetus-2",
             "team": [
                 {
                     "ability": "levitate",
@@ -120870,8 +120993,9 @@
         },
         {
             "area": "Unknown",
-            "meta": "(MULTI BATTLE with Galactic Iapetus",
-            "name": "\"galacticfphoebe",
+            "b2b": true,
+            "meta": "(MULTI BATTLE with Galactic Iapetus, Path 2)",
+            "name": "galacticfphoebe",
             "team": [
                 {
                     "ability": "levitate",
@@ -120917,7 +121041,7 @@
         {
             "area": "Unknown",
             "meta": "(Path 2)",
-            "name": "galactic-atlas",
+            "name": "galactic-atlas-2",
             "team": [
                 {
                     "ability": "drought",
@@ -120988,8 +121112,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(OPTIONAL",
-            "name": "\"galacticfrhea",
+            "meta": "(OPTIONAL, Path 2)",
+            "name": "galacticfrhea",
             "team": [
                 {
                     "ability": "drizzle",
@@ -121060,7 +121184,7 @@
         },
         {
             "area": "Unknown",
-            "name": "galacticfuranus",
+            "name": "galacticfuranus-2",
             "team": [
                 {
                     "ability": "snow-warning",
@@ -121145,7 +121269,7 @@
         {
             "area": "Unknown",
             "meta": "(Trick Room)",
-            "name": "leader-cyrus",
+            "name": "leader-cyrus-2",
             "team": [
                 {
                     "ability": "magic-guard",
@@ -121229,7 +121353,7 @@
         },
         {
             "area": "Unknown",
-            "name": "galactic-io",
+            "name": "galactic-io-3",
             "team": [
                 {
                     "ability": "drought",
@@ -121313,7 +121437,7 @@
         },
         {
             "area": "Unknown",
-            "name": "commander-saturn",
+            "name": "commander-saturn-2",
             "team": [
                 {
                     "ability": "levitate",
@@ -121398,7 +121522,7 @@
         {
             "area": "Unknown",
             "meta": "(MULTI BATTLE with Galactic Halimede)",
-            "name": "galactic-ganymede",
+            "name": "galactic-ganymede-3",
             "team": [
                 {
                     "ability": "solid-rock",
@@ -121443,6 +121567,7 @@
         },
         {
             "area": "Unknown",
+            "b2b": true,
             "meta": "(MULTI BATTLE with Galactic Ganymede)",
             "name": "galacticfhalimede",
             "team": [
@@ -121702,6 +121827,7 @@
         },
         {
             "area": "Unknown",
+            "b2b": true,
             "meta": "(MULTI BATTLE with Galactic Despina)",
             "name": "galacticf-bianca",
             "team": [
@@ -121749,7 +121875,7 @@
         {
             "area": "Unknown",
             "meta": "(Upstairs)",
-            "name": "galactic-ferdinand",
+            "name": "galactic-ferdinand-2",
             "team": [
                 {
                     "ability": "solid-rock",
@@ -121890,7 +122016,7 @@
         {
             "area": "Unknown",
             "meta": "(OPTIONAL DOUBLE BATTLE)",
-            "name": "galactic-squad-perdita",
+            "name": "galactic-squad-perdita-2",
             "team": [
                 {
                     "ability": "snow-cloak",
@@ -121961,7 +122087,7 @@
         },
         {
             "area": "Unknown",
-            "name": "galactic-valetudo",
+            "name": "galactic-valetudo-2",
             "team": [
                 {
                     "ability": "intimidate",
@@ -122032,8 +122158,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(MULTI BATTLE with Galactic Cressida",
-            "name": "\"galactic-cupid",
+            "meta": "(MULTI BATTLE with Galactic Cressida, Rock Smash Route)",
+            "name": "galactic-cupid-2",
             "team": [
                 {
                     "ability": "chlorophyll",
@@ -122078,8 +122204,9 @@
         },
         {
             "area": "Unknown",
-            "meta": "(MULTI BATTLE with Galactic Cupid",
-            "name": "\"galacticf-cressida",
+            "b2b": true,
+            "meta": "(MULTI BATTLE with Galactic Cupid, Rock Smash Route)",
+            "name": "galacticf-cressida",
             "team": [
                 {
                     "ability": "download",
@@ -122196,7 +122323,7 @@
         },
         {
             "area": "Unknown",
-            "name": "galactic-puck",
+            "name": "galactic-puck-3",
             "team": [
                 {
                     "ability": "magic-guard",
@@ -122234,7 +122361,7 @@
         {
             "area": "Unknown",
             "meta": "(TAG PARTNER)",
-            "name": "trainer-cheryl",
+            "name": "trainer-cheryl-2",
             "team": [
                 {
                     "ability": "thick-fat",
@@ -122319,7 +122446,7 @@
         {
             "area": "Unknown",
             "meta": "(MULTI BATTLE with Galactic Titania)",
-            "name": "galactic-oberon",
+            "name": "galactic-oberon-2",
             "team": [
                 {
                     "ability": "truant",
@@ -122403,6 +122530,7 @@
         },
         {
             "area": "Unknown",
+            "b2b": true,
             "meta": "(MULTI BATTLE with Galactic Oberon)",
             "name": "galacticf-titania",
             "team": [
@@ -122488,7 +122616,7 @@
         },
         {
             "area": "Unknown",
-            "name": "galactic-proteus",
+            "name": "galactic-proteus-2",
             "team": [
                 {
                     "ability": "shadow-tag",
@@ -122562,7 +122690,7 @@
         {
             "area": "Unknown",
             "meta": "(OPTIONAL)",
-            "name": "galacticf-laomedeia",
+            "name": "galacticf-laomedeia-2",
             "team": [
                 {
                     "ability": "serene-grace",
@@ -122607,7 +122735,7 @@
         },
         {
             "area": "Unknown",
-            "name": "galacticf-larissa",
+            "name": "galacticf-larissa-2",
             "team": [
                 {
                     "ability": "aftermath",
@@ -122764,7 +122892,7 @@
         {
             "area": "Unknown",
             "meta": "(MULTI BATTLE with Galactic Luna)",
-            "name": "galacticf-terra",
+            "name": "galacticf-terra-3",
             "team": [
                 {
                     "ability": "torrent",
@@ -122848,8 +122976,9 @@
         },
         {
             "area": "Unknown",
+            "b2b": true,
             "meta": "(MULTI BATTLE with Galactic Terra)",
-            "name": "galactic-luna",
+            "name": "galactic-luna-3",
             "team": [
                 {
                     "ability": "speed-boost",
@@ -122933,7 +123062,7 @@
         },
         {
             "area": "Unknown",
-            "name": "galacticf-europa",
+            "name": "galacticf-europa-2",
             "team": [
                 {
                     "ability": "snow-cloak",
@@ -123004,7 +123133,7 @@
         },
         {
             "area": "Unknown",
-            "name": "galactic-pluto",
+            "name": "galactic-pluto-4",
             "team": [
                 {
                     "ability": "clear-body",
@@ -123075,7 +123204,7 @@
         },
         {
             "area": "Unknown",
-            "name": "galactic-prospero",
+            "name": "galactic-prospero-3",
             "team": [
                 {
                     "ability": "magic-guard",
@@ -123146,8 +123275,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(DOUBLE BATTLE",
-            "name": "\"galactic-squad-amalthia",
+            "meta": "(DOUBLE BATTLE, Rock Smash + Cut Path)",
+            "name": "galactic-squad-amalthia",
             "team": [
                 {
                     "ability": "intimidate",
@@ -123452,7 +123581,7 @@
         {
             "area": "Unknown",
             "meta": "(MULTI BATTLE with Galactic Hippocamp)",
-            "name": "galactic-callisto",
+            "name": "galactic-callisto-3",
             "team": [
                 {
                     "ability": "magic-guard",
@@ -123497,8 +123626,9 @@
         },
         {
             "area": "Unknown",
+            "b2b": true,
             "meta": "(MULTI BATTLE with Galactic Callisto)",
-            "name": "galactic-hippocamp",
+            "name": "galactic-hippocamp-2",
             "team": [
                 {
                     "ability": "sand-stream",
@@ -123544,7 +123674,7 @@
         {
             "area": "Unknown",
             "meta": "(TAG PARTNER)",
-            "name": "trainer-marley",
+            "name": "trainer-marley-2",
             "team": [
                 {
                     "ability": "technician",
@@ -123629,7 +123759,7 @@
         {
             "area": "Unknown",
             "meta": "(MULTI BATTLE with Galactic Triton)",
-            "name": "galactic-neptune",
+            "name": "galactic-neptune-3",
             "team": [
                 {
                     "ability": "swift-swim",
@@ -123713,8 +123843,9 @@
         },
         {
             "area": "Unknown",
+            "b2b": true,
             "meta": "(MULTI BATTLE with Galactic Neptune)",
-            "name": "galactic-triton",
+            "name": "galactic-triton-3",
             "team": [
                 {
                     "ability": "drizzle",
@@ -123870,7 +124001,7 @@
         {
             "area": "Unknown",
             "meta": "(MUTLI BATTLE with Galactic Venus)",
-            "name": "galactic-mercury",
+            "name": "galactic-mercury-5",
             "team": [
                 {
                     "ability": "limber",
@@ -123961,8 +124092,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(TAG PARTNER",
-            "name": "\"barry",
+            "meta": "(TAG PARTNER, if Player chose Chimchar)",
+            "name": "barry",
             "team": [
                 {
                     "ability": "truant",
@@ -124047,7 +124178,7 @@
         {
             "area": "Unknown",
             "meta": "(TAG PARTNER if Player chose Piplup)",
-            "name": "barry",
+            "name": "barry-6",
             "team": [
                 {
                     "ability": "truant",
@@ -124131,8 +124262,8 @@
         },
         {
             "area": "Unknown",
-            "meta": "(TAG PARTNER",
-            "name": "\"barry",
+            "meta": "(TAG PARTNER, if Player chose Turtwig)",
+            "name": "barry-7",
             "team": [
                 {
                     "ability": "truant",
@@ -124216,8 +124347,9 @@
         },
         {
             "area": "Unknown",
+            "b2b": true,
             "meta": "(MULTI BATTLE with Commander Jupiter)",
-            "name": "commander-mars",
+            "name": "commander-mars-3",
             "team": [
                 {
                     "ability": "sand-veil",
@@ -124302,7 +124434,7 @@
         {
             "area": "Unknown",
             "meta": "(MULTI BATTLE with Commander Mars)",
-            "name": "commander-jupiter",
+            "name": "commander-jupiter-3",
             "team": [
                 {
                     "ability": "intimidate",
@@ -124472,7 +124604,7 @@
         {
             "area": "Unknown",
             "meta": "(SHADOW TAG)*",
-            "name": "cyrus",
+            "name": "cyrus-2",
             "team": [
                 {
                     "ability": "",
@@ -125127,7 +125259,7 @@
         },
         {
             "area": "Unknown",
-            "name": "beauty-jasmine-❤",
+            "name": "beauty-jasmine-❤-2",
             "team": [
                 {
                     "ability": "clear-body",
@@ -125716,7 +125848,8 @@
         },
         {
             "area": "Unknown",
-            "name": "\"idol-zoe",
+            "meta": "(Zoe wrote this)                                                                                       .",
+            "name": "idol-zoe,-the-best-trainer-in-the-game,-best-idol,-and-the-hardest-trainer-you-will-ever-face",
             "team": [
                 {
                     "ability": "snow-cloak",
@@ -125970,7 +126103,7 @@
         {
             "area": "Unknown",
             "meta": "(Player picked Chimchar)",
-            "name": "barry-#6",
+            "name": "barry-6-2",
             "team": [
                 {
                     "ability": "truant",
@@ -126055,7 +126188,7 @@
         {
             "area": "Unknown",
             "meta": "(Player picked Piplup)",
-            "name": "barry-#6",
+            "name": "barry-6-3",
             "team": [
                 {
                     "ability": "truant",
@@ -126140,7 +126273,7 @@
         {
             "area": "Unknown",
             "meta": "(Player picked Turtwig)",
-            "name": "barry-#6",
+            "name": "barry-6-4",
             "team": [
                 {
                     "ability": "truant",
@@ -126225,7 +126358,7 @@
         {
             "area": "Unknown",
             "meta": "(PERMANENT TRICK ROOM)",
-            "name": "sinister-hooded-figure-optional",
+            "name": "sinister-hooded-figure-optional-2",
             "team": [
                 {
                     "ability": "solid-rock",

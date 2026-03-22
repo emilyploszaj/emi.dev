@@ -480,8 +480,12 @@ function updateCalc() {
 			var img = '<img draggable="false" src="' + getPokeImage(box[i], "small") + '">';
 			v += `<div class="micro-mon drag-sortable" drag-content="player-${i}" onclick="setPlayer(${i})">${img}</div>`;
 		}
-		document.getElementById("player").getElementsByClassName("calc-team")[0].innerHTML = v;
+		document.getElementById("player").getElementsByClassName("calc-team")[1].innerHTML = v;
 		document.getElementById("opponent").getElementsByClassName("calc-team")[0].innerHTML = getEnemyTeamDisplay(enemyTeam, lastTrainer);
+		if (playerTagPartners.length > 0) {
+			document.getElementById("tag-partner-team").getElementsByClassName("calc-team")[0].innerHTML
+				= getTagTeamDisplay(trainersByName.get(playerTagPartners[currentTagPartner]).team)
+		}
 		var extraTrainers = "";
 		for (var i = lastTrainer + 1; isTrainerB2b(i); i++) {
 			extraTrainers += `<div class="calc-team">${getEnemyTeamDisplay(data.trainers[i].team, i)}</div>`;
@@ -493,7 +497,7 @@ function updateCalc() {
 		}
 		i--; // last trainer of the gauntlet
 		if (data.trainers[i].meta != undefined) {
-			extraTrainers += `<div style="padding-top:10px;">${data.trainers[i].meta}</div>`;
+			extraTrainers += `<div class="trainer-meta">${data.trainers[i].meta}</div>`;
 		}
 		document.getElementById("opponent").getElementsByClassName("extra-calc-teams")[0].innerHTML = extraTrainers;
 	} catch(e) {
@@ -507,6 +511,16 @@ function getEnemyTeamDisplay(enemyTeam, trainer) {
 		var prioClass = ["low", "neutral", "high"][Math.sign(getSwitchPriority(enemyTeam[i], myPoke)) + 1];
 		var img = `<img draggable="false" class="${prioClass}-switch-priority" src="${getPokeImage(enemyTeam[i], "small")}">`;
 		v += `<div class="micro-mon drag-sortable" drag-content="enemy-${trainer}-${i}" drag-type="box" onclick="setEnemy(${trainer}, ${i})">${img}</div>`;
+	}
+	return v;
+}
+
+function getTagTeamDisplay(tagTeam) {
+	var v = "";
+	for (let i in tagTeam) {
+		var prioClass = ["low", "neutral", "high"][Math.sign(getSwitchPriority(tagTeam[i], myPoke)) + 1];
+		var img = `<img draggable="false" class="${prioClass}-switch-priority" src="${getPokeImage(tagTeam[i], "small")}">`;
+		v += `<div class="micro-mon drag-sortable" drag-content="tag-${i}" drag-type="box" onclick="setTagPlayer(${i}, ${i})">${img}</div>`;
 	}
 	return v;
 }

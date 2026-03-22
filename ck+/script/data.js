@@ -51,6 +51,8 @@ var theirPoke;
 var box = [];
 var deadBox = [];
 var enemyTeam = [];
+var playerTagPartners = [];
+var currentTagPartner = 0;
 var editing = -1;
 var copyEditedMoves = false;
 var badges = 0;

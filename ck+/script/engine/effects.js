@@ -402,7 +402,6 @@ class Condition {
 }
 
 function checkStringCondition(condition, value) {
-	console.log(condition);
 	if (typeof condition === "string") {
 		return condition == value;
 	} else if (Array.isArray(condition)) {

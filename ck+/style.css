@@ -1492,3 +1492,25 @@ rt {
 .gen-4 .show-gen4 {
 	display: initial;
 }
+
+#tag-partner-details {
+	margin-top: 4px;
+	margin-bottom: 10px;
+}
+
+#tag-partner-meta, .trainer-meta {
+	font-size: 16px;
+	color: var(--dim-text);
+}
+
+.trainer-meta {
+	margin-top: 4px;
+}
+
+#tag-cycle-buttons {
+	float: right;
+}
+
+#tag-cycle-buttons button {
+	margin-left: 12px;
+}
