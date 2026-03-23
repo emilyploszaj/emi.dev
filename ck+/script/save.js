@@ -612,7 +612,7 @@ function vsRecorderComplete(event) {
 				}
 			}
 			box = pokemon;
-			if (response.version != "0.1.1" && vsLinkVersionBothering < 1) {
+			if (response.version != "0.1.2" && vsLinkVersionBothering < 1) {
 				vsLinkVersionBothering++;
 				document.getElementById("info-popup").innerHTML =
 					`<div onclick="closePopup()" class="save-error">Vs. Link Ersatz is out of date.<lb></lb>Please update for the latest features!</div>`;

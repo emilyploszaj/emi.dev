@@ -97,7 +97,7 @@ function getEditNature() {
 }
 
 function setEditNature(stat, dir) {
-	var nature = [...NATURE_TABLE[getEditNature()]];
+	var nature = [...NATURE_TABLE[getEditNature() ?? "hardy"]];
 	if (dir == "plus") {
 		nature[0] = stat;
 	} else {

@@ -18,9 +18,9 @@ function getTinyPokemonDisplay(tp, extra = "") {
 	v += `<div class="tiny-poke-types">${typeDisplay}</div>`;
 	v += `<div>${itemLink(tp.item)}</div>`;
 	v += `<div class="tiny-poke-dvs">`;
-	var nature = NATURE_TABLE[tp.nature] ?? ["atk", "atk"];
+	var nature = NATURE_TABLE[tp.nature ?? "hardy"] ?? ["atk", "atk"];
 	for (const stat of STATS) {
-		var sv = tp.dvs?.[stat] ?? "31";
+		var sv = tp.dvs?.[stat] ?? MAX_DV;
 		if (nature[0] != nature[1] && nature[0] == stat) {
 			v += `<span class="dv-plus">${sv}</span>`;
 		} else if (nature[0] != nature[1] && nature[1] == stat) {
