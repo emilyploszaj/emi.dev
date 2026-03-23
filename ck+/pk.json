@@ -3966,6 +3966,17 @@
                 {
                     "pool": "rock",
                     "type": "rock"
+                },
+                {
+                    "pool": [
+                        {
+                            "chance": 100,
+                            "extra": "Trade any pokemon (Quiet, Vital Spirit)",
+                            "level": 0,
+                            "pokemon": "slugma"
+                        }
+                    ],
+                    "type": "trade"
                 }
             ]
         },
@@ -4391,43 +4402,24 @@
             "area": "poketch-company",
             "pools": [
                 {
-                    "pool": {
-                        "day": [
-                            {
-                                "chance": 20,
-                                "level": 5,
-                                "pokemon": "glameow"
-                            },
-                            {
-                                "chance": 20,
-                                "level": 5,
-                                "pokemon": "meowth"
-                            },
-                            {
-                                "chance": 10,
-                                "level": 5,
-                                "pokemon": "skitty"
-                            }
-                        ],
-                        "night": [
-                            {
-                                "chance": 20,
-                                "level": 5,
-                                "pokemon": "glameow"
-                            },
-                            {
-                                "chance": 20,
-                                "level": 5,
-                                "pokemon": "meowth"
-                            },
-                            {
-                                "chance": 10,
-                                "level": 5,
-                                "pokemon": "skitty"
-                            }
-                        ]
-                    },
-                    "type": "walking"
+                    "pool": [
+                        {
+                            "chance": 33,
+                            "level": 5,
+                            "pokemon": "skitty"
+                        },
+                        {
+                            "chance": 33,
+                            "level": 5,
+                            "pokemon": "glameow"
+                        },
+                        {
+                            "chance": 33,
+                            "level": 5,
+                            "pokemon": "meowth"
+                        }
+                    ],
+                    "type": "gift"
                 }
             ]
         },
@@ -5099,6 +5091,17 @@
                         }
                     ],
                     "type": "local-honey-tree"
+                },
+                {
+                    "pool": [
+                        {
+                            "chance": 100,
+                            "extra": "After defeating Cyrus",
+                            "level": 15,
+                            "pokemon": "drifloon"
+                        }
+                    ],
+                    "type": "static"
                 }
             ]
         },
@@ -6015,6 +6018,28 @@
                         }
                     ],
                     "type": "super-rod"
+                },
+                {
+                    "pool": [
+                        {
+                            "chance": 100,
+                            "extra": "Egg, after defeating Galactic Commander Jupiter",
+                            "level": 1,
+                            "pokemon": "happiny"
+                        }
+                    ],
+                    "type": "gift"
+                },
+                {
+                    "pool": [
+                        {
+                            "chance": 100,
+                            "extra": "Trade any non-fire, non-poison pokemon (Brave, Simple)",
+                            "level": 0,
+                            "pokemon": "numel"
+                        }
+                    ],
+                    "type": "trade"
                 }
             ]
         },
@@ -6830,23 +6855,14 @@
             "area": "hearthome-city",
             "pools": [
                 {
-                    "pool": {
-                        "day": [
-                            {
-                                "chance": 20,
-                                "level": 20,
-                                "pokemon": "eevee"
-                            }
-                        ],
-                        "night": [
-                            {
-                                "chance": 20,
-                                "level": 20,
-                                "pokemon": "eevee"
-                            }
-                        ]
-                    },
-                    "type": "walking"
+                    "pool": [
+                        {
+                            "chance": 100,
+                            "level": 20,
+                            "pokemon": "eevee"
+                        }
+                    ],
+                    "type": "gift"
                 }
             ]
         },
@@ -7371,6 +7387,17 @@
                 {
                     "pool": "honey-tree.mid",
                     "type": "local-honey-tree"
+                },
+                {
+                    "pool": [
+                        {
+                            "chance": 100,
+                            "extra": "Odd Keystone, from Underground Man",
+                            "level": 25,
+                            "pokemon": "spiritomb"
+                        }
+                    ],
+                    "type": "static"
                 }
             ]
         },
@@ -7505,6 +7532,53 @@
                         ]
                     },
                     "type": "walking"
+                },
+                {
+                    "pool": [
+                        {
+                            "chance": 14,
+                            "extra": "Egg",
+                            "level": 1,
+                            "pokemon": "growlithe"
+                        },
+                        {
+                            "chance": 14,
+                            "extra": "Egg",
+                            "level": 1,
+                            "pokemon": "girafarig"
+                        },
+                        {
+                            "chance": 14,
+                            "extra": "Egg",
+                            "level": 1,
+                            "pokemon": "mareep"
+                        },
+                        {
+                            "chance": 14,
+                            "extra": "Egg",
+                            "level": 1,
+                            "pokemon": "miltank"
+                        },
+                        {
+                            "chance": 14,
+                            "extra": "Egg",
+                            "level": 1,
+                            "pokemon": "spoink"
+                        },
+                        {
+                            "chance": 14,
+                            "extra": "Egg",
+                            "level": 1,
+                            "pokemon": "ponyta"
+                        },
+                        {
+                            "chance": 14,
+                            "extra": "Egg",
+                            "level": 1,
+                            "pokemon": "mankey"
+                        }
+                    ],
+                    "type": "gift"
                 }
             ]
         },
@@ -7932,137 +8006,7 @@
         },
         {
             "area": "veilstone-city",
-            "pools": [
-                {
-                    "pool": {
-                        "day": [
-                            {
-                                "chance": 20,
-                                "level": 0,
-                                "pokemon": "persian"
-                            },
-                            {
-                                "chance": 20,
-                                "level": 0,
-                                "pokemon": "porygon"
-                            },
-                            {
-                                "chance": 10,
-                                "level": 0,
-                                "pokemon": "murkrow"
-                            },
-                            {
-                                "chance": 10,
-                                "level": 0,
-                                "pokemon": "mr-mime"
-                            },
-                            {
-                                "chance": 5,
-                                "level": 0,
-                                "pokemon": "pikachu"
-                            },
-                            {
-                                "chance": 5,
-                                "level": 0,
-                                "pokemon": "voltorb"
-                            },
-                            {
-                                "chance": 4,
-                                "level": 0,
-                                "pokemon": "pinsir"
-                            },
-                            {
-                                "chance": 4,
-                                "level": 0,
-                                "pokemon": "phione"
-                            },
-                            {
-                                "chance": 1,
-                                "level": 0,
-                                "pokemon": "miltank"
-                            },
-                            {
-                                "chance": 1,
-                                "level": 0,
-                                "pokemon": "castform"
-                            },
-                            {
-                                "chance": 10,
-                                "level": 0,
-                                "pokemon": "clefairy"
-                            },
-                            {
-                                "chance": 10,
-                                "level": 0,
-                                "pokemon": "nidoking"
-                            }
-                        ],
-                        "night": [
-                            {
-                                "chance": 20,
-                                "level": 0,
-                                "pokemon": "persian"
-                            },
-                            {
-                                "chance": 20,
-                                "level": 0,
-                                "pokemon": "porygon"
-                            },
-                            {
-                                "chance": 10,
-                                "level": 0,
-                                "pokemon": "murkrow"
-                            },
-                            {
-                                "chance": 10,
-                                "level": 0,
-                                "pokemon": "mr-mime"
-                            },
-                            {
-                                "chance": 5,
-                                "level": 0,
-                                "pokemon": "pikachu"
-                            },
-                            {
-                                "chance": 5,
-                                "level": 0,
-                                "pokemon": "voltorb"
-                            },
-                            {
-                                "chance": 4,
-                                "level": 0,
-                                "pokemon": "pinsir"
-                            },
-                            {
-                                "chance": 4,
-                                "level": 0,
-                                "pokemon": "phione"
-                            },
-                            {
-                                "chance": 1,
-                                "level": 0,
-                                "pokemon": "miltank"
-                            },
-                            {
-                                "chance": 1,
-                                "level": 0,
-                                "pokemon": "castform"
-                            },
-                            {
-                                "chance": 10,
-                                "level": 0,
-                                "pokemon": "nidoqueen"
-                            },
-                            {
-                                "chance": 10,
-                                "level": 0,
-                                "pokemon": "magmar"
-                            }
-                        ]
-                    },
-                    "type": "walking"
-                }
-            ]
+            "pools": []
         },
         {
             "area": "route-214",
@@ -8603,11 +8547,52 @@
                 {
                     "pool": "honey-tree.mid",
                     "type": "local-honey-tree"
+                },
+                {
+                    "pool": [
+                        {
+                            "chance": 16,
+                            "extra": "Egg",
+                            "level": 1,
+                            "pokemon": "krabby"
+                        },
+                        {
+                            "chance": 16,
+                            "extra": "Egg",
+                            "level": 1,
+                            "pokemon": "corphish"
+                        },
+                        {
+                            "chance": 16,
+                            "extra": "Egg",
+                            "level": 1,
+                            "pokemon": "cherubi"
+                        },
+                        {
+                            "chance": 16,
+                            "extra": "Egg",
+                            "level": 1,
+                            "pokemon": "exeggcute"
+                        },
+                        {
+                            "chance": 16,
+                            "extra": "Egg",
+                            "level": 1,
+                            "pokemon": "shuckle"
+                        },
+                        {
+                            "chance": 16,
+                            "extra": "Egg",
+                            "level": 1,
+                            "pokemon": "feebas"
+                        }
+                    ],
+                    "type": "gift"
                 }
             ]
         },
         {
-            "area": "restaurant",
+            "area": "grand-lake-restaurant",
             "pools": [
                 {
                     "pool": {
@@ -11901,38 +11886,24 @@
             "area": "canalave-library",
             "pools": [
                 {
-                    "pool": {
-                        "day": [
-                            {
-                                "chance": 20,
-                                "level": 40,
-                                "pokemon": "solrock"
-                            },
-                            {
-                                "chance": 20,
-                                "level": 40,
-                                "pokemon": "lunatone"
-                            }
-                        ],
-                        "night": [
-                            {
-                                "chance": 20,
-                                "level": 40,
-                                "pokemon": "solrock"
-                            },
-                            {
-                                "chance": 20,
-                                "level": 40,
-                                "pokemon": "lunatone"
-                            }
-                        ]
-                    },
-                    "type": "walking"
+                    "pool": [
+                        {
+                            "chance": 50,
+                            "level": 40,
+                            "pokemon": "solrock"
+                        },
+                        {
+                            "chance": 50,
+                            "level": 40,
+                            "pokemon": "lunatone"
+                        }
+                    ],
+                    "type": "gift"
                 }
             ]
         },
         {
-            "area": "iron-island",
+            "area": "iron-island-b2f",
             "pools": [
                 {
                     "pool": {
@@ -12066,7 +12037,7 @@
             ]
         },
         {
-            "area": "iron-island",
+            "area": "iron-island-b3f",
             "pools": [
                 {
                     "pool": {
@@ -13217,87 +13188,7 @@
         },
         {
             "area": "oreburgh-museum",
-            "pools": [
-                {
-                    "pool": {
-                        "day": [
-                            {
-                                "chance": 20,
-                                "level": 0,
-                                "pokemon": "kabuto"
-                            },
-                            {
-                                "chance": 20,
-                                "level": 0,
-                                "pokemon": "omanyte"
-                            },
-                            {
-                                "chance": 10,
-                                "level": 0,
-                                "pokemon": "lileep"
-                            },
-                            {
-                                "chance": 10,
-                                "level": 0,
-                                "pokemon": "cranidos"
-                            },
-                            {
-                                "chance": 5,
-                                "level": 0,
-                                "pokemon": "shieldon"
-                            },
-                            {
-                                "chance": 5,
-                                "level": 0,
-                                "pokemon": "aerodactyl"
-                            },
-                            {
-                                "chance": 4,
-                                "level": 0,
-                                "pokemon": "anorith"
-                            }
-                        ],
-                        "night": [
-                            {
-                                "chance": 20,
-                                "level": 0,
-                                "pokemon": "kabuto"
-                            },
-                            {
-                                "chance": 20,
-                                "level": 0,
-                                "pokemon": "omanyte"
-                            },
-                            {
-                                "chance": 10,
-                                "level": 0,
-                                "pokemon": "lileep"
-                            },
-                            {
-                                "chance": 10,
-                                "level": 0,
-                                "pokemon": "cranidos"
-                            },
-                            {
-                                "chance": 5,
-                                "level": 0,
-                                "pokemon": "shieldon"
-                            },
-                            {
-                                "chance": 5,
-                                "level": 0,
-                                "pokemon": "aerodactyl"
-                            },
-                            {
-                                "chance": 4,
-                                "level": 0,
-                                "pokemon": "anorith"
-                            }
-                        ]
-                    },
-                    "type": "walking"
-                }
-            ]
+            "pools": []
         },
         {
             "area": "old-chateau-foyer",
@@ -15033,7 +14924,7 @@
             ]
         },
         {
-            "area": "lake-valor",
+            "area": "lake-valor-drained",
             "pools": [
                 {
                     "pool": {
@@ -15937,6 +15828,17 @@
                         }
                     ],
                     "type": "super-rod"
+                },
+                {
+                    "pool": [
+                        {
+                            "chance": 100,
+                            "extra": "Trade any pokemon (Hasty, Adaptability)",
+                            "level": 0,
+                            "pokemon": "snover"
+                        }
+                    ],
+                    "type": "trade"
                 }
             ]
         },
@@ -17874,7 +17776,7 @@
             ]
         },
         {
-            "area": "stark-mountain",
+            "area": "stark-mountain-outside",
             "pools": [
                 {
                     "pool": {
@@ -18541,63 +18443,39 @@
             "area": "contest-hall",
             "pools": [
                 {
-                    "pool": {
-                        "day": [
-                            {
-                                "chance": 20,
-                                "level": 0,
-                                "pokemon": "charizard"
-                            },
-                            {
-                                "chance": 20,
-                                "level": 0,
-                                "pokemon": "milotic"
-                            },
-                            {
-                                "chance": 10,
-                                "level": 0,
-                                "pokemon": "kangaskhan"
-                            },
-                            {
-                                "chance": 10,
-                                "level": 0,
-                                "pokemon": "alakazam"
-                            },
-                            {
-                                "chance": 5,
-                                "level": 0,
-                                "pokemon": "steelix"
-                            }
-                        ],
-                        "night": [
-                            {
-                                "chance": 20,
-                                "level": 0,
-                                "pokemon": "charizard"
-                            },
-                            {
-                                "chance": 20,
-                                "level": 0,
-                                "pokemon": "milotic"
-                            },
-                            {
-                                "chance": 10,
-                                "level": 0,
-                                "pokemon": "kangaskhan"
-                            },
-                            {
-                                "chance": 10,
-                                "level": 0,
-                                "pokemon": "alakazam"
-                            },
-                            {
-                                "chance": 5,
-                                "level": 0,
-                                "pokemon": "steelix"
-                            }
-                        ]
-                    },
-                    "type": "walking"
+                    "pool": [
+                        {
+                            "chance": 100,
+                            "extra": "Master rank Cool contest reward (Cross Chop, Roost, Twister, Sky Attack)",
+                            "level": 5,
+                            "pokemon": "charizard"
+                        },
+                        {
+                            "chance": 100,
+                            "extra": "Master rank Beauty contest reward (Aura Sphere, Moonlight)",
+                            "level": 5,
+                            "pokemon": "milotic"
+                        },
+                        {
+                            "chance": 100,
+                            "extra": "Master rank Cute contest reward (Fake Out, Milk Drink)",
+                            "level": 5,
+                            "pokemon": "kangaskhan"
+                        },
+                        {
+                            "chance": 100,
+                            "extra": "Master rank Smart contest reward (Earth Power)",
+                            "level": 5,
+                            "pokemon": "alakazam"
+                        },
+                        {
+                            "chance": 100,
+                            "extra": "Master rank Tough contest reward (Glare, Head Smash)",
+                            "level": 5,
+                            "pokemon": "steelix"
+                        }
+                    ],
+                    "type": "gift"
                 }
             ]
         },
@@ -19525,6 +19403,17 @@
                         ]
                     },
                     "type": "walking"
+                },
+                {
+                    "pool": [
+                        {
+                            "chance": 100,
+                            "extra": "Trade any pokemon (Jolly, Arena Trap)",
+                            "level": 0,
+                            "pokemon": "trapinch"
+                        }
+                    ],
+                    "type": "trade"
                 }
             ]
         },
@@ -23601,6 +23490,17 @@
                         }
                     ],
                     "type": "super-rod"
+                },
+                {
+                    "pool": [
+                        {
+                            "chance": 100,
+                            "extra": "Cha Cha Sliding Magikarp",
+                            "level": 25,
+                            "pokemon": "magikarp"
+                        }
+                    ],
+                    "type": "gift"
                 }
             ]
         },
@@ -23884,8 +23784,416 @@
                         }
                     ],
                     "type": "local-honey-tree"
+                },
+                {
+                    "pool": [
+                        {
+                            "chance": 20,
+                            "extra": "Egg, need to defeat Cyrus before doing the mansion",
+                            "level": 1,
+                            "pokemon": "smoochum"
+                        },
+                        {
+                            "chance": 20,
+                            "extra": "Egg, need to defeat Cyrus before doing the mansion",
+                            "level": 1,
+                            "pokemon": "tyrogue"
+                        },
+                        {
+                            "chance": 20,
+                            "extra": "Egg, need to defeat Cyrus before doing the mansion",
+                            "level": 1,
+                            "pokemon": "bagon"
+                        },
+                        {
+                            "chance": 20,
+                            "extra": "Egg, need to defeat Cyrus before doing the mansion",
+                            "level": 1,
+                            "pokemon": "larvitar"
+                        },
+                        {
+                            "chance": 20,
+                            "extra": "Egg, need to defeat Cyrus before doing the mansion",
+                            "level": 1,
+                            "pokemon": "cleffa"
+                        }
+                    ],
+                    "type": "gift"
                 }
             ]
+        },
+        {
+            "area": "verity-cavern",
+            "pools": [
+                {
+                    "pool": [
+                        {
+                            "chance": 100,
+                            "extra": "After defeating Cyrus 4",
+                            "level": 50,
+                            "pokemon": "mesprit"
+                        }
+                    ],
+                    "type": "static"
+                }
+            ]
+        },
+        {
+            "area": "valor-cavern",
+            "pools": [
+                {
+                    "pool": [
+                        {
+                            "chance": 100,
+                            "extra": "After defeating Cyrus 4",
+                            "level": 50,
+                            "pokemon": "azelf"
+                        }
+                    ],
+                    "type": "static"
+                }
+            ]
+        },
+        {
+            "area": "acuity-cavern",
+            "pools": [
+                {
+                    "pool": [
+                        {
+                            "chance": 100,
+                            "extra": "After defeating Cyrus 4",
+                            "level": 50,
+                            "pokemon": "uxie"
+                        }
+                    ],
+                    "type": "static"
+                }
+            ]
+        },
+        {
+            "area": "galactic-hq",
+            "pools": [
+                {
+                    "pool": [
+                        {
+                            "chance": 20,
+                            "extra": "Egg",
+                            "level": 1,
+                            "pokemon": "cacnea"
+                        },
+                        {
+                            "chance": 20,
+                            "extra": "Egg",
+                            "level": 1,
+                            "pokemon": "gulpin"
+                        },
+                        {
+                            "chance": 20,
+                            "extra": "Egg",
+                            "level": 1,
+                            "pokemon": "zigzagoon"
+                        },
+                        {
+                            "chance": 20,
+                            "extra": "Egg",
+                            "level": 1,
+                            "pokemon": "drowzee"
+                        },
+                        {
+                            "chance": 20,
+                            "extra": "Egg",
+                            "level": 1,
+                            "pokemon": "poochyena"
+                        }
+                    ],
+                    "type": "gift"
+                }
+            ]
+        },
+        {
+            "area": "casino",
+            "pools": [
+                {
+                    "pool": {
+                        "byron": [
+                            {
+                                "chance": 100,
+                                "extra": "Requires Byron's badge",
+                                "level": 70,
+                                "pokemon": "magmar"
+                            },
+                            {
+                                "chance": 100,
+                                "extra": "Requires Byron's badge",
+                                "level": 70,
+                                "pokemon": "jynx"
+                            },
+                            {
+                                "chance": 100,
+                                "extra": "Requires Byron's badge",
+                                "level": 70,
+                                "pokemon": "electabuzz"
+                            },
+                            {
+                                "chance": 100,
+                                "extra": "Requires Byron's badge",
+                                "level": 70,
+                                "pokemon": "scyther"
+                            },
+                            {
+                                "chance": 100,
+                                "extra": "Requires Byron's badge",
+                                "level": 70,
+                                "pokemon": "sableye"
+                            },
+                            {
+                                "chance": 100,
+                                "extra": "Requires Byron's badge",
+                                "level": 70,
+                                "pokemon": "ditto"
+                            }
+                        ],
+                        "candice": [
+                            {
+                                "chance": 100,
+                                "extra": "Requires Candice's badge",
+                                "level": 90,
+                                "pokemon": "magneton"
+                            },
+                            {
+                                "chance": 100,
+                                "extra": "Requires Candice's badge",
+                                "level": 90,
+                                "pokemon": "gallade"
+                            },
+                            {
+                                "chance": 100,
+                                "extra": "Requires Candice's badge",
+                                "level": 90,
+                                "pokemon": "misdreavus"
+                            },
+                            {
+                                "chance": 100,
+                                "extra": "Requires Candice's badge",
+                                "level": 90,
+                                "pokemon": "venusaur"
+                            },
+                            {
+                                "chance": 100,
+                                "extra": "Requires Candice's badge",
+                                "level": 90,
+                                "pokemon": "charizard"
+                            },
+                            {
+                                "chance": 100,
+                                "extra": "Requires Candice's badge",
+                                "level": 90,
+                                "pokemon": "blastoise"
+                            },
+                            {
+                                "chance": 100,
+                                "extra": "Requires Candice's badge",
+                                "level": 90,
+                                "pokemon": "hitmontop"
+                            }
+                        ],
+                        "fantina": [
+                            {
+                                "chance": 100,
+                                "extra": "Requires Fantina's badge",
+                                "level": 45,
+                                "pokemon": "persian"
+                            },
+                            {
+                                "chance": 100,
+                                "extra": "Requires Fantina's badge",
+                                "level": 45,
+                                "pokemon": "porygon"
+                            },
+                            {
+                                "chance": 100,
+                                "extra": "Requires Fantina's badge",
+                                "level": 45,
+                                "pokemon": "murkrow"
+                            },
+                            {
+                                "chance": 100,
+                                "extra": "Requires Fantina's badge",
+                                "level": 45,
+                                "pokemon": "mr-mime"
+                            }
+                        ],
+                        "maylene": [
+                            {
+                                "chance": 100,
+                                "extra": "Requires Maylene's badge",
+                                "level": 50,
+                                "pokemon": "pikachu"
+                            },
+                            {
+                                "chance": 100,
+                                "extra": "Requires Maylene's badge",
+                                "level": 50,
+                                "pokemon": "voltorb"
+                            },
+                            {
+                                "chance": 100,
+                                "extra": "Requires Maylene's badge",
+                                "level": 50,
+                                "pokemon": "pinsir"
+                            },
+                            {
+                                "chance": 100,
+                                "extra": "Requires Maylene's badge",
+                                "level": 50,
+                                "pokemon": "phione"
+                            }
+                        ],
+                        "volkner": [
+                            {
+                                "chance": 100,
+                                "extra": "Requires Volkner's badge",
+                                "level": 55,
+                                "pokemon": "tauros"
+                            },
+                            {
+                                "chance": 100,
+                                "extra": "Requires Volkner's badge",
+                                "level": 55,
+                                "pokemon": "dragonite"
+                            }
+                        ],
+                        "wake": [
+                            {
+                                "chance": 100,
+                                "extra": "Requires Wake's badge",
+                                "level": 60,
+                                "pokemon": "miltank"
+                            },
+                            {
+                                "chance": 100,
+                                "extra": "Requires Wake's badge",
+                                "level": 60,
+                                "pokemon": "castform"
+                            },
+                            {
+                                "chance": 100,
+                                "extra": "Requires Wake's badge",
+                                "level": 60,
+                                "pokemon": "clefairy"
+                            },
+                            {
+                                "chance": 100,
+                                "extra": "Requires Wake's badge",
+                                "level": 60,
+                                "pokemon": "nidoking"
+                            },
+                            {
+                                "chance": 100,
+                                "extra": "Requires Wake's badge",
+                                "level": 60,
+                                "pokemon": "nidoqueen"
+                            }
+                        ]
+                    },
+                    "type": "gift"
+                }
+            ]
+        },
+        {
+            "area": "iron-island",
+            "pools": [
+                {
+                    "pool": [
+                        {
+                            "chance": 100,
+                            "extra": "Egg, defeat Galactic Neptune and Triton",
+                            "level": 1,
+                            "pokemon": "riolu"
+                        }
+                    ],
+                    "type": "gift"
+                }
+            ]
+        },
+        {
+            "area": "rotom-room",
+            "pools": [
+                {
+                    "pool": [
+                        {
+                            "chance": 100,
+                            "level": 30,
+                            "pokemon": "rotom"
+                        }
+                    ],
+                    "type": "static"
+                }
+            ]
+        },
+        {
+            "area": "galactic-eterna-building",
+            "pools": []
+        },
+        {
+            "area": "iron-ruins",
+            "pools": [
+                {
+                    "pool": [
+                        {
+                            "chance": 100,
+                            "extra": "After defeating Cyrus 4",
+                            "level": 30,
+                            "pokemon": "registeel"
+                        }
+                    ],
+                    "type": "static"
+                }
+            ]
+        },
+        {
+            "area": "iceberg-ruins",
+            "pools": [
+                {
+                    "pool": [
+                        {
+                            "chance": 100,
+                            "extra": "After defeating Cyrus 4",
+                            "level": 30,
+                            "pokemon": "regice"
+                        }
+                    ],
+                    "type": "static"
+                }
+            ]
+        },
+        {
+            "area": "rock-peak-ruins",
+            "pools": [
+                {
+                    "pool": [
+                        {
+                            "chance": 100,
+                            "extra": "After defeating Cyrus 4",
+                            "level": 30,
+                            "pokemon": "regirock"
+                        }
+                    ],
+                    "type": "static"
+                }
+            ]
+        },
+        {
+            "area": "hotel-grand-lake",
+            "pools": []
+        },
+        {
+            "area": "grand-lake-restaurant",
+            "pools": []
+        },
+        {
+            "area": "spear-pillar",
+            "pools": []
         }
     ],
     "growth": {
@@ -27184,9 +27492,13 @@
             "positions": [
                 {
                     "height": 2,
-                    "width": 3,
                     "x": 20,
                     "y": 19
+                },
+                {
+                    "width": 2,
+                    "x": 21,
+                    "y": 20
                 }
             ]
         },
@@ -27518,14 +27830,14 @@
             "name": "mt-coronet",
             "positions": [
                 {
-                    "height": 3,
-                    "x": 11,
-                    "y": 14
-                },
-                {
                     "height": 8,
                     "x": 12,
                     "y": 6
+                },
+                {
+                    "height": 3,
+                    "x": 11,
+                    "y": 14
                 }
             ],
             "type": "cave"
@@ -27533,7 +27845,9 @@
         {
             "id": 51,
             "items": [],
-            "locations": [],
+            "locations": [
+                "spear-pillar"
+            ],
             "name": "spear-pillar",
             "positions": [
                 {
@@ -27740,7 +28054,9 @@
             "id": 69,
             "items": [],
             "locations": [
-                "iron-island"
+                "iron-island",
+                "iron-island-b2f",
+                "iron-island-b3f"
             ],
             "name": "iron-island",
             "positions": [
@@ -27768,6 +28084,20 @@
                 {
                     "x": 6,
                     "y": 9
+                }
+            ]
+        },
+        {
+            "id": 71,
+            "items": [],
+            "locations": [
+                "galactic-hq"
+            ],
+            "name": "galactic-hq",
+            "positions": [
+                {
+                    "x": 22,
+                    "y": 11
                 }
             ]
         },
@@ -27838,7 +28168,8 @@
             "id": 77,
             "items": [],
             "locations": [
-                "lake-valor"
+                "lake-valor",
+                "lake-valor-drained"
             ],
             "name": "lake-valor",
             "positions": [
@@ -27882,7 +28213,8 @@
             "id": 84,
             "items": [],
             "locations": [
-                "stark-mountain"
+                "stark-mountain",
+                "stark-mountain-outside"
             ],
             "name": "stark-mountain",
             "positions": [
@@ -27949,6 +28281,146 @@
                 {
                     "x": 4,
                     "y": 16
+                }
+            ]
+        },
+        {
+            "id": 97,
+            "items": [],
+            "locations": [
+                "contest-hall"
+            ],
+            "name": "contest-hall",
+            "positions": [
+                {
+                    "x": 15,
+                    "y": 14
+                }
+            ]
+        },
+        {
+            "id": 102,
+            "items": [],
+            "locations": [
+                "casino"
+            ],
+            "name": "casino",
+            "positions": [
+                {
+                    "x": 23,
+                    "y": 13
+                }
+            ]
+        },
+        {
+            "id": 103,
+            "items": [],
+            "locations": [
+                "canalave-library"
+            ],
+            "name": "canalave-library",
+            "positions": [
+                {
+                    "x": 0,
+                    "y": 16
+                }
+            ]
+        },
+        {
+            "id": 109,
+            "items": [],
+            "locations": [
+                "hotel-grand-lake"
+            ],
+            "name": "rock-peak-ruins",
+            "positions": [
+                {
+                    "x": 22,
+                    "y": 19
+                }
+            ]
+        },
+        {
+            "id": 110,
+            "items": [],
+            "locations": [
+                "grand-lake-restaurant"
+            ],
+            "name": "grand-lake-restaurant",
+            "positions": [
+                {
+                    "x": 21,
+                    "y": 19
+                }
+            ]
+        },
+        {
+            "id": 121,
+            "items": [],
+            "locations": [
+                "rotom-room"
+            ],
+            "name": "rotom-room",
+            "positions": [
+                {
+                    "x": 7,
+                    "y": 9
+                }
+            ]
+        },
+        {
+            "id": 122,
+            "items": [],
+            "locations": [
+                "galactic-eterna-building"
+            ],
+            "name": "galactic-eterna-building",
+            "positions": [
+                {
+                    "x": 9,
+                    "y": 9
+                }
+            ]
+        },
+        {
+            "id": 123,
+            "items": [],
+            "locations": [
+                "iron-ruins"
+            ],
+            "name": "iron-ruins",
+            "positions": [
+                {
+                    "x": 3,
+                    "y": 8
+                }
+            ]
+        },
+        {
+            "id": 124,
+            "items": [],
+            "locations": [
+                "iceberg-ruins"
+            ],
+            "name": "iceberg-ruins",
+            "positions": [
+                {
+                    "x": 12,
+                    "y": 5
+                }
+            ]
+        },
+        {
+            "id": 125,
+            "items": [],
+            "locations": [
+                "rock-peak-ruins"
+            ],
+            "name": "rock-peak-ruins",
+            "positions": [
+                {
+                    "x": 25,
+                    "y": 5
                 }
             ]
         }

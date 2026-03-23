@@ -430,4 +430,14 @@ function validateData() {
 			}
 		}
 	}
+	var usedAreas = new Set();
+	for (const encounter of data.encounters) {
+		if (usedAreas.has(encounter.area)) {
+			console.error("There are multiple encounter areas named ", encounter.area);
+		}
+		usedAreas.add(encounter.area);
+		if (!landmarksByLocation.has(encounter.area)) {
+			console.error("There is no landmark association for ", encounter.area);
+		}
+	}
 }

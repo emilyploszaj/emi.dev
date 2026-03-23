@@ -95,7 +95,7 @@ function getEncounterDisplay(pools) {
 		v += "</details>";
 	}
 	v += '<br style="clear:both;"/></div>';
-	if (pools.area && pools.pools) {
+	if (pools.area && pools.pools?.length > 0) {
 		var tabHeader = "";
 		var tabBody = "";
 		for (let pool of pools.pools) {
@@ -141,57 +141,56 @@ function arePoolsEqualIgnoreLevel(a, b) {
 function getEncounterPoolGroupDisplay(p) {
 	p = inflateEncounterPool(p);
 	if (Array.isArray(p)) {
-		var minLevel = p[0].level;
-		var maxLevel = p[0].level;
-		for (const e of p) {
-			minLevel = Math.min(e.level, minLevel);
-			maxLevel = Math.max(e.level, maxLevel);
-		}
-		if (minLevel != maxLevel) {
-			return `<h6>(Lvl ${minLevel}-${maxLevel}):</h6>${getEncounterPoolDisplay(p, "any")}`;
-		}
-		return `<h6>(Lvl ${p[0].level}):</h6>${getEncounterPoolDisplay(p, "any")}`;
+		p = { any: p };
 	}
 	var rawKeys = Object.keys(p);
 	var keys = [];
-	if (rawKeys.includes("morning")) {
-		keys.push("morning");
-		rawKeys.splice(rawKeys.indexOf("morning"), 1);
-	}
-	if (rawKeys.includes("day")) {
-		keys.push("day");
-		rawKeys.splice(rawKeys.indexOf("day"), 1);
-	}
-	if (rawKeys.includes("night")) {
-		keys.push("night");
-		rawKeys.splice(rawKeys.indexOf("night"), 1);
+	var keyOrdering = ["morning", "day", "night", "fantina", "maylene", "wake", "byron", "candice", "volkner"];
+	for (const ko of keyOrdering) {
+		if (rawKeys.includes(ko)) {
+			keys.push(ko);
+			rawKeys.splice(rawKeys.indexOf(ko), 1);
+		}
 	}
 	keys = keys.concat(rawKeys);
-	var v = `<h6>(Lvl ${p[keys[0]][0].level})</h6>`;
+
+	var minLevel = p[keys[0]][0].level;
+	var maxLevel = p[keys[0]][0].level;
+	for (const k of keys) {
+		for (const e of p[k]) {
+			minLevel = Math.min(e.level, minLevel);
+			maxLevel = Math.max(e.level, maxLevel);
+		}
+	}
+
+	var v = "";
+	if (minLevel == maxLevel) {
+		v += `<h6>(Lvl ${minLevel})</h6>`;
+	} else {
+		v += `<h6>(Lvl ${minLevel}-${maxLevel})</h6>`;
+	}
 	for (var i = 1; i < keys.length; i++) {
 		if (!arePoolsEqual(keys[i], keys[0])) {
 			for (let key of keys) {
-				v += getEncounterPoolDisplay(p[key], key);
+				v += getEncounterPoolDisplay(p[key], key, minLevel != maxLevel);
 			}
 			return v;
 		}
 	}
-	return v + getEncounterPoolDisplay(p.day, "any");
+	return v + getEncounterPoolDisplay(p[keys[0]], "any", minLevel != maxLevel);
 }
 
-function getEncounterPoolDisplay(pool, time) {
+function getEncounterPoolDisplay(pool, time, showLevel) {
+	if (time != "day" && time != "night" && time != "morning") {
+		time = "any";
+	}
 	var v = "";
 	v += '<div class="encounter-pool ' + time + '-pool">';
 	v += '<div style="display:flex;flex-wrap:wrap;">';
 	var totalWeight = 0;
-	var lvl = pool[0].level;
-	var showLevel = false;
 	for (var i = 0; i < pool.length; i++) {
 		if (!hasFamily(pokemonFamilies.get(pokemonByName.get(pool[i].pokemon).pokedex))) {
 			totalWeight += pool[i].chance;
-		}
-		if (pool[i].level != lvl) {
-			showLevel = true;
 		}
 	}
 	for (var i = 0; i < pool.length; i++) {
