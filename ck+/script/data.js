@@ -182,25 +182,33 @@ function loadFights(text) {
 
 function initGame() {
 	game = {};
-	MAX_DV = 15;
-	if (window.location.search == "?custom") {
-		game.name = "custom";
-		loadData(localStorage.getItem("calc/custom-data"));
-		return;
-	} else if (window.location.search == "?xp" || window.location.search == "?xp=") {
-		game.name = "ck+xp";
-		fetchData("ck+xp.json");
-	} else if (window.location.search == "?pk" || window.location.search == "?pk=") {
-		game.name = "pk";
-		fetchData("pk.json");
-		MAX_DV = 31;
-	} else {
-		game.name = "ck+";
+	document.getElementById("game-select-overlay").classList.remove("hidden");
+	applySettings();
+}
+
+function selectGame(gameId) {
+	game.name = gameId;
+	game.id = gameId;
+	if (gameId == "ck+") {
+		MAX_DV = 15;
 		fetchData("data.json");
 		fetchFights("fights.json");
+	} else if (gameId == "ck+xp") {
+		MAX_DV = 15;
+		fetchData("ck+xp.json");
+	} else if (gameId == "pk") {
+		MAX_DV = 31;
+		fetchData("pk.json");
+	} else {
+		// custom game
+		loadData(localStorage.getItem("calc/custom-data"));
+		updateEngineFlags();
+		document.getElementById("game-select-overlay").classList.add("hidden");
+		return;
 	}
+	readLocalStorage();
 	updateEngineFlags();
-	applySettings();
+	document.getElementById("game-select-overlay").classList.add("hidden");
 }
 
 function updateEngineFlags() {
