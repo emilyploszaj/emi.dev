@@ -1514,3 +1514,44 @@ rt {
 #tag-cycle-buttons button {
 	margin-left: 12px;
 }
+
+#commands {
+	background-color: var(--box-background);
+	padding: 0px 24px;
+	height: fit-content;
+}
+
+.meek {
+	font-size: 16px;
+	color: var(--dim-text);
+}
+
+#box-commands {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0px -16px;
+}
+
+.command-party-mon {
+	background: var(--background);
+	padding: 6px;
+	margin: 4px;
+	display: inline-block;
+}
+
+.status-display {
+	font-size: 20px;
+	padding-top: 4px;
+}
+
+.status-command-buttons {
+	display: inline-flex;
+}
+
+.status-command-buttons button {
+	margin-left: 2px;
+}
+
+.active-status-button {
+	background-color: var(--status-color);
+}

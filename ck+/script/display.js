@@ -816,6 +816,78 @@ function getEncounterPoke(poke, header, footer, extraClasses) {
 	`;
 }
 
+function setCommands() {
+	const statuses = [
+		{
+			name: "slp",
+			color: "#697161"
+		},
+		{
+			name: "psn",
+			color: "#c562c5"
+		},
+		{
+			name: "tox",
+			color: "#5400b1"
+		},
+		{
+			name: "brn",
+			color: "#ff4210"
+		},
+		{
+			name: "prz",
+			color: "#ebaa00"
+		},
+		{
+			name: "frz",
+			color: "#4a94ff"
+		}
+	];
+	var party = {};
+	for (const mon of box) {
+		if (mon.storage?.type == "party") {
+			party[mon.storage.index] = mon;
+		}
+	}
+	if (party[0] != undefined) {
+		document.getElementById("vs-link-status").innerHTML = vsLinkCommandFeedback;
+		var v = "";
+		for (var i = 0; i < 6; i++) {
+			var mon = party[i];
+			if (mon == undefined) {
+				break;
+			}
+			var buttons = "";
+			for (const status of statuses) {
+				var extra = "";
+				if (mon.status == status.name) {
+					extra = `class="active-status-button" style="--status-color: ${status.color}"`;
+				}
+				buttons += `<button onclick="commandStatus(${i}, '${status.name}')" ${extra}>${fullCapitalize(status.name)}</button>`;
+			}
+			buttons = `<button onclick="commandStatus(${i}, undefined)">---</button>` + buttons;
+			v += `
+				<div class="command-party-mon">
+					<div class="command-party-mon-display">
+						${getTinyPokemonDisplay(mon)}
+					</div>
+					<div class="status-display">
+						<div display="flex">
+							<span>Status</span>
+							<div class="status-command-buttons">${buttons}</div>
+						</div>
+					</div>
+				</div>
+			`;
+		}
+		document.getElementById("box-commands").innerHTML = v;
+	} else {
+		document.getElementById("box-commands").innerHTML = `
+			<p class="meek">You don't have any pokemon in your party...</p>
+		`;
+	}
+}
+
 function setMap(xOffset = undefined, yOffset = 0, scale = 48) {
 	if (xOffset == undefined) {
 		xOffset = savedData["last-map"] ?? 0;

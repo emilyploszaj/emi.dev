@@ -200,6 +200,7 @@ function initGame() {
 		fetchFights("fights.json");
 	}
 	updateEngineFlags();
+	applySettings();
 }
 
 function updateEngineFlags() {
@@ -408,4 +409,25 @@ function hasFamily(family) {
 		}
 	}
 	return false;
+}
+
+
+function validateData() {
+	for (const trainer of data.trainers) {
+		if (!trainer.team || !trainer.name) {
+			console.error("Trainer is missing fields!", trainer);
+		} else {
+			for (const mon of trainer.team) {
+				if (!pokemonByName.has(mon.name)) {
+					console.error(trainer.name, " has unknown pokemon: ", mon.name);
+				} else {
+					for (const move of mon.moves) {
+						if (!movesByName.has(move)) {
+							console.error(trainer.name + "'s", mon.name, " has unknown move: ", move);
+						}
+					}
+				}
+			}
+		}
+	}
 }

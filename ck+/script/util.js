@@ -334,8 +334,9 @@ function updateBadges() {
 function setTab(name) {
 	if (name == "map") {
 		setMap();
-	}
-	if (name == "settings") {
+	} else if (name == "commands") {
+		setCommands();
+	} else if (name == "settings") {
 		updateExtraDupes();
 	}
 	var tabs = document.getElementsByClassName("tab");

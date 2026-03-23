@@ -26,6 +26,9 @@
 					<a class="poke-link" onclick="clickLink(event)" href="#/trainers/"><button class="tab-select">Trainers</button></a>
 					<a class="poke-link" onclick="clickLink(event)" href="#/map/"><button class="tab-select">Map</button></a>
 					<span id="tab-select-right"></span>
+					<a class="poke-link" onclick="clickLink(event)" href="#/commands/">
+						<button class="tab-select" id="vs-link-commands" style="display:none;">Commands</button>
+					</a>
 					<button class="tab-select vs-recorder-polling" id="update-vs-recorder" style="display:none;" onclick="updateVsRecorder()">Sync</button>
 					<button class="tab-select" onclick="setTab('settings')">Settings</button>
 				</div>
@@ -46,6 +49,16 @@
 			<p>Drag your .sav file on this page to fill with your party and boxes 1-12. Boxes 13-16 are considered dead.</p>
 		</div>
 		<div id="map" class="tab"></div>
+		<div id="commands" class="tab">
+			<h3>Vs. Link Ersatz - Commands</h3>
+			<p class="meek">
+				Please be careful to only trigger these commands while doing nothing else in game.
+				Unexpected errors may occur if you are in battle or otherwise modifying your data in game.
+			</p>
+			<p>Status: <span id="vs-link-status">Idle</span></p>
+			<h3>Party</h3>
+			<div id="box-commands"></div>
+		</div>
 		<div id="calc" class="tab">
 			<div id="player">
 				<table class="poke-title">

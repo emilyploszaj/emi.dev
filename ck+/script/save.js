@@ -1,6 +1,9 @@
 var vsRecorderStatus = 0; // 1 = connected, -1 = disconnected
 var pingsWithoutResponse = 0;
 var outstandingPingTimeout;
+var vsLinkCommandFeedback = "Idle";
+var vsLinkIdleTimeout;
+var vsLinkVersionBothering = 0;
 
 function readNewbox(bytes, start, db1, db2) {
 	var pokemon = [];
@@ -151,6 +154,7 @@ function finishParse(title, pokemon, deadPokemon) {
 	if (box.length > 0) {
 		setPlayer(0);
 	}
+	setCommands();
 	updateBox();
 	var popup = '<div onclick="closePopup()" class="save-success">' + title;
 	popup += '<lb></lb>Encounters: ' + pokemon.length;
@@ -243,8 +247,12 @@ function readGen4Save(bytes) {
 	var small = getFooterOffset(0, 0x0CF18 + 4);
 	var large = getFooterOffset(0x0CF2C, 0x1f0fc - 0x0CF2C);
 	for (var i = 0; i < 6; i++) {
-		var mon = readGen4Mon(bytes, small + 0xA0 + 236 * i);
+		var mon = readGen4Mon(bytes, small + 0xA0 + 236 * i, true);
 		if (mon) {
+			mon.storage = {
+				type: "party",
+				index: i,
+			};
 			pokemon.push(mon);
 		}
 	}
@@ -265,7 +273,7 @@ function copySlice(arr, start, length) {
 	return ret
 }
 
-function readGen4Mon(bytes, offset) {
+function readGen4Mon(bytes, offset, party = false) {
 	var personality = read32(bytes, offset);
 	var encrypted = copySlice(bytes, offset + 8, 128);
 	var decrypted = gen4DecryptMon(encrypted, read16(bytes, offset + 6), 128);
@@ -359,6 +367,7 @@ function readGen4Mon(bytes, offset) {
 		"careful",
 		"quirky",
 	][personality % 25];
+	
 	var species = pokemonByPokedex.get(blockA.species);
 	if (species == undefined) {
 		return null;
@@ -406,7 +415,7 @@ function readGen4Mon(bytes, offset) {
 		}
 	}
 	var location = landmarksByIndex.get(blockD.pkEncounterLocation)?.name ?? "unknown";
-	return {
+	var mon = {
 		name: species.name,
 		moves: blockB.moves.map(v => movesByIndex.get(v)?.name).filter(a => a != undefined),
 		item: "", // TODO blockA.item,
@@ -425,6 +434,46 @@ function readGen4Mon(bytes, offset) {
 		caught: location,
 		gender: gender,
 	};
+
+
+	if (party) {
+		var encryptedBattleData = copySlice(bytes, offset + 8 + 128, 100);
+		var decryptedBattleData = gen4DecryptMon(encryptedBattleData, personality, 100);
+		var battleData = parseTemplate(decryptedBattleData, 0, [
+			1, "status",
+			1, "unknown",
+			1, "unknown",
+			1, "unknown",
+			1, "level",
+			1, "seals",
+			2, "currentHp",
+			2, "maxHp",
+			2, "atk",
+			2, "def",
+			2, "spe",
+			2, "spa",
+			2, "spd",
+			// Mail
+			// Seal coordinates
+		]);
+		if (battleData.status != 0) {
+			if ((battleData.status & 0b1000_0000) != 0) {
+				mon.status = "tox";
+			} else if ((battleData.status & 0b0100_0000) != 0) {
+				mon.status = "prz";
+			} else if ((battleData.status & 0b0010_0000) != 0) {
+				mon.status = "frz";
+			} else if ((battleData.status & 0b0001_0000) != 0) {
+				mon.status = "brn";
+			} else if ((battleData.status & 0b0000_1000) != 0) {
+				mon.status = "psn";
+			} else if ((battleData.status & 0b0000_0111) != 0) {
+				mon.status = "slp";
+			}
+		}
+	}
+
+	return mon;
 }
 
 function getLevelFromExperience(mon, experience) {
@@ -547,8 +596,12 @@ function vsRecorderComplete(event) {
 			var response = JSON.parse(event.target.responseText);
 			var pokemon = [];
 			for (var i = 0; i < 6; i++) {
-				var mon = readGen4Mon(response.party, 0 + 236 * i);
+				var mon = readGen4Mon(response.party, 0 + 236 * i, true);
 				if (mon) {
+					mon.storage = {
+						type: "party",
+						index: i,
+					};
 					pokemon.push(mon);
 				}
 			}
@@ -559,7 +612,13 @@ function vsRecorderComplete(event) {
 				}
 			}
 			box = pokemon;
-			finishParse("Successfully read Vs. Link Ersatz!", pokemon, []);
+			if (response.version != "0.1.1" && vsLinkVersionBothering < 1) {
+				vsLinkVersionBothering++;
+				document.getElementById("info-popup").innerHTML =
+					`<div onclick="closePopup()" class="save-error">Vs. Link Ersatz is out of date.<lb></lb>Please update for the latest features!</div>`;
+			} else {
+				finishParse("Successfully read Vs. Link Ersatz!", pokemon, []);
+			}
 		} else {
 			connectToVsRecorder();
 			var response = event.target.responseText;
@@ -643,6 +702,45 @@ function connectToVsRecorder() {
 		document.getElementById("update-vs-recorder").classList.remove("vs-recorder-polling");
 		document.getElementById("update-vs-recorder").classList.remove("vs-recorder-disconnected");
 	}
+}
+
+function vsLinkCommandFailed() {
+	vsLinkCommandFeedback = "Errored :(";
+	setCommands();
+}
+
+function commandStatus(member, status) {
+	vsLinkCommandFeedback = "Waiting..."
+	clearTimeout(vsLinkIdleTimeout);
+	var req = new XMLHttpRequest();
+	req.timeout = 2000;
+	req.addEventListener("load", e => {
+		var json = JSON.parse(e.target.responseText);
+		console.log(json);
+		if (json.error) {
+			vsLinkCommandFailed();
+		} else {
+			vsLinkCommandFeedback = "Synced!";
+			setCommands();
+			vsLinkIdleTimeout = setTimeout(() => {
+				vsLinkCommandFeedback = "Idle";
+				setCommands();
+			}, 5_000);
+		}
+	});
+	req.addEventListener("error", vsLinkCommandFailed);
+	req.addEventListener("abort", vsLinkCommandFailed);
+	req.open("POST", "http://localhost:31123/status");
+	req.send(`{"statuses": [{"index": ${member}, "status": "${status}"}]}`);
+
+	// Update on the client too
+	for (const mon of box) {
+		if (mon.storage?.type == "party" && mon.storage.index == member) {
+			mon.status = status;
+			break;
+		}
+	}
+	setCommands();
 }
 
 setInterval(function() {

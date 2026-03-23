@@ -48,8 +48,12 @@ function applySettings() {
 	document.getElementById("enable-statistics").checked = settings.enableStatistics == true;
 	if (settings.enableVsRecorder) {
 		document.getElementById("update-vs-recorder").style.display = "block";
+		if (game.name == "pk") {
+			document.getElementById("vs-link-commands").style.display = "block";
+		}
 	} else {
 		document.getElementById("update-vs-recorder").style.display = "none";
+		document.getElementById("vs-link-commands").style.display = "none";
 	}
 	document.getElementById("extra-dupes").value = settings.extraDupes?.join(" ") ?? "";
 	updateEngineFlags();

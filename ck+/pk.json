@@ -99235,7 +99235,7 @@
                     "moves": [
                         "ice-beam",
                         "surf",
-                        "double-slap",
+                        "doubleslap",
                         "aqua-jet"
                     ],
                     "name": "seel",
@@ -99663,7 +99663,7 @@
                     "item": "white-herb",
                     "level": 22,
                     "moves": [
-                        "thunder-punch",
+                        "thunderpunch",
                         "fire-punch",
                         "ice-punch",
                         "meditate"
@@ -100564,9 +100564,9 @@
                     "item": "life-orb",
                     "level": 21,
                     "moves": [
-                        "high-jump-kick",
+                        "hi-jump-kick",
                         "zen-headbutt",
-                        "thunder-punch",
+                        "thunderpunch",
                         "rock-slide"
                     ],
                     "name": "meditite",
@@ -101087,7 +101087,7 @@
                         "stealth-rock",
                         "milk-drink",
                         "body-slam",
-                        "thunder-punch"
+                        "thunderpunch"
                     ],
                     "name": "miltank",
                     "nature": "naughty"
@@ -106998,7 +106998,7 @@
                         "sing",
                         "safeguard",
                         "psychic",
-                        "hyper-voce"
+                        "hyper-voice"
                     ],
                     "name": "chimecho",
                     "nature": "naughty"
@@ -115685,7 +115685,7 @@
                     "level": 70,
                     "moves": [
                         "sheer-cold",
-                        "aqual-tail",
+                        "aqua-tail",
                         "earthquake",
                         "ice-shard"
                     ],
@@ -119078,7 +119078,7 @@
                     "item": "focus-sash",
                     "level": 80,
                     "moves": [
-                        "endevour",
+                        "endeavor",
                         "shadow-claw",
                         "fury-cutter",
                         "dig"
@@ -119617,7 +119617,7 @@
                         "iron-head",
                         "baton-pass",
                         "metal-burst",
-                        "sword-dance"
+                        "swords-dance"
                     ],
                     "name": "mawile",
                     "nature": "rash"
@@ -119630,7 +119630,7 @@
                         "crabhammer",
                         "night-slash",
                         "fury-cutter",
-                        "sword-dance"
+                        "swords-dance"
                     ],
                     "name": "crawdaunt",
                     "nature": "timid"
@@ -124702,7 +124702,7 @@
                     "level": 92,
                     "moves": [
                         "iron-tail",
-                        "accelrock",
+                        "rollout",
                         "aqua-tail",
                         "giga-impact"
                     ],
@@ -124831,7 +124831,7 @@
                     "level": 94,
                     "moves": [
                         "hydro-pump",
-                        "dragon-breath",
+                        "dragonbreath",
                         "yawn",
                         "toxic"
                     ],
@@ -124876,7 +124876,7 @@
                     "level": 90,
                     "moves": [
                         "wake-up-slap",
-                        "smelling-salts",
+                        "smellingsalt",
                         "submission",
                         "rock-slide"
                     ],
@@ -124948,7 +124948,7 @@
                     "moves": [
                         "poison-jab",
                         "aqua-jet",
-                        "self-destruct",
+                        "selfdestruct",
                         "destiny-bond"
                     ],
                     "name": "qwilfish",
@@ -125184,7 +125184,7 @@
                     "moves": [
                         "crunch",
                         "drain-punch",
-                        "thunder-punch",
+                        "thunderpunch",
                         "zen-headbutt"
                     ],
                     "name": "sableye",
@@ -125267,7 +125267,7 @@
                     "level": 86,
                     "moves": [
                         "explosion",
-                        "metor-mash",
+                        "meteor-mash",
                         "focus-punch",
                         "stealth-rock"
                     ],
@@ -125392,7 +125392,7 @@
                         "bug-buzz",
                         "air-slash",
                         "giga-drain",
-                        "ancient-power"
+                        "ancientpower"
                     ],
                     "name": "yanmega",
                     "nature": "hardy"
@@ -125870,7 +125870,7 @@
                     "level": 91,
                     "moves": [
                         "ominous-wind",
-                        "ancient-power",
+                        "ancientpower",
                         "silver-wind",
                         "roost"
                     ],
@@ -125979,7 +125979,7 @@
                     "item": "apicot-berry",
                     "level": 91,
                     "moves": [
-                        "dragon-breath",
+                        "dragonbreath",
                         "aqua-jet",
                         "extremespeed",
                         "hyper-beam"
@@ -126051,7 +126051,7 @@
                     "item": "lum-berry",
                     "level": 100,
                     "moves": [
-                        "dynamic-punch",
+                        "dynamicpunch",
                         "rock-slide",
                         "knock-off",
                         "fissure"
@@ -126090,7 +126090,7 @@
                     "item": "lum-berry",
                     "level": 100,
                     "moves": [
-                        "ancient-power",
+                        "ancientpower",
                         "blizzard",
                         "focus-blast",
                         "charge-beam"
@@ -126391,7 +126391,7 @@
                     "item": "lum-berry",
                     "level": 100,
                     "moves": [
-                        "dynamic-punch",
+                        "dynamicpunch",
                         "rock-slide",
                         "knock-off",
                         "fissure"
@@ -126430,7 +126430,7 @@
                     "item": "lum-berry",
                     "level": 100,
                     "moves": [
-                        "ancient-power",
+                        "ancientpower",
                         "blizzard",
                         "focus-blast",
                         "charge-beam"
