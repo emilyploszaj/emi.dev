@@ -261,6 +261,11 @@
         {
             "effects": {
                 "attack": {
+                    "condition": {
+                        "move": {
+                            "category": "physical"
+                        }
+                    },
                     "modifiers": {
                         "attack-boost": "+100%"
                     }
@@ -641,6 +646,11 @@
         {
             "effects": {
                 "attack": {
+                    "condition": {
+                        "move": {
+                            "category": "physical"
+                        }
+                    },
                     "modifiers": {
                         "attack-boost": "+100%"
                     }
