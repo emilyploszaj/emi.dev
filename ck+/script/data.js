@@ -182,7 +182,15 @@ function loadFights(text) {
 
 function initGame() {
 	game = {};
-	document.getElementById("game-select-overlay").classList.remove("hidden");
+	if (window.location.search == "?custom"){
+		selectGame();
+	} else if (window.location.search == "?xp" || window.location.search == "?xp=") {
+		selectGame("ck+xp");
+	} else if (window.location.search == "?pk" || window.location.search == "?pk=") {
+		selectGame("pk");
+	} else {
+		selectGame("ck+");
+	}
 	applySettings();
 }
 
@@ -208,7 +216,6 @@ function selectGame(gameId) {
 	}
 	readLocalStorage();
 	updateEngineFlags();
-	document.getElementById("game-select-overlay").classList.add("hidden");
 }
 
 function updateEngineFlags() {
