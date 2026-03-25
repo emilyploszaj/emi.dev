@@ -612,7 +612,7 @@ function vsRecorderComplete(event) {
 				}
 			}
 			box = pokemon;
-			if (response.version != "0.1.2" && vsLinkVersionBothering < 1) {
+			if (response.version != "0.2.0" && vsLinkVersionBothering < 1) {
 				vsLinkVersionBothering++;
 				document.getElementById("info-popup").innerHTML =
 					`<div onclick="closePopup()" class="save-error">Vs. Link Ersatz is out of date.<lb></lb>Please update for the latest features!</div>`;
@@ -709,6 +709,15 @@ function vsLinkCommandFailed() {
 	setCommands();
 }
 
+function vsLinkCommandSucceeded() {
+	vsLinkCommandFeedback = "Synced!";
+	setCommands();
+	vsLinkIdleTimeout = setTimeout(() => {
+		vsLinkCommandFeedback = "Idle";
+		setCommands();
+	}, 5_000);
+}
+
 function commandStatus(member, status) {
 	vsLinkCommandFeedback = "Waiting..."
 	clearTimeout(vsLinkIdleTimeout);
@@ -716,16 +725,10 @@ function commandStatus(member, status) {
 	req.timeout = 2000;
 	req.addEventListener("load", e => {
 		var json = JSON.parse(e.target.responseText);
-		console.log(json);
 		if (json.error) {
 			vsLinkCommandFailed();
 		} else {
-			vsLinkCommandFeedback = "Synced!";
-			setCommands();
-			vsLinkIdleTimeout = setTimeout(() => {
-				vsLinkCommandFeedback = "Idle";
-				setCommands();
-			}, 5_000);
+			vsLinkCommandSucceeded();
 		}
 	});
 	req.addEventListener("error", vsLinkCommandFailed);
@@ -739,6 +742,37 @@ function commandStatus(member, status) {
 			mon.status = status;
 			break;
 		}
+	}
+	setCommands();
+}
+
+function commandPinTime(time) {
+	var hour = time;
+	if (time == "day") {
+		hour = 12;
+	} else if (time == "night") {
+		hour = 0;
+	}
+	vsLinkCommandFeedback = "Waiting..."
+	clearTimeout(vsLinkIdleTimeout);
+	var req = new XMLHttpRequest();
+	req.timeout = 2000;
+	req.addEventListener("load", e => {
+		var json = JSON.parse(e.target.responseText);
+		if (json.error) {
+			vsLinkCommandFailed();
+		} else {
+			vsLinkCommandSucceeded();
+		}
+	});
+	req.addEventListener("error", vsLinkCommandFailed);
+	req.addEventListener("abort", vsLinkCommandFailed);
+	if (time == "none") {
+		req.open("DELETE", "http://localhost:31123/time");
+		req.send();
+	} else {
+		req.open("PUT", "http://localhost:31123/time");
+		req.send(`{"time": {"hour": ${hour}}}`);
 	}
 	setCommands();
 }

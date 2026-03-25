@@ -1548,7 +1548,7 @@ rt {
 	display: inline-flex;
 }
 
-.status-command-buttons button {
+#commands button {
 	margin-left: 2px;
 }
 
