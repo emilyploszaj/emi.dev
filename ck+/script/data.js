@@ -210,9 +210,6 @@ function selectGame(gameId) {
 	} else {
 		// custom game
 		loadData(localStorage.getItem("calc/custom-data"));
-		updateEngineFlags();
-		document.getElementById("game-select-overlay").classList.add("hidden");
-		return;
 	}
 	readLocalStorage();
 	updateEngineFlags();
