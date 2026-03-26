@@ -173,8 +173,10 @@ function readFile(file) {
 		if (game.name == "pk") {
 			if (file.name.endsWith(".sav") || file.name.endsWith(".dsv")) {
 				try {
-					box = readGen4Save(bytes);
-					finishParse("Successfully parsed save!", box, []);
+					var parts = readGen4Save(bytes);
+					box = parts.pokemon;
+					deadBox = parts.deadPokemon
+					finishParse("Successfully parsed save!", box, deadBox);
 					return;
 				} catch (e) {
 					console.log(e);
@@ -234,6 +236,7 @@ function hexToBytes(hex) {
 
 function readGen4Save(bytes) {
 	var pokemon = [];
+	var deadPokemon = [];
 	function getFooterOffset(addr, footerOffset) {
 		if (read32(bytes, addr + footerOffset) == 4294967295) {
 			return addr + 0x40000;
@@ -256,13 +259,20 @@ function readGen4Save(bytes) {
 			pokemon.push(mon);
 		}
 	}
-	for (var a = 0; a < 18 * 30; a++) {
-		var mon = readGen4Mon(bytes, large + 0x04 + 136 * a);
-		if (mon) {
-			pokemon.push(mon);
+	for (var b = 0; b < 18; b++) {
+		for (var a = 0; a < 30; a++) {
+			var index = b * 30 + a;
+			var mon = readGen4Mon(bytes, large + 0x04 + 136 * index);
+			if (mon) {
+				if (b > 12) {
+					deadPokemon.push(mon);
+				} else {
+					pokemon.push(mon);
+				}
+			}
 		}
 	}
-	return pokemon;
+	return { pokemon: pokemon, deadPokemon: deadPokemon };
 }
 
 function copySlice(arr, start, length) {
@@ -595,6 +605,7 @@ function vsRecorderComplete(event) {
 		if (game.name == "pk") {
 			var response = JSON.parse(event.target.responseText);
 			var pokemon = [];
+			var deadPokemon = [];
 			for (var i = 0; i < 6; i++) {
 				var mon = readGen4Mon(response.party, 0 + 236 * i, true);
 				if (mon) {
@@ -605,19 +616,27 @@ function vsRecorderComplete(event) {
 					pokemon.push(mon);
 				}
 			}
-			for (var a = 0; a < 18 * 30; a++) {
-				var mon = readGen4Mon(response.pc, 136 * a);
-				if (mon) {
-					pokemon.push(mon);
+			for (var b = 0; b < 18; b++) {
+				for (var a = 0; a < 30; a++) {
+					var index = b * 30 + a;
+					var mon = readGen4Mon(response.pc, 136 * index);
+					if (mon) {
+						if (b > 12) {
+							deadPokemon.push(mon);
+						} else {
+							pokemon.push(mon);
+						}
+					}
 				}
 			}
 			box = pokemon;
+			deadBox = deadPokemon
 			if (response.version != "0.2.0" && vsLinkVersionBothering < 1) {
 				vsLinkVersionBothering++;
 				document.getElementById("info-popup").innerHTML =
 					`<div onclick="closePopup()" class="save-error">Vs. Link Ersatz is out of date.<lb></lb>Please update for the latest features!</div>`;
 			} else {
-				finishParse("Successfully read Vs. Link Ersatz!", pokemon, []);
+				finishParse("Successfully read Vs. Link Ersatz!", box, deadBox);
 			}
 		} else {
 			connectToVsRecorder();
