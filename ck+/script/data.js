@@ -182,25 +182,37 @@ function loadFights(text) {
 
 function initGame() {
 	game = {};
-	MAX_DV = 15;
-	if (window.location.search == "?custom") {
-		game.name = "custom";
-		loadData(localStorage.getItem("calc/custom-data"));
-		return;
+	if (window.location.search == "?custom"){
+		selectGame();
 	} else if (window.location.search == "?xp" || window.location.search == "?xp=") {
-		game.name = "ck+xp";
-		fetchData("ck+xp.json");
+		selectGame("ck+xp");
 	} else if (window.location.search == "?pk" || window.location.search == "?pk=") {
-		game.name = "pk";
-		fetchData("pk.json");
-		MAX_DV = 31;
+		selectGame("pk");
 	} else {
-		game.name = "ck+";
+		selectGame("ck+");
+	}
+	applySettings();
+}
+
+function selectGame(gameId) {
+	game.name = gameId;
+	game.id = gameId;
+	if (gameId == "ck+") {
+		MAX_DV = 15;
 		fetchData("data.json");
 		fetchFights("fights.json");
+	} else if (gameId == "ck+xp") {
+		MAX_DV = 15;
+		fetchData("ck+xp.json");
+	} else if (gameId == "pk") {
+		MAX_DV = 31;
+		fetchData("pk.json");
+	} else {
+		// custom game
+		loadData(localStorage.getItem("calc/custom-data"));
 	}
+	readLocalStorage();
 	updateEngineFlags();
-	applySettings();
 }
 
 function updateEngineFlags() {

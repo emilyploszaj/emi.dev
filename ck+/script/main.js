@@ -1,9 +1,15 @@
 var savedData = {};
 var settings = {};
 
+function getStorageKey() {
+	return "calc/" + (game && game.id);
+}
+
 function readLocalStorage() {
-	if (localStorage.getItem("calc/ck+")) {
-		savedData = JSON.parse(localStorage.getItem("calc/ck+"));
+	var storageKey = getStorageKey();
+
+	if (localStorage.getItem(storageKey)) {
+		savedData = JSON.parse(localStorage.getItem(storageKey));
 	} else {
 		if (localStorage.getItem("box")) {
 			savedData["box"] = JSON.parse(localStorage.getItem("box"));
@@ -33,7 +39,7 @@ function readLocalStorage() {
 }
 
 function writeLocalStorage() {
-	localStorage.setItem("calc/ck+", JSON.stringify(savedData));
+	localStorage.setItem(getStorageKey(), JSON.stringify(savedData));
 }
 
 function updateSettings() {
@@ -107,8 +113,6 @@ document.ondragover = function (event) {
 document.getElementById("badges").oninput = function (event) {
 	updateBadges();
 }
-
-readLocalStorage();
 
 setItemMenu();
 
