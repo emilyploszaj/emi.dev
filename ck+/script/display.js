@@ -482,13 +482,17 @@ function updateCalc() {
 		}
 		document.getElementById("player").getElementsByClassName("calc-team")[1].innerHTML = v;
 		document.getElementById("opponent").getElementsByClassName("calc-team")[0].innerHTML = getEnemyTeamDisplay(enemyTeam, lastTrainer);
+		document.getElementById("opponent").getElementsByClassName("ai-flags")[0].innerHTML = getAiFlagDisplay(lastTrainer);
 		if (playerTagPartners.length > 0) {
 			document.getElementById("tag-partner-team").getElementsByClassName("calc-team")[0].innerHTML
-				= getTagTeamDisplay(trainersByName.get(playerTagPartners[currentTagPartner]).team)
+				= getTagTeamDisplay(trainersByName.get(playerTagPartners[currentTagPartner]).team);
+			document.getElementById("tag-partner-team").getElementsByClassName("ai-flags")[0].innerHTML
+				= getAiFlagDisplay(trainersByName.get(playerTagPartners[currentTagPartner]));
 		}
 		var extraTrainers = "";
 		for (var i = lastTrainer + 1; isTrainerB2b(i); i++) {
 			extraTrainers += `<div class="calc-team">${getEnemyTeamDisplay(data.trainers[i].team, i)}</div>`;
+			extraTrainers += `<div class="ai-flags">${getAiFlagDisplay(i)}</div>`;
 			extraTrainers += `<div class="calc-navigation"><span>${getTrainerName(data.trainers[i].name)} </span>`;
 			extraTrainers += createLink(`#/trainer/${data.trainers[i].name}/`, `<button>Info</button>`) + " ";
 			extraTrainers += `<button disabled=true onclick="navigateBattle(-1)">Previous</button> `;
@@ -503,6 +507,44 @@ function updateCalc() {
 	} catch(e) {
 		console.log(e);
 	}
+}
+
+function getAiFlagDisplay(trainer) {
+	if (game.name != "pk") {
+		return "";
+	}
+	if (!trainer.name) {
+		trainer = data.trainers[trainer];
+	}
+	var v = `<div class="ai-flags">`;
+	if (trainer) {
+		var flags = [
+			"basic",
+			"eval-att",
+			"expert",
+			"status",
+			"risky",
+			"damage-prio",
+			"baton-pass",
+			"tag",
+			"check-hp",
+			"weather",
+			"harrassment",
+			"left-side",
+		];
+		for (const flag of flags) {
+			v += `
+				<div class="ai-flag tooltip-container ${contains(trainer["ai-flags"] ?? [], flag) ? "" : "disabled-ai-flag"}">
+					<img src="./images/ai-flags/${flag}.png">
+					<div class="tooltip">
+						${fullCapitalize(flag)}
+					</div>
+				</div>
+			`;
+		}
+	}
+	v += `</div>`;
+	return v;
 }
 
 function getEnemyTeamDisplay(enemyTeam, trainer) {

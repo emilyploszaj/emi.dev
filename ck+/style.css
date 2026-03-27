@@ -2,6 +2,7 @@
 	--background: #222222;
 	--grouping-background: #111111;
 	--box-background: #333333;
+	--tooltip-backgroudn: #191919;
 	--text: #eeeeee;
 	--dim-text: #AAAAAA;
 	--crit-text: #e59393;
@@ -1108,6 +1109,8 @@ rt {
 
 .gen-4 .micro-mon {
 	padding: 0px;
+	width: 80px;
+	height: 80px;
 }
 
 .micro-mon img {
@@ -1554,4 +1557,49 @@ rt {
 
 .active-status-button {
 	background-color: var(--status-color);
+}
+
+.ai-flags {
+	display: flex;
+}
+
+.ai-flag {
+	float: none !important;
+	display: inline-block;
+	padding: 8px;
+	height: 24px;
+}
+
+.ai-flag img {
+	transform: scaleX(1) !important;
+}
+
+.disabled-ai-flag {
+	color: var(--dim-text);
+}
+
+.disabled-ai-flag img {
+	filter: grayscale(100%);
+	opacity: 20%;
+}
+
+.tooltip-container {
+	position: relative;
+}
+
+.tooltip {
+	z-index: 100;
+	display: none;
+	position: absolute;
+	bottom: calc(100% + 8px);
+	width: max-content;
+	left: -100vw;
+	right: -100vw;
+	margin: auto;
+	padding: 6px;
+	background-color: var(--tooltip-backgroudn);
+}
+
+.tooltip-container:hover > .tooltip {
+	display: block;
 }
