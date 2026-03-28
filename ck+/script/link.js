@@ -207,6 +207,9 @@ function itemImage(item) {
 		item = "tm_hm"
 	}
 	if (game.name == "pk") {
+		if (item == "berserk-gene") {
+			return `<img class="item-icon" src="./images/items/${item.replace("-", "_")}.png">`;
+		}
 		return `<img class="item-icon" src="https://play.pokemonshowdown.com/sprites/itemicons/${item}.png">`;
 	}
 	return `<img class="item-icon" src="./images/items/${item.replace("-", "_")}.png">`;

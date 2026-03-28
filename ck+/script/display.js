@@ -1205,6 +1205,34 @@ function setItemMenu() {
 		"mysteryberry",
 		"miracleberry",
 	];
+	if (game.name == "pk") {
+		handyItems = [
+			"black-belt",
+			"sharp-beak",
+			"poison-barb",
+			"soft-sand",
+			"hard-stone",
+			"silverpowder",
+			"spell-tag",
+			"metal-coat",
+			"charcoal",
+			"mystic-water",
+			"miracle-seed",
+			"magnet",
+			"twistedspoon",
+			"nevermeltice",
+			"dragon-fang",
+			"blackglasses",
+			"silk-scarf",
+			"quick-claw",
+			"kings-rock",
+			"thick-club",
+			"metal-powder",
+			"oran-berry",
+			"berry-juice",
+			"sitrus-berry",
+		];
+	}
 	var v = `<table><tr>`;
 	for (var i = 0; i < handyItems.length; i++) {
 		v += `<td style="cursor:pointer;" onclick="setPlayerItem('${handyItems[i]}')">${itemImage(handyItems[i])}</td>`;

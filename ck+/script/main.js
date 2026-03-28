@@ -114,8 +114,6 @@ document.getElementById("badges").oninput = function (event) {
 	updateBadges();
 }
 
-setItemMenu();
-
 document.getElementById("badges").value = badges;
 
 SearchBox.update();

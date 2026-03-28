@@ -41,9 +41,6 @@ function displayTrainers() {
 			}
 			v += "<h2>" + areaName + "</h2>";
 		}
-		if (t.meta != undefined) {
-			v += "<h3>" + t.meta + "</h3>";
-		}
 		v += getTrainerDisplay(t, i);
 		if (isTrainerB2b(i) == true && isTrainerB2b(i + 1) == false) {
 			v += `</div>`;
@@ -57,6 +54,7 @@ function getTrainerDisplay(trainer, i) {
 		<div class="trainer">
 			<div>
 				${getTrainerName(trainer.name)}
+				${trainer.meta ? `<span class="meek">${trainer.meta}</span>` : ""}
 				<button style="float:right;" onclick="calcTrainer(${i})">Calc</button>
 				${createLink(`#/trainer/${trainer.name}/`, '<button style="float:right;">Info</button>')}
 				${getAiFlagDisplay(i)}
@@ -84,6 +82,7 @@ function getTrainerStats(trainer) {
 			${createLink(`#/trainer/${previous}/`, `<button>Previous</button>`)}
 			${createLink(`#/trainer/${next}/`, `<button>Next</button>`)}
 			</span>
+			${getAiFlagDisplay(i)}
 		</h3>
 		<div class="trainer">
 			<div class="trainer-pokes">

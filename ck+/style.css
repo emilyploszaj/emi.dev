@@ -1588,6 +1588,8 @@ rt {
 }
 
 .tooltip {
+	font-size: 24px;
+	font-weight: normal;
 	z-index: 100;
 	display: none;
 	position: absolute;

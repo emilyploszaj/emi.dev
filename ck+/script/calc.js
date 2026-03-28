@@ -272,20 +272,29 @@ function calcTrainer(i) {
 		calcTrainer(i - 1);
 		return;
 	}
+	var trainer = data.trainers[i];
+
 	resetBattleSettings();
+	if (trainer["battle-effects"]?.format == "multi" || trainer["battle-effects"]?.format == "doubles") {
+		document.getElementById("doubles").checked = true;
+	}
+	if (trainer["battle-effects"]?.weather != undefined) {
+		document.getElementById("current-weather").value = trainer["battle-effects"]?.weather;
+	}
+
 	lastTrainer = i;
 	savedData["last-trainer"] = lastTrainer;
 	writeLocalStorage();
 	currentTagPartner = 0;
-	if (data.trainers[i]["player-partners"]) {
-		playerTagPartners = data.trainers[i]["player-partners"];
+	if (trainer["player-partners"]) {
+		playerTagPartners = trainer["player-partners"];
 	} else {
 		playerTagPartners = [];
 	}
 	calcTagPartners();
-	enemyTeam = data.trainers[i].team;
-	document.getElementById("current-trainer-name").innerHTML = `${getTrainerName(data.trainers[i].name)}`;
-	document.getElementById("current-trainer-navigate").href = `#/trainer/${data.trainers[i].name}/`;
+	enemyTeam = trainer.team;
+	document.getElementById("current-trainer-name").innerHTML = `${getTrainerName(trainer.name)}`;
+	document.getElementById("current-trainer-navigate").href = `#/trainer/${trainer.name}/`;
 	setEnemy(lastTrainer, 0);
 	navigate("#/calc/");
 	history.pushState(getLinkState(), "", "#/calc/");

@@ -243,6 +243,7 @@ function selectGame(gameId) {
 		// custom game
 		loadData(localStorage.getItem("calc/custom-data"));
 	}
+	setItemMenu();
 	readLocalStorage();
 	updateEngineFlags();
 }
@@ -463,11 +464,16 @@ function validateData() {
 			for (const mon of trainer.team) {
 				if (!pokemonByName.has(mon.name)) {
 					console.error(trainer.name, " has unknown pokemon: ", mon.name);
-				} else {
-					for (const move of mon.moves) {
-						if (!movesByName.has(move)) {
-							console.error(trainer.name + "'s", mon.name, " has unknown move: ", move);
-						}
+				}
+				if (!abilities.byName(mon.ability)) {
+					console.error(trainer.name + "'s ", mon.name, " has unknown ability: ", mon.ability)
+				}
+				if (mon.item && !itemsByName.get(mon.item)) {
+					console.error(trainer.name + "'s ", mon.name, " has unknown item: ", mon.item)
+				}
+				for (const move of mon.moves) {
+					if (!movesByName.has(move)) {
+						console.error(trainer.name + "'s ", mon.name, " has unknown move: ", move);
 					}
 				}
 			}
