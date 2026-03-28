@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta property="og:title" content="Platinum Kaizo">
+		<meta property="og:description" content="Platinum Kaizo setup and resources">
+		<meta property="og:site_name" content="emi.dev">
+		<meta property="og:image" content="./pk.webp">
+		<meta name="theme-color" content="#dc9eff">
+		<title>Platinum Kaizo Setup</title>
+		<link rel="stylesheet" href="https://fonts.bunny.net/css?family=Ubuntu+Mono:400,700&display=block">
+		<link rel="stylesheet" type="text/css" href="../blog/style.css">
+		<style id="dynamic-style"></style>
+	</head>
+	<body style="background-color: #262626;">
+	<h1>Platinum Kaizo Setup</h1>
+	<center><img src="./pk.webp" width="400"></center>
+	<h1>I just want to play the game</h1>
+	<h3>Step 1 - Download and Patch the Game</h3>
+	<p>
+		<a href="https://drive.google.com/drive/folders/1kLhdn09AfYFy-3R3epVycGNRxnmzvVFi?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto">Download the patch</a>.
+		You need to obtain your own version of the Pokemon Platinum ROM file (<code>4998 USA rev 1</code>).
+		Input the files into the <a href="https://kotcrab.github.io/xdelta-wasm/">XDelta Patcher</a> and download the result.
+	</p>
+	<h3>Step 2 - Open the Emulator</h3>
+	<p>
+		You will need <a href="https://www.desmume.com/">DeSmuME</a> to play Platinum Kaizo.
+		Make sure you are on the latest version of DeSmuME, 0.9.13.
+		Other solutions like MelonDS, flash carts, and mobile emulators are prone to errors.
+		From DeSmuME, you can now launch and play Platinum Kaizo.
+	</p>
+	<h3>Step 3 - Open the Calc</h3>
+	<p>
+		Open the <a href="https://emi.dev/calc/pk/">Platinum Kaizo Calc</a>.
+		If you are a nuzlocker, this will be useful for calcing fights.
+		You can additionally look up Pokemon, items, areas, trainers, etc. to view in game information.
+	</p>
+	<h3>Step 4 - Installing the Lua Script</h3>
+	<p>
+		<i>
+			The Lua script will let you sync your box to the calc quickly, pre-status your party, and set the time in game.
+			This is an optional step.
+		</i>
+	</p>
+	<p>
+		To run any Lua script in DeSmuME, you need to obtain a Lua file.
+		First, download the zip file at <a href="https://sourceforge.net/projects/luabinaries/files/5.1.5/Tools%20Executables/lua-5.1.5_Win64_bin.zip/download">SourceForge</a>.
+		Inside the zip file, there will be a file called <code>lua5.1.dll</code>.
+		Extract only this file to the same folder your <code>DeSmuME.exe</code> is located.
+		Rename <code>lua5.1.dll</code> to <code>lua51.dll</code>.
+	</p>
+	<p>
+		Next, download the <code>vs-link.ersatz.zip</code> file of <a href="https://github.com/emilyploszaj/vs-link-ersatz/releases/latest">Vs. Link Ersatz</a>.
+		Unzip this file into the same folder as your <code>lua51.dll</code>.
+		From DeSmuME, open up Platinum Kaizo, then navigate to <code>Tools > Lua Scripting > New Lua Script Window...</code>.
+		Click browse and select <code>vs-link-ersatz.lua</code>.
+		If you were successful, the output should look like this:
+	</p>
+	<pre><code>Loading Vs. Link Ersatz...
+Successfully loaded Vs. Link Ersatz, by Emi
+script returned but is still running registered functions</code></pre>
+	<p>
+		In the calc, click the Settings button and enable Vs. Link Ersatz sycing.
+		The Sync button will pull your party from in game into the calc, including stats.
+		The Commands button will let you pre status your party and configure the in game time.
+	</p>
+
+	<h1>All Resources</h1>
+	<h3>Setup Resources</h3>
+	<ul>
+		<li><a href="https://drive.google.com/drive/folders/1kLhdn09AfYFy-3R3epVycGNRxnmzvVFi?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto">Platinum Kaizo Patch</a> - The game</li>
+		<li><a href="https://kotcrab.github.io/xdelta-wasm/">XDelta Patcher</a> - Patching software to apply the game patch</li>
+		<li><a href="https://www.desmume.com/">DeSmuME</a> - DS Emulator for Platinum Kaizo</li>
+		<li><a href="https://sourceforge.net/projects/luabinaries/files/5.1.5/Tools%20Executables/lua-5.1.5_Win64_bin.zip/download">Lua DLLs</a> - Lua DLL required to run scripts in DeSmuME</li>
+		<li><a href="https://emi.dev/calc/pk/">Emi's Calc</a> - Damage calculator and resource lookup for the game</li>
+		<li><a href="https://github.com/emilyploszaj/vs-link-ersatz/releases/latest">Vs. Link Ersatz</a> - Lua script with calc integration for syncing, pre statusing, and setting time</li>
+	</ul>
+	<h3>Platinum Kaizo Community</h3>
+	<ul>
+		<li><a href="https://docs.google.com/spreadsheets/d/1ki6NwXMXuGP0fO0YV3lrPc-uKnwEy5xwtJoyJUtI3Zo">Hall of Fame</a> - Personal best and world record showcase</li>
+		<li><a href="https://docs.google.com/document/d/11ZprzZDSaJVwzIP1tI6X-JfFoct3jNMDW9i1eciPyHk/edit?usp=sharing">PK FAQ</a> - Frequently asked questions about Platinum Kaizo</li>
+	</ul>
+	<h3>Spreadsheet Documents</h3>
+	<ul>
+		<li><a href="https://docs.google.com/spreadsheets/d/1y95UYKY9HNgZjUlbeZbQ3BWf5IqcFqAkmstC-OSa6vc/edit?usp=sharing">Mastersheet</a> - Most of the game's information</li>
+		<li><a href="https://docs.google.com/spreadsheets/d/1uAPGjsY5a-X9DJ9HK_Wyy8TcYHwzVI5uJ1UUwHo4MLI/edit?usp=sharing">Encounters</a> - The game's Pokemon encounters</li>
+		<li><a href="https://docs.google.com/spreadsheets/d/1FDPAoLT9Qoj-gTzosvwzcNCRxVcURgUT7TsfW69DHaA/edit?usp=sharing">Trainers</a> - The game's trainers, organized by split</li>
+		<li><a href="https://docs.google.com/spreadsheets/d/1h9vW08KEWbL6ucdBIPBZG1Phmc9ZaT9KOt8NADdWIuQ/edit?usp=sharing">Item Checklist</a> - Most items in the game by order of appearance, with requirements</li>
+		<li><a href="https://docs.google.com/spreadsheets/d/190KzSPAuZfIM61cPcxaGNO4iMvn-bPceGW070UmGg_I/edit?usp=sharing">Contest Resources</a> - Information for in game contests</li>
+	</ul>
+	<h3>Utilities</h3>
+	<ul>
+		<li><a href="https://drive.google.com/file/d/1teRWH8Wp2cdUc2j1JKCbVPvLaQHBJcZz/view?usp=drive_link">Eterna Forest Map</a> - Trainer layout in Eterna Forest</li>
+		<li><a href="https://docs.google.com/document/d/1ucBWH7gDwBZ1IpuGEhOm3Ojh_uRqrCVspSzavZip1vI/edit?usp=sharing">Acid Rain Breakdown</a> - Acid rain bug info</li>
+	</ul>
+	<h3>Community Alternatives</h3>
+	<p>
+		These tools or resources are already provided by previous resources, but some may prefer them.
+	</p>
+	<ul>
+		<li><a href="https://runasdate.org/wp-content/uploads/2025/01/runasdate64-bit.zip">Run as Date</a> - Windows program time changer</li>
+		<li><a href="https://www.romhacking.net/utilities/598/">XDeltaUI</a> - Windows only downloadable patching program</li>
+		<li><a href="https://pkcalc.anastarawneh.com/">Anas Calc</a> - PK damage calculator by Anas</li>
+		<li><a href="https://hzla.github.io/Dynamic-Calc-Decomps/?data=pk&noSwitch=1">Hzla Calc</a> - PK damage calculator by Hzla</li>
+	</ul>
+	</body>
+</html>
