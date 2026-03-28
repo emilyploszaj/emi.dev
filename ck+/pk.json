@@ -26010,7 +26010,7 @@
                 }
             },
             "index": 222,
-            "name": "silver-powder"
+            "name": "silverpowder"
         },
         {
             "description": "",
@@ -27840,62 +27840,62 @@
                 },
                 {
                     "amount": 1,
-                    "info": "",
+                    "info": "Purchasable from 3F Department Store after Distortion World",
                     "item": "tm17-tackle"
                 },
                 {
                     "amount": 1,
-                    "info": "",
+                    "info": "Purchasable from 3F Department Store after Distortion World",
                     "item": "tm54-false-swipe"
                 },
                 {
                     "amount": 1,
-                    "info": "",
+                    "info": "Purchasable from 3F Department Store after Distortion World",
                     "item": "tm20-safeguard"
                 },
                 {
                     "amount": 1,
-                    "info": "",
+                    "info": "Purchasable from 3F Department Store after Distortion World",
                     "item": "tm33-reflect"
                 },
                 {
                     "amount": 1,
-                    "info": "",
+                    "info": "Purchasable from 3F Department Store after Distortion World",
                     "item": "tm16-light-screen"
                 },
                 {
                     "amount": 1,
-                    "info": "",
+                    "info": "Purchasable from 3F Department Store after Distortion World",
                     "item": "tm70-flash"
                 },
                 {
                     "amount": 1,
-                    "info": "",
+                    "info": "Purchasable from 3F Department Store after Distortion World",
                     "item": "tm38-fire-blast"
                 },
                 {
                     "amount": 1,
-                    "info": "",
+                    "info": "Purchasable from 3F Department Store after Distortion World",
                     "item": "tm25-thunder"
                 },
                 {
                     "amount": 1,
-                    "info": "",
+                    "info": "Purchasable from 3F Department Store after Distortion World",
                     "item": "tm14-blizzard"
                 },
                 {
                     "amount": 1,
-                    "info": "",
+                    "info": "Purchasable from 3F Department Store after Distortion World",
                     "item": "tm22-solarbeam"
                 },
                 {
                     "amount": 1,
-                    "info": "",
+                    "info": "Purchasable from 3F Department Store after Distortion World",
                     "item": "tm52-focus-blast"
                 },
                 {
                     "amount": 1,
-                    "info": "",
+                    "info": "Purchasable from 3F Department Store after Distortion World",
                     "item": "tm15-snore"
                 }
             ],
@@ -29473,12 +29473,23 @@
                     "amount": 1,
                     "info": "On outcropping behind Valley Windworks building<br>Requires Surf",
                     "item": "power-herb"
-                },
+                }
+            ],
+            "locations": [
+                "valley-windworks"
+            ],
+            "name": "valley-windworks",
+            "positions": [
                 {
-                    "amount": 1,
-                    "info": "",
-                    "item": "eterna-forest"
-                },
+                    "x": 7,
+                    "y": 14
+                }
+            ],
+            "type": "natural"
+        },
+        {
+            "id": 48,
+            "items": [
                 {
                     "amount": 1,
                     "info": "On left as you enter",
@@ -29530,21 +29541,6 @@
                     "item": "ether"
                 }
             ],
-            "locations": [
-                "valley-windworks"
-            ],
-            "name": "valley-windworks",
-            "positions": [
-                {
-                    "x": 7,
-                    "y": 14
-                }
-            ],
-            "type": "natural"
-        },
-        {
-            "id": 48,
-            "items": [],
             "locations": [
                 "eterna-forest"
             ],
@@ -101688,7 +101684,7 @@
                 {
                     "ability": "honey-gather",
                     "gender": "unknown",
-                    "item": "silver-powder",
+                    "item": "silverpowder",
                     "level": 11,
                     "moves": [
                         "tailwind",
