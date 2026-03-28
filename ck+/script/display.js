@@ -937,8 +937,10 @@ function setMap(xOffset = undefined, yOffset = 0, scale = 48) {
 	writeLocalStorage();
 	var th = 17 * scale;
 	var v = "";
-	v += '<button onclick="setMap(0)">Johto</button>';
-	v += '<button onclick="setMap(-17)">Kanto</button>';
+	if (game.name != "pk") {
+		v += '<button onclick="setMap(0)">Johto</button>';
+		v += '<button onclick="setMap(-17)">Kanto</button>';
+	}
 	v += getMapDisplay(960, th, xOffset, yOffset, scale);
 	document.getElementById("map").innerHTML = v;
 }
