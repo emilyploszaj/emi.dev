@@ -9,7 +9,7 @@ class BattlePoke {
 		v.#player = player;
 		v.poke = poke;
 		v.#stages = stages;
-		var a = abilitiesByName.get(poke.ability) ?? {"name": "none"};
+		var a = abilities.byName(poke.ability) ?? {"name": "none"};
 		v.#ability = BattleAbility.of(v, a, a.variants?.[player ? playerAbilityVariant : enemyAbilityVariant] ?? {});
 		return v;
 	}
@@ -262,11 +262,17 @@ function isTrainerB2b(i) {
 	return false;
 }
 
+function resetBattleSettings() {
+	document.getElementById("current-weather").value = "none";
+	document.getElementById("doubles").checked = false;
+}
+
 function calcTrainer(i) {
 	if (isTrainerB2b(i)) {
 		calcTrainer(i - 1);
 		return;
 	}
+	resetBattleSettings();
 	lastTrainer = i;
 	savedData["last-trainer"] = lastTrainer;
 	writeLocalStorage();

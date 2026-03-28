@@ -105,7 +105,7 @@ function navigate(url) {
 				document.getElementById("full-page").innerHTML = getFullMoveDisplay(movesByName.get(parts[1]));
 				setTab("full-page");
 			} else if (parts[0] == "ability") {
-				document.getElementById("full-page").innerHTML = getFullAbilityDisplay(abilitiesByName.get(parts[1]));
+				document.getElementById("full-page").innerHTML = getFullAbilityDisplay(abilities.byName(parts[1]));
 				setTab("full-page");
 			} else if (parts[0] == "type") {
 				document.getElementById("full-page").innerHTML = getFullTypeDisplay(parts[1]);

@@ -1,3 +1,36 @@
+class Lookup {
+	#arr;
+	#maps;
+	
+	constructor(arr) {
+		this.#arr = arr;
+		this.#maps = new Map();
+	}
+
+	get array() {
+		return this.#arr;
+	}
+
+	by(key, value) {
+		if (!this.#maps.has(key)) {
+			var map = new Map();
+			for (const a of this.#arr) {
+				map.set(a[key], a);
+			}
+			this.#maps.set(key, map);
+		}
+		return this.#maps.get(key).get(value);
+	}
+
+	byName(value) {
+		return this.by("name", value);
+	}
+
+	byIndex(value) {
+		return this.by("index", value);
+	}
+}
+
 var MAX_DV = 31;
 
 var data;
@@ -23,6 +56,7 @@ var typeColors = new Map([
 	["fairy", "#fc88cf"],
 	["curse", "#68a090"]
 ]);
+var abilities = new Lookup([]);
 var typeMatchups = new Map();
 var searchResults = new Map();
 var pokemonByName = new Map();
@@ -35,8 +69,6 @@ var movesByName = new Map();
 var movesByIndex = new Map();
 var movesByLearnset = new Map();
 var movesByTMHM = new Map();
-var abilitiesByName = new Map();
-var abilitiesByIndex = new Map();
 var itemsByName = new Map();
 var encounterPools = new Map();
 var landmarksByIndex = new Map();
@@ -312,9 +344,8 @@ function startup() {
 		addSearchResult(m.name, {link: `#/move/${m.name}/`});
 	}
 	if (j.abilities) {
+		abilities = new Lookup(j.abilities);
 		for (let a of j.abilities) {
-			abilitiesByName.set(a.name, a);
-			abilitiesByIndex.set(a.index, a);
 			addSearchResult(a.name, {link: `#/ability/${a.name}/`});
 		}
 	}

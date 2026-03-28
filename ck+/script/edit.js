@@ -169,7 +169,7 @@ function updateEdits() {
 	validate("edit-name", v => pokemonByName.has(v));
 	validate("edit-item", v => v == "" || itemsByName.has(v));
 	validate("edit-lvl", v => v <= 100 && v > 0);
-	validate("edit-ability", v => abilitiesByName.has(v));
+	validate("edit-ability", v => abilities.byName(v) != undefined);
 	validate("edit-move-1", v => v == "" || movesByName.has(v));
 	validate("edit-move-2", v => v == "" || movesByName.has(v));
 	validate("edit-move-3", v => v == "" || movesByName.has(v));
@@ -541,7 +541,7 @@ class OptionSelect {
 		} else if (optionType == "items") {
 			contents = this.getOptionItem(itemsByName.get(value), false);
 		} else if (optionType == "abilities") {
-			contents = this.getOptionAbility(abilitiesByName.get(value), false);
+			contents = this.getOptionAbility(abilities.byName(value), false);
 		}
 		element.innerHTML = contents;
 	}
@@ -568,7 +568,7 @@ class OptionSelect {
 			suggested = suggested.displayMap(i => this.getOptionItem(itemsByName.get(i.value), true, i.extra ?? ""));
 		} else if (optionType == "abilities") {
 			contents = data.abilities.sort((a, b) => a.name.localeCompare(b.name)).displayMap(i => this.getOptionAbility(i, true));
-			suggested = suggested.displayMap(i => this.getOptionAbility(abilitiesByName.get(i.value), true, i.extra ?? ""));
+			suggested = suggested.displayMap(i => this.getOptionAbility(abilities.byName(i.value), true, i.extra ?? ""));
 		}
 		document.getElementById("suggested-option-list").innerHTML = suggested;
 		document.getElementById("option-list").innerHTML = contents;

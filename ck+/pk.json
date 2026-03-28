@@ -26671,7 +26671,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+20%"
+                        "item-boost": "+50%"
                     }
                 }
             },
@@ -26688,7 +26688,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+20%"
+                        "item-boost": "+50%"
                     }
                 }
             },
@@ -26705,7 +26705,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+20%"
+                        "item-boost": "+50%"
                     }
                 }
             },
@@ -26722,7 +26722,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+20%"
+                        "item-boost": "+50%"
                     }
                 }
             },
@@ -26739,7 +26739,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+20%"
+                        "item-boost": "+50%"
                     }
                 }
             },
@@ -26756,7 +26756,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+20%"
+                        "item-boost": "+50%"
                     }
                 }
             },
@@ -26773,7 +26773,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+20%"
+                        "item-boost": "+50%"
                     }
                 }
             },
@@ -26790,7 +26790,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+20%"
+                        "item-boost": "+50%"
                     }
                 }
             },
@@ -26807,7 +26807,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+20%"
+                        "item-boost": "+50%"
                     }
                 }
             },
@@ -26824,7 +26824,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+20%"
+                        "item-boost": "+50%"
                     }
                 }
             },
@@ -26841,7 +26841,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+20%"
+                        "item-boost": "+50%"
                     }
                 }
             },
@@ -26858,7 +26858,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+20%"
+                        "item-boost": "+50%"
                     }
                 }
             },
@@ -26875,7 +26875,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+20%"
+                        "item-boost": "+50%"
                     }
                 }
             },
@@ -26892,7 +26892,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+20%"
+                        "item-boost": "+50%"
                     }
                 }
             },
@@ -26909,7 +26909,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+20%"
+                        "item-boost": "+50%"
                     }
                 }
             },
@@ -26926,7 +26926,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+20%"
+                        "item-boost": "+50%"
                     }
                 }
             },
@@ -27064,7 +27064,18 @@
         },
         {
             "id": 1,
-            "items": [],
+            "items": [
+                {
+                    "amount": 20,
+                    "info": "Under Barry's bed",
+                    "item": "rare-candy"
+                },
+                {
+                    "amount": 1,
+                    "info": "Between trees<br>Requires Surf",
+                    "item": "odd-keystone"
+                }
+            ],
             "locations": [
                 "twinleaf-town"
             ],
@@ -27078,7 +27089,33 @@
         },
         {
             "id": 2,
-            "items": [],
+            "items": [
+                {
+                    "amount": 20,
+                    "info": "From Rowan, upon receiving Pokédex",
+                    "item": "poke-ball"
+                },
+                {
+                    "amount": 5,
+                    "info": "From Rowan, upon receiving Pokédex",
+                    "item": "great-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "Given by Rowan",
+                    "item": "tm10-hidden-power"
+                },
+                {
+                    "amount": 20,
+                    "info": "Given by Rowan after Distortion World<br>Requires Save The World",
+                    "item": "heart-scale"
+                },
+                {
+                    "amount": 10,
+                    "info": "Given by Rowan after Distortion World<br>Requires Save The World",
+                    "item": "star-piece"
+                }
+            ],
             "locations": [
                 "sandgem-town"
             ],
@@ -27092,7 +27129,33 @@
         },
         {
             "id": 3,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "From little girl in central house",
+                    "item": "tm88-pluck"
+                },
+                {
+                    "amount": 3,
+                    "info": "From... Barfing Shroomish... in Berry Shop... (next patch)",
+                    "item": "all-poffin-berries"
+                },
+                {
+                    "amount": 10,
+                    "info": "From woman in Berry Shop",
+                    "item": "random-poffin-berry"
+                },
+                {
+                    "amount": 1,
+                    "info": "From leftmost woman in Berry Shop",
+                    "item": "sprayduck"
+                },
+                {
+                    "amount": 1,
+                    "info": "Behind the house to left of berry shop",
+                    "item": "tm07-aurora-beam"
+                }
+            ],
             "locations": [
                 "floaroma-town"
             ],
@@ -27107,7 +27170,33 @@
         },
         {
             "id": 4,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "From Barry, upon entering Solaceon Town",
+                    "item": "every-ball-seal"
+                },
+                {
+                    "amount": 1,
+                    "info": "Inside Buneary's green play tunnel (hidden)",
+                    "item": "heart-scale"
+                },
+                {
+                    "amount": 1,
+                    "info": "Interact with tree in ledge section (hidden)",
+                    "item": "shuca-berry"
+                },
+                {
+                    "amount": 1,
+                    "info": "Item in ledge section",
+                    "item": "green-shard"
+                },
+                {
+                    "amount": 1,
+                    "info": "From top exit from Solaceon Ruins",
+                    "item": "rare-candy"
+                }
+            ],
             "locations": [
                 "solaceon-town"
             ],
@@ -27122,7 +27211,38 @@
         },
         {
             "id": 5,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "Above Pokémon Center",
+                    "item": "dragon-fang"
+                },
+                {
+                    "amount": 1,
+                    "info": "End of top-left wild grass path (hidden)",
+                    "item": "king's-rock"
+                },
+                {
+                    "amount": 1,
+                    "info": "Local mart, from shades guy<br>Requires 00:00 - 07:59",
+                    "item": "wise-glasses"
+                },
+                {
+                    "amount": 1,
+                    "info": "Local mart, from shades guy<br>Requires 08:00 - 15:59",
+                    "item": "wide-lens"
+                },
+                {
+                    "amount": 1,
+                    "info": "Local mart, from shades guy<br>Requires 15:59 - 23:59",
+                    "item": "blackglasses"
+                },
+                {
+                    "amount": 1,
+                    "info": "From Cynthia's GILF upon defeating Cyrus<br>Requires Defeat Cyrus",
+                    "item": "haban-berry"
+                }
+            ],
             "locations": [
                 "celestic-town"
             ],
@@ -27136,11 +27256,137 @@
         },
         {
             "id": 6,
-            "items": [],
+            "items": [
+                {
+                    "amount": 10,
+                    "info": "Inside wall on left indent entering city (hidden)",
+                    "item": "stardust"
+                },
+                {
+                    "amount": 1,
+                    "info": "From Looker",
+                    "item": "white-herb"
+                },
+                {
+                    "amount": 1,
+                    "info": "Top-left of trainer school",
+                    "item": "oran-berry"
+                },
+                {
+                    "amount": 1,
+                    "info": "Between bookshelves in trainer school",
+                    "item": "oran-berry"
+                },
+                {
+                    "amount": 1,
+                    "info": "Under table in trainer school",
+                    "item": "oran-berry"
+                },
+                {
+                    "amount": 1,
+                    "info": "To left of school boy in trainer school",
+                    "item": "tm06-toxic"
+                },
+                {
+                    "amount": 1,
+                    "info": "From Rich Boy Barnabeux<br>Requires Defeat Barnabeux",
+                    "item": "$100,000"
+                },
+                {
+                    "amount": 1,
+                    "info": "From Pikachu girl in Jubilife Condominiums ",
+                    "item": "light-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "From Fisherman in West Gate",
+                    "item": "old-rod"
+                },
+                {
+                    "amount": 1,
+                    "info": "Held item on stray cat obtained in Pokétch Co.",
+                    "item": "quick-claw"
+                },
+                {
+                    "amount": 1,
+                    "info": "In a trash can of Poketch Co.",
+                    "item": "heart-scale"
+                },
+                {
+                    "amount": 1,
+                    "info": "From Candy Man",
+                    "item": "box-of-rare-candies"
+                },
+                {
+                    "amount": 1,
+                    "info": "Upon attempting to enter GTS<br>Requires 1 Badge",
+                    "item": "everstone"
+                },
+                {
+                    "amount": 1,
+                    "info": "From Candy Man after beating 1st gym<br>Requires 1 Badge",
+                    "item": "ragecandybar"
+                },
+                {
+                    "amount": 1,
+                    "info": "From Candy Man after beating 1st gym<br>Requires 1 Badge",
+                    "item": "berry-juice"
+                },
+                {
+                    "amount": 1,
+                    "info": "From Candy Man after beating 2nd gym<br>Requires 2 Badges",
+                    "item": "old-gateau"
+                },
+                {
+                    "amount": 1,
+                    "info": "Purchasable from Candy Man after 2nd Gym<br>Requires 2 Badges",
+                    "item": "tm43-secret-power"
+                },
+                {
+                    "amount": 1,
+                    "info": "From Candy Man after beating 3rd gym<br>Requires 3 Badges",
+                    "item": "mild-poffin"
+                },
+                {
+                    "amount": 1,
+                    "info": "From Candy Man after beating 4th gym<br>Requires 4 Badges",
+                    "item": "chople-berry"
+                },
+                {
+                    "amount": 1,
+                    "info": "From Candy Man after beating 5th gym<br>Requires 5 Badges",
+                    "item": "enigma-berry"
+                },
+                {
+                    "amount": 1,
+                    "info": "From Candy Man after beating 6th gym<br>Requires 6 Badges",
+                    "item": "micle-berry"
+                },
+                {
+                    "amount": 1,
+                    "info": "From Candy Man after beating 7th gym<br>Requires 7 Badges",
+                    "item": "jaboca-berry"
+                },
+                {
+                    "amount": 1,
+                    "info": "From Candy Man after beating 7th gym<br>Requires 7 Badges",
+                    "item": "rowap-berry"
+                },
+                {
+                    "amount": 1,
+                    "info": "From Candy Man after beating 8th gym<br>Requires 8 Badges",
+                    "item": "custap-berry"
+                },
+                {
+                    "amount": 1,
+                    "info": "From Candy Man after defeating Team Galactic<br>Requires Defeat Team Galactic",
+                    "item": "assorted-berry-&-candy-box"
+                }
+            ],
             "locations": [
                 "jubilife-city"
             ],
-            "name": "jublife-city",
+            "name": "jubilife-city",
             "positions": [
                 {
                     "height": 2,
@@ -27152,7 +27398,28 @@
         },
         {
             "id": 7,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "First house upon entering city, from woman",
+                    "item": "tm48-skill-swap"
+                },
+                {
+                    "amount": 1,
+                    "info": "Clearing south of canal<br>Requires Surf",
+                    "item": "tm74-gyro-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "After Beating Byron",
+                    "item": "armor-fossil"
+                },
+                {
+                    "amount": 1,
+                    "info": "After Beating Byron",
+                    "item": "skull-fossil"
+                }
+            ],
             "locations": [
                 "canalave-city"
             ],
@@ -27167,7 +27434,78 @@
         },
         {
             "id": 8,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "From girl upstairs in apartment building",
+                    "item": "dusk-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "From Chestnut Trade<br>Requires Any Pokémon",
+                    "item": "oran-berry"
+                },
+                {
+                    "amount": 1,
+                    "info": "Apartments 1F, show man a Geodude<br>Requires Geodude in Party",
+                    "item": "heal-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "Far right apartments, 1F, from youngster",
+                    "item": "great-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "Under hyperactive girl (hidden)",
+                    "item": "rare-candy"
+                },
+                {
+                    "amount": 1,
+                    "info": "Under hyperactive girl (hidden)",
+                    "item": "rare-candy"
+                },
+                {
+                    "amount": 1,
+                    "info": "Under hyperactive girl (hidden)",
+                    "item": "rare-candy"
+                },
+                {
+                    "amount": 1,
+                    "info": "Talk to miner in grass near Oreburgh Mine",
+                    "item": "super-potion"
+                },
+                {
+                    "amount": 1,
+                    "info": "Below slag heap",
+                    "item": "lagging-tail"
+                },
+                {
+                    "amount": 1,
+                    "info": "Left of slag heap",
+                    "item": "yellow-shard"
+                },
+                {
+                    "amount": 1,
+                    "info": "One tile above Yellow Shard (hidden)",
+                    "item": "heart-scale"
+                },
+                {
+                    "amount": 1,
+                    "info": "One tile above Lagging Tail (hidden)",
+                    "item": "pearl"
+                },
+                {
+                    "amount": 1,
+                    "info": "Heisted from Scientist Jonathon's Onix",
+                    "item": "sticky-barb"
+                },
+                {
+                    "amount": 1,
+                    "info": "From Roark<br>Requires Defeat Roark",
+                    "item": "tm39-rock-tomb"
+                }
+            ],
             "locations": [
                 "oreburgh-city"
             ],
@@ -27183,7 +27521,68 @@
         },
         {
             "id": 9,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "From Prof. Rowan's aide in Cycling Road gate",
+                    "item": "exp-share"
+                },
+                {
+                    "amount": 1,
+                    "info": "Behind Gardenia's Gym<br>Requires Rock Smash",
+                    "item": "kebia-berry"
+                },
+                {
+                    "amount": 1,
+                    "info": "Talk to boy in Underground Man's house",
+                    "item": "1-of-fire\/water\/leaf-stone"
+                },
+                {
+                    "amount": 1,
+                    "info": "Cash register in Cycle Shop before saving shop owner !",
+                    "item": "big-nugget"
+                },
+                {
+                    "amount": 1,
+                    "info": "In front of Dialga\/Palkia statue",
+                    "item": "moon-stone"
+                },
+                {
+                    "amount": 1,
+                    "info": "Behind Dialga\/Palkia statue",
+                    "item": "dragon-scale"
+                },
+                {
+                    "amount": 1,
+                    "info": "Given by Cynthia after Cyrus cutscene",
+                    "item": "hm01-cut"
+                },
+                {
+                    "amount": 1,
+                    "info": "Rightward path behind Team Galactic Building<br>Requires Cut",
+                    "item": "tm46-thief"
+                },
+                {
+                    "amount": 1,
+                    "info": "Above north-eastern lake<br>Requires Surf",
+                    "item": "moon-stone"
+                },
+                {
+                    "amount": 1,
+                    "info": "From Gardenia<br>Requires Defeat Gardenia",
+                    "item": "tm86-grass-knot"
+                },
+                {
+                    "amount": 1,
+                    "info": "From Cycle Shop owner after saving him from Team Galactic ",
+                    "item": "bicycle"
+                },
+                {
+                    "amount": 1,
+                    "info": "From Nomu trade<br>Requires Any non-Fire or Poison Pokémon",
+                    "item": "charcoal"
+                }
+            ],
             "locations": [
                 "eterna-city"
             ],
@@ -27199,7 +27598,48 @@
         },
         {
             "id": 10,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "From Pokémon Fan Club president",
+                    "item": "poffin-case"
+                },
+                {
+                    "amount": 1,
+                    "info": "Inside Poffin House Bin (Hidden)",
+                    "item": "tanga-berry"
+                },
+                {
+                    "amount": 1,
+                    "info": "Inside poffin machine (hidden)",
+                    "item": "twistedspoon"
+                },
+                {
+                    "amount": 1,
+                    "info": "Building to right of Pokémon Fan Club, 2F, from woman",
+                    "item": "tm82-sleep-talk"
+                },
+                {
+                    "amount": 1,
+                    "info": "Apartment to right of Contest Hall, from baby !",
+                    "item": "heart-scale"
+                },
+                {
+                    "amount": 1,
+                    "info": "From beautiful, radiant Zoe upon entering Contest Hall",
+                    "item": "brightpowder"
+                },
+                {
+                    "amount": 1,
+                    "info": "From Rich Boy at Contest Hall counter",
+                    "item": "mild-poffin"
+                },
+                {
+                    "amount": 1,
+                    "info": "From Fantina<br>Requires Defeat Fantina",
+                    "item": "tm65-shadow-claw"
+                }
+            ],
             "locations": [
                 "hearthome-city"
             ],
@@ -27215,7 +27655,58 @@
         },
         {
             "id": 11,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "Eastern house, upon showing boy a max coolness Pokémon",
+                    "item": "red-scarf"
+                },
+                {
+                    "amount": 1,
+                    "info": "Eastern house, upon showing boy a max beauty Pokémon",
+                    "item": "blue-scarf"
+                },
+                {
+                    "amount": 1,
+                    "info": "Eastern house, upon showing boy a max cuteness Pokémon",
+                    "item": "pink-scarf"
+                },
+                {
+                    "amount": 1,
+                    "info": "Eastern house, upon showing boy a max smartness Pokémon",
+                    "item": "green-scarf"
+                },
+                {
+                    "amount": 1,
+                    "info": "Eastern house, upon showing boy a max toughness Pokémon",
+                    "item": "yellow-scarf"
+                },
+                {
+                    "amount": 1,
+                    "info": "From parasol woman near Croagunk board",
+                    "item": "starter-mask"
+                },
+                {
+                    "amount": 1,
+                    "info": "House above Pokémart, upon showing bug catcher ♂ and ♀ Combees<br>Requires ♂ and ♀ Combees",
+                    "item": "macho-brace"
+                },
+                {
+                    "amount": 1,
+                    "info": "South-western house, from woman",
+                    "item": "pittance-of-berries"
+                },
+                {
+                    "amount": 1,
+                    "info": "From Crasher Wake<br>Requires Defeat Crasher Wake",
+                    "item": "tm55-brine"
+                },
+                {
+                    "amount": 1,
+                    "info": "Surf near boats<br>Requires Surf",
+                    "item": "blue-shard"
+                }
+            ],
             "locations": [
                 "pastoria-city"
             ],
@@ -27231,7 +27722,183 @@
         },
         {
             "id": 12,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "In Galactic Warehouse",
+                    "item": "hm02-fly"
+                },
+                {
+                    "amount": 1,
+                    "info": "In courtyard near Galactic Warehouse (hidden)",
+                    "item": "babiri-berry"
+                },
+                {
+                    "amount": 1,
+                    "info": "Top of courtyard near Galactic Warehouse",
+                    "item": "star-piece"
+                },
+                {
+                    "amount": 1,
+                    "info": "Between trees and Department Store",
+                    "item": "yellow-shard"
+                },
+                {
+                    "amount": 1,
+                    "info": "Department Store, 1F, from elderly woman",
+                    "item": "starter-mask"
+                },
+                {
+                    "amount": 1,
+                    "info": "Department Store, 5F, order Pure Water",
+                    "item": "water-stone"
+                },
+                {
+                    "amount": 1,
+                    "info": "Department Store, 5F, order Chilli Chug",
+                    "item": "fire-stone"
+                },
+                {
+                    "amount": 1,
+                    "info": "Department Store, 5F, order Lemon NRG",
+                    "item": "thunderstone"
+                },
+                {
+                    "amount": 1,
+                    "info": "Department Store, 5F, order Matcha Tea",
+                    "item": "leaf-stone"
+                },
+                {
+                    "amount": 1,
+                    "info": "Department Store, 5F, order Orn Juice",
+                    "item": "sun-stone"
+                },
+                {
+                    "amount": 1,
+                    "info": "Department Store, 5F, order Choco Milk",
+                    "item": "moon-stone"
+                },
+                {
+                    "amount": 1,
+                    "info": "Department Store, 5F, order Blue Alola",
+                    "item": "dawn-stone"
+                },
+                {
+                    "amount": 1,
+                    "info": "Department Store, 5F, order Blk Coffee (4%)",
+                    "item": "dusk-stone"
+                },
+                {
+                    "amount": 1,
+                    "info": "Department Store, 5F, order Clear Cola",
+                    "item": "shiny-stone"
+                },
+                {
+                    "amount": 1,
+                    "info": "Left of Galactic HQ",
+                    "item": "tm12-faint-attack"
+                },
+                {
+                    "amount": 1,
+                    "info": "From roughneck below gym",
+                    "item": "tm63-embargo"
+                },
+                {
+                    "amount": 1,
+                    "info": "From clown in right house below gym",
+                    "item": "coin-case"
+                },
+                {
+                    "amount": 1,
+                    "info": "Casino Desk after getting a 10 Clefairy streak at slots<br>Requires Coin Case",
+                    "item": "tm64-explosion"
+                },
+                {
+                    "amount": 1,
+                    "info": "Casino Desk after getting a 10 Clefairy streak at slots<br>Requires Coin Case",
+                    "item": "50,000-coins"
+                },
+                {
+                    "amount": 1,
+                    "info": "On raised ground beside gym<br>Requires Rock Climb",
+                    "item": "muscle-band"
+                },
+                {
+                    "amount": 1,
+                    "info": "From Maylene<br>Requires Defeat Maylene",
+                    "item": "black-belt"
+                },
+                {
+                    "amount": 1,
+                    "info": "In Galactic Warehouse behind Storage Key Door",
+                    "item": "blackglasses"
+                },
+                {
+                    "amount": 1,
+                    "info": "Purchasable from 3F Department Store after Distortion World<br>Requires Save the world",
+                    "item": "tm83-natural-gift"
+                },
+                {
+                    "amount": 1,
+                    "info": "",
+                    "item": "tm17-tackle"
+                },
+                {
+                    "amount": 1,
+                    "info": "",
+                    "item": "tm54-false-swipe"
+                },
+                {
+                    "amount": 1,
+                    "info": "",
+                    "item": "tm20-safeguard"
+                },
+                {
+                    "amount": 1,
+                    "info": "",
+                    "item": "tm33-reflect"
+                },
+                {
+                    "amount": 1,
+                    "info": "",
+                    "item": "tm16-light-screen"
+                },
+                {
+                    "amount": 1,
+                    "info": "",
+                    "item": "tm70-flash"
+                },
+                {
+                    "amount": 1,
+                    "info": "",
+                    "item": "tm38-fire-blast"
+                },
+                {
+                    "amount": 1,
+                    "info": "",
+                    "item": "tm25-thunder"
+                },
+                {
+                    "amount": 1,
+                    "info": "",
+                    "item": "tm14-blizzard"
+                },
+                {
+                    "amount": 1,
+                    "info": "",
+                    "item": "tm22-solarbeam"
+                },
+                {
+                    "amount": 1,
+                    "info": "",
+                    "item": "tm52-focus-blast"
+                },
+                {
+                    "amount": 1,
+                    "info": "",
+                    "item": "tm15-snore"
+                }
+            ],
             "locations": [
                 "veilstone-city"
             ],
@@ -27247,7 +27914,33 @@
         },
         {
             "id": 13,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "Pokeball above the lighthouse",
+                    "item": "zoom-lens"
+                },
+                {
+                    "amount": 1,
+                    "info": "To left of the town signpost",
+                    "item": "yellow-shard"
+                },
+                {
+                    "amount": 1,
+                    "info": "From Munchlax's bouldered behind (hidden)<br>Requires Surf",
+                    "item": "heart-scale"
+                },
+                {
+                    "amount": 1,
+                    "info": "From Volkner<br>Requires Fly, Defeat Volkner",
+                    "item": "tm24-thunderbolt"
+                },
+                {
+                    "amount": 1,
+                    "info": "From Jasmine after beating Volkner<br>Requires Fly, Defeat Volkner",
+                    "item": "hm08-rock-climb"
+                }
+            ],
             "locations": [
                 "sunyshore-city"
             ],
@@ -27263,7 +27956,28 @@
         },
         {
             "id": 14,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "Port, at water's edge near fisherman",
+                    "item": "ultra-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "In eastern snow alcove (hidden)",
+                    "item": "rare-candy"
+                },
+                {
+                    "amount": 1,
+                    "info": "From HAUNTER trade<br>Requires Any Pokémon",
+                    "item": "lum-berry"
+                },
+                {
+                    "amount": 1,
+                    "info": "From Candice<br>Requires Defeat Candice",
+                    "item": "tm72-avalanche"
+                }
+            ],
             "locations": [
                 "snowpoint-city"
             ],
@@ -27278,7 +27992,13 @@
         },
         {
             "id": 15,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "Defeat Sinister Hooded Figure<br>Requires Rock Climb, Surf, Defeat SHF",
+                    "item": "choice-scarf"
+                }
+            ],
             "locations": [
                 "pokemon-league"
             ],
@@ -27292,7 +28012,13 @@
         },
         {
             "id": 16,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "Talk to mart employee before Sandgem",
+                    "item": "super-potion"
+                }
+            ],
             "locations": [
                 "route-201"
             ],
@@ -27307,7 +28033,13 @@
         },
         {
             "id": 17,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "In grass before Jubilife",
+                    "item": "full-heal"
+                }
+            ],
             "locations": [
                 "route-202"
             ],
@@ -27321,7 +28053,23 @@
         },
         {
             "id": 18,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "Above ledge after Barry 2",
+                    "item": "pecha-berry"
+                },
+                {
+                    "amount": 1,
+                    "info": "Above ledge after Bug Catcher Sebastian",
+                    "item": "great-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "Above western pond",
+                    "item": "repel"
+                }
+            ],
             "locations": [
                 "route-203"
             ],
@@ -27335,7 +28083,33 @@
         },
         {
             "id": 19,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "Behind Cut Tree near east lake<br>Requires Cut",
+                    "item": "rare-candy"
+                },
+                {
+                    "amount": 1,
+                    "info": "Across eastern lake<br>Requires Cut, Surf",
+                    "item": "heart-scale"
+                },
+                {
+                    "amount": 1,
+                    "info": "Across western lake<br>Requires Surf",
+                    "item": "blue-flute"
+                },
+                {
+                    "amount": 1,
+                    "info": "Between left paddocks ",
+                    "item": "tm09-bullet-seed"
+                },
+                {
+                    "amount": 1,
+                    "info": "From flirty teacher between eastern trees<br>Requires Cut",
+                    "item": "tm45-attract"
+                }
+            ],
             "locations": [
                 "route-204-south",
                 "route-204-north"
@@ -27351,7 +28125,33 @@
         },
         {
             "id": 20,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "First item ball on route",
+                    "item": "great-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "Under bridge",
+                    "item": "nest-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "On raised earth at side of path (hidden)",
+                    "item": "stardustx50"
+                },
+                {
+                    "amount": 1,
+                    "info": "Under rest house<br>Requires Rock Smash",
+                    "item": "focus-band"
+                },
+                {
+                    "amount": 1,
+                    "info": "South of Bidoof lake before entering Eterna City",
+                    "item": "blue-shard"
+                }
+            ],
             "locations": [
                 "route-205-south",
                 "route-205-north"
@@ -27371,7 +28171,38 @@
         },
         {
             "id": 21,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "Southern gate, from Battle Girl",
+                    "item": "flag"
+                },
+                {
+                    "amount": 1,
+                    "info": "Lower path, on right as you enter<br>Requires Cut, Rock Smash",
+                    "item": "energy-root"
+                },
+                {
+                    "amount": 1,
+                    "info": "Lower path, between cycle lanes<br>Requires Cut",
+                    "item": "soda-pop"
+                },
+                {
+                    "amount": 1,
+                    "info": "Lower path, right of honey tree <br>Requires Cut",
+                    "item": "ether"
+                },
+                {
+                    "amount": 1,
+                    "info": "Lower path, top-left<br>Requires Cut",
+                    "item": "fresh-water"
+                },
+                {
+                    "amount": 1,
+                    "info": "Lower path, below berries (hidden)<br>Requires Cut",
+                    "item": "poison-barb"
+                }
+            ],
             "locations": [
                 "route-206"
             ],
@@ -27386,7 +28217,38 @@
         },
         {
             "id": 22,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "Top left of grass patch ",
+                    "item": "ultra-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "Behind Rock smash rocks below trainers",
+                    "item": "rare-candy"
+                },
+                {
+                    "amount": 1,
+                    "info": "Between air vents",
+                    "item": "super-potion"
+                },
+                {
+                    "amount": 1,
+                    "info": "First item from upper Mt. Coronet entrance",
+                    "item": "timer-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "Down Rock Climb rocks from upper Mt. Coronet entrance<br>Requires Rock Climb, Strength",
+                    "item": "rock-incense"
+                },
+                {
+                    "amount": 1,
+                    "info": "From Lucas \/ Dawn before Coronet<br>Requires Rock Climb, Strength",
+                    "item": "quick-ball"
+                }
+            ],
             "locations": [
                 "route-207"
             ],
@@ -27401,7 +28263,43 @@
         },
         {
             "id": 23,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "Lower section across north bridge",
+                    "item": "great-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "Next to waterfall<br>Requires Rock Smash",
+                    "item": "deepseascale"
+                },
+                {
+                    "amount": 1,
+                    "info": "Bottom left of grass patch (hidden)",
+                    "item": "tinymushroom"
+                },
+                {
+                    "amount": 1,
+                    "info": "Talk to woman in Berry Master house",
+                    "item": "basket-of-berries"
+                },
+                {
+                    "amount": 1,
+                    "info": "Talk to Berry Master",
+                    "item": "random-poffin-berry"
+                },
+                {
+                    "amount": 1,
+                    "info": "Within upper eastern cliff face (hidden)<br>Requires Rock Climb, Rock Smash",
+                    "item": "star-piece"
+                },
+                {
+                    "amount": 1,
+                    "info": "Atop waterfall<br>Requires Waterfall, Surf",
+                    "item": "heart-scale"
+                }
+            ],
             "locations": [
                 "route-208"
             ],
@@ -27416,7 +28314,58 @@
         },
         {
             "id": 24,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "Top of grass patch as you enter route",
+                    "item": "great-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "From fisherman on pier as you enter route",
+                    "item": "great-rod"
+                },
+                {
+                    "amount": 1,
+                    "info": "Under Jogger Richard (hidden)",
+                    "item": "heart-scale"
+                },
+                {
+                    "amount": 1,
+                    "info": "Follow path under Pokéfan Danielle<br>Requires Rock Smash",
+                    "item": "deepseatooth"
+                },
+                {
+                    "amount": 1,
+                    "info": "Surf down river blocked by Hyper Potion<br>Requires Surf",
+                    "item": "tm19-giga-drain"
+                },
+                {
+                    "amount": 1,
+                    "info": "Next to honey tree (hidden)",
+                    "item": "revive"
+                },
+                {
+                    "amount": 1,
+                    "info": "First bank, nearest honey tree",
+                    "item": "ether"
+                },
+                {
+                    "amount": 1,
+                    "info": "Cycle up left side of route",
+                    "item": "heart-scale"
+                },
+                {
+                    "amount": 1,
+                    "info": "On rock before cowgirl battle (hidden)",
+                    "item": "stardust"
+                },
+                {
+                    "amount": 1,
+                    "info": "Beneath Lost Tower<br>Requires Cut",
+                    "item": "star-piece"
+                }
+            ],
             "locations": [
                 "route-209"
             ],
@@ -27435,7 +28384,28 @@
         },
         {
             "id": 25,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "From ace trainer on cliff near honey tree",
+                    "item": "tm47-steel-wing"
+                },
+                {
+                    "amount": 1,
+                    "info": "Item along left side of route",
+                    "item": "dusk-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "In tall grass near honey tree (hidden)",
+                    "item": "rare-candy"
+                },
+                {
+                    "amount": 1,
+                    "info": "Left side of route, next to tree",
+                    "item": "dusk-ball"
+                }
+            ],
             "locations": [
                 "route-210-south"
             ],
@@ -27445,17 +28415,43 @@
                     "height": 3,
                     "x": 17,
                     "y": 11
-                },
-                {
-                    "width": 3,
-                    "x": 15,
-                    "y": 10
                 }
             ]
         },
         {
             "id": 26,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "Item ball in grass",
+                    "item": "great-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "Northern empty patch (hidden)",
+                    "item": "great-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "Under bridge<br>Requires Rock Smash",
+                    "item": "tm40-aerial-ace"
+                },
+                {
+                    "amount": 1,
+                    "info": "From man on cliff section",
+                    "item": "tm77-psych-up"
+                },
+                {
+                    "amount": 1,
+                    "info": "Cliff section peak",
+                    "item": "heart-scale"
+                },
+                {
+                    "amount": 1,
+                    "info": "Cliff section peak",
+                    "item": "tm29-psychic"
+                }
+            ],
             "locations": [
                 "route-211-west",
                 "route-211"
@@ -27474,7 +28470,73 @@
         },
         {
             "id": 27,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "As you enter route from Pokemon Mansion on left",
+                    "item": "blue-shard"
+                },
+                {
+                    "amount": 1,
+                    "info": "Below the Almia Pokemon Ranger",
+                    "item": "full-heal"
+                },
+                {
+                    "amount": 1,
+                    "info": "Across the first lake<br>Requires Surf",
+                    "item": "tm84-poison-jab"
+                },
+                {
+                    "amount": 1,
+                    "info": "On Cliff across pike path below the poison jab TM",
+                    "item": "big-mushroom"
+                },
+                {
+                    "amount": 1,
+                    "info": "On Inlet below ranger praising Mr Backlot (Hidden)<br>Requires Surf",
+                    "item": "max-ether"
+                },
+                {
+                    "amount": 1,
+                    "info": "Across bike path next to HM ranger",
+                    "item": "tm62-silver-wind"
+                },
+                {
+                    "amount": 1,
+                    "info": "In mud west of the honey tree",
+                    "item": "max-repel"
+                },
+                {
+                    "amount": 1,
+                    "info": "In mud south of the honey tree",
+                    "item": "full-heal"
+                },
+                {
+                    "amount": 1,
+                    "info": "South-east of honey tree mud",
+                    "item": "tm06-toxic"
+                },
+                {
+                    "amount": 1,
+                    "info": "Under bike path east of honey tree",
+                    "item": "revive"
+                },
+                {
+                    "amount": 1,
+                    "info": "North of the revive behind cut trees and bike path",
+                    "item": "hyper-potion"
+                },
+                {
+                    "amount": 1,
+                    "info": "In mud to the north of ledge to pastoria",
+                    "item": "hyper-potion"
+                },
+                {
+                    "amount": 1,
+                    "info": "End of the mud north of ledge to pastoria",
+                    "item": "dawn-stone"
+                }
+            ],
             "locations": [
                 "route-212"
             ],
@@ -27494,7 +28556,78 @@
         },
         {
             "id": 28,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "Under pool umbrella (hidden)",
+                    "item": "max-revive"
+                },
+                {
+                    "amount": 1,
+                    "info": "On ground in front of rest house (hidden)",
+                    "item": "suite-key"
+                },
+                {
+                    "amount": 1,
+                    "info": "On raised land next to rest house, before beach ",
+                    "item": "yellow-shard"
+                },
+                {
+                    "amount": 1,
+                    "info": "Near right-most Rock Smash rock on beach (hidden)",
+                    "item": "pearl"
+                },
+                {
+                    "amount": 1,
+                    "info": "From Clown inside Beach House",
+                    "item": "tm92-miracle-eye"
+                },
+                {
+                    "amount": 1,
+                    "info": "Bottom-left of beach (hidden)",
+                    "item": "heart-scale"
+                },
+                {
+                    "amount": 1,
+                    "info": "Behind Rock Smash rock near Dr. Footprint's house<br>Requires Rock Smash",
+                    "item": "tm40-aerial-ace"
+                },
+                {
+                    "amount": 1,
+                    "info": "On middle island in Surf maze<br>Requires Surf",
+                    "item": "max-revive"
+                },
+                {
+                    "amount": 1,
+                    "info": "On middle island below Max Revive (hidden)<br>Requires Surf",
+                    "item": "big-pearl"
+                },
+                {
+                    "amount": 1,
+                    "info": "On eastern island in surf maze<br>Requires Surf",
+                    "item": "heart-scale"
+                },
+                {
+                    "amount": 1,
+                    "info": "Bottom-left stone below Heart Scale (hidden)<br>Requires Surf",
+                    "item": "big-pearl"
+                },
+                {
+                    "amount": 1,
+                    "info": "On north-eastern island in Surf maze<br>Requires Surf",
+                    "item": "mystic-water"
+                },
+                {
+                    "amount": 1,
+                    "info": "On raised ledge near south-eastern house<br>Requires Rock Climb",
+                    "item": "heart-scale"
+                },
+                {
+                    "amount": 1,
+                    "info": "Bottom of raised land grass patch<br>Requires Rock Climb",
+                    "item": "tm05-roar"
+                }
+            ],
             "locations": [
                 "route-213"
             ],
@@ -27514,7 +28647,48 @@
         },
         {
             "id": 29,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "Item beyond Gambler Carlos",
+                    "item": "max-repel"
+                },
+                {
+                    "amount": 1,
+                    "info": "In tree at end of dead-end path (hidden)",
+                    "item": "big-mushroom"
+                },
+                {
+                    "amount": 1,
+                    "info": "In gap between grass behind Beauty Cyndy (hidden)",
+                    "item": "red-shard"
+                },
+                {
+                    "amount": 1,
+                    "info": "Below Beauty Cyndy",
+                    "item": "big-root"
+                },
+                {
+                    "amount": 1,
+                    "info": "Below honey tree",
+                    "item": "red-shard"
+                },
+                {
+                    "amount": 1,
+                    "info": "Below Rock Smash rocks",
+                    "item": "thick-club"
+                },
+                {
+                    "amount": 1,
+                    "info": "Bottom-right of southern tall grass patch (hidden)",
+                    "item": "razor-fang"
+                },
+                {
+                    "amount": 1,
+                    "info": "Above northern pond<br>Requires Surf",
+                    "item": "rare-candy"
+                }
+            ],
             "locations": [
                 "route-214"
             ],
@@ -27529,7 +28703,38 @@
         },
         {
             "id": 30,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "From black belt located after Cyclist Celine",
+                    "item": "tm66-payback"
+                },
+                {
+                    "amount": 1,
+                    "info": "South of jogger on southern bridge",
+                    "item": "tm34-shock-wave"
+                },
+                {
+                    "amount": 1,
+                    "info": "South of jogger on southern bridge",
+                    "item": "heart-scale"
+                },
+                {
+                    "amount": 1,
+                    "info": "Above ledge bordering skippable grass near Beauty Jasmine",
+                    "item": "ultra-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "Item in top-right grass patch near Veilstone",
+                    "item": "net-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "Lower ground before Beauty Jasmine<br>Requires Cut",
+                    "item": "mental-herb"
+                }
+            ],
             "locations": [
                 "route-215"
             ],
@@ -27544,7 +28749,38 @@
         },
         {
             "id": 31,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "Across third bridge",
+                    "item": "full-heal"
+                },
+                {
+                    "amount": 1,
+                    "info": "Across second bridge, on left of third bridge",
+                    "item": "revive"
+                },
+                {
+                    "amount": 1,
+                    "info": "Atop cliff, bottom, below two trees<br>Requires Rock Climb",
+                    "item": "heart-scale"
+                },
+                {
+                    "amount": 1,
+                    "info": "Atop cliff, top, between trees<br>Requires Rock Climb",
+                    "item": "mental-herb"
+                },
+                {
+                    "amount": 1,
+                    "info": "Atop cliff, top-right, in snow below right-most tree (hidden)<br>Requires Rock Climb",
+                    "item": "yellow-shard"
+                },
+                {
+                    "amount": 1,
+                    "info": "Atop cliff, top-right, beyond right-most tree<br>Requires Rock Climb",
+                    "item": "tm13-ice-beam"
+                }
+            ],
             "locations": [
                 "route-216"
             ],
@@ -27559,7 +28795,73 @@
         },
         {
             "id": 32,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "Left item as you enter route",
+                    "item": "blue-shard"
+                },
+                {
+                    "amount": 1,
+                    "info": "Left side, over trees under Big Nugget",
+                    "item": "tm13-ice-beam"
+                },
+                {
+                    "amount": 1,
+                    "info": "Hug left wall until you bump into two trees blocking path north",
+                    "item": "big-nugget"
+                },
+                {
+                    "amount": 1,
+                    "info": "Left side, below Nugget",
+                    "item": "pure-incense"
+                },
+                {
+                    "amount": 1,
+                    "info": "Left side, south-west from 2 diagonal trees (hidden)",
+                    "item": "stardust"
+                },
+                {
+                    "amount": 1,
+                    "info": "Left side, in house, from hiker",
+                    "item": "basket-of-berries"
+                },
+                {
+                    "amount": 1,
+                    "info": "Left side, back-left of house (hidden)",
+                    "item": "electirizer"
+                },
+                {
+                    "amount": 1,
+                    "info": "Left side, behind house (hidden)",
+                    "item": "magmarizer"
+                },
+                {
+                    "amount": 1,
+                    "info": "Left side, near house, north-east of nearby tree",
+                    "item": "tm21-frustration"
+                },
+                {
+                    "amount": 1,
+                    "info": "Maze, above 2 trees (hidden)",
+                    "item": "ultra-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "Somewhere in right side maze IDK i dont like this route",
+                    "item": "heart-scale"
+                },
+                {
+                    "amount": 1,
+                    "info": "Maze, near right side trees towards north (hidden)",
+                    "item": "blue-shard"
+                },
+                {
+                    "amount": 1,
+                    "info": "Right-most house, from definitely corporeal woman",
+                    "item": "spell-tag"
+                }
+            ],
             "locations": [
                 "route-217"
             ],
@@ -27574,7 +28876,18 @@
         },
         {
             "id": 33,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "On pier",
+                    "item": "net-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "Across south-western water<br>Requires Surf",
+                    "item": "tm40-aerial-ace"
+                }
+            ],
             "locations": [
                 "route-218"
             ],
@@ -27589,7 +28902,18 @@
         },
         {
             "id": 34,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "Left side of beach",
+                    "item": "dive-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "On beach after the blockade<br>Requires Surf",
+                    "item": "yellow-shard"
+                }
+            ],
             "locations": [
                 "route-219"
             ],
@@ -27603,7 +28927,18 @@
         },
         {
             "id": 35,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "Top-right item on left-most island, when entering from Route 221<br>Requires Surf",
+                    "item": "max-repel"
+                },
+                {
+                    "amount": 1,
+                    "info": "Shallow water island<br>Requires Surf",
+                    "item": "quick-powder"
+                }
+            ],
             "locations": [
                 "route-220"
             ],
@@ -27618,7 +28953,43 @@
         },
         {
             "id": 36,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "Southern path, to right of Magikarp<br>Requires Surf",
+                    "item": "ultra-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "North-west grass patch (hidden)<br>Requires Surf",
+                    "item": "pure-incense"
+                },
+                {
+                    "amount": 1,
+                    "info": "Southern path, to left of berry patch (hidden)<br>Requires Surf",
+                    "item": "max-revive"
+                },
+                {
+                    "amount": 1,
+                    "info": "Southern path, below square flower patch near Pal Park<br>Requires Surf",
+                    "item": "tm81-x-scissor"
+                },
+                {
+                    "amount": 1,
+                    "info": "Grass patch below Pal Park (hidden)<br>Requires Surf",
+                    "item": "red-shard"
+                },
+                {
+                    "amount": 1,
+                    "info": "Back-right side of house (hidden)<br>Requires Surf",
+                    "item": "expert-belt"
+                },
+                {
+                    "amount": 1,
+                    "info": "House, from old man<br>Requires Surf",
+                    "item": "focus-sash"
+                }
+            ],
             "locations": [
                 "route-221"
             ],
@@ -27633,7 +29004,63 @@
         },
         {
             "id": 37,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "Beachside, left side, close to shoreline (hidden)",
+                    "item": "pearl"
+                },
+                {
+                    "amount": 1,
+                    "info": "Beachside, central, close to shoreline (hidden)",
+                    "item": "heart-scale"
+                },
+                {
+                    "amount": 1,
+                    "info": "Beachside, below Pikachu fanclub (hidden)",
+                    "item": "heart-scale"
+                },
+                {
+                    "amount": 1,
+                    "info": "Beachside, house beside Pikachu fanclub, from fisherman",
+                    "item": "super-rod"
+                },
+                {
+                    "amount": 1,
+                    "info": "Beachside, grass patch, left side open space (hidden)",
+                    "item": "full-restore"
+                },
+                {
+                    "amount": 1,
+                    "info": "Beachside, grass patch, right side open space (hidden)",
+                    "item": "tinymushroom"
+                },
+                {
+                    "amount": 1,
+                    "info": "Beachside, grass patch closest to gate, top-tight open space (hidden)<br>Requires Surf",
+                    "item": "big-mushroom"
+                },
+                {
+                    "amount": 1,
+                    "info": "Pathside, right side above beach ledge",
+                    "item": "magost-berry"
+                },
+                {
+                    "amount": 1,
+                    "info": "Pathside, at end of dead-end above fence",
+                    "item": "cornn-berry"
+                },
+                {
+                    "amount": 1,
+                    "info": "Pathside, northern grass patch open space (hidden)",
+                    "item": "ultra-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "Pathside, from rich kid overlooking beach",
+                    "item": "tm56-fling"
+                }
+            ],
             "locations": [
                 "route-222"
             ],
@@ -27648,7 +29075,28 @@
         },
         {
             "id": 38,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "On first island<br>Requires Surf",
+                    "item": "heart-scale"
+                },
+                {
+                    "amount": 1,
+                    "info": "Central island, to back-right of sailor<br>Requires Surf",
+                    "item": "ultra-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "On top-left island<br>Requires Surf",
+                    "item": "dive-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "On top-right island<br>Requires Surf",
+                    "item": "rare-candy"
+                }
+            ],
             "locations": [
                 "route-223"
             ],
@@ -27663,7 +29111,63 @@
         },
         {
             "id": 39,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "Near Entrance (Hidden)<br>Requires Waterfall, Rock Climb, Strength, Surf, Rock Smash",
+                    "item": "luxury-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "On the beach under the first boulder (Hidden)<br>Requires Waterfall, Rock Climb, Strength, Surf, Rock Smash",
+                    "item": "pearl"
+                },
+                {
+                    "amount": 1,
+                    "info": "To the right of the 2nd boulder (Hidden)<br>Requires Waterfall, Rock Climb, Strength, Surf, Rock Smash",
+                    "item": "heart-scale"
+                },
+                {
+                    "amount": 1,
+                    "info": "To the right of the 3rd boulder (Hidden)<br>Requires Waterfall, Rock Climb, Strength, Surf, Rock Smash",
+                    "item": "big-pearl"
+                },
+                {
+                    "amount": 1,
+                    "info": "Small island surfing to the bottom of the route<br>Requires Waterfall, Rock Climb, Strength, Surf, Rock Smash",
+                    "item": "razor-claw"
+                },
+                {
+                    "amount": 1,
+                    "info": "Interact with small rock at right of the beach<br>Requires Waterfall, Rock Climb, Strength, Surf, Rock Smash",
+                    "item": "pearl"
+                },
+                {
+                    "amount": 1,
+                    "info": "In grass on raised platform below berry patch<br>Requires Waterfall, Rock Climb, Strength, Surf, Rock Smash",
+                    "item": "ultra-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "Pokeball to the left of berries on small island<br>Requires Waterfall, Rock Climb, Strength, Surf, Rock Smash",
+                    "item": "cherish-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "Right of boulder in shallow water<br>Requires Waterfall, Rock Climb, Strength, Surf, Rock Smash",
+                    "item": "repeat-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "Left of boulder in shallow water<br>Requires Waterfall, Rock Climb, Strength, Surf, Rock Smash",
+                    "item": "ultra-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "Pokeball in grass below the mirror stone<br>Requires Waterfall, Rock Climb, Strength, Surf, Rock Smash",
+                    "item": "destiny-knot"
+                }
+            ],
             "locations": [
                 "route-224"
             ],
@@ -27678,7 +29182,58 @@
         },
         {
             "id": 40,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "East side, under bridge<br>Requires Cut",
+                    "item": "rare-candy"
+                },
+                {
+                    "amount": 1,
+                    "info": "Raised platform, across bridge on western side",
+                    "item": "tm24-thunderbolt"
+                },
+                {
+                    "amount": 1,
+                    "info": "Raised platform south of ground-level pond on east of route (hidden)",
+                    "item": "big-mushroom"
+                },
+                {
+                    "amount": 1,
+                    "info": "Path along western edge of route",
+                    "item": "revive"
+                },
+                {
+                    "amount": 1,
+                    "info": "House on left path, from electrician",
+                    "item": "fresh-water"
+                },
+                {
+                    "amount": 1,
+                    "info": "Between trees to left of electrician's house<br>Requires Cut",
+                    "item": "lax-incense"
+                },
+                {
+                    "amount": 1,
+                    "info": "Far side of mountain lake<br>Requires Surf",
+                    "item": "sitrus-berry"
+                },
+                {
+                    "amount": 1,
+                    "info": "Northern path towards entrance to survival area",
+                    "item": "green-shard"
+                },
+                {
+                    "amount": 1,
+                    "info": "South-west grass patch on cliff<br>Requires Rock Climb",
+                    "item": "razor-fang"
+                },
+                {
+                    "amount": 1,
+                    "info": "Cliff peak at top of route<br>Requires Rock Climb",
+                    "item": "dawn-stone"
+                }
+            ],
             "locations": [
                 "route-225"
             ],
@@ -27693,7 +29248,43 @@
         },
         {
             "id": 41,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "Below western cliff peak<br>Requires Rock Climb",
+                    "item": "lagging-tail"
+                },
+                {
+                    "amount": 1,
+                    "info": "2 layers above stairs leading to body of water<br>Requires Rock Climb",
+                    "item": "tm53-energy-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "In right-most grass patch of mountain area (hidden)<br>Requires Rock Climb",
+                    "item": "tinymushroom"
+                },
+                {
+                    "amount": 1,
+                    "info": "In right-most grass patch of mountain area (hidden)<br>Requires Rock Climb",
+                    "item": "big-mushroom"
+                },
+                {
+                    "amount": 1,
+                    "info": "North of grass patch before Surf area (hidden)<br>Requires Rock Climb",
+                    "item": "luxury-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "On outcropping south of cliffs area (hidden)<br>Requires Rock Climb, Surf",
+                    "item": "heart-scale"
+                },
+                {
+                    "amount": 1,
+                    "info": "Inlet at top of body of water (hidden)<br>Requires Rock Climb, Surf",
+                    "item": "rare-candy"
+                }
+            ],
             "locations": [
                 "route-226"
             ],
@@ -27708,7 +29299,23 @@
         },
         {
             "id": 42,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "Under bike path, above 2 ponds (hidden)<br>Requires Rock Climb",
+                    "item": "max-repel"
+                },
+                {
+                    "amount": 1,
+                    "info": "South of grass patch<br>Requires Rock Climb",
+                    "item": "charcoal"
+                },
+                {
+                    "amount": 1,
+                    "info": "On rock west of grass patch (hidden)<br>Requires Rock Climb",
+                    "item": "star-piece"
+                }
+            ],
             "locations": [
                 "route-227"
             ],
@@ -27723,7 +29330,43 @@
         },
         {
             "id": 43,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "North West of signpost (Hidden)",
+                    "item": "max-repel"
+                },
+                {
+                    "amount": 1,
+                    "info": "In north-west grass patch (hidden)",
+                    "item": "full-restore"
+                },
+                {
+                    "amount": 1,
+                    "info": "In the ditch to right of sign",
+                    "item": "tm35-flamethrower"
+                },
+                {
+                    "amount": 1,
+                    "info": "In cave above tutor house",
+                    "item": "hard-stone"
+                },
+                {
+                    "amount": 1,
+                    "info": "North East Corner of cave (hidden)",
+                    "item": "big-nugget"
+                },
+                {
+                    "amount": 1,
+                    "info": "On raised ground accessible from second to bottom bike slope",
+                    "item": "shed-shell"
+                },
+                {
+                    "amount": 1,
+                    "info": "Southern-most grass patch (hidden)",
+                    "item": "luxury-ball"
+                }
+            ],
             "locations": [
                 "route-228"
             ],
@@ -27753,7 +29396,18 @@
         },
         {
             "id": 45,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "Island, right side of grass, in wall behind Rock Smash rock (hidden)<br>Requires Surf, Rock Smash",
+                    "item": "water-stone"
+                },
+                {
+                    "amount": 1,
+                    "info": "Island, right side<br>Requires Surf, Rock Smash",
+                    "item": "rare-candy"
+                }
+            ],
             "locations": [
                 "route-230"
             ],
@@ -27768,7 +29422,23 @@
         },
         {
             "id": 46,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "Right as you enter",
+                    "item": "great-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "B1F, beside boxes in gauntlet",
+                    "item": "fresh-water"
+                },
+                {
+                    "amount": 1,
+                    "info": "B1F, right side",
+                    "item": "moon-stone"
+                }
+            ],
             "locations": [
                 "oreburgh-mine"
             ],
@@ -27783,7 +29453,83 @@
         },
         {
             "id": 47,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "Left of turbine north of fence<br>Requires Surf",
+                    "item": "sharp-beak"
+                },
+                {
+                    "amount": 1,
+                    "info": "Right of turbine north of fence<br>Requires Surf",
+                    "item": "tm22-solarbeam"
+                },
+                {
+                    "amount": 1,
+                    "info": "Right of turbine north of fence (hidden)<br>Requires Surf",
+                    "item": "coba-berry"
+                },
+                {
+                    "amount": 1,
+                    "info": "On outcropping behind Valley Windworks building<br>Requires Surf",
+                    "item": "power-herb"
+                },
+                {
+                    "amount": 1,
+                    "info": "",
+                    "item": "eterna-forest"
+                },
+                {
+                    "amount": 1,
+                    "info": "On left as you enter",
+                    "item": "fluffy-tail"
+                },
+                {
+                    "amount": 1,
+                    "info": "After first tag fight",
+                    "item": "parlyz-heal"
+                },
+                {
+                    "amount": 1,
+                    "info": "Bottom-left corner of grass patch after first Galactic battle",
+                    "item": "net-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "Guarded by Galactic in bottom-right of forest",
+                    "item": "miracle-seed"
+                },
+                {
+                    "amount": 1,
+                    "info": "Left path before Old Chateau",
+                    "item": "green-shard"
+                },
+                {
+                    "amount": 1,
+                    "info": "From Cheryl<br>Requires Defeat Galactic Terra",
+                    "item": "shell-bell"
+                },
+                {
+                    "amount": 1,
+                    "info": "From woman on path beside forest ",
+                    "item": "big-tree"
+                },
+                {
+                    "amount": 1,
+                    "info": "Left of woman beside forest",
+                    "item": "silverpowder"
+                },
+                {
+                    "amount": 1,
+                    "info": "Right of woman beside forest",
+                    "item": "tm62-silver-wind"
+                },
+                {
+                    "amount": 1,
+                    "info": "To right of Old Chateau<br>Requires Strength",
+                    "item": "ether"
+                }
+            ],
             "locations": [
                 "valley-windworks"
             ],
@@ -27815,7 +29561,58 @@
         },
         {
             "id": 49,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "Back-right side of Ironworks<br>Requires Surf",
+                    "item": "big-mushroom"
+                },
+                {
+                    "amount": 1,
+                    "info": "Middle of grass patch (hidden)<br>Requires Surf",
+                    "item": "ultra-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "South-western item<br>Requires Surf",
+                    "item": "yellow-shard"
+                },
+                {
+                    "amount": 1,
+                    "info": "Above Mr. Fuego<br>Requires Surf",
+                    "item": "red-shard"
+                },
+                {
+                    "amount": 1,
+                    "info": "North-eastern dead-end item<br>Requires Surf",
+                    "item": "green-shard"
+                },
+                {
+                    "amount": 1,
+                    "info": "North-eastern item<br>Requires Surf",
+                    "item": "fire-stone"
+                },
+                {
+                    "amount": 1,
+                    "info": "South-eastern item<br>Requires Surf",
+                    "item": "rock-incense"
+                },
+                {
+                    "amount": 1,
+                    "info": "Below furnace<br>Requires Surf",
+                    "item": "tm35-flamethrower"
+                },
+                {
+                    "amount": 1,
+                    "info": "From Mr. Fuego<br>Requires Surf",
+                    "item": "star-piece"
+                },
+                {
+                    "amount": 1,
+                    "info": "Trade Star Piece<br>Requires Surf, Star Piece",
+                    "item": "each-coloured-shard"
+                }
+            ],
             "locations": [
                 "fuego-ironworks"
             ],
@@ -27829,7 +29626,243 @@
         },
         {
             "id": 50,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "Rock above you upon entering (hidden)",
+                    "item": "energypowder"
+                },
+                {
+                    "amount": 1,
+                    "info": "South of pond before stairs (hidden)",
+                    "item": "revive"
+                },
+                {
+                    "amount": 1,
+                    "info": "Across southern pond <br>Requires Surf",
+                    "item": "soft-sand"
+                },
+                {
+                    "amount": 1,
+                    "info": "Across northern pond<br>Requires Surf",
+                    "item": "magnet"
+                },
+                {
+                    "amount": 1,
+                    "info": "South from entrance, between rocks",
+                    "item": "escape-rope"
+                },
+                {
+                    "amount": 1,
+                    "info": "North of Strength boulder, behind Rock Smash rock<br>Requires Strength, Rock Smash",
+                    "item": "rare-candy"
+                },
+                {
+                    "amount": 1,
+                    "info": "Behind southern Strength boulders<br>Requires Rock Smash",
+                    "item": "ice-heal"
+                },
+                {
+                    "amount": 1,
+                    "info": "On rock between southern Strength boulders (hidden)<br>Requires Strength",
+                    "item": "stardust"
+                },
+                {
+                    "amount": 1,
+                    "info": "Above Strength boulder closest to Ice Heal<br>Requires Strength",
+                    "item": "tm69-rock-polish"
+                },
+                {
+                    "amount": 1,
+                    "info": "Southern-most item from Celestica Ruin exit<br>Requires Rock Climb",
+                    "item": "tm02-dragon-claw"
+                },
+                {
+                    "amount": 1,
+                    "info": "Rock above Dragon Claw TM (hidden)<br>Requires Rock Climb",
+                    "item": "big-nugget"
+                },
+                {
+                    "amount": 1,
+                    "info": "Between rocks upon entering<br>Requires Strength, Rock Smash",
+                    "item": "ultra-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "On bottom-left rock, below Ultra Ball (hidden)<br>Requires Strength, Rock Smash",
+                    "item": "green-shard"
+                },
+                {
+                    "amount": 1,
+                    "info": "Within face of north wall beside water (hidden)<br>Requires Strength, Rock Smash",
+                    "item": "blue-shard"
+                },
+                {
+                    "amount": 1,
+                    "info": "1 level above water, left side, along the platform<br>Requires Strength, Rock Smash",
+                    "item": "soft-sand"
+                },
+                {
+                    "amount": 1,
+                    "info": "North-east.up stairs behind Strength boulder<br>Requires Strength",
+                    "item": "revive"
+                },
+                {
+                    "amount": 1,
+                    "info": "North-east, on water's north edge<br>Requires Strength, Rock Smash",
+                    "item": "max-elixir"
+                },
+                {
+                    "amount": 1,
+                    "info": "North-east, along right wall<br>Requires Strength, Rock Smash",
+                    "item": "full-restore"
+                },
+                {
+                    "amount": 1,
+                    "info": "On island in water<br>Requires Strength, Surf",
+                    "item": "light-clay"
+                },
+                {
+                    "amount": 1,
+                    "info": "Before northern stairs to exit<br>Requires Strength",
+                    "item": "rare-candy"
+                },
+                {
+                    "amount": 1,
+                    "info": "Outside Iceberg Ruins entrance, left rock (hidden)<br>Requires Strength",
+                    "item": "yellow-shard"
+                },
+                {
+                    "amount": 1,
+                    "info": "Iceberg Ruins, middle of room<br>Requires Strength",
+                    "item": "nevermeltice"
+                },
+                {
+                    "amount": 1,
+                    "info": "Iceberg Ruins, above NeverMeltIce (hidden)<br>Requires Strength",
+                    "item": "big-nugget"
+                },
+                {
+                    "amount": 1,
+                    "info": "On raised platform south of bridge<br>Requires Rock Climb",
+                    "item": "max-repel"
+                },
+                {
+                    "amount": 1,
+                    "info": "Rock to left of Max Repel (hidden)<br>Requires Rock Climb",
+                    "item": "red-shard"
+                },
+                {
+                    "amount": 1,
+                    "info": "Bottom-right corner of room<br>Requires Rock Climb, Strength",
+                    "item": "escape-rope"
+                },
+                {
+                    "amount": 1,
+                    "info": "On lower ground on left of room<br>Requires Rock Climb, Strength",
+                    "item": "tm80-rock-slide"
+                },
+                {
+                    "amount": 1,
+                    "info": "At broken mural, from Looker<br>Requires Rock Climb, Strength",
+                    "item": "black-flute"
+                },
+                {
+                    "amount": 1,
+                    "info": "Rock at bottom of stairs (hidden)<br>Requires Rock Climb, Strength",
+                    "item": "star-piece"
+                },
+                {
+                    "amount": 1,
+                    "info": "Gap in grass along eastern path (hidden)<br>Requires Rock Climb, Strength",
+                    "item": "max-potion"
+                },
+                {
+                    "amount": 1,
+                    "info": "On rock on southern path (hidden)<br>Requires Rock Climb, Strength, (Cut OR Rock Smash)",
+                    "item": "blue-shard"
+                },
+                {
+                    "amount": 1,
+                    "info": "In grass patch before Cheryl tag battle (hidden)<br>Requires Rock Climb, Strength, (Cut OR Rock Smash)",
+                    "item": "revival-herb"
+                },
+                {
+                    "amount": 1,
+                    "info": "On rock in top-left corner, blocked by Rock Smash rock (hidden)<br>Requires Rock Climb, Strength, Rock Smash",
+                    "item": "sun-stone"
+                },
+                {
+                    "amount": 1,
+                    "info": "On running path of Galactic optional (hidden)<br>Requires Rock Climb, Strength, Rock Smash",
+                    "item": "full-heal"
+                },
+                {
+                    "amount": 1,
+                    "info": "Along dead-end path above Riley tag battle (hidden)<br>Requires Rock Climb, Strength, Rock Smash",
+                    "item": "ultra-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "Bottom-left rock on southern entrance platform (hidden)<br>Requires Rock Climb, Strength, Rock Smash",
+                    "item": "yellow-shard"
+                },
+                {
+                    "amount": 1,
+                    "info": "Between 2 rocks and Rock Smash rock (hidden)<br>Requires Rock Climb, Strength, Rock Smash",
+                    "item": "heal-powder"
+                },
+                {
+                    "amount": 1,
+                    "info": "Rock below Riley tag battle (hidden)<br>Requires Rock Climb, Strength, Rock Smash",
+                    "item": "stardust"
+                },
+                {
+                    "amount": 1,
+                    "info": "Rock above Celestica Ruins (hidden)<br>Requires Rock Climb",
+                    "item": "moon-stone"
+                },
+                {
+                    "amount": 1,
+                    "info": "Along the Cut path (hidden)<br>Requires Rock Climb, Strength, Cut",
+                    "item": "revival-herb"
+                },
+                {
+                    "amount": 1,
+                    "info": "Along the Rock Smash path (hidden)<br>Requires Rock Climb, Strength, Rock Smash",
+                    "item": "full-restore"
+                },
+                {
+                    "amount": 1,
+                    "info": "South-west corner of western cave entrance (hidden)<br>Requires Rock Climb, Strength, (Cut OR Rock Smash)",
+                    "item": "energypowder"
+                },
+                {
+                    "amount": 1,
+                    "info": "Along path (hidden)<br>Requires Rock Climb, Strength, (Cut OR Rock Smash)",
+                    "item": "max-elixir"
+                },
+                {
+                    "amount": 1,
+                    "info": "Left item in room<br>Requires Waterfall, Rock Climb, Strength, Surf, (Cut OR Rock Smash)",
+                    "item": "full-incense"
+                },
+                {
+                    "amount": 1,
+                    "info": "Right item in room<br>Requires Waterfall, Rock Climb, Strength, Surf, (Cut OR Rock Smash)",
+                    "item": "rowap-berry"
+                },
+                {
+                    "amount": 1,
+                    "info": "Between rocks before Marley Tag (hidden)<br>Requires Rock Climb, Strength, (Cut OR Rock Smash)",
+                    "item": "full-restore"
+                },
+                {
+                    "amount": 1,
+                    "info": "Before Marley Tag (hidden)<br>Requires Rock Climb, Strength, (Cut OR Rock Smash)",
+                    "item": "rare-candy"
+                }
+            ],
             "locations": [
                 "mt-coronet-south",
                 "mt-coronet-north",
@@ -27854,7 +29887,13 @@
         },
         {
             "id": 51,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "Past Mars Jupiter and Cyrus<br>Requires Rock Climb, Strength, (Cut OR Rock Smash)",
+                    "item": "life-orb"
+                }
+            ],
             "locations": [
                 "spear-pillar"
             ],
@@ -27869,7 +29908,53 @@
         },
         {
             "id": 52,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "Area 6, right side below pond",
+                    "item": "red-shard"
+                },
+                {
+                    "amount": 1,
+                    "info": "Area 6, middle of eastern mud",
+                    "item": "max-repel"
+                },
+                {
+                    "amount": 1,
+                    "info": "Area 5, item as you enter",
+                    "item": "repeat-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "Area 5, southern clearing of swamp area",
+                    "item": "big-mushroom"
+                },
+                {
+                    "amount": 1,
+                    "info": "Area 4, left of bug catcher",
+                    "item": "green-shard"
+                },
+                {
+                    "amount": 1,
+                    "info": "Area 3, below buff guy",
+                    "item": "great-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "Area 2 , north-eastern mud",
+                    "item": "blue-shard"
+                },
+                {
+                    "amount": 1,
+                    "info": "Area 1, right edge of north-western mud",
+                    "item": "yellow-shard"
+                },
+                {
+                    "amount": 1,
+                    "info": "Area 1, in north-western mud (hidden)",
+                    "item": "rare-candy"
+                }
+            ],
             "locations": [
                 "great-marsh-area-1",
                 "great-marsh-area-2",
@@ -27889,7 +29974,48 @@
         },
         {
             "id": 53,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "On rock in left room as you enter (hidden)",
+                    "item": "fire-stone"
+                },
+                {
+                    "amount": 1,
+                    "info": "Top-right > bottom-left > bottom-left > on rock (hidden)",
+                    "item": "water-stone"
+                },
+                {
+                    "amount": 1,
+                    "info": "Top-right > bottom-left > top-right > top-left > on rock (hidden)",
+                    "item": "thunderstone"
+                },
+                {
+                    "amount": 1,
+                    "info": "TR>BL>TR>TL>TL>BL> top-left item",
+                    "item": "nugget"
+                },
+                {
+                    "amount": 1,
+                    "info": "TR>BL>TR>TL>TL>BL> top-right item",
+                    "item": "hm05-defog"
+                },
+                {
+                    "amount": 1,
+                    "info": "TR>BL>TR>TL>TL>BL> bottom-left item",
+                    "item": "hard-stone"
+                },
+                {
+                    "amount": 1,
+                    "info": "TR>BL>TR>TL>TL>BL> bottom-right item",
+                    "item": "odd-incense"
+                },
+                {
+                    "amount": 1,
+                    "info": "From Hiker, after allowing him to borrow Defog HM<br>Requires HM05 - Defog in bag",
+                    "item": "green-shard"
+                }
+            ],
             "locations": [
                 "solaceon-ruins"
             ],
@@ -27904,7 +30030,88 @@
         },
         {
             "id": 54,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "Along western wall<br>Requires Rock Climb",
+                    "item": "tm41-torment"
+                },
+                {
+                    "amount": 1,
+                    "info": "At end of lower bridge",
+                    "item": "max-repel"
+                },
+                {
+                    "amount": 1,
+                    "info": "On ledge 1 level below top-left exit<br>Requires Rock Climb",
+                    "item": "big-nugget"
+                },
+                {
+                    "amount": 1,
+                    "info": "Surf from B1F<br>Requires Rock Climb, Strength, Surf, Rock Smash",
+                    "item": "rare-candy"
+                },
+                {
+                    "amount": 1,
+                    "info": "Follow path west after Idol Zoe<br>Requires Waterfall, Rock Climb, Strength, Surf, Rock Smash",
+                    "item": "razor-claw"
+                },
+                {
+                    "amount": 1,
+                    "info": "Top-left of room<br>Requires Rock Climb, Strength, Rock Smash",
+                    "item": "max-elixir"
+                },
+                {
+                    "amount": 1,
+                    "info": "Leave and re-enter room, above clown<br>Requires Rock Climb, Strength, Rock Smash",
+                    "item": "full-restore"
+                },
+                {
+                    "amount": 1,
+                    "info": "Top of room, above Full Restore<br>Requires Rock Climb, Strength, Rock Smash",
+                    "item": "tm71-stone-edge"
+                },
+                {
+                    "amount": 1,
+                    "info": "Via top left entrance<br>Requires Waterfall, Rock Climb, Strength, Surf, Rock Smash",
+                    "item": "tm79-dark-pulse"
+                },
+                {
+                    "amount": 1,
+                    "info": "First path after ascending waterfall, left side of room<br>Requires Waterfall, Rock Climb, Strength, Surf, Rock Smash",
+                    "item": "tm59-dragon-pulse"
+                },
+                {
+                    "amount": 1,
+                    "info": "In front of ground floor return stairs (hidden)<br>Requires Waterfall, Rock Climb, Strength, Surf, Rock Smash",
+                    "item": "max-elixir"
+                },
+                {
+                    "amount": 1,
+                    "info": "Top-right of room below waterfall<br>Requires Rock Climb, Strength, Surf, Rock Smash",
+                    "item": "tm19-giga-drain"
+                },
+                {
+                    "amount": 1,
+                    "info": "Ledge one level above bottom-right corner of water<br>Requires Rock Climb, Strength, Surf, Rock Smash",
+                    "item": "tm89-u-turn"
+                },
+                {
+                    "amount": 1,
+                    "info": "North West of fog room<br>Requires Waterfall, Rock Climb, Strength, Surf, Rock Smash",
+                    "item": "tm73-thunder-wave"
+                },
+                {
+                    "amount": 1,
+                    "info": "North West of fog room under Thunder Wave TM<br>Requires Waterfall, Rock Climb, Strength, Surf, Rock Smash",
+                    "item": "tm06-toxic"
+                },
+                {
+                    "amount": 1,
+                    "info": "West of the eastern exit <br>Requires Waterfall, Rock Climb, Strength, Surf, Rock Smash",
+                    "item": "big-nugget"
+                }
+            ],
             "locations": [
                 "victory-road",
                 "victory-road-1f",
@@ -27924,7 +30131,38 @@
         },
         {
             "id": 56,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "Middle of park, raised ground",
+                    "item": "destiny-knot"
+                },
+                {
+                    "amount": 1,
+                    "info": "Top of park, raised ground",
+                    "item": "tm43-secret-power"
+                },
+                {
+                    "amount": 1,
+                    "info": "East entrance, top of park",
+                    "item": "amulet-coin"
+                },
+                {
+                    "amount": 1,
+                    "info": "Through ruins teleporter, from buff guy",
+                    "item": "x5-poffin-berries"
+                },
+                {
+                    "amount": 1,
+                    "info": "From east entrance first teleporter; left -> left -> right",
+                    "item": "tm56-fling"
+                },
+                {
+                    "amount": 1,
+                    "info": "From partner Pokémon while walking",
+                    "item": "various-contest-accessories"
+                }
+            ],
             "locations": [
                 "amity-square"
             ],
@@ -27939,7 +30177,28 @@
         },
         {
             "id": 57,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "Behind eastern rocks<br>Requires Rock Smash",
+                    "item": "tm03-water-pulse"
+                },
+                {
+                    "amount": 1,
+                    "info": "In front of water area<br>Requires Rock Smash",
+                    "item": "tm39-rock-tomb"
+                },
+                {
+                    "amount": 1,
+                    "info": "West side of water area<br>Requires Surf, Rock Smash",
+                    "item": "shell-bell"
+                },
+                {
+                    "amount": 1,
+                    "info": "East side of water area<br>Requires Surf, Rock Smash",
+                    "item": "tm03-water-pulse"
+                }
+            ],
             "locations": [
                 "ravaged-path"
             ],
@@ -27954,7 +30213,98 @@
         },
         {
             "id": 58,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "Received after defeating Galactics in Floaroma Meadow",
+                    "item": "works-key"
+                },
+                {
+                    "amount": 1,
+                    "info": "Received after defeating Galactics in Floaroma Meadow",
+                    "item": "bundle-of-berries"
+                },
+                {
+                    "amount": 1,
+                    "info": "Purchasable from man after defeating Galactics in Floaroma Meadow",
+                    "item": "honey"
+                },
+                {
+                    "amount": 1,
+                    "info": "Bottom-left<br>Requires Surf",
+                    "item": "rare-candy"
+                },
+                {
+                    "amount": 1,
+                    "info": "Pink flower between blue flowers near Rare Candy (hidden)<br>Requires Surf",
+                    "item": "tinymushroom"
+                },
+                {
+                    "amount": 1,
+                    "info": "Middle of meadow<br>Requires Surf",
+                    "item": "sitrus-berry"
+                },
+                {
+                    "amount": 1,
+                    "info": "Middle-left<br>Requires Surf",
+                    "item": "rindo-berry"
+                },
+                {
+                    "amount": 1,
+                    "info": "Top-Left<br>Requires Surf",
+                    "item": "rose-incense"
+                },
+                {
+                    "amount": 1,
+                    "info": "Pink flower between purple flowers near Rose Incense (hidden)<br>Requires Surf",
+                    "item": "green-shard"
+                },
+                {
+                    "amount": 1,
+                    "info": "Top-middle, pink flower between blue flowers (hidden)<br>Requires Surf",
+                    "item": "starf-berry"
+                },
+                {
+                    "amount": 1,
+                    "info": "Top of path between blue and yellow flower patches<br>Requires Surf",
+                    "item": "cherish-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "Middle-right<br>Requires Surf",
+                    "item": "leaf-stone"
+                },
+                {
+                    "amount": 1,
+                    "info": "Red Flower between Purple flowers above Leaf Stone (hidden)<br>Requires Surf",
+                    "item": "big-mushroom"
+                },
+                {
+                    "amount": 1,
+                    "info": "Bottom-right at end of dead-end path (hidden)<br>Requires Surf",
+                    "item": "blue-shard"
+                },
+                {
+                    "amount": 1,
+                    "info": "Flower above house (hidden)<br>Requires Surf",
+                    "item": "honey"
+                },
+                {
+                    "amount": 1,
+                    "info": "Bottom-left, along path (hidden)<br>Requires Surf",
+                    "item": "revival-herb"
+                },
+                {
+                    "amount": 1,
+                    "info": "On path underneath Rose Incense (hidden)<br>Requires Surf",
+                    "item": "yellow-shard"
+                },
+                {
+                    "amount": 1,
+                    "info": "In middle pink flower patch (hidden)<br>Requires Surf",
+                    "item": "red-shard"
+                }
+            ],
             "locations": [
                 "floaroma-meadow"
             ],
@@ -27969,7 +30319,38 @@
         },
         {
             "id": 59,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "From Hiker close to entrance",
+                    "item": "hm06-rock-smash"
+                },
+                {
+                    "amount": 1,
+                    "info": "B1F, right side<br>Requires Rock Smash",
+                    "item": "tm70-flash"
+                },
+                {
+                    "amount": 1,
+                    "info": "B1F, near bike ramp <br>Requires Rock Smash",
+                    "item": "big-pearl"
+                },
+                {
+                    "amount": 1,
+                    "info": "B1F, beyond Strength puzzle<br>Requires Strength, Surf, Rock Smash",
+                    "item": "tm01-focus-punch"
+                },
+                {
+                    "amount": 1,
+                    "info": "B1F, beyond Strength puzzle<br>Requires Strength, Surf, Rock Smash",
+                    "item": "heart-scale"
+                },
+                {
+                    "amount": 1,
+                    "info": "Behind old man<br>Requires Strength, Surf, Rock Smash",
+                    "item": "tm31-brick-break"
+                }
+            ],
             "locations": [
                 "oreburgh-gate-1f",
                 "oreburgh-gate-b1f"
@@ -27985,7 +30366,13 @@
         },
         {
             "id": 61,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "From Cynthia upon entering<br>Requires Rock Climb, Strength, (Cut OR Rock Smash)",
+                    "item": "hm07-waterfall"
+                }
+            ],
             "locations": [
                 "sendoff-spring"
             ],
@@ -28001,7 +30388,13 @@
         },
         {
             "id": 62,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "In Giratina's Room<br>Requires Rock Climb, Rock Smash",
+                    "item": "rare-bone"
+                }
+            ],
             "locations": [
                 "turnback-cave",
                 "turnback-cave-giratina-room"
@@ -28031,7 +30424,88 @@
         },
         {
             "id": 65,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "At end of first bike ramp section<br>Requires Cut",
+                    "item": "max-ether"
+                },
+                {
+                    "amount": 1,
+                    "info": "Area 1 short hop at end of first bike ramp section<br>Requires Cut",
+                    "item": "rare-candy"
+                },
+                {
+                    "amount": 1,
+                    "info": "Between bike paths<br>Requires Cut",
+                    "item": "grip-claw"
+                },
+                {
+                    "amount": 1,
+                    "info": "1 slope before north-east corner<br>Requires Cut",
+                    "item": "rare-candy"
+                },
+                {
+                    "amount": 1,
+                    "info": "At end of bike puzzle<br>Requires Cut",
+                    "item": "tm26-earthquake"
+                },
+                {
+                    "amount": 1,
+                    "info": "On rock below Mira (hidden)<br>Requires Cut",
+                    "item": "yellow-shard"
+                },
+                {
+                    "amount": 1,
+                    "info": "South-west dead-end of cave, on middle rock (hidden)<br>Requires Cut, Rock Smash",
+                    "item": "blue-shard"
+                },
+                {
+                    "amount": 1,
+                    "info": "On rock in corner after picnickers (hidden)<br>Requires Cut, Rock Smash",
+                    "item": "super-potion"
+                },
+                {
+                    "amount": 1,
+                    "info": "On solitary rock at dead-end right of picnickers<br>Requires Cut, Rock Smash",
+                    "item": "great-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "On rock between picnicker & bug catcher (hidden)<br>Requires Cut, Rock Smash",
+                    "item": "green-shard"
+                },
+                {
+                    "amount": 1,
+                    "info": "Item at north of cave<br>Requires Cut, Rock Smash",
+                    "item": "escape-rope"
+                },
+                {
+                    "amount": 1,
+                    "info": "Dead-end at top-left of cave<br>Requires Cut, Rock Smash",
+                    "item": "heart-scale"
+                },
+                {
+                    "amount": 1,
+                    "info": "Down -> right path after Butch & Cassidy tag<br>Requires Cut, Rock Smash",
+                    "item": "claw-fossil"
+                },
+                {
+                    "amount": 1,
+                    "info": "Corner rock left of hiker tag (hidden)<br>Requires Cut, Rock Smash",
+                    "item": "red-shard"
+                },
+                {
+                    "amount": 1,
+                    "info": "From Castle Valet Darach<br>Requires Cut, Rock Smash, defeat Castle Valet Darach",
+                    "item": "tm26-earthquake"
+                },
+                {
+                    "amount": 1,
+                    "info": "From Mr.Crunchy trade<br>Requires Cut, Rock Smash, any Pokémon",
+                    "item": "metronome"
+                }
+            ],
             "locations": [
                 "wayward-cave-light",
                 "wayward-cave-dark"
@@ -28047,7 +30521,13 @@
         },
         {
             "id": 67,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "Item close to entrance",
+                    "item": "tm28-dig"
+                }
+            ],
             "locations": [
                 "maniac-tunnel"
             ],
@@ -28062,7 +30542,93 @@
         },
         {
             "id": 69,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "From Riley, at cave entrance",
+                    "item": "hm04-strength"
+                },
+                {
+                    "amount": 1,
+                    "info": "B1F, left room, in middle of room on low ground",
+                    "item": "yellow-shard"
+                },
+                {
+                    "amount": 1,
+                    "info": "B1F, left room, on raised platform",
+                    "item": "protector"
+                },
+                {
+                    "amount": 1,
+                    "info": "B1F, right room, first item on left",
+                    "item": "helix-fossil"
+                },
+                {
+                    "amount": 1,
+                    "info": "B1F, right room, item against right wall on raised ground",
+                    "item": "dome-fossil"
+                },
+                {
+                    "amount": 1,
+                    "info": "B1F, right room, to left of elevator",
+                    "item": "root-fossil"
+                },
+                {
+                    "amount": 1,
+                    "info": "B2F, right room, north-east corner",
+                    "item": "elixir"
+                },
+                {
+                    "amount": 1,
+                    "info": "B2F, right room, south-west item",
+                    "item": "tm23-iron-tail"
+                },
+                {
+                    "amount": 1,
+                    "info": "B2F, left room, north-west item",
+                    "item": "dusk-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "B2F, left room, along the left wall",
+                    "item": "magnet"
+                },
+                {
+                    "amount": 1,
+                    "info": "B2F, left room, down stairs to right of Magnet",
+                    "item": "metal-powder"
+                },
+                {
+                    "amount": 1,
+                    "info": "B2F, left room, to left of elevator",
+                    "item": "metal-coat"
+                },
+                {
+                    "amount": 1,
+                    "info": "B2F, left room, north-east item",
+                    "item": "heart-scale"
+                },
+                {
+                    "amount": 1,
+                    "info": "B2F, left room, central item on raised ground",
+                    "item": "red-shard"
+                },
+                {
+                    "amount": 1,
+                    "info": "Exit room, below entrance to Iron Ruins",
+                    "item": "exp-share"
+                },
+                {
+                    "amount": 1,
+                    "info": "Iron Ruins, in middle of room",
+                    "item": "metal-coat"
+                },
+                {
+                    "amount": 1,
+                    "info": "Iron Ruins, 3 tiles left of Metal Coat (hidden)",
+                    "item": "big-nugget"
+                }
+            ],
             "locations": [
                 "iron-island",
                 "iron-island-b2f",
@@ -28079,7 +30645,43 @@
         },
         {
             "id": 70,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "0F, kitchen, in crate next to trash can (hidden)<br>Requires Strength",
+                    "item": "honey"
+                },
+                {
+                    "amount": 1,
+                    "info": "0F, kitchen, top-right below sign<br>Requires Strength",
+                    "item": "rare-candy"
+                },
+                {
+                    "amount": 1,
+                    "info": "0F, dining room, in right storage area<br>Requires Strength",
+                    "item": "big-pearl"
+                },
+                {
+                    "amount": 1,
+                    "info": "1F, left book storage room<br>Requires Strength",
+                    "item": "old-gateau"
+                },
+                {
+                    "amount": 1,
+                    "info": "1F, through middle door, left-most room<br>Requires Strength",
+                    "item": "tm20-safeguard"
+                },
+                {
+                    "amount": 1,
+                    "info": "1F, through middle door, middle room, from bedridden child<br>Requires Strength",
+                    "item": "heart-scale"
+                },
+                {
+                    "amount": 1,
+                    "info": "1F, through middle door, right-most room<br>Requires Strength",
+                    "item": "kasib-berry"
+                }
+            ],
             "locations": [
                 "old-chateau-foyer",
                 "old-chateau-dining-room",
@@ -28099,7 +30701,98 @@
         },
         {
             "id": 71,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "Take the right teleporter after Perdita",
+                    "item": "tm49-drill-run"
+                },
+                {
+                    "amount": 1,
+                    "info": "In room with Bebhiann \/ Erripaus",
+                    "item": "galactic-card"
+                },
+                {
+                    "amount": 1,
+                    "info": "Under the table near Puck and Oberon",
+                    "item": "dubious-disc"
+                },
+                {
+                    "amount": 1,
+                    "info": "In warehouse after puck and oberon \/ Stephano",
+                    "item": "tm36-sludge-bomb"
+                },
+                {
+                    "amount": 1,
+                    "info": "After Galactic Prospero",
+                    "item": "galactic-key"
+                },
+                {
+                    "amount": 1,
+                    "info": "Right door through the Main HQ entrance",
+                    "item": "power-anklet"
+                },
+                {
+                    "amount": 1,
+                    "info": "Top Teleporter after Galactic Kari",
+                    "item": "green-shard"
+                },
+                {
+                    "amount": 1,
+                    "info": "Left most box after Top Teleporter after Galactic Kari",
+                    "item": "sacred-ash"
+                },
+                {
+                    "amount": 1,
+                    "info": "Go back through teleporter after green shard",
+                    "item": "carbos"
+                },
+                {
+                    "amount": 1,
+                    "info": "In right bed after Greip and Geirrod",
+                    "item": "poke-doll"
+                },
+                {
+                    "amount": 1,
+                    "info": "Upstairs path by the three teleporters",
+                    "item": "big-nugget"
+                },
+                {
+                    "amount": 1,
+                    "info": "Interact with box through the right teleporter above Big Nugget",
+                    "item": "protein"
+                },
+                {
+                    "amount": 1,
+                    "info": "Interact with box through the right teleporter above Big Nugget",
+                    "item": "calcium"
+                },
+                {
+                    "amount": 1,
+                    "info": "Interact with top table through the middle teleporter above Big Nugget",
+                    "item": "iron"
+                },
+                {
+                    "amount": 1,
+                    "info": "Interact with bottom table through the middle teleporter above Big Nugget",
+                    "item": "zinc"
+                },
+                {
+                    "amount": 1,
+                    "info": "Interact with box through the middle teleporter above Big Nugget",
+                    "item": "elixirs"
+                },
+                {
+                    "amount": 1,
+                    "info": "Before Cyrus 2",
+                    "item": "power-bracer"
+                },
+                {
+                    "amount": 1,
+                    "info": "From Cyrus<br>Requires Defeat Cyrus 2",
+                    "item": "secret-key"
+                }
+            ],
             "locations": [
                 "galactic-hq"
             ],
@@ -28113,7 +30806,13 @@
         },
         {
             "id": 72,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "South-east grass near honey tree",
+                    "item": "sun-stone"
+                }
+            ],
             "locations": [
                 "verity-lakefront"
             ],
@@ -28129,7 +30828,43 @@
         },
         {
             "id": 73,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "In grass",
+                    "item": "ultra-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "From Marley",
+                    "item": "colbur-berry"
+                },
+                {
+                    "amount": 1,
+                    "info": "From unhoused woman<br>Requires Suite Key",
+                    "item": "white-flute"
+                },
+                {
+                    "amount": 1,
+                    "info": "Next to northern house<br>Requires Rock Climb",
+                    "item": "heart-scale"
+                },
+                {
+                    "amount": 1,
+                    "info": "Next to northern house<br>Requires Rock Climb",
+                    "item": "tm85-dream-eater"
+                },
+                {
+                    "amount": 1,
+                    "info": "Within wall in beachside Valor Lakefront area<br>Requires Rock Climb",
+                    "item": "sun-stone"
+                },
+                {
+                    "amount": 1,
+                    "info": "From route 222 entrance between the trees",
+                    "item": "luxury-ball"
+                }
+            ],
             "locations": [
                 "valor-lakefront"
             ],
@@ -28145,7 +30880,13 @@
         },
         {
             "id": 74,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "Top-right corner of grass patch before Snowpoint City",
+                    "item": "ultra-ball"
+                }
+            ],
             "locations": [
                 "acuity-lakefront"
             ],
@@ -28161,7 +30902,13 @@
         },
         {
             "id": 76,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "Surf across lake<br>Requires Surf",
+                    "item": "tm38-fire-blast"
+                }
+            ],
             "locations": [
                 "lake-verity"
             ],
@@ -28176,7 +30923,13 @@
         },
         {
             "id": 77,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "Surf across lake after Distortion World<br>Requires Surf",
+                    "item": "tm25-thunder"
+                }
+            ],
             "locations": [
                 "lake-valor",
                 "lake-valor-drained"
@@ -28192,7 +30945,13 @@
         },
         {
             "id": 78,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "Surf across lake<br>Requires Rock Climb, Surf",
+                    "item": "tm14-blizzard"
+                }
+            ],
             "locations": [
                 "lake-acuity"
             ],
@@ -28206,8 +30965,60 @@
             "type": "water"
         },
         {
+            "id": 81,
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "PokéMart, from socialite",
+                    "item": "scope-lens"
+                }
+            ],
+            "locations": [
+                "fight-area"
+            ],
+            "name": "fight-area",
+            "positions": [
+                {
+                    "width": 2,
+                    "x": 19,
+                    "y": 7
+                }
+            ]
+        },
+        {
+            "id": 82,
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "Within trees to left of southern house (hidden)",
+                    "item": "luxury-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "Southern house, from black belt",
+                    "item": "tm42-facade"
+                }
+            ],
+            "locations": [
+                "survival-area"
+            ],
+            "name": "survival-area",
+            "positions": [
+                {
+                    "x": 20,
+                    "y": 4
+                }
+            ]
+        },
+        {
             "id": 83,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "Across lake, next to asteroid",
+                    "item": "big-nugget"
+                }
+            ],
             "locations": [
                 "resort-area"
             ],
@@ -28221,7 +31032,33 @@
         },
         {
             "id": 84,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "South-west cliff, next to asteroid<br>Requires Rock Climb",
+                    "item": "grip-claw"
+                },
+                {
+                    "amount": 1,
+                    "info": "North-east corner, next to asteroid<br>Requires Rock Climb",
+                    "item": "max-elixir"
+                },
+                {
+                    "amount": 1,
+                    "info": "Left side, inside mountain. <br>Requires Rock Climb, Strength",
+                    "item": "escape-rope"
+                },
+                {
+                    "amount": 1,
+                    "info": "North west, inside mountain.<br>Requires Rock Climb, Strength",
+                    "item": "star-piece"
+                },
+                {
+                    "amount": 1,
+                    "info": "North east, inside mountain.<br>Requires Rock Climb, Strength",
+                    "item": "full-restore"
+                }
+            ],
             "locations": [
                 "stark-mountain",
                 "stark-mountain-outside"
@@ -28295,6 +31132,48 @@
             ]
         },
         {
+            "id": 92,
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "Left side of route as you enter",
+                    "item": "red-shard"
+                },
+                {
+                    "amount": 1,
+                    "info": "Under bridge",
+                    "item": "smoke-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "Cross bike path, behind Rock Smash rocks<br>Requires Rock Smash",
+                    "item": "tm30-shadow-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "Below Wilma's house<br>Requires Rock Climb",
+                    "item": "heart-scale"
+                },
+                {
+                    "amount": 1,
+                    "info": "On island after waterfalls<br>Requires Waterfall, Surf",
+                    "item": "wave-incense"
+                }
+            ],
+            "locations": [
+                "clamberclaw-cliffs"
+            ],
+            "name": "clamberclaw-cliffs",
+            "positions": [
+                {
+                    "width": 3,
+                    "x": 15,
+                    "y": 10
+                }
+            ],
+            "type": "route"
+        },
+        {
             "id": 97,
             "items": [],
             "locations": [
@@ -28307,6 +31186,27 @@
                     "y": 14
                 }
             ]
+        },
+        {
+            "id": 99,
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "East side of room above pillar (hidden)<br>Requires Rock Climb",
+                    "item": "max-potion"
+                }
+            ],
+            "locations": [
+                "celestica-ruins"
+            ],
+            "name": "celestica-ruins",
+            "positions": [
+                {
+                    "x": 13,
+                    "y": 8
+                }
+            ],
+            "type": "cave"
         },
         {
             "id": 102,
@@ -28333,6 +31233,92 @@
                 {
                     "x": 0,
                     "y": 16
+                }
+            ]
+        },
+        {
+            "id": 106,
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "Next to ledge on left of route<br>Requires Surf OR Cut",
+                    "item": "nugget"
+                },
+                {
+                    "amount": 1,
+                    "info": "Middle bush on right side of mansion gate (hidden)",
+                    "item": "ultra-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "Third bush from left above Rich Boy Liam (hidden)",
+                    "item": "pearl"
+                },
+                {
+                    "amount": 1,
+                    "info": "Back-right side of Backlot Mansion",
+                    "item": "green-shard"
+                },
+                {
+                    "amount": 1,
+                    "info": "Talk to maid in 2nd room from left inside mansion",
+                    "item": "soothe-bell"
+                },
+                {
+                    "amount": 1,
+                    "info": "Backlot Mansion, left-most room",
+                    "item": "luxury-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "From Mr. Backlot after defeating Gentleman Butler<br>Requires Defeat Butler",
+                    "item": "hm03-surf"
+                },
+                {
+                    "amount": 1,
+                    "info": "Backlot Mansion, right-most room, top-right corner",
+                    "item": "tm77-psych-up"
+                },
+                {
+                    "amount": 1,
+                    "info": "Along mansion wall, between trees, over right pond<br>Requires Surf",
+                    "item": "luxury-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "Bottom-right of flower patch, over left pond<br>Requires Surf",
+                    "item": "rose-incense"
+                }
+            ],
+            "locations": [],
+            "name": "pokemon-mansion",
+            "positions": [
+                {
+                    "x": 15,
+                    "y": 19
+                }
+            ]
+        },
+        {
+            "id": 108,
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "From Gambler John Keating in Moomoo Café<br>Requires Defeat Gambler John Keating",
+                    "item": "choice-band"
+                },
+                {
+                    "amount": 1,
+                    "info": "From Gambler John Keating in Moomoo Café<br>Requires Defeat Gambler John Keating",
+                    "item": "choice-specs"
+                }
+            ],
+            "locations": [],
+            "name": "moomoo-cafe",
+            "positions": [
+                {
+                    "x": 18,
+                    "y": 11
                 }
             ]
         },
@@ -28365,6 +31351,76 @@
             ]
         },
         {
+            "id": 118,
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "1F, between small gravestone<br>Requires Strength",
+                    "item": "green-shard"
+                },
+                {
+                    "amount": 1,
+                    "info": "1F, on lower-right solitary gravestone (hidden)<br>Requires Strength",
+                    "item": "honey"
+                },
+                {
+                    "amount": 1,
+                    "info": "2F, bottom-left, below large gravestone<br>Requires Strength",
+                    "item": "heart-scale"
+                },
+                {
+                    "amount": 1,
+                    "info": "3F. lower-left, between large and small gravestone<br>Requires Strength",
+                    "item": "tm27-return"
+                },
+                {
+                    "amount": 1,
+                    "info": "3F, lower-left, below large gravestone (hidden)<br>Requires Strength",
+                    "item": "great-ball"
+                }
+            ],
+            "locations": [
+                "lost-tower-1f",
+                "lost-tower-2f",
+                "lost-tower-3f",
+                "lost-tower-4f",
+                "lost-tower-5f"
+            ],
+            "name": "lost-tower",
+            "positions": [
+                {
+                    "x": 18,
+                    "y": 15
+                }
+            ]
+        },
+        {
+            "id": 119,
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "Lol good luck",
+                    "item": "old-amber"
+                }
+            ],
+            "locations": [
+                "underground-deep-sea-room",
+                "underground-forest-room",
+                "underground-lava-room",
+                "underground-icy-room"
+            ],
+            "name": "underground",
+            "positions": [
+                {
+                    "height": 2,
+                    "width": 3,
+                    "x": 10,
+                    "y": 21
+                }
+            ],
+            "type": "cave"
+        },
+        {
             "id": 121,
             "items": [],
             "locations": [
@@ -28380,7 +31436,33 @@
         },
         {
             "id": 122,
-            "items": [],
+            "items": [
+                {
+                    "amount": 1,
+                    "info": "Third teleporter from left after first Galactic",
+                    "item": "max-ether"
+                },
+                {
+                    "amount": 1,
+                    "info": "Fourth teleporter from left after first Galactic",
+                    "item": "ultra-ball"
+                },
+                {
+                    "amount": 1,
+                    "info": "Bottom-right in Jupiter Room",
+                    "item": "big-pearl"
+                },
+                {
+                    "amount": 1,
+                    "info": "Top-right in Jupiter Room",
+                    "item": "up-grade"
+                },
+                {
+                    "amount": 1,
+                    "info": "Left in Jupiter Room",
+                    "item": "tm36-sludge-bomb"
+                }
+            ],
             "locations": [
                 "galactic-eterna-building"
             ],
@@ -28404,7 +31486,8 @@
                     "x": 3,
                     "y": 8
                 }
-            ]
+            ],
+            "type": "cave"
         },
         {
             "id": 124,
@@ -28418,7 +31501,8 @@
                     "x": 12,
                     "y": 5
                 }
-            ]
+            ],
+            "type": "cave"
         },
         {
             "id": 125,
@@ -28432,7 +31516,8 @@
                     "x": 25,
                     "y": 5
                 }
-            ]
+            ],
+            "type": "cave"
         }
     ],
     "moves": [

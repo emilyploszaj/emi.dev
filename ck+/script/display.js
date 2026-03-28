@@ -96,7 +96,7 @@ function displayCalcPokemon(root, poke, opponent, right) {
 	}
 	root.getElementsByClassName("poke-types")[0].innerHTML = types;
 	if (game.name == "pk") {
-		var ability = abilitiesByName.get(poke.ability);
+		var ability = abilities.byName(poke.ability);
 		if (ability) {
 			var variants = "";
 			if (ability.variants) {
@@ -110,11 +110,10 @@ function displayCalcPokemon(root, poke, opponent, right) {
 				}
 				variants += `</div>`;
 			}
-			var abilities = `
+			root.getElementsByClassName("calc-ability")[0].innerHTML = `
 				${abilityLink(ability)}
 				${variants}
-			`;
-			root.getElementsByClassName("calc-ability")[0].innerHTML = abilities;
+			`;;
 		} else {
 			root.getElementsByClassName("calc-ability")[0].innerHTML = "-";
 		}
@@ -695,8 +694,8 @@ function getFullItemDisplay(item) {
 
 function getItemLocationDescription(desc) {
 	return `
-		<div>${itemLink(desc.item)} ${desc.amount}</div>
-		<div>${desc.info}</div>
+		<div>${itemLink(desc.item)} <span class="meek">x${desc.amount}</span></div>
+		<div class="meek">${desc.info}</div>
 	`;
 }
 
@@ -970,6 +969,8 @@ function getMapDisplay(width, height, xOffset = 0, yOffset = 0, scale = 48, focu
 			cl = "landmark-lake";
 		} else if (lc.type == "cave") {
 			cl = "landmark-cave";
+		} else if (lc.type == "route") {
+			cl = "landmark-route";
 		}
 
 		if (caughtLandmarks.has(lc.name)) {

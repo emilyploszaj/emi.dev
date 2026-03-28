@@ -51,14 +51,14 @@ class BattleEffects {
 					addIfValid(effects, BattleEffect.parse("attack", move.effects));
 				}
 			}
-			if (!ignored.has("attacker.ability") && abilitiesByName.has(attacker.ability.name)) {
+			if (!ignored.has("attacker.ability") && abilities.byName(attacker.ability.name) != undefined) {
 				if (attacker.ability.effects) {
 					for (const v of pluckFor("attack", attacker.ability.effects)) {
 						addIfValid(effects, BattleEffect.parse("attack", v));
 					}
 				}
 			}
-			if (!ignored.has("defender.ability") && abilitiesByName.has(defender.ability.name)) {
+			if (!ignored.has("defender.ability") && abilities.byName(defender.ability.name) != undefined) {
 				if (defender.ability.effects) {
 					for (const v of pluckFor("defend", defender.ability.effects)) {
 						addIfValid(effects, BattleEffect.parse("defend", v));

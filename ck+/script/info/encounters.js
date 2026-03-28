@@ -170,7 +170,7 @@ function getEncounterPoolGroupDisplay(p) {
 		v += `<h6>(Lvl ${minLevel}-${maxLevel})</h6>`;
 	}
 	for (var i = 1; i < keys.length; i++) {
-		if (!arePoolsEqual(keys[i], keys[0])) {
+		if (!arePoolsEqual(p[keys[i]], p[keys[0]])) {
 			for (let key of keys) {
 				v += getEncounterPoolDisplay(p[key], key, minLevel != maxLevel);
 			}

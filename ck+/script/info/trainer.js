@@ -59,6 +59,7 @@ function getTrainerDisplay(trainer, i) {
 				${getTrainerName(trainer.name)}
 				<button style="float:right;" onclick="calcTrainer(${i})">Calc</button>
 				${createLink(`#/trainer/${trainer.name}/`, '<button style="float:right;">Info</button>')}
+				${getAiFlagDisplay(i)}
 			</div>
 			<div class="trainer-pokes">
 				${getTeamDisplay(trainer)}
