@@ -217,9 +217,8 @@
             "name": "serene-grace"
         },
         {
-            "TODO": "TODO",
             "effects": {
-                "all": {
+                "stats": {
                     "condition": {
                         "weather": "rain"
                     },
@@ -234,9 +233,8 @@
             "name": "swift-swim"
         },
         {
-            "TODO": "TODO",
             "effects": {
-                "all": {
+                "stats": {
                     "condition": {
                         "weather": "sun"
                     },
@@ -453,9 +451,8 @@
             "name": "guts"
         },
         {
-            "TODO": "TODO",
             "effects": {
-                "all": {
+                "stats": {
                     "condition": {
                         "attacker": {
                             "statused": true
@@ -863,7 +860,7 @@
         {
             "TODO": "TODO",
             "effects": {
-                "all": {
+                "stats": {
                     "condition": {
                         "attacker": {
                             "statused": true
@@ -1030,7 +1027,7 @@
             "variants": [
                 {
                     "effects": {
-                        "all": {
+                        "stats": {
                             "modifiers": {
                                 "stats": {
                                     "atk": "-50%",
@@ -1101,9 +1098,8 @@
             "name": "frisk"
         },
         {
-            "TODO": "TODO",
             "effects": {
-                "defend": {
+                "attack": {
                     "condition": {
                         "move": {
                             "flags": {
@@ -25944,8 +25940,16 @@
             "name": "white-herb"
         },
         {
-            "TODO": "TODO",
             "description": "",
+            "effects": {
+                "stats": {
+                    "modifiers": {
+                        "stats": {
+                            "spe": "=50%"
+                        }
+                    }
+                }
+            },
             "index": 215,
             "name": "macho-brace"
         },
@@ -26019,20 +26023,81 @@
             "name": "cleanse-tag"
         },
         {
-            "TODO": "TODO",
             "description": "",
+            "effects": {
+                "attack": {
+                    "condition": {
+                        "attacker": {
+                            "name": [
+                                "latios",
+                                "latias"
+                            ]
+                        },
+                        "move": {
+                            "category": "special"
+                        }
+                    },
+                    "modifiers": {
+                        "attack-boost": "+50%"
+                    }
+                },
+                "defend": {
+                    "condition": {
+                        "defender": {
+                            "name": [
+                                "latios",
+                                "latias"
+                            ]
+                        },
+                        "move": {
+                            "category": "special"
+                        }
+                    },
+                    "modifiers": {
+                        "defense-boost": "+50%"
+                    }
+                }
+            },
             "index": 225,
             "name": "soul-dew"
         },
         {
-            "TODO": "TODO",
             "description": "",
+            "effects": {
+                "attack": {
+                    "condition": {
+                        "attacker": {
+                            "name": "clamperl"
+                        },
+                        "move": {
+                            "category": "special"
+                        }
+                    },
+                    "modifiers": {
+                        "attack-boost": "+100%"
+                    }
+                }
+            },
             "index": 226,
             "name": "deepseatooth"
         },
         {
-            "TODO": "TODO",
             "description": "",
+            "effects": {
+                "defend": {
+                    "condition": {
+                        "defender": {
+                            "name": "clamperl"
+                        },
+                        "move": {
+                            "category": "special"
+                        }
+                    },
+                    "modifiers": {
+                        "defense-boost": "+100%"
+                    }
+                }
+            },
             "index": 227,
             "name": "deepseascale"
         },
@@ -26089,8 +26154,22 @@
             "name": "dragon-scale"
         },
         {
-            "TODO": "TODO",
             "description": "",
+            "effects": {
+                "attack": {
+                    "condition": {
+                        "attacker": {
+                            "name": "pikachu"
+                        },
+                        "move": {
+                            "category": "special"
+                        }
+                    },
+                    "modifiers": {
+                        "attack-boost": "+100%"
+                    }
+                }
+            },
             "index": 236,
             "name": "light-ball"
         },
@@ -26387,14 +26466,46 @@
             "name": "lucky-punch"
         },
         {
-            "TODO": "TODO",
             "description": "",
+            "effects": {
+                "defend": [
+                    {
+                        "condition": {
+                            "defender": {
+                                "name": "ditto"
+                            }
+                        },
+                        "modifiers": {
+                            "defense-boost": "+50%"
+                        }
+                    }
+                ]
+            },
             "index": 257,
             "name": "metal-powder"
         },
         {
-            "TODO": "TODO",
             "description": "",
+            "effects": {
+                "attack": [
+                    {
+                        "condition": {
+                            "attacker": {
+                                "name": [
+                                    "cubone",
+                                    "marowak"
+                                ]
+                            },
+                            "move": {
+                                "category": "physical"
+                            }
+                        },
+                        "modifiers": {
+                            "attack-boost": "+100%"
+                        }
+                    }
+                ]
+            },
             "index": 258,
             "name": "thick-club"
         },
@@ -26517,8 +26628,23 @@
             "name": "flame-orb"
         },
         {
-            "TODO": "TODO",
             "description": "",
+            "effects": {
+                "stats": [
+                    {
+                        "condition": {
+                            "defender": {
+                                "name": "ditto"
+                            }
+                        },
+                        "modifiers": {
+                            "stats": {
+                                "spe": "+100%"
+                            }
+                        }
+                    }
+                ]
+            },
             "index": 274,
             "name": "quick-powder"
         },
@@ -26539,8 +26665,21 @@
             "name": "metronome"
         },
         {
-            "TODO": "TODO",
             "description": "",
+            "effects": {
+                "all": {
+                    "flags": {
+                        "grounded": true
+                    }
+                },
+                "stats": {
+                    "modifiers": {
+                        "stats": {
+                            "spe": "=50%"
+                        }
+                    }
+                }
+            },
             "index": 278,
             "name": "iron-ball"
         },
@@ -26585,8 +26724,16 @@
             "name": "grip-claw"
         },
         {
-            "TODO": "TODO",
             "description": "",
+            "effects": {
+                "stats": {
+                    "modifiers": {
+                        "stats": {
+                            "spe": "+50%"
+                        }
+                    }
+                }
+            },
             "index": 287,
             "name": "choice-scarf"
         },
@@ -26597,36 +26744,85 @@
         },
         {
             "description": "",
+            "effects": {
+                "stats": {
+                    "modifiers": {
+                        "stats": {
+                            "spe": "=50%"
+                        }
+                    }
+                }
+            },
             "index": 289,
             "name": "power-bracer"
         },
         {
-            "TODO": "TODO",
             "description": "",
+            "effects": {
+                "stats": {
+                    "modifiers": {
+                        "stats": {
+                            "spe": "=50%"
+                        }
+                    }
+                }
+            },
             "index": 290,
             "name": "power-belt"
         },
         {
-            "TODO": "TODO",
             "description": "",
+            "effects": {
+                "stats": {
+                    "modifiers": {
+                        "stats": {
+                            "spe": "=50%"
+                        }
+                    }
+                }
+            },
             "index": 291,
             "name": "power-lens"
         },
         {
-            "TODO": "TODO",
             "description": "",
+            "effects": {
+                "stats": {
+                    "modifiers": {
+                        "stats": {
+                            "spe": "=50%"
+                        }
+                    }
+                }
+            },
             "index": 292,
             "name": "power-band"
         },
         {
-            "TODO": "TODO",
             "description": "",
+            "effects": {
+                "stats": {
+                    "modifiers": {
+                        "stats": {
+                            "spe": "=50%"
+                        }
+                    }
+                }
+            },
             "index": 293,
             "name": "power-anklet"
         },
         {
-            "TODO": "TODO",
             "description": "",
+            "effects": {
+                "stats": {
+                    "modifiers": {
+                        "stats": {
+                            "spe": "=50%"
+                        }
+                    }
+                }
+            },
             "index": 294,
             "name": "power-weight"
         },
@@ -32159,7 +32355,8 @@
                 "1\/4 damage dealt recoil"
             ],
             "flags": [
-                "contact"
+                "contact",
+                "recoil"
             ],
             "index": 36,
             "name": "take-down",
@@ -32177,7 +32374,8 @@
                 "Chance of causing Paralysis; 1\/3 damage dealt recoil"
             ],
             "flags": [
-                "contact"
+                "contact",
+                "recoil"
             ],
             "index": 37,
             "name": "thrash",
@@ -32195,7 +32393,8 @@
                 "1\/3 damage dealt recoil"
             ],
             "flags": [
-                "contact"
+                "contact",
+                "recoil"
             ],
             "index": 38,
             "name": "double-edge",
@@ -32560,6 +32759,9 @@
             "category": "special",
             "extra": [
                 "1\/4 damage dealt recoil"
+            ],
+            "flags": [
+                "recoil"
             ],
             "index": 63,
             "name": "hyper-beam",
@@ -33732,6 +33934,9 @@
             "extra": [
                 "Chance of causing Paralysis; 1\/3 damage dealt recoil"
             ],
+            "flags": [
+                "recoil"
+            ],
             "index": 143,
             "name": "sky-attack",
             "power": 120,
@@ -34591,7 +34796,8 @@
                 "1\/2 damage dealt recoil"
             ],
             "flags": [
-                "contact"
+                "contact",
+                "recoil"
             ],
             "index": 200,
             "name": "outrage",
@@ -34726,7 +34932,8 @@
                 "Chance of causing Paralysis; 1\/3 damage dealt recoil"
             ],
             "flags": [
-                "contact"
+                "contact",
+                "recoil"
             ],
             "index": 209,
             "name": "wild-charge",
@@ -35803,7 +36010,8 @@
                 "1\/4 damage dealt recoil"
             ],
             "flags": [
-                "contact"
+                "contact",
+                "recoil"
             ],
             "index": 276,
             "name": "superpower",
@@ -35939,6 +36147,9 @@
             "category": "special",
             "extra": [
                 "Chance of causing Burn; 1\/3 damage dealt recoil"
+            ],
+            "flags": [
+                "recoil"
             ],
             "index": 284,
             "name": "eruption",
@@ -36277,6 +36488,9 @@
             "extra": [
                 "Chance of causing Burn; 1\/3 damage dealt recoil"
             ],
+            "flags": [
+                "recoil"
+            ],
             "index": 307,
             "name": "blast-burn",
             "power": 150,
@@ -36291,6 +36505,9 @@
             "category": "special",
             "extra": [
                 "1\/3 damage dealt recoil"
+            ],
+            "flags": [
+                "recoil"
             ],
             "index": 308,
             "name": "hydro-cannon",
@@ -36396,6 +36613,9 @@
             "category": "special",
             "extra": [
                 "Chance of causing Burn; 1\/3 damage dealt recoil"
+            ],
+            "flags": [
+                "recoil"
             ],
             "index": 315,
             "name": "overheat",
@@ -36745,7 +36965,8 @@
                 "Chance of causing Paralysis; 1\/3 damage dealt recoil"
             ],
             "flags": [
-                "contact"
+                "contact",
+                "recoil"
             ],
             "index": 338,
             "name": "frenzy-plant",
@@ -36837,7 +37058,8 @@
                 "Chance of causing Paralysis; 1\/3 damage dealt recoil"
             ],
             "flags": [
-                "contact"
+                "contact",
+                "recoil"
             ],
             "index": 344,
             "name": "volt-tackle",
@@ -37679,7 +37901,8 @@
                 "Chance of causing Burn; 1\/3 damage dealt recoil"
             ],
             "flags": [
-                "contact"
+                "contact",
+                "recoil"
             ],
             "index": 394,
             "name": "flare-blitz",
@@ -38012,7 +38235,8 @@
                 "1\/4 damage dealt recoil"
             ],
             "flags": [
-                "contact"
+                "contact",
+                "recoil"
             ],
             "index": 416,
             "name": "giga-impact",
@@ -38293,6 +38517,9 @@
             "extra": [
                 "1\/4 damage dealt recoil"
             ],
+            "flags": [
+                "recoil"
+            ],
             "index": 434,
             "name": "draco-meteor",
             "power": 140,
@@ -38563,7 +38790,8 @@
                 "1\/3 damage dealt recoil"
             ],
             "flags": [
-                "contact"
+                "contact",
+                "recoil"
             ],
             "index": 452,
             "name": "wood-hammer",
@@ -38640,7 +38868,8 @@
                 "1\/2 damage dealt recoil"
             ],
             "flags": [
-                "contact"
+                "contact",
+                "recoil"
             ],
             "index": 457,
             "name": "head-smash",

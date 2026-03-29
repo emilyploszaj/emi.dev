@@ -119,6 +119,10 @@ class BattleMove {
 		return this.#variant.effects ?? this.move.effects;
 	}
 
+	hasFlag(flag) {
+		return contains(this.move.flags ?? [], flag);
+	}
+
 	getEffectiveness(target) {
 		return getMatchup(this.type, target.mon.types[0]) * getMatchup(this.type, target.mon.types[1]);
 	}

@@ -111,6 +111,61 @@ class BattleEffects {
 	}
 
 	/**
+	 * @param {BattlePoke} mon
+	 */
+	static forStats(mon) {
+		var effects = [];
+		var pluckFor = function(type, effects) {
+			var values = effects;
+			if (!Array.isArray(values)) {
+				values = [values];
+			}
+			var ret = [];
+			for (const value of values) {
+				if (value[type]) {
+					if (Array.isArray(value[type])) {
+						ret.concat(value[type]);
+					} else {
+						ret.push(value[type]);
+					}
+				} else if (value.all) {
+					if (Array.isArray(value.all)) {
+						ret.concat(value.all);
+					} else {
+						ret.push(value.all);
+					}
+				}
+			}
+			return ret;
+		}
+		var addIfValid = function(effects, effect) {
+			if (effect != null) {
+				effects.push(effect);
+			}
+		}
+		if (abilities.byName(mon.ability.name) != undefined) {
+			if (mon.ability.effects) {
+				for (const v of pluckFor("stats", mon.ability.effects)) {
+					addIfValid(effects, BattleEffect.parse("stats", v));
+				}
+			}
+		}
+		if (itemsByName.has(mon.item)) {
+			var ai = itemsByName.get(mon.item);
+			if (ai.effects) {
+				if (Array.isArray(ai.effects.stats)) {
+					for (const v of ai.effects.stats) {
+						addIfValid(effects, BattleEffect.parse("stats", v));
+					}
+				} else {
+					addIfValid(effects, BattleEffect.parse("stats", ai.effects.stats));
+				}
+			}
+		}
+		return new BattleEffects(effects);
+	}
+
+	/**
 	 * @param {BattlePoke} attacker
 	 * @param {BattlePoke} defender
 	 * @param {BattleMove} move
@@ -453,6 +508,14 @@ function initConditions() {
 	CONDITION_PREDICATES.set("move.type", (condition, attacker, defender, move) => checkStringCondition(condition, move.type));
 	CONDITION_PREDICATES.set("move.category", (condition, attacker, defender, move) => checkStringCondition(condition, move.category));
 	CONDITION_PREDICATES.set("move.power", (condition, attacker, defender, move) => checkNumberCondition(condition, move.power));
+	CONDITION_PREDICATES.set("move.flags", (condition, attacker, defender, move) => {
+		for (const k of Object.keys(condition)) {
+			if (condition[k] != move.hasFlag(k)) {
+				return false;
+			}
+		}
+		return true;
+	});
 	CONDITION_PREDICATES.set("same-gender", (condition, attacker, defender, move) => checkStringCondition(condition, checkBooleanCondition(getGender(attacker) == getGender(defender))));
 	CONDITION_PREDICATES.set("move.effectiveness", (condition, attacker, defender, move) => checkNumberCondition(condition, move.getEffectiveness(defender)));
 	var addForBoth = function(name, lambda) {

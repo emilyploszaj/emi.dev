@@ -731,6 +731,9 @@ function getFullMoveDisplay(move) {
 		${move.priority ?? 0 != 0 ? `
 			<p>Priority: ${move.priority > 0 ? "+" :""}${move.priority}</p>
 		` : ""}
+		${(move.flags ?? []).length > 0 ? `
+			<p class="meek">Flags: ${move.flags.map(f => fullCapitalize(f)).join(", ")}</p>
+		` : ""}
 		<h3>Targeting</h3>
 		${target}
 		${byLearnset ? `

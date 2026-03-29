@@ -68,6 +68,8 @@ class BattlePokeGen4Impl extends BattlePoke {
 
 	getEffectiveStat(stat) {
 		var v = getModifiedStatGen4(this.poke, this.stages, stat);
+		var effects = BattleEffects.forStats(this);
+		v = effects.getModifier(this, null, null, "stats." + stat, v, v);
 		if (stat == "spe") {
 			if (this.status == "prz") {
 				v = parseInt(v / 4);
