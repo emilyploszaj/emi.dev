@@ -516,8 +516,9 @@ function initConditions() {
 		}
 		return true;
 	});
-	CONDITION_PREDICATES.set("same-gender", (condition, attacker, defender, move) => checkStringCondition(condition, checkBooleanCondition(getGender(attacker) == getGender(defender))));
 	CONDITION_PREDICATES.set("move.effectiveness", (condition, attacker, defender, move) => checkNumberCondition(condition, move.getEffectiveness(defender)));
+	CONDITION_PREDICATES.set("same-gender", (condition, attacker, defender, move) => checkStringCondition(condition, checkBooleanCondition(getGender(attacker) == getGender(defender))));
+	CONDITION_PREDICATES.set("weather", (condition, attacker, defender, move) => checkStringCondition(condition, document.getElementById("current-weather").value));
 	var addForBoth = function(name, lambda) {
 		CONDITION_PREDICATES.set("attacker." + name, (condition, attacker, defender, move) => lambda(condition, attacker, defender, move));
 		CONDITION_PREDICATES.set("defender." + name, (condition, attacker, defender, move) => lambda(condition, defender, attacker, move));
