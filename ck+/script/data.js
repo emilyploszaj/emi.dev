@@ -399,9 +399,9 @@ function startup() {
 	}
 	var lt = parseInt(savedData["last-trainer"] ?? 0);
 	if (lt >= 0 && lt < j.trainers.length) {
-		calcTrainer(lt);
+		calcTrainer(lt, true);
 	} else {
-		calcTrainer(0);
+		calcTrainer(0, true);
 	}
 	updateCalc();
 	updateBox();

@@ -267,7 +267,7 @@ function resetBattleSettings() {
 	document.getElementById("doubles").checked = false;
 }
 
-function calcTrainer(i) {
+function calcTrainer(i, startup = false) {
 	if (isTrainerB2b(i)) {
 		calcTrainer(i - 1);
 		return;
@@ -296,8 +296,10 @@ function calcTrainer(i) {
 	document.getElementById("current-trainer-name").innerHTML = `${getTrainerName(trainer.name)}`;
 	document.getElementById("current-trainer-navigate").href = `#/trainer/${trainer.name}/`;
 	setEnemy(lastTrainer, 0);
-	navigate("#/calc/");
-	history.pushState(getLinkState(), "", "#/calc/");
+	if (!startup) {
+		navigate("#/calc/");
+		history.pushState(getLinkState(), "", "#/calc/");
+	}
 }
 
 function calcTagPartners() {
