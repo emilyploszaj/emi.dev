@@ -126,7 +126,7 @@ class BattleMoveGen4Impl extends BattleMove {
 			}
 		} else if (this.move.name == "punishment") {
 			return 60;
-		} else if (this.move.name == "low-kick") {
+		} else if (this.move.name == "low-kick" || this.move.name == "grass-knot") {
 			return 20;
 		} else if (this.move.name == "gyro-ball") {
 			return 20;
