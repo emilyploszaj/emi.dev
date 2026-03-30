@@ -549,9 +549,10 @@ function getAiFlagDisplay(trainer) {
 function getEnemyTeamDisplay(enemyTeam, trainer) {
 	var v = "";
 	for (let i in enemyTeam) {
+		var extraClasses = faintedMonToggles.get(`${trainer}-${i}`) == true ? "toggled-party-member" : "";
 		var prioClass = ["low", "neutral", "high"][Math.sign(getSwitchPriority(enemyTeam[i], myPoke)) + 1];
 		var img = `<img draggable="false" class="${prioClass}-switch-priority" src="${getPokeImage(enemyTeam[i], "small")}">`;
-		v += `<div class="micro-mon drag-sortable" drag-content="enemy-${trainer}-${i}" drag-type="box" onclick="setEnemy(${trainer}, ${i})">${img}</div>`;
+		v += `<div class="micro-mon drag-sortable ${extraClasses}" drag-content="enemy-${trainer}-${i}" drag-type="box" oncontextmenu="togglePartyIcon(event, ${trainer}, ${i})" onclick="setEnemy(${trainer}, ${i})">${img}</div>`;
 	}
 	return v;
 }
@@ -559,9 +560,10 @@ function getEnemyTeamDisplay(enemyTeam, trainer) {
 function getTagTeamDisplay(tagTeam) {
 	var v = "";
 	for (let i in tagTeam) {
+		var extraClasses = faintedMonToggles.get(`tag-${i}`) == true ? "toggled-party-member" : "";
 		var prioClass = ["low", "neutral", "high"][Math.sign(getSwitchPriority(tagTeam[i], myPoke)) + 1];
 		var img = `<img draggable="false" class="${prioClass}-switch-priority" src="${getPokeImage(tagTeam[i], "small")}">`;
-		v += `<div class="micro-mon drag-sortable" drag-content="tag-${i}" drag-type="box" onclick="setTagPlayer(${i}, ${i})">${img}</div>`;
+		v += `<div class="micro-mon drag-sortable ${extraClasses}" drag-content="tag-${i}" drag-type="box" oncontextmenu="togglePartyIcon(event, 'tag', ${i})" onclick="setTagPlayer(${i}, ${i})">${img}</div>`;
 	}
 	return v;
 }

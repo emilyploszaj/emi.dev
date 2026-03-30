@@ -102724,7 +102724,7 @@
                 "format": "multi"
             },
             "meta": "(MULTI BATTLE WITH GALACTIC LUNA)",
-            "name": "galacticf-venus",
+            "name": "galactic-venus",
             "player-partners": [
                 "trainer-dawn\/lucas",
                 "trainer-dawn\/lucas-2",
@@ -103187,7 +103187,7 @@
             ],
             "area": "floaroma-meadow",
             "meta": "(B2B With Galactic Mercury)",
-            "name": "galacticfterra",
+            "name": "galactic-terra",
             "split": "gardenia",
             "team": [
                 {
@@ -104273,7 +104273,7 @@
                 "format": "multi"
             },
             "meta": "(MULTI BATTLE With Galactic Bianca)",
-            "name": "galacticfophelia",
+            "name": "galactic-ophelia",
             "player-partners": [
                 "trainer-cheryl"
             ],
@@ -104339,7 +104339,7 @@
                 "format": "multi"
             },
             "meta": "(MULTI BATTLE With Galactic Ophelia)",
-            "name": "galacticfbianca",
+            "name": "galactic-bianca",
             "player-partners": [
                 "trainer-cheryl"
             ],
@@ -104467,7 +104467,7 @@
                 "format": "multi"
             },
             "meta": "(MULTI BATTLE With Galactic Setebos, between the trees on the top path)",
-            "name": "galacticfsycorax",
+            "name": "galactic-sycorax",
             "player-partners": [
                 "trainer-cheryl"
             ],
@@ -104594,7 +104594,7 @@
                 "format": "multi"
             },
             "meta": "(MULTI BATTLE With Galactic Prospero, at the bottom path)",
-            "name": "galacticfmiranda",
+            "name": "galactic-miranda",
             "player-partners": [
                 "trainer-cheryl"
             ],
@@ -104882,7 +104882,7 @@
             ],
             "area": "eterna-forest",
             "meta": "(Above the trees on the right)",
-            "name": "galacticfvenus",
+            "name": "galactic-venus-2",
             "split": "gardenia",
             "team": [
                 {
@@ -104971,7 +104971,7 @@
                 "format": "multi"
             },
             "meta": "(MULTI BATTLE With Galactic Francisco, Left of the trees)",
-            "name": "galacticfuranus",
+            "name": "galactic-uranus",
             "player-partners": [
                 "trainer-cheryl"
             ],
@@ -105228,7 +105228,7 @@
                 "format": "multi"
             },
             "meta": "(MULTI BATTLE With Galactic Luna)*",
-            "name": "galacticfterra-2",
+            "name": "galactic-terra-2",
             "player-partners": [
                 "trainer-cheryl"
             ],
@@ -106681,7 +106681,7 @@
                 "format": "multi"
             },
             "meta": "(MULTI BATTLE With Cyclist Nicole)",
-            "name": "cyclistfmegan",
+            "name": "cyclist-megan",
             "split": "fantina",
             "team": [
                 {
@@ -106724,7 +106724,7 @@
                 "format": "multi"
             },
             "meta": "(MULTI BATTLE With Cyclist Megan)",
-            "name": "cyclistfnicole",
+            "name": "cyclist-nicole",
             "split": "fantina",
             "team": [
                 {
@@ -106847,7 +106847,7 @@
                 "expert"
             ],
             "area": "route-206",
-            "name": "cyclistfrachel",
+            "name": "cyclist-rachel",
             "split": "fantina",
             "team": [
                 {
@@ -107010,7 +107010,7 @@
                 "expert"
             ],
             "area": "route-206",
-            "name": "cyclistfkaren",
+            "name": "cyclist-karen",
             "split": "fantina",
             "team": [
                 {
@@ -110748,7 +110748,7 @@
                 "weather": "rain"
             },
             "meta": "(RAIN)",
-            "name": "cyclistf-cecelia",
+            "name": "cyclist-cecelia",
             "split": "maylene",
             "team": [
                 {
@@ -111140,7 +111140,7 @@
                 "check-hp"
             ],
             "area": "route-215",
-            "name": "beauty-jasmine-❤",
+            "name": "beauty-jasmine",
             "split": "maylene",
             "team": [
                 {
@@ -111345,7 +111345,7 @@
                 "format": "multi"
             },
             "meta": "(TAG BATTLE with Galactic Cupid)",
-            "name": "galactic-uranus",
+            "name": "galactic-uranus-2",
             "split": "maylene",
             "team": [
                 {
@@ -112419,7 +112419,7 @@
                 "format": "multi"
             },
             "meta": "(MULTI BATTLE With Psychic Mitchell)",
-            "name": "psychicf-abigail",
+            "name": "psychic--abigail",
             "split": "wake",
             "team": [
                 {
@@ -113615,7 +113615,7 @@
                 "weather": "rain"
             },
             "meta": "(OPTIONAL)* (PERMANENT RAIN)",
-            "name": "tuberf-chelsea",
+            "name": "tuber--chelsea",
             "split": "wake",
             "team": [
                 {
@@ -113661,7 +113661,7 @@
                 "weather": "rain"
             },
             "meta": "(GAUNTLET START)* (PERMANENT RAIN)",
-            "name": "swimmerf-mary",
+            "name": "swimmer--mary",
             "split": "wake",
             "team": [
                 {
@@ -113779,7 +113779,7 @@
                 "weather": "rain"
             },
             "meta": "(GAUNTLET)* (PERMANENT RAIN)",
-            "name": "swimmerf-haley",
+            "name": "swimmer--haley",
             "split": "wake",
             "team": [
                 {
@@ -114872,7 +114872,7 @@
                 "weather": "rain"
             },
             "meta": "(PERMANENT RAIN)",
-            "name": "tuberf-caitlyn",
+            "name": "tuber--caitlyn",
             "split": "wake",
             "team": [
                 {
@@ -116012,7 +116012,7 @@
                 "weather": "fog"
             },
             "meta": "(FOG)",
-            "name": "galacticf-luna",
+            "name": "galactic-luna-3",
             "split": "byron",
             "team": [
                 {
@@ -116215,7 +116215,7 @@
                 "weather": "fog"
             },
             "meta": "(FOG)",
-            "name": "galacticf-terra",
+            "name": "galactic-terra-3",
             "split": "byron",
             "team": [
                 {
@@ -116318,7 +116318,7 @@
                 "weather": "fog"
             },
             "meta": "(FOG)",
-            "name": "galacticf-venus-2",
+            "name": "galactic-venus-3",
             "split": "byron",
             "team": [
                 {
@@ -116423,7 +116423,7 @@
                 "weather": "fog"
             },
             "meta": "(FOG, DOUBLE BATTLE)",
-            "name": "galacticf-leda",
+            "name": "galactic-leda",
             "split": "byron",
             "team": [
                 {
@@ -116524,7 +116524,7 @@
                 "weather": "fog"
             },
             "meta": "(FOG)",
-            "name": "galacticf-amalthia",
+            "name": "galactic-amalthia-2",
             "split": "byron",
             "team": [
                 {
@@ -116832,7 +116832,7 @@
                 "weather": "fog"
             },
             "meta": "(FOG, OPTIONAL)*",
-            "name": "galacticf-dia",
+            "name": "galactic-dia",
             "split": "byron",
             "team": [
                 {
@@ -117243,7 +117243,7 @@
                 "weather": "fog"
             },
             "meta": "(FOG)",
-            "name": "galacticf-europa",
+            "name": "galactic-europa-2",
             "split": "byron",
             "team": [
                 {
@@ -117552,7 +117552,7 @@
                 "weather": "fog"
             },
             "meta": "(FOG, DOUBLE BATTLE)",
-            "name": "galacticf-io",
+            "name": "galactic-io-3",
             "split": "byron",
             "team": [
                 {
@@ -117841,7 +117841,7 @@
                 "weather": "fog"
             },
             "meta": "(FOG)",
-            "name": "leader-cyrus",
+            "name": "cyrus",
             "split": "byron",
             "team": [
                 {
@@ -118571,7 +118571,7 @@
                 "format": "multi"
             },
             "meta": "(MULTI BATTLE With Galactic Thalassa)",
-            "name": "galacticf-calypso",
+            "name": "galactic-calypso",
             "split": "byron",
             "team": [
                 {
@@ -118721,7 +118721,7 @@
                 "format": "multi"
             },
             "meta": "(MULTI BATTLE With Galactic Galatea)",
-            "name": "galacticf-despina",
+            "name": "galactic-despina",
             "split": "byron",
             "team": [
                 {
@@ -118796,7 +118796,7 @@
                 "format": "multi"
             },
             "meta": "(MULTI BATTLE With Galactic Despina)",
-            "name": "galacticf-galatea",
+            "name": "galactic-galatea",
             "split": "byron",
             "team": [
                 {
@@ -119093,7 +119093,7 @@
                 "format": "multi"
             },
             "meta": "(MULTI BATTLE With Galactic Naid)",
-            "name": "galacticf-nereid",
+            "name": "galactic-nereid",
             "split": "byron",
             "team": [
                 {
@@ -119168,7 +119168,7 @@
                 "format": "multi"
             },
             "meta": "(MULTI BATTLE With Galactic Proteus)",
-            "name": "galacticf-halimede",
+            "name": "galactic-halimede",
             "split": "byron",
             "team": [
                 {
@@ -119472,7 +119472,7 @@
                 "format": "multi"
             },
             "meta": "(MULTI BATTLE With Galactic Laomedeia)",
-            "name": "galacticf-larissa",
+            "name": "galactic-larissa",
             "split": "byron",
             "team": [
                 {
@@ -119549,7 +119549,7 @@
                 "format": "multi"
             },
             "meta": "(MULTI BATTLE With Galactic Larissa)",
-            "name": "galacticf-laomedeia",
+            "name": "galactic-laomedeia",
             "split": "byron",
             "team": [
                 {
@@ -120619,7 +120619,7 @@
                 "weather": "rain"
             },
             "meta": "(RAIN, MULTI BATTLE With Galactic Iapetus) (PERMANENT RAIN)",
-            "name": "galacticf-phoebe",
+            "name": "galactic-phoebe",
             "split": "candice",
             "team": [
                 {
@@ -120823,7 +120823,7 @@
                 "weather": "rain"
             },
             "meta": "(MULTI BATTLE With Galactic Enceladus) (PERMANENT RAIN)",
-            "name": "galacticf-mimas",
+            "name": "galactic-mimas",
             "split": "candice",
             "team": [
                 {
@@ -120899,7 +120899,7 @@
                 "weather": "rain"
             },
             "meta": "(RAIN, MULTI BATTLE With Galactic Dione) (PERMANENT RAIN)",
-            "name": "galacticf-pandora",
+            "name": "galactic-pandora",
             "split": "candice",
             "team": [
                 {
@@ -120961,7 +120961,7 @@
                 "weather": "rain"
             },
             "meta": "(RAIN, MULTI BATTLE WITH Galactic Pandora) (PERMANENT RAIN)",
-            "name": "galacticf-dione",
+            "name": "galactic-dione",
             "split": "candice",
             "team": [
                 {
@@ -121144,7 +121144,7 @@
                 "weather": "rain"
             },
             "meta": "(RAIN, MULTI BATTLE With Galactic Rhea) (PERMANENT RAIN)",
-            "name": "galacticf-tethys",
+            "name": "galactic-tethys",
             "split": "candice",
             "team": [
                 {
@@ -121222,7 +121222,7 @@
                 "weather": "rain"
             },
             "meta": "(RAIN, MULTI BATTLE With Galactic Tethys) (PERMANENT RAIN)",
-            "name": "galacticf-rhea",
+            "name": "galactic-rhea",
             "split": "candice",
             "team": [
                 {
@@ -121637,7 +121637,7 @@
                 "format": "multi"
             },
             "meta": "(MULTI BATTLE with Galactic Mercury)",
-            "name": "galacticf-venus-3",
+            "name": "galactic-venus-4",
             "split": "candice",
             "team": [
                 {
@@ -121711,7 +121711,7 @@
                 "format": "multi"
             },
             "meta": "(MULTI BATTLE with Galactic Pluto)",
-            "name": "galacticf-luna-2",
+            "name": "galactic-luna-4",
             "split": "candice",
             "team": [
                 {
@@ -122171,7 +122171,7 @@
                 "format": "multi"
             },
             "meta": "(MULTI BATTLE with Commander Mars)",
-            "name": "galacticf-terra-2",
+            "name": "galactic-terra-4",
             "split": "candice",
             "team": [
                 {
@@ -125155,7 +125155,7 @@
                 "weather": "sun"
             },
             "meta": "(SUN, OPTIONAL) (PERMANENT SUN)",
-            "name": "tuberf-holly",
+            "name": "tuber--holly",
             "split": "volkner",
             "team": [
                 {
@@ -126188,7 +126188,7 @@
                 "weather": "rain"
             },
             "meta": "(RAIN, OPTIONAL)* (PERMANENT RAIN)",
-            "name": "swimmerf-wang",
+            "name": "swimmer--wang",
             "split": "galactic",
             "team": [
                 {
@@ -126260,7 +126260,7 @@
                 "weather": "rain"
             },
             "meta": "(RAIN, OPTIONAL)* (PERMANENT RAIN)",
-            "name": "swimmerf-wang-2",
+            "name": "swimmer--wang-2",
             "split": "galactic",
             "team": [
                 {
@@ -126332,7 +126332,7 @@
                 "weather": "rain"
             },
             "meta": "(RAIN, OPTIONAL)* (PERMANENT RAIN)",
-            "name": "swimmerf-wang-3",
+            "name": "swimmer--wang-3",
             "split": "galactic",
             "team": [
                 {
@@ -126404,7 +126404,7 @@
                 "weather": "rain"
             },
             "meta": "(RAIN, OPTIONAL)* (PERMANENT RAIN)",
-            "name": "swimmerf-wang-4",
+            "name": "swimmer--wang-4",
             "split": "galactic",
             "team": [
                 {
@@ -127485,7 +127485,7 @@
                 "format": "multi"
             },
             "meta": "(MULTI BATTLE with Galactic Cressida) (PERMANENT TRICK ROOM)",
-            "name": "galacticfportia",
+            "name": "galactic-portia",
             "split": "galactic",
             "team": [
                 {
@@ -127545,7 +127545,7 @@
                 "format": "multi"
             },
             "meta": "(MULTI BATTLE with Galactic Portia) (PERMANENT TRICK ROOM)",
-            "name": "galacticfcressida",
+            "name": "galactic-cressida",
             "split": "galactic",
             "team": [
                 {
@@ -127691,7 +127691,7 @@
                 "format": "multi"
             },
             "meta": "(MULTI BATTLE with Galactic Francisco) (PERMANENT TRICK ROOM)",
-            "name": "galacticfumbriel",
+            "name": "galactic-umbriel",
             "split": "galactic",
             "team": [
                 {
@@ -127813,7 +127813,7 @@
                 "format": "multi"
             },
             "meta": "(MULTI BATTLE with Galactic Ferdinand) (PERMANENT TRICK ROOM)",
-            "name": "galacticfmiranda-2",
+            "name": "galactic-miranda-2",
             "split": "galactic",
             "team": [
                 {
@@ -128039,7 +128039,7 @@
                 "format": "multi"
             },
             "meta": "(MULTI BATTLE with Galactic Cupid) (PERMANENT TRICK ROOM)",
-            "name": "galacticfmargaret",
+            "name": "galactic-margaret",
             "split": "galactic",
             "team": [
                 {
@@ -128101,7 +128101,7 @@
                 "format": "multi"
             },
             "meta": "(MULTI BATTLE with Galactic Magaret) (PERMANENT TRICK ROOM)",
-            "name": "galacticfcupid",
+            "name": "galactic-cupid-2",
             "split": "galactic",
             "team": [
                 {
@@ -128323,7 +128323,7 @@
                 "format": "multi"
             },
             "meta": "(MULTI BATTLE with Galactic Setebos, Up)* (PERMANENT TRICK ROOM)",
-            "name": "galacticfsycorax-2",
+            "name": "galactic-sycorax-2",
             "split": "galactic",
             "team": [
                 {
@@ -128368,7 +128368,7 @@
                 "format": "multi"
             },
             "meta": "(MULTI BATTLE with Galactic Bianca, Right)* (PERMANENT TRICK ROOM)",
-            "name": "galacticfariel",
+            "name": "galactic-ariel",
             "split": "galactic",
             "team": [
                 {
@@ -128429,7 +128429,7 @@
                 "format": "multi"
             },
             "meta": "(MULTI BATTLE with Galactic Ariel, Right)* (PERMANENT TRICK ROOM)",
-            "name": "galacticfbianca-2",
+            "name": "galactic-bianca-2",
             "split": "galactic",
             "team": [
                 {
@@ -128576,7 +128576,7 @@
             ],
             "area": "veilstone-warehouse",
             "meta": "(PERMANENT TRICK ROOM)",
-            "name": "galacticfrosalind",
+            "name": "galactic-rosalind",
             "split": "galactic",
             "team": [
                 {
@@ -128759,7 +128759,7 @@
                 "weather": "rain"
             },
             "meta": "(OPTIONAL Top Trainer) (PERMANENT TRICK ROOM)",
-            "name": "galacticf-bebhionn",
+            "name": "galactic-bebhionn",
             "split": "galactic",
             "team": [
                 {
@@ -129556,7 +129556,7 @@
                 "format": "multi"
             },
             "meta": "(Middle Door, MULTI BATTLE with GalacticfDione)* (PERMANENT TRICK ROOM)",
-            "name": "galacticftethys",
+            "name": "galactic-tethys-2",
             "split": "galactic",
             "team": [
                 {
@@ -129615,7 +129615,7 @@
                 "format": "multi"
             },
             "meta": "(Middle Door, MULTI BATTLE with GalacticfTethys)* (PERMANENT TRICK ROOM)",
-            "name": "galacticfdione",
+            "name": "galactic-dione-2",
             "split": "galactic",
             "team": [
                 {
@@ -129831,7 +129831,7 @@
                 "format": "multi"
             },
             "meta": "(MULTI BATTLE with Galactic Epimetheus) (PERMANENT TRICK ROOM)",
-            "name": "galacticfpandora",
+            "name": "galactic-pandora-2",
             "split": "galactic",
             "team": [
                 {
@@ -129950,7 +129950,7 @@
                 "format": "multi"
             },
             "meta": "(Up, MULTI BATTLE with Galactic Enceladus)* (PERMANENT TRICK ROOM)",
-            "name": "galacticfmimas",
+            "name": "galactic-mimas-2",
             "split": "galactic",
             "team": [
                 {
@@ -130008,7 +130008,7 @@
                 "format": "multi"
             },
             "meta": "(Middle, MULTI BATTLE with Galactic Pan)* (PERMANENT TRICK ROOM)",
-            "name": "galacticfdaphnis",
+            "name": "galactic-daphnis-2",
             "split": "galactic",
             "team": [
                 {
@@ -130068,7 +130068,7 @@
                 "format": "multi"
             },
             "meta": "(Middle, MULTI BATTLE with Galactic Daphnis)* (PERMANENT TRICK ROOM)",
-            "name": "galacticfpan",
+            "name": "galactic-pan-2",
             "split": "galactic",
             "team": [
                 {
@@ -130391,7 +130391,7 @@
                 "format": "multi"
             },
             "meta": "(MULTI BATTLE with Galactic Iapetus, Path 2) (PERMANENT TRICK ROOM)",
-            "name": "galacticfphoebe",
+            "name": "galactic-phoebe-2",
             "split": "galactic",
             "team": [
                 {
@@ -130530,7 +130530,7 @@
             ],
             "area": "veilstone-warehouse",
             "meta": "(OPTIONAL, Path 2) (PERMANENT TRICK ROOM)",
-            "name": "galacticfrhea",
+            "name": "galactic-rhea-2",
             "split": "galactic",
             "team": [
                 {
@@ -130614,7 +130614,7 @@
             ],
             "area": "veilstone-warehouse",
             "meta": "(PERMANENT TRICK ROOM)",
-            "name": "galacticfuranus-2",
+            "name": "galactic-uranus-3",
             "split": "galactic",
             "team": [
                 {
@@ -130712,7 +130712,7 @@
             ],
             "area": "veilstone-warehouse",
             "meta": "(Trick Room) (PERMANENT TRICK ROOM)",
-            "name": "leader-cyrus-2",
+            "name": "cyrus-2",
             "split": "galactic",
             "team": [
                 {
@@ -130809,7 +130809,7 @@
             ],
             "area": "veilstone-warehouse",
             "meta": "(PERMANENT TRICK ROOM)",
-            "name": "galactic-io-3",
+            "name": "galactic-io-4",
             "split": "galactic",
             "team": [
                 {
@@ -131074,7 +131074,7 @@
                 "format": "multi"
             },
             "meta": "(MULTI BATTLE with Galactic Ganymede)",
-            "name": "galacticfhalimede",
+            "name": "galactic-halimede-2",
             "split": "galactic",
             "team": [
                 {
@@ -131136,7 +131136,7 @@
                 "format": "doubles"
             },
             "meta": "(DOUBLE BATTLE)",
-            "name": "galacticfsquad-phobos",
+            "name": "galactic-squad-phobos-3",
             "split": "galactic",
             "team": [
                 {
@@ -131236,7 +131236,7 @@
                 "format": "doubles"
             },
             "meta": "(OPTIONAL DOUBLE BATTLE)",
-            "name": "galacticfsquad-deimos",
+            "name": "galactic-squad-deimos-3",
             "split": "galactic",
             "team": [
                 {
@@ -131339,7 +131339,7 @@
                 "weather": "hail"
             },
             "meta": "(MULTI BATTLE with Galactic Bianca) (HAIL)",
-            "name": "galacticfdespina",
+            "name": "galactic-despina-2",
             "split": "galactic",
             "team": [
                 {
@@ -131402,7 +131402,7 @@
                 "weather": "hail"
             },
             "meta": "(MULTI BATTLE with Galactic Despina) (HAIL)",
-            "name": "galacticf-bianca",
+            "name": "galactic-bianca-3",
             "split": "galactic",
             "team": [
                 {
@@ -131548,7 +131548,7 @@
                 "weather": "hail"
             },
             "meta": "(In the grass to the Right) (HAIL)",
-            "name": "galacticf-rosalind",
+            "name": "galactic-rosalind-2",
             "split": "galactic",
             "team": [
                 {
@@ -131811,7 +131811,7 @@
                 "weather": "hail"
             },
             "meta": "(MULTI BATTLE with Galactic Cressida, Rock Smash Route) (HAIL)",
-            "name": "galactic-cupid-2",
+            "name": "galactic-cupid-3",
             "split": "galactic",
             "team": [
                 {
@@ -131875,7 +131875,7 @@
                 "weather": "hail"
             },
             "meta": "(MULTI BATTLE with Galactic Cupid, Rock Smash Route) (HAIL)",
-            "name": "galacticf-cressida",
+            "name": "galactic-cressida-2",
             "split": "galactic",
             "team": [
                 {
@@ -131935,7 +131935,7 @@
                 "weather": "hail"
             },
             "meta": "(Cut Split) (HAIL)",
-            "name": "galacticf-cordelia",
+            "name": "galactic-cordelia",
             "split": "galactic",
             "team": [
                 {
@@ -132288,7 +132288,7 @@
                 "weather": "hail"
             },
             "meta": "(MULTI BATTLE with Galactic Oberon) (HAIL)",
-            "name": "galacticf-titania",
+            "name": "galactic-titania",
             "split": "galactic",
             "team": [
                 {
@@ -132476,7 +132476,7 @@
                 "weather": "fog"
             },
             "meta": "(OPTIONAL) (FOG)",
-            "name": "galacticf-laomedeia-2",
+            "name": "galactic-laomedeia-2",
             "split": "galactic",
             "team": [
                 {
@@ -132536,7 +132536,7 @@
                 "weather": "fog"
             },
             "meta": "(FOG)",
-            "name": "galacticf-larissa-2",
+            "name": "galactic-larissa-2",
             "split": "galactic",
             "team": [
                 {
@@ -132729,7 +132729,7 @@
                 "weather": "fog"
             },
             "meta": "(MULTI BATTLE with Galactic Luna) (FOG)",
-            "name": "galacticf-terra-3",
+            "name": "galactic-terra-5",
             "split": "galactic",
             "team": [
                 {
@@ -132835,7 +132835,7 @@
                 "weather": "fog"
             },
             "meta": "(MULTI BATTLE with Galactic Terra) (FOG)",
-            "name": "galactic-luna-3",
+            "name": "galactic-luna-5",
             "split": "galactic",
             "team": [
                 {
@@ -132938,7 +132938,7 @@
                 "weather": "hail"
             },
             "meta": "(HAIL)",
-            "name": "galacticf-europa-2",
+            "name": "galactic-europa-3",
             "split": "galactic",
             "team": [
                 {
@@ -133286,7 +133286,7 @@
                 "weather": "hail"
             },
             "meta": "(Strength + Rock Smash Path) (HAIL)",
-            "name": "galacticf-miranda",
+            "name": "galactic-miranda-3",
             "split": "galactic",
             "team": [
                 {
@@ -133374,7 +133374,7 @@
                 "weather": "hail"
             },
             "meta": "(Strength + Cut Path) (HAIL)",
-            "name": "galacticf-angrboda",
+            "name": "galactic-angrboda",
             "split": "galactic",
             "team": [
                 {
@@ -133461,7 +133461,7 @@
                 "weather": "hail"
             },
             "meta": "(Split) (HAIL)",
-            "name": "galacticf-ariel",
+            "name": "galactic-ariel-2",
             "split": "galactic",
             "team": [
                 {
@@ -133524,7 +133524,7 @@
                 "weather": "hail"
             },
             "meta": "(Split) (HAIL)",
-            "name": "galacticf-umbriel",
+            "name": "galactic-umbriel-2",
             "split": "galactic",
             "team": [
                 {
@@ -133996,7 +133996,7 @@
                 "expert"
             ],
             "area": "spear-pillar",
-            "name": "tag-partner-mira*",
+            "name": "tag-partner-mira",
             "split": "galactic",
             "team": [
                 {
@@ -134155,7 +134155,7 @@
                 "format": "multi"
             },
             "meta": "(MULTI BATTLE with Galactic Mercury)",
-            "name": "galactic-venus",
+            "name": "galactic-venus-5",
             "split": "galactic",
             "team": [
                 {
@@ -134714,7 +134714,7 @@
                 "format": "doubles"
             },
             "meta": "(DOUBLE)*",
-            "name": "cyrus",
+            "name": "cyrus-3",
             "split": "galactic",
             "team": [
                 {
@@ -134811,7 +134811,7 @@
             ],
             "area": "distortion-world",
             "meta": "(SHADOW TAG)*",
-            "name": "cyrus-2",
+            "name": "cyrus-4",
             "split": "galactic",
             "team": [
                 {
@@ -134841,7 +134841,7 @@
                 "weather": "rain"
             },
             "meta": "(PERMANENT RAIN)",
-            "name": "swimmerf-miranda",
+            "name": "swimmer--miranda",
             "split": "elite-four",
             "team": [
                 {
@@ -134913,7 +134913,7 @@
                 "weather": "rain"
             },
             "meta": "(PERMANENT RAIN)",
-            "name": "swimmerf-aubree",
+            "name": "swimmer--aubree",
             "split": "elite-four",
             "team": [
                 {
@@ -134985,7 +134985,7 @@
                 "weather": "rain"
             },
             "meta": "(PERMANENT RAIN)",
-            "name": "swimmerf-paige",
+            "name": "swimmer--paige",
             "split": "elite-four",
             "team": [
                 {
@@ -135281,7 +135281,7 @@
                 "weather": "rain"
             },
             "meta": "(PERMANENT RAIN)",
-            "name": "swimmerf-ledecky",
+            "name": "swimmer--ledecky",
             "split": "elite-four",
             "team": [
                 {
@@ -135615,7 +135615,7 @@
                 "expert"
             ],
             "area": "victory-road",
-            "name": "beauty-jasmine-❤-2",
+            "name": "beauty-jasmine-2",
             "split": "elite-four",
             "team": [
                 {
@@ -136288,7 +136288,7 @@
             ],
             "area": "victory-road",
             "meta": "(Zoe wrote this)                                                                                       .",
-            "name": "idol-zoe,-the-best-trainer-in-the-game,-best-idol,-and-the-hardest-trainer-you-will-ever-face",
+            "name": "idol-zoe",
             "split": "elite-four",
             "team": [
                 {
@@ -136781,7 +136781,7 @@
                 "format": "doubles"
             },
             "meta": "(SUPERBOSS) (DOUBLE, PERMANENT TRICK ROOM)*",
-            "name": "sinister-hooded-figure-",
+            "name": "sinister-hooded-figure",
             "split": "elite-four",
             "team": [
                 {

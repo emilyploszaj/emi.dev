@@ -1,3 +1,16 @@
+var faintedMonToggles = new Map();
+
+function togglePartyIcon(event, trainer, i) {
+	event.preventDefault();
+	var key = `${trainer}-${i}`;
+	if (!faintedMonToggles.has(key)) {
+		faintedMonToggles.set(key, true);
+	} else {
+		faintedMonToggles.set(key, !faintedMonToggles.get(key));
+	}
+	updateCalc();
+}
+
 function calculateBrings(fights) {
 	var brings = new Map();
 	var leads = new Map();
@@ -25,11 +38,21 @@ function calculateBrings(fights) {
 	};
 }
 
-function displayTrainers() {
+function displayTrainers(split = undefined) {
 	var lastArea = ""
 	var v = "";
+	if (splits.length > 0) {
+		v += `<div class="split-buttons"><div class="split-header">Splits</div>`;
+		for (const s of splits) {
+			v += `<button class="split-button ${split == s ? "split-button-selected" : ""}" onclick="displayTrainers('${s}')">${fullCapitalize(s)}</button>`;
+		}
+		v += `</div>`;
+	}
 	for (var i = 0; i < data.trainers.length; i++) {
 		var t = data.trainers[i];
+		if (split != undefined && split != t.split) {
+			continue;
+		}
 		if (isTrainerB2b(i) == false && isTrainerB2b(i + 1) == true) {
 			v += `<div class="b2b">`;
 		}
@@ -39,7 +62,7 @@ function displayTrainers() {
 			if (lastArea.includes("-")) {
 				areaName = fullCapitalize(areaName);
 			}
-			v += "<h2>" + areaName + "</h2>";
+			v += "<h3>" + areaName + "</h3>";
 		}
 		v += getTrainerDisplay(t, i);
 		if (isTrainerB2b(i) == true && isTrainerB2b(i + 1) == false) {

@@ -1605,3 +1605,43 @@ rt {
 .tooltip-container:hover > .tooltip {
 	display: block;
 }
+
+.split-buttons {
+	background-color: var(--box-background);
+	display: flex;
+	flex-wrap: wrap;
+	padding: 10px;
+	margin: 6px 20px;
+	justify-content: center;
+}
+
+.split-button {
+	font-size: 20px;
+	padding: 4px;
+	margin-right: 4px;
+}
+
+.split-button-selected {
+	background-color: var(--background);
+	color: var(--dim-text);
+}
+
+.split-header {
+	flex-basis: 100%;
+	text-align: center;
+	padding: 10px 0px 6px 0px;
+}
+
+.toggled-party-member {
+	background: repeating-linear-gradient(
+		-45deg,
+		var(--box-background) 0px,
+		var(--box-background) 5px,
+		var(--background) 5px,
+		var(--background) 15px
+	) !important;
+}
+
+.toggled-party-member img {
+	filter: grayscale(100%);
+}

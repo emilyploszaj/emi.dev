@@ -276,6 +276,7 @@ function calcTrainer(i, startup = false) {
 		calcTrainer(i - 1);
 		return;
 	}
+	faintedMonToggles.clear();
 	var trainer = data.trainers[i];
 
 	resetBattleSettings();

@@ -56,6 +56,7 @@ var typeColors = new Map([
 	["fairy", "#fc88cf"],
 	["curse", "#68a090"]
 ]);
+var splits = [];
 var abilities = new Lookup([]);
 var typeMatchups = new Map();
 var searchResults = new Map();
@@ -385,9 +386,13 @@ function startup() {
 		addPoolInfo(j.encounters[i]);
 	}
 
+	var lastSplit = undefined;
 	for (let i in j.trainers) {
 		var t = j.trainers[i];
 		t.index = parseInt(i);
+		if (t.split != lastSplit && !contains(splits, t.split)) {
+			splits.push(t.split);
+		}
 		trainersByName.set(t.name, t);
 		addSearchResult(getTrainerName(j.trainers[i].name), {link: `#/trainer/${t.name}/`});
 	}
@@ -405,7 +410,7 @@ function startup() {
 	}
 	updateCalc();
 	updateBox();
-	displayTrainers();
+	displayTrainers(splits[0]);
 	if (box.length > 0) {
 		setTab("calc");
 	} else {
