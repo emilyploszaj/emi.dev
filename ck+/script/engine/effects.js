@@ -2,7 +2,9 @@ class BattleEffects {
 	effects;
 
 	constructor(effects) {
-		this.effects = effects;
+		this.effects = effects.sort((a, b) => {
+			return (a.order ?? 0) - (b.order ?? 0);
+		});
 	}
 
 	/**
@@ -238,12 +240,14 @@ class BattleEffects {
 
 class BattleEffect {
 	#type;
+	#order;
 	#condition;
 	#modifiers;
 	#flags;
 
-	constructor(type, condition, modifiers, flags) {
+	constructor(type, order, condition, modifiers, flags) {
 		this.#type = type;
+		this.#order = order;
 		this.#condition = condition;
 		this.#modifiers = modifiers;
 		this.#flags = flags;
@@ -258,7 +262,7 @@ class BattleEffect {
 		if (json == null || json == undefined) {
 			return null;
 		}
-		return new BattleEffect(type, Condition.parse(json.condition), BattleEffect.parseModifiers(json.modifiers), BattleEffect.parseFlags(json.flags));
+		return new BattleEffect(type, json.order ?? 0, Condition.parse(json.condition), BattleEffect.parseModifiers(json.modifiers), BattleEffect.parseFlags(json.flags));
 	}
 
 	static parseModifiers(json) {
@@ -330,6 +334,13 @@ class BattleEffect {
 	 */
 	get type() {
 		return this.#type;
+	}
+
+	/**
+	 * @returns {int}
+	 */
+	get order() {
+		return this.#order;
 	}
 }
 

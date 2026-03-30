@@ -183,15 +183,15 @@ function getDamage(attacker, defender, move) {
 		if (weight == undefined) {
 			return CalcResult.of(0);
 		}
-		if (weight < 10) {
+		if (weight <= 10) {
 			power = 20;
-		} else if (weight < 25) {
+		} else if (weight <= 25) {
 			power = 40;
-		} else if (weight < 50) {
+		} else if (weight <= 50) {
 			power = 60;
-		} else if (weight < 100) {
+		} else if (weight <= 100) {
 			power = 80;
-		} else if (weight < 200) {
+		} else if (weight <= 200) {
 			power = 100;
 		} else {
 			power = 120;

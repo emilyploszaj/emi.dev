@@ -335,8 +335,9 @@
                         }
                     },
                     "modifiers": {
-                        "attack-boost": "-50%"
-                    }
+                        "power": "-50%"
+                    },
+                    "order": 10
                 }
             },
             "index": 47,
@@ -374,10 +375,9 @@
             "effects": {
                 "all": {
                     "modifiers": {
-                        "stats": {
-                            "atk": "+50%"
-                        }
-                    }
+                        "power": "+50%"
+                    },
+                    "order": 10
                 }
             },
             "index": 55,
@@ -442,9 +442,10 @@
                         }
                     },
                     "modifiers": {
-                        "attack-boost": "+50%",
-                        "burn-attack-multiplier": "=1"
-                    }
+                        "burn-attack-multiplier": "=1",
+                        "power": "+50%"
+                    },
+                    "order": 10
                 }
             },
             "index": 62,
@@ -492,8 +493,9 @@
                         }
                     },
                     "modifiers": {
-                        "attack-boost": "+50%"
-                    }
+                        "power": "+50%"
+                    },
+                    "order": 30
                 }
             },
             "index": 65,
@@ -508,8 +510,9 @@
                                 }
                             },
                             "modifiers": {
-                                "attack-boost": "+50%"
-                            }
+                                "power": "+50%"
+                            },
+                            "order": 30
                         }
                     }
                 }
@@ -527,8 +530,9 @@
                         }
                     },
                     "modifiers": {
-                        "attack-boost": "+50%"
-                    }
+                        "power": "+50%"
+                    },
+                    "order": 30
                 }
             },
             "index": 66,
@@ -543,8 +547,9 @@
                                 }
                             },
                             "modifiers": {
-                                "attack-boost": "+50%"
-                            }
+                                "power": "+50%"
+                            },
+                            "order": 30
                         }
                     }
                 }
@@ -562,8 +567,9 @@
                         }
                     },
                     "modifiers": {
-                        "attack-boost": "+50%"
-                    }
+                        "power": "+50%"
+                    },
+                    "order": 30
                 }
             },
             "index": 67,
@@ -578,8 +584,9 @@
                                 }
                             },
                             "modifiers": {
-                                "attack-boost": "+50%"
-                            }
+                                "power": "+50%"
+                            },
+                            "order": 30
                         }
                     }
                 }
@@ -597,8 +604,9 @@
                         }
                     },
                     "modifiers": {
-                        "attack-boost": "+50%"
-                    }
+                        "power": "+50%"
+                    },
+                    "order": 30
                 }
             },
             "index": 68,
@@ -613,8 +621,9 @@
                                 }
                             },
                             "modifiers": {
-                                "attack-boost": "+50%"
-                            }
+                                "power": "+50%"
+                            },
+                            "order": 30
                         }
                     }
                 }
@@ -707,7 +716,8 @@
                         },
                         "modifiers": {
                             "power": "+25%"
-                        }
+                        },
+                        "order": 50
                     }
                 },
                 {
@@ -717,7 +727,8 @@
                         },
                         "modifiers": {
                             "power": "-25%"
-                        }
+                        },
+                        "order": 50
                     }
                 }
             ],
@@ -754,7 +765,8 @@
                     },
                     "modifiers": {
                         "power": "-50%"
-                    }
+                    },
+                    "order": 40
                 }
             },
             "index": 85,
@@ -774,8 +786,9 @@
                             }
                         },
                         "modifiers": {
-                            "damage": "+25%"
-                        }
+                            "power": "+25%"
+                        },
+                        "order": 40
                     }
                 },
                 {
@@ -811,7 +824,8 @@
                     },
                     "modifiers": {
                         "power": "+20%"
-                    }
+                    },
+                    "order": 50
                 }
             },
             "index": 89,
@@ -917,7 +931,8 @@
                     },
                     "modifiers": {
                         "power": "+50%"
-                    }
+                    },
+                    "order": -10
                 }
             },
             "index": 101,
@@ -26005,7 +26020,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+20%"
+                        "power": "+20%"
                     }
                 }
             },
@@ -26136,7 +26151,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+20%"
+                        "power": "+20%"
                     }
                 }
             },
@@ -26166,7 +26181,7 @@
                         }
                     },
                     "modifiers": {
-                        "attack-boost": "+100%"
+                        "power": "+100%"
                     }
                 }
             },
@@ -26183,7 +26198,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+20%"
+                        "power": "+20%"
                     }
                 }
             },
@@ -26200,7 +26215,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+20%"
+                        "power": "+20%"
                     }
                 }
             },
@@ -26217,7 +26232,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+20%"
+                        "power": "+20%"
                     }
                 }
             },
@@ -26234,7 +26249,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+20%"
+                        "power": "+20%"
                     }
                 }
             },
@@ -26251,7 +26266,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+20%"
+                        "power": "+20%"
                     }
                 }
             },
@@ -26268,7 +26283,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+20%"
+                        "power": "+20%"
                     }
                 }
             },
@@ -26285,7 +26300,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+20%"
+                        "power": "+20%"
                     }
                 }
             },
@@ -26302,7 +26317,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+20%"
+                        "power": "+20%"
                     }
                 }
             },
@@ -26319,7 +26334,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+20%"
+                        "power": "+20%"
                     }
                 }
             },
@@ -26336,7 +26351,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+20%"
+                        "power": "+20%"
                     }
                 }
             },
@@ -26353,7 +26368,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+20%"
+                        "power": "+20%"
                     }
                 }
             },
@@ -26370,7 +26385,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+20%"
+                        "power": "+20%"
                     }
                 }
             },
@@ -26387,7 +26402,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+20%"
+                        "power": "+20%"
                     }
                 }
             },
@@ -26404,7 +26419,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+20%"
+                        "power": "+20%"
                     }
                 }
             },
@@ -26421,7 +26436,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+20%"
+                        "power": "+20%"
                     }
                 }
             },
@@ -26448,7 +26463,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+20%"
+                        "power": "+20%"
                     }
                 }
             },
@@ -26554,7 +26569,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+10%"
+                        "power": "+10%"
                     }
                 }
             },
@@ -26571,7 +26586,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+10%"
+                        "power": "+10%"
                     }
                 }
             },
@@ -26863,7 +26878,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+50%"
+                        "power": "+50%"
                     }
                 }
             },
@@ -26880,7 +26895,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+50%"
+                        "power": "+50%"
                     }
                 }
             },
@@ -26897,7 +26912,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+50%"
+                        "power": "+50%"
                     }
                 }
             },
@@ -26914,7 +26929,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+50%"
+                        "power": "+50%"
                     }
                 }
             },
@@ -26931,7 +26946,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+50%"
+                        "power": "+50%"
                     }
                 }
             },
@@ -26948,7 +26963,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+50%"
+                        "power": "+50%"
                     }
                 }
             },
@@ -26965,7 +26980,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+50%"
+                        "power": "+50%"
                     }
                 }
             },
@@ -26982,7 +26997,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+50%"
+                        "power": "+50%"
                     }
                 }
             },
@@ -26999,7 +27014,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+50%"
+                        "power": "+50%"
                     }
                 }
             },
@@ -27016,7 +27031,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+50%"
+                        "power": "+50%"
                     }
                 }
             },
@@ -27033,7 +27048,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+50%"
+                        "power": "+50%"
                     }
                 }
             },
@@ -27050,7 +27065,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+50%"
+                        "power": "+50%"
                     }
                 }
             },
@@ -27067,7 +27082,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+50%"
+                        "power": "+50%"
                     }
                 }
             },
@@ -27084,7 +27099,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+50%"
+                        "power": "+50%"
                     }
                 }
             },
@@ -27101,7 +27116,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+50%"
+                        "power": "+50%"
                     }
                 }
             },
@@ -27118,7 +27133,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+50%"
+                        "power": "+50%"
                     }
                 }
             },
@@ -27135,7 +27150,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+20%"
+                        "power": "+20%"
                     }
                 }
             },
@@ -27152,7 +27167,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+20%"
+                        "power": "+20%"
                     }
                 }
             },
@@ -27174,7 +27189,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+20%"
+                        "power": "+20%"
                     }
                 }
             },
@@ -27191,7 +27206,7 @@
                         }
                     },
                     "modifiers": {
-                        "item-boost": "+20%"
+                        "power": "+20%"
                     }
                 }
             },
@@ -27244,10 +27259,19 @@
             "name": "razor-fang"
         },
         {
-            "TODO": "TODO",
             "description": "",
-            "index": -1,
+            "index": 70,
             "name": "berserk-gene"
+        },
+        {
+            "description": "",
+            "index": 71,
+            "name": "ragecandybar"
+        },
+        {
+            "description": "",
+            "index": 92,
+            "name": "big-nugget"
         }
     ],
     "landmarks": [
@@ -30182,7 +30206,7 @@
                 {
                     "amount": 1,
                     "info": "TR>BL>TR>TL>TL>BL> top-left item",
-                    "item": "nugget"
+                    "item": "big-nugget"
                 },
                 {
                     "amount": 1,
@@ -31445,7 +31469,7 @@
                 {
                     "amount": 1,
                     "info": "Next to ledge on left of route<br>Requires Surf OR Cut",
-                    "item": "nugget"
+                    "item": "big-nugget"
                 },
                 {
                     "amount": 1,
@@ -136455,7 +136479,7 @@
                         "fury-cutter",
                         "outrage",
                         "earth-power",
-                        "super-power"
+                        "superpower"
                     ],
                     "name": "flygon",
                     "nature": "relaxed"

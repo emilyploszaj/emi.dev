@@ -489,4 +489,9 @@ function validateData() {
 			console.error("There is no landmark association for ", encounter.area);
 		}
 	}
+	for (const k of landmarksByItem.keys()) {
+		if (!itemsByName.has(k)) {
+			console.error(`Item ${k} does not exist`);
+		}
+	}
 }
