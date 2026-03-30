@@ -25292,7 +25292,7 @@
         {
             "description": "",
             "index": 92,
-            "name": "nugget"
+            "name": "big-nugget"
         },
         {
             "description": "",
@@ -27267,11 +27267,6 @@
             "description": "",
             "index": 71,
             "name": "ragecandybar"
-        },
-        {
-            "description": "",
-            "index": 92,
-            "name": "big-nugget"
         }
     ],
     "landmarks": [
@@ -100697,6 +100692,7 @@
             ],
             "area": "route-202",
             "name": "youngster-tristan",
+            "split": "roark",
             "team": [
                 {
                     "ability": "gluttony",
@@ -100745,6 +100741,7 @@
             ],
             "area": "route-202",
             "name": "lass-natalie",
+            "split": "roark",
             "team": [
                 {
                     "ability": "solar-power",
@@ -100796,6 +100793,7 @@
             ],
             "area": "route-202",
             "name": "bug-catcher-logan",
+            "split": "roark",
             "team": [
                 {
                     "ability": "shield-dust",
@@ -100862,6 +100860,7 @@
             "area": "jubilife-city",
             "meta": "(Right)",
             "name": "clown-moe",
+            "split": "roark",
             "team": [
                 {
                     "ability": "guts",
@@ -100916,6 +100915,7 @@
             "area": "jubilife-city",
             "meta": "(Middle)",
             "name": "clown-mickey",
+            "split": "roark",
             "team": [
                 {
                     "ability": "static",
@@ -100969,6 +100969,7 @@
             "area": "jubilife-city",
             "meta": "(Left)",
             "name": "clown-ronald",
+            "split": "roark",
             "team": [
                 {
                     "ability": "filter",
@@ -101016,6 +101017,7 @@
             ],
             "area": "trainer-school",
             "name": "school-kid-harrison",
+            "split": "roark",
             "team": [
                 {
                     "ability": "flame-body",
@@ -101041,6 +101043,7 @@
             ],
             "area": "trainer-school",
             "name": "school-kidfchristine",
+            "split": "roark",
             "team": [
                 {
                     "ability": "rough-skin",
@@ -101064,6 +101067,7 @@
             ],
             "area": "route-204",
             "name": "lass-samantha",
+            "split": "roark",
             "team": [
                 {
                     "ability": "dry-skin",
@@ -101119,6 +101123,7 @@
             ],
             "area": "route-204",
             "name": "youngster-tyler",
+            "split": "roark",
             "team": [
                 {
                     "ability": "swift-swim",
@@ -101171,6 +101176,7 @@
             ],
             "area": "route-204",
             "name": "lass-sarah",
+            "split": "roark",
             "team": [
                 {
                     "ability": "rivalry",
@@ -101226,6 +101232,7 @@
             "area": "route-203",
             "meta": "(Player chose Chimchar)",
             "name": "barry-2",
+            "split": "roark",
             "team": [
                 {
                     "ability": "technician",
@@ -101317,6 +101324,7 @@
             "area": "route-203",
             "meta": "(Player chose Piplup)",
             "name": "barry-2-2",
+            "split": "roark",
             "team": [
                 {
                     "ability": "technician",
@@ -101407,6 +101415,7 @@
             "area": "route-203",
             "meta": "(Player chose Turtwig)",
             "name": "barry-2-3",
+            "split": "roark",
             "team": [
                 {
                     "ability": "technician",
@@ -101496,6 +101505,7 @@
             ],
             "area": "route-203",
             "name": "youngster-dallas",
+            "split": "roark",
             "team": [
                 {
                     "ability": "blaze",
@@ -101562,6 +101572,7 @@
             ],
             "area": "route-203",
             "name": "youngster-michael",
+            "split": "roark",
             "team": [
                 {
                     "ability": "overgrow",
@@ -101631,6 +101642,7 @@
             ],
             "area": "route-203",
             "name": "bug-catcher-sebastian",
+            "split": "roark",
             "team": [
                 {
                     "ability": "snow-cloak",
@@ -101712,6 +101724,7 @@
             ],
             "area": "route-203",
             "name": "lass-kaitlin",
+            "split": "roark",
             "team": [
                 {
                     "ability": "intimidate",
@@ -101779,6 +101792,7 @@
             ],
             "area": "route-203",
             "name": "lass-madeline",
+            "split": "roark",
             "team": [
                 {
                     "ability": "static",
@@ -101846,6 +101860,7 @@
             ],
             "area": "oreburgh-gate",
             "name": "camper-curtis",
+            "split": "roark",
             "team": [
                 {
                     "ability": "guts",
@@ -101927,6 +101942,7 @@
             ],
             "area": "oreburgh-gate",
             "name": "picnicker-diana",
+            "split": "roark",
             "team": [
                 {
                     "ability": "adaptability",
@@ -102010,6 +102026,7 @@
             "area": "oreburgh-mine",
             "meta": "(Gauntlet Start)*",
             "name": "worker-mason",
+            "split": "roark",
             "team": [
                 {
                     "ability": "honey-gather",
@@ -102079,6 +102096,7 @@
             "area": "oreburgh-mine",
             "meta": "(Gauntlet End)*",
             "name": "worker-colin",
+            "split": "roark",
             "team": [
                 {
                     "ability": "serene-grace",
@@ -102151,6 +102169,7 @@
             },
             "meta": "(PERMANENT SANDSTORM)",
             "name": "scientist-jonathon",
+            "split": "roark",
             "team": [
                 {
                     "ability": "rock-head",
@@ -102234,6 +102253,7 @@
             },
             "meta": "(PERMANENT SANDSTORM)",
             "name": "ruin-maniac-darius",
+            "split": "roark",
             "team": [
                 {
                     "ability": "solid-rock",
@@ -102317,6 +102337,7 @@
             },
             "meta": "(PERMANENT SANDSTORM)",
             "name": "leader-roark",
+            "split": "roark",
             "team": [
                 {
                     "ability": "rock-head",
@@ -102413,6 +102434,7 @@
             "area": "jubilife-city",
             "meta": "(TAG PARTNER, Player selected Chimchar)",
             "name": "trainer-dawn\/lucas",
+            "split": "gardenia",
             "team": [
                 {
                     "ability": "guts",
@@ -102507,6 +102529,7 @@
             "area": "jubilife-city",
             "meta": "(TAG PARTNER, Player selected Piplup)",
             "name": "trainer-dawn\/lucas-2",
+            "split": "gardenia",
             "team": [
                 {
                     "ability": "guts",
@@ -102601,6 +102624,7 @@
             "area": "jubilife-city",
             "meta": "(TAG PARTNER, Player selected Turtwig)",
             "name": "trainer-dawn\/lucas-3",
+            "split": "gardenia",
             "team": [
                 {
                     "ability": "guts",
@@ -102706,6 +102730,7 @@
                 "trainer-dawn\/lucas-2",
                 "trainer-dawn\/lucas-3"
             ],
+            "split": "gardenia",
             "team": [
                 {
                     "ability": "drought",
@@ -102785,6 +102810,7 @@
                 "trainer-dawn\/lucas-2",
                 "trainer-dawn\/lucas-3"
             ],
+            "split": "gardenia",
             "team": [
                 {
                     "ability": "magic-guard",
@@ -102857,6 +102883,7 @@
             },
             "meta": "(DOUBLE) (Gauntlet Start)*",
             "name": "twins-liv-&-liz",
+            "split": "gardenia",
             "team": [
                 {
                     "ability": "poison-heal",
@@ -102923,6 +102950,7 @@
             "area": "route-204-north",
             "meta": "(Gauntlet)*",
             "name": "bug-catcher-brandon",
+            "split": "gardenia",
             "team": [
                 {
                     "ability": "intimidate",
@@ -103007,6 +103035,7 @@
             "area": "route-204-north",
             "meta": "(Gauntlet End)*",
             "name": "aroma-lady-taylor",
+            "split": "gardenia",
             "team": [
                 {
                     "ability": "natural-cure",
@@ -103089,6 +103118,7 @@
             "area": "floaroma-meadow",
             "meta": "(B2B With Galactic Terra)",
             "name": "galactic-mercury",
+            "split": "gardenia",
             "team": [
                 {
                     "ability": "limber",
@@ -103158,6 +103188,7 @@
             "area": "floaroma-meadow",
             "meta": "(B2B With Galactic Mercury)",
             "name": "galacticfterra",
+            "split": "gardenia",
             "team": [
                 {
                     "ability": "arena-trap",
@@ -103229,6 +103260,7 @@
             },
             "meta": "(DOUBLE)",
             "name": "galactic-pluto",
+            "split": "gardenia",
             "team": [
                 {
                     "ability": "unburden",
@@ -103316,6 +103348,7 @@
             },
             "meta": "(DOUBLE)",
             "name": "galactic-squad-deimos",
+            "split": "gardenia",
             "team": [
                 {
                     "ability": "trace",
@@ -103403,6 +103436,7 @@
             },
             "meta": "(DOUBLE)",
             "name": "galactic-squad-phobos",
+            "split": "gardenia",
             "team": [
                 {
                     "ability": "levitate",
@@ -103492,6 +103526,7 @@
             },
             "meta": "(DOUBLE)",
             "name": "commander-mars",
+            "split": "gardenia",
             "team": [
                 {
                     "ability": "filter",
@@ -103588,6 +103623,7 @@
             ],
             "area": "route-205-south",
             "name": "camper-jacob",
+            "split": "gardenia",
             "team": [
                 {
                     "ability": "chlorophyll",
@@ -103656,6 +103692,7 @@
             ],
             "area": "route-205-south",
             "name": "hiker-daniel",
+            "split": "gardenia",
             "team": [
                 {
                     "ability": "guts",
@@ -103723,6 +103760,7 @@
             ],
             "area": "route-205-south",
             "name": "aroma-lady-elizabeth",
+            "split": "gardenia",
             "team": [
                 {
                     "ability": "chlorophyll",
@@ -103790,6 +103828,7 @@
             ],
             "area": "route-205-south",
             "name": "picnicker-siena",
+            "split": "gardenia",
             "team": [
                 {
                     "ability": "poison-point",
@@ -103857,6 +103896,7 @@
             ],
             "area": "route-205-south",
             "name": "camper-zackary",
+            "split": "gardenia",
             "team": [
                 {
                     "ability": "swift-swim",
@@ -103925,6 +103965,7 @@
             ],
             "area": "route-205-south",
             "name": "hiker-nicholas",
+            "split": "gardenia",
             "team": [
                 {
                     "ability": "lightning-rod",
@@ -103992,6 +104033,7 @@
             ],
             "area": "route-205-south",
             "name": "picnicker-karina",
+            "split": "gardenia",
             "team": [
                 {
                     "ability": "intimidate",
@@ -104059,6 +104101,7 @@
             ],
             "area": "route-205-south",
             "name": "battle-girl-kelsey",
+            "split": "gardenia",
             "team": [
                 {
                     "ability": "scrappy",
@@ -104129,6 +104172,7 @@
             "area": "eterna-forest",
             "meta": "(TAG PARTNER)",
             "name": "trainer-cheryl",
+            "split": "gardenia",
             "team": [
                 {
                     "ability": "natural-cure",
@@ -104233,6 +104277,7 @@
             "player-partners": [
                 "trainer-cheryl"
             ],
+            "split": "gardenia",
             "team": [
                 {
                     "ability": "clear-body",
@@ -104298,6 +104343,7 @@
             "player-partners": [
                 "trainer-cheryl"
             ],
+            "split": "gardenia",
             "team": [
                 {
                     "ability": "aftermath",
@@ -104360,6 +104406,7 @@
             "player-partners": [
                 "trainer-cheryl"
             ],
+            "split": "gardenia",
             "team": [
                 {
                     "ability": "rough-skin",
@@ -104424,6 +104471,7 @@
             "player-partners": [
                 "trainer-cheryl"
             ],
+            "split": "gardenia",
             "team": [
                 {
                     "ability": "levitate",
@@ -104487,6 +104535,7 @@
             "player-partners": [
                 "trainer-cheryl"
             ],
+            "split": "gardenia",
             "team": [
                 {
                     "ability": "levitate",
@@ -104549,6 +104598,7 @@
             "player-partners": [
                 "trainer-cheryl"
             ],
+            "split": "gardenia",
             "team": [
                 {
                     "ability": "unburden",
@@ -104606,6 +104656,7 @@
             "area": "eterna-forest",
             "meta": "(Next to the sign)",
             "name": "galactic-puck",
+            "split": "gardenia",
             "team": [
                 {
                     "ability": "levitate",
@@ -104676,6 +104727,7 @@
             "area": "eterna-forest",
             "meta": "(Bottom right corner)",
             "name": "galactic-trinculo",
+            "split": "gardenia",
             "team": [
                 {
                     "ability": "levitate",
@@ -104746,6 +104798,7 @@
             "area": "eterna-forest",
             "meta": "(Above Trinculo)",
             "name": "galactic-mercury-2",
+            "split": "gardenia",
             "team": [
                 {
                     "ability": "drought",
@@ -104830,6 +104883,7 @@
             "area": "eterna-forest",
             "meta": "(Above the trees on the right)",
             "name": "galacticfvenus",
+            "split": "gardenia",
             "team": [
                 {
                     "ability": "swarm",
@@ -104921,6 +104975,7 @@
             "player-partners": [
                 "trainer-cheryl"
             ],
+            "split": "gardenia",
             "team": [
                 {
                     "ability": "snow-warning",
@@ -104984,6 +105039,7 @@
             "player-partners": [
                 "trainer-cheryl"
             ],
+            "split": "gardenia",
             "team": [
                 {
                     "ability": "magic-guard",
@@ -105047,6 +105103,7 @@
             "player-partners": [
                 "trainer-cheryl"
             ],
+            "split": "gardenia",
             "team": [
                 {
                     "ability": "swift-swim",
@@ -105111,6 +105168,7 @@
             "player-partners": [
                 "trainer-cheryl"
             ],
+            "split": "gardenia",
             "team": [
                 {
                     "ability": "drizzle",
@@ -105174,6 +105232,7 @@
             "player-partners": [
                 "trainer-cheryl"
             ],
+            "split": "gardenia",
             "team": [
                 {
                     "ability": "trace",
@@ -105252,6 +105311,7 @@
             "player-partners": [
                 "trainer-cheryl"
             ],
+            "split": "gardenia",
             "team": [
                 {
                     "ability": "bad-dreams",
@@ -105318,6 +105378,7 @@
             ],
             "area": "route-205-north",
             "name": "fisherman-joseph",
+            "split": "gardenia",
             "team": [
                 {
                     "ability": "simple",
@@ -105400,6 +105461,7 @@
             ],
             "area": "route-205-north",
             "name": "fisherman-andrew",
+            "split": "gardenia",
             "team": [
                 {
                     "ability": "dry-skin",
@@ -105481,6 +105543,7 @@
             ],
             "area": "route-205-north",
             "name": "fisherman-zachary",
+            "split": "gardenia",
             "team": [
                 {
                     "ability": "swift-swim",
@@ -105567,6 +105630,7 @@
             },
             "meta": "(PERMANENT RAIN, GYM TRAINERS ARE A GAUNTLET)",
             "name": "lass-caroline",
+            "split": "gardenia",
             "team": [
                 {
                     "ability": "leaf-guard",
@@ -105653,6 +105717,7 @@
             },
             "meta": "(PERMANENT RAIN, GYM TRAINERS ARE A GAUNTLET)",
             "name": "aroma-lady-jenna",
+            "split": "gardenia",
             "team": [
                 {
                     "ability": "drought",
@@ -105739,6 +105804,7 @@
             },
             "meta": "(PERMANENT RAIN, GYM TRAINERS ARE A GAUNTLET)",
             "name": "artist-angel",
+            "split": "gardenia",
             "team": [
                 {
                     "ability": "trace",
@@ -105825,6 +105891,7 @@
             },
             "meta": "(PERMANENT RAIN, GYM TRAINERS ARE A GAUNTLET)",
             "name": "leader-gardenia",
+            "split": "gardenia",
             "team": [
                 {
                     "ability": "scrappy",
@@ -105922,6 +105989,7 @@
             "area": "team-galactic-eterna-building",
             "meta": "(Gauntlet Start)*",
             "name": "galactic-amalthia",
+            "split": "fantina",
             "team": [
                 {
                     "ability": "white-smoke",
@@ -106004,6 +106072,7 @@
             "area": "team-galactic-eterna-building",
             "meta": "(Gauntlet End)*",
             "name": "scientist-galileo",
+            "split": "fantina",
             "team": [
                 {
                     "ability": "clear-body",
@@ -106084,6 +106153,7 @@
             "area": "team-galactic-eterna-building",
             "meta": "(Gauntlet Start)*",
             "name": "galactic-callisto",
+            "split": "fantina",
             "team": [
                 {
                     "ability": "sand-stream",
@@ -106167,6 +106237,7 @@
             "area": "team-galactic-eterna-building",
             "meta": "(Gauntlet End)*",
             "name": "galactic-europa",
+            "split": "fantina",
             "team": [
                 {
                     "ability": "snow-warning",
@@ -106249,6 +106320,7 @@
             "area": "team-galactic-eterna-building",
             "meta": "(Gauntlet Start)*",
             "name": "galactic-ganymede",
+            "split": "fantina",
             "team": [
                 {
                     "ability": "swarm",
@@ -106332,6 +106404,7 @@
             "area": "team-galactic-eterna-building",
             "meta": "(Gauntlet End)*",
             "name": "galactic-io",
+            "split": "fantina",
             "team": [
                 {
                     "ability": "intimidate",
@@ -106414,6 +106487,7 @@
             ],
             "area": "team-galactic-eterna-building",
             "name": "commander-jupiter",
+            "split": "fantina",
             "team": [
                 {
                     "ability": "aftermath",
@@ -106516,6 +106590,7 @@
             },
             "meta": "(MULTI BATTLE With Cyclist John)",
             "name": "cyclist-axel",
+            "split": "fantina",
             "team": [
                 {
                     "ability": "plus",
@@ -106562,6 +106637,7 @@
             },
             "meta": "(MULTI BATTLE With Cyclist Axel)",
             "name": "cyclist-john",
+            "split": "fantina",
             "team": [
                 {
                     "ability": "minus",
@@ -106606,6 +106682,7 @@
             },
             "meta": "(MULTI BATTLE With Cyclist Nicole)",
             "name": "cyclistfmegan",
+            "split": "fantina",
             "team": [
                 {
                     "ability": "adaptability",
@@ -106648,6 +106725,7 @@
             },
             "meta": "(MULTI BATTLE With Cyclist Megan)",
             "name": "cyclistfnicole",
+            "split": "fantina",
             "team": [
                 {
                     "ability": "swift-swim",
@@ -106688,6 +106766,7 @@
             ],
             "area": "route-206",
             "name": "cyclist-james",
+            "split": "fantina",
             "team": [
                 {
                     "ability": "huge-power",
@@ -106769,6 +106848,7 @@
             ],
             "area": "route-206",
             "name": "cyclistfrachel",
+            "split": "fantina",
             "team": [
                 {
                     "ability": "tangled-feet",
@@ -106849,6 +106929,7 @@
             ],
             "area": "route-206",
             "name": "cyclist-ryan",
+            "split": "fantina",
             "team": [
                 {
                     "ability": "rock-head",
@@ -106930,6 +107011,7 @@
             ],
             "area": "route-206",
             "name": "cyclistfkaren",
+            "split": "fantina",
             "team": [
                 {
                     "ability": "levitate",
@@ -107010,6 +107092,7 @@
             ],
             "area": "route-207",
             "name": "roughneck-robert",
+            "split": "fantina",
             "team": [
                 {
                     "ability": "rock-head",
@@ -107079,6 +107162,7 @@
             ],
             "area": "route-207",
             "name": "pokefan-stewart",
+            "split": "fantina",
             "team": [
                 {
                     "ability": "filter",
@@ -107146,6 +107230,7 @@
             ],
             "area": "route-207",
             "name": "pokefan-martha",
+            "split": "fantina",
             "team": [
                 {
                     "ability": "rock-head",
@@ -107215,6 +107300,7 @@
             ],
             "area": "route-208",
             "name": "blackbelt-kyle",
+            "split": "fantina",
             "team": [
                 {
                     "ability": "reckless",
@@ -107283,6 +107369,7 @@
             ],
             "area": "route-208",
             "name": "aroma-lady-hannah",
+            "split": "fantina",
             "team": [
                 {
                     "ability": "chlorophyll",
@@ -107365,6 +107452,7 @@
             ],
             "area": "route-208",
             "name": "hiker-alexander",
+            "split": "fantina",
             "team": [
                 {
                     "ability": "pressure",
@@ -107447,6 +107535,7 @@
             ],
             "area": "route-208",
             "name": "hiker-jonathan",
+            "split": "fantina",
             "team": [
                 {
                     "ability": "inner-focus",
@@ -107528,6 +107617,7 @@
             ],
             "area": "route-208",
             "name": "dragon-tamer-drax",
+            "split": "fantina",
             "team": [
                 {
                     "ability": "compound-eyes",
@@ -107610,6 +107700,7 @@
             ],
             "area": "route-208",
             "name": "artist-william",
+            "split": "fantina",
             "team": [
                 {
                     "ability": "trace",
@@ -107697,6 +107788,7 @@
             },
             "meta": "(FOG)",
             "name": "ninja-boy-donny",
+            "split": "fantina",
             "team": [
                 {
                     "ability": "sand-veil",
@@ -107791,6 +107883,7 @@
             },
             "meta": "(FOG)",
             "name": "policeman-morton",
+            "split": "fantina",
             "team": [
                 {
                     "ability": "swift-swim",
@@ -107877,6 +107970,7 @@
             },
             "meta": "(FOG) (Also Appears in Room 5)",
             "name": "psychic-tony",
+            "split": "fantina",
             "team": [
                 {
                     "ability": "tinted-lens",
@@ -107958,6 +108052,7 @@
             ],
             "area": "hearthome-gym-room-#2",
             "name": "idol-catherine",
+            "split": "fantina",
             "team": [
                 {
                     "ability": "super-luck",
@@ -108055,6 +108150,7 @@
             "area": "hearthome-gym-room-#2",
             "meta": "(RIGHT SIDE)",
             "name": "clown-chance",
+            "split": "fantina",
             "team": [
                 {
                     "ability": "aftermath",
@@ -108122,6 +108218,7 @@
             ],
             "area": "hearthome-gym-room-#2",
             "name": "clown-luigi",
+            "split": "fantina",
             "team": [
                 {
                     "ability": "unburden",
@@ -108213,6 +108310,7 @@
             ],
             "area": "hearthome-gym-room-#2",
             "name": "artist-allen",
+            "split": "fantina",
             "team": [
                 {
                     "ability": "trace",
@@ -108293,6 +108391,7 @@
             ],
             "area": "hearthome-gym-room-#2",
             "name": "idol-amber",
+            "split": "fantina",
             "team": [
                 {
                     "ability": "limber",
@@ -108362,6 +108461,7 @@
             "area": "hearthome-gym-room-#3",
             "meta": "(Also Appears in Room 5, Separate Fight)",
             "name": "leader-fantina-?",
+            "split": "fantina",
             "team": [
                 {
                     "ability": "pressure",
@@ -108463,6 +108563,7 @@
             },
             "meta": "(FOG) (Also Appears in Room 5)",
             "name": "ninja-boy-drew",
+            "split": "fantina",
             "team": [
                 {
                     "ability": "speed-boost",
@@ -108535,6 +108636,7 @@
             },
             "meta": "(FOG) (Also Appears in Room 5)",
             "name": "clown-justin",
+            "split": "fantina",
             "team": [
                 {
                     "ability": "tinted-lens",
@@ -108606,6 +108708,7 @@
             },
             "meta": "(FOG)",
             "name": "psychic-helen",
+            "split": "fantina",
             "team": [
                 {
                     "ability": "levitate",
@@ -108680,6 +108783,7 @@
             },
             "meta": "(FOG) (Also Appears in Room 5)",
             "name": "policeman-kevin",
+            "split": "fantina",
             "team": [
                 {
                     "ability": "trace",
@@ -108752,6 +108856,7 @@
             },
             "meta": "(FOG)",
             "name": "psychic-theodore",
+            "split": "fantina",
             "team": [
                 {
                     "ability": "magic-guard",
@@ -108821,6 +108926,7 @@
             "area": "hearthome-gym-room-#4",
             "meta": "(Also Appears in Room 2)",
             "name": "clown-luigi-2",
+            "split": "fantina",
             "team": [
                 {
                     "ability": "unburden",
@@ -108915,6 +109021,7 @@
             },
             "meta": "(FOG)",
             "name": "idol-catherine-2",
+            "split": "fantina",
             "team": [
                 {
                     "ability": "super-luck",
@@ -108988,6 +109095,7 @@
             },
             "meta": "(FOG)",
             "name": "ninja-boy-donny-2",
+            "split": "fantina",
             "team": [
                 {
                     "ability": "sand-veil",
@@ -109082,6 +109190,7 @@
             },
             "meta": "(FOG)",
             "name": "psychic-cheyenne",
+            "split": "fantina",
             "team": [
                 {
                     "ability": "super-luck",
@@ -109165,6 +109274,7 @@
             ],
             "area": "hearthome-gym-room-#6",
             "name": "leader-fantina",
+            "split": "fantina",
             "team": [
                 {
                     "ability": "snow-cloak",
@@ -109263,6 +109373,7 @@
             "area": "hearthome-city-→-route-209-tunnel",
             "meta": "(Player picked Chimchar)",
             "name": "barry-3",
+            "split": "maylene",
             "team": [
                 {
                     "ability": "guts",
@@ -109361,6 +109472,7 @@
             "area": "hearthome-city-→-route-209-tunnel",
             "meta": "(Player picked Piplup)",
             "name": "barry-3-2",
+            "split": "maylene",
             "team": [
                 {
                     "ability": "guts",
@@ -109459,6 +109571,7 @@
             "area": "hearthome-city-→-route-209-tunnel",
             "meta": "(Player picked Turtwig)",
             "name": "barry-3-3",
+            "split": "maylene",
             "team": [
                 {
                     "ability": "guts",
@@ -109556,6 +109669,7 @@
             ],
             "area": "route-209",
             "name": "pkmn-breeder-albert",
+            "split": "maylene",
             "team": [
                 {
                     "ability": "filter",
@@ -109625,6 +109739,7 @@
             ],
             "area": "route-209",
             "name": "jogger-richard",
+            "split": "maylene",
             "team": [
                 {
                     "ability": "magnet-pull",
@@ -109683,6 +109798,7 @@
             },
             "meta": "(DOUBLE BATTLE)",
             "name": "twins-emma-&-lil",
+            "split": "maylene",
             "team": [
                 {
                     "ability": "quick-feet",
@@ -109765,6 +109881,7 @@
             ],
             "area": "route-209",
             "name": "poke-kid-danielle",
+            "split": "maylene",
             "team": [
                 {
                     "ability": "static",
@@ -109841,6 +109958,7 @@
             ],
             "area": "route-209",
             "name": "pkmn-breederf-jennifer",
+            "split": "maylene",
             "team": [
                 {
                     "ability": "natural-cure",
@@ -109910,6 +110028,7 @@
             "area": "route-209",
             "meta": "(OPTIONAL)",
             "name": "jogger-raul",
+            "split": "maylene",
             "team": [
                 {
                     "ability": "tangled-feet",
@@ -109935,6 +110054,7 @@
             ],
             "area": "route-209",
             "name": "cowgirl-shelley",
+            "split": "maylene",
             "team": [
                 {
                     "ability": "reckless",
@@ -110008,6 +110128,7 @@
             },
             "meta": "(DOUBLE BATTLE)",
             "name": "young-couple-ty-&-sue",
+            "split": "maylene",
             "team": [
                 {
                     "ability": "snow-cloak",
@@ -110103,6 +110224,7 @@
             ],
             "area": "route-210-south",
             "name": "rancher-marco",
+            "split": "maylene",
             "team": [
                 {
                     "ability": "tinted-lens",
@@ -110171,6 +110293,7 @@
             "area": "route-210-south",
             "meta": "(OPTIONAL)",
             "name": "jogger-wyatt",
+            "split": "maylene",
             "team": [
                 {
                     "ability": "limber",
@@ -110217,6 +110340,7 @@
             },
             "meta": "(DOUBLE BATTLE)     .",
             "name": "belle-&-pa-ava-&-matt",
+            "split": "maylene",
             "team": [
                 {
                     "ability": "scrappy",
@@ -110299,6 +110423,7 @@
             ],
             "area": "route-210-south",
             "name": "pkmn-breeder-johnny",
+            "split": "maylene",
             "team": [
                 {
                     "ability": "drought",
@@ -110394,6 +110519,7 @@
             ],
             "area": "cafe",
             "name": "waitress-kati",
+            "split": "maylene",
             "team": [
                 {
                     "ability": "serene-grace",
@@ -110436,6 +110562,7 @@
             "area": "cafe",
             "meta": "(SUPERBOSS)*",
             "name": "gambler-john-keating",
+            "split": "maylene",
             "team": [
                 {
                     "ability": "scrappy",
@@ -110536,6 +110663,7 @@
             },
             "meta": "(RAIN)",
             "name": "ruin-maniac-calvin",
+            "split": "maylene",
             "team": [
                 {
                     "ability": "solid-rock",
@@ -110621,6 +110749,7 @@
             },
             "meta": "(RAIN)",
             "name": "cyclistf-cecelia",
+            "split": "maylene",
             "team": [
                 {
                     "ability": "swift-swim",
@@ -110696,6 +110825,7 @@
             },
             "meta": "(DOUBLE BATTLE, RAIN)",
             "name": "twins-teri-&-tia",
+            "split": "maylene",
             "team": [
                 {
                     "ability": "minus",
@@ -110796,6 +110926,7 @@
             },
             "meta": "(RAIN)",
             "name": "rancher-gregory",
+            "split": "maylene",
             "team": [
                 {
                     "ability": "swift-swim",
@@ -110868,6 +110999,7 @@
             },
             "meta": "(RAIN)",
             "name": "blackbelt-derek",
+            "split": "maylene",
             "team": [
                 {
                     "ability": "hyper-cutter",
@@ -110954,6 +111086,7 @@
             },
             "meta": "(OPTIONAL, RAIN)",
             "name": "jogger-scott",
+            "split": "maylene",
             "team": [
                 {
                     "ability": "heatproof",
@@ -111008,6 +111141,7 @@
             ],
             "area": "route-215",
             "name": "beauty-jasmine-❤",
+            "split": "maylene",
             "team": [
                 {
                     "ability": "rain-dish",
@@ -111109,6 +111243,7 @@
             },
             "meta": "(DOUBLE BATTLE)",
             "name": "double-team-nate-&-lisa",
+            "split": "maylene",
             "team": [
                 {
                     "ability": "adaptability",
@@ -111211,6 +111346,7 @@
             },
             "meta": "(TAG BATTLE with Galactic Cupid)",
             "name": "galactic-uranus",
+            "split": "maylene",
             "team": [
                 {
                     "ability": "snow-warning",
@@ -111314,6 +111450,7 @@
             },
             "meta": "(TAG BATTLE with Galactic Uranus)",
             "name": "galactic-cupid",
+            "split": "maylene",
             "team": [
                 {
                     "ability": "magic-guard",
@@ -111396,6 +111533,7 @@
             "area": "veilstone-city",
             "meta": "(TAG PARTNER, Player selected Chimchar)",
             "name": "trainer-dawn\/lucas-4",
+            "split": "maylene",
             "team": [
                 {
                     "ability": "guts",
@@ -111492,6 +111630,7 @@
             "area": "veilstone-city",
             "meta": "(TAG PARTNER, Player selected Piplup)",
             "name": "trainer-dawn\/lucas-5",
+            "split": "maylene",
             "team": [
                 {
                     "ability": "guts",
@@ -111588,6 +111727,7 @@
             "area": "veilstone-city",
             "meta": "(TAG PARTNER, Player selected Turtwig)",
             "name": "trainer-dawn\/lucas-6",
+            "split": "maylene",
             "team": [
                 {
                     "ability": "guts",
@@ -111683,6 +111823,7 @@
             ],
             "area": "veilstone-gym",
             "name": "battle-girl-carly",
+            "split": "maylene",
             "team": [
                 {
                     "ability": "intimidate",
@@ -111765,6 +111906,7 @@
             ],
             "area": "veilstone-gym",
             "name": "blackbelt-daniel",
+            "split": "maylene",
             "team": [
                 {
                     "ability": "iron-fist",
@@ -111847,6 +111989,7 @@
             ],
             "area": "veilstone-gym",
             "name": "roughneck-rafael",
+            "split": "maylene",
             "team": [
                 {
                     "ability": "technician",
@@ -111929,6 +112072,7 @@
             ],
             "area": "veilstone-gym",
             "name": "battle-girl-jedrzejczyk",
+            "split": "maylene",
             "team": [
                 {
                     "ability": "swift-swim",
@@ -112010,6 +112154,7 @@
             ],
             "area": "veilstone-gym",
             "name": "birdkeeper-kahlil",
+            "split": "maylene",
             "team": [
                 {
                     "ability": "super-luck",
@@ -112092,6 +112237,7 @@
             ],
             "area": "veilstone-gym",
             "name": "roughneck-magnus",
+            "split": "maylene",
             "team": [
                 {
                     "ability": "adaptability",
@@ -112173,6 +112319,7 @@
             ],
             "area": "veilstone-gym",
             "name": "leader-maylene",
+            "split": "maylene",
             "team": [
                 {
                     "ability": "scrappy",
@@ -112273,6 +112420,7 @@
             },
             "meta": "(MULTI BATTLE With Psychic Mitchell)",
             "name": "psychicf-abigail",
+            "split": "wake",
             "team": [
                 {
                     "ability": "clear-body",
@@ -112332,6 +112480,7 @@
             },
             "meta": "(MULTI BATTLE With Psychic Abigail)",
             "name": "psychic-mitchell",
+            "split": "wake",
             "team": [
                 {
                     "ability": "levitate",
@@ -112386,6 +112535,7 @@
             ],
             "area": "route-214",
             "name": "gambler-carlos",
+            "split": "wake",
             "team": [
                 {
                     "ability": "super-luck",
@@ -112467,6 +112617,7 @@
             ],
             "area": "route-214",
             "name": "ruin-maniac-bryan",
+            "split": "wake",
             "team": [
                 {
                     "ability": "filter",
@@ -112536,6 +112687,7 @@
             ],
             "area": "route-214",
             "name": "collector-ripper",
+            "split": "wake",
             "team": [
                 {
                     "ability": "synchronize",
@@ -112631,6 +112783,7 @@
             ],
             "area": "route-214",
             "name": "beauty-cyndy",
+            "split": "wake",
             "team": [
                 {
                     "ability": "tinted-lens",
@@ -112698,6 +112851,7 @@
             ],
             "area": "route-214",
             "name": "ruin-maniac-jones",
+            "split": "wake",
             "team": [
                 {
                     "ability": "levitate",
@@ -112766,6 +112920,7 @@
             ],
             "area": "route-214",
             "name": "collector-brady",
+            "split": "wake",
             "team": [
                 {
                     "ability": "solid-rock",
@@ -112864,6 +113019,7 @@
             },
             "meta": "(DOUBLE BATTLE)",
             "name": "interviewers-molly-&-shannon",
+            "split": "wake",
             "team": [
                 {
                     "ability": "levitate",
@@ -112937,6 +113093,7 @@
             },
             "meta": "(MULTI BATTLE With Ruin Maniac Bruno)",
             "name": "birdkeeper-billie",
+            "split": "wake",
             "team": [
                 {
                     "ability": "magic-guard",
@@ -112984,6 +113141,7 @@
             },
             "meta": "(MULTI BATTLE With BirdKeeper Billie)",
             "name": "ruin-maniac-bruno",
+            "split": "wake",
             "team": [
                 {
                     "ability": "lightning-rod",
@@ -113030,6 +113188,7 @@
             },
             "meta": "(MULTI BATTLE With PokéKid Jerry)",
             "name": "sailor-gene",
+            "split": "wake",
             "team": [
                 {
                     "ability": "unburden",
@@ -113077,6 +113236,7 @@
             },
             "meta": "(MULTI BATTLE With Sailor Gene)",
             "name": "pokekid-jerry",
+            "split": "wake",
             "team": [
                 {
                     "ability": "lightning-rod",
@@ -113123,6 +113283,7 @@
             },
             "meta": "(MULTI BATTLE With Idol Dolly)",
             "name": "guitarist-kenny",
+            "split": "wake",
             "team": [
                 {
                     "ability": "lightning-rod",
@@ -113170,6 +113331,7 @@
             },
             "meta": "(MULTI BATTLE With Guitarist Kenny)",
             "name": "idol-dolly",
+            "split": "wake",
             "team": [
                 {
                     "ability": "huge-power",
@@ -113216,6 +113378,7 @@
             },
             "meta": "(MULTI BATTLE With Dragon Tamer Elton)",
             "name": "beauty-britney",
+            "split": "wake",
             "team": [
                 {
                     "ability": "intimidate",
@@ -113263,6 +113426,7 @@
             },
             "meta": "(MULTI BATTLE With Beauty Britney)",
             "name": "dragon-tamer-elton",
+            "split": "wake",
             "team": [
                 {
                     "ability": "serene-grace",
@@ -113309,6 +113473,7 @@
             },
             "meta": "(DOUBLE BATTLE)",
             "name": "double-team-stevie-and-lindsey",
+            "split": "wake",
             "team": [
                 {
                     "ability": "gluttony",
@@ -113409,6 +113574,7 @@
             },
             "meta": "(OPTIONAL)* (PERMANENT RAIN)",
             "name": "tuber-jared",
+            "split": "wake",
             "team": [
                 {
                     "ability": "swift-swim",
@@ -113450,6 +113616,7 @@
             },
             "meta": "(OPTIONAL)* (PERMANENT RAIN)",
             "name": "tuberf-chelsea",
+            "split": "wake",
             "team": [
                 {
                     "ability": "swift-swim",
@@ -113495,6 +113662,7 @@
             },
             "meta": "(GAUNTLET START)* (PERMANENT RAIN)",
             "name": "swimmerf-mary",
+            "split": "wake",
             "team": [
                 {
                     "ability": "lightning-rod",
@@ -113553,6 +113721,7 @@
             },
             "meta": "(GAUNTLET)* (PERMANENT RAIN)",
             "name": "swimmer-sheltin",
+            "split": "wake",
             "team": [
                 {
                     "ability": "no-guard",
@@ -113611,6 +113780,7 @@
             },
             "meta": "(GAUNTLET)* (PERMANENT RAIN)",
             "name": "swimmerf-haley",
+            "split": "wake",
             "team": [
                 {
                     "ability": "swift-swim",
@@ -113669,6 +113839,7 @@
             },
             "meta": "(GAUNTLET)* (PERMANENT RAIN)",
             "name": "fisherman-kenneth",
+            "split": "wake",
             "team": [
                 {
                     "ability": "swift-swim",
@@ -113740,6 +113911,7 @@
             },
             "meta": "(GAUNTLET END)* (PERMANENT RAIN)",
             "name": "sailor-paul",
+            "split": "wake",
             "team": [
                 {
                     "ability": "intimidate",
@@ -113811,6 +113983,7 @@
             },
             "meta": "(PERMANENT RAIN)",
             "name": "beauty-chelle",
+            "split": "wake",
             "team": [
                 {
                     "ability": "lightning-rod",
@@ -113904,6 +114077,7 @@
             "area": "pastoria-city",
             "meta": "(OPTIONAL)",
             "name": "pkmn-breeder-frank",
+            "split": "wake",
             "team": [
                 {
                     "ability": "scrappy",
@@ -114000,6 +114174,7 @@
             "area": "pastoria-city",
             "meta": "(Player picked Chimchar, outside of Pastoria Gym)",
             "name": "barry-4",
+            "split": "wake",
             "team": [
                 {
                     "ability": "reckless",
@@ -114096,6 +114271,7 @@
             "area": "pastoria-city",
             "meta": "(Player picked Piplup, outside of Pastoria Gym)",
             "name": "barry-4-2",
+            "split": "wake",
             "team": [
                 {
                     "ability": "reckless",
@@ -114192,6 +114368,7 @@
             "area": "pastoria-city",
             "meta": "(Player picked Turtwig, outside of Pastoria Gym)",
             "name": "barry-4-3",
+            "split": "wake",
             "team": [
                 {
                     "ability": "reckless",
@@ -114291,6 +114468,7 @@
             },
             "meta": "(PERMANENT RAIN)",
             "name": "roughneck-walter",
+            "split": "wake",
             "team": [
                 {
                     "ability": "sand-veil",
@@ -114392,6 +114570,7 @@
             },
             "meta": "(PERMANENT RAIN)",
             "name": "fisherman-josh",
+            "split": "wake",
             "team": [
                 {
                     "ability": "aftermath",
@@ -114493,6 +114672,7 @@
             },
             "meta": "(PERMANENT RAIN)",
             "name": "tuber-jacky",
+            "split": "wake",
             "team": [
                 {
                     "ability": "poison-heal",
@@ -114593,6 +114773,7 @@
             },
             "meta": "(PERMANENT RAIN)",
             "name": "parasol-lady-monet",
+            "split": "wake",
             "team": [
                 {
                     "ability": "tinted-lens",
@@ -114692,6 +114873,7 @@
             },
             "meta": "(PERMANENT RAIN)",
             "name": "tuberf-caitlyn",
+            "split": "wake",
             "team": [
                 {
                     "ability": "huge-power",
@@ -114791,6 +114973,7 @@
             },
             "meta": "(PERMANENT RAIN)",
             "name": "pkmn-ranger-erick",
+            "split": "wake",
             "team": [
                 {
                     "ability": "hydration",
@@ -114891,6 +115074,7 @@
             },
             "meta": "(PERMANENT RAIN)",
             "name": "pkmn-ranger-sam",
+            "split": "wake",
             "team": [
                 {
                     "ability": "no-guard",
@@ -114991,6 +115175,7 @@
             },
             "meta": "(PERMANENT RAIN)",
             "name": "leader-crasherwake",
+            "split": "wake",
             "team": [
                 {
                     "ability": "swift-swim",
@@ -115086,6 +115271,7 @@
             ],
             "area": "valor-lakefront",
             "name": "galactic-io-2",
+            "split": "byron",
             "team": [
                 {
                     "ability": "drought",
@@ -115181,6 +115367,7 @@
             ],
             "area": "pokemon-mansion",
             "name": "policeman-bobby",
+            "split": "byron",
             "team": [
                 {
                     "ability": "thick-fat",
@@ -115206,6 +115393,7 @@
             ],
             "area": "pokemon-mansion",
             "name": "lady-melissa",
+            "split": "byron",
             "team": [
                 {
                     "ability": "tinted-lens",
@@ -115233,6 +115421,7 @@
             ],
             "area": "pokemon-mansion",
             "name": "rich-boy-jason",
+            "split": "byron",
             "team": [
                 {
                     "ability": "clear-body",
@@ -115259,6 +115448,7 @@
             ],
             "area": "pokemon-mansion",
             "name": "socialite-reina",
+            "split": "byron",
             "team": [
                 {
                     "ability": "serene-grace",
@@ -115286,6 +115476,7 @@
             ],
             "area": "pokemon-mansion",
             "name": "gentleman-jeremy",
+            "split": "byron",
             "team": [
                 {
                     "ability": "intimidate",
@@ -115313,6 +115504,7 @@
             ],
             "area": "pokemon-mansion",
             "name": "artist-alexander",
+            "split": "byron",
             "team": [
                 {
                     "ability": "trace",
@@ -115341,6 +115533,7 @@
             ],
             "area": "pokemon-mansion",
             "name": "gambler-nicky",
+            "split": "byron",
             "team": [
                 {
                     "ability": "super-luck",
@@ -115367,6 +115560,7 @@
             ],
             "area": "pokemon-mansion",
             "name": "beauty-elle",
+            "split": "byron",
             "team": [
                 {
                     "ability": "battle-armor",
@@ -115393,6 +115587,7 @@
             ],
             "area": "pokemon-mansion",
             "name": "lady-celeste",
+            "split": "byron",
             "team": [
                 {
                     "ability": "chlorophyll",
@@ -115419,6 +115614,7 @@
             ],
             "area": "pokemon-mansion",
             "name": "socialite-scarlet",
+            "split": "byron",
             "team": [
                 {
                     "ability": "thick-fat",
@@ -115444,6 +115640,7 @@
             ],
             "area": "pokemon-mansion",
             "name": "policeman-caleb",
+            "split": "byron",
             "team": [
                 {
                     "ability": "intimidate",
@@ -115469,6 +115666,7 @@
             ],
             "area": "pokemon-mansion",
             "name": "rich-boy-liam",
+            "split": "byron",
             "team": [
                 {
                     "ability": "simple",
@@ -115496,6 +115694,7 @@
             "area": "pokemon-mansion",
             "meta": "(Left Side)",
             "name": "waiter-affogato",
+            "split": "byron",
             "team": [
                 {
                     "ability": "download",
@@ -115522,6 +115721,7 @@
             "area": "pokemon-mansion",
             "meta": "(Right Side)",
             "name": "waiter-doppio",
+            "split": "byron",
             "team": [
                 {
                     "ability": "levitate",
@@ -115548,6 +115748,7 @@
             "area": "pokemon-mansion",
             "meta": "(Left Side)",
             "name": "maid-latte",
+            "split": "byron",
             "team": [
                 {
                     "ability": "serene-grace",
@@ -115575,6 +115776,7 @@
             "area": "pokemon-mansion",
             "meta": "(Right Side)",
             "name": "maid-mocha",
+            "split": "byron",
             "team": [
                 {
                     "ability": "levitate",
@@ -115600,6 +115802,7 @@
             ],
             "area": "pokemon-mansion",
             "name": "gentleman-butler",
+            "split": "byron",
             "team": [
                 {
                     "ability": "thick-fat",
@@ -115633,6 +115836,7 @@
             ],
             "area": "sky-attack",
             "name": "policeman-danny",
+            "split": "byron",
             "team": [
                 {
                     "ability": "intimidate",
@@ -115724,6 +115928,7 @@
             "ai-flags": [],
             "area": "route-212",
             "name": "pkmn-ranger-allison",
+            "split": "byron",
             "team": [
                 {
                     "ability": "reckless",
@@ -115749,6 +115954,7 @@
             ],
             "area": "route-212",
             "name": "pkmn-ranger-jeffery",
+            "split": "byron",
             "team": [
                 {
                     "ability": "intimidate",
@@ -115774,6 +115980,7 @@
             ],
             "area": "route-212",
             "name": "pkmn-ranger-taylor",
+            "split": "byron",
             "team": [
                 {
                     "ability": "swift-swim",
@@ -115806,6 +116013,7 @@
             },
             "meta": "(FOG)",
             "name": "galacticf-luna",
+            "split": "byron",
             "team": [
                 {
                     "ability": "mold-breaker",
@@ -115906,6 +116114,7 @@
             },
             "meta": "(FOG, OPTIONAL)",
             "name": "galactic-valetudo",
+            "split": "byron",
             "team": [
                 {
                     "ability": "mold-breaker",
@@ -116007,6 +116216,7 @@
             },
             "meta": "(FOG)",
             "name": "galacticf-terra",
+            "split": "byron",
             "team": [
                 {
                     "ability": "heatproof",
@@ -116109,6 +116319,7 @@
             },
             "meta": "(FOG)",
             "name": "galacticf-venus-2",
+            "split": "byron",
             "team": [
                 {
                     "ability": "aftermath",
@@ -116213,6 +116424,7 @@
             },
             "meta": "(FOG, DOUBLE BATTLE)",
             "name": "galacticf-leda",
+            "split": "byron",
             "team": [
                 {
                     "ability": "levitate",
@@ -116313,6 +116525,7 @@
             },
             "meta": "(FOG)",
             "name": "galacticf-amalthia",
+            "split": "byron",
             "team": [
                 {
                     "ability": "white-smoke",
@@ -116413,6 +116626,7 @@
             },
             "meta": "(FOG)",
             "name": "galactic-metis",
+            "split": "byron",
             "team": [
                 {
                     "ability": "shell-armor",
@@ -116517,6 +116731,7 @@
             },
             "meta": "(FOG, DOUBLE BATTLE)",
             "name": "galactic-themisto",
+            "split": "byron",
             "team": [
                 {
                     "ability": "dry-skin",
@@ -116618,6 +116833,7 @@
             },
             "meta": "(FOG, OPTIONAL)*",
             "name": "galacticf-dia",
+            "split": "byron",
             "team": [
                 {
                     "ability": "synchronize",
@@ -116719,6 +116935,7 @@
             },
             "meta": "(FOG)",
             "name": "galactic-thebe",
+            "split": "byron",
             "team": [
                 {
                     "ability": "gluttony",
@@ -116824,6 +117041,7 @@
             },
             "meta": "(FOG)",
             "name": "galactic-himalia",
+            "split": "byron",
             "team": [
                 {
                     "ability": "tinted-lens",
@@ -116925,6 +117143,7 @@
             },
             "meta": "(FOG)",
             "name": "galactic-callisto-2",
+            "split": "byron",
             "team": [
                 {
                     "ability": "solid-rock",
@@ -117025,6 +117244,7 @@
             },
             "meta": "(FOG)",
             "name": "galacticf-europa",
+            "split": "byron",
             "team": [
                 {
                     "ability": "battle-armor",
@@ -117126,6 +117346,7 @@
             },
             "meta": "(FOG)",
             "name": "galactic-pluto-2",
+            "split": "byron",
             "team": [
                 {
                     "ability": "solid-rock",
@@ -117226,6 +117447,7 @@
             },
             "meta": "(FOG)",
             "name": "galactic-ganymede-2",
+            "split": "byron",
             "team": [
                 {
                     "ability": "filter",
@@ -117331,6 +117553,7 @@
             },
             "meta": "(FOG, DOUBLE BATTLE)",
             "name": "galacticf-io",
+            "split": "byron",
             "team": [
                 {
                     "ability": "intimidate",
@@ -117434,6 +117657,7 @@
             },
             "meta": "(FOG, DOUBLE BATTLE)",
             "name": "commander-jupiter-2",
+            "split": "byron",
             "team": [
                 {
                     "ability": "intimidate",
@@ -117531,6 +117755,7 @@
             ],
             "area": "celestic-town",
             "name": "galactic-mercury-3",
+            "split": "byron",
             "team": [
                 {
                     "ability": "levitate",
@@ -117617,6 +117842,7 @@
             },
             "meta": "(FOG)",
             "name": "leader-cyrus",
+            "split": "byron",
             "team": [
                 {
                     "ability": "magic-guard",
@@ -117714,6 +117940,7 @@
             ],
             "area": "fuego-ironworks",
             "name": "worker-dillan",
+            "split": "byron",
             "team": [
                 {
                     "ability": "filter",
@@ -117796,6 +118023,7 @@
             ],
             "area": "fuego-ironworks",
             "name": "worker-holden",
+            "split": "byron",
             "team": [
                 {
                     "ability": "intimidate",
@@ -117878,6 +118106,7 @@
             ],
             "area": "fuego-ironworks",
             "name": "worker-conrad",
+            "split": "byron",
             "team": [
                 {
                     "ability": "solar-power",
@@ -117960,6 +118189,7 @@
             "area": "canalave-city",
             "meta": "(Player picked Chimchar, on Canalave Bridge)",
             "name": "barry-5",
+            "split": "byron",
             "team": [
                 {
                     "ability": "reckless",
@@ -118056,6 +118286,7 @@
             "area": "canalave-city",
             "meta": "(Player picked Piplup, on Canalave Bridge)",
             "name": "barry-5-2",
+            "split": "byron",
             "team": [
                 {
                     "ability": "reckless",
@@ -118152,6 +118383,7 @@
             "area": "canalave-city",
             "meta": "(Player picked Turtwig, on Canalave Bridge)",
             "name": "barry-5-3",
+            "split": "byron",
             "team": [
                 {
                     "ability": "reckless",
@@ -118250,6 +118482,7 @@
             "area": "iron-island",
             "meta": "(TAG PARTNER)",
             "name": "pkmn-trainer-riley",
+            "split": "byron",
             "team": [
                 {
                     "ability": "iron-fist",
@@ -118339,6 +118572,7 @@
             },
             "meta": "(MULTI BATTLE With Galactic Thalassa)",
             "name": "galacticf-calypso",
+            "split": "byron",
             "team": [
                 {
                     "ability": "dry-skin",
@@ -118412,6 +118646,7 @@
             },
             "meta": "(MULTI BATTLE With Galactic Calypso)",
             "name": "galactic-thalassa",
+            "split": "byron",
             "team": [
                 {
                     "ability": "drizzle",
@@ -118487,6 +118722,7 @@
             },
             "meta": "(MULTI BATTLE With Galactic Galatea)",
             "name": "galacticf-despina",
+            "split": "byron",
             "team": [
                 {
                     "ability": "tinted-lens",
@@ -118561,6 +118797,7 @@
             },
             "meta": "(MULTI BATTLE With Galactic Despina)",
             "name": "galacticf-galatea",
+            "split": "byron",
             "team": [
                 {
                     "ability": "magic-guard",
@@ -118635,6 +118872,7 @@
             },
             "meta": "(MULTI BATTLE With Galactic Psamanthe)",
             "name": "galactic-hippocamp",
+            "split": "byron",
             "team": [
                 {
                     "ability": "sand-stream",
@@ -118708,6 +118946,7 @@
             },
             "meta": "(MULTI BATTLE With Galactic Hippocamp)",
             "name": "galactic-psamanthe",
+            "split": "byron",
             "team": [
                 {
                     "ability": "solid-rock",
@@ -118781,6 +119020,7 @@
             },
             "meta": "(MULTI BATTLE With Galactic Nereid)",
             "name": "galactic-naid",
+            "split": "byron",
             "team": [
                 {
                     "ability": "drizzle",
@@ -118854,6 +119094,7 @@
             },
             "meta": "(MULTI BATTLE With Galactic Naid)",
             "name": "galacticf-nereid",
+            "split": "byron",
             "team": [
                 {
                     "ability": "swift-swim",
@@ -118928,6 +119169,7 @@
             },
             "meta": "(MULTI BATTLE With Galactic Proteus)",
             "name": "galacticf-halimede",
+            "split": "byron",
             "team": [
                 {
                     "ability": "tinted-lens",
@@ -119004,6 +119246,7 @@
             },
             "meta": "(MULTI BATTLE With Galactic Halimede)",
             "name": "galactic-proteus",
+            "split": "byron",
             "team": [
                 {
                     "ability": "simple",
@@ -119077,6 +119320,7 @@
             },
             "meta": "(MULTI BATTLE With Galactic Neso)",
             "name": "galactic-sao",
+            "split": "byron",
             "team": [
                 {
                     "ability": "chlorophyll",
@@ -119153,6 +119397,7 @@
             },
             "meta": "(MULTI BATTLE With Galactic Sao)",
             "name": "galactic-neso",
+            "split": "byron",
             "team": [
                 {
                     "ability": "drought",
@@ -119228,6 +119473,7 @@
             },
             "meta": "(MULTI BATTLE With Galactic Laomedeia)",
             "name": "galacticf-larissa",
+            "split": "byron",
             "team": [
                 {
                     "ability": "levitate",
@@ -119304,6 +119550,7 @@
             },
             "meta": "(MULTI BATTLE With Galactic Larissa)",
             "name": "galacticf-laomedeia",
+            "split": "byron",
             "team": [
                 {
                     "ability": "sand-stream",
@@ -119377,6 +119624,7 @@
             },
             "meta": "(MULTI BATTLE With Galactic Neptune)",
             "name": "galactic-triton-2",
+            "split": "byron",
             "team": [
                 {
                     "ability": "swift-swim",
@@ -119451,6 +119699,7 @@
             },
             "meta": "(MULTI BATTLE With Galactic Triton)",
             "name": "galactic-neptune-2",
+            "split": "byron",
             "team": [
                 {
                     "ability": "magic-guard",
@@ -119518,6 +119767,7 @@
             ],
             "area": "canalave-city-gym",
             "name": "sailor-cesar",
+            "split": "byron",
             "team": [
                 {
                     "ability": "drizzle",
@@ -119601,6 +119851,7 @@
             ],
             "area": "canalave-city-gym",
             "name": "scientist-bill",
+            "split": "byron",
             "team": [
                 {
                     "ability": "aftermath",
@@ -119683,6 +119934,7 @@
             ],
             "area": "canalave-city-gym",
             "name": "idol-skylar",
+            "split": "byron",
             "team": [
                 {
                     "ability": "sand-stream",
@@ -119778,6 +120030,7 @@
             ],
             "area": "canalave-city-gym",
             "name": "hiker-david",
+            "split": "byron",
             "team": [
                 {
                     "ability": "guts",
@@ -119859,6 +120112,7 @@
             ],
             "area": "canalave-city-gym",
             "name": "leader-byron",
+            "split": "byron",
             "team": [
                 {
                     "ability": "clear-body",
@@ -119961,6 +120215,7 @@
             },
             "meta": "(PARTNER) (PERMANENT RAIN)",
             "name": "trainer-marley",
+            "split": "candice",
             "team": [
                 {
                     "ability": "inner-focus",
@@ -120062,6 +120317,7 @@
             },
             "meta": "(RAIN, MULTI BATTLE With Galactic Daphnis) (PERMANENT RAIN)",
             "name": "galactic-pan",
+            "split": "candice",
             "team": [
                 {
                     "ability": "dry-skin",
@@ -120136,6 +120392,7 @@
             },
             "meta": "(RAIN, MULTI BATTLE With Galactic Pan) (PERMANENT RAIN)",
             "name": "galactic-daphnis",
+            "split": "candice",
             "team": [
                 {
                     "ability": "swift-swim",
@@ -120212,6 +120469,7 @@
             },
             "meta": "(MULTI BATTLE With Galactic Prometheus) (PERMANENT RAIN)",
             "name": "galactic-epimetheus",
+            "split": "candice",
             "team": [
                 {
                     "ability": "chlorophyll",
@@ -120287,6 +120545,7 @@
             },
             "meta": "(MULTI BATTLE With Galactic Epimetheus) (PERMANENT RAIN)",
             "name": "galactic-prometheus",
+            "split": "candice",
             "team": [
                 {
                     "ability": "drought",
@@ -120361,6 +120620,7 @@
             },
             "meta": "(RAIN, MULTI BATTLE With Galactic Iapetus) (PERMANENT RAIN)",
             "name": "galacticf-phoebe",
+            "split": "candice",
             "team": [
                 {
                     "ability": "shadow-tag",
@@ -120421,6 +120681,7 @@
             },
             "meta": "(RAIN, MULTI BATTLE With Galactic Phoebe) (PERMANENT RAIN)",
             "name": "galactic-iapetus",
+            "split": "candice",
             "team": [
                 {
                     "ability": "heatproof",
@@ -120500,6 +120761,7 @@
             },
             "meta": "(MULTI BATTLE With Galactic Mimas) (PERMANENT RAIN)",
             "name": "galactic-enceladus",
+            "split": "candice",
             "team": [
                 {
                     "ability": "magic-guard",
@@ -120562,6 +120824,7 @@
             },
             "meta": "(MULTI BATTLE With Galactic Enceladus) (PERMANENT RAIN)",
             "name": "galacticf-mimas",
+            "split": "candice",
             "team": [
                 {
                     "ability": "snow-warning",
@@ -120637,6 +120900,7 @@
             },
             "meta": "(RAIN, MULTI BATTLE With Galactic Dione) (PERMANENT RAIN)",
             "name": "galacticf-pandora",
+            "split": "candice",
             "team": [
                 {
                     "ability": "intimidate",
@@ -120698,6 +120962,7 @@
             },
             "meta": "(RAIN, MULTI BATTLE WITH Galactic Pandora) (PERMANENT RAIN)",
             "name": "galacticf-dione",
+            "split": "candice",
             "team": [
                 {
                     "ability": "lightning-rod",
@@ -120758,6 +121023,7 @@
             },
             "meta": "(MULTI BATTLE With Galactic Hyperion) (PERMANENT RAIN)",
             "name": "galactic-atlas",
+            "split": "candice",
             "team": [
                 {
                     "ability": "drought",
@@ -120820,6 +121086,7 @@
             },
             "meta": "(MULTI BATTLE With Galactic Atlas) (PERMANENT RAIN)",
             "name": "galactic-hyperion",
+            "split": "candice",
             "team": [
                 {
                     "ability": "chlorophyll",
@@ -120878,6 +121145,7 @@
             },
             "meta": "(RAIN, MULTI BATTLE With Galactic Rhea) (PERMANENT RAIN)",
             "name": "galacticf-tethys",
+            "split": "candice",
             "team": [
                 {
                     "ability": "swift-swim",
@@ -120955,6 +121223,7 @@
             },
             "meta": "(RAIN, MULTI BATTLE With Galactic Tethys) (PERMANENT RAIN)",
             "name": "galacticf-rhea",
+            "split": "candice",
             "team": [
                 {
                     "ability": "natural-cure",
@@ -121030,6 +121299,7 @@
             },
             "meta": "(RAIN, MULTI BATTLE WITH GALACTIC TITAN) (PERMANENT RAIN)",
             "name": "commander-saturn",
+            "split": "candice",
             "team": [
                 {
                     "ability": "levitate",
@@ -121120,6 +121390,7 @@
             },
             "meta": "(RAIN, MULTI BATTLE WITH GALACTIC SATURN) (PERMANENT RAIN)",
             "name": "galactic-titan",
+            "split": "candice",
             "team": [
                 {
                     "ability": "guts",
@@ -121189,6 +121460,7 @@
             "area": "lake-verity",
             "meta": "(TAG PARTNER)",
             "name": "trainer-dawn\/lucas-7",
+            "split": "candice",
             "team": [
                 {
                     "ability": "serene-grace",
@@ -121290,6 +121562,7 @@
             },
             "meta": "(MULTI BATTLE with Galactic Venus)",
             "name": "galactic-mercury-4",
+            "split": "candice",
             "team": [
                 {
                     "ability": "limber",
@@ -121365,6 +121638,7 @@
             },
             "meta": "(MULTI BATTLE with Galactic Mercury)",
             "name": "galacticf-venus-3",
+            "split": "candice",
             "team": [
                 {
                     "ability": "drought",
@@ -121438,6 +121712,7 @@
             },
             "meta": "(MULTI BATTLE with Galactic Pluto)",
             "name": "galacticf-luna-2",
+            "split": "candice",
             "team": [
                 {
                     "ability": "levitate",
@@ -121512,6 +121787,7 @@
             },
             "meta": "(MULTI BATTLE with Galactic Luna)",
             "name": "galactic-pluto-3",
+            "split": "candice",
             "team": [
                 {
                     "ability": "snow-warning",
@@ -121587,6 +121863,7 @@
             },
             "meta": "(MULTI BATTLE with Galactic Squad Phobos)",
             "name": "galactic-squad-deimos-2",
+            "split": "candice",
             "team": [
                 {
                     "ability": "trace",
@@ -121690,6 +121967,7 @@
             },
             "meta": "(MULTI BATTLE with Galactic Squad Deimos)",
             "name": "galactic-squad-phobos-2",
+            "split": "candice",
             "team": [
                 {
                     "ability": "sand-stream",
@@ -121791,6 +122069,7 @@
             },
             "meta": "(MULTI BATTLE with Galactic Terra)",
             "name": "commander-mars-2",
+            "split": "candice",
             "team": [
                 {
                     "ability": "sand-stream",
@@ -121893,6 +122172,7 @@
             },
             "meta": "(MULTI BATTLE with Commander Mars)",
             "name": "galacticf-terra-2",
+            "split": "candice",
             "team": [
                 {
                     "ability": "levitate",
@@ -121965,6 +122245,7 @@
             },
             "meta": "(HAIL) (HAIL)",
             "name": "skier-edward",
+            "split": "candice",
             "team": [
                 {
                     "ability": "snow-cloak",
@@ -122037,6 +122318,7 @@
             },
             "meta": "(HAIL) (HAIL)",
             "name": "skier-kaitlyn",
+            "split": "candice",
             "team": [
                 {
                     "ability": "adaptability",
@@ -122108,6 +122390,7 @@
             },
             "meta": "(HAIL) (HAIL)",
             "name": "blackbelt-philip",
+            "split": "candice",
             "team": [
                 {
                     "ability": "reckless",
@@ -122179,6 +122462,7 @@
             },
             "meta": "(HAIL) (HAIL)",
             "name": "guitarist-garrett",
+            "split": "candice",
             "team": [
                 {
                     "ability": "aftermath",
@@ -122250,6 +122534,7 @@
             },
             "meta": "(HAIL) (HAIL)",
             "name": "ace-trainer-laura",
+            "split": "candice",
             "team": [
                 {
                     "ability": "solid-rock",
@@ -122335,6 +122620,7 @@
             },
             "meta": "(OPTIONAL, HAIL)* (HAIL)",
             "name": "ace-trainer-blake",
+            "split": "candice",
             "team": [
                 {
                     "ability": "technician",
@@ -122406,6 +122692,7 @@
             },
             "meta": "(OPTIONAL HAIL)* (HAIL)",
             "name": "skier-bradley",
+            "split": "candice",
             "team": [
                 {
                     "ability": "snow-cloak",
@@ -122463,6 +122750,7 @@
             },
             "meta": "(OPTIONAL HAIL)* (HAIL)",
             "name": "ace-trainer-maria",
+            "split": "candice",
             "team": [
                 {
                     "ability": "swift-swim",
@@ -122534,6 +122822,7 @@
             },
             "meta": "(OPTIONAL HAIL)* (HAIL)",
             "name": "skier-andrea",
+            "split": "candice",
             "team": [
                 {
                     "ability": "gluttony",
@@ -122606,6 +122895,7 @@
             },
             "meta": "(OPTIONAL, HAIL) (HAIL)",
             "name": "ace-trainer-olivia",
+            "split": "candice",
             "team": [
                 {
                     "ability": "swift-swim",
@@ -122708,6 +122998,7 @@
             },
             "meta": "(OPTIONAL, HAIL) (HAIL)",
             "name": "ninja-boy-ethan",
+            "split": "candice",
             "team": [
                 {
                     "ability": "snow-cloak",
@@ -122808,6 +123099,7 @@
             },
             "meta": "(OPTIONAL, HAIL) (HAIL)",
             "name": "skier-madison",
+            "split": "candice",
             "team": [
                 {
                     "ability": "forecast",
@@ -122908,6 +123200,7 @@
             },
             "meta": "(OPTIONAL, HAIL) (HAIL)",
             "name": "blackbelt-luke",
+            "split": "candice",
             "team": [
                 {
                     "ability": "super-luck",
@@ -123007,6 +123300,7 @@
             },
             "meta": "(OPTIONAL, HAIL) (HAIL)",
             "name": "ace-trainer-dalton",
+            "split": "candice",
             "team": [
                 {
                     "ability": "iron-fist",
@@ -123106,6 +123400,7 @@
             },
             "meta": "(OPTIONAL, HAIL) (HAIL)",
             "name": "ninja-boy-matthew",
+            "split": "candice",
             "team": [
                 {
                     "ability": "wonder-guard",
@@ -123203,6 +123498,7 @@
             },
             "meta": "(OPTIONAL, HAIL) (HAIL)",
             "name": "skier-bjorn",
+            "split": "candice",
             "team": [
                 {
                     "ability": "overgrow",
@@ -123233,6 +123529,7 @@
             },
             "meta": "(OPTIONAL, HAIL) (HAIL)",
             "name": "skier-shawn",
+            "split": "candice",
             "team": [
                 {
                     "ability": "adaptability",
@@ -123333,6 +123630,7 @@
             },
             "meta": "(OPTIONAL, HAIL) (HAIL)",
             "name": "veteran-anton",
+            "split": "candice",
             "team": [
                 {
                     "ability": "thick-fat",
@@ -123419,6 +123717,7 @@
             },
             "meta": "(HAIL) (HAIL)",
             "name": "ace-trainer-tenzing",
+            "split": "candice",
             "team": [
                 {
                     "ability": "ice-body",
@@ -123505,6 +123804,7 @@
             },
             "meta": "(OPTIONAL, HAIL) (HAIL)",
             "name": "skier-mirabelle",
+            "split": "candice",
             "team": [
                 {
                     "ability": "serene-grace",
@@ -123589,6 +123889,7 @@
             },
             "meta": "(OPTIONAL, HAIL) (HAIL)",
             "name": "skier-anas",
+            "split": "candice",
             "team": [
                 {
                     "ability": "shell-armor",
@@ -123676,6 +123977,7 @@
             },
             "meta": "(OPTIONAL, HAIL) (HAIL)",
             "name": "skier-savannah",
+            "split": "candice",
             "team": [
                 {
                     "ability": "rough-skin",
@@ -123762,6 +124064,7 @@
             },
             "meta": "(HAIL) (HAIL)",
             "name": "ace-trainer-alicia",
+            "split": "candice",
             "team": [
                 {
                     "ability": "filter",
@@ -123848,6 +124151,7 @@
             },
             "meta": "(HAIL) (HAIL)",
             "name": "leader-candice",
+            "split": "candice",
             "team": [
                 {
                     "ability": "snow-cloak",
@@ -123950,6 +124254,7 @@
             },
             "meta": "(SUN, MULTI BATTLE With Bird Keeper Nicola) (PERMANENT SUN)",
             "name": "guitarist-cole",
+            "split": "volkner",
             "team": [
                 {
                     "ability": "scrappy",
@@ -124011,6 +124316,7 @@
             },
             "meta": "(SUN, MULTI BATTLE With Guitarist Cole) (PERMANENT SUN)",
             "name": "birdkeeper-nicola",
+            "split": "volkner",
             "team": [
                 {
                     "ability": "serene-grace",
@@ -124069,6 +124375,7 @@
             },
             "meta": "(SUN) (PERMANENT SUN)",
             "name": "pokefan-june",
+            "split": "volkner",
             "team": [
                 {
                     "ability": "rock-head",
@@ -124157,6 +124464,7 @@
             },
             "meta": "(SUN, MULTI BATTLE With Policeman Thomas) (PERMANENT SUN)",
             "name": "rich-boy-trey",
+            "split": "volkner",
             "team": [
                 {
                     "ability": "solar-power",
@@ -124216,6 +124524,7 @@
             },
             "meta": "(SUN, MULTI BATTLE With Rich Boy Trey) (PERMANENT SUN)",
             "name": "policeman-thomas",
+            "split": "volkner",
             "team": [
                 {
                     "ability": "intimidate",
@@ -124275,6 +124584,7 @@
             },
             "meta": "(SUN, DOUBLE BATTLE) (PERMANENT SUN)",
             "name": "belle-&-pa-scout-&-atticus",
+            "split": "volkner",
             "team": [
                 {
                     "ability": "intimidate",
@@ -124362,6 +124672,7 @@
             },
             "meta": "(SUN) (PERMANENT SUN)",
             "name": "aroma-lady-carolina",
+            "split": "volkner",
             "team": [
                 {
                     "ability": "white-smoke",
@@ -124437,6 +124748,7 @@
             },
             "meta": "(SUN DOUBLES) (PERMANENT SUN)",
             "name": "pokefan-sheen",
+            "split": "volkner",
             "team": [
                 {
                     "ability": "reckless",
@@ -124511,6 +124823,7 @@
             },
             "meta": "(SUN, MULTI BATTLE With Lady Rose) (PERMANENT SUN)",
             "name": "sailor-jack",
+            "split": "volkner",
             "team": [
                 {
                     "ability": "unburden",
@@ -124573,6 +124886,7 @@
             },
             "meta": "(SUN, MULTI BATTLE with Sailor Jack) (PERMANENT SUN)",
             "name": "lady-rose",
+            "split": "volkner",
             "team": [
                 {
                     "ability": "lightning-rod",
@@ -124633,6 +124947,7 @@
             },
             "meta": "(SUN, DOUBLE) (PERMANENT SUN)",
             "name": "interviewers-barbara-&-walter",
+            "split": "volkner",
             "team": [
                 {
                     "ability": "chlorophyll",
@@ -124722,6 +125037,7 @@
             },
             "meta": "(SUN, MULTI BATTLE With Gentleman Luther) (PERMANENT SUN)",
             "name": "socialite-alec",
+            "split": "volkner",
             "team": [
                 {
                     "ability": "chlorophyll",
@@ -124782,6 +125098,7 @@
             },
             "meta": "(SUN, MULTI BATTLE with Socialite Alec) (PERMANENT SUN)",
             "name": "gentleman-luther",
+            "split": "volkner",
             "team": [
                 {
                     "ability": "truant",
@@ -124839,6 +125156,7 @@
             },
             "meta": "(SUN, OPTIONAL) (PERMANENT SUN)",
             "name": "tuberf-holly",
+            "split": "volkner",
             "team": [
                 {
                     "ability": "sniper",
@@ -124911,6 +125229,7 @@
             },
             "meta": "(MULTI BATTLE with Pokefan RJ)",
             "name": "pokefan-liz",
+            "split": "volkner",
             "team": [
                 {
                     "ability": "intimidate",
@@ -124969,6 +125288,7 @@
             },
             "meta": "(MULTI BATTLE with Pokefan Liz)",
             "name": "pokefan-rj",
+            "split": "volkner",
             "team": [
                 {
                     "ability": "lightning-rod",
@@ -125022,6 +125342,7 @@
             ],
             "area": "sunyshore-gym",
             "name": "clown-forrest",
+            "split": "volkner",
             "team": [
                 {
                     "ability": "solid-rock",
@@ -125104,6 +125425,7 @@
             ],
             "area": "sunyshore-gym",
             "name": "pokekid-maggie",
+            "split": "volkner",
             "team": [
                 {
                     "ability": "unburden",
@@ -125185,6 +125507,7 @@
             ],
             "area": "sunyshore-gym",
             "name": "cowgirl-meghan",
+            "split": "volkner",
             "team": [
                 {
                     "ability": "intimidate",
@@ -125285,6 +125608,7 @@
             },
             "meta": "(MULTI BATTLE with Waiter Reynolds)",
             "name": "worker-hugh",
+            "split": "volkner",
             "team": [
                 {
                     "ability": "battle-armor",
@@ -125344,6 +125668,7 @@
             },
             "meta": "(MULTI BATTLE with Worker Hugh)",
             "name": "waiter-reynolds",
+            "split": "volkner",
             "team": [
                 {
                     "ability": "rough-skin",
@@ -125397,6 +125722,7 @@
             ],
             "area": "sunyshore-gym",
             "name": "psychic-destiny",
+            "split": "volkner",
             "team": [
                 {
                     "ability": "synchronize",
@@ -125493,6 +125819,7 @@
             ],
             "area": "sunyshore-gym",
             "name": "gambler-ace",
+            "split": "volkner",
             "team": [
                 {
                     "ability": "clear-body",
@@ -125574,6 +125901,7 @@
             ],
             "area": "sunyshore-gym",
             "name": "guitarist-preston",
+            "split": "volkner",
             "team": [
                 {
                     "ability": "shell-armor",
@@ -125675,6 +126003,7 @@
             },
             "meta": "(Double Battle)",
             "name": "leader-volkner",
+            "split": "volkner",
             "team": [
                 {
                     "ability": "swift-swim",
@@ -125774,6 +126103,7 @@
             },
             "meta": "(PERMANENT RAIN)",
             "name": "pkmn-ranger-jeffrey",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "intimidate",
@@ -125799,6 +126129,7 @@
             },
             "meta": "(PERMANENT RAIN)",
             "name": "pkmn-ranger-allison-2",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "reckless",
@@ -125828,6 +126159,7 @@
             },
             "meta": "(PERMANENT RAIN)",
             "name": "pkmn-ranger-taylor-2",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "swift-swim",
@@ -125857,6 +126189,7 @@
             },
             "meta": "(RAIN, OPTIONAL)* (PERMANENT RAIN)",
             "name": "swimmerf-wang",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "swift-swim",
@@ -125928,6 +126261,7 @@
             },
             "meta": "(RAIN, OPTIONAL)* (PERMANENT RAIN)",
             "name": "swimmerf-wang-2",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "swift-swim",
@@ -125999,6 +126333,7 @@
             },
             "meta": "(RAIN, OPTIONAL)* (PERMANENT RAIN)",
             "name": "swimmerf-wang-3",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "swift-swim",
@@ -126070,6 +126405,7 @@
             },
             "meta": "(RAIN, OPTIONAL)* (PERMANENT RAIN)",
             "name": "swimmerf-wang-4",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "swift-swim",
@@ -126141,6 +126477,7 @@
             },
             "meta": "(PERMANENT RAIN)",
             "name": "sis-and-bro-dora-&-diego",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "reckless",
@@ -126229,6 +126566,7 @@
             },
             "meta": "(DOUBLE BATTLE) (PERMANENT RAIN)",
             "name": "fisherman-greg",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "shell-armor",
@@ -126326,6 +126664,7 @@
             "area": "wayward-cave-optional-gauntlet-with-mira",
             "meta": "(Tag Partner)",
             "name": "mira",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "magic-guard",
@@ -126401,6 +126740,7 @@
             },
             "meta": "(MULTI BATTLE with Clown Bob, GAUNTLET)*",
             "name": "collector-gerald",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "adaptability",
@@ -126464,6 +126804,7 @@
             },
             "meta": "(MULTI BATTLE with Collector Gerald, GAUNTLET)",
             "name": "clown-bob",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "unburden",
@@ -126524,6 +126865,7 @@
             },
             "meta": "(MULTI BATTLE with Picknicker Tori, GAUNTLET)",
             "name": "camper-parker",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "truant",
@@ -126570,6 +126912,7 @@
             },
             "meta": "(MULTI BATTLE with Camper Parker, GAUNTLET)",
             "name": "picknicker-tori",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "compound-eyes",
@@ -126615,6 +126958,7 @@
             },
             "meta": "(MULTI BATTLE with Camper Mike, GAUNTLET)",
             "name": "bug-catcher-adalbert",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "tinted-lens",
@@ -126659,6 +127003,7 @@
             },
             "meta": "(MULTI BATTLE with Bug Catcher Adalbert, GAUNTLET)",
             "name": "camper-mike",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "adaptability",
@@ -126704,6 +127049,7 @@
             },
             "meta": "(MULTI BATTLE with Youngster Butch, GAUNTLET)",
             "name": "lass-cassidy",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "natural-cure",
@@ -126751,6 +127097,7 @@
             },
             "meta": "(MULTI BATTLE with Lass Cassidy, GAUNTLET)",
             "name": "youngster-butch",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "filter",
@@ -126802,6 +127149,7 @@
             },
             "meta": "(MULTI BATTLE with Hiker Lorenzo, GAUNTLET)",
             "name": "hiker-reginald",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "intimidate",
@@ -126868,6 +127216,7 @@
             },
             "meta": "(MULTI BATTLE with Hiker Reginald, GAUNTLET)",
             "name": "hiker-lorenzo",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "filter",
@@ -126930,6 +127279,7 @@
             },
             "meta": "(MULTI BATTLE with Lady Caitlin, GAUNTLET END)",
             "name": "castle-valet-darach",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "hyper-cutter",
@@ -126993,6 +127343,7 @@
             },
             "meta": "(MULTI BATTLE with Castle Valet Darach, GAUNTLET END)",
             "name": "lady-caitlin",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "magic-guard",
@@ -127048,6 +127399,7 @@
             "area": "veilstone-warehouse",
             "meta": "(PERMANENT TRICK ROOM)",
             "name": "scientist-caliban",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "swift-swim",
@@ -127134,6 +127486,7 @@
             },
             "meta": "(MULTI BATTLE with Galactic Cressida) (PERMANENT TRICK ROOM)",
             "name": "galacticfportia",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "intimidate",
@@ -127193,6 +127546,7 @@
             },
             "meta": "(MULTI BATTLE with Galactic Portia) (PERMANENT TRICK ROOM)",
             "name": "galacticfcressida",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "drizzle",
@@ -127250,6 +127604,7 @@
             "area": "veilstone-warehouse",
             "meta": "(PERMANENT TRICK ROOM)",
             "name": "galactic-trinculo-2",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "battle-armor",
@@ -127337,6 +127692,7 @@
             },
             "meta": "(MULTI BATTLE with Galactic Francisco) (PERMANENT TRICK ROOM)",
             "name": "galacticfumbriel",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "bad-dreams",
@@ -127398,6 +127754,7 @@
             },
             "meta": "(MULTI BATTLE with Galactic Umbriel) (PERMANENT TRICK ROOM)",
             "name": "galactic-francisco-2",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "poison-heal",
@@ -127457,6 +127814,7 @@
             },
             "meta": "(MULTI BATTLE with Galactic Ferdinand) (PERMANENT TRICK ROOM)",
             "name": "galacticfmiranda-2",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "levitate",
@@ -127515,6 +127873,7 @@
             },
             "meta": "(MULTI BATTLE with Galactic Miranda) (PERMANENT TRICK ROOM)",
             "name": "galactic-ferdinand",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "sand-stream",
@@ -127579,6 +127938,7 @@
             },
             "meta": "(DOUBLE BATTLE) (PERMANENT TRICK ROOM)",
             "name": "galactic-squad-juliet",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "dry-skin",
@@ -127680,6 +128040,7 @@
             },
             "meta": "(MULTI BATTLE with Galactic Cupid) (PERMANENT TRICK ROOM)",
             "name": "galacticfmargaret",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "drought",
@@ -127741,6 +128102,7 @@
             },
             "meta": "(MULTI BATTLE with Galactic Magaret) (PERMANENT TRICK ROOM)",
             "name": "galacticfcupid",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "flower-gift",
@@ -127799,6 +128161,7 @@
             "area": "veilstone-warehouse",
             "meta": "(PERMANENT TRICK ROOM)",
             "name": "galactic-squad-perdita",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "snow-warning",
@@ -127887,6 +128250,7 @@
             },
             "meta": "(MULTI BATTLE with Galactic Sycorax, Up)* (PERMANENT TRICK ROOM)",
             "name": "galactic-setebos-2",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "drizzle",
@@ -127960,6 +128324,7 @@
             },
             "meta": "(MULTI BATTLE with Galactic Setebos, Up)* (PERMANENT TRICK ROOM)",
             "name": "galacticfsycorax-2",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "levitate",
@@ -128004,6 +128369,7 @@
             },
             "meta": "(MULTI BATTLE with Galactic Bianca, Right)* (PERMANENT TRICK ROOM)",
             "name": "galacticfariel",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "serene-grace",
@@ -128064,6 +128430,7 @@
             },
             "meta": "(MULTI BATTLE with Galactic Ariel, Right)* (PERMANENT TRICK ROOM)",
             "name": "galacticfbianca-2",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "drizzle",
@@ -128125,6 +128492,7 @@
             },
             "meta": "(DOUBLE BATTLE) (PERMANENT TRICK ROOM)",
             "name": "galactic-squad-mab",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "scrappy",
@@ -128209,6 +128577,7 @@
             "area": "veilstone-warehouse",
             "meta": "(PERMANENT TRICK ROOM)",
             "name": "galacticfrosalind",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "natural-cure",
@@ -128291,6 +128660,7 @@
             "area": "veilstone-warehouse",
             "meta": "(OPTIONAL) (PERMANENT TRICK ROOM)",
             "name": "galactic-squad-belinda",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "drizzle",
@@ -128390,6 +128760,7 @@
             },
             "meta": "(OPTIONAL Top Trainer) (PERMANENT TRICK ROOM)",
             "name": "galacticf-bebhionn",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "hydration",
@@ -128447,6 +128818,7 @@
             },
             "meta": "(OPTIONAL Right Trainer) (PERMANENT TRICK ROOM)",
             "name": "galactic-erripaus",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "drizzle",
@@ -128501,6 +128873,7 @@
             "area": "veilstone-warehouse",
             "meta": "(PERMANENT TRICK ROOM)",
             "name": "galactic-janus",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "levitate",
@@ -128585,6 +128958,7 @@
             "area": "veilstone-warehouse",
             "meta": "(Optional Top Path)* (PERMANENT TRICK ROOM)",
             "name": "scientist-stephano",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "sand-stream",
@@ -128671,6 +129045,7 @@
             },
             "meta": "(Optional Bottom Path, MULTI BATTLE with Galactic Puck)* (PERMANENT TRICK ROOM)",
             "name": "galactic-oberon",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "snow-warning",
@@ -128729,6 +129104,7 @@
             },
             "meta": "(Optional Bottom Path, MULTI BATTLE with Galactic Oberon)* (PERMANENT TRICK ROOM)",
             "name": "galactic-puck-2",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "magic-guard",
@@ -128777,6 +129153,7 @@
             "area": "veilstone-warehouse",
             "meta": "(PERMANENT TRICK ROOM)",
             "name": "galactic-prospero-2",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "drought",
@@ -128875,6 +129252,7 @@
             "area": "veilstone-warehouse",
             "meta": "(Right Door, OPTIONAL) (PERMANENT TRICK ROOM)",
             "name": "galactic-alborix",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "filter",
@@ -128947,6 +129325,7 @@
             "area": "veilstone-warehouse",
             "meta": "(Right Door, OPTIONAL) (PERMANENT TRICK ROOM)",
             "name": "galactic-skymir",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "wonder-guard",
@@ -129002,6 +129381,7 @@
             "area": "veilstone-warehouse",
             "meta": "(Right Door, OPTIONAL) (PERMANENT TRICK ROOM)",
             "name": "galactic-loge",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "drought",
@@ -129060,6 +129440,7 @@
             },
             "meta": "(Left Door, MULTI BATTLE with Galactic Prometheus)* (PERMANENT TRICK ROOM)",
             "name": "galactic-hyperion-2",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "drought",
@@ -129118,6 +129499,7 @@
             },
             "meta": "(Left Door, MULTI BATTLE with Galactic Hyperion)* (PERMANENT TRICK ROOM)",
             "name": "galactic-prometheus-2",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "blaze",
@@ -129175,6 +129557,7 @@
             },
             "meta": "(Middle Door, MULTI BATTLE with GalacticfDione)* (PERMANENT TRICK ROOM)",
             "name": "galacticftethys",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "serene-grace",
@@ -129233,6 +129616,7 @@
             },
             "meta": "(Middle Door, MULTI BATTLE with GalacticfTethys)* (PERMANENT TRICK ROOM)",
             "name": "galacticfdione",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "drizzle",
@@ -129287,6 +129671,7 @@
             "area": "veilstone-warehouse",
             "meta": "(PERMANENT TRICK ROOM)",
             "name": "galactic-titan-2",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "thick-fat",
@@ -129387,6 +129772,7 @@
             },
             "meta": "(MULTI BATTLE with Galactic Pandora) (PERMANENT TRICK ROOM)",
             "name": "galactic-epimetheus-2",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "rock-head",
@@ -129446,6 +129832,7 @@
             },
             "meta": "(MULTI BATTLE with Galactic Epimetheus) (PERMANENT TRICK ROOM)",
             "name": "galacticfpandora",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "bad-dreams",
@@ -129503,6 +129890,7 @@
             },
             "meta": "(Up, MULTI BATTLE with Galactic Mimas)* (PERMANENT TRICK ROOM)",
             "name": "galactic-enceladus-2",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "snow-warning",
@@ -129563,6 +129951,7 @@
             },
             "meta": "(Up, MULTI BATTLE with Galactic Enceladus)* (PERMANENT TRICK ROOM)",
             "name": "galacticfmimas",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "rain-dish",
@@ -129620,6 +130009,7 @@
             },
             "meta": "(Middle, MULTI BATTLE with Galactic Pan)* (PERMANENT TRICK ROOM)",
             "name": "galacticfdaphnis",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "scrappy",
@@ -129679,6 +130069,7 @@
             },
             "meta": "(Middle, MULTI BATTLE with Galactic Daphnis)* (PERMANENT TRICK ROOM)",
             "name": "galacticfpan",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "rough-skin",
@@ -129734,6 +130125,7 @@
             "area": "veilstone-warehouse",
             "meta": "(To the right, Path 1)* (PERMANENT TRICK ROOM)",
             "name": "galactic-kari",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "sand-stream",
@@ -129820,6 +130212,7 @@
             },
             "meta": "(MULTI BATTLE with Galactic Greip, Path 1) (PERMANENT TRICK ROOM)",
             "name": "galactic-geirrod",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "dry-skin",
@@ -129878,6 +130271,7 @@
             },
             "meta": "(MULTI BATTLE with Galactic Geirrod, Path 1) (PERMANENT TRICK ROOM)",
             "name": "galactic-greip",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "drizzle",
@@ -129937,6 +130331,7 @@
             },
             "meta": "(Up, MULTI BATTLE with Galactic Phoebe, Path 2)* (PERMANENT TRICK ROOM)",
             "name": "galactic-iapetus-2",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "levitate",
@@ -129997,6 +130392,7 @@
             },
             "meta": "(MULTI BATTLE with Galactic Iapetus, Path 2) (PERMANENT TRICK ROOM)",
             "name": "galacticfphoebe",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "levitate",
@@ -130051,6 +130447,7 @@
             "area": "veilstone-warehouse",
             "meta": "(Path 2) (PERMANENT TRICK ROOM)",
             "name": "galactic-atlas-2",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "drought",
@@ -130134,6 +130531,7 @@
             "area": "veilstone-warehouse",
             "meta": "(OPTIONAL, Path 2) (PERMANENT TRICK ROOM)",
             "name": "galacticfrhea",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "drizzle",
@@ -130217,6 +130615,7 @@
             "area": "veilstone-warehouse",
             "meta": "(PERMANENT TRICK ROOM)",
             "name": "galacticfuranus-2",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "snow-warning",
@@ -130314,6 +130713,7 @@
             "area": "veilstone-warehouse",
             "meta": "(Trick Room) (PERMANENT TRICK ROOM)",
             "name": "leader-cyrus-2",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "magic-guard",
@@ -130410,6 +130810,7 @@
             "area": "veilstone-warehouse",
             "meta": "(PERMANENT TRICK ROOM)",
             "name": "galactic-io-3",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "drought",
@@ -130509,6 +130910,7 @@
             "area": "veilstone-warehouse",
             "meta": "(PERMANENT TRICK ROOM)",
             "name": "commander-saturn-2",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "levitate",
@@ -130611,6 +131013,7 @@
             },
             "meta": "(MULTI BATTLE with Galactic Halimede)",
             "name": "galactic-ganymede-3",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "solid-rock",
@@ -130672,6 +131075,7 @@
             },
             "meta": "(MULTI BATTLE with Galactic Ganymede)",
             "name": "galacticfhalimede",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "simple",
@@ -130733,6 +131137,7 @@
             },
             "meta": "(DOUBLE BATTLE)",
             "name": "galacticfsquad-phobos",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "sand-stream",
@@ -130832,6 +131237,7 @@
             },
             "meta": "(OPTIONAL DOUBLE BATTLE)",
             "name": "galacticfsquad-deimos",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "trace",
@@ -130934,6 +131340,7 @@
             },
             "meta": "(MULTI BATTLE with Galactic Bianca) (HAIL)",
             "name": "galacticfdespina",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "quick-feet",
@@ -130996,6 +131403,7 @@
             },
             "meta": "(MULTI BATTLE with Galactic Despina) (HAIL)",
             "name": "galacticf-bianca",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "rough-skin",
@@ -131053,6 +131461,7 @@
             },
             "meta": "(Upstairs) (HAIL)",
             "name": "galactic-ferdinand-2",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "solid-rock",
@@ -131140,6 +131549,7 @@
             },
             "meta": "(In the grass to the Right) (HAIL)",
             "name": "galacticf-rosalind",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "natural-cure",
@@ -131225,6 +131635,7 @@
             },
             "meta": "(OPTIONAL DOUBLE BATTLE) (HAIL)",
             "name": "galactic-squad-perdita-2",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "snow-cloak",
@@ -131310,6 +131721,7 @@
             },
             "meta": "(HAIL)",
             "name": "galactic-valetudo-2",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "intimidate",
@@ -131400,6 +131812,7 @@
             },
             "meta": "(MULTI BATTLE with Galactic Cressida, Rock Smash Route) (HAIL)",
             "name": "galactic-cupid-2",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "chlorophyll",
@@ -131463,6 +131876,7 @@
             },
             "meta": "(MULTI BATTLE with Galactic Cupid, Rock Smash Route) (HAIL)",
             "name": "galacticf-cressida",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "download",
@@ -131522,6 +131936,7 @@
             },
             "meta": "(Cut Split) (HAIL)",
             "name": "galacticf-cordelia",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "levitate",
@@ -131607,6 +132022,7 @@
             },
             "meta": "(HAIL)",
             "name": "galactic-puck-3",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "magic-guard",
@@ -131660,6 +132076,7 @@
             },
             "meta": "(TAG PARTNER) (HAIL)",
             "name": "trainer-cheryl-2",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "thick-fat",
@@ -131765,6 +132182,7 @@
             },
             "meta": "(MULTI BATTLE with Galactic Titania) (HAIL)",
             "name": "galactic-oberon-2",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "truant",
@@ -131871,6 +132289,7 @@
             },
             "meta": "(MULTI BATTLE with Galactic Oberon) (HAIL)",
             "name": "galacticf-titania",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "serene-grace",
@@ -131969,6 +132388,7 @@
             },
             "meta": "(FOG)",
             "name": "galactic-proteus-2",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "shadow-tag",
@@ -132057,6 +132477,7 @@
             },
             "meta": "(OPTIONAL) (FOG)",
             "name": "galacticf-laomedeia-2",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "serene-grace",
@@ -132116,6 +132537,7 @@
             },
             "meta": "(FOG)",
             "name": "galacticf-larissa-2",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "aftermath",
@@ -132204,6 +132626,7 @@
             },
             "meta": "(TAG PARTNER) (FOG)",
             "name": "trainer-riley",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "super-luck",
@@ -132307,6 +132730,7 @@
             },
             "meta": "(MULTI BATTLE with Galactic Luna) (FOG)",
             "name": "galacticf-terra-3",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "torrent",
@@ -132412,6 +132836,7 @@
             },
             "meta": "(MULTI BATTLE with Galactic Terra) (FOG)",
             "name": "galactic-luna-3",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "speed-boost",
@@ -132514,6 +132939,7 @@
             },
             "meta": "(HAIL)",
             "name": "galacticf-europa-2",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "snow-cloak",
@@ -132599,6 +133025,7 @@
             },
             "meta": "(HAIL)",
             "name": "galactic-pluto-4",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "clear-body",
@@ -132685,6 +133112,7 @@
             },
             "meta": "(HAIL)",
             "name": "galactic-prospero-3",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "magic-guard",
@@ -132772,6 +133200,7 @@
             },
             "meta": "(DOUBLE BATTLE, Rock Smash + Cut Path) (HAIL)",
             "name": "galactic-squad-amalthia",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "intimidate",
@@ -132858,6 +133287,7 @@
             },
             "meta": "(Strength + Rock Smash Path) (HAIL)",
             "name": "galacticf-miranda",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "serene-grace",
@@ -132945,6 +133375,7 @@
             },
             "meta": "(Strength + Cut Path) (HAIL)",
             "name": "galacticf-angrboda",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "aftermath",
@@ -133031,6 +133462,7 @@
             },
             "meta": "(Split) (HAIL)",
             "name": "galacticf-ariel",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "synchronize",
@@ -133093,6 +133525,7 @@
             },
             "meta": "(Split) (HAIL)",
             "name": "galacticf-umbriel",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "synchronize",
@@ -133154,6 +133587,7 @@
             },
             "meta": "(MULTI BATTLE with Galactic Hippocamp)",
             "name": "galactic-callisto-3",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "magic-guard",
@@ -133214,6 +133648,7 @@
             },
             "meta": "(MULTI BATTLE with Galactic Callisto)",
             "name": "galactic-hippocamp-2",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "sand-stream",
@@ -133274,6 +133709,7 @@
             },
             "meta": "(TAG PARTNER) (RAIN)",
             "name": "trainer-marley-2",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "technician",
@@ -133375,6 +133811,7 @@
             },
             "meta": "(MULTI BATTLE with Galactic Triton) (RAIN)",
             "name": "galactic-neptune-3",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "swift-swim",
@@ -133478,6 +133915,7 @@
             },
             "meta": "(MULTI BATTLE with Galactic Neptune) (RAIN)",
             "name": "galactic-triton-3",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "drizzle",
@@ -133559,6 +133997,7 @@
             ],
             "area": "spear-pillar",
             "name": "tag-partner-mira*",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "magic-guard",
@@ -133657,6 +134096,7 @@
             "area": "spear-pillar",
             "meta": "(MUTLI BATTLE with Galactic Venus)",
             "name": "galactic-mercury-5",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "limber",
@@ -133716,6 +134156,7 @@
             },
             "meta": "(MULTI BATTLE with Galactic Mercury)",
             "name": "galactic-venus",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "drought",
@@ -133771,6 +134212,7 @@
             "area": "spear-pillar",
             "meta": "(TAG PARTNER, if Player chose Chimchar)",
             "name": "barry",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "truant",
@@ -133868,6 +134310,7 @@
             "area": "spear-pillar",
             "meta": "(TAG PARTNER if Player chose Piplup)",
             "name": "barry-6",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "truant",
@@ -133965,6 +134408,7 @@
             "area": "spear-pillar",
             "meta": "(TAG PARTNER, if Player chose Turtwig)",
             "name": "barry-7",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "truant",
@@ -134068,6 +134512,7 @@
             },
             "meta": "(MULTI BATTLE with Commander Jupiter)",
             "name": "commander-mars-3",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "sand-veil",
@@ -134169,6 +134614,7 @@
             },
             "meta": "(MULTI BATTLE with Commander Mars)",
             "name": "commander-jupiter-3",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "intimidate",
@@ -134269,6 +134715,7 @@
             },
             "meta": "(DOUBLE)*",
             "name": "cyrus",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "magic-guard",
@@ -134365,6 +134812,7 @@
             "area": "distortion-world",
             "meta": "(SHADOW TAG)*",
             "name": "cyrus-2",
+            "split": "galactic",
             "team": [
                 {
                     "ability": "",
@@ -134394,6 +134842,7 @@
             },
             "meta": "(PERMANENT RAIN)",
             "name": "swimmerf-miranda",
+            "split": "elite-four",
             "team": [
                 {
                     "ability": "swift-swim",
@@ -134465,6 +134914,7 @@
             },
             "meta": "(PERMANENT RAIN)",
             "name": "swimmerf-aubree",
+            "split": "elite-four",
             "team": [
                 {
                     "ability": "filter",
@@ -134536,6 +134986,7 @@
             },
             "meta": "(PERMANENT RAIN)",
             "name": "swimmerf-paige",
+            "split": "elite-four",
             "team": [
                 {
                     "ability": "filter",
@@ -134607,6 +135058,7 @@
             },
             "meta": "(PERMANENT RAIN)",
             "name": "swimmer-wesley",
+            "split": "elite-four",
             "team": [
                 {
                     "ability": "swift-swim",
@@ -134678,6 +135130,7 @@
             },
             "meta": "(PERMANENT RAIN)",
             "name": "sailor-zachariah",
+            "split": "elite-four",
             "team": [
                 {
                     "ability": "levitate",
@@ -134749,6 +135202,7 @@
             },
             "meta": "(PERMANENT RAIN)",
             "name": "swimmer-francisco",
+            "split": "elite-four",
             "team": [
                 {
                     "ability": "lightning-rod",
@@ -134828,6 +135282,7 @@
             },
             "meta": "(PERMANENT RAIN)",
             "name": "swimmerf-ledecky",
+            "split": "elite-four",
             "team": [
                 {
                     "ability": "simple",
@@ -134873,6 +135328,7 @@
             ],
             "area": "victory-road",
             "name": "cameraman-matt",
+            "split": "elite-four",
             "team": [
                 {
                     "ability": "simple",
@@ -134968,6 +135424,7 @@
             ],
             "area": "victory-road",
             "name": "roughneck-wyatt",
+            "split": "elite-four",
             "team": [
                 {
                     "ability": "thick-fat",
@@ -135063,6 +135520,7 @@
             ],
             "area": "victory-road",
             "name": "blackbelt-roku",
+            "split": "elite-four",
             "team": [
                 {
                     "ability": "clear-body",
@@ -135158,6 +135616,7 @@
             ],
             "area": "victory-road",
             "name": "beauty-jasmine-❤-2",
+            "split": "elite-four",
             "team": [
                 {
                     "ability": "clear-body",
@@ -135253,6 +135712,7 @@
             ],
             "area": "victory-road",
             "name": "aroma-lady-fadel",
+            "split": "elite-four",
             "team": [
                 {
                     "ability": "aftermath",
@@ -135348,6 +135808,7 @@
             ],
             "area": "victory-road",
             "name": "collector-tobias",
+            "split": "elite-four",
             "team": [
                 {
                     "ability": "pressure",
@@ -135443,6 +135904,7 @@
             ],
             "area": "victory-road",
             "name": "clown-julia",
+            "split": "elite-four",
             "team": [
                 {
                     "ability": "drizzle",
@@ -135538,6 +136000,7 @@
             ],
             "area": "victory-road",
             "name": "hiker-jj-ahern",
+            "split": "elite-four",
             "team": [
                 {
                     "ability": "lightning-rod",
@@ -135633,6 +136096,7 @@
             ],
             "area": "victory-road",
             "name": "bug-catcher-ford",
+            "split": "elite-four",
             "team": [
                 {
                     "ability": "static",
@@ -135728,6 +136192,7 @@
             ],
             "area": "victory-road",
             "name": "ruin-maniac-greg",
+            "split": "elite-four",
             "team": [
                 {
                     "ability": "sand-stream",
@@ -135824,6 +136289,7 @@
             "area": "victory-road",
             "meta": "(Zoe wrote this)                                                                                       .",
             "name": "idol-zoe,-the-best-trainer-in-the-game,-best-idol,-and-the-hardest-trainer-you-will-ever-face",
+            "split": "elite-four",
             "team": [
                 {
                     "ability": "snow-cloak",
@@ -135922,6 +136388,7 @@
             ],
             "area": "victory-road",
             "name": "dragon-tamer-clinton",
+            "split": "elite-four",
             "team": [
                 {
                     "ability": "intimidate",
@@ -136019,6 +136486,7 @@
             "area": "victory-road",
             "meta": "(Player picked Chimchar)",
             "name": "barry-6-2",
+            "split": "elite-four",
             "team": [
                 {
                     "ability": "truant",
@@ -136116,6 +136584,7 @@
             "area": "victory-road",
             "meta": "(Player picked Piplup)",
             "name": "barry-6-3",
+            "split": "elite-four",
             "team": [
                 {
                     "ability": "truant",
@@ -136213,6 +136682,7 @@
             "area": "victory-road",
             "meta": "(Player picked Turtwig)",
             "name": "barry-6-4",
+            "split": "elite-four",
             "team": [
                 {
                     "ability": "truant",
@@ -136312,6 +136782,7 @@
             },
             "meta": "(SUPERBOSS) (DOUBLE, PERMANENT TRICK ROOM)*",
             "name": "sinister-hooded-figure-",
+            "split": "elite-four",
             "team": [
                 {
                     "ability": "solid-rock",
@@ -136413,6 +136884,7 @@
             },
             "meta": "(Permanent Rain)",
             "name": "elite-four-aaron",
+            "split": "elite-four",
             "team": [
                 {
                     "ability": "heatproof",
@@ -136513,6 +136985,7 @@
             },
             "meta": "(Permanent Sandstorm)",
             "name": "elite-four-bertha",
+            "split": "elite-four",
             "team": [
                 {
                     "ability": "solid-rock",
@@ -136608,6 +137081,7 @@
             ],
             "area": "victory-road",
             "name": "elite-four-flint",
+            "split": "elite-four",
             "team": [
                 {
                     "ability": "drought",
@@ -136706,6 +137180,7 @@
             ],
             "area": "victory-road",
             "name": "elite-four-lucian",
+            "split": "elite-four",
             "team": [
                 {
                     "ability": "simple",
@@ -136802,6 +137277,7 @@
             "area": "victory-road",
             "meta": "(Permanent Gravity)",
             "name": "champion-cynthia",
+            "split": "elite-four",
             "team": [
                 {
                     "ability": "rough-skin",
