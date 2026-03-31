@@ -372,6 +372,12 @@ function getDamage(attacker, defender, move) {
 function getModifiedStatGen4(poke, stages, stat) {
 	var base = getPokeStat(poke, stat);
 	var stage = stages[stat];
-	var modifiers = [25, 28, 33, 40, 50, 66, 100, 150, 200, 250, 300, 350, 400];
-	return parseInt(base * modifiers[stage + 6] / 100);
+	var n = 2;
+	var d = 2;
+	if (stage > 0) {
+		n += stage;
+	} else {
+		d += -stage;
+	}
+	return parseInt(base * n / d);
 }
