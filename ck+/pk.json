@@ -33768,7 +33768,7 @@
             "category": "special",
             "extra": [],
             "index": 130,
-            "name": "solar-beam",
+            "name": "solarbeam",
             "power": 120,
             "pp": 15,
             "priority": 0,
@@ -34601,7 +34601,7 @@
                 "contact"
             ],
             "index": 185,
-            "name": "faint-attack",
+            "name": "feint-attack",
             "power": 60,
             "pp": 20,
             "priority": 0,
@@ -40984,7 +40984,7 @@
                 },
                 {
                     "level": 10,
-                    "move": "faint-attack"
+                    "move": "feint-attack"
                 },
                 {
                     "level": 15,
@@ -48155,7 +48155,7 @@
                 },
                 {
                     "level": 9,
-                    "move": "faint-attack"
+                    "move": "feint-attack"
                 },
                 {
                     "level": 13,
@@ -48468,7 +48468,7 @@
             "learnset": [
                 {
                     "level": 1,
-                    "move": "faint-attack"
+                    "move": "feint-attack"
                 },
                 {
                     "level": 1,
@@ -49784,7 +49784,7 @@
                 },
                 {
                     "level": 29,
-                    "move": "faint-attack"
+                    "move": "feint-attack"
                 },
                 {
                     "level": 32,
@@ -50821,7 +50821,7 @@
                 },
                 {
                     "level": 18,
-                    "move": "faint-attack"
+                    "move": "feint-attack"
                 },
                 {
                     "level": 22,
@@ -52334,7 +52334,7 @@
                 },
                 {
                     "level": 14,
-                    "move": "faint-attack"
+                    "move": "feint-attack"
                 },
                 {
                     "level": 17,
@@ -53585,7 +53585,7 @@
                 },
                 {
                     "level": 1,
-                    "move": "faint-attack"
+                    "move": "feint-attack"
                 },
                 {
                     "level": 1,
@@ -55328,7 +55328,7 @@
                 },
                 {
                     "level": 19,
-                    "move": "faint-attack"
+                    "move": "feint-attack"
                 },
                 {
                     "level": 25,
@@ -58675,7 +58675,7 @@
                 },
                 {
                     "level": 16,
-                    "move": "faint-attack"
+                    "move": "feint-attack"
                 },
                 {
                     "level": 18,
@@ -59326,7 +59326,7 @@
                 },
                 {
                     "level": 10,
-                    "move": "faint-attack"
+                    "move": "feint-attack"
                 },
                 {
                     "level": 15,
@@ -60695,7 +60695,7 @@
                 },
                 {
                     "level": 7,
-                    "move": "faint-attack"
+                    "move": "feint-attack"
                 },
                 {
                     "level": 12,
@@ -63175,7 +63175,7 @@
                 },
                 {
                     "level": 17,
-                    "move": "faint-attack"
+                    "move": "feint-attack"
                 },
                 {
                     "level": 25,
@@ -63675,7 +63675,7 @@
                 },
                 {
                     "level": 9,
-                    "move": "faint-attack"
+                    "move": "feint-attack"
                 },
                 {
                     "level": 13,
@@ -68768,7 +68768,7 @@
                 },
                 {
                     "level": 21,
-                    "move": "faint-attack"
+                    "move": "feint-attack"
                 },
                 {
                     "level": 27,
@@ -69928,7 +69928,7 @@
                 },
                 {
                     "level": 13,
-                    "move": "faint-attack"
+                    "move": "feint-attack"
                 },
                 {
                     "level": 19,
@@ -74952,7 +74952,7 @@
                 },
                 {
                     "level": 20,
-                    "move": "faint-attack"
+                    "move": "feint-attack"
                 },
                 {
                     "level": 23,
@@ -77150,7 +77150,7 @@
                 },
                 {
                     "level": 8,
-                    "move": "faint-attack"
+                    "move": "feint-attack"
                 },
                 {
                     "level": 13,
@@ -77794,7 +77794,7 @@
                 },
                 {
                     "level": 7,
-                    "move": "faint-attack"
+                    "move": "feint-attack"
                 },
                 {
                     "level": 10,
@@ -78641,7 +78641,7 @@
                 },
                 {
                     "level": 5,
-                    "move": "faint-attack"
+                    "move": "feint-attack"
                 },
                 {
                     "level": 10,
@@ -79292,7 +79292,7 @@
                 },
                 {
                     "level": 25,
-                    "move": "faint-attack"
+                    "move": "feint-attack"
                 },
                 {
                     "level": 29,
@@ -79931,7 +79931,7 @@
                 },
                 {
                     "level": 35,
-                    "move": "faint-attack"
+                    "move": "feint-attack"
                 },
                 {
                     "level": 40,
@@ -81850,7 +81850,7 @@
                 },
                 {
                     "level": 7,
-                    "move": "faint-attack"
+                    "move": "feint-attack"
                 },
                 {
                     "level": 10,
@@ -84323,7 +84323,7 @@
                 },
                 {
                     "level": 19,
-                    "move": "faint-attack"
+                    "move": "feint-attack"
                 },
                 {
                     "level": 25,
@@ -88330,7 +88330,7 @@
                 },
                 {
                     "level": 15,
-                    "move": "faint-attack"
+                    "move": "feint-attack"
                 },
                 {
                     "level": 18,
@@ -89001,7 +89001,7 @@
                 },
                 {
                     "level": 30,
-                    "move": "faint-attack"
+                    "move": "feint-attack"
                 },
                 {
                     "level": 42,
@@ -89466,7 +89466,7 @@
                 },
                 {
                     "level": 13,
-                    "move": "faint-attack"
+                    "move": "feint-attack"
                 },
                 {
                     "level": 19,
@@ -89719,7 +89719,7 @@
                 },
                 {
                     "level": 25,
-                    "move": "faint-attack"
+                    "move": "feint-attack"
                 },
                 {
                     "level": 30,
@@ -90064,7 +90064,7 @@
                 },
                 {
                     "level": 14,
-                    "move": "faint-attack"
+                    "move": "feint-attack"
                 },
                 {
                     "level": 21,
@@ -90285,7 +90285,7 @@
                 },
                 {
                     "level": 1,
-                    "move": "faint-attack"
+                    "move": "feint-attack"
                 },
                 {
                     "level": 8,
@@ -92578,7 +92578,7 @@
                 },
                 {
                     "level": 18,
-                    "move": "faint-attack"
+                    "move": "feint-attack"
                 },
                 {
                     "level": 22,
@@ -92715,7 +92715,7 @@
                 },
                 {
                     "level": 17,
-                    "move": "faint-attack"
+                    "move": "feint-attack"
                 },
                 {
                     "level": 20,
@@ -92841,7 +92841,7 @@
                 },
                 {
                     "level": 8,
-                    "move": "faint-attack"
+                    "move": "feint-attack"
                 },
                 {
                     "level": 13,
@@ -93075,7 +93075,7 @@
                 },
                 {
                     "level": 14,
-                    "move": "faint-attack"
+                    "move": "feint-attack"
                 },
                 {
                     "level": 19,
@@ -94051,7 +94051,7 @@
                 },
                 {
                     "level": 17,
-                    "move": "faint-attack"
+                    "move": "feint-attack"
                 },
                 {
                     "level": 22,
@@ -96827,7 +96827,7 @@
                 },
                 {
                     "level": 1,
-                    "move": "faint-attack"
+                    "move": "feint-attack"
                 },
                 {
                     "level": 1,
@@ -99924,7 +99924,7 @@
                 },
                 {
                     "level": 29,
-                    "move": "faint-attack"
+                    "move": "feint-attack"
                 },
                 {
                     "level": 35,
@@ -100983,7 +100983,7 @@
                         "metronome"
                     ],
                     "name": "mime-jr",
-                    "nature": "gentle"
+                    "nature": "bashful"
                 },
                 {
                     "ability": "intimidate",
@@ -100995,7 +100995,7 @@
                         "lovely-kiss"
                     ],
                     "name": "snubbull",
-                    "nature": "bashful"
+                    "nature": "modest"
                 },
                 {
                     "ability": "magic-guard",
@@ -101007,7 +101007,7 @@
                         "yawn"
                     ],
                     "name": "cleffa",
-                    "nature": "careful"
+                    "nature": "calm"
                 }
             ]
         },
@@ -102448,7 +102448,7 @@
                         "curse"
                     ],
                     "name": "munchlax",
-                    "nature": "careful\/bold"
+                    "nature": "bold"
                 },
                 {
                     "ability": "natural-cure",
@@ -102462,7 +102462,7 @@
                         "aerial-ace"
                     ],
                     "name": "swablu",
-                    "nature": "hardy\/adamant"
+                    "nature": "adamant"
                 },
                 {
                     "ability": "scrappy",
@@ -102476,7 +102476,7 @@
                         "quick-attack"
                     ],
                     "name": "buneary",
-                    "nature": "brave\/docile"
+                    "nature": "docile"
                 },
                 {
                     "ability": "leaf-guard",
@@ -102489,7 +102489,7 @@
                         "rock-smash"
                     ],
                     "name": "grotle",
-                    "nature": "timid\/modest"
+                    "nature": "modest"
                 },
                 {
                     "ability": "blaze",
@@ -102502,7 +102502,7 @@
                         "fire-punch"
                     ],
                     "name": "chimchar",
-                    "nature": "mild\/impish"
+                    "nature": "impish"
                 },
                 {
                     "ability": "torrent",
@@ -102516,7 +102516,7 @@
                         "return"
                     ],
                     "name": "piplup",
-                    "nature": "hardy\/bashful"
+                    "nature": "bashful"
                 }
             ]
         },
@@ -102543,7 +102543,7 @@
                         "curse"
                     ],
                     "name": "munchlax",
-                    "nature": "naughty\/jolly"
+                    "nature": "jolly"
                 },
                 {
                     "ability": "natural-cure",
@@ -102557,7 +102557,7 @@
                         "aerial-ace"
                     ],
                     "name": "swablu",
-                    "nature": "docile\/brave"
+                    "nature": "brave"
                 },
                 {
                     "ability": "scrappy",
@@ -102571,7 +102571,7 @@
                         "quick-attack"
                     ],
                     "name": "buneary",
-                    "nature": "impish\/bold"
+                    "nature": "bold"
                 },
                 {
                     "ability": "overgrow",
@@ -102584,7 +102584,7 @@
                         "rock-smash"
                     ],
                     "name": "turtwig",
-                    "nature": "naughty\/mild"
+                    "nature": "mild"
                 },
                 {
                     "ability": "blaze",
@@ -102597,7 +102597,7 @@
                         "fire-punch"
                     ],
                     "name": "monferno",
-                    "nature": "hardy\/bashful"
+                    "nature": "bashful"
                 },
                 {
                     "ability": "torrent",
@@ -102611,7 +102611,7 @@
                         "return"
                     ],
                     "name": "piplup",
-                    "nature": "docile\/quiet"
+                    "nature": "quiet"
                 }
             ]
         },
@@ -102638,7 +102638,7 @@
                         "curse"
                     ],
                     "name": "munchlax",
-                    "nature": "timid\/docile"
+                    "nature": "docile"
                 },
                 {
                     "ability": "natural-cure",
@@ -102652,7 +102652,7 @@
                         "aerial-ace"
                     ],
                     "name": "swablu",
-                    "nature": "serious\/calm"
+                    "nature": "calm"
                 },
                 {
                     "ability": "scrappy",
@@ -102666,7 +102666,7 @@
                         "quick-attack"
                     ],
                     "name": "buneary",
-                    "nature": "naive\/careful"
+                    "nature": "careful"
                 },
                 {
                     "ability": "overgrow",
@@ -102679,7 +102679,7 @@
                         "rock-smash"
                     ],
                     "name": "turtwig",
-                    "nature": "timid\/modest"
+                    "nature": "modest"
                 },
                 {
                     "ability": "blaze",
@@ -102692,7 +102692,7 @@
                         "fire-punch"
                     ],
                     "name": "chimchar",
-                    "nature": "hardy\/hardy"
+                    "nature": "hardy"
                 },
                 {
                     "ability": "swift-swim",
@@ -102706,7 +102706,7 @@
                         "return"
                     ],
                     "name": "prinplup",
-                    "nature": "bashful\/hasty"
+                    "nature": "hasty"
                 }
             ]
         },
@@ -102755,7 +102755,7 @@
                         "selfdestruct",
                         "flamethrower",
                         "poison-gas",
-                        "faint-attack"
+                        "feint-attack"
                     ],
                     "name": "stunky",
                     "nature": "relaxed"
@@ -103362,7 +103362,7 @@
                         "reflect"
                     ],
                     "name": "smeargle",
-                    "nature": "hardy"
+                    "nature": "rash"
                 },
                 {
                     "ability": "levitate",
@@ -103376,7 +103376,7 @@
                         "hp-fighting"
                     ],
                     "name": "misdreavus",
-                    "nature": "timid"
+                    "nature": "docile"
                 },
                 {
                     "ability": "solar-power",
@@ -103390,7 +103390,7 @@
                         "hp-grass"
                     ],
                     "name": "houndour",
-                    "nature": "careful"
+                    "nature": "hardy"
                 },
                 {
                     "ability": "inner-focus",
@@ -103404,7 +103404,7 @@
                         "poison-fang"
                     ],
                     "name": "golbat",
-                    "nature": "lax"
+                    "nature": "naive"
                 },
                 {
                     "ability": "rock-head",
@@ -103418,7 +103418,7 @@
                         "rock-climb"
                     ],
                     "name": "bagon",
-                    "nature": "adamant"
+                    "nature": "docile"
                 }
             ]
         },
@@ -103450,7 +103450,7 @@
                         "will-o-wisp"
                     ],
                     "name": "duskull",
-                    "nature": "quiet"
+                    "nature": "timid"
                 },
                 {
                     "ability": "levitate",
@@ -103464,7 +103464,7 @@
                         "psybeam"
                     ],
                     "name": "lunatone",
-                    "nature": "sassy"
+                    "nature": "mild"
                 },
                 {
                     "ability": "super-luck",
@@ -103478,7 +103478,7 @@
                         "steel-wing"
                     ],
                     "name": "murkrow",
-                    "nature": "timid"
+                    "nature": "mild"
                 },
                 {
                     "ability": "synchronize",
@@ -103492,7 +103492,7 @@
                         "double-kick"
                     ],
                     "name": "umbreon",
-                    "nature": "naughty"
+                    "nature": "calm"
                 },
                 {
                     "ability": "intimidate",
@@ -103506,7 +103506,7 @@
                         "shadow-sneak"
                     ],
                     "name": "ariados",
-                    "nature": "rash"
+                    "nature": "adamant"
                 }
             ]
         },
@@ -103633,7 +103633,7 @@
                     "moves": [
                         "seed-bomb",
                         "selfdestruct",
-                        "faint-attack",
+                        "feint-attack",
                         "headbutt"
                     ],
                     "name": "seedot",
@@ -104821,7 +104821,7 @@
                     "level": 22,
                     "moves": [
                         "explosion",
-                        "solar-beam",
+                        "solarbeam",
                         "sleep-powder",
                         "psychic"
                     ],
@@ -104925,7 +104925,7 @@
                         "dragon-dance"
                     ],
                     "name": "shelgon",
-                    "nature": "hady"
+                    "nature": "hardy"
                 },
                 {
                     "ability": "aftermath",
@@ -105279,7 +105279,7 @@
                 {
                     "ability": "levitate",
                     "gender": "female",
-                    "item": "wide-lens",
+                    "item": "white-herb",
                     "level": 23,
                     "moves": [
                         "ominous-wind",
@@ -105769,7 +105769,7 @@
                     "moves": [
                         "sleep-powder",
                         "sludge-bomb",
-                        "solar-beam",
+                        "solarbeam",
                         "fire-ball"
                     ],
                     "name": "gloom",
@@ -105865,7 +105865,7 @@
                 {
                     "ability": "chlorophyll",
                     "gender": "male",
-                    "item": "expert-belt",
+                    "item": "white-herb",
                     "level": 22,
                     "moves": [
                         "swallow",
@@ -107908,7 +107908,7 @@
                         "nasty-plot",
                         "flamethrower",
                         "destiny-bond",
-                        "faint-attack"
+                        "feint-attack"
                     ],
                     "name": "houndoom",
                     "nature": "bold"
@@ -107920,12 +107920,12 @@
                     "level": 31,
                     "moves": [
                         "aerial-ace",
-                        "faint-attack",
+                        "feint-attack",
                         "swift",
                         "tailwind"
                     ],
                     "name": "noctowl",
-                    "nature": "sassy"
+                    "nature": "serious"
                 },
                 {
                     "ability": "tinted-lens",
@@ -108600,7 +108600,7 @@
                     "level": 34,
                     "moves": [
                         "swords-dance",
-                        "faint-attack",
+                        "feint-attack",
                         "aerial-ace",
                         "brick-break"
                     ],
@@ -108645,7 +108645,7 @@
                     "level": 33,
                     "moves": [
                         "shock-wave",
-                        "faint-attack",
+                        "feint-attack",
                         "light-screen",
                         "reflect"
                     ],
@@ -108659,7 +108659,7 @@
                     "level": 32,
                     "moves": [
                         "aerial-ace",
-                        "faint-attack",
+                        "feint-attack",
                         "earthquake",
                         "rock-slide"
                     ],
@@ -108674,7 +108674,7 @@
                     "moves": [
                         "dragon-dance",
                         "vicegrip",
-                        "faint-attack",
+                        "feint-attack",
                         "aerial-ace"
                     ],
                     "name": "crawdaunt",
@@ -108805,7 +108805,7 @@
                     "item": "enigma-berry",
                     "level": 33,
                     "moves": [
-                        "faint-attack",
+                        "feint-attack",
                         "double-team",
                         "baton-pass",
                         "substitute"
@@ -108835,7 +108835,7 @@
                     "moves": [
                         "swords-dance",
                         "iron-head",
-                        "faint-attack",
+                        "feint-attack",
                         "vital-throw"
                     ],
                     "name": "mawile",
@@ -108867,7 +108867,7 @@
                         "tailwind",
                         "u-turn",
                         "aerial-ace",
-                        "faint-attack"
+                        "feint-attack"
                     ],
                     "name": "xatu",
                     "nature": "adamant"
@@ -108894,7 +108894,7 @@
                     "moves": [
                         "tailwind",
                         "aerial-ace",
-                        "faint-attack",
+                        "feint-attack",
                         "aura-sphere"
                     ],
                     "name": "murkrow",
@@ -109035,7 +109035,7 @@
                         "shadow-claw"
                     ],
                     "name": "persian",
-                    "nature": "relaxed"
+                    "nature": "brave"
                 },
                 {
                     "ability": "hyper-cutter",
@@ -109049,7 +109049,7 @@
                         "poison-tail"
                     ],
                     "name": "seviper",
-                    "nature": "gentle"
+                    "nature": "mild"
                 },
                 {
                     "ability": "solid-rock",
@@ -109200,7 +109200,7 @@
                     "moves": [
                         "swords-dance",
                         "aerial-ace",
-                        "faint-attack",
+                        "feint-attack",
                         "aura-sphere"
                     ],
                     "name": "absol",
@@ -109215,7 +109215,7 @@
                         "needle-arm",
                         "astonish",
                         "confuse-ray",
-                        "faint-attack"
+                        "feint-attack"
                     ],
                     "name": "cacturne",
                     "nature": "hasty"
@@ -109249,7 +109249,7 @@
                     "nature": "sassy"
                 },
                 {
-                    "ability": "levitate",
+                    "ability": "blaze",
                     "gender": "unknown",
                     "item": "jaboca-berry",
                     "level": 32,
@@ -110459,7 +110459,7 @@
                     "item": "petaya-berry",
                     "level": 40,
                     "moves": [
-                        "solar-beam",
+                        "solarbeam",
                         "ancientpower",
                         "sleep-powder",
                         "water-ball"
@@ -111430,7 +111430,7 @@
                         "flamethrower"
                     ],
                     "name": "castform",
-                    "nature": "timid"
+                    "nature": "hardy"
                 }
             ]
         },
@@ -111547,7 +111547,7 @@
                         "slack-off"
                     ],
                     "name": "munchlax",
-                    "nature": "rash\/adamant"
+                    "nature": "rash"
                 },
                 {
                     "ability": "serene-grace",
@@ -111561,7 +111561,7 @@
                         "roost"
                     ],
                     "name": "altaria",
-                    "nature": "brave\/hardy"
+                    "nature": "brave"
                 },
                 {
                     "ability": "scrappy",
@@ -111575,7 +111575,7 @@
                         "low-kick"
                     ],
                     "name": "lopunny",
-                    "nature": "naughty\/jolly"
+                    "nature": "naughty"
                 },
                 {
                     "ability": "thick-fat",
@@ -111589,7 +111589,7 @@
                         "razor-leaf"
                     ],
                     "name": "torterra",
-                    "nature": "brave\/mild"
+                    "nature": "brave"
                 },
                 {
                     "ability": "blaze",
@@ -111603,7 +111603,7 @@
                         "assist"
                     ],
                     "name": "monferno",
-                    "nature": "gentle\/careful"
+                    "nature": "gentle"
                 },
                 {
                     "ability": "swift-swim",
@@ -111617,7 +111617,7 @@
                         "drill-peck"
                     ],
                     "name": "prinplup",
-                    "nature": "naive\/impish"
+                    "nature": "naive"
                 }
             ]
         },
@@ -111644,7 +111644,7 @@
                         "slack-off"
                     ],
                     "name": "munchlax",
-                    "nature": "hardy\/brave"
+                    "nature": "brave"
                 },
                 {
                     "ability": "serene-grace",
@@ -111658,7 +111658,7 @@
                         "roost"
                     ],
                     "name": "altaria",
-                    "nature": "quirky\/bashful"
+                    "nature": "bashful"
                 },
                 {
                     "ability": "scrappy",
@@ -111672,13 +111672,13 @@
                         "low-kick"
                     ],
                     "name": "lopunny",
-                    "nature": "timid\/serious"
+                    "nature": "serious"
                 },
                 {
                     "ability": "leaf-guard",
                     "gender": "unknown",
                     "item": "",
-                    "level": 40,
+                    "level": 41,
                     "moves": [
                         "wood-hammer",
                         "stomp",
@@ -111686,7 +111686,7 @@
                         "crunch"
                     ],
                     "name": "grotle",
-                    "nature": "lax\/sassy"
+                    "nature": "sassy"
                 },
                 {
                     "ability": "iron-fist",
@@ -111700,7 +111700,7 @@
                         "torment"
                     ],
                     "name": "infernape",
-                    "nature": "lonely\/hardy"
+                    "nature": "hardy"
                 },
                 {
                     "ability": "swift-swim",
@@ -111714,7 +111714,7 @@
                         "drill-peck"
                     ],
                     "name": "prinplup",
-                    "nature": "calm\/lonely"
+                    "nature": "lonely"
                 }
             ]
         },
@@ -111741,7 +111741,7 @@
                         "slack-off"
                     ],
                     "name": "munchlax",
-                    "nature": "relaxed\/timid"
+                    "nature": "relaxed"
                 },
                 {
                     "ability": "serene-grace",
@@ -111755,7 +111755,7 @@
                         "roost"
                     ],
                     "name": "altaria",
-                    "nature": "docile\/lonely"
+                    "nature": "docile"
                 },
                 {
                     "ability": "scrappy",
@@ -111769,7 +111769,7 @@
                         "low-kick"
                     ],
                     "name": "lopunny",
-                    "nature": "sassy\/calm"
+                    "nature": "sassy"
                 },
                 {
                     "ability": "leaf-guard",
@@ -111783,7 +111783,7 @@
                         "crunch"
                     ],
                     "name": "grotle",
-                    "nature": "bashful\/bold"
+                    "nature": "bashful"
                 },
                 {
                     "ability": "blaze",
@@ -111797,7 +111797,7 @@
                         "assist"
                     ],
                     "name": "monferno",
-                    "nature": "quiet\/modest"
+                    "nature": "quiet"
                 },
                 {
                     "ability": "swift-swim",
@@ -111811,7 +111811,7 @@
                         "aerial-ace"
                     ],
                     "name": "empoleon",
-                    "nature": "bashful\/bashful"
+                    "nature": "bashful"
                 }
             ]
         },
@@ -112006,7 +112006,7 @@
                     "nature": "quiet"
                 },
                 {
-                    "ability": "filter",
+                    "ability": "battle-armor",
                     "gender": "unknown",
                     "item": "lum-berry",
                     "level": 42,
@@ -112419,7 +112419,7 @@
                 "format": "multi"
             },
             "meta": "(MULTI BATTLE With Psychic Mitchell)",
-            "name": "psychic--abigail",
+            "name": "psychic-abigail",
             "split": "wake",
             "team": [
                 {
@@ -112620,7 +112620,7 @@
             "split": "wake",
             "team": [
                 {
-                    "ability": "filter",
+                    "ability": "solid-rock",
                     "gender": "unknown",
                     "item": "chople-berry",
                     "level": 45,
@@ -112693,7 +112693,7 @@
                     "ability": "synchronize",
                     "gender": "unknown",
                     "item": "starf-berry",
-                    "level": 44,
+                    "level": 46,
                     "moves": [
                         "calm-mind",
                         "baton-pass",
@@ -112701,13 +112701,13 @@
                         "dark-pulse"
                     ],
                     "name": "umbreon",
-                    "nature": "mild"
+                    "nature": "bold"
                 },
                 {
                     "ability": "synchronize",
                     "gender": "unknown",
                     "item": "apicot-berry",
-                    "level": 44,
+                    "level": 48,
                     "moves": [
                         "calm-mind",
                         "baton-pass",
@@ -112715,13 +112715,13 @@
                         "signal-beam"
                     ],
                     "name": "espeon",
-                    "nature": "calm"
+                    "nature": "naughty"
                 },
                 {
                     "ability": "hydration",
                     "gender": "unknown",
                     "item": "starf-berry",
-                    "level": 44,
+                    "level": 46,
                     "moves": [
                         "calm-mind",
                         "baton-pass",
@@ -112729,13 +112729,13 @@
                         "acid-armor"
                     ],
                     "name": "vaporeon",
-                    "nature": "serious"
+                    "nature": "lonely"
                 },
                 {
                     "ability": "snow-cloak",
                     "gender": "unknown",
                     "item": "lansat-berry",
-                    "level": 44,
+                    "level": 46,
                     "moves": [
                         "calm-mind",
                         "baton-pass",
@@ -112743,13 +112743,13 @@
                         "earth-power"
                     ],
                     "name": "glaceon",
-                    "nature": "lonely"
+                    "nature": "gentle"
                 },
                 {
                     "ability": "static",
                     "gender": "unknown",
                     "item": "ganlon-berry",
-                    "level": 44,
+                    "level": 46,
                     "moves": [
                         "calm-mind",
                         "baton-pass",
@@ -112757,13 +112757,13 @@
                         "shadow-ball"
                     ],
                     "name": "jolteon",
-                    "nature": "brave"
+                    "nature": "sassy"
                 },
                 {
                     "ability": "magic-guard",
                     "gender": "unknown",
                     "item": "petaya-berry",
-                    "level": 44,
+                    "level": 46,
                     "moves": [
                         "calm-mind",
                         "baton-pass",
@@ -112771,7 +112771,7 @@
                         "hp-fire"
                     ],
                     "name": "leafeon",
-                    "nature": "hasty"
+                    "nature": "mild"
                 }
             ]
         },
@@ -112948,7 +112948,7 @@
                     "nature": "serious"
                 },
                 {
-                    "ability": "super-luck",
+                    "ability": "levitate",
                     "gender": "unknown",
                     "item": "expert-belt",
                     "level": 45,
@@ -113615,7 +113615,7 @@
                 "weather": "rain"
             },
             "meta": "(OPTIONAL)* (PERMANENT RAIN)",
-            "name": "tuber--chelsea",
+            "name": "tuber-chelsea",
             "split": "wake",
             "team": [
                 {
@@ -113661,7 +113661,7 @@
                 "weather": "rain"
             },
             "meta": "(GAUNTLET START)* (PERMANENT RAIN)",
-            "name": "swimmer--mary",
+            "name": "swimmer-mary",
             "split": "wake",
             "team": [
                 {
@@ -113779,7 +113779,7 @@
                 "weather": "rain"
             },
             "meta": "(GAUNTLET)* (PERMANENT RAIN)",
-            "name": "swimmer--haley",
+            "name": "swimmer-haley",
             "split": "wake",
             "team": [
                 {
@@ -113989,7 +113989,7 @@
                     "ability": "lightning-rod",
                     "gender": "unknown",
                     "item": "focus-sash",
-                    "level": 51,
+                    "level": 52,
                     "moves": [
                         "rock-wrecker",
                         "horn-drill",
@@ -113997,25 +113997,25 @@
                         "sleep-talk"
                     ],
                     "name": "rhydon",
-                    "nature": "quiet"
+                    "nature": "relaxed"
                 },
                 {
                     "ability": "cute-charm",
                     "gender": "unknown",
                     "item": "silk-scarf",
-                    "level": 57,
+                    "level": 58,
                     "moves": [
                         "fake-out",
                         "assist"
                     ],
                     "name": "delcatty",
-                    "nature": "relaxed"
+                    "nature": "sassy"
                 },
                 {
                     "ability": "technician",
                     "gender": "unknown",
                     "item": "focus-sash",
-                    "level": 50,
+                    "level": 51,
                     "moves": [
                         "aerial-ace",
                         "fury-cutter",
@@ -114023,26 +114023,26 @@
                         "sleep-talk"
                     ],
                     "name": "scyther",
-                    "nature": "gentle"
+                    "nature": "hasty"
                 },
                 {
                     "ability": "tangled-feet",
                     "gender": "unknown",
                     "item": "mago-berry",
-                    "level": 54,
+                    "level": 55,
                     "moves": [
                         "sleep-talk",
                         "assist",
                         "counter"
                     ],
                     "name": "spinda",
-                    "nature": "lonely"
+                    "nature": "relaxed"
                 },
                 {
                     "ability": "volt-absorb",
                     "gender": "unknown",
                     "item": "leftovers",
-                    "level": 50,
+                    "level": 51,
                     "moves": [
                         "charge-beam",
                         "sleep-talk",
@@ -114050,13 +114050,13 @@
                         "hyper-beam"
                     ],
                     "name": "lanturn",
-                    "nature": "hasty"
+                    "nature": "quiet"
                 },
                 {
                     "ability": "thick-fat",
                     "gender": "unknown",
                     "item": "lava-cookie",
-                    "level": 50,
+                    "level": 51,
                     "moves": [
                         "counter",
                         "petal-dance",
@@ -114064,7 +114064,7 @@
                         "ancientpower"
                     ],
                     "name": "meganium",
-                    "nature": "quiet"
+                    "nature": "relaxed"
                 }
             ]
         },
@@ -114872,7 +114872,7 @@
                 "weather": "rain"
             },
             "meta": "(PERMANENT RAIN)",
-            "name": "tuber--caitlyn",
+            "name": "tuber-caitlyn",
             "split": "wake",
             "team": [
                 {
@@ -115921,80 +115921,6 @@
                     ],
                     "name": "aggron",
                     "nature": "impish"
-                }
-            ]
-        },
-        {
-            "ai-flags": [],
-            "area": "route-212",
-            "name": "pkmn-ranger-allison",
-            "split": "byron",
-            "team": [
-                {
-                    "ability": "reckless",
-                    "gender": "unknown",
-                    "item": "choice-band",
-                    "level": 98,
-                    "moves": [
-                        "close-combat",
-                        "gunk-shot",
-                        "earthquake",
-                        "shadow-claw"
-                    ],
-                    "name": "primeape",
-                    "nature": "careful"
-                }
-            ]
-        },
-        {
-            "ai-flags": [
-                "basic",
-                "eval-att",
-                "expert"
-            ],
-            "area": "route-212",
-            "name": "pkmn-ranger-jeffery",
-            "split": "byron",
-            "team": [
-                {
-                    "ability": "intimidate",
-                    "gender": "unknown",
-                    "item": "quick-claw",
-                    "level": 95,
-                    "moves": [
-                        "outrage",
-                        "flare-blitz",
-                        "bulldoze",
-                        "superpower"
-                    ],
-                    "name": "arcanine",
-                    "nature": "relaxed"
-                }
-            ]
-        },
-        {
-            "ai-flags": [
-                "basic",
-                "eval-att",
-                "expert"
-            ],
-            "area": "route-212",
-            "name": "pkmn-ranger-taylor",
-            "split": "byron",
-            "team": [
-                {
-                    "ability": "swift-swim",
-                    "gender": "unknown",
-                    "item": "focus-band",
-                    "level": 98,
-                    "moves": [
-                        "counter",
-                        "mirror-coat",
-                        "ice-punch",
-                        "hydro-cannon"
-                    ],
-                    "name": "swampert",
-                    "nature": "serious"
                 }
             ]
         },
@@ -117055,7 +116981,7 @@
                         "toxic-spikes"
                     ],
                     "name": "venomoth",
-                    "nature": "docile"
+                    "nature": "naughty"
                 },
                 {
                     "ability": "super-luck",
@@ -117064,12 +116990,12 @@
                     "level": 50,
                     "moves": [
                         "swords-dance",
-                        "faint-attack",
+                        "feint-attack",
                         "aerial-ace",
                         "baton-pass"
                     ],
                     "name": "absol",
-                    "nature": "hasty"
+                    "nature": "jolly"
                 },
                 {
                     "ability": "rock-head",
@@ -117083,7 +117009,7 @@
                         "double-team"
                     ],
                     "name": "aggron",
-                    "nature": "bashful"
+                    "nature": "bold"
                 },
                 {
                     "ability": "magic-guard",
@@ -117097,7 +117023,7 @@
                         "psycho-cut"
                     ],
                     "name": "starmie",
-                    "nature": "docile"
+                    "nature": "gentle"
                 },
                 {
                     "ability": "intimidate",
@@ -117111,7 +117037,7 @@
                         "hp-water"
                     ],
                     "name": "pidgeot",
-                    "nature": "hasty"
+                    "nature": "lonely"
                 },
                 {
                     "ability": "lightning-rod",
@@ -117125,7 +117051,7 @@
                         "aerial-ace"
                     ],
                     "name": "marowak",
-                    "nature": "modest"
+                    "nature": "impish"
                 }
             ]
         },
@@ -117168,7 +117094,7 @@
                         "toxic-spikes",
                         "swords-dance",
                         "needle-arm",
-                        "faint-attack"
+                        "feint-attack"
                     ],
                     "name": "cacturne",
                     "nature": "adamant"
@@ -117778,7 +117704,7 @@
                     "level": 52,
                     "moves": [
                         "aerial-ace",
-                        "faint-attack",
+                        "feint-attack",
                         "heat-wave",
                         "tailwind"
                     ],
@@ -117895,7 +117821,7 @@
                         "rest",
                         "calm-mind",
                         "water-pulse",
-                        "solar-beam"
+                        "solarbeam"
                     ],
                     "name": "suicune",
                     "nature": "sassy"
@@ -117920,7 +117846,7 @@
                     "item": "focus-band",
                     "level": 55,
                     "moves": [
-                        "faint-attack",
+                        "feint-attack",
                         "aerial-ace",
                         "ice-shard",
                         "low-kick"
@@ -117999,7 +117925,7 @@
                     "nature": "quirky"
                 },
                 {
-                    "ability": "drought",
+                    "ability": "solid-rock",
                     "gender": "unknown",
                     "item": "quick-claw",
                     "level": 87,
@@ -118811,7 +118737,7 @@
                         "hyper-voice"
                     ],
                     "name": "clefable",
-                    "nature": "calm"
+                    "nature": "bold"
                 },
                 {
                     "ability": "magic-guard",
@@ -118825,7 +118751,7 @@
                         "thunder-wave"
                     ],
                     "name": "gardevoir",
-                    "nature": "bashful"
+                    "nature": "sassy"
                 },
                 {
                     "ability": "serene-grace",
@@ -118839,7 +118765,7 @@
                         "ancientpower"
                     ],
                     "name": "togekiss",
-                    "nature": "calm"
+                    "nature": "quirky"
                 },
                 {
                     "ability": "scrappy",
@@ -118853,7 +118779,7 @@
                         "hammer-arm"
                     ],
                     "name": "miltank",
-                    "nature": "hardy"
+                    "nature": "timid"
                 }
             ]
         },
@@ -119328,7 +119254,7 @@
                     "item": "occa-berry",
                     "level": 54,
                     "moves": [
-                        "solar-beam",
+                        "solarbeam",
                         "air-slash",
                         "stomp",
                         "twister"
@@ -119421,7 +119347,7 @@
                     "moves": [
                         "sleep-powder",
                         "psychic",
-                        "solar-beam",
+                        "solarbeam",
                         "ancientpower"
                     ],
                     "name": "exeggutor",
@@ -119630,7 +119556,7 @@
                     "ability": "swift-swim",
                     "gender": "unknown",
                     "item": "wide-lens",
-                    "level": 56,
+                    "level": 57,
                     "moves": [
                         "aqua-tail",
                         "megahorn",
@@ -119638,13 +119564,13 @@
                         "supersonic"
                     ],
                     "name": "seaking",
-                    "nature": "rash"
+                    "nature": "timid"
                 },
                 {
                     "ability": "swift-swim",
                     "gender": "unknown",
                     "item": "haban-berry",
-                    "level": 54,
+                    "level": 55,
                     "moves": [
                         "muddy-water",
                         "twister",
@@ -119658,7 +119584,7 @@
                     "ability": "swift-swim",
                     "gender": "unknown",
                     "item": "kings-rock",
-                    "level": 55,
+                    "level": 56,
                     "moves": [
                         "vicegrip",
                         "fury-cutter",
@@ -119666,13 +119592,13 @@
                         "rock-slide"
                     ],
                     "name": "kingler",
-                    "nature": "bashful"
+                    "nature": "lax"
                 },
                 {
                     "ability": "swift-swim",
                     "gender": "unknown",
                     "item": "white-herb",
-                    "level": 56,
+                    "level": 57,
                     "moves": [
                         "brick-break",
                         "drill-peck",
@@ -119705,7 +119631,7 @@
                     "ability": "magic-guard",
                     "gender": "unknown",
                     "item": "muscle-band",
-                    "level": 57,
+                    "level": 58,
                     "moves": [
                         "thunder",
                         "giga-impact",
@@ -119719,7 +119645,7 @@
                     "ability": "serene-grace",
                     "gender": "unknown",
                     "item": "leftovers",
-                    "level": 56,
+                    "level": 57,
                     "moves": [
                         "thunder",
                         "avalanche",
@@ -119727,13 +119653,13 @@
                         "ancientpower"
                     ],
                     "name": "lapras",
-                    "nature": "naughty"
+                    "nature": "calm"
                 },
                 {
                     "ability": "swift-swim",
                     "gender": "unknown",
                     "item": "rindo-berry",
-                    "level": 56,
+                    "level": 57,
                     "moves": [
                         "muddy-water",
                         "earth-power",
@@ -119741,13 +119667,13 @@
                         "waterfall"
                     ],
                     "name": "swampert",
-                    "nature": "naughty"
+                    "nature": "timid"
                 },
                 {
                     "ability": "swift-swim",
                     "gender": "unknown",
                     "item": "rindo-berry",
-                    "level": 57,
+                    "level": 58,
                     "moves": [
                         "head-smash",
                         "yawn",
@@ -119937,7 +119863,7 @@
             "split": "byron",
             "team": [
                 {
-                    "ability": "sand-stream",
+                    "ability": "levitate",
                     "gender": "unknown",
                     "item": "yache-berry",
                     "level": 56,
@@ -120478,7 +120404,7 @@
                     "level": 58,
                     "moves": [
                         "sleep-powder",
-                        "solar-beam",
+                        "solarbeam",
                         "water-ball",
                         "sludge-bomb"
                     ],
@@ -120555,7 +120481,7 @@
                     "moves": [
                         "heat-wave",
                         "ancientpower",
-                        "solar-beam",
+                        "solarbeam",
                         "earth-power"
                     ],
                     "name": "magcargo",
@@ -120583,7 +120509,7 @@
                     "moves": [
                         "fake-out",
                         "dark-pulse",
-                        "solar-beam",
+                        "solarbeam",
                         "heat-wave"
                     ],
                     "name": "shiftry",
@@ -121396,7 +121322,7 @@
                     "ability": "guts",
                     "gender": "unknown",
                     "item": "flame-orb",
-                    "level": 64,
+                    "level": 63,
                     "moves": [
                         "fake-out",
                         "cross-chop",
@@ -121410,7 +121336,7 @@
                     "ability": "intimidate",
                     "gender": "unknown",
                     "item": "wacan-berry",
-                    "level": 64,
+                    "level": 63,
                     "moves": [
                         "dragon-dance",
                         "ice-fang",
@@ -121418,13 +121344,13 @@
                         "earthquake"
                     ],
                     "name": "gyarados",
-                    "nature": "hasty"
+                    "nature": "calm"
                 },
                 {
-                    "ability": "solid-rock",
+                    "ability": "rock-head",
                     "gender": "unknown",
                     "item": "passho-berry",
-                    "level": 64,
+                    "level": 63,
                     "moves": [
                         "explosion",
                         "earthquake",
@@ -121438,7 +121364,7 @@
                     "ability": "thick-fat",
                     "gender": "unknown",
                     "item": "leftovers",
-                    "level": 63,
+                    "level": 62,
                     "moves": [
                         "curse",
                         "body-slam",
@@ -121446,7 +121372,7 @@
                         "pursuit"
                     ],
                     "name": "snorlax",
-                    "nature": "rash"
+                    "nature": "impish"
                 }
             ]
         },
@@ -121474,7 +121400,7 @@
                         "heat-wave"
                     ],
                     "name": "altaria",
-                    "nature": "jolly\/modest"
+                    "nature": "modest"
                 },
                 {
                     "ability": "scrappy",
@@ -121516,7 +121442,7 @@
                         "crunch"
                     ],
                     "name": "torterra",
-                    "nature": "quirky\/gentle"
+                    "nature": "gentle"
                 },
                 {
                     "ability": "iron-fist",
@@ -121530,7 +121456,7 @@
                         "hp-ice"
                     ],
                     "name": "infernape",
-                    "nature": "mild\/naive"
+                    "nature": "naive"
                 },
                 {
                     "ability": "swift-swim",
@@ -121544,7 +121470,7 @@
                         "drill-peck"
                     ],
                     "name": "empoleon",
-                    "nature": "hardy\/impish"
+                    "nature": "impish"
                 }
             ]
         },
@@ -121565,7 +121491,7 @@
             "split": "candice",
             "team": [
                 {
-                    "ability": "limber",
+                    "ability": "thick-fat",
                     "gender": "unknown",
                     "item": "pecha-berry",
                     "level": 64,
@@ -121647,7 +121573,7 @@
                     "level": 64,
                     "moves": [
                         "stealth-rock",
-                        "solar-beam",
+                        "solarbeam",
                         "earth-power",
                         "lava-plume"
                     ],
@@ -121726,7 +121652,7 @@
                         "earth-power"
                     ],
                     "name": "lunatone",
-                    "nature": "quiet"
+                    "nature": "calm"
                 },
                 {
                     "ability": "snow-cloak",
@@ -121740,7 +121666,7 @@
                         "shadow-ball"
                     ],
                     "name": "froslass",
-                    "nature": "naughty"
+                    "nature": "calm"
                 },
                 {
                     "ability": "magic-guard",
@@ -121754,7 +121680,7 @@
                         "flamethrower"
                     ],
                     "name": "clefable",
-                    "nature": "naive"
+                    "nature": "hardy"
                 },
                 {
                     "ability": "trace",
@@ -121768,7 +121694,7 @@
                         "thunderbolt"
                     ],
                     "name": "gardevoir",
-                    "nature": "adamant"
+                    "nature": "impish"
                 }
             ]
         },
@@ -122781,7 +122707,7 @@
                     "nature": "relaxed"
                 },
                 {
-                    "ability": "adaptability",
+                    "ability": "rock-head",
                     "gender": "unknown",
                     "item": "",
                     "level": 94,
@@ -122853,7 +122779,7 @@
                     "nature": "quirky"
                 },
                 {
-                    "ability": "adaptability",
+                    "ability": "overgrow",
                     "gender": "unknown",
                     "item": "",
                     "level": 98,
@@ -123787,7 +123713,7 @@
                         "earth-power"
                     ],
                     "name": "tyranitar",
-                    "nature": "serious"
+                    "nature": "quirky"
                 }
             ]
         },
@@ -123934,7 +123860,7 @@
                     "nature": "hardy"
                 },
                 {
-                    "ability": "filter",
+                    "ability": "snow-cloak",
                     "gender": "unknown",
                     "item": "focus-sash",
                     "level": 69,
@@ -124276,7 +124202,7 @@
                     "item": "lum-berry",
                     "level": 73,
                     "moves": [
-                        "solar-beam",
+                        "solarbeam",
                         "egg-bomb",
                         "psychic",
                         "sleep-talk"
@@ -124285,7 +124211,7 @@
                     "nature": "modest"
                 },
                 {
-                    "ability": "shed-skin",
+                    "ability": "shell-armor",
                     "gender": "unknown",
                     "item": "lum-berry",
                     "level": 74,
@@ -124325,7 +124251,7 @@
                     "level": 74,
                     "moves": [
                         "heat-wave",
-                        "solar-beam",
+                        "solarbeam",
                         "dragonbreath",
                         "sing"
                     ],
@@ -124474,11 +124400,11 @@
                     "moves": [
                         "heat-wave",
                         "air-slash",
-                        "solar-beam",
+                        "solarbeam",
                         "fling"
                     ],
                     "name": "charizard",
-                    "nature": "hardy"
+                    "nature": "bashful"
                 },
                 {
                     "ability": "chlorophyll",
@@ -124488,11 +124414,11 @@
                     "moves": [
                         "heat-wave",
                         "fling",
-                        "solar-beam",
+                        "solarbeam",
                         "rock-slide"
                     ],
                     "name": "shiftry",
-                    "nature": "docile"
+                    "nature": "quiet"
                 },
                 {
                     "ability": "thick-fat",
@@ -124506,7 +124432,7 @@
                         "fling"
                     ],
                     "name": "grumpig",
-                    "nature": "serious"
+                    "nature": "adamant"
                 }
             ]
         },
@@ -124533,7 +124459,7 @@
                     "level": 73,
                     "moves": [
                         "extremespeed",
-                        "solar-beam",
+                        "solarbeam",
                         "heat-wave",
                         "close-combat"
                     ],
@@ -124636,7 +124562,7 @@
                     "moves": [
                         "fire-ball",
                         "hyper-beam",
-                        "solar-beam",
+                        "solarbeam",
                         "sleep-powder"
                     ],
                     "name": "bellossom",
@@ -124649,7 +124575,7 @@
                     "level": 76,
                     "moves": [
                         "flare-blitz",
-                        "solar-beam",
+                        "solarbeam",
                         "drill-run",
                         "wild-charge"
                     ],
@@ -124681,7 +124607,7 @@
                     "level": 76,
                     "moves": [
                         "stealth-rock",
-                        "solar-beam",
+                        "solarbeam",
                         "eruption",
                         "earth-power"
                     ],
@@ -124695,7 +124621,7 @@
                     "level": 76,
                     "moves": [
                         "sleep-powder",
-                        "solar-beam",
+                        "solarbeam",
                         "hyper-beam",
                         "hp-fire"
                     ],
@@ -124711,7 +124637,7 @@
                         "sleep-powder",
                         "sludge-bomb",
                         "fire-ball",
-                        "solar-beam"
+                        "solarbeam"
                     ],
                     "name": "vileplume",
                     "nature": "serious"
@@ -124955,7 +124881,7 @@
                     "item": "wide-lens",
                     "level": 84,
                     "moves": [
-                        "solar-beam",
+                        "solarbeam",
                         "sleep-powder",
                         "egg-bomb",
                         "zen-headbutt"
@@ -125047,7 +124973,7 @@
                     "moves": [
                         "gastro-acid",
                         "fire-ball",
-                        "solar-beam",
+                        "solarbeam",
                         "hyper-beam"
                     ],
                     "name": "bellossom",
@@ -125155,7 +125081,7 @@
                 "weather": "sun"
             },
             "meta": "(SUN, OPTIONAL) (PERMANENT SUN)",
-            "name": "tuber--holly",
+            "name": "tuber-holly",
             "split": "volkner",
             "team": [
                 {
@@ -125753,7 +125679,7 @@
                     "nature": "calm"
                 },
                 {
-                    "ability": "static",
+                    "ability": "rough-skin",
                     "gender": "unknown",
                     "item": "lum-berry",
                     "level": 78,
@@ -126128,7 +126054,7 @@
                 "weather": "rain"
             },
             "meta": "(PERMANENT RAIN)",
-            "name": "pkmn-ranger-allison-2",
+            "name": "pkmn-ranger-allison",
             "split": "galactic",
             "team": [
                 {
@@ -126158,7 +126084,7 @@
                 "weather": "rain"
             },
             "meta": "(PERMANENT RAIN)",
-            "name": "pkmn-ranger-taylor-2",
+            "name": "pkmn-ranger-taylor",
             "split": "galactic",
             "team": [
                 {
@@ -126188,7 +126114,7 @@
                 "weather": "rain"
             },
             "meta": "(RAIN, OPTIONAL)* (PERMANENT RAIN)",
-            "name": "swimmer--wang",
+            "name": "swimmer-wang",
             "split": "galactic",
             "team": [
                 {
@@ -126260,7 +126186,7 @@
                 "weather": "rain"
             },
             "meta": "(RAIN, OPTIONAL)* (PERMANENT RAIN)",
-            "name": "swimmer--wang-2",
+            "name": "swimmer-wang-2",
             "split": "galactic",
             "team": [
                 {
@@ -126332,7 +126258,7 @@
                 "weather": "rain"
             },
             "meta": "(RAIN, OPTIONAL)* (PERMANENT RAIN)",
-            "name": "swimmer--wang-3",
+            "name": "swimmer-wang-3",
             "split": "galactic",
             "team": [
                 {
@@ -126404,7 +126330,7 @@
                 "weather": "rain"
             },
             "meta": "(RAIN, OPTIONAL)* (PERMANENT RAIN)",
-            "name": "swimmer--wang-4",
+            "name": "swimmer-wang-4",
             "split": "galactic",
             "team": [
                 {
@@ -126482,7 +126408,7 @@
                 {
                     "ability": "reckless",
                     "gender": "unknown",
-                    "item": "",
+                    "item": "focus-band",
                     "level": 91,
                     "moves": [
                         "rage",
@@ -126497,7 +126423,7 @@
                     "ability": "swift-swim",
                     "gender": "unknown",
                     "item": "bicycle",
-                    "level": 88,
+                    "level": 92,
                     "moves": [
                         "dive",
                         "bounce",
@@ -126505,13 +126431,13 @@
                         "vital-throw"
                     ],
                     "name": "floatzel",
-                    "nature": "lonely"
+                    "nature": "naive"
                 },
                 {
                     "ability": "shadow-tag",
                     "gender": "unknown",
                     "item": "town-map",
-                    "level": 87,
+                    "level": 90,
                     "moves": [
                         "fling",
                         "shadow-sneak",
@@ -126519,7 +126445,7 @@
                         "icy-wind"
                     ],
                     "name": "gengar",
-                    "nature": "serious"
+                    "nature": "jolly"
                 },
                 {
                     "ability": "technician",
@@ -127293,7 +127219,7 @@
                         "leaf-blade"
                     ],
                     "name": "gallade",
-                    "nature": "calm"
+                    "nature": "bashful"
                 },
                 {
                     "ability": "swift-swim",
@@ -127307,13 +127233,13 @@
                         "rock-slide"
                     ],
                     "name": "empoleon",
-                    "nature": "careful"
+                    "nature": "gentle"
                 },
                 {
                     "ability": "pressure",
                     "gender": "unknown",
                     "item": "ganlon-berry",
-                    "level": 87,
+                    "level": 90,
                     "moves": [
                         "lava-plume",
                         "calm-mind",
@@ -127321,7 +127247,7 @@
                         "extremespeed"
                     ],
                     "name": "entei",
-                    "nature": "naive"
+                    "nature": "serious"
                 }
             ]
         },
@@ -127357,13 +127283,13 @@
                         "destiny-bond"
                     ],
                     "name": "gardevoir",
-                    "nature": "careful"
+                    "nature": "serious"
                 },
                 {
                     "ability": "magic-guard",
                     "gender": "unknown",
                     "item": "wise-glasses",
-                    "level": 89,
+                    "level": 90,
                     "moves": [
                         "focus-blast",
                         "disable",
@@ -127371,13 +127297,13 @@
                         "charge-beam"
                     ],
                     "name": "alakazam",
-                    "nature": "quirky"
+                    "nature": "gentle"
                 },
                 {
                     "ability": "clear-body",
                     "gender": "unknown",
                     "item": "life-orb",
-                    "level": 88,
+                    "level": 90,
                     "moves": [
                         "meteor-mash",
                         "bullet-punch",
@@ -127385,7 +127311,7 @@
                         "ice-punch"
                     ],
                     "name": "metagross",
-                    "nature": "impish"
+                    "nature": "mild"
                 }
             ]
         },
@@ -127492,7 +127418,7 @@
                     "ability": "intimidate",
                     "gender": "unknown",
                     "item": "focus-band",
-                    "level": 88,
+                    "level": 92,
                     "moves": [
                         "megahorn",
                         "poison-fang",
@@ -127500,13 +127426,13 @@
                         "follow-me"
                     ],
                     "name": "ariados",
-                    "nature": "rash"
+                    "nature": "modest"
                 },
                 {
                     "ability": "clear-body",
                     "gender": "unknown",
                     "item": "lum-berry",
-                    "level": 82,
+                    "level": 85,
                     "moves": [
                         "hammer-arm",
                         "meteor-mash",
@@ -127514,13 +127440,13 @@
                         "rock-slide"
                     ],
                     "name": "metagross",
-                    "nature": "careful"
+                    "nature": "quirky"
                 },
                 {
                     "ability": "rock-head",
                     "gender": "unknown",
                     "item": "life-orb",
-                    "level": 82,
+                    "level": 86,
                     "moves": [
                         "water-spout",
                         "energy-ball",
@@ -127528,7 +127454,7 @@
                         "hyper-beam"
                     ],
                     "name": "octillery",
-                    "nature": "jolly"
+                    "nature": "lax"
                 }
             ]
         },
@@ -127552,7 +127478,7 @@
                     "ability": "drizzle",
                     "gender": "unknown",
                     "item": "life-orb",
-                    "level": 84,
+                    "level": 88,
                     "moves": [
                         "curse",
                         "extremespeed",
@@ -127560,13 +127486,13 @@
                         "aqua-tail"
                     ],
                     "name": "dragonair",
-                    "nature": "calm"
+                    "nature": "hardy"
                 },
                 {
                     "ability": "serene-grace",
                     "gender": "unknown",
                     "item": "kings-rock",
-                    "level": 81,
+                    "level": 84,
                     "moves": [
                         "curse",
                         "waterfall",
@@ -127574,13 +127500,13 @@
                         "drill-run"
                     ],
                     "name": "lapras",
-                    "nature": "docile"
+                    "nature": "mild"
                 },
                 {
                     "ability": "trace",
                     "gender": "unknown",
                     "item": "chople-berry",
-                    "level": 82,
+                    "level": 86,
                     "moves": [
                         "hyper-beam",
                         "charge-beam",
@@ -127588,7 +127514,7 @@
                         "hp-water"
                     ],
                     "name": "porygon2",
-                    "nature": "calm"
+                    "nature": "mild"
                 }
             ]
         },
@@ -127610,7 +127536,7 @@
                     "ability": "battle-armor",
                     "gender": "unknown",
                     "item": "rowap-berry",
-                    "level": 83,
+                    "level": 88,
                     "moves": [
                         "earthquake",
                         "ice-shard",
@@ -127618,13 +127544,13 @@
                         "stealth-rock"
                     ],
                     "name": "donphan",
-                    "nature": "sassy"
+                    "nature": "hardy"
                 },
                 {
                     "ability": "poison-heal",
                     "gender": "unknown",
                     "item": "toxic-orb",
-                    "level": 85,
+                    "level": 89,
                     "moves": [
                         "explosion",
                         "power-whip",
@@ -127632,13 +127558,13 @@
                         "fire-punch"
                     ],
                     "name": "lickilicky",
-                    "nature": "quiet"
+                    "nature": "calm"
                 },
                 {
                     "ability": "bad-dreams",
                     "gender": "unknown",
                     "item": "wide-lens",
-                    "level": 86,
+                    "level": 88,
                     "moves": [
                         "hypnosis",
                         "zen-headbutt",
@@ -127646,13 +127572,13 @@
                         "knock-off"
                     ],
                     "name": "hypno",
-                    "nature": "sassy"
+                    "nature": "adamant"
                 },
                 {
                     "ability": "huge-power",
                     "gender": "unknown",
                     "item": "splash-plate",
-                    "level": 85,
+                    "level": 90,
                     "moves": [
                         "aqua-tail",
                         "ice-punch",
@@ -127660,13 +127586,13 @@
                         "aqua-jet"
                     ],
                     "name": "azumarill",
-                    "nature": "relaxed"
+                    "nature": "lonely"
                 },
                 {
                     "ability": "technician",
                     "gender": "unknown",
                     "item": "kings-rock",
-                    "level": 86,
+                    "level": 89,
                     "moves": [
                         "curse",
                         "mach-punch",
@@ -127674,7 +127600,7 @@
                         "rollout"
                     ],
                     "name": "hitmontop",
-                    "nature": "rash"
+                    "nature": "sassy"
                 }
             ]
         },
@@ -127698,7 +127624,7 @@
                     "ability": "bad-dreams",
                     "gender": "unknown",
                     "item": "micle-berry",
-                    "level": 84,
+                    "level": 87,
                     "moves": [
                         "poison-gas",
                         "psychic",
@@ -127706,13 +127632,13 @@
                         "shadow-ball"
                     ],
                     "name": "hypno",
-                    "nature": "timid"
+                    "nature": "hasty"
                 },
                 {
                     "ability": "aftermath",
                     "gender": "unknown",
                     "item": "grip-claw",
-                    "level": 83,
+                    "level": 86,
                     "moves": [
                         "poison-gas",
                         "swallow",
@@ -127720,13 +127646,13 @@
                         "dig"
                     ],
                     "name": "muk",
-                    "nature": "careful"
+                    "nature": "quirky"
                 },
                 {
                     "ability": "synchronize",
                     "gender": "unknown",
                     "item": "leftovers",
-                    "level": 83,
+                    "level": 86,
                     "moves": [
                         "poison-gas",
                         "pursuit",
@@ -127734,7 +127660,7 @@
                         "moonlight"
                     ],
                     "name": "umbreon",
-                    "nature": "quirky"
+                    "nature": "lax"
                 }
             ]
         },
@@ -127760,7 +127686,7 @@
                     "ability": "poison-heal",
                     "gender": "unknown",
                     "item": "life-orb",
-                    "level": 86,
+                    "level": 89,
                     "moves": [
                         "facade",
                         "curse",
@@ -127768,13 +127694,13 @@
                         "lick"
                     ],
                     "name": "lickilicky",
-                    "nature": "relaxed"
+                    "nature": "naughty"
                 },
                 {
                     "ability": "magic-guard",
                     "gender": "unknown",
                     "item": "life-orb",
-                    "level": 82,
+                    "level": 86,
                     "moves": [
                         "facade",
                         "power-whip",
@@ -127782,13 +127708,13 @@
                         "brick-break"
                     ],
                     "name": "tangrowth",
-                    "nature": "lonely"
+                    "nature": "careful"
                 },
                 {
                     "ability": "swift-swim",
                     "gender": "unknown",
                     "item": "white-herb",
-                    "level": 84,
+                    "level": 87,
                     "moves": [
                         "swords-dance",
                         "aqua-jet",
@@ -127796,7 +127722,7 @@
                         "brick-break"
                     ],
                     "name": "empoleon",
-                    "nature": "careful"
+                    "nature": "calm"
                 }
             ]
         },
@@ -127820,7 +127746,7 @@
                     "ability": "levitate",
                     "gender": "unknown",
                     "item": "jaboca-berry",
-                    "level": 86,
+                    "level": 88,
                     "moves": [
                         "power-gem",
                         "ice-beam",
@@ -127828,13 +127754,13 @@
                         "earth-power"
                     ],
                     "name": "lunatone",
-                    "nature": "modest"
+                    "nature": "bold"
                 },
                 {
                     "ability": "levitate",
                     "gender": "unknown",
                     "item": "life-orb",
-                    "level": 86,
+                    "level": 88,
                     "moves": [
                         "flash-cannon",
                         "swagger",
@@ -127842,13 +127768,13 @@
                         "charge-beam"
                     ],
                     "name": "magnezone",
-                    "nature": "bold"
+                    "nature": "calm"
                 },
                 {
                     "ability": "levitate",
                     "gender": "unknown",
                     "item": "power-bracer",
-                    "level": 86,
+                    "level": 88,
                     "moves": [
                         "discharge",
                         "blizzard",
@@ -127856,7 +127782,7 @@
                         "swagger"
                     ],
                     "name": "rotom-frost",
-                    "nature": "bashful"
+                    "nature": "impish"
                 }
             ]
         },
@@ -127879,7 +127805,7 @@
                     "ability": "sand-stream",
                     "gender": "unknown",
                     "item": "persim-berry",
-                    "level": 85,
+                    "level": 88,
                     "moves": [
                         "earthquake",
                         "rock-slide",
@@ -127887,13 +127813,13 @@
                         "stealth-rock"
                     ],
                     "name": "hippowdon",
-                    "nature": "careful"
+                    "nature": "calm"
                 },
                 {
                     "ability": "swift-swim",
                     "gender": "unknown",
                     "item": "persim-berry",
-                    "level": 86,
+                    "level": 89,
                     "moves": [
                         "earthquake",
                         "curse",
@@ -127901,13 +127827,13 @@
                         "avalanche"
                     ],
                     "name": "swampert",
-                    "nature": "hasty"
+                    "nature": "quirky"
                 },
                 {
                     "ability": "thick-fat",
                     "gender": "unknown",
                     "item": "persim-berry",
-                    "level": 85,
+                    "level": 88,
                     "moves": [
                         "earthquake",
                         "rock-slide",
@@ -127915,7 +127841,7 @@
                         "wood-hammer"
                     ],
                     "name": "torterra",
-                    "nature": "calm"
+                    "nature": "quiet"
                 }
             ]
         },
@@ -127944,7 +127870,7 @@
                     "ability": "dry-skin",
                     "gender": "unknown",
                     "item": "brightpowder",
-                    "level": 83,
+                    "level": 87,
                     "moves": [
                         "substitute",
                         "screech",
@@ -127952,13 +127878,13 @@
                         "spore"
                     ],
                     "name": "parasect",
-                    "nature": "docile"
+                    "nature": "naive"
                 },
                 {
                     "ability": "solid-rock",
                     "gender": "unknown",
                     "item": "focus-band",
-                    "level": 81,
+                    "level": 85,
                     "moves": [
                         "sand-tomb",
                         "rock-slide",
@@ -127966,13 +127892,13 @@
                         "swords-dance"
                     ],
                     "name": "rhyperior",
-                    "nature": "sassy"
+                    "nature": "bold"
                 },
                 {
                     "ability": "thick-fat",
                     "gender": "unknown",
                     "item": "leftovers",
-                    "level": 80,
+                    "level": 85,
                     "moves": [
                         "curse",
                         "double-edge",
@@ -127980,13 +127906,13 @@
                         "stomp"
                     ],
                     "name": "snorlax",
-                    "nature": "hardy"
+                    "nature": "modest"
                 },
                 {
                     "ability": "aftermath",
                     "gender": "unknown",
                     "item": "leftovers",
-                    "level": 85,
+                    "level": 92,
                     "moves": [
                         "curse",
                         "swallow",
@@ -127994,13 +127920,13 @@
                         "sweet-kiss"
                     ],
                     "name": "muk",
-                    "nature": "calm"
+                    "nature": "sassy"
                 },
                 {
                     "ability": "wonder-guard",
                     "gender": "unknown",
                     "item": "focus-sash",
-                    "level": 80,
+                    "level": 84,
                     "moves": [
                         "endeavor",
                         "shadow-claw",
@@ -128008,13 +127934,13 @@
                         "dig"
                     ],
                     "name": "shedinja",
-                    "nature": "quiet"
+                    "nature": "lax"
                 },
                 {
                     "ability": "magic-guard",
                     "gender": "unknown",
                     "item": "power-belt",
-                    "level": 85,
+                    "level": 92,
                     "moves": [
                         "charge-beam",
                         "psychic",
@@ -128022,7 +127948,7 @@
                         "sweet-kiss"
                     ],
                     "name": "gardevoir",
-                    "nature": "brave"
+                    "nature": "quiet"
                 }
             ]
         },
@@ -128046,7 +127972,7 @@
                     "ability": "drought",
                     "gender": "unknown",
                     "item": "persim-berry",
-                    "level": 84,
+                    "level": 86,
                     "moves": [
                         "flare-blitz",
                         "stomp",
@@ -128054,13 +127980,13 @@
                         "rollout"
                     ],
                     "name": "camerupt",
-                    "nature": "naive"
+                    "nature": "calm"
                 },
                 {
                     "ability": "thick-fat",
                     "gender": "unknown",
                     "item": "leftovers",
-                    "level": 82,
+                    "level": 85,
                     "moves": [
                         "curse",
                         "extremespeed",
@@ -128068,13 +127994,13 @@
                         "fire-punch"
                     ],
                     "name": "dragonite",
-                    "nature": "timid"
+                    "nature": "hasty"
                 },
                 {
                     "ability": "intimidate",
                     "gender": "unknown",
                     "item": "leftovers",
-                    "level": 83,
+                    "level": 86,
                     "moves": [
                         "curse",
                         "flare-blitz",
@@ -128082,7 +128008,7 @@
                         "close-combat"
                     ],
                     "name": "arcanine",
-                    "nature": "brave"
+                    "nature": "adamant"
                 }
             ]
         },
@@ -128108,7 +128034,7 @@
                     "ability": "flower-gift",
                     "gender": "unknown",
                     "item": "brightpowder",
-                    "level": 85,
+                    "level": 87,
                     "moves": [
                         "seed-bomb",
                         "blaze-kick",
@@ -128116,13 +128042,13 @@
                         "lucky-chant"
                     ],
                     "name": "cherrim",
-                    "nature": "bold"
+                    "nature": "brave"
                 },
                 {
                     "ability": "serene-grace",
                     "gender": "unknown",
                     "item": "power-anklet",
-                    "level": 82,
+                    "level": 86,
                     "moves": [
                         "attract",
                         "follow-me",
@@ -128130,13 +128056,13 @@
                         "air-slash"
                     ],
                     "name": "togekiss",
-                    "nature": "naughty"
+                    "nature": "quiet"
                 },
                 {
                     "ability": "magic-guard",
                     "gender": "unknown",
                     "item": "leftovers",
-                    "level": 84,
+                    "level": 88,
                     "moves": [
                         "moonlight",
                         "lucky-chant",
@@ -128144,7 +128070,7 @@
                         "aromatherapy"
                     ],
                     "name": "clefable",
-                    "nature": "sassy"
+                    "nature": "timid"
                 }
             ]
         },
@@ -128167,7 +128093,7 @@
                     "ability": "snow-warning",
                     "gender": "unknown",
                     "item": "brightpowder",
-                    "level": 81,
+                    "level": 85,
                     "moves": [
                         "leech-seed",
                         "hp-ground",
@@ -128175,13 +128101,13 @@
                         "giga-drain"
                     ],
                     "name": "abomasnow",
-                    "nature": "naive"
+                    "nature": "sassy"
                 },
                 {
                     "ability": "hydration",
                     "gender": "unknown",
                     "item": "leftovers",
-                    "level": 83,
+                    "level": 86,
                     "moves": [
                         "whirlpool",
                         "blizzard",
@@ -128189,13 +128115,13 @@
                         "double-team"
                     ],
                     "name": "vaporeon",
-                    "nature": "quiet"
+                    "nature": "bold"
                 },
                 {
                     "ability": "snow-cloak",
                     "gender": "unknown",
                     "item": "focus-band",
-                    "level": 81,
+                    "level": 84,
                     "moves": [
                         "ice-ball",
                         "rock-slide",
@@ -128203,13 +128129,13 @@
                         "sand-tomb"
                     ],
                     "name": "piloswine",
-                    "nature": "relaxed"
+                    "nature": "lonely"
                 },
                 {
                     "ability": "snow-cloak",
                     "gender": "unknown",
                     "item": "petaya-berry",
-                    "level": 84,
+                    "level": 87,
                     "moves": [
                         "flash-cannon",
                         "bug-buzz",
@@ -128217,13 +128143,13 @@
                         "substitute"
                     ],
                     "name": "wormadam-trash",
-                    "nature": "rash"
+                    "nature": "naughty"
                 },
                 {
                     "ability": "snow-cloak",
                     "gender": "unknown",
                     "item": "leftovers",
-                    "level": 81,
+                    "level": 84,
                     "moves": [
                         "sheer-cold",
                         "double-team",
@@ -128231,7 +128157,7 @@
                         "substitute"
                     ],
                     "name": "glaceon",
-                    "nature": "bashful"
+                    "nature": "serious"
                 }
             ]
         },
@@ -128256,7 +128182,7 @@
                     "ability": "drizzle",
                     "gender": "unknown",
                     "item": "life-orb",
-                    "level": 84,
+                    "level": 88,
                     "moves": [
                         "explosion",
                         "earthquake",
@@ -128264,13 +128190,13 @@
                         "zen-headbutt"
                     ],
                     "name": "bronzong",
-                    "nature": "sassy"
+                    "nature": "mild"
                 },
                 {
                     "ability": "solid-rock",
                     "gender": "unknown",
                     "item": "stone-plate",
-                    "level": 87,
+                    "level": 92,
                     "moves": [
                         "explosion",
                         "rock-slide",
@@ -128278,13 +128204,13 @@
                         "aqua-cutter"
                     ],
                     "name": "corsola",
-                    "nature": "lax"
+                    "nature": "adamant"
                 },
                 {
                     "ability": "filter",
                     "gender": "unknown",
                     "item": "power-band",
-                    "level": 83,
+                    "level": 87,
                     "moves": [
                         "explosion",
                         "clamp",
@@ -128292,13 +128218,13 @@
                         "hp-grass"
                     ],
                     "name": "cloyster",
-                    "nature": "lax"
+                    "nature": "sassy"
                 },
                 {
                     "ability": "chlorophyll",
                     "gender": "unknown",
                     "item": "life-orb",
-                    "level": 84,
+                    "level": 87,
                     "moves": [
                         "explosion",
                         "leaf-storm",
@@ -128306,7 +128232,7 @@
                         "earthquake"
                     ],
                     "name": "exeggutor",
-                    "nature": "rash"
+                    "nature": "mild"
                 }
             ]
         },
@@ -128330,7 +128256,7 @@
                     "ability": "levitate",
                     "gender": "unknown",
                     "item": "power-lens",
-                    "level": 86,
+                    "level": 88,
                     "moves": [
                         "shadow-ball",
                         "thunder",
@@ -128338,13 +128264,13 @@
                         "nasty-plot"
                     ],
                     "name": "mismagius",
-                    "nature": "bold"
+                    "nature": "calm"
                 },
                 {
                     "ability": "levitate",
                     "gender": "unknown",
                     "item": "power-belt",
-                    "level": 86,
+                    "level": 88,
                     "moves": [
                         "hurricane",
                         "thunder",
@@ -128352,7 +128278,7 @@
                         "hp-grass"
                     ],
                     "name": "rotom-fan",
-                    "nature": "bold"
+                    "nature": "hasty"
                 }
             ]
         },
@@ -128375,7 +128301,7 @@
                     "ability": "serene-grace",
                     "gender": "unknown",
                     "item": "wide-lens",
-                    "level": 84,
+                    "level": 87,
                     "moves": [
                         "sing",
                         "hydro-pump",
@@ -128383,13 +128309,13 @@
                         "drill-run"
                     ],
                     "name": "lapras",
-                    "nature": "lax"
+                    "nature": "rash"
                 },
                 {
                     "ability": "steadfast",
                     "gender": "unknown",
                     "item": "power-bracer",
-                    "level": 84,
+                    "level": 87,
                     "moves": [
                         "sing",
                         "focus-blast",
@@ -128397,13 +128323,13 @@
                         "stone-edge"
                     ],
                     "name": "gallade",
-                    "nature": "mild"
+                    "nature": "lonely"
                 },
                 {
                     "ability": "serene-grace",
                     "gender": "unknown",
                     "item": "jaboca-berry",
-                    "level": 85,
+                    "level": 88,
                     "moves": [
                         "sing",
                         "hyper-beam",
@@ -128411,7 +128337,7 @@
                         "thunder"
                     ],
                     "name": "blissey",
-                    "nature": "sassy"
+                    "nature": "careful"
                 }
             ]
         },
@@ -128436,7 +128362,7 @@
                     "ability": "drizzle",
                     "gender": "unknown",
                     "item": "chesto-berry",
-                    "level": 86,
+                    "level": 89,
                     "moves": [
                         "gravity",
                         "safeguard",
@@ -128444,13 +128370,13 @@
                         "hypnosis"
                     ],
                     "name": "bronzong",
-                    "nature": "jolly"
+                    "nature": "naive"
                 },
                 {
                     "ability": "hydration",
                     "gender": "unknown",
                     "item": "leftovers",
-                    "level": 85,
+                    "level": 88,
                     "moves": [
                         "wild-charge",
                         "aqua-tail",
@@ -128458,13 +128384,13 @@
                         "curse"
                     ],
                     "name": "whiscash",
-                    "nature": "modest"
+                    "nature": "hardy"
                 },
                 {
                     "ability": "hydration",
                     "gender": "unknown",
                     "item": "leftovers",
-                    "level": 85,
+                    "level": 88,
                     "moves": [
                         "rest",
                         "hydro-pump",
@@ -128472,7 +128398,7 @@
                         "hyper-voice"
                     ],
                     "name": "vaporeon",
-                    "nature": "modest"
+                    "nature": "hardy"
                 }
             ]
         },
@@ -128498,7 +128424,7 @@
                     "ability": "scrappy",
                     "gender": "unknown",
                     "item": "chesto-berry",
-                    "level": 83,
+                    "level": 87,
                     "moves": [
                         "sing",
                         "hammer-arm",
@@ -128506,13 +128432,13 @@
                         "earthquake"
                     ],
                     "name": "kangaskhan",
-                    "nature": "naughty"
+                    "nature": "serious"
                 },
                 {
                     "ability": "serene-grace",
                     "gender": "unknown",
                     "item": "chesto-berry",
-                    "level": 86,
+                    "level": 87,
                     "moves": [
                         "safeguard",
                         "follow-me",
@@ -128520,13 +128446,13 @@
                         "softboiled"
                     ],
                     "name": "togetic",
-                    "nature": "mild"
+                    "nature": "naive"
                 },
                 {
                     "ability": "serene-grace",
                     "gender": "unknown",
                     "item": "toxic-orb",
-                    "level": 85,
+                    "level": 88,
                     "moves": [
                         "sing",
                         "sky-attack",
@@ -128534,13 +128460,13 @@
                         "earthquake"
                     ],
                     "name": "altaria",
-                    "nature": "brave"
+                    "nature": "docile"
                 },
                 {
                     "ability": "tinted-lens",
                     "gender": "unknown",
                     "item": "chesto-berry",
-                    "level": 84,
+                    "level": 87,
                     "moves": [
                         "sleep-talk",
                         "ominous-wind",
@@ -128548,13 +128474,13 @@
                         "power-gem"
                     ],
                     "name": "vespiquen",
-                    "nature": "hardy"
+                    "nature": "rash"
                 },
                 {
                     "ability": "battle-armor",
                     "gender": "unknown",
                     "item": "chesto-berry",
-                    "level": 84,
+                    "level": 87,
                     "moves": [
                         "sing",
                         "earthquake",
@@ -128562,7 +128488,7 @@
                         "ice-beam"
                     ],
                     "name": "nidoqueen",
-                    "nature": "mild"
+                    "nature": "timid"
                 }
             ]
         },
@@ -128591,7 +128517,7 @@
                         "spikes"
                     ],
                     "name": "roserade",
-                    "nature": "naive"
+                    "nature": "timid"
                 },
                 {
                     "ability": "magic-guard",
@@ -128666,7 +128592,7 @@
                     "ability": "drizzle",
                     "gender": "unknown",
                     "item": "power-weight",
-                    "level": 83,
+                    "level": 86,
                     "moves": [
                         "swagger",
                         "safeguard",
@@ -128674,13 +128600,13 @@
                         "dragon-rush"
                     ],
                     "name": "dragonair",
-                    "nature": "rash"
+                    "nature": "relaxed"
                 },
                 {
                     "ability": "intimidate",
                     "gender": "unknown",
                     "item": "persim-berry",
-                    "level": 82,
+                    "level": 85,
                     "moves": [
                         "iron-head",
                         "baton-pass",
@@ -128688,13 +128614,13 @@
                         "swords-dance"
                     ],
                     "name": "mawile",
-                    "nature": "rash"
+                    "nature": "jolly"
                 },
                 {
                     "ability": "hyper-cutter",
                     "gender": "unknown",
                     "item": "lum-berry",
-                    "level": 81,
+                    "level": 86,
                     "moves": [
                         "crabhammer",
                         "night-slash",
@@ -128702,13 +128628,13 @@
                         "swords-dance"
                     ],
                     "name": "crawdaunt",
-                    "nature": "timid"
+                    "nature": "hardy"
                 },
                 {
                     "ability": "technician",
                     "gender": "unknown",
                     "item": "lum-berry",
-                    "level": 81,
+                    "level": 86,
                     "moves": [
                         "bullet-punch",
                         "night-slash",
@@ -128716,13 +128642,13 @@
                         "cross-chop"
                     ],
                     "name": "scizor",
-                    "nature": "gentle"
+                    "nature": "hasty"
                 },
                 {
                     "ability": "sand-veil",
                     "gender": "unknown",
                     "item": "power-anklet",
-                    "level": 80,
+                    "level": 85,
                     "moves": [
                         "crabhammer",
                         "aerial-ace",
@@ -128730,13 +128656,13 @@
                         "rock-slide"
                     ],
                     "name": "gliscor",
-                    "nature": "sassy"
+                    "nature": "serious"
                 },
                 {
                     "ability": "hyper-cutter",
                     "gender": "unknown",
                     "item": "iron-ball",
-                    "level": 80,
+                    "level": 87,
                     "moves": [
                         "aqua-tail",
                         "night-slash",
@@ -128744,7 +128670,7 @@
                         "dig"
                     ],
                     "name": "drapion",
-                    "nature": "modest"
+                    "nature": "quiet"
                 }
             ]
         },
@@ -128766,7 +128692,7 @@
                     "ability": "hydration",
                     "gender": "unknown",
                     "item": "jaboca-berry",
-                    "level": 86,
+                    "level": 89,
                     "moves": [
                         "muddy-water",
                         "calm-mind",
@@ -128774,13 +128700,13 @@
                         "ice-beam"
                     ],
                     "name": "vaporeon",
-                    "nature": "docile"
+                    "nature": "relaxed"
                 },
                 {
                     "ability": "huge-power",
                     "gender": "unknown",
                     "item": "life-orb",
-                    "level": 86,
+                    "level": 89,
                     "moves": [
                         "curse",
                         "aqua-tail",
@@ -128788,13 +128714,13 @@
                         "giga-impact"
                     ],
                     "name": "azumarill",
-                    "nature": "sassy"
+                    "nature": "careful"
                 },
                 {
                     "ability": "levitate",
                     "gender": "unknown",
                     "item": "power-lens",
-                    "level": 86,
+                    "level": 89,
                     "moves": [
                         "thunder",
                         "hydro-pump",
@@ -128802,7 +128728,7 @@
                         "hyper-voice"
                     ],
                     "name": "rotom-wash",
-                    "nature": "quirky"
+                    "nature": "lax"
                 }
             ]
         },
@@ -128824,7 +128750,7 @@
                     "ability": "drizzle",
                     "gender": "unknown",
                     "item": "jaboca-berry",
-                    "level": 86,
+                    "level": 88,
                     "moves": [
                         "calm-mind",
                         "weather-ball",
@@ -128832,13 +128758,13 @@
                         "flash-cannon"
                     ],
                     "name": "bronzong",
-                    "nature": "careful"
+                    "nature": "calm"
                 },
                 {
                     "ability": "intimidate",
                     "gender": "unknown",
                     "item": "splash-plate",
-                    "level": 86,
+                    "level": 89,
                     "moves": [
                         "curse",
                         "aqua-tail",
@@ -128846,13 +128772,13 @@
                         "dig"
                     ],
                     "name": "feraligatr",
-                    "nature": "careful"
+                    "nature": "lonely"
                 },
                 {
                     "ability": "simple",
                     "gender": "unknown",
                     "item": "shell-bell",
-                    "level": 86,
+                    "level": 89,
                     "moves": [
                         "muddy-water",
                         "calm-mind",
@@ -128860,7 +128786,7 @@
                         "focus-blast"
                     ],
                     "name": "slowbro",
-                    "nature": "mild"
+                    "nature": "jolly"
                 }
             ]
         },
@@ -128879,7 +128805,7 @@
                     "ability": "levitate",
                     "gender": "unknown",
                     "item": "apicot-berry",
-                    "level": 84,
+                    "level": 87,
                     "moves": [
                         "stealth-rock",
                         "explosion",
@@ -128887,13 +128813,13 @@
                         "iron-head"
                     ],
                     "name": "bronzor",
-                    "nature": "careful"
+                    "nature": "calm"
                 },
                 {
                     "ability": "quick-feet",
                     "gender": "unknown",
                     "item": "power-anklet",
-                    "level": 84,
+                    "level": 87,
                     "moves": [
                         "curse",
                         "baton-pass",
@@ -128901,13 +128827,13 @@
                         "zen-headbutt"
                     ],
                     "name": "girafarig",
-                    "nature": "adamant"
+                    "nature": "hardy"
                 },
                 {
                     "ability": "solid-rock",
                     "gender": "unknown",
                     "item": "life-orb",
-                    "level": 85,
+                    "level": 88,
                     "moves": [
                         "explosion",
                         "earth-power",
@@ -128915,13 +128841,13 @@
                         "flash-cannon"
                     ],
                     "name": "probopass",
-                    "nature": "hardy"
+                    "nature": "sassy"
                 },
                 {
                     "ability": "levitate",
                     "gender": "unknown",
                     "item": "jaboca-berry",
-                    "level": 85,
+                    "level": 88,
                     "moves": [
                         "explosion",
                         "fire-blast",
@@ -128929,13 +128855,13 @@
                         "dark-pulse"
                     ],
                     "name": "weezing",
-                    "nature": "brave"
+                    "nature": "quirky"
                 },
                 {
                     "ability": "chlorophyll",
                     "gender": "unknown",
                     "item": "life-orb",
-                    "level": 83,
+                    "level": 88,
                     "moves": [
                         "explosion",
                         "leaf-storm",
@@ -128943,7 +128869,7 @@
                         "ancientpower"
                     ],
                     "name": "exeggutor",
-                    "nature": "hasty"
+                    "nature": "impish"
                 }
             ]
         },
@@ -128964,7 +128890,7 @@
                     "ability": "sand-stream",
                     "gender": "unknown",
                     "item": "rowap-berry",
-                    "level": 87,
+                    "level": 89,
                     "moves": [
                         "earthquake",
                         "stealth-rock",
@@ -128972,13 +128898,13 @@
                         "thunder-fang"
                     ],
                     "name": "hippowdon",
-                    "nature": "bashful"
+                    "nature": "hardy"
                 },
                 {
                     "ability": "swift-swim",
                     "gender": "unknown",
                     "item": "white-herb",
-                    "level": 87,
+                    "level": 88,
                     "moves": [
                         "drill-peck",
                         "swords-dance",
@@ -128986,13 +128912,13 @@
                         "earthquake"
                     ],
                     "name": "empoleon",
-                    "nature": "rash"
+                    "nature": "gentle"
                 },
                 {
                     "ability": "sand-veil",
                     "gender": "unknown",
                     "item": "focus-band",
-                    "level": 82,
+                    "level": 87,
                     "moves": [
                         "focus-blast",
                         "dark-pulse",
@@ -129000,13 +128926,13 @@
                         "spikes"
                     ],
                     "name": "cacturne",
-                    "nature": "timid"
+                    "nature": "lonely"
                 },
                 {
                     "ability": "rock-head",
                     "gender": "unknown",
                     "item": "life-orb",
-                    "level": 88,
+                    "level": 90,
                     "moves": [
                         "explosion",
                         "wood-hammer",
@@ -129014,13 +128940,13 @@
                         "head-smash"
                     ],
                     "name": "sudowoodo",
-                    "nature": "careful"
+                    "nature": "gentle"
                 },
                 {
                     "ability": "levitate",
                     "gender": "unknown",
                     "item": "occa-berry",
-                    "level": 84,
+                    "level": 87,
                     "moves": [
                         "explosion",
                         "earthquake",
@@ -129028,7 +128954,7 @@
                         "iron-head"
                     ],
                     "name": "bronzor",
-                    "nature": "sassy"
+                    "nature": "docile"
                 }
             ]
         },
@@ -129073,7 +128999,7 @@
                         "sand-tomb"
                     ],
                     "name": "tyranitar",
-                    "nature": "gentle"
+                    "nature": "naive"
                 },
                 {
                     "ability": "magic-guard",
@@ -129087,7 +129013,7 @@
                         "psychic"
                     ],
                     "name": "slowking",
-                    "nature": "naive"
+                    "nature": "gentle"
                 }
             ]
         },
@@ -129159,7 +129085,7 @@
                     "ability": "drought",
                     "gender": "unknown",
                     "item": "focus-sash",
-                    "level": 87,
+                    "level": 89,
                     "moves": [
                         "stealth-rock",
                         "memento",
@@ -129167,13 +129093,13 @@
                         "solarbeam"
                     ],
                     "name": "magcargo",
-                    "nature": "modest"
+                    "nature": "serious"
                 },
                 {
                     "ability": "rock-head",
                     "gender": "unknown",
                     "item": "focus-band",
-                    "level": 82,
+                    "level": 84,
                     "moves": [
                         "head-smash",
                         "hammer-arm",
@@ -129181,27 +129107,27 @@
                         "swords-dance"
                     ],
                     "name": "rampardos",
-                    "nature": "impish"
+                    "nature": "bold"
                 },
                 {
                     "ability": "magic-guard",
                     "gender": "unknown",
                     "item": "life-orb",
-                    "level": 84,
+                    "level": 86,
                     "moves": [
-                        "solar-beam",
+                        "solarbeam",
                         "ancientpower",
                         "earthquake",
                         "hp-fire"
                     ],
                     "name": "tangrowth",
-                    "nature": "careful"
+                    "nature": "calm"
                 },
                 {
                     "ability": "hyper-cutter",
                     "gender": "unknown",
                     "item": "power-anklet",
-                    "level": 86,
+                    "level": 88,
                     "moves": [
                         "fire-punch",
                         "zen-headbutt",
@@ -129215,21 +129141,21 @@
                     "ability": "solar-power",
                     "gender": "unknown",
                     "item": "macho-brace",
-                    "level": 84,
+                    "level": 86,
                     "moves": [
                         "fire-spin",
                         "dragon-pulse",
-                        "solar-beam",
+                        "solarbeam",
                         "air-slash"
                     ],
                     "name": "charizard",
-                    "nature": "bashful"
+                    "nature": "modest"
                 },
                 {
                     "ability": "levitate",
                     "gender": "unknown",
                     "item": "white-herb",
-                    "level": 83,
+                    "level": 85,
                     "moves": [
                         "shadow-punch",
                         "fire-punch",
@@ -129331,7 +129257,7 @@
                     "ability": "wonder-guard",
                     "gender": "unknown",
                     "item": "choice-specs",
-                    "level": 93,
+                    "level": 94,
                     "moves": [
                         "hp-fire",
                         "hp-dark",
@@ -129345,7 +129271,7 @@
                     "ability": "pressure",
                     "gender": "unknown",
                     "item": "leftovers",
-                    "level": 85,
+                    "level": 87,
                     "moves": [
                         "mean-look",
                         "helping-hand",
@@ -129353,13 +129279,13 @@
                         "night-shade"
                     ],
                     "name": "dusclops",
-                    "nature": "naughty"
+                    "nature": "lonely"
                 },
                 {
                     "ability": "pressure",
                     "gender": "unknown",
                     "item": "kings-rock",
-                    "level": 86,
+                    "level": 88,
                     "moves": [
                         "mystical-fire",
                         "dark-pulse",
@@ -129367,7 +129293,7 @@
                         "hp-fire"
                     ],
                     "name": "spiritomb",
-                    "nature": "hasty"
+                    "nature": "impish"
                 }
             ]
         },
@@ -129387,21 +129313,21 @@
                     "ability": "drought",
                     "gender": "unknown",
                     "item": "life-orb",
-                    "level": 86,
+                    "level": 89,
                     "moves": [
                         "explosion",
                         "magma-storm",
                         "ancientpower",
-                        "solar-beam"
+                        "solarbeam"
                     ],
                     "name": "magcargo",
-                    "nature": "jolly"
+                    "nature": "lonely"
                 },
                 {
                     "ability": "aftermath",
                     "gender": "unknown",
                     "item": "life-orb",
-                    "level": 85,
+                    "level": 90,
                     "moves": [
                         "explosion",
                         "sucker-punch",
@@ -129409,13 +129335,13 @@
                         "dig"
                     ],
                     "name": "skuntank",
-                    "nature": "calm"
+                    "nature": "quiet"
                 },
                 {
                     "ability": "unburden",
                     "gender": "unknown",
                     "item": "lansat-berry",
-                    "level": 85,
+                    "level": 89,
                     "moves": [
                         "fire-ball",
                         "explosion",
@@ -129423,7 +129349,7 @@
                         "air-slash"
                     ],
                     "name": "drifblim",
-                    "nature": "relaxed"
+                    "nature": "lonely"
                 }
             ]
         },
@@ -129446,7 +129372,7 @@
                     "ability": "drought",
                     "gender": "unknown",
                     "item": "kings-rock",
-                    "level": 85,
+                    "level": 88,
                     "moves": [
                         "lava-plume",
                         "ancientpower",
@@ -129454,13 +129380,13 @@
                         "stealth-rock"
                     ],
                     "name": "magcargo",
-                    "nature": "adamant"
+                    "nature": "sassy"
                 },
                 {
                     "ability": "levitate",
                     "gender": "unknown",
                     "item": "power-lens",
-                    "level": 84,
+                    "level": 87,
                     "moves": [
                         "flare-blitz",
                         "rock-slide",
@@ -129468,13 +129394,13 @@
                         "zen-headbutt"
                     ],
                     "name": "solrock",
-                    "nature": "gentle"
+                    "nature": "bashful"
                 },
                 {
                     "ability": "solar-power",
                     "gender": "unknown",
                     "item": "life-orb",
-                    "level": 88,
+                    "level": 91,
                     "moves": [
                         "solarbeam",
                         "fire-ball",
@@ -129482,7 +129408,7 @@
                         "hp-ice"
                     ],
                     "name": "sunflora",
-                    "nature": "bold"
+                    "nature": "brave"
                 }
             ]
         },
@@ -129505,21 +129431,21 @@
                     "ability": "blaze",
                     "gender": "unknown",
                     "item": "power-anklet",
-                    "level": 85,
+                    "level": 88,
                     "moves": [
                         "blast-burn",
-                        "solar-beam",
+                        "solarbeam",
                         "close-combat",
                         "rock-slide"
                     ],
                     "name": "blaziken",
-                    "nature": "naive"
+                    "nature": "brave"
                 },
                 {
                     "ability": "quick-feet",
                     "gender": "unknown",
                     "item": "ragecandybar",
-                    "level": 86,
+                    "level": 90,
                     "moves": [
                         "fire-punch",
                         "facade",
@@ -129527,13 +129453,13 @@
                         "crunch"
                     ],
                     "name": "ursaring",
-                    "nature": "lax"
+                    "nature": "adamant"
                 },
                 {
                     "ability": "adaptability",
                     "gender": "unknown",
                     "item": "apicot-berry",
-                    "level": 85,
+                    "level": 88,
                     "moves": [
                         "flare-blitz",
                         "giga-impact",
@@ -129541,7 +129467,7 @@
                         "superpower"
                     ],
                     "name": "flareon",
-                    "nature": "modest"
+                    "nature": "bashful"
                 }
             ]
         },
@@ -129560,10 +129486,10 @@
             "split": "galactic",
             "team": [
                 {
-                    "ability": "serene-grace",
+                    "ability": "shell-armor",
                     "gender": "unknown",
                     "item": "jaboca-berry",
-                    "level": 84,
+                    "level": 87,
                     "moves": [
                         "muddy-water",
                         "thunder",
@@ -129571,13 +129497,13 @@
                         "drill-run"
                     ],
                     "name": "lapras",
-                    "nature": "modest"
+                    "nature": "mild"
                 },
                 {
-                    "ability": "quick-feet",
+                    "ability": "swift-swim",
                     "gender": "unknown",
                     "item": "rindo-berry",
-                    "level": 85,
+                    "level": 88,
                     "moves": [
                         "curse",
                         "aqua-tail",
@@ -129585,13 +129511,13 @@
                         "rock-slide"
                     ],
                     "name": "whiscash",
-                    "nature": "serious"
+                    "nature": "sassy"
                 },
                 {
                     "ability": "volt-absorb",
                     "gender": "unknown",
                     "item": "ganlon-berry",
-                    "level": 85,
+                    "level": 89,
                     "moves": [
                         "muddy-water",
                         "thunder",
@@ -129599,7 +129525,7 @@
                         "supersonic"
                     ],
                     "name": "lanturn",
-                    "nature": "lax"
+                    "nature": "naive"
                 }
             ]
         },
@@ -129622,7 +129548,7 @@
                     "ability": "drizzle",
                     "gender": "unknown",
                     "item": "light-clay",
-                    "level": 84,
+                    "level": 88,
                     "moves": [
                         "stealth-rock",
                         "future-sight",
@@ -129630,13 +129556,13 @@
                         "light-screen"
                     ],
                     "name": "bronzong",
-                    "nature": "naughty"
+                    "nature": "hardy"
                 },
                 {
-                    "ability": "quick-feet",
+                    "ability": "simple",
                     "gender": "unknown",
                     "item": "leftovers",
-                    "level": 85,
+                    "level": 88,
                     "moves": [
                         "curse",
                         "avalanche",
@@ -129644,13 +129570,13 @@
                         "zen-headbutt"
                     ],
                     "name": "slowking",
-                    "nature": "careful"
+                    "nature": "impish"
                 },
                 {
                     "ability": "shell-armor",
                     "gender": "unknown",
                     "item": "deepseatooth",
-                    "level": 93,
+                    "level": 96,
                     "moves": [
                         "muddy-water",
                         "hp-grass",
@@ -129658,7 +129584,7 @@
                         "ice-beam"
                     ],
                     "name": "clamperl",
-                    "nature": "sassy"
+                    "nature": "careful"
                 }
             ]
         },
@@ -129677,7 +129603,7 @@
                     "ability": "thick-fat",
                     "gender": "unknown",
                     "item": "ganlon-berry",
-                    "level": 84,
+                    "level": 86,
                     "moves": [
                         "rage",
                         "selfdestruct",
@@ -129685,13 +129611,13 @@
                         "giga-impact"
                     ],
                     "name": "snorlax",
-                    "nature": "jolly"
+                    "nature": "relaxed"
                 },
                 {
                     "ability": "solid-rock",
                     "gender": "unknown",
                     "item": "iron-ball",
-                    "level": 84,
+                    "level": 86,
                     "moves": [
                         "curse",
                         "gyro-ball",
@@ -129699,13 +129625,13 @@
                         "explosion"
                     ],
                     "name": "steelix",
-                    "nature": "jolly"
+                    "nature": "sassy"
                 },
                 {
                     "ability": "pressure",
                     "gender": "unknown",
                     "item": "apicot-berry",
-                    "level": 80,
+                    "level": 82,
                     "moves": [
                         "selfdestruct",
                         "aqua-tail",
@@ -129713,13 +129639,13 @@
                         "curse"
                     ],
                     "name": "wailord",
-                    "nature": "bashful"
+                    "nature": "modest"
                 },
                 {
                     "ability": "guts",
                     "gender": "unknown",
                     "item": "kings-rock",
-                    "level": 84,
+                    "level": 86,
                     "moves": [
                         "curse",
                         "drain-punch",
@@ -129727,13 +129653,13 @@
                         "rock-slide"
                     ],
                     "name": "hariyama",
-                    "nature": "quiet"
+                    "nature": "careful"
                 },
                 {
                     "ability": "thick-fat",
                     "gender": "unknown",
                     "item": "power-bracer",
-                    "level": 82,
+                    "level": 84,
                     "moves": [
                         "curse",
                         "extremespeed",
@@ -129741,13 +129667,13 @@
                         "dragon-rush"
                     ],
                     "name": "dragonite",
-                    "nature": "lonely"
+                    "nature": "relaxed"
                 },
                 {
                     "ability": "shell-armor",
                     "gender": "unknown",
                     "item": "apicot-berry",
-                    "level": 83,
+                    "level": 85,
                     "moves": [
                         "curse",
                         "wood-hammer",
@@ -129755,7 +129681,7 @@
                         "rock-slide"
                     ],
                     "name": "torterra",
-                    "nature": "gentle"
+                    "nature": "quirky"
                 }
             ]
         },
@@ -129778,7 +129704,7 @@
                     "ability": "rock-head",
                     "gender": "unknown",
                     "item": "life-orb",
-                    "level": 86,
+                    "level": 89,
                     "moves": [
                         "head-smash",
                         "superpower",
@@ -129786,13 +129712,13 @@
                         "stealth-rock"
                     ],
                     "name": "aggron",
-                    "nature": "careful"
+                    "nature": "calm"
                 },
                 {
                     "ability": "guts",
                     "gender": "unknown",
                     "item": "leftovers",
-                    "level": 84,
+                    "level": 88,
                     "moves": [
                         "facade",
                         "hammer-arm",
@@ -129800,13 +129726,13 @@
                         "avalanche"
                     ],
                     "name": "ursaring",
-                    "nature": "sassy"
+                    "nature": "hardy"
                 },
                 {
                     "ability": "guts",
                     "gender": "unknown",
                     "item": "leftovers",
-                    "level": 84,
+                    "level": 88,
                     "moves": [
                         "fake-out",
                         "smellingsalt",
@@ -129814,7 +129740,7 @@
                         "rock-slide"
                     ],
                     "name": "hariyama",
-                    "nature": "rash"
+                    "nature": "relaxed"
                 }
             ]
         },
@@ -129838,7 +129764,7 @@
                     "ability": "bad-dreams",
                     "gender": "unknown",
                     "item": "apicot-berry",
-                    "level": 85,
+                    "level": 88,
                     "moves": [
                         "poison-gas",
                         "curse",
@@ -129846,13 +129772,13 @@
                         "fire-punch"
                     ],
                     "name": "hypno",
-                    "nature": "modest"
+                    "nature": "hardy"
                 },
                 {
                     "ability": "pressure",
                     "gender": "unknown",
                     "item": "dread-plate",
-                    "level": 83,
+                    "level": 86,
                     "moves": [
                         "nasty-plot",
                         "dark-pulse",
@@ -129860,13 +129786,13 @@
                         "memento"
                     ],
                     "name": "spiritomb",
-                    "nature": "brave"
+                    "nature": "serious"
                 },
                 {
                     "ability": "gluttony",
                     "gender": "unknown",
                     "item": "grip-claw",
-                    "level": 87,
+                    "level": 90,
                     "moves": [
                         "poison-gas",
                         "swallow",
@@ -129874,7 +129800,7 @@
                         "gastro-acid"
                     ],
                     "name": "swalot",
-                    "nature": "impish"
+                    "nature": "lax"
                 }
             ]
         },
@@ -129896,7 +129822,7 @@
                     "ability": "snow-warning",
                     "gender": "unknown",
                     "item": "life-orb",
-                    "level": 83,
+                    "level": 88,
                     "moves": [
                         "wood-hammer",
                         "blizzard",
@@ -129904,13 +129830,13 @@
                         "stomp"
                     ],
                     "name": "abomasnow",
-                    "nature": "impish"
+                    "nature": "bold"
                 },
                 {
                     "ability": "filter",
                     "gender": "unknown",
                     "item": "apicot-berry",
-                    "level": 81,
+                    "level": 87,
                     "moves": [
                         "curse",
                         "waterfall",
@@ -129918,13 +129844,13 @@
                         "close-combat"
                     ],
                     "name": "walrein",
-                    "nature": "jolly"
+                    "nature": "timid"
                 },
                 {
                     "ability": "thick-fat",
                     "gender": "unknown",
                     "item": "power-anklet",
-                    "level": 82,
+                    "level": 88,
                     "moves": [
                         "avalanche",
                         "curse",
@@ -129932,7 +129858,7 @@
                         "knock-off"
                     ],
                     "name": "mamoswine",
-                    "nature": "bashful"
+                    "nature": "modest"
                 }
             ]
         },
@@ -129957,7 +129883,7 @@
                     "ability": "rain-dish",
                     "gender": "unknown",
                     "item": "macho-brace",
-                    "level": 85,
+                    "level": 87,
                     "moves": [
                         "toxic-spikes",
                         "muddy-water",
@@ -129965,13 +129891,13 @@
                         "supersonic"
                     ],
                     "name": "tentacruel",
-                    "nature": "jolly"
+                    "nature": "adamant"
                 },
                 {
                     "ability": "serene-grace",
                     "gender": "unknown",
                     "item": "kings-rock",
-                    "level": 82,
+                    "level": 86,
                     "moves": [
                         "blizzard",
                         "muddy-water",
@@ -129979,13 +129905,13 @@
                         "hyper-voice"
                     ],
                     "name": "lapras",
-                    "nature": "docile"
+                    "nature": "brave"
                 },
                 {
                     "ability": "snow-cloak",
                     "gender": "unknown",
                     "item": "leftovers",
-                    "level": 85,
+                    "level": 87,
                     "moves": [
                         "blizzard",
                         "earth-power",
@@ -129993,7 +129919,7 @@
                         "hyper-voice"
                     ],
                     "name": "glaceon",
-                    "nature": "bashful"
+                    "nature": "quirky"
                 }
             ]
         },
@@ -130015,7 +129941,7 @@
                     "ability": "scrappy",
                     "gender": "unknown",
                     "item": "power-band",
-                    "level": 86,
+                    "level": 88,
                     "moves": [
                         "hammer-arm",
                         "stealth-rock",
@@ -130023,13 +129949,13 @@
                         "giga-impact"
                     ],
                     "name": "miltank",
-                    "nature": "hasty"
+                    "nature": "lonely"
                 },
                 {
                     "ability": "no-guard",
                     "gender": "unknown",
                     "item": "ganlon-berry",
-                    "level": 85,
+                    "level": 87,
                     "moves": [
                         "charge-beam",
                         "dynamicpunch",
@@ -130037,13 +129963,13 @@
                         "hp-water"
                     ],
                     "name": "ampharos",
-                    "nature": "quirky"
+                    "nature": "naive"
                 },
                 {
                     "ability": "thick-fat",
                     "gender": "unknown",
                     "item": "jaboca-berry",
-                    "level": 87,
+                    "level": 89,
                     "moves": [
                         "calm-mind",
                         "extrasensory",
@@ -130051,7 +129977,7 @@
                         "shadow-ball"
                     ],
                     "name": "grumpig",
-                    "nature": "serious"
+                    "nature": "brave"
                 }
             ]
         },
@@ -130075,7 +130001,7 @@
                     "ability": "rough-skin",
                     "gender": "unknown",
                     "item": "white-herb",
-                    "level": 89,
+                    "level": 92,
                     "moves": [
                         "spikes",
                         "sand-tomb",
@@ -130083,13 +130009,13 @@
                         "leech-life"
                     ],
                     "name": "sandslash",
-                    "nature": "timid"
+                    "nature": "hasty"
                 },
                 {
                     "ability": "chlorophyll",
                     "gender": "unknown",
                     "item": "iron-ball",
-                    "level": 84,
+                    "level": 87,
                     "moves": [
                         "fake-out",
                         "sucker-punch",
@@ -130097,13 +130023,13 @@
                         "low-kick"
                     ],
                     "name": "shiftry",
-                    "nature": "brave"
+                    "nature": "serious"
                 },
                 {
                     "ability": "scrappy",
                     "gender": "unknown",
                     "item": "life-orb",
-                    "level": 85,
+                    "level": 88,
                     "moves": [
                         "hammer-arm",
                         "hyper-voice",
@@ -130111,7 +130037,7 @@
                         "hydro-pump"
                     ],
                     "name": "exploud",
-                    "nature": "lonely"
+                    "nature": "hasty"
                 }
             ]
         },
@@ -130131,7 +130057,7 @@
                     "ability": "sand-stream",
                     "gender": "unknown",
                     "item": "grip-claw",
-                    "level": 87,
+                    "level": 89,
                     "moves": [
                         "sand-tomb",
                         "stealth-rock",
@@ -130139,13 +130065,13 @@
                         "ice-fang"
                     ],
                     "name": "hippowdon",
-                    "nature": "timid"
+                    "nature": "hardy"
                 },
                 {
                     "ability": "magic-guard",
                     "gender": "unknown",
                     "item": "focus-band",
-                    "level": 82,
+                    "level": 86,
                     "moves": [
                         "gravity",
                         "focus-blast",
@@ -130153,13 +130079,13 @@
                         "future-sight"
                     ],
                     "name": "gardevoir",
-                    "nature": "mild"
+                    "nature": "serious"
                 },
                 {
                     "ability": "swift-swim",
                     "gender": "unknown",
                     "item": "rindo-berry",
-                    "level": 85,
+                    "level": 87,
                     "moves": [
                         "hydro-pump",
                         "power-gem",
@@ -130167,13 +130093,13 @@
                         "earth-power"
                     ],
                     "name": "omastar",
-                    "nature": "rash"
+                    "nature": "lax"
                 },
                 {
                     "ability": "simple",
                     "gender": "unknown",
-                    "item": "rindo-berry",
-                    "level": 85,
+                    "item": "icicle-plate",
+                    "level": 86,
                     "moves": [
                         "curse",
                         "aqua-tail",
@@ -130181,13 +130107,13 @@
                         "dig"
                     ],
                     "name": "quagsire",
-                    "nature": "bold"
+                    "nature": "mild"
                 },
                 {
                     "ability": "magnet-pull",
                     "gender": "unknown",
                     "item": "focus-sash",
-                    "level": 87,
+                    "level": 88,
                     "moves": [
                         "charge-beam",
                         "mirror-shot",
@@ -130195,7 +130121,7 @@
                         "supersonic"
                     ],
                     "name": "magneton",
-                    "nature": "bashful"
+                    "nature": "jolly"
                 }
             ]
         },
@@ -130277,7 +130203,7 @@
                     "ability": "drizzle",
                     "gender": "unknown",
                     "item": "life-orb",
-                    "level": 87,
+                    "level": 90,
                     "moves": [
                         "surf",
                         "thunder",
@@ -130285,13 +130211,13 @@
                         "light-screen"
                     ],
                     "name": "dragonair",
-                    "nature": "relaxed"
+                    "nature": "timid"
                 },
                 {
                     "ability": "hydration",
                     "gender": "unknown",
                     "item": "splash-plate",
-                    "level": 86,
+                    "level": 89,
                     "moves": [
                         "surf",
                         "ice-beam",
@@ -130299,13 +130225,13 @@
                         "hp-electric"
                     ],
                     "name": "vaporeon",
-                    "nature": "docile"
+                    "nature": "adamant"
                 },
                 {
                     "ability": "torrent",
                     "gender": "unknown",
                     "item": "power-bracer",
-                    "level": 86,
+                    "level": 89,
                     "moves": [
                         "surf",
                         "aura-sphere",
@@ -130313,7 +130239,7 @@
                         "zen-headbutt"
                     ],
                     "name": "blastoise",
-                    "nature": "rash"
+                    "nature": "mild"
                 }
             ]
         },
@@ -130337,7 +130263,7 @@
                     "ability": "levitate",
                     "gender": "unknown",
                     "item": "white-herb",
-                    "level": 86,
+                    "level": 88,
                     "moves": [
                         "explosion",
                         "earthquake",
@@ -130345,13 +130271,13 @@
                         "stealth-rock"
                     ],
                     "name": "claydol",
-                    "nature": "hardy"
+                    "nature": "docile"
                 },
                 {
                     "ability": "solid-rock",
                     "gender": "unknown",
                     "item": "berserk-gene",
-                    "level": 87,
+                    "level": 90,
                     "moves": [
                         "explosion",
                         "cross-chop",
@@ -130359,13 +130285,13 @@
                         "curse"
                     ],
                     "name": "probopass",
-                    "nature": "lax"
+                    "nature": "docile"
                 },
                 {
                     "ability": "heatproof",
                     "gender": "unknown",
                     "item": "scope-lens",
-                    "level": 85,
+                    "level": 88,
                     "moves": [
                         "explosion",
                         "earthquake",
@@ -130373,7 +130299,7 @@
                         "iron-head"
                     ],
                     "name": "forretress",
-                    "nature": "adamant"
+                    "nature": "hardy"
                 }
             ]
         },
@@ -130398,7 +130324,7 @@
                     "ability": "levitate",
                     "gender": "unknown",
                     "item": "power-band",
-                    "level": 85,
+                    "level": 88,
                     "moves": [
                         "leaf-storm",
                         "nasty-plot",
@@ -130406,13 +130332,13 @@
                         "charge-beam"
                     ],
                     "name": "rotom-mow",
-                    "nature": "lonely"
+                    "nature": "brave"
                 },
                 {
                     "ability": "unburden",
                     "gender": "unknown",
                     "item": "ganlon-berry",
-                    "level": 86,
+                    "level": 89,
                     "moves": [
                         "shadow-ball",
                         "explosion",
@@ -130420,13 +130346,13 @@
                         "will-o-wisp"
                     ],
                     "name": "drifblim",
-                    "nature": "lonely"
+                    "nature": "brave"
                 },
                 {
                     "ability": "levitate",
                     "gender": "unknown",
                     "item": "focus-band",
-                    "level": 89,
+                    "level": 95,
                     "moves": [
                         "helping-hand",
                         "mean-look",
@@ -130434,7 +130360,7 @@
                         "disable"
                     ],
                     "name": "duskull",
-                    "nature": "brave"
+                    "nature": "jolly"
                 }
             ]
         },
@@ -130453,7 +130379,7 @@
                     "ability": "drought",
                     "gender": "unknown",
                     "item": "flame-plate",
-                    "level": 81,
+                    "level": 84,
                     "moves": [
                         "stealth-rock",
                         "eruption",
@@ -130461,13 +130387,13 @@
                         "explosion"
                     ],
                     "name": "camerupt",
-                    "nature": "bold"
+                    "nature": "brave"
                 },
                 {
                     "ability": "shell-armor",
                     "gender": "unknown",
                     "item": "rindo-berry",
-                    "level": 82,
+                    "level": 86,
                     "moves": [
                         "explosion",
                         "earthquake",
@@ -130475,13 +130401,13 @@
                         "meteor-mash"
                     ],
                     "name": "golem",
-                    "nature": "hardy"
+                    "nature": "adamant"
                 },
                 {
                     "ability": "no-guard",
                     "gender": "unknown",
                     "item": "lansat-berry",
-                    "level": 83,
+                    "level": 86,
                     "moves": [
                         "fire-blast",
                         "stone-edge",
@@ -130489,13 +130415,13 @@
                         "dynamicpunch"
                     ],
                     "name": "machamp",
-                    "nature": "lax"
+                    "nature": "docile"
                 },
                 {
                     "ability": "magic-guard",
                     "gender": "unknown",
                     "item": "micle-berry",
-                    "level": 80,
+                    "level": 83,
                     "moves": [
                         "seismic-toss",
                         "solarbeam",
@@ -130503,13 +130429,13 @@
                         "sleep-powder"
                     ],
                     "name": "tangrowth",
-                    "nature": "quirky"
+                    "nature": "gentle"
                 },
                 {
                     "ability": "guts",
                     "gender": "unknown",
                     "item": "liechi-berry",
-                    "level": 80,
+                    "level": 84,
                     "moves": [
                         "endure",
                         "megahorn",
@@ -130517,7 +130443,7 @@
                         "reversal"
                     ],
                     "name": "heracross",
-                    "nature": "hardy"
+                    "nature": "adamant"
                 }
             ]
         },
@@ -130537,7 +130463,7 @@
                     "ability": "drizzle",
                     "gender": "unknown",
                     "item": "apicot-berry",
-                    "level": 87,
+                    "level": 88,
                     "moves": [
                         "explosion",
                         "stealth-rock",
@@ -130545,13 +130471,13 @@
                         "earthquake"
                     ],
                     "name": "bronzong",
-                    "nature": "hasty"
+                    "nature": "docile"
                 },
                 {
                     "ability": "scrappy",
                     "gender": "unknown",
                     "item": "power-weight",
-                    "level": 84,
+                    "level": 88,
                     "moves": [
                         "hammer-arm",
                         "aqua-tail",
@@ -130559,13 +130485,13 @@
                         "fake-out"
                     ],
                     "name": "kangaskhan",
-                    "nature": "relaxed"
+                    "nature": "adamant"
                 },
                 {
                     "ability": "thick-fat",
                     "gender": "unknown",
                     "item": "power-lens",
-                    "level": 84,
+                    "level": 89,
                     "moves": [
                         "curse",
                         "earthquake",
@@ -130573,13 +130499,13 @@
                         "outrage"
                     ],
                     "name": "meganium",
-                    "nature": "quirky"
+                    "nature": "modest"
                 },
                 {
                     "ability": "filter",
                     "gender": "unknown",
                     "item": "ganlon-berry",
-                    "level": 82,
+                    "level": 89,
                     "moves": [
                         "recover",
                         "scald",
@@ -130587,13 +130513,13 @@
                         "hp-ground"
                     ],
                     "name": "milotic",
-                    "nature": "brave"
+                    "nature": "quirky"
                 },
                 {
                     "ability": "dry-skin",
                     "gender": "unknown",
                     "item": "apicot-berry",
-                    "level": 83,
+                    "level": 88,
                     "moves": [
                         "curse",
                         "waterfall",
@@ -130601,7 +130527,7 @@
                         "rock-slide"
                     ],
                     "name": "gastrodon",
-                    "nature": "serious"
+                    "nature": "adamant"
                 }
             ]
         },
@@ -130621,7 +130547,7 @@
                     "ability": "snow-warning",
                     "gender": "unknown",
                     "item": "macho-brace",
-                    "level": 83,
+                    "level": 86,
                     "moves": [
                         "sheer-cold",
                         "air-slash",
@@ -130629,13 +130555,13 @@
                         "ancientpower"
                     ],
                     "name": "articuno",
-                    "nature": "brave"
+                    "nature": "mild"
                 },
                 {
                     "ability": "filter",
                     "gender": "unknown",
                     "item": "white-herb",
-                    "level": 85,
+                    "level": 88,
                     "moves": [
                         "explosion",
                         "ice-ball",
@@ -130643,13 +130569,13 @@
                         "drill-run"
                     ],
                     "name": "cloyster",
-                    "nature": "hasty"
+                    "nature": "bashful"
                 },
                 {
                     "ability": "pressure",
                     "gender": "unknown",
                     "item": "leftovers",
-                    "level": 85,
+                    "level": 87,
                     "moves": [
                         "curse",
                         "waterfall",
@@ -130657,13 +130583,13 @@
                         "aqua-ring"
                     ],
                     "name": "suicune",
-                    "nature": "modest"
+                    "nature": "brave"
                 },
                 {
                     "ability": "rock-head",
                     "gender": "unknown",
                     "item": "rowap-berry",
-                    "level": 83,
+                    "level": 86,
                     "moves": [
                         "explosion",
                         "ice-ball",
@@ -130671,13 +130597,13 @@
                         "rock-blast"
                     ],
                     "name": "steelix",
-                    "nature": "brave"
+                    "nature": "naive"
                 },
                 {
                     "ability": "magic-guard",
                     "gender": "unknown",
                     "item": "leftovers",
-                    "level": 88,
+                    "level": 91,
                     "moves": [
                         "calm-mind",
                         "will-o-wisp",
@@ -130685,13 +130611,13 @@
                         "future-sight"
                     ],
                     "name": "gardevoir",
-                    "nature": "lonely"
+                    "nature": "brave"
                 },
                 {
                     "ability": "ice-body",
                     "gender": "unknown",
                     "item": "focus-band",
-                    "level": 82,
+                    "level": 85,
                     "moves": [
                         "substitute",
                         "double-team",
@@ -130699,7 +130625,7 @@
                         "earth-power"
                     ],
                     "name": "glaceon",
-                    "nature": "mild"
+                    "nature": "quiet"
                 }
             ]
         },
@@ -130719,7 +130645,7 @@
                     "ability": "magic-guard",
                     "gender": "unknown",
                     "item": "leftovers",
-                    "level": 90,
+                    "level": 92,
                     "moves": [
                         "spikes",
                         "future-sight",
@@ -130727,13 +130653,13 @@
                         "psycho-boost"
                     ],
                     "name": "deoxys-defense",
-                    "nature": "serious"
+                    "nature": "relaxed"
                 },
                 {
                     "ability": "mold-breaker",
                     "gender": "unknown",
                     "item": "berserk-gene",
-                    "level": 93,
+                    "level": 94,
                     "moves": [
                         "head-smash",
                         "pursuit",
@@ -130741,7 +130667,7 @@
                         "zen-headbutt"
                     ],
                     "name": "rampardos",
-                    "nature": "gentle"
+                    "nature": "quirky"
                 },
                 {
                     "ability": "flash-fire",
@@ -130755,7 +130681,7 @@
                         "explosion"
                     ],
                     "name": "heatran",
-                    "nature": "timid"
+                    "nature": "bold"
                 },
                 {
                     "ability": "clear-body",
@@ -130775,7 +130701,7 @@
                     "ability": "levitate",
                     "gender": "unknown",
                     "item": "berserk-gene",
-                    "level": 94,
+                    "level": 95,
                     "moves": [
                         "pursuit",
                         "shadow-punch",
@@ -130783,13 +130709,13 @@
                         "brick-break"
                     ],
                     "name": "dusknoir",
-                    "nature": "docile"
+                    "nature": "jolly"
                 },
                 {
                     "ability": "clear-body",
                     "gender": "unknown",
                     "item": "iron-ball",
-                    "level": 88,
+                    "level": 90,
                     "moves": [
                         "curse",
                         "crush-grip",
@@ -130797,7 +130723,7 @@
                         "earthquake"
                     ],
                     "name": "regigigas",
-                    "nature": "gentle"
+                    "nature": "relaxed"
                 }
             ]
         },
@@ -130816,7 +130742,7 @@
                     "ability": "drought",
                     "gender": "unknown",
                     "item": "life-orb",
-                    "level": 84,
+                    "level": 86,
                     "moves": [
                         "eruption",
                         "explosion",
@@ -130824,7 +130750,7 @@
                         "earth-power"
                     ],
                     "name": "camerupt",
-                    "nature": "hardy"
+                    "nature": "docile"
                 },
                 {
                     "ability": "scrappy",
@@ -130844,7 +130770,7 @@
                     "ability": "sand-veil",
                     "gender": "unknown",
                     "item": "power-weight",
-                    "level": 85,
+                    "level": 87,
                     "moves": [
                         "fire-fang",
                         "pursuit",
@@ -130852,13 +130778,13 @@
                         "ice-fang"
                     ],
                     "name": "drapion",
-                    "nature": "hasty"
+                    "nature": "lonely"
                 },
                 {
                     "ability": "intimidate",
                     "gender": "unknown",
                     "item": "macho-brace",
-                    "level": 84,
+                    "level": 86,
                     "moves": [
                         "draco-meteor",
                         "fire-blast",
@@ -130866,7 +130792,7 @@
                         "sky-attack"
                     ],
                     "name": "salamence",
-                    "nature": "mild"
+                    "nature": "docile"
                 },
                 {
                     "ability": "download",
@@ -130877,7 +130803,7 @@
                         "hyper-beam",
                         "dark-pulse",
                         "hp-fire",
-                        "solar-beam"
+                        "solarbeam"
                     ],
                     "name": "porygon-z",
                     "nature": "hardy"
@@ -130886,7 +130812,7 @@
                     "ability": "flame-body",
                     "gender": "unknown",
                     "item": "power-band",
-                    "level": 86,
+                    "level": 87,
                     "moves": [
                         "lava-plume",
                         "thunderbolt",
@@ -130894,7 +130820,7 @@
                         "solarbeam"
                     ],
                     "name": "magmortar",
-                    "nature": "impish"
+                    "nature": "adamant"
                 }
             ]
         },
@@ -130916,7 +130842,7 @@
                     "ability": "levitate",
                     "gender": "unknown",
                     "item": "lum-berry",
-                    "level": 87,
+                    "level": 89,
                     "moves": [
                         "stealth-rock",
                         "future-sight",
@@ -130924,13 +130850,13 @@
                         "energy-ball"
                     ],
                     "name": "uxie",
-                    "nature": "mild"
+                    "nature": "lax"
                 },
                 {
                     "ability": "drizzle",
                     "gender": "unknown",
                     "item": "macho-brace",
-                    "level": 89,
+                    "level": 91,
                     "moves": [
                         "hurricane",
                         "thunder",
@@ -130938,13 +130864,13 @@
                         "twister"
                     ],
                     "name": "zapdos",
-                    "nature": "timid"
+                    "nature": "lax"
                 },
                 {
                     "ability": "clear-body",
                     "gender": "unknown",
                     "item": "lum-berry",
-                    "level": 85,
+                    "level": 87,
                     "moves": [
                         "earthquake",
                         "meteor-mash",
@@ -130952,13 +130878,13 @@
                         "rock-slide"
                     ],
                     "name": "metagross",
-                    "nature": "bashful"
+                    "nature": "hasty"
                 },
                 {
                     "ability": "lightning-rod",
                     "gender": "unknown",
                     "item": "focus-sash",
-                    "level": 92,
+                    "level": 94,
                     "moves": [
                         "earthquake",
                         "sand-tomb",
@@ -130966,13 +130892,13 @@
                         "rock-slide"
                     ],
                     "name": "rhydon",
-                    "nature": "lonely"
+                    "nature": "rash"
                 },
                 {
                     "ability": "pressure",
                     "gender": "unknown",
                     "item": "leftovers",
-                    "level": 82,
+                    "level": 84,
                     "moves": [
                         "water-spout",
                         "curse",
@@ -130980,13 +130906,13 @@
                         "avalanche"
                     ],
                     "name": "wailord",
-                    "nature": "serious"
+                    "nature": "bold"
                 },
                 {
                     "ability": "levitate",
                     "gender": "unknown",
                     "item": "leftovers",
-                    "level": 83,
+                    "level": 85,
                     "moves": [
                         "calm-mind",
                         "lunar-dance",
@@ -130994,7 +130920,7 @@
                         "ice-beam"
                     ],
                     "name": "cresselia",
-                    "nature": "impish"
+                    "nature": "lonely"
                 }
             ]
         },
@@ -132546,7 +132472,7 @@
                     "level": 89,
                     "moves": [
                         "toxic-spikes",
-                        "faint-attack",
+                        "feint-attack",
                         "flamethrower",
                         "explosion"
                     ],
@@ -132576,7 +132502,7 @@
                         "mean-look",
                         "curse",
                         "rest",
-                        "faint-attack"
+                        "feint-attack"
                     ],
                     "name": "spiritomb",
                     "nature": "careful"
@@ -133239,7 +133165,7 @@
                         "heat-wave",
                         "extremespeed",
                         "close-combat",
-                        "solar-beam"
+                        "solarbeam"
                     ],
                     "name": "arcanine",
                     "nature": "timid"
@@ -133381,7 +133307,7 @@
                     "ability": "aftermath",
                     "gender": "unknown",
                     "item": "ragecandybar",
-                    "level": 87,
+                    "level": 89,
                     "moves": [
                         "teleport",
                         "whirlwind",
@@ -133389,13 +133315,13 @@
                         "stealth-rock"
                     ],
                     "name": "wigglytuff",
-                    "nature": "hasty"
+                    "nature": "lonely"
                 },
                 {
                     "ability": "pressure",
                     "gender": "unknown",
                     "item": "custap-berry",
-                    "level": 87,
+                    "level": 89,
                     "moves": [
                         "pursuit",
                         "will-o-wisp",
@@ -133403,13 +133329,13 @@
                         "hp-fighting"
                     ],
                     "name": "spiritomb",
-                    "nature": "naughty"
+                    "nature": "rash"
                 },
                 {
                     "ability": "simple",
                     "gender": "unknown",
                     "item": "enigma-berry",
-                    "level": 87,
+                    "level": 89,
                     "moves": [
                         "calm-mind",
                         "slack-off",
@@ -133417,7 +133343,7 @@
                         "future-sight"
                     ],
                     "name": "slowbro",
-                    "nature": "careful"
+                    "nature": "jolly"
                 },
                 {
                     "ability": "shadow-tag",
@@ -133434,7 +133360,7 @@
                     "ability": "technician",
                     "gender": "unknown",
                     "item": "black-belt",
-                    "level": 90,
+                    "level": 92,
                     "moves": [
                         "spore",
                         "close-combat",
@@ -133442,7 +133368,7 @@
                         "rock-slide"
                     ],
                     "name": "breloom",
-                    "nature": "quirky"
+                    "nature": "naive"
                 }
             ]
         },
@@ -133593,7 +133519,7 @@
                     "ability": "magic-guard",
                     "gender": "unknown",
                     "item": "focus-band",
-                    "level": 88,
+                    "level": 92,
                     "moves": [
                         "gravity",
                         "hydro-pump",
@@ -133601,13 +133527,13 @@
                         "zap-cannon"
                     ],
                     "name": "starmie",
-                    "nature": "lax"
+                    "nature": "naive"
                 },
                 {
                     "ability": "solid-rock",
                     "gender": "unknown",
                     "item": "leftovers",
-                    "level": 90,
+                    "level": 93,
                     "moves": [
                         "stone-edge",
                         "giga-drain",
@@ -133615,13 +133541,13 @@
                         "gastro-acid"
                     ],
                     "name": "cradily",
-                    "nature": "bashful"
+                    "nature": "adamant"
                 },
                 {
                     "ability": "magnet-pull",
                     "gender": "unknown",
                     "item": "brightpowder",
-                    "level": 88,
+                    "level": 93,
                     "moves": [
                         "zap-cannon",
                         "mirror-shot",
@@ -133629,7 +133555,7 @@
                         "hp-fire"
                     ],
                     "name": "magneton",
-                    "nature": "lonely"
+                    "nature": "quiet"
                 }
             ]
         },
@@ -133654,7 +133580,7 @@
                     "ability": "sand-stream",
                     "gender": "unknown",
                     "item": "quick-claw",
-                    "level": 89,
+                    "level": 92,
                     "moves": [
                         "sand-tomb",
                         "stone-edge",
@@ -133662,13 +133588,13 @@
                         "stealth-rock"
                     ],
                     "name": "hippowdon",
-                    "nature": "sassy"
+                    "nature": "rash"
                 },
                 {
                     "ability": "reckless",
                     "gender": "unknown",
                     "item": "wide-lens",
-                    "level": 91,
+                    "level": 94,
                     "moves": [
                         "fire-blast",
                         "hypnosis",
@@ -133676,13 +133602,13 @@
                         "megahorn"
                     ],
                     "name": "rapidash",
-                    "nature": "bold"
+                    "nature": "brave"
                 },
                 {
                     "ability": "swift-swim",
                     "gender": "unknown",
                     "item": "wide-lens",
-                    "level": 90,
+                    "level": 91,
                     "moves": [
                         "hydro-pump",
                         "blizzard",
@@ -133690,7 +133616,7 @@
                         "draco-meteor"
                     ],
                     "name": "kingdra",
-                    "nature": "serious"
+                    "nature": "bashful"
                 }
             ]
         },
@@ -133817,7 +133743,7 @@
                     "ability": "swift-swim",
                     "gender": "unknown",
                     "item": "white-herb",
-                    "level": 85,
+                    "level": 88,
                     "moves": [
                         "earthquake",
                         "waterfall",
@@ -133825,13 +133751,13 @@
                         "avalanche"
                     ],
                     "name": "empoleon",
-                    "nature": "lax"
+                    "nature": "docile"
                 },
                 {
                     "ability": "swift-swim",
                     "gender": "unknown",
                     "item": "soft-sand",
-                    "level": 84,
+                    "level": 85,
                     "moves": [
                         "earthquake",
                         "waterfall",
@@ -133845,7 +133771,7 @@
                     "ability": "intimidate",
                     "gender": "unknown",
                     "item": "berserk-gene",
-                    "level": 83,
+                    "level": 84,
                     "moves": [
                         "earthquake",
                         "aqua-tail",
@@ -133853,13 +133779,13 @@
                         "avalanche"
                     ],
                     "name": "feraligatr",
-                    "nature": "calm"
+                    "nature": "quiet"
                 },
                 {
                     "ability": "clear-body",
                     "gender": "unknown",
                     "item": "quick-claw",
-                    "level": 80,
+                    "level": 84,
                     "moves": [
                         "earthquake",
                         "meteor-mash",
@@ -133867,13 +133793,13 @@
                         "zen-headbutt"
                     ],
                     "name": "metagross",
-                    "nature": "hasty"
+                    "nature": "impish"
                 },
                 {
                     "ability": "serene-grace",
                     "gender": "unknown",
                     "item": "chople-berry",
-                    "level": 90,
+                    "level": 91,
                     "moves": [
                         "earthquake",
                         "ice-beam",
@@ -133887,7 +133813,7 @@
                     "ability": "pressure",
                     "gender": "unknown",
                     "item": "quick-claw",
-                    "level": 78,
+                    "level": 84,
                     "moves": [
                         "earthquake",
                         "water-spout",
@@ -134166,7 +134092,7 @@
                     "moves": [
                         "heat-wave",
                         "air-slash",
-                        "solar-beam",
+                        "solarbeam",
                         "hp-fighting"
                     ],
                     "name": "moltres",
@@ -134179,7 +134105,7 @@
                     "level": 84,
                     "moves": [
                         "sleep-powder",
-                        "solar-beam",
+                        "solarbeam",
                         "ancientpower",
                         "earth-power"
                     ],
@@ -134211,7 +134137,7 @@
             ],
             "area": "spear-pillar",
             "meta": "(TAG PARTNER, if Player chose Chimchar)",
-            "name": "barry",
+            "name": "barry-tag",
             "split": "galactic",
             "team": [
                 {
@@ -134309,7 +134235,7 @@
             ],
             "area": "spear-pillar",
             "meta": "(TAG PARTNER if Player chose Piplup)",
-            "name": "barry-6",
+            "name": "barry-tag-2",
             "split": "galactic",
             "team": [
                 {
@@ -134407,7 +134333,7 @@
             ],
             "area": "spear-pillar",
             "meta": "(TAG PARTNER, if Player chose Turtwig)",
-            "name": "barry-7",
+            "name": "barry-tag-3",
             "split": "galactic",
             "team": [
                 {
@@ -134546,7 +134472,7 @@
                     "ability": "swift-swim",
                     "gender": "unknown",
                     "item": "sitrus-berry",
-                    "level": 89,
+                    "level": 91,
                     "moves": [
                         "avalanche",
                         "earthquake",
@@ -134554,7 +134480,7 @@
                         "sand-tomb"
                     ],
                     "name": "swampert",
-                    "nature": "rash"
+                    "nature": "impish"
                 },
                 {
                     "ability": "serene-grace",
@@ -134588,7 +134514,7 @@
                     "ability": "levitate",
                     "gender": "unknown",
                     "item": "colbur-berry",
-                    "level": 87,
+                    "level": 89,
                     "moves": [
                         "twister",
                         "mystical-fire",
@@ -134596,7 +134522,7 @@
                         "recover"
                     ],
                     "name": "latias",
-                    "nature": "docile"
+                    "nature": "calm"
                 }
             ]
         },
@@ -134647,8 +134573,8 @@
                 {
                     "ability": "magnet-pull",
                     "gender": "unknown",
-                    "item": "chople-berry",
-                    "level": 88,
+                    "item": "shuca-berry",
+                    "level": 89,
                     "moves": [
                         "explosion",
                         "discharge",
@@ -134656,13 +134582,13 @@
                         "thunder"
                     ],
                     "name": "magnezone",
-                    "nature": "impish"
+                    "nature": "mild"
                 },
                 {
-                    "ability": "solid-rock",
+                    "ability": "battle-armor",
                     "gender": "unknown",
                     "item": "berserk-gene",
-                    "level": 86,
+                    "level": 87,
                     "moves": [
                         "superpower",
                         "rock-slide",
@@ -134670,13 +134596,13 @@
                         "earthquake"
                     ],
                     "name": "tyranitar",
-                    "nature": "rash"
+                    "nature": "brave"
                 },
                 {
-                    "ability": "solid-rock",
+                    "ability": "clear-body",
                     "gender": "unknown",
                     "item": "custap-berry",
-                    "level": 88,
+                    "level": 89,
                     "moves": [
                         "explosion",
                         "superpower",
@@ -134684,13 +134610,13 @@
                         "block"
                     ],
                     "name": "regirock",
-                    "nature": "impish"
+                    "nature": "mild"
                 },
                 {
                     "ability": "levitate",
                     "gender": "unknown",
-                    "item": "leftovers",
-                    "level": 87,
+                    "item": "colbur-berry",
+                    "level": 88,
                     "moves": [
                         "twister",
                         "mystical-fire",
@@ -134698,7 +134624,7 @@
                         "thunder"
                     ],
                     "name": "latios",
-                    "nature": "relaxed"
+                    "nature": "modest"
                 }
             ]
         },
@@ -134718,7 +134644,7 @@
             "split": "galactic",
             "team": [
                 {
-                    "ability": "magic-guard",
+                    "ability": "pressure",
                     "gender": "unknown",
                     "item": "lustrous-orb",
                     "level": 96,
@@ -134729,7 +134655,7 @@
                         "thunder"
                     ],
                     "name": "palkia",
-                    "nature": "calm"
+                    "nature": "rash"
                 },
                 {
                     "ability": "pressure",
@@ -134743,7 +134669,7 @@
                         "dark-pulse"
                     ],
                     "name": "dialga",
-                    "nature": "sassy"
+                    "nature": "rash"
                 },
                 {
                     "ability": "magic-guard",
@@ -134757,7 +134683,7 @@
                         "extremespeed"
                     ],
                     "name": "deoxys-attack",
-                    "nature": "docile"
+                    "nature": "jolly"
                 },
                 {
                     "ability": "technician",
@@ -134785,7 +134711,7 @@
                         "earth-power"
                     ],
                     "name": "heatran",
-                    "nature": "sassy"
+                    "nature": "rash"
                 },
                 {
                     "ability": "clear-body",
@@ -134799,7 +134725,7 @@
                         "fire-punch"
                     ],
                     "name": "regigigas",
-                    "nature": "quirky"
+                    "nature": "docile"
                 }
             ]
         },
@@ -134815,7 +134741,7 @@
             "split": "galactic",
             "team": [
                 {
-                    "ability": "",
+                    "ability": "pressure",
                     "gender": "unknown",
                     "item": "griseous-orb",
                     "level": 100,
@@ -134841,7 +134767,7 @@
                 "weather": "rain"
             },
             "meta": "(PERMANENT RAIN)",
-            "name": "swimmer--miranda",
+            "name": "swimmer-miranda",
             "split": "elite-four",
             "team": [
                 {
@@ -134913,7 +134839,7 @@
                 "weather": "rain"
             },
             "meta": "(PERMANENT RAIN)",
-            "name": "swimmer--aubree",
+            "name": "swimmer-aubree",
             "split": "elite-four",
             "team": [
                 {
@@ -134985,7 +134911,7 @@
                 "weather": "rain"
             },
             "meta": "(PERMANENT RAIN)",
-            "name": "swimmer--paige",
+            "name": "swimmer-paige",
             "split": "elite-four",
             "team": [
                 {
@@ -135281,7 +135207,7 @@
                 "weather": "rain"
             },
             "meta": "(PERMANENT RAIN)",
-            "name": "swimmer--ledecky",
+            "name": "swimmer-ledecky",
             "split": "elite-four",
             "team": [
                 {
@@ -135771,7 +135697,7 @@
                     "nature": "hardy"
                 },
                 {
-                    "ability": "drizzle",
+                    "ability": "shed-skin",
                     "gender": "unknown",
                     "item": "leftovers",
                     "level": 88,
@@ -135785,10 +135711,10 @@
                     "nature": "quirky"
                 },
                 {
-                    "ability": "thick-fat",
+                    "ability": "arena-trap",
                     "gender": "unknown",
                     "item": "focus-band",
-                    "level": 87,
+                    "level": 92,
                     "moves": [
                         "fury-cutter",
                         "crunch",
@@ -135952,7 +135878,7 @@
                     "ability": "swift-swim",
                     "gender": "unknown",
                     "item": "focus-sash",
-                    "level": 89,
+                    "level": 86,
                     "moves": [
                         "hydro-pump",
                         "giga-drain",
@@ -136033,7 +135959,7 @@
                 {
                     "ability": "shadow-tag",
                     "gender": "unknown",
-                    "item": "spooky-plate",
+                    "item": "wide-lens",
                     "level": 89,
                     "moves": [
                         "psychic",
@@ -136485,13 +136411,13 @@
             ],
             "area": "victory-road",
             "meta": "(Player picked Chimchar)",
-            "name": "barry-6-2",
+            "name": "barry-6",
             "split": "elite-four",
             "team": [
                 {
                     "ability": "truant",
                     "gender": "unknown",
-                    "item": "chesto-berry",
+                    "item": "ganlon-berry",
                     "level": 100,
                     "moves": [
                         "body-slam",
@@ -136500,7 +136426,7 @@
                         "slack-off"
                     ],
                     "name": "slaking",
-                    "nature": "docile"
+                    "nature": "relaxed"
                 },
                 {
                     "ability": "guts",
@@ -136514,12 +136440,12 @@
                         "quick-attack"
                     ],
                     "name": "swellow",
-                    "nature": "docile"
+                    "nature": "relaxed"
                 },
                 {
                     "ability": "adaptability",
                     "gender": "unknown",
-                    "item": "",
+                    "item": "life-orb",
                     "level": 100,
                     "moves": [
                         "drain-punch",
@@ -136528,12 +136454,12 @@
                         "wild-charge"
                     ],
                     "name": "electivire",
-                    "nature": "gentle"
+                    "nature": "sassy"
                 },
                 {
                     "ability": "technician",
                     "gender": "unknown",
-                    "item": "",
+                    "item": "silk-scarf",
                     "level": 100,
                     "moves": [
                         "double-hit",
@@ -136542,12 +136468,12 @@
                         "fire-punch"
                     ],
                     "name": "ambipom",
-                    "nature": "jolly"
+                    "nature": "naive"
                 },
                 {
                     "ability": "swift-swim",
                     "gender": "unknown",
-                    "item": "",
+                    "item": "expert-belt",
                     "level": 100,
                     "moves": [
                         "surf",
@@ -136556,12 +136482,12 @@
                         "low-kick"
                     ],
                     "name": "swampert",
-                    "nature": "impish"
+                    "nature": "lax"
                 },
                 {
                     "ability": "swift-swim",
                     "gender": "unknown",
-                    "item": "",
+                    "item": "splash-plate",
                     "level": 100,
                     "moves": [
                         "aqua-cutter",
@@ -136570,7 +136496,7 @@
                         "swagger"
                     ],
                     "name": "empoleon",
-                    "nature": "modest"
+                    "nature": "mild"
                 }
             ]
         },
@@ -136583,13 +136509,13 @@
             ],
             "area": "victory-road",
             "meta": "(Player picked Piplup)",
-            "name": "barry-6-3",
+            "name": "barry-6-2",
             "split": "elite-four",
             "team": [
                 {
                     "ability": "truant",
                     "gender": "unknown",
-                    "item": "chesto-berry",
+                    "item": "ganlon-berry",
                     "level": 100,
                     "moves": [
                         "body-slam",
@@ -136598,7 +136524,7 @@
                         "slack-off"
                     ],
                     "name": "slaking",
-                    "nature": "serious"
+                    "nature": "rash"
                 },
                 {
                     "ability": "guts",
@@ -136612,12 +136538,12 @@
                         "quick-attack"
                     ],
                     "name": "swellow",
-                    "nature": "serious"
+                    "nature": "jolly"
                 },
                 {
                     "ability": "adaptability",
                     "gender": "unknown",
-                    "item": "",
+                    "item": "life-orb",
                     "level": 100,
                     "moves": [
                         "drain-punch",
@@ -136626,12 +136552,12 @@
                         "wild-charge"
                     ],
                     "name": "electivire",
-                    "nature": "hasty"
+                    "nature": "bashful"
                 },
                 {
                     "ability": "technician",
                     "gender": "unknown",
-                    "item": "",
+                    "item": "silk-scarf",
                     "level": 100,
                     "moves": [
                         "double-hit",
@@ -136640,12 +136566,12 @@
                         "fire-punch"
                     ],
                     "name": "ambipom",
-                    "nature": "rash"
+                    "nature": "calm"
                 },
                 {
                     "ability": "blaze",
                     "gender": "unknown",
-                    "item": "",
+                    "item": "expert-belt",
                     "level": 100,
                     "moves": [
                         "blaze-kick",
@@ -136654,12 +136580,12 @@
                         "low-kick"
                     ],
                     "name": "blaziken",
-                    "nature": "timid"
+                    "nature": "quiet"
                 },
                 {
                     "ability": "thick-fat",
                     "gender": "unknown",
-                    "item": "",
+                    "item": "meadow-plate",
                     "level": 100,
                     "moves": [
                         "rock-climb",
@@ -136668,7 +136594,7 @@
                         "swagger"
                     ],
                     "name": "torterra",
-                    "nature": "jolly"
+                    "nature": "naive"
                 }
             ]
         },
@@ -136681,13 +136607,13 @@
             ],
             "area": "victory-road",
             "meta": "(Player picked Turtwig)",
-            "name": "barry-6-4",
+            "name": "barry-6-3",
             "split": "elite-four",
             "team": [
                 {
                     "ability": "truant",
                     "gender": "unknown",
-                    "item": "chesto-berry",
+                    "item": "ganlon-berry",
                     "level": 100,
                     "moves": [
                         "body-slam",
@@ -136696,7 +136622,7 @@
                         "slack-off"
                     ],
                     "name": "slaking",
-                    "nature": "serious"
+                    "nature": "jolly"
                 },
                 {
                     "ability": "guts",
@@ -136710,12 +136636,12 @@
                         "quick-attack"
                     ],
                     "name": "swellow",
-                    "nature": "serious"
+                    "nature": "jolly"
                 },
                 {
                     "ability": "adaptability",
                     "gender": "unknown",
-                    "item": "",
+                    "item": "life-orb",
                     "level": 100,
                     "moves": [
                         "drain-punch",
@@ -136724,12 +136650,12 @@
                         "wild-charge"
                     ],
                     "name": "electivire",
-                    "nature": "brave"
+                    "nature": "adamant"
                 },
                 {
                     "ability": "technician",
                     "gender": "unknown",
-                    "item": "",
+                    "item": "silk-scarf",
                     "level": 100,
                     "moves": [
                         "double-hit",
@@ -136738,12 +136664,12 @@
                         "fire-punch"
                     ],
                     "name": "ambipom",
-                    "nature": "jolly"
+                    "nature": "calm"
                 },
                 {
                     "ability": "overgrow",
                     "gender": "unknown",
-                    "item": "",
+                    "item": "expert-belt",
                     "level": 100,
                     "moves": [
                         "energy-ball",
@@ -136752,12 +136678,12 @@
                         "rock-slide"
                     ],
                     "name": "sceptile",
-                    "nature": "docile"
+                    "nature": "relaxed"
                 },
                 {
                     "ability": "iron-fist",
                     "gender": "unknown",
-                    "item": "",
+                    "item": "flame-plate",
                     "level": 100,
                     "moves": [
                         "fire-punch",
@@ -136766,7 +136692,7 @@
                         "swagger"
                     ],
                     "name": "infernape",
-                    "nature": "hasty"
+                    "nature": "bashful"
                 }
             ]
         },
@@ -136931,7 +136857,7 @@
                 {
                     "ability": "swift-swim",
                     "gender": "unknown",
-                    "item": "focus-sash",
+                    "item": "miracle-seed",
                     "level": 100,
                     "moves": [
                         "hydro-pump",
@@ -137030,7 +136956,7 @@
                     "nature": "impish"
                 },
                 {
-                    "ability": "sand-veil",
+                    "ability": "rough-skin",
                     "gender": "unknown",
                     "item": "yache-berry",
                     "level": 100,
@@ -137156,7 +137082,7 @@
                 {
                     "ability": "flame-body",
                     "gender": "unknown",
-                    "item": "life-orb",
+                    "item": "blackglasses",
                     "level": 100,
                     "moves": [
                         "energy-ball",
@@ -137199,7 +137125,7 @@
                 {
                     "ability": "simple",
                     "gender": "unknown",
-                    "item": "sitrus-berry",
+                    "item": "kasib-berry",
                     "level": 100,
                     "moves": [
                         "psychic",
@@ -137308,7 +137234,7 @@
                     "nature": "hasty"
                 },
                 {
-                    "ability": "serene-grace",
+                    "ability": "natural-cure",
                     "gender": "unknown",
                     "item": "life-orb",
                     "level": 100,

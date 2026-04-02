@@ -100,6 +100,8 @@ function getTrainerStats(trainer) {
 	var v = `
 		<h3>
 			${getTrainerName(trainer.name)}
+			${trainer.meta ? `<span class="meek">${trainer.meta}</span>` : ""}
+			${trainer.split ? `<span class="meek">(${fullCapitalize(trainer.split)} split)</span>` : ""}
 			<span style = "float:right;">
 			<button onclick="calcTrainer(${i})">Calc</button>
 			${createLink(`#/trainer/${previous}/`, `<button>Previous</button>`)}
