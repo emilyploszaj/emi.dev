@@ -368,9 +368,9 @@ class Modifier {
 				number = (number / 100);
 				switch (op) {
 					case "+":
-						return (value, base, max) => value + base * number;
+						return (value, base, max) => value + value * number;
 					case "-":
-						return (value, base, max) => value - base * number;
+						return (value, base, max) => value - value * number;
 					case "=":
 						return (value, base, max) => base * number;
 				}
