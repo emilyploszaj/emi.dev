@@ -112,16 +112,16 @@ class BattleMoveGen4Impl extends BattleMove {
 		} else if (this.move.name == "flail" || this.move.name == "reversal") {
 			var mhp = this.user.getStat("hp");
 			var chp = this.user.currentHp;
-			var ratio = chp / mhp;
-			if (ratio < 0.0417) {
+			var pixels = parseInt(chp * 64 / mhp);
+			if (pixels <= 1) {
 				return 200;
-			} else if (ratio < 0.1042) {
+			} else if (pixels <= 5) {
 				return 150;
-			} else if (ratio < 0.2083) {
+			} else if (pixels <= 12) {
 				return 100;
-			} else if (ratio < 0.3542) {
+			} else if (pixels <= 21) {
 				return 80;
-			} else if (ratio < 0.6875) {
+			} else if (pixels <= 42) {
 				return 40;
 			} else {
 				return 20;
