@@ -68,6 +68,9 @@ function initEdit(poke) {
 		}
 		OptionSelect.updateSelector(el);
 	}
+	for (const stat of STATS) {
+		document.getElementById("edit-" + stat + "-dv").value = poke?.dvs?.[stat] ?? MAX_DV;
+	}
 	var nature = CalcNature.of(poke.nature);
 	updateEditNature(nature);
 	updateEdits();
