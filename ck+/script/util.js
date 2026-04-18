@@ -18,12 +18,12 @@ function getTinyPokemonDisplay(tp, extra = "") {
 	v += `<div class="tiny-poke-types">${typeDisplay}</div>`;
 	v += `<div>${itemLink(tp.item)}</div>`;
 	v += `<div class="tiny-poke-dvs">`;
-	var nature = NATURE_TABLE[tp.nature ?? "hardy"] ?? ["atk", "atk"];
+	var nature = CalcNature.of(tp.nature);
 	for (const stat of STATS) {
 		var sv = tp.dvs?.[stat] ?? MAX_DV;
-		if (nature[0] != nature[1] && nature[0] == stat) {
+		if (nature.isBoon(stat)) {
 			v += `<span class="dv-plus">${sv}</span>`;
-		} else if (nature[0] != nature[1] && nature[1] == stat) {
+		} else if (nature.isBane(stat)) {
 			v += `<span class="dv-minus">${sv}</span>`;
 		} else {
 			v += sv;
@@ -380,3 +380,34 @@ Object.defineProperty(Array.prototype, "displayMap", {
 		return this.map(func).join("");
 	}
 });
+
+class LevelRange {
+
+	constructor(min, max) {
+		this.min = min;
+		this.max = max;
+	}
+
+	static empty() {
+		return new LevelRange(undefined, undefined);
+	}
+
+	expand(val) {
+		if (this.min == undefined) {
+			this.min = val;
+			this.max = val;
+		}
+		if (val < this.min) {
+			this.min = val;
+		} else if (val > this.max) {
+			this.max = val;
+		}
+	}
+
+	display() {
+		if (this.min == this.max) {
+			return `` + this.min;
+		}
+		return `${this.min}-${this.max}`;
+	}
+}

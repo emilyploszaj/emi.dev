@@ -210,7 +210,34 @@ function displayCalcPokemon(root, poke, opponent, right) {
 function moveDisplay(min, max, minPercent, maxPercent, classes, tooltip, power) {
 	var v = `<td class="move-calc ${classes}"><ruby>${min} - ${max}<rt>${minPercent}% - ${maxPercent}%</rt></ruby>${tooltip}</td>`;
 	if (max == 0 && power == 0) {
-		v = '<td class="move-calc"><ruby><rt>​</rt></ruby></td>';
+		return '<td class="move-calc"><ruby><rt>​</rt></ruby></td>';
+	}
+
+	if (true) {
+		var minColor = "var(--nhko-bold)";
+		if (minPercent >= 100) {
+			minColor = "var(--ohko-bold)";
+		} else if (minPercent >= 50) {
+			minColor = "var(--thko-bold)";
+		}
+		var maxColor = "var(--nhko-lite)";
+		if (maxPercent >= 100) {
+			maxColor = "var(--ohko-lite)";
+		} else if (maxPercent >= 50) {
+			maxColor = "var(--thko-lite)";
+		}
+		var minWidth = Math.min(100, minPercent);
+		var maxWidth = Math.min(100 - minWidth, maxPercent - minPercent);
+		v = `
+		<td class="calc-range ${classes.includes("crit") ? "crit" : ""}">
+			<div class="calc-range-percent">${minPercent}% - ${maxPercent}%</div>
+			<div class="range-indicator">
+				<div class="range-always" style="--color:${minColor};--width:${minWidth}%;"></div>
+				<div class="range-roll" style="--color:${maxColor};--width:${maxWidth}%;"></div>
+			</div>
+			<div class="calc-range-absolute">${min} - ${max}</div>
+			${tooltip}
+		</td>`;
 	}
 	return v;
 }
@@ -477,7 +504,17 @@ function updateCalc() {
 		var v = "";
 		for (var i = 0; i < box.length && i < box.length; i++) {
 			var img = '<img draggable="false" src="' + getPokeImage(box[i], "small") + '">';
-			v += `<div class="micro-mon drag-sortable" drag-content="player-${i}" onclick="setPlayer(${i})">${img}</div>`;
+			var inlet = ``;
+			if (soulLinkBoxByArea.has(box[i].caught)) {
+				var soul = soulLinkBoxByArea.get(box[i].caught);
+				inlet += `<div class="micro-mon-inlet" onclick="setPlayerRemote(${i}, event)">
+					<img draggable="false" src="${getPokeImage(soul, "small")}">
+				</div>`;
+			}
+			v += `<div class="micro-mon drag-sortable" drag-content="player-${i}" onclick="setPlayer(${i})">
+				${img}
+				${inlet}
+			</div>`;
 		}
 		document.getElementById("player").getElementsByClassName("calc-team")[1].innerHTML = v;
 		document.getElementById("opponent").getElementsByClassName("calc-team")[0].innerHTML = getEnemyTeamDisplay(enemyTeam, lastTrainer);
@@ -607,7 +644,9 @@ function getPokemonEncountersDisplay(p) {
 				} else {
 					v += `${chances.base}%`;
 				}
-				v += "</span></td>";
+				v += `</span>`
+				v += `<span class="poke-encounters-level meek">Lvl ${chances.level.display()}</span>`;
+				v += "</td>";
 			}
 			v += "</tr>";
 		}

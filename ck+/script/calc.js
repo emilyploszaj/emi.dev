@@ -173,51 +173,109 @@ class CalcResult {
 	}
 }
 
-const NATURE_TABLE = {
-	atk: {
-		atk: "hardy",
-		def: "lonely",
-		spa: "adamant",
-		spd: "naughty",
-		spe: "brave",
-	},
-	def: {
-		atk: "bold",
-		def: "docile",
-		spa: "impish",
-		spd: "lax",
-		spe: "relaxed",
-	},
-	spa: {
-		atk: "modest",
-		def: "mild",
-		spa: "bashful",
-		spd: "rash",
-		spe: "quiet",
-	},
-	spd: {
-		atk: "calm",
-		def: "gentle",
-		spa: "careful",
-		spd: "quirky",
-		spe: "sassy",
-	},
-	spe: {
-		atk: "timid",
-		def: "hasty",
-		spa: "jolly",
-		spd: "naive",
-		spe: "serious",
-	}
-}
-for (const boon of Object.keys(NATURE_TABLE)) {
-	for (const bane of Object.keys(NATURE_TABLE)) {
-		NATURE_TABLE[NATURE_TABLE[boon][bane]] = [boon, bane];
-	}
-}
+class CalcNature {
+	static #TABLE = {
+		"hardy":   new CalcNature("hardy",   {}, "atk"),
+		"lonely":  new CalcNature("lonely",  {"atk": 1.1, "def": 0.9}),
+		"adamant": new CalcNature("adamant", {"atk": 1.1, "spa": 0.9}),
+		"naughty": new CalcNature("naughty", {"atk": 1.1, "spd": 0.9}),
+		"brave":   new CalcNature("brave",   {"atk": 1.1, "spe": 0.9}),
+		"bold":    new CalcNature("bold",    {"def": 1.1, "atk": 0.9}),
+		"docile":  new CalcNature("docile",  {}, "def"),
+		"impish":  new CalcNature("impish",  {"def": 1.1, "spa": 0.9}),
+		"lax":     new CalcNature("lax",     {"def": 1.1, "spd": 0.9}),
+		"relaxed": new CalcNature("relaxed", {"def": 1.1, "spe": 0.9}),
+		"modest":  new CalcNature("modest",  {"spa": 1.1, "atk": 0.9}),
+		"mild":    new CalcNature("mild",    {"spa": 1.1, "def": 0.9}),
+		"bashful": new CalcNature("bashful", {}, "spa"),
+		"rash":    new CalcNature("rash",    {"spa": 1.1, "spd": 0.9}),
+		"quiet":   new CalcNature("quiet",   {"spa": 1.1, "spe": 0.9}),
+		"calm":    new CalcNature("calm",    {"spd": 1.1, "atk": 0.9}),
+		"gentle":  new CalcNature("gentle",  {"spd": 1.1, "def": 0.9}),
+		"careful": new CalcNature("careful", {"spd": 1.1, "spa": 0.9}),
+		"quirky":  new CalcNature("quirky",  {}, "spd"),
+		"sassy":   new CalcNature("sassy",   {"spd": 1.1, "spe": 0.9}),
+		"timid":   new CalcNature("timid",   {"spe": 1.1, "atk": 0.9}),
+		"hasty":   new CalcNature("hasty",   {"spe": 1.1, "def": 0.9}),
+		"jolly":   new CalcNature("jolly",   {"spe": 1.1, "spa": 0.9}),
+		"naive":   new CalcNature("naive",   {"spe": 1.1, "spd": 0.9}),
+		"serious": new CalcNature("serious", {}, "spe"),
+		"none":    new CalcNature("none",    {}),
+		"wild":    new CalcNature("wild",    {"atk": 1.1, "spa": 1.1, "def": 0.9, "spd": 0.9}),
+	};
+	static #EMPTY = new CalcNature("none", {});
 
-function getNature(boon, bane) {
-	return NATURE_TABLE[boon]?.[bane] ?? "hardy";
+	#name;
+	#modifiers;
+	#focus;
+
+	constructor(name, modifiers, focus) {
+		this.#name = name;
+		this.#modifiers = modifiers;
+		this.#focus = focus;
+	}
+
+	static of(boon, bane) {
+		if (bane == undefined) {
+			var name = boon;
+			return CalcNature.#TABLE[name] ?? CalcNature.#EMPTY;
+		} else {
+
+			for (const k in CalcNature.#TABLE) {
+				var v = CalcNature.#TABLE[k];
+				if (v.isBoon(boon) && v.isBane(bane)) {
+					return v;
+				} else if (boon == bane && v.isFocus(boon)) {
+					return v;
+				}
+			}
+			return this.#EMPTY;
+		}
+	}
+
+	get name() {
+		return this.#name ?? "hardy";
+	}
+
+	modifier(stat) {
+		return this.#modifiers[stat] ?? 1;
+	}
+
+	isBoon(stat) {
+		return this.modifier(stat) > 1;
+	}
+
+	isBane(stat) {
+		return this.modifier(stat) < 1;
+	}
+
+	isFocus(stat) {
+		return this.#focus == stat;
+	}
+
+	withBoon(stat) {
+		for (const k in this.#modifiers) {
+			if (this.#modifiers[k] < 1) {
+				return CalcNature.of(stat, k);
+			}
+		}
+		if (this.#focus != undefined) {
+			return CalcNature.of(stat, this.#focus);
+		}
+		return CalcNature.of(stat, stat);
+	}
+
+	withBane(stat) {
+		for (const k in this.#modifiers) {
+			if (this.#modifiers[k] > 1) {
+				return CalcNature.of(k, stat);
+			}
+		}
+		if (this.#focus != undefined) {
+			return CalcNature.of(this.#focus, stat);
+		}
+		return CalcNature.of(stat, stat);
+	}
 }
 
 function hasBadgeBoost(poke, player) {
@@ -232,6 +290,13 @@ function setTagPlayer(i) {
 	myPoke = trainersByName.get(playerTagPartners[currentTagPartner]).team[i];
 	clearPlayerStages();
 	updateCalc();
+}
+
+function setPlayerRemote(i, event) {
+	myPoke = soulLinkBoxByArea.get(box[i].caught);
+	clearPlayerStages();
+	updateCalc();
+	event.stopPropagation();
 }
 
 function setPlayer(i) {

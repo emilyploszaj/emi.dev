@@ -242,6 +242,7 @@ function getRelativeEncounterChances(poke) {
 				var pool = inflateEncounterPool(p.pool);
 				var bestChance = 0;
 				var bestDupeChance = 0;
+				var bestRange = range;
 				if (Array.isArray(pool)) {
 					pool = [pool];
 				} else {
@@ -250,9 +251,11 @@ function getRelativeEncounterChances(poke) {
 				for (const time of pool) {
 					var chance = 0;
 					var totalChance = 0;
+					var range = LevelRange.empty();
 					for (const m of time) {
 						if (m.pokemon == poke) {
 							chance += m.chance;
+							range.expand(m.level);
 						} else if (hasFamily(pokemonFamilies.get(pokemonByName.get(m.pokemon).pokedex))) {
 							continue;
 						}
@@ -263,10 +266,11 @@ function getRelativeEncounterChances(poke) {
 					if (totalChance > 0 && dupeChance > bestDupeChance) {
 						bestChance = chance;
 						bestDupeChance = dupeChance;
+						bestRange = range;
 					}
 				}
 				if (bestChance > 0) {
-					ret[area][p.type] = {base: bestChance, dupe: bestDupeChance};
+					ret[area][p.type] = {base: bestChance, dupe: bestDupeChance, level: bestRange};
 				}
 			}
 		}

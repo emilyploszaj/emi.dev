@@ -33,14 +33,8 @@ class EngineImpl extends Engine {
 		} else {
 			v = v + 5;
 		}
-		var nature = NATURE_TABLE[poke.nature];
-		if (nature && nature[0] != nature[1]) {
-			if (nature[0] == stat) {
-				v = parseInt(v * 1.1);
-			} else if (nature[1] == stat) {
-				v = parseInt(v * 0.9);
-			}
-		}
+		var nature = CalcNature.of(poke.nature);
+		v = parseInt(v * nature.modifier(stat));
 		return v;
 	}
 

@@ -452,6 +452,11 @@ function hasFamily(family) {
 			return true;
 		}
 	}
+	for (const m of soulLinkBox) {
+		if (pokemonFamilies.get(pokemonByName.get(m.name).pokedex) == family) {
+			return true;
+		}
+	}
 	for (const d of settings.extraDupes ?? []) {
 		if (pokemonFamilies.get(pokemonByName.get(d).pokedex) == family) {
 			return true;

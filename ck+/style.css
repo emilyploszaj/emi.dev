@@ -17,6 +17,13 @@
 	--ohko: #d84a4a;
 	--thko: #c3d84a;
 
+	--nhko-bold: #AAAAAA;
+	--nhko-lite: #747474;
+	--ohko-bold: #eb5757;
+	--ohko-lite: #9b4646;
+	--thko-bold: #f5be59;
+	--thko-lite: #a07a33;
+
 	--speed-faster: #3cd9f5;
 	--speed-tied: #ecdf68;
 	--speed-slower: #d47070;
@@ -579,8 +586,9 @@ input:checked + .fake-checkbox {
 	display: none;
 	position: absolute;
 	bottom: 20px;
-	left: auto;
-	right: auto;
+	left: 0px;
+	width: 100px;
+	align-items: center;
 }
 
 .learnset-pool {
@@ -716,7 +724,7 @@ input:checked + .fake-checkbox {
 
 .rolls {
 	z-index: 1000;
-	position: absolute;
+	position: fixed;
 	left: calc(50% - 175px);
 	top: 200px;
 	width: 350px;
@@ -952,6 +960,61 @@ input:checked + .fake-checkbox {
 	max-width: 152px;
 }
 
+.calc-range {
+	position: relative;
+	padding: 0px 0px;
+	border-width: 3px;
+	border-style: dashed;
+	border-color: transparent;
+	height: 50px;
+	min-width: 152px;
+	max-width: 152px;
+}
+
+.calc-range-percent {
+	font-size: 20px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.calc-range-absolute {
+	font-size: 16px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.range-indicator {
+	/* position: absolute; */
+	display: flex;
+	width: 100%;
+	height: 6px;
+	top: 46px;
+	border-radius: 4px;
+	background-color: var(--background);
+	overflow: hidden;
+}
+
+.range-always, .range-roll {
+	display: inline-block;
+	width: var(--width);
+	height: 100%;
+}
+
+.range-always {
+	background-color: var(--color);
+}
+
+.range-roll {
+	--darker-color: hsl(from var(--color) h s calc(l * 0.8));
+	background: repeating-linear-gradient(
+		-45deg,
+		var(--color) 0px,
+		var(--color) 6px,
+		var(--darker-color) 6px,
+		var(--darker-color) 12px
+	) !important;
+}
+
 .move-calc-variants {
 	float: none !important;
 	display: flex;
@@ -1102,6 +1165,7 @@ rt {
 }
 
 .micro-mon {
+	position: relative;
 	background-color: var(--background);
 	padding: 5px;
 	margin: 2px;
@@ -1644,4 +1708,34 @@ rt {
 
 .toggled-party-member img {
 	filter: grayscale(100%);
+}
+
+.micro-mon-inlet {
+	position: absolute;
+	zoom: 1;
+	bottom: 0px;
+	right: 0px;
+	width: 50%;
+	height: 50%;
+	clip-path: polygon(100% 0, 100% 100%, 0 100%);
+	background-color: var(--grouping-background);
+	transition: width 0.1s, height 0.1s;
+}
+
+.micro-mon-inlet:hover {
+	width: 100%;
+	height: 100%;
+}
+
+.micro-mon-inlet img {
+	margin-top: -25%;
+	margin-left: -25%;
+	filter: grayscale(70%);
+	transition: margin-top 0.1s, margin-left 0.1s, filter 0.1s;
+}
+
+.micro-mon-inlet:hover img {
+	margin-top: 15%;
+	margin-left: 15%;
+	filter: grayscale(0%);
 }

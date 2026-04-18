@@ -267,6 +267,10 @@ function calcWild(p, level) {
 		},
 		"moves": moves
 	}
+	if (game.name == "pk") {
+		theirPoke.nature = "wild";
+		theirPoke.ability = p.abilities[0];
+	}
 	updateCalc();
 	setTab("calc");
 }

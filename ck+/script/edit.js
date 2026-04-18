@@ -68,22 +68,8 @@ function initEdit(poke) {
 		}
 		OptionSelect.updateSelector(el);
 	}
-	var nature = NATURE_TABLE[poke.nature ?? "hardy"];
-	for (const stat of STATS) {
-		document.getElementById("edit-" + stat + "-dv").value = poke?.dvs?.[stat] ?? MAX_DV;
-		if (stat != "hp") {
-			var divPlus = document.getElementById("edit-" + stat + "-nature-plus");
-			var divMinus = document.getElementById("edit-" + stat + "-nature-minus");
-			divPlus.classList.remove("nature-radio-selected")
-			if (nature[0] == stat) {
-				divPlus.classList.add("nature-radio-selected")
-			}
-			divMinus.classList.remove("nature-radio-selected")
-			if (nature[1] == stat) {
-				divMinus.classList.add("nature-radio-selected")
-			}
-		}
-	}
+	var nature = CalcNature.of(poke.nature);
+	updateEditNature(nature);
 	updateEdits();
 }
 
@@ -91,33 +77,37 @@ function getEditNature() {
 	var plusDiv = document.querySelector(".nature-radio-selected.nature-radio-plus");
 	var minusDiv = document.querySelector(".nature-radio-selected.nature-radio-minus");
 	if (plusDiv && minusDiv) {
-		return getNature(plusDiv.id.split("edit-")[1].split("-nature")[0], minusDiv.id.split("edit-")[1].split("-nature")[0]);
+		return CalcNature.of(plusDiv.id.split("edit-")[1].split("-nature")[0], minusDiv.id.split("edit-")[1].split("-nature")[0]);
 	}
-	return "hardy";
+	return CalcNature.of("empty");
 }
 
 function setEditNature(stat, dir) {
-	var nature = [...NATURE_TABLE[getEditNature() ?? "hardy"]];
+	var nature = getEditNature();
 	if (dir == "plus") {
-		nature[0] = stat;
+		nature = nature.withBoon(stat);
 	} else {
-		nature[1] = stat;
+		nature = nature.withBane(stat);
 	}
+	updateEditNature(nature);
+	changeEdit();
+}
+
+function updateEditNature(nature) {
 	for (const stat of STATS) {
 		if (stat != "hp") {
 			var divPlus = document.getElementById("edit-" + stat + "-nature-plus");
 			var divMinus = document.getElementById("edit-" + stat + "-nature-minus");
 			divPlus.classList.remove("nature-radio-selected")
-			if (nature[0] == stat) {
+			if (nature.isBoon(stat) || nature.isFocus(stat)) {
 				divPlus.classList.add("nature-radio-selected")
 			}
 			divMinus.classList.remove("nature-radio-selected")
-			if (nature[1] == stat) {
+			if (nature.isBane(stat) || nature.isFocus(stat)) {
 				divMinus.classList.add("nature-radio-selected")
 			}
 		}
 	}
-	changeEdit();
 }
 
 function undoEdit() {
@@ -199,7 +189,7 @@ function getEditedPoke() {
 			document.getElementById("edit-move-3").getAttribute("last-valid"),
 			document.getElementById("edit-move-4").getAttribute("last-valid")
 		].filter(v => v && v.length > 0),
-		nature: getEditNature(),
+		nature: getEditNature().name,
 		dvs: {
 			hp: parseInt(document.getElementById("edit-hp-dv").getAttribute("last-valid")),
 			atk: parseInt(document.getElementById("edit-atk-dv").getAttribute("last-valid")),

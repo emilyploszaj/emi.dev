@@ -680,6 +680,8 @@ function vsRecorderFailed(event) {
 }
 
 function updateVsRecorder() {
+	postSoulLink();
+	getSoulLink();
 	var req = new XMLHttpRequest();
 	req.addEventListener("load", vsRecorderComplete);
 	req.addEventListener("error", vsRecorderFailed);
@@ -794,6 +796,62 @@ function commandPinTime(time) {
 		req.send(`{"time": {"hour": ${hour}}}`);
 	}
 	setCommands();
+}
+
+var soulLinkState = { enabled: false }
+var soulLinkBox = [];
+var soulLinkBoxByArea = new Map();
+
+function updateSoulBinding() {
+	soulLinkBoxByArea.clear();
+	for (const mon of soulLinkBox) {
+		if (mon.caught) {
+			soulLinkBoxByArea.set(mon.caught, mon);
+		}
+	}
+	updateCalc();
+}
+
+function enableSoulLink(url, myId, theirId) {
+	soulLinkState.url = url;
+	soulLinkState.myId = myId;
+	soulLinkState.theirId = theirId;
+	soulLinkState.enabled = true;
+	postSoulLink();
+	getSoulLink();
+}
+
+function postSoulLink() {
+	if (!soulLinkState.enabled) {
+		return;
+	}
+	var req = new XMLHttpRequest();
+	req.addEventListener("load", e => {
+	});
+	req.addEventListener("error", vsLinkCommandFailed);
+	req.addEventListener("abort", vsLinkCommandFailed);
+	req.open("POST", `${soulLinkState.url}/state/${soulLinkState.myId}`);
+	req.setRequestHeader("Content-Type", "application/json");
+	req.send(JSON.stringify({box: box}));
+}
+
+function getSoulLink() {
+	if (!soulLinkState.enabled) {
+		return;
+	}
+	var req = new XMLHttpRequest();
+	req.addEventListener("load", e => {
+		var json = JSON.parse(e.target.responseText);
+		console.log(json);
+		if (json.data?.box) {
+			soulLinkBox = json.data.box;
+			updateSoulBinding();
+		}
+	});
+	req.addEventListener("error", vsLinkCommandFailed);
+	req.addEventListener("abort", vsLinkCommandFailed);
+	req.open("GET", `${soulLinkState.url}/state/${soulLinkState.theirId}`);
+	req.send();
 }
 
 setInterval(function() {
