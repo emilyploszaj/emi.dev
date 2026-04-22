@@ -190,6 +190,9 @@ function isShiny(poke) {
 }
 
 function getGender(poke) {
+	if (poke.poke) {
+		poke = poke.poke;
+	}
 	if (poke.gender) {
 		if (poke.gender == "female") {
 			return 1;
