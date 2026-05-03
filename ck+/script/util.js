@@ -234,8 +234,64 @@ function getEmptyStages() {
 	}
 }
 
-function getSwitchPriority(enemy, player) {
+function getSwitchPriority(enemy, player, team) {
+	if (settings.enableSwitchAI == false) {
+		return 0;
+	}
 	if (game.name == "pk") {
+		function padTypes(types) {
+			types = [...types];
+			if (types.length == 1) {
+				types.push(types[0]);
+			}
+			return types;
+		}
+		var pMon = pokemonByName.get(player.name);
+		var pTypes = padTypes(pMon.types);
+		var playerLevitating = (player.ability == "levitate" || pTypes[0] == "flying" || pTypes[1] == "flying") && player.item != "iron-ball";
+		function score(e) {
+			var eMon = pokemonByName.get(e.name);
+			var eTypes = padTypes(eMon.types);
+			for (const m of e.moves) {
+				var eMove = movesByName.get(m);
+				if (eMove.type == "ground" && playerLevitating && e.ability != "mold-breaker") {
+					continue;
+				} else if (e.ability == "normalize") {
+					continue;
+				} else {
+					var filteredTypes = [...pMon.types];
+					if (e.ability == "scrappy" && eMove.type == "fighting") {
+						filteredTypes = filteredTypes.filter(v => v != "ghost");
+					}
+					var moveEff = getCompositeMatchup(eMove.type, filteredTypes);
+					if (moveEff > 1) {
+						var switchScore = 0;
+						for (const eType of eTypes) {
+							var pTypesCopy = pTypes;
+							if (eType == "ground" && playerLevitating && e.ability != "mold-breaker") {
+								continue;
+							} else if (e.ability == "scrappy") {
+								pTypesCopy = [...pTypes].filter(v => v != "ghost");
+							}
+							switchScore += parseInt(40 * getCompositeMatchup(eType, pTypesCopy));
+						}
+						return switchScore & 0xFF;
+					}
+				}
+			}
+			return -1;
+		}
+		// 0 is used here instead of -1 to invalidate mons with a full immunity score
+		var best = { score: 0 }
+		for (const e of team) {
+			var s = score(e);
+			if (s > best.score) {
+				best = { score: s, mon: e }
+			}
+		}
+		if (best.mon == enemy) {
+			return 1;
+		}
 		return 0;
 	}
 	var prio = 0;
@@ -283,6 +339,19 @@ function hasTypeAdvantage(attacker, defender) {
 		}
 	}
 	return false;
+}
+
+function getCompositeMatchup(attackType, defenseTypes) {
+	var used = new Set();
+	var eff = 1;
+	for (const t of defenseTypes) {
+		if (used.has(t)) {
+			continue;
+		}
+		used.add(t);
+		eff *= getMatchup(attackType, t);
+	}
+	return eff;
 }
 
 function getMatchup(attackType, defenseType) {

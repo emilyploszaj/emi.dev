@@ -585,9 +585,15 @@ function getAiFlagDisplay(trainer) {
 
 function getEnemyTeamDisplay(enemyTeam, trainer) {
 	var v = "";
+	var validTeam = [...enemyTeam];
+	for (var i = validTeam.length - 1; i >= 0; i--) {
+		if (faintedMonToggles.get(`${trainer}-${i}`) == true || theirPoke == validTeam[i]) {
+			validTeam.splice(i, 1);
+		}
+	}
 	for (let i in enemyTeam) {
 		var extraClasses = faintedMonToggles.get(`${trainer}-${i}`) == true ? "toggled-party-member" : "";
-		var prioClass = ["low", "neutral", "high"][Math.sign(getSwitchPriority(enemyTeam[i], myPoke)) + 1];
+		var prioClass = ["low", "neutral", "high"][Math.sign(getSwitchPriority(enemyTeam[i], myPoke, validTeam)) + 1];
 		var img = `<img draggable="false" class="${prioClass}-switch-priority" src="${getPokeImage(enemyTeam[i], "small")}">`;
 		v += `<div class="micro-mon drag-sortable ${extraClasses}" drag-content="enemy-${trainer}-${i}" drag-type="box" oncontextmenu="togglePartyIcon(event, ${trainer}, ${i})" onclick="setEnemy(${trainer}, ${i})">${img}</div>`;
 	}
@@ -596,9 +602,15 @@ function getEnemyTeamDisplay(enemyTeam, trainer) {
 
 function getTagTeamDisplay(tagTeam) {
 	var v = "";
+	var validTeam = [...tagTeam];
+	for (var i = validTeam.length - 1; i >= 0; i--) {
+		if (faintedMonToggles.get(`tag-${i}`) == true || myPoke == validTeam[i]) {
+			validTeam.splice(i, 1);
+		}
+	}
 	for (let i in tagTeam) {
 		var extraClasses = faintedMonToggles.get(`tag-${i}`) == true ? "toggled-party-member" : "";
-		var prioClass = ["low", "neutral", "high"][Math.sign(getSwitchPriority(tagTeam[i], myPoke)) + 1];
+		var prioClass = ["low", "neutral", "high"][Math.sign(getSwitchPriority(tagTeam[i], myPoke, validTeam)) + 1];
 		var img = `<img draggable="false" class="${prioClass}-switch-priority" src="${getPokeImage(tagTeam[i], "small")}">`;
 		v += `<div class="micro-mon drag-sortable ${extraClasses}" drag-content="tag-${i}" drag-type="box" oncontextmenu="togglePartyIcon(event, 'tag', ${i})" onclick="setTagPlayer(${i}, ${i})">${img}</div>`;
 	}

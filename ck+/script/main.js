@@ -32,6 +32,9 @@ function readLocalStorage() {
 	if (settings.enableStatistics == undefined) {
 		settings.enableStatistics = true;
 	}
+	if (settings.enableSwitchAI == undefined) {
+		settings.enableSwitchAI = true;
+	}
 	if (settings.extraDupes == undefined) {
 		settings.enableStatistics = [];
 	}
@@ -44,13 +47,16 @@ function writeLocalStorage() {
 
 function updateSettings() {
 	settings.enableVsRecorder = document.getElementById("enable-vs-recorder").checked;
+	settings.enableSwitchAI = document.getElementById("enable-switch-ai").checked;
 	settings.enableStatistics = document.getElementById("enable-statistics").checked;
 	settings.extraDupes = getExtraDupes();
 	applySettings();
+	updateCalc();
 }
 
 function applySettings() {
 	document.getElementById("enable-vs-recorder").checked = settings.enableVsRecorder == true;
+	document.getElementById("enable-switch-ai").checked = settings.enableSwitchAI == true;
 	document.getElementById("enable-statistics").checked = settings.enableStatistics == true;
 	if (settings.enableVsRecorder) {
 		document.getElementById("update-vs-recorder").style.display = "block";

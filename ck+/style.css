@@ -1199,6 +1199,21 @@ rt {
 	border-top-color: var(--high-switch-priority) !important;
 }
 
+.gen-4 .high-switch-priority {
+	background: linear-gradient(
+		to bottom right,
+		var(--background) 0px,
+		var(--background) 4px,
+		var(--high-switch-priority) 4px,
+		var(--high-switch-priority) 8px,
+		var(--background) 8px,
+		var(--background) 16px,
+		var(--high-switch-priority) 16px,
+		var(--high-switch-priority) 20px,
+		var(--background) 20px
+	);
+}
+
 #map {
 	background-color: var(--box-background);
 	padding: 24px;
@@ -1696,7 +1711,7 @@ rt {
 	padding: 10px 0px 6px 0px;
 }
 
-.toggled-party-member {
+.toggled-party-member img {
 	background: repeating-linear-gradient(
 		-45deg,
 		var(--box-background) 0px,
