@@ -268,10 +268,8 @@ function getSwitchPriority(enemy, player, team) {
 						var switchScore = 0;
 						for (const eType of eTypes) {
 							var pTypesCopy = pTypes;
-							if (eType == "ground" && playerLevitating && e.ability != "mold-breaker") {
+							if (eType == "ground" && (pTypes[0] == "flying" || pTypes[1] == "flying")) {
 								continue;
-							} else if (e.ability == "scrappy") {
-								pTypesCopy = [...pTypes].filter(v => v != "ghost");
 							}
 							switchScore += parseInt(40 * getCompositeMatchup(eType, pTypesCopy));
 						}
