@@ -243,7 +243,7 @@ function getDamage(attacker, defender, move) {
 	}
 
 	// Screens
-	if (move.crit) {
+	if (!move.crit) {
 		// TODO aurora veil
 		if (special && defender.hasScreen("light-screen")) {
 			v = parseInt(v / 2);
