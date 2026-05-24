@@ -14,10 +14,13 @@
 	<body>
 		<div id="header">
 			<h1>Emi's Calc</h1>
-			<div id="search" style="z-index: 100;">
-				<input id="search-box" type="search" placeholder="Search pokemon or encounters...">
-				<div id="search-suggestions">
+			<div id="search-container">
+				<div id="search" style="z-index: 100;">
+					<input id="search-box" type="search" placeholder="Search pokemon or encounters...">
+					<div id="search-suggestions">
+					</div>
 				</div>
+				<a class="poke-link games-link" onclick="clickLink(event)" href="#/games/"><button class="tab-select">Games</button></a>
 			</div>
 			<div id="top-bar">
 				<div id="tab-selection">
@@ -60,6 +63,18 @@
 			<div>Pin in game time to: <button onclick="commandPinTime('none')">Unset</button><button onclick="commandPinTime('day')">Day</button><button onclick="commandPinTime('night')">Night</button></div>
 			<h3>Party</h3>
 			<div id="box-commands"></div>
+		</div>
+		<div id="games" class="tab">
+			<h3>Gen 2</h3>
+			<p><a class="poke-link" href="./?ck+">Crystal Kaizo+</a></p>
+			<p><a class="poke-link" href="./?ck+xp">Crystal Kaizo+ Christmas Patch</a></p>
+			<h3>Gen 4</h3>
+			<p><a class="poke-link" href="./?pk">Platinum Kaizo</a></p>
+			<h3>Custom</h3>
+			<p class="meek">
+				Upload a game data blob JSON file instead of a save to set custom game. Prone to errors!
+			</p>
+			<p><a class="poke-link" href="./?custom">Custom</a></p>
 		</div>
 		<div id="calc" class="tab">
 			<div id="player">

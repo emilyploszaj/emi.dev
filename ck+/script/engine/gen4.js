@@ -300,10 +300,12 @@ function getDamage(attacker, defender, move) {
 		}
 
 		var eff = getMatchup(move.type, dp.types[0]);
-		result.modify(v => parseInt(v * eff))
+		eff = modifierFloat(`matchup.${move.type}.${dp.types[0]}`, eff);
+		result.modify(v => parseInt(v * eff));
 		if (dp.types.length > 1) {
 			eff = getMatchup(move.type, dp.types[1]);
-			result.modify(v => parseInt(v * eff))
+			eff = modifierFloat(`matchup.${move.type}.${dp.types[1]}`, eff);
+			result.modify(v => parseInt(v * eff));
 		}
 
 		if (move.type == "ground" && !flag("grounded", !contains(dp.types, "flying"))) {

@@ -128,6 +128,8 @@ function navigate(url) {
 				setTab("map")
 			} else if (parts[0] == "commands") {
 				setTab("commands")
+			} else if (parts[0] == "games") {
+				setTab("games")
 			}
 		}
 	} else {

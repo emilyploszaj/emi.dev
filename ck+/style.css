@@ -417,9 +417,22 @@ input:checked + .fake-checkbox {
 	font-size: 16px;
 }
 
+#search-container {
+	display: flex;
+	margin: 30px 0px;
+}
+
+.games-link {
+	margin-left: 10px;
+}
+
+.games-link button {
+	font-size: 30px;
+}
+
 #search {
+	flex-grow: 1;
 	position: relative;
-	margin: 30px;
 }
 
 #search-box {
@@ -1601,6 +1614,20 @@ rt {
 	background-color: var(--box-background);
 	padding: 0px 24px;
 	height: fit-content;
+}
+
+#games {
+	background-color: var(--box-background);
+	padding: 12px 24px;
+	height: fit-content;
+}
+
+#games h3 {
+	margin: 16px 0px;
+}
+
+#games p {
+	margin: 8px 4px;
 }
 
 .meek {

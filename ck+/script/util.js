@@ -260,7 +260,7 @@ function getSwitchPriority(enemy, player, team) {
 					continue;
 				} else {
 					var filteredTypes = [...pMon.types];
-					if (e.ability == "scrappy" && eMove.type == "fighting") {
+					if (e.ability == "scrappy" && (eMove.type == "fighting" || eMove.type == "normal")) {
 						filteredTypes = filteredTypes.filter(v => v != "ghost");
 					}
 					var moveEff = getCompositeMatchup(eMove.type, filteredTypes);
