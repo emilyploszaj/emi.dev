@@ -243,11 +243,13 @@ function getDamage(attacker, defender, move) {
 	}
 
 	// Screens
-	// TODO aurora veil
-	if (special && defender.hasScreen("light-screen")) {
-		v = parseInt(v / 2);
-	} else if (!special && defender.hasScreen("reflect")) {
-		v = parseInt(v / 2);
+	if (move.crit) {
+		// TODO aurora veil
+		if (special && defender.hasScreen("light-screen")) {
+			v = parseInt(v / 2);
+		} else if (!special && defender.hasScreen("reflect")) {
+			v = parseInt(v / 2);
+		}
 	}
 
 	if (document.getElementById("doubles").checked && getTargeting(move.move).all) {
