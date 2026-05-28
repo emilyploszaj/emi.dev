@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=1160, initial-scale=1">
+	<meta property="og:title" content="Mirror Solitaire">
+	<meta property="og:description" content="A solitaire found in Cerulean. Organizing arts will disorganize dreams, and vice versa. Can you find a balance?">
+	<meta property="og:site_name" content="emi.dev">
+	<meta property="og:image" content="https://emi.dev/solitaire/mirror/favicon.png">
+	<meta name="theme-color" content="#3a3ce8">
+	<title>Mirror Solitaire</title>
+	<link rel="icon" type="image/png" href="./favicon.png">
+	<link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+	<header></header>
+	<main>
+		<div id="dragged"></div>
+		<div id="dragged-mirrored"></div>
+		<div id="board">
+			<div id="bottom">
+				<slot id="play-0">
+				</slot>
+				<slot id="play-1">
+				</slot>
+				<slot id="play-2">
+				</slot>
+				<slot id="play-3">
+				</slot>
+				<slot id="play-4">
+				</slot>
+				<slot id="play-5">
+				</slot>
+				<slot id="play-6">
+				</slot>
+				<div class="mirror-spacer"></div>
+				<slot id="mirroredplay-6">
+				</slot>
+				<slot id="mirroredplay-5">
+				</slot>
+				<slot id="mirroredplay-4">
+				</slot>
+				<slot id="mirroredplay-3">
+				</slot>
+				<slot id="mirroredplay-2">
+				</slot>
+				<slot id="mirroredplay-1">
+				</slot>
+				<slot id="mirroredplay-0">
+				</slot>
+			</div>
+		</div>
+		<div id="mirror-visual"></div>
+		<div id="seed"></div>
+		<div id="moving-card"></div>
+		<div id="mirrored-moving-card"></div>
+	</main>
+	<footer>
+		<div id="instructions" onclick="toggleInstructions()">Instructions</div>
+		<div id="wins"></div>
+	</footer>
+	<div id="instruction-overlay" style="display:none;" onclick="toggleInstructions()">
+		<div id="instruction-content">
+			<div class="instruction-text">
+				Arts can be stacked in descending rank of alternating suits
+			</div>
+			<div class="instruction-text">
+				I can sort my dream of the same suit with adjacent ranks
+			</div>
+			<div class="instruction-cards">
+				<slot id="instruction-0"></slot>
+				<slot id="instruction-1"></slot>
+				<slot id="instruction-2"></slot>
+			</div>
+			<div class="instruction-cards">
+				<slot id="instruction-3"></slot>
+				<slot id="instruction-4"></slot>
+				<slot id="instruction-5"></slot>
+			</div>
+			<div class="instruction-text">
+				Every move made will be mirrored
+			</div>
+			<div class="instruction-text">
+				To win, I need to sort all of my dream suits into their own stacks
+			</div>
+		</div>
+	</div>
+</body>
+
+<script src="./script.js"></script>
+
+</html>
