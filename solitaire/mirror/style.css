@@ -100,73 +100,74 @@ card {
 	width: 84px;
 	height: 154px;
 	/* border-radius: 16px; */
-	border-width: 4px;
-	border-style: solid;
+	padding: 2px;
+	outline-width: 4px;
+	outline-style: solid;
 	background-color: #ffffff;
 }
 
 card > card {
+	margin-left: -2px;
 	margin-top: 44px;
-	margin-left: -4px;
 }
 
 card[suit="composition"] {
 	color: #97fc9f;
-	border-color: #30f240;
+	outline-color: #30f240;
 	background-color: #202820;
 }
 
 card[suit="narrative"] {
 	color: #fccab0;
-	border-color: #d88256;
+	outline-color: #d88256;
 	background-color: #24201e;
 }
 
 card[suit="performance"] {
 	color: #b4a5ff;
-	border-color: #5a41d8;
+	outline-color: #5a41d8;
 	background-color: #1e1d24;
 }
 
 card[suit="cerulean"] {
 	color: #9d9efc;
-	border-color: #3a3ce8;
+	outline-color: #3a3ce8;
 	background-color: #1f1f26;
 }
 
 card[suit="viridian"] {
 	color: #9afcd4;
-	border-color: #26a874;
+	outline-color: #26a874;
 	background-color: #161c19;
 }
 
 card[suit="rose"] {
 	color: #fc9abe;
-	border-color: #a82656;
+	outline-color: #a82656;
 	background-color: #1c1618;
 }
 
 card[suit="lilac"] {
 	color: #eed1fc;
-	border-color: #cb98e2;
+	outline-color: #cb98e2;
 	background-color: #242225;
 }
 
 card[suit="ash"] {
 	color: #fcf8f8;
-	border-color: #444242;
+	outline-color: #444242;
 	background-color: #0b0b0b;
 }
 
 card[suit="chartreuse"] {
 	color: #e8ffac;
-	border-color: #97b740;
+	outline-color: #97b740;
 	background-color: #1d1e19;
 }
 
 card[suit="turquoise"] {
 	color: #b3cffc;
-	border-color: #5d90dd;
+	outline-color: #5d90dd;
 	background-color: #1f2124;
 }
 
