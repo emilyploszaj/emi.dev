@@ -116,18 +116,10 @@ card[suit="composition"] {
 	background-color: #202820;
 }
 
-card[suit="composition"] > face > img {
-	filter: invert(88%) sepia(11%) saturate(1385%) hue-rotate(67deg) brightness(99%) contrast(102%);
-}
-
 card[suit="narrative"] {
 	color: #fccab0;
 	border-color: #d88256;
 	background-color: #24201e;
-}
-
-card[suit="narrative"] > face > img {
-	filter: invert(80%) sepia(31%) saturate(568%) hue-rotate(319deg) brightness(105%) contrast(101%);
 }
 
 card[suit="performance"] {
@@ -136,18 +128,10 @@ card[suit="performance"] {
 	background-color: #1e1d24;
 }
 
-card[suit="performance"] > face > img {
-	filter: invert(63%) sepia(92%) saturate(1188%) hue-rotate(203deg) brightness(104%) contrast(101%);
-}
-
 card[suit="cerulean"] {
 	color: #9d9efc;
 	border-color: #3a3ce8;
 	background-color: #1f1f26;
-}
-
-card[suit="cerulean"] > face > img {
-	filter: invert(74%) sepia(10%) saturate(4346%) hue-rotate(196deg) brightness(90%) contrast(123%);
 }
 
 card[suit="viridian"] {
@@ -156,18 +140,10 @@ card[suit="viridian"] {
 	background-color: #161c19;
 }
 
-card[suit="viridian"] > face > img {
-	filter: invert(94%) sepia(6%) saturate(1970%) hue-rotate(89deg) brightness(96%) contrast(105%);
-}
-
 card[suit="rose"] {
 	color: #fc9abe;
 	border-color: #a82656;
 	background-color: #1c1618;
-}
-
-card[suit="rose"] > face > img {
-	filter: invert(78%) sepia(100%) saturate(2808%) hue-rotate(282deg) brightness(100%) contrast(94%);
 }
 
 card[suit="lilac"] {
@@ -176,18 +152,10 @@ card[suit="lilac"] {
 	background-color: #242225;
 }
 
-card[suit="lilac"] > face > img {
-	filter: invert(84%) sepia(17%) saturate(432%) hue-rotate(228deg) brightness(96%) contrast(106%);
-}
-
 card[suit="ash"] {
 	color: #fcf8f8;
 	border-color: #444242;
 	background-color: #0b0b0b;
-}
-
-card[suit="ash"] > face > img {
-	filter: invert(96%) sepia(86%) saturate(213%) hue-rotate(1deg) brightness(120%) contrast(97%);
 }
 
 card[suit="chartreuse"] {
@@ -196,18 +164,10 @@ card[suit="chartreuse"] {
 	background-color: #1d1e19;
 }
 
-card[suit="chartreuse"] > face > img {
-	filter: invert(91%) sepia(20%) saturate(633%) hue-rotate(28deg) brightness(105%) contrast(102%);
-}
-
 card[suit="turquoise"] {
 	color: #b3cffc;
 	border-color: #5d90dd;
 	background-color: #1f2124;
-}
-
-card[suit="turquoise"] > face > img {
-	filter: invert(70%) sepia(33%) saturate(317%) hue-rotate(181deg) brightness(108%) contrast(98%);
 }
 
 face {
