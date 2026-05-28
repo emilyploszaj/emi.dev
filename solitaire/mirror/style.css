@@ -225,7 +225,6 @@ face img {
 	margin: auto;
 	width: 64px;
 	height: 64px;
-	image-rendering: pixelated;
 }
 
 card-header, card-footer {
