@@ -118,27 +118,31 @@ function liftEvent(e) {
 }
 
 function dropCard(cx, cy) {
-	var els = document.elementsFromPoint(cx, cy);
-	var destLoc = undefined;
-	for (let el of els) {
-		if (el.closest("#dragged")) {
-			continue;
-		} else if (el.closest("slot")) {
-			destLoc = SlotLoc.of(el.closest("slot").id);
-			break;
-		}
-	}
-	if (destLoc) {
-		testLocs = [destLoc];
-		for (let newLoc of testLocs) {
-			if (newLoc.type == dragLoc.slot.type && newLoc.index == dragLoc.slot.index) {
+	var testLocs = [];
+	var rect = document.getElementById("dragged").getBoundingClientRect();
+	var distFunc = a => Math.sqrt(Math.pow(a[0] - cx, 2) + Math.pow(a[1] - cy));
+	var points = [[cx, cy], [rect.left, rect.top], [rect.left, rect.bottom], [rect.right, rect.top], [rect.right, rect.bottom]]
+		.sort((a, b) => distFunc(a) - distFunc(b));
+	for (const point of points) {
+		var els = document.elementsFromPoint(point[0], point[1]);
+		for (let el of els) {
+			var slot = el.closest("slot");
+			if (el.closest("#dragged")) {
 				continue;
-			}
-			if (newLoc.canPlace(dragLoc.getStack())) {
-				newLoc.place(dragLoc.getStack());
-				dragLoc.clear();
+			} else if (slot != undefined && slot.id) {
+				testLocs.push(SlotLoc.of(slot.id));
 				break;
 			}
+		}
+	}
+	for (let newLoc of testLocs) {
+		if (newLoc.type == dragLoc.slot.type && newLoc.index == dragLoc.slot.index) {
+			continue;
+		}
+		if (newLoc.canPlace(dragLoc.getStack())) {
+			newLoc.place(dragLoc.getStack());
+			dragLoc.clear();
+			break;
 		}
 	}
 }
