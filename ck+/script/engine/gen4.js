@@ -245,10 +245,14 @@ function getDamage(attacker, defender, move) {
 	// Screens
 	if (!move.crit) {
 		// TODO aurora veil
+		var reduction = 0.5;
+		if (document.getElementById("doubles").checked) {
+			reduction = 2 / 3;
+		}
 		if (special && defender.hasScreen("light-screen")) {
-			v = parseInt(v / 2);
+			v = parseInt(v * reduction);
 		} else if (!special && defender.hasScreen("reflect")) {
-			v = parseInt(v / 2);
+			v = parseInt(v * reduction);
 		}
 	}
 
