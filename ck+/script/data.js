@@ -467,23 +467,40 @@ function hasFamily(family) {
 
 
 function validateData() {
+	for (const mon of data.pokemon) {
+		for (const ability of mon.abilities ?? []) {
+			if (!abilities.byName(ability)) {
+				console.error(`Pokemon ${mon.name}'s ability ${ability} does not exist`);
+			}
+		}
+		for (const learn of mon.learnset ?? []) {
+			if (!movesByName.has(learn.move)) {
+				console.error(`Pokemon ${mon.name}'s level-up move ${learn.move} does not exist`);
+			}
+		}
+		for (const move of mon.tmhm ?? []) {
+			if (!movesByName.has(move)) {
+				console.error(`Pokemon ${mon.name}'s TMHM move ${move} does not exist`);
+			}
+		}
+	}
 	for (const trainer of data.trainers) {
 		if (!trainer.team || !trainer.name) {
 			console.error("Trainer is missing fields!", trainer);
 		} else {
 			for (const mon of trainer.team) {
 				if (!pokemonByName.has(mon.name)) {
-					console.error(trainer.name, " has unknown pokemon: ", mon.name);
+					console.error(`Trainer ${trainer.name} has unknown pokemon: ${mon.name}`);
 				}
-				if (!abilities.byName(mon.ability)) {
-					console.error(trainer.name + "'s ", mon.name, " has unknown ability: ", mon.ability)
+				if (mon.ability && !abilities.byName(mon.ability)) {
+					console.error(`Trainer ${trainer.name}'s ${mon.name} has unknown ability: `, mon.ability)
 				}
 				if (mon.item && !itemsByName.get(mon.item)) {
-					console.error(trainer.name + "'s ", mon.name, " has unknown item: ", mon.item)
+					console.error(`Trainer ${trainer.name}'s ${mon.name} has unknown item: `, mon.item)
 				}
 				for (const move of mon.moves) {
 					if (!movesByName.has(move)) {
-						console.error(trainer.name + "'s ", mon.name, " has unknown move: ", move);
+						console.error(`Trainer ${trainer.name}'s ${mon.name} has unknown move: `, move);
 					}
 				}
 			}
