@@ -107,6 +107,7 @@ document.getElementById("sav-upload").onchange = function (event) {
 
 function clearData() {
 	box = [];
+	deadBox = [];
 	document.getElementById("badges").value = 0;
 	updateBadges();
 	updateBox();
