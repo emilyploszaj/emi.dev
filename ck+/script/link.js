@@ -243,15 +243,43 @@ function abilityLink(ability) {
 	return createLink(`#/ability/${ability}/`, fullCapitalize(ability));
 }
 
+function getLearnsetAtLevel(learnset, level) {
+	var moves = [];
+	var li = 0;
+	for (var i = 0; i < learnset.length; i++) {
+		var l = learnset[i];
+		if (l.level > level) {
+			break;
+		}
+		if (moves.indexOf(l.move) != -1) {
+			continue;
+		}
+		moves[li] = l.move;
+		li = (li + 1) % 4;
+	}
+	return moves;
+}
+
+function processLearnset(learnset) {
+	var list = [];
+	var moves = [null, null, null, null];
+	var li = 0;
+	for (const l of learnset) {
+		var v = Object.assign({}, l);
+		if (moves.indexOf(l.move) != -1) {
+			v.ignoredByWilds = true;
+		} else {
+			moves[li] = l.move;
+			li = (li + 1) % 4;
+		}
+		list.push(v);
+	}
+	return list;
+}
+
 function calcWild(p, level) {
 	p = pokemonByPokedex.get(p);
-	var moves = [];
-	for (var i = p.learnset.length - 1; i >= 0; i--) {
-		var l = p.learnset[i];
-		if (l.level <= level) {
-			moves.push(l.move);
-		}
-	}
+	var moves = getLearnsetAtLevel(p.learnset, level);
 	if (moves.length > 4) {
 		moves = moves.splice(0, 4).reverse();
 	}

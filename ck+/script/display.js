@@ -618,9 +618,10 @@ function getTagTeamDisplay(tagTeam) {
 }
 
 function getPokemonLearnsetDisplay(p) {
+	var learnset = processLearnset(p.learnset);
 	return `
 		<table class="move-table">
-			${p.learnset.displayMap(m => getMoveDisplay(movesByName.get(m.move), m.level))}
+			${learnset.displayMap(m => getMoveDisplay(movesByName.get(m.move), m.level, m))}
 		</table>
 	`;
 }
@@ -792,7 +793,15 @@ function getFullMoveDisplay(move) {
 		${byLearnset ? `
 			<p>By Learnset (${byLearnset.length}):</p>
 			<div class="learnset-pool">
-				${byLearnset.displayMap(e => getEncounterPoke(e.pokemon, `Lvl ${e.level}`))}
+				${byLearnset.displayMap(e => {
+					var l = `<span class="meek">Lvl </span>${e.level}`
+					if (e.extra.ignoredByWilds) {
+						l += `<span class="note tooltip-container"><span>W</span>
+							<div class="tooltip">Wild pokemon will ignore this learnset entry.</div>
+						</span>`;
+					}
+					return getEncounterPoke(e.pokemon, l)
+				})}
 			</div>
 		` : ""}
 		${byTMHM ? `
@@ -804,13 +813,22 @@ function getFullMoveDisplay(move) {
 	`;
 }
 
-function getMoveDisplay(move, level = undefined) {
+function getMoveDisplay(move, level = undefined, extra = {}) {
 	if (move == undefined) {
 		return `<tr>undefined</tr>`;
 	}
+	if (level != undefined) {
+		level = `<span class="meek">Lvl </span>${level}`;
+	}
+	if (extra.ignoredByWilds) {
+		level = `
+		${level}<span class="note tooltip-container"><span>W</span>
+			<div class="tooltip">Wild pokemon will ignore this learnset entry.</div>
+		</span>`;
+	}
 	return `
 		<tr>
-			${level != undefined ? `<td>${level}</td>` : ``}
+			${level != undefined ? `<td class="move-table-level">${level}</td>` : ``}
 			<td>${prettyType(move.type)}</td>
 			${move.category ? `
 				<td>${prettyCategory(move.category)}</td>

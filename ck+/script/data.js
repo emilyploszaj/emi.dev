@@ -314,12 +314,11 @@ function startup() {
 			addToFamily(p, family);
 			family++;
 		}
-		for (var l = 0; l < p.learnset.length; l++) {
-			var m = p.learnset[l];
+		for (const m of processLearnset(p.learnset)) {
 			if (!movesByLearnset.has(m.move)) {
 				movesByLearnset.set(m.move, []);
 			}
-			movesByLearnset.get(m.move).push({pokemon: p.name, level: m.level})
+			movesByLearnset.get(m.move).push({pokemon: p.name, level: m.level, extra: m});
 		}
 		for (var l = 0; l < p.tmhm.length; l++) {
 			var m = p.tmhm[l];

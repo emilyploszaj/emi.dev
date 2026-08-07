@@ -402,8 +402,13 @@ input:checked + .fake-checkbox {
 }
 
 .move-table td {
-	padding: 0px !important;
-	padding-right: 32px !important;
+	padding: 0px;
+	padding-right: 32px;
+}
+
+.move-table-level {
+	width: 80px;
+	padding-right: 10px !important;
 }
 
 .move-emblem {
@@ -1693,7 +1698,17 @@ rt {
 	position: relative;
 }
 
+.note {
+	font-size: 16px;
+	color: var(--crit-text);
+	vertical-align: top;
+	text-decoration: underline dotted;
+	padding: 4px;
+	cursor: help;
+}
+
 .tooltip {
+	color: var(--text);
 	font-size: 24px;
 	font-weight: normal;
 	z-index: 100;
