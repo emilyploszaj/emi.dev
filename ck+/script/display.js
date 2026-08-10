@@ -34,11 +34,12 @@ function displayCalcPokemon(root, poke, opponent, right) {
 		exp = parseInt(exp * 1.5); // Trainer
 		exp = parseInt(exp * poke.level);
 		exp = parseInt(exp / 7);
-		var inner = "<h3>Experience split:</h3>";
+		var inner = `<center><div>Experience Split</div>`;
 		for (var i = 2; i < 7; i++) {
-			inner += "<p>" + parseInt(exp / i) + " exp to " + i + " Pokemon</p>";
+			inner += `<div class="meek">` + parseInt(exp / i) + " exp to " + i + " Pokemon</div>";
 		}
-		root.getElementsByClassName("experience")[0].innerHTML = "<span> (" + exp + " exp)<div class='rolls'><center>" + inner + "</center></div></span>";
+		inner += `</center>`
+		root.getElementsByClassName("experience")[0].innerHTML = `<span class="meek tooltip-container">(${exp} exp)<div class="tooltip">${inner}</div></span>`;
 	}
 	var hp = 10;
 	if (opponent) {
@@ -433,15 +434,16 @@ function displayPokemon(root, i) {
 		var m = parseInt(female * 16 / 100);
 		document.getElementsByClassName("poke-genders")[0].innerHTML =
 			'<div class="h6">Gender '
-			+ '<div class="gender-bar" style="background: '
+			+ '<div class="tooltip-container gender-bar" style="background: '
 			+ 'linear-gradient(90deg, var(--gender-female) 0%, var(--gender-female) '
 			+ female + '%, var(--gender-male) ' + female + '%, var(--gender-male) 100%)">'
+			+ `<div class="tooltip">${m} Female : ${16 - m} Male</div>`
 			+ '</div></div>'
-			+ '<div class="rolls"><center>' + m + ' Female, ' + (16 - m) + ' Male</center></div>';
 	} else {
 		document.getElementsByClassName("poke-genders")[0].innerHTML =
-			'<div class="h6">Gender <div class="gender-bar unknown-gender"></div></div>'
-			+ '<div class="rolls"><center>Unknown</center></div>';
+			`<div class="h6">Gender <div class="gender-bar unknown-gender tooltip-container ">
+				<div class="tooltip">Gender Unknown</div>
+			</div></div>`;
 	}
 	var items = "";
 	if (p.items.length > 0) {
@@ -822,10 +824,11 @@ function getMoveDisplay(move, level = undefined, extra = {}) {
 	}
 	if (extra.ignoredByWilds) {
 		level = `
-		${level}<span class="note tooltip-container"><span>W</span>
+		${level}<span class="note learnset-note tooltip-container"><span>W</span>
 			<div class="tooltip">Wild pokemon will ignore this learnset entry.</div>
 		</span>`;
 	}
+	var empty = `<td style="text-align:center;">—</td>`
 	return `
 		<tr>
 			${level != undefined ? `<td class="move-table-level">${level}</td>` : ``}
@@ -834,10 +837,10 @@ function getMoveDisplay(move, level = undefined, extra = {}) {
 				<td>${prettyCategory(move.category)}</td>
 			`: ""}
 			<td>${moveLink(move.name)}</td>
-			<td>${move.power == 0 ? "-" : move.power}</td>
-			<td>${move.accuracy}%</td>
-			<td>${move.pp}pp</td>
-			${(move.extra && move.extra.length > 0) ? `<td class="extra-info" title="${move.extra.join("")}">?</td>` : ""}
+			<td style="text-align:right;">${move.power == 0 ? "—" : move.power}</td>
+			<td style="text-align:right;">${move.accuracy <= 0 ? "—" : move.accuracy}</td>
+			<td style="text-align:right;">${move.pp}<span class="meek">pp</span></td>
+			${(move.extra && move.extra.length > 0) ? `<td><span class="note tooltip-container">?<div class="tooltip">${move.extra.join("\n")}</div></span></td>` : ""}
 		</tr>
 	`;
 }

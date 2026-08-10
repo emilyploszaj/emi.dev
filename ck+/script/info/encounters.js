@@ -19,6 +19,8 @@ var encounterIcons = new Map([
 	["local-honey-tree", "images/encounters/local_honey_tree.png"],
 ]);
 
+const WARNING_FLAGS = ["self-ko", "recoil", "trapping", "teleport", "phazing"];
+
 function inflateEncounterPool(p) {
 	if (typeof p === "string") {
 		var pool = encounterPools;
@@ -154,30 +156,23 @@ function getEncounterPoolGroupDisplay(p) {
 	}
 	keys = keys.concat(rawKeys);
 
-	var minLevel = p[keys[0]][0].level;
-	var maxLevel = p[keys[0]][0].level;
+	var levels = LevelRange.empty();
 	for (const k of keys) {
 		for (const e of p[k]) {
-			minLevel = Math.min(e.level, minLevel);
-			maxLevel = Math.max(e.level, maxLevel);
+			levels.expand(e.level);
 		}
 	}
 
-	var v = "";
-	if (minLevel == maxLevel) {
-		v += `<h6>(Lvl ${minLevel})</h6>`;
-	} else {
-		v += `<h6>(Lvl ${minLevel}-${maxLevel})</h6>`;
-	}
+	var v = `<h6>(Lvl ${levels.display()})</h6>`;
 	for (var i = 1; i < keys.length; i++) {
 		if (!arePoolsEqual(p[keys[i]], p[keys[0]])) {
 			for (let key of keys) {
-				v += getEncounterPoolDisplay(p[key], key, minLevel != maxLevel);
+				v += getEncounterPoolDisplay(p[key], key, levels.size() > 1);
 			}
 			return v;
 		}
 	}
-	return v + getEncounterPoolDisplay(p[keys[0]], "any", minLevel != maxLevel);
+	return v + getEncounterPoolDisplay(p[keys[0]], "any", levels.size() > 1);
 }
 
 function getEncounterPoolDisplay(pool, time, showLevel) {
@@ -194,7 +189,8 @@ function getEncounterPoolDisplay(pool, time, showLevel) {
 		}
 	}
 	for (var i = 0; i < pool.length; i++) {
-		var family = hasFamily(pokemonFamilies.get(pokemonByName.get(pool[i].pokemon).pokedex));
+		var mon = pokemonByName.get(pool[i].pokemon);
+		var family = hasFamily(pokemonFamilies.get(mon.pokedex));
 		var percent = parseInt(pool[i].chance / 100 * 10000) / 100;
 		var adjustedPercent = "Dupe";
 		var extraClasses = undefined;
@@ -205,14 +201,56 @@ function getEncounterPoolDisplay(pool, time, showLevel) {
 		}
 		var tt = "";
 		if (pool[i].extra) {
-			tt += ' <div class="extra-info" title="' + pool[i].extra + '">?</div>';
+			tt += ` <div class="note tooltip-container">?<div class="tooltip">${pool[i].extra}</div></div>`;
 		}
 
-		var header = '<div><ruby>' + percent + '%' + tt + '<rt>(' + adjustedPercent + ')</rt></ruby></div>';
+		var level = LevelRange.of(pool[i].level);
+
+		var header = '<div class="encounter-chance"><ruby>' + percent + '%' + tt + '<rt>(' + adjustedPercent + ')</rt></ruby></div>';
 		if (showLevel) {
-			header += `<div class="encounter-level">Lvl ${pool[i].level}</div>`;
+			header += `<div class="encounter-level">Lvl ${level.display()}</div>`;
 		}
-		var footer = '<div class="wild-calc"><button onclick="calcWild(' + pokemonByName.get(pool[i].pokemon).pokedex + ', ' + pool[i].level + ')">Calc</button></div>';
+
+		// Warnings
+		var warnings = undefined;
+		var warningTypes = new Map();
+		for (const l of level) {
+			for (const m of getLearnsetAtLevel(mon.learnset, l)) {
+				for (const w of WARNING_FLAGS) {
+					if ((movesByName.get(m).flags ?? []).indexOf(w) != -1) {
+						if (!warningTypes.has(w)) {
+							warningTypes.set(w, new Map());
+						}
+						var mm = warningTypes.get(w);
+						if (!mm.has(m)) {
+							mm.set(m, []);
+						}
+						mm.get(m).push(l);
+					}
+				}
+			}
+		}
+		if (warningTypes.size > 0) {
+			warnings = `<div class="encounter-warnings">`;
+			for (const warning of warningTypes.keys()) {
+				var text = `${fullCapitalize(warning)} Moves`;
+				var mm = warningTypes.get(warning);
+				for (const m of mm.keys()) {
+					var mmRanges = LevelRange.flatten(mm.get(m));
+					if (mmRanges.length == 1 && mmRanges[0].min == level.min && mmRanges[0].max == level.max) {
+						text += `<br><span class="meek">${fullCapitalize(m)}</span>`;
+					} else {
+						for (const mmRange of mmRanges) {
+							text += `<br><span class="meek">${fullCapitalize(m)} (Lvl ${mmRange.display()})</span>`;
+						}
+					}
+				}
+				warnings += `<div class="tooltip-container encounter-warning"><img src="./images/encounter-warnings/${warning}.png"><div class="tooltip">${text}</div></div>`;
+			}
+			warnings += `</div>`;
+		}
+
+		var footer = (warnings ?? "") + `<div class="wild-calc"><button onclick="calcWild(${pokemonByName.get(pool[i].pokemon).pokedex}, ${level.min})">Calc</button></div>`;
 		v += getEncounterPoke(pool[i].pokemon, header, footer, extraClasses);
 	}
 	v += '</div>';

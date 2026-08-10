@@ -439,6 +439,17 @@ function doesElementContain(el, x, y) {
 	return false;
 }
 
+function rekeyArray(arr, key) {
+	var obj = {};
+	for (const a of arr) {
+		var v = Object.assign({}, a);
+		var k = v[key];
+		delete v[key];
+		obj[k] = v;
+	}
+	return obj;
+}
+
 Object.defineProperty(Array.prototype, "contains", {
 	value: function(some) {
 		return this.indexOf(some) != -1;
@@ -452,6 +463,8 @@ Object.defineProperty(Array.prototype, "displayMap", {
 });
 
 class LevelRange {
+	min;
+	max;
 
 	constructor(min, max) {
 		this.min = min;
@@ -462,21 +475,78 @@ class LevelRange {
 		return new LevelRange(undefined, undefined);
 	}
 
-	expand(val) {
-		if (this.min == undefined) {
-			this.min = val;
-			this.max = val;
+	static of(value, max = undefined) {
+		if (max != undefined) {
+			return new LevelRange(value, max);
+		} else if (value.min && value.max) {
+			return new LevelRange(value.min, value.max);
+		} else {
+			return new LevelRange(value, value);
 		}
-		if (val < this.min) {
-			this.min = val;
-		} else if (val > this.max) {
-			this.max = val;
+	}
+
+	// [1, 2, 3, 10, 11, 12, 20] -> [{1-3}, {10-12}, {20-20}]
+	static flatten(arr) {
+		arr = arr.sort((a, b) => a - b);
+		var results = [];
+		while (arr.length > 0) {
+			var max = arr.pop();
+			var min = max;
+			for (var i = arr.length - 1; i >= 0; i--) {
+				var val = arr[i];
+				if (val + 1 == min) {
+					min = val;
+					arr.pop();
+				} else {
+					break;
+				}
+			}
+			results.push(LevelRange.of(min, max));
+		}
+		return results.reverse();
+	}
+
+	*[Symbol.iterator]() {
+		for (var i = this.min; i <= this.max; i++) {
+			yield i;
+		}
+	}
+
+	size() {
+		return this.max - this.min + 1;
+	}
+
+	expand(val) {
+		if (val.min && val.max) {
+			this.expand(val.min);
+			this.expand(val.max);
+		} else {
+			if (this.min == undefined) {
+				this.min = val;
+				this.max = val;
+			}
+			if (val < this.min) {
+				this.min = val;
+			} else if (val > this.max) {
+				this.max = val;
+			}
+		}
+	}
+
+	json() {
+		if (this.max == this.min) {
+			return this.min;
+		} else {
+			return {
+				min: this.min,
+				max: this.max
+			};
 		}
 	}
 
 	display() {
 		if (this.min == this.max) {
-			return `` + this.min;
+			return `${this.min}`;
 		}
 		return `${this.min}-${this.max}`;
 	}

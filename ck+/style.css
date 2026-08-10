@@ -337,11 +337,6 @@ input:checked + .fake-checkbox {
 	background-color: var(--highlighted);
 }
 
-.extra-info:hover {
-	cursor: help;
-	color: var(--highlighted);
-}
-
 .poke-types {
 	display: flex;
 	gap: 4px;
@@ -404,6 +399,10 @@ input:checked + .fake-checkbox {
 .move-table td {
 	padding: 0px;
 	padding-right: 32px;
+}
+
+.move-table .tooltip {
+	max-width: 400px;
 }
 
 .move-table-level {
@@ -519,6 +518,29 @@ input:checked + .fake-checkbox {
 	display: inline-block;
 	width: 80px;
 	text-align: center;
+}
+
+.encounter-chance {
+	position: relative;
+	z-index: 10;
+	pointer-events: none;
+}
+
+.encounter-warnings {
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	right: 4px;
+}
+
+.encounter-warning {
+	width: 24px;
+}
+
+.encounter-warning img {
+	width: 24px !important;
+	height: 24px !important;
+	margin: 0px !important;
 }
 
 .tab {
@@ -1698,12 +1720,16 @@ rt {
 	position: relative;
 }
 
-.note {
+.learnset-note {
 	font-size: 16px;
 	color: var(--crit-text);
-	vertical-align: top;
-	text-decoration: underline dotted;
 	padding: 4px;
+	vertical-align: top;
+}
+
+.note {
+	pointer-events: visible;
+	text-decoration: underline dotted;
 	cursor: help;
 }
 
@@ -1795,4 +1821,91 @@ rt {
 	margin-top: 15%;
 	margin-left: 15%;
 	filter: grayscale(0%);
+}
+
+/* Flowcharts */
+
+.flowchart-container {
+	position: relative;
+	width: 900px;
+	background-color: var(--background);
+	height: calc(calc(130px * var(--flow-height)) + 20px);
+}
+
+.flowchart-node {
+	z-index: 10;
+	position: absolute;
+	width: 112px;
+	height: 82px;
+	padding: 4px;
+	background-color: var(--box-background);
+	font-size: 16px;
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.flowchart-node.flowchart-node-start {
+	background-color: #35553d;
+	border-radius: 0px;
+}
+
+.flowchart-node.flowchart-node-score {
+	background-color: #553535;
+	border-radius: 48px;
+}
+
+.flowchart-line {
+	position: absolute;
+	background-color: var(--dim-text);
+}
+
+.flowchart-route {
+	position: absolute;
+	font-size: 14px;
+	text-align: center;
+	transform: translate(-50%, -50%);
+	border-radius: 4px;
+	padding: 2px;
+	background-color: var(--grouping-background);
+	/* text-shadow: -1px -1px 5px black, 1px -1px 5px black, -1px 1px 5px black, 1px 1px 5px black; */
+}
+
+/* Forms */
+
+.form-title {
+	padding-top: 5px;
+}
+
+.form-object {
+	margin: 5px;
+	padding-left: 10px;
+}
+
+.form-list {
+	margin: 5px;
+	padding-left: 10px;
+}
+
+.form-string {
+	margin: 5px;
+}
+
+.form-element {
+	padding: 8px;
+	background-color: var(--background);
+}
+
+.form-element > .form-element {
+	background-color: var(--box-background);
+}
+
+.form-element > .form-element > .form-element {
+	background-color: var(--background);
+}
+
+.form-element > .form-element > .form-element > .form-element {
+	background-color: var(--box-background);
 }

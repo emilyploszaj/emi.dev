@@ -190,6 +190,7 @@ function loadData(text) {
 	}
 	nameFormatting.set("kings-rock", "King's Rock");
 	nameFormatting.set("dragons-den", "Dragon's Den");
+	nameFormatting.set("self-ko", "Self-KO");
 	data = JSON.parse(text);
 	if (game.name == "pk") {
 		loadEngine("script/engine/gen4.js");
