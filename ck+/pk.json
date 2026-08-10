@@ -1165,6 +1165,11 @@
                     "pokemon": "cherubi"
                 },
                 {
+                    "chance": 15,
+                    "level": 15,
+                    "pokemon": "combee"
+                },
+                {
                     "chance": 10,
                     "level": 15,
                     "pokemon": "teddiursa"
