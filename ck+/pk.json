@@ -1595,7 +1595,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 35,
                                 "min": 25
@@ -1603,7 +1603,7 @@
                             "pokemon": "poliwhirl"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 35,
                                 "min": 25
@@ -1611,7 +1611,7 @@
                             "pokemon": "poliwhirl"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 35,
                                 "min": 25
@@ -1640,7 +1640,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 40,
                                 "min": 30
@@ -1648,7 +1648,7 @@
                             "pokemon": "lotad"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 40,
                                 "min": 30
@@ -1656,7 +1656,7 @@
                             "pokemon": "lotad"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 55,
                                 "min": 40
@@ -2205,7 +2205,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 20,
                                 "min": 15
@@ -2213,7 +2213,7 @@
                             "pokemon": "kabuto"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 20,
                                 "min": 15
@@ -2221,7 +2221,7 @@
                             "pokemon": "omanyte"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 25,
                                 "min": 10
@@ -2250,7 +2250,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 40,
                                 "min": 30
@@ -2258,7 +2258,7 @@
                             "pokemon": "clamperl"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 40,
                                 "min": 30
@@ -2266,7 +2266,7 @@
                             "pokemon": "cloyster"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 55,
                                 "min": 40
@@ -2515,7 +2515,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 20,
                                 "min": 15
@@ -2523,7 +2523,7 @@
                             "pokemon": "corsola"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 20,
                                 "min": 15
@@ -2531,7 +2531,7 @@
                             "pokemon": "finneon"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 25,
                                 "min": 10
@@ -2560,7 +2560,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 40,
                                 "min": 30
@@ -2568,7 +2568,7 @@
                             "pokemon": "gyarados"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 40,
                                 "min": 30
@@ -2576,7 +2576,7 @@
                             "pokemon": "lumineon"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 55,
                                 "min": 40
@@ -2963,7 +2963,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 20,
                                 "min": 15
@@ -2971,7 +2971,7 @@
                             "pokemon": "corphish"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 20,
                                 "min": 15
@@ -2979,7 +2979,7 @@
                             "pokemon": "seaking"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 25,
                                 "min": 10
@@ -3008,7 +3008,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 40,
                                 "min": 30
@@ -3016,7 +3016,7 @@
                             "pokemon": "gyarados"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 40,
                                 "min": 30
@@ -3024,7 +3024,7 @@
                             "pokemon": "seaking"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 55,
                                 "min": 40
@@ -3277,7 +3277,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 20,
                                 "min": 15
@@ -3285,7 +3285,7 @@
                             "pokemon": "corphish"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 20,
                                 "min": 15
@@ -3293,7 +3293,7 @@
                             "pokemon": "barboach"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 25,
                                 "min": 10
@@ -3322,7 +3322,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 55,
                                 "min": 30
@@ -3330,7 +3330,7 @@
                             "pokemon": "gyarados"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 40,
                                 "min": 30
@@ -3338,7 +3338,7 @@
                             "pokemon": "whiscash"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 55,
                                 "min": 40
@@ -3589,7 +3589,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 20,
                                 "min": 15
@@ -3597,7 +3597,7 @@
                             "pokemon": "horsea"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 20,
                                 "min": 15
@@ -3605,7 +3605,7 @@
                             "pokemon": "finneon"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 25,
                                 "min": 10
@@ -3634,7 +3634,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 40,
                                 "min": 30
@@ -3642,7 +3642,7 @@
                             "pokemon": "staryu"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 40,
                                 "min": 30
@@ -3650,7 +3650,7 @@
                             "pokemon": "lumineon"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 55,
                                 "min": 40
@@ -3911,7 +3911,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 20,
                                 "min": 15
@@ -3919,7 +3919,7 @@
                             "pokemon": "corphish"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 20,
                                 "min": 15
@@ -3927,7 +3927,7 @@
                             "pokemon": "barboach"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 25,
                                 "min": 10
@@ -3956,7 +3956,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 77,
                                 "min": 30
@@ -3964,7 +3964,7 @@
                             "pokemon": "poliwrath"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 77,
                                 "min": 30
@@ -3972,7 +3972,7 @@
                             "pokemon": "politoed"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 77,
                                 "min": 40
@@ -4348,17 +4348,17 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": 35,
                             "pokemon": "omanyte"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": 35,
                             "pokemon": "anorith"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": 35,
                             "pokemon": "lileep"
                         },
@@ -4378,7 +4378,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 80,
                                 "min": 40
@@ -4386,7 +4386,7 @@
                             "pokemon": "omastar"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 80,
                                 "min": 40
@@ -4394,7 +4394,7 @@
                             "pokemon": "kabutops"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 80,
                                 "min": 40
@@ -5218,7 +5218,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 20,
                                 "min": 15
@@ -5226,7 +5226,7 @@
                             "pokemon": "corphish"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 20,
                                 "min": 15
@@ -5234,7 +5234,7 @@
                             "pokemon": "seaking"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 25,
                                 "min": 10
@@ -5263,7 +5263,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 40,
                                 "min": 30
@@ -5271,7 +5271,7 @@
                             "pokemon": "gyarados"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 40,
                                 "min": 30
@@ -5279,7 +5279,7 @@
                             "pokemon": "seaking"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 55,
                                 "min": 40
@@ -5666,7 +5666,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 20,
                                 "min": 15
@@ -5674,7 +5674,7 @@
                             "pokemon": "lanturn"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 20,
                                 "min": 15
@@ -5682,7 +5682,7 @@
                             "pokemon": "carvanha"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 25,
                                 "min": 10
@@ -5711,7 +5711,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 55,
                                 "min": 30
@@ -5719,7 +5719,7 @@
                             "pokemon": "gyarados"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 40,
                                 "min": 30
@@ -5727,7 +5727,7 @@
                             "pokemon": "lumineon"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 50,
                                 "min": 20
@@ -6020,7 +6020,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 20,
                                 "min": 15
@@ -6028,7 +6028,7 @@
                             "pokemon": "grimer"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 20,
                                 "min": 15
@@ -6036,7 +6036,7 @@
                             "pokemon": "carvanha"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 25,
                                 "min": 10
@@ -6065,7 +6065,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 55,
                                 "min": 30
@@ -6073,7 +6073,7 @@
                             "pokemon": "sharpedo"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 40,
                                 "min": 30
@@ -6081,7 +6081,7 @@
                             "pokemon": "lanturn"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 50,
                                 "min": 20
@@ -6485,7 +6485,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 20,
                                 "min": 15
@@ -6493,7 +6493,7 @@
                             "pokemon": "finneon"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 20,
                                 "min": 15
@@ -6501,7 +6501,7 @@
                             "pokemon": "finneon"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 25,
                                 "min": 10
@@ -6530,7 +6530,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 55,
                                 "min": 30
@@ -6538,7 +6538,7 @@
                             "pokemon": "bibarel"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 40,
                                 "min": 30
@@ -6546,7 +6546,7 @@
                             "pokemon": "floatzel"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 50,
                                 "min": 20
@@ -6799,7 +6799,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 20,
                                 "min": 15
@@ -6807,7 +6807,7 @@
                             "pokemon": "marill"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 20,
                                 "min": 15
@@ -6815,7 +6815,7 @@
                             "pokemon": "lombre"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 25,
                                 "min": 10
@@ -6844,7 +6844,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 69,
                                 "min": 30
@@ -6852,7 +6852,7 @@
                             "pokemon": "ludicolo"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 68,
                                 "min": 30
@@ -6860,7 +6860,7 @@
                             "pokemon": "ludicolo"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 68,
                                 "min": 40
@@ -7419,17 +7419,17 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": 30,
                             "pokemon": "clamperl"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": 30,
                             "pokemon": "chinchou"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": 30,
                             "pokemon": "staryu"
                         },
@@ -7449,7 +7449,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 55,
                                 "min": 30
@@ -7457,7 +7457,7 @@
                             "pokemon": "cloyster"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 40,
                                 "min": 30
@@ -7465,7 +7465,7 @@
                             "pokemon": "staryu"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 55,
                                 "min": 20
@@ -7707,7 +7707,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 20,
                                 "min": 15
@@ -7715,7 +7715,7 @@
                             "pokemon": "wartortle"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 20,
                                 "min": 15
@@ -7723,7 +7723,7 @@
                             "pokemon": "buizel"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 25,
                                 "min": 10
@@ -7752,7 +7752,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 78,
                                 "min": 55
@@ -7760,7 +7760,7 @@
                             "pokemon": "blastoise"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 78,
                                 "min": 55
@@ -7768,7 +7768,7 @@
                             "pokemon": "feraligatr"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 78,
                                 "min": 55
@@ -8033,7 +8033,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 20,
                                 "min": 10
@@ -8041,7 +8041,7 @@
                             "pokemon": "marill"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 20,
                                 "min": 10
@@ -8049,7 +8049,7 @@
                             "pokemon": "wooper"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 20,
                                 "min": 10
@@ -8078,7 +8078,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 55,
                                 "min": 45
@@ -8086,7 +8086,7 @@
                             "pokemon": "horsea"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 55,
                                 "min": 35
@@ -8094,7 +8094,7 @@
                             "pokemon": "horsea"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 55,
                                 "min": 25
@@ -8351,7 +8351,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 38,
                                 "min": 15
@@ -8359,7 +8359,7 @@
                             "pokemon": "corphish"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 38,
                                 "min": 15
@@ -8367,7 +8367,7 @@
                             "pokemon": "poliwhirl"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 38,
                                 "min": 15
@@ -8396,7 +8396,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 78,
                                 "min": 55
@@ -8404,7 +8404,7 @@
                             "pokemon": "feraligatr"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 78,
                                 "min": 55
@@ -8412,7 +8412,7 @@
                             "pokemon": "croconaw"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 78,
                                 "min": 55
@@ -9291,7 +9291,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 48,
                                 "min": 44
@@ -9299,7 +9299,7 @@
                             "pokemon": "golduck"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 48,
                                 "min": 44
@@ -9307,7 +9307,7 @@
                             "pokemon": "goldeen"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 48,
                                 "min": 44
@@ -9336,7 +9336,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 78,
                                 "min": 55
@@ -9344,7 +9344,7 @@
                             "pokemon": "muk"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 78,
                                 "min": 55
@@ -9352,7 +9352,7 @@
                             "pokemon": "seaking"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 78,
                                 "min": 55
@@ -10068,7 +10068,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 50,
                                 "min": 45
@@ -10076,7 +10076,7 @@
                             "pokemon": "corsola"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 50,
                                 "min": 45
@@ -10084,7 +10084,7 @@
                             "pokemon": "remoraid"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 50,
                                 "min": 45
@@ -10113,7 +10113,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 90,
                                 "min": 60
@@ -10121,7 +10121,7 @@
                             "pokemon": "shellder"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 90,
                                 "min": 60
@@ -10129,7 +10129,7 @@
                             "pokemon": "gastrodon"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 90,
                                 "min": 60
@@ -10400,7 +10400,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 51,
                                 "min": 47
@@ -10408,7 +10408,7 @@
                             "pokemon": "huntail"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 51,
                                 "min": 47
@@ -10416,7 +10416,7 @@
                             "pokemon": "gorebyss"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 51,
                                 "min": 47
@@ -10445,7 +10445,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 85,
                                 "min": 65
@@ -10453,7 +10453,7 @@
                             "pokemon": "seadra"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 85,
                                 "min": 65
@@ -10461,7 +10461,7 @@
                             "pokemon": "octillery"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 85,
                                 "min": 65
@@ -10848,7 +10848,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 50,
                                 "min": 30
@@ -10856,7 +10856,7 @@
                             "pokemon": "muk"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 50,
                                 "min": 30
@@ -10864,7 +10864,7 @@
                             "pokemon": "barboach"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 50,
                                 "min": 30
@@ -10893,7 +10893,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 55,
                                 "min": 30
@@ -10901,7 +10901,7 @@
                             "pokemon": "croagunk"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 40,
                                 "min": 30
@@ -10909,7 +10909,7 @@
                             "pokemon": "carvanha"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 50,
                                 "min": 20
@@ -11162,7 +11162,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 50,
                                 "min": 40
@@ -11170,7 +11170,7 @@
                             "pokemon": "crawdaunt"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 50,
                                 "min": 40
@@ -11178,7 +11178,7 @@
                             "pokemon": "muk"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 50,
                                 "min": 40
@@ -11207,7 +11207,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 55,
                                 "min": 30
@@ -11215,7 +11215,7 @@
                             "pokemon": "gyarados"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 40,
                                 "min": 30
@@ -11223,7 +11223,7 @@
                             "pokemon": "toxicroak"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 50,
                                 "min": 20
@@ -11744,7 +11744,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 55,
                                 "min": 40
@@ -11752,7 +11752,7 @@
                             "pokemon": "politoed"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 55,
                                 "min": 40
@@ -11760,7 +11760,7 @@
                             "pokemon": "barboach"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 55,
                                 "min": 40
@@ -11789,7 +11789,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 55,
                                 "min": 30
@@ -11797,7 +11797,7 @@
                             "pokemon": "gyarados"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 40,
                                 "min": 30
@@ -11805,7 +11805,7 @@
                             "pokemon": "carvanha"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 50,
                                 "min": 20
@@ -12058,7 +12058,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 60,
                                 "min": 44
@@ -12066,7 +12066,7 @@
                             "pokemon": "swalot"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 60,
                                 "min": 44
@@ -12074,7 +12074,7 @@
                             "pokemon": "muk"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 60,
                                 "min": 44
@@ -12103,7 +12103,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 55,
                                 "min": 30
@@ -12111,7 +12111,7 @@
                             "pokemon": "gyarados"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 40,
                                 "min": 30
@@ -12119,7 +12119,7 @@
                             "pokemon": "lumineon"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 50,
                                 "min": 20
@@ -12549,7 +12549,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 35,
                                 "min": 15
@@ -12557,7 +12557,7 @@
                             "pokemon": "corsola"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 35,
                                 "min": 15
@@ -12565,7 +12565,7 @@
                             "pokemon": "barboach"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 35,
                                 "min": 15
@@ -12594,7 +12594,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 55,
                                 "min": 30
@@ -12602,7 +12602,7 @@
                             "pokemon": "staryu"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 55,
                                 "min": 30
@@ -12610,7 +12610,7 @@
                             "pokemon": "corsola"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 65,
                                 "min": 40
@@ -12867,7 +12867,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 60,
                                 "min": 45
@@ -12875,7 +12875,7 @@
                             "pokemon": "corphish"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 55,
                                 "min": 45
@@ -12883,7 +12883,7 @@
                             "pokemon": "goldeen"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 60,
                                 "min": 47
@@ -12912,7 +12912,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 80,
                                 "min": 70
@@ -12920,7 +12920,7 @@
                             "pokemon": "blastoise"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 80,
                                 "min": 70
@@ -12928,7 +12928,7 @@
                             "pokemon": "whiscash"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 80,
                                 "min": 70
@@ -13312,7 +13312,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 65,
                                 "min": 35
@@ -13320,7 +13320,7 @@
                             "pokemon": "clamperl"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 70,
                                 "min": 55
@@ -13328,7 +13328,7 @@
                             "pokemon": "huntail"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 70,
                                 "min": 55
@@ -13357,7 +13357,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 78,
                                 "min": 66
@@ -13365,7 +13365,7 @@
                             "pokemon": "staryu"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 78,
                                 "min": 66
@@ -13373,7 +13373,7 @@
                             "pokemon": "omastar"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 78,
                                 "min": 66
@@ -13501,7 +13501,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 65,
                                 "min": 55
@@ -13509,7 +13509,7 @@
                             "pokemon": "lumineon"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 55,
                                 "min": 45
@@ -13517,7 +13517,7 @@
                             "pokemon": "qwilfish"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 65,
                                 "min": 45
@@ -13546,7 +13546,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 55,
                                 "min": 30
@@ -13554,7 +13554,7 @@
                             "pokemon": "staryu"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 40,
                                 "min": 30
@@ -13562,7 +13562,7 @@
                             "pokemon": "clamperl"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 65,
                                 "min": 55
@@ -14083,7 +14083,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 55,
                                 "min": 35
@@ -14091,7 +14091,7 @@
                             "pokemon": "wartortle"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 55,
                                 "min": 35
@@ -14099,7 +14099,7 @@
                             "pokemon": "blastoise"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 55,
                                 "min": 35
@@ -14128,7 +14128,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 65,
                                 "min": 25
@@ -14136,7 +14136,7 @@
                             "pokemon": "relicanth"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 65,
                                 "min": 25
@@ -14144,7 +14144,7 @@
                             "pokemon": "relicanth"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 65,
                                 "min": 25
@@ -14397,7 +14397,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 55,
                                 "min": 35
@@ -14405,7 +14405,7 @@
                             "pokemon": "wartortle"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 55,
                                 "min": 35
@@ -14413,7 +14413,7 @@
                             "pokemon": "blastoise"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 55,
                                 "min": 35
@@ -14442,7 +14442,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 65,
                                 "min": 25
@@ -14450,7 +14450,7 @@
                             "pokemon": "relicanth"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 65,
                                 "min": 25
@@ -14458,7 +14458,7 @@
                             "pokemon": "relicanth"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 65,
                                 "min": 25
@@ -14711,7 +14711,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 55,
                                 "min": 35
@@ -14719,7 +14719,7 @@
                             "pokemon": "wartortle"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 55,
                                 "min": 35
@@ -14727,7 +14727,7 @@
                             "pokemon": "blastoise"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 55,
                                 "min": 35
@@ -14756,7 +14756,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 65,
                                 "min": 25
@@ -14764,7 +14764,7 @@
                             "pokemon": "relicanth"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 65,
                                 "min": 25
@@ -14772,7 +14772,7 @@
                             "pokemon": "relicanth"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 65,
                                 "min": 25
@@ -15025,7 +15025,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 55,
                                 "min": 35
@@ -15033,7 +15033,7 @@
                             "pokemon": "wartortle"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 55,
                                 "min": 35
@@ -15041,7 +15041,7 @@
                             "pokemon": "blastoise"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 55,
                                 "min": 35
@@ -15070,7 +15070,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 65,
                                 "min": 25
@@ -15078,7 +15078,7 @@
                             "pokemon": "relicanth"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 65,
                                 "min": 25
@@ -15086,7 +15086,7 @@
                             "pokemon": "relicanth"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 65,
                                 "min": 25
@@ -16818,7 +16818,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 45,
                                 "min": 25
@@ -16826,7 +16826,7 @@
                             "pokemon": "lumineon"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 45,
                                 "min": 25
@@ -16834,7 +16834,7 @@
                             "pokemon": "lanturn"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 45,
                                 "min": 25
@@ -16863,7 +16863,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 98,
                                 "min": 30
@@ -16871,7 +16871,7 @@
                             "pokemon": "qwilfish"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 98,
                                 "min": 30
@@ -16879,7 +16879,7 @@
                             "pokemon": "qwilfish"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 98,
                                 "min": 20
@@ -17251,7 +17251,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 65,
                                 "min": 35
@@ -17259,7 +17259,7 @@
                             "pokemon": "clamperl"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 70,
                                 "min": 55
@@ -17267,7 +17267,7 @@
                             "pokemon": "huntail"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 70,
                                 "min": 55
@@ -17296,7 +17296,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 78,
                                 "min": 66
@@ -17304,7 +17304,7 @@
                             "pokemon": "staryu"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 78,
                                 "min": 66
@@ -17312,7 +17312,7 @@
                             "pokemon": "omastar"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 78,
                                 "min": 66
@@ -17816,7 +17816,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 65,
                                 "min": 45
@@ -17824,7 +17824,7 @@
                             "pokemon": "shellder"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 70,
                                 "min": 45
@@ -17832,7 +17832,7 @@
                             "pokemon": "dewgong"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 75,
                                 "min": 55
@@ -17861,7 +17861,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 75,
                                 "min": 45
@@ -17869,7 +17869,7 @@
                             "pokemon": "kingler"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 75,
                                 "min": 15
@@ -17877,7 +17877,7 @@
                             "pokemon": "piplup"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 85,
                                 "min": 75
@@ -18279,7 +18279,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 98,
                                 "min": 55
@@ -18287,7 +18287,7 @@
                             "pokemon": "kabuto"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 98,
                                 "min": 55
@@ -18295,7 +18295,7 @@
                             "pokemon": "quagsire"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 98,
                                 "min": 55
@@ -18324,7 +18324,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 99,
                                 "min": 45
@@ -18332,7 +18332,7 @@
                             "pokemon": "whiscash"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 99,
                                 "min": 45
@@ -18340,7 +18340,7 @@
                             "pokemon": "lanturn"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 99,
                                 "min": 85
@@ -18593,7 +18593,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 98,
                                 "min": 15
@@ -18601,7 +18601,7 @@
                             "pokemon": "crawdaunt"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 98,
                                 "min": 15
@@ -18609,7 +18609,7 @@
                             "pokemon": "corphish"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 98,
                                 "min": 10
@@ -18638,7 +18638,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 99,
                                 "min": 30
@@ -18646,7 +18646,7 @@
                             "pokemon": "politoed"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 99,
                                 "min": 30
@@ -18654,7 +18654,7 @@
                             "pokemon": "poliwrath"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 99,
                                 "min": 40
@@ -18907,7 +18907,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 94,
                                 "min": 15
@@ -18915,7 +18915,7 @@
                             "pokemon": "lileep"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 94,
                                 "min": 15
@@ -18923,7 +18923,7 @@
                             "pokemon": "cradily"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 94,
                                 "min": 10
@@ -18952,7 +18952,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 97,
                                 "min": 30
@@ -18960,7 +18960,7 @@
                             "pokemon": "shellos"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 97,
                                 "min": 30
@@ -18968,7 +18968,7 @@
                             "pokemon": "gastrodon"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 97,
                                 "min": 40
@@ -19225,7 +19225,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 94,
                                 "min": 15
@@ -19233,7 +19233,7 @@
                             "pokemon": "burmy"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 96,
                                 "min": 15
@@ -19241,7 +19241,7 @@
                             "pokemon": "burmy"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 97,
                                 "min": 10
@@ -19270,7 +19270,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 97,
                                 "min": 30
@@ -19278,7 +19278,7 @@
                             "pokemon": "anorith"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 97,
                                 "min": 30
@@ -19286,7 +19286,7 @@
                             "pokemon": "anorith"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 97,
                                 "min": 40
@@ -19404,7 +19404,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 100,
                                 "min": 99
@@ -19412,7 +19412,7 @@
                             "pokemon": "ditto"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 100,
                                 "min": 99
@@ -19420,7 +19420,7 @@
                             "pokemon": "ditto"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 100,
                                 "min": 99
@@ -19443,17 +19443,17 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": 100,
                             "pokemon": "ditto"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": 100,
                             "pokemon": "ditto"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": 100,
                             "pokemon": "ditto"
                         },
@@ -19697,7 +19697,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 99,
                                 "min": 15
@@ -19705,7 +19705,7 @@
                             "pokemon": "horsea"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 99,
                                 "min": 15
@@ -19713,7 +19713,7 @@
                             "pokemon": "seaking"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 99,
                                 "min": 10
@@ -19742,7 +19742,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 99,
                                 "min": 30
@@ -19750,7 +19750,7 @@
                             "pokemon": "grimer"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 99,
                                 "min": 30
@@ -19758,7 +19758,7 @@
                             "pokemon": "seadra"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 99,
                                 "min": 20
@@ -20011,7 +20011,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 99,
                                 "min": 15
@@ -20019,7 +20019,7 @@
                             "pokemon": "kingler"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 99,
                                 "min": 15
@@ -20027,7 +20027,7 @@
                             "pokemon": "remoraid"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 99,
                                 "min": 10
@@ -20056,7 +20056,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 100,
                                 "min": 99
@@ -20064,7 +20064,7 @@
                             "pokemon": "milotic"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 99,
                                 "min": 75
@@ -20072,7 +20072,7 @@
                             "pokemon": "qwilfish"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 99,
                                 "min": 75
@@ -20598,7 +20598,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 86,
                                 "min": 81
@@ -20606,7 +20606,7 @@
                             "pokemon": "qwilfish"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 86,
                                 "min": 81
@@ -20614,7 +20614,7 @@
                             "pokemon": "remoraid"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 86,
                                 "min": 81
@@ -20643,7 +20643,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 87,
                                 "min": 84
@@ -20651,7 +20651,7 @@
                             "pokemon": "azumarill"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 87,
                                 "min": 84
@@ -20659,7 +20659,7 @@
                             "pokemon": "sharpedo"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 87,
                                 "min": 84
@@ -20920,7 +20920,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 87,
                                 "min": 82
@@ -20928,7 +20928,7 @@
                             "pokemon": "corsola"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 87,
                                 "min": 82
@@ -20936,7 +20936,7 @@
                             "pokemon": "qwilfish"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 87,
                                 "min": 82
@@ -20965,7 +20965,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 90,
                                 "min": 88
@@ -20973,7 +20973,7 @@
                             "pokemon": "shellder"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 90,
                                 "min": 88
@@ -20981,7 +20981,7 @@
                             "pokemon": "seadra"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 90,
                                 "min": 88
@@ -21119,7 +21119,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 20,
                                 "min": 15
@@ -21127,7 +21127,7 @@
                             "pokemon": "tentacruel"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 25,
                                 "min": 15
@@ -21135,7 +21135,7 @@
                             "pokemon": "lumineon"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 25,
                                 "min": 10
@@ -21164,7 +21164,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 55,
                                 "min": 30
@@ -21172,7 +21172,7 @@
                             "pokemon": "octillery"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 40,
                                 "min": 30
@@ -21180,7 +21180,7 @@
                             "pokemon": "misdreavus"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 50,
                                 "min": 20
@@ -21433,7 +21433,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 100,
                                 "min": 90
@@ -21441,7 +21441,7 @@
                             "pokemon": "slowpoke"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 100,
                                 "min": 90
@@ -21449,7 +21449,7 @@
                             "pokemon": "slowking"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 100,
                                 "min": 90
@@ -21478,17 +21478,17 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": 100,
                             "pokemon": "gastly"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": 100,
                             "pokemon": "kingler"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": 100,
                             "pokemon": "wailord"
                         },
@@ -21749,7 +21749,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 20,
                                 "min": 15
@@ -21757,7 +21757,7 @@
                             "pokemon": "staryu"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 20,
                                 "min": 15
@@ -21765,7 +21765,7 @@
                             "pokemon": "staryu"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 25,
                                 "min": 10
@@ -21794,7 +21794,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 40,
                                 "min": 30
@@ -21802,7 +21802,7 @@
                             "pokemon": "qwilfish"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 50,
                                 "min": 40
@@ -21810,7 +21810,7 @@
                             "pokemon": "qwilfish"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 45,
                                 "min": 20
@@ -22354,7 +22354,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 99,
                                 "min": 75
@@ -22362,7 +22362,7 @@
                             "pokemon": "seel"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 99,
                                 "min": 75
@@ -22370,7 +22370,7 @@
                             "pokemon": "dewgong"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 99,
                                 "min": 75
@@ -22399,7 +22399,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 45,
                                 "min": 20
@@ -22407,7 +22407,7 @@
                             "pokemon": "krabby"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 55,
                                 "min": 30
@@ -22415,7 +22415,7 @@
                             "pokemon": "kingler"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 65,
                                 "min": 40
@@ -23866,7 +23866,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 48,
                                 "min": 42
@@ -23874,7 +23874,7 @@
                             "pokemon": "tentacool"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 48,
                                 "min": 42
@@ -23882,7 +23882,7 @@
                             "pokemon": "horsea"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 48,
                                 "min": 42
@@ -23911,17 +23911,17 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": 100,
                             "pokemon": "dratini"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": 100,
                             "pokemon": "dratini"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": 100,
                             "pokemon": "dratini"
                         },
@@ -24433,7 +24433,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 100,
                                 "min": 30
@@ -24441,7 +24441,7 @@
                             "pokemon": "gastly"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 100,
                                 "min": 50
@@ -24449,7 +24449,7 @@
                             "pokemon": "vaporeon"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 100,
                                 "min": 60
@@ -24478,7 +24478,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 100,
                                 "min": 70
@@ -24486,7 +24486,7 @@
                             "pokemon": "phione"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 100,
                                 "min": 70
@@ -24494,7 +24494,7 @@
                             "pokemon": "relicanth"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 100,
                                 "min": 70
@@ -25260,17 +25260,17 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": 100,
                             "pokemon": "cloyster"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": 100,
                             "pokemon": "cloyster"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": 99,
                             "pokemon": "seadra"
                         },
@@ -25290,17 +25290,17 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": 100,
                             "pokemon": "gyarados"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": 100,
                             "pokemon": "gyarados"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": 100,
                             "pokemon": "gyarados"
                         },
@@ -25517,17 +25517,17 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": 100,
                             "pokemon": "cloyster"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": 100,
                             "pokemon": "cloyster"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": 99,
                             "pokemon": "seadra"
                         },
@@ -25547,17 +25547,17 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": 100,
                             "pokemon": "gyarados"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": 100,
                             "pokemon": "gyarados"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": 100,
                             "pokemon": "gyarados"
                         },
@@ -26069,7 +26069,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 100,
                                 "min": 20
@@ -26077,7 +26077,7 @@
                             "pokemon": "luvdisc"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 100,
                                 "min": 20
@@ -26085,7 +26085,7 @@
                             "pokemon": "lumineon"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 100,
                                 "min": 20
@@ -26114,7 +26114,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 100,
                                 "min": 20
@@ -26122,7 +26122,7 @@
                             "pokemon": "lanturn"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 100,
                                 "min": 20
@@ -26130,7 +26130,7 @@
                             "pokemon": "dewgong"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 100,
                                 "min": 20
@@ -26383,7 +26383,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 99,
                                 "min": 1
@@ -26391,7 +26391,7 @@
                             "pokemon": "magikarp"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 99,
                                 "min": 1
@@ -26399,7 +26399,7 @@
                             "pokemon": "magikarp"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 99,
                                 "min": 1
@@ -26428,7 +26428,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 100,
                                 "min": 5
@@ -26436,7 +26436,7 @@
                             "pokemon": "qwilfish"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 100,
                                 "min": 25
@@ -26444,7 +26444,7 @@
                             "pokemon": "qwilfish"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 100,
                                 "min": 35
@@ -26708,7 +26708,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 100,
                                 "min": 95
@@ -26716,7 +26716,7 @@
                             "pokemon": "wartortle"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 100,
                                 "min": 95
@@ -26724,7 +26724,7 @@
                             "pokemon": "croconaw"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 100,
                                 "min": 95
@@ -26753,7 +26753,7 @@
                 {
                     "pool": [
                         {
-                            "chance": 60,
+                            "chance": 40,
                             "level": {
                                 "max": 99,
                                 "min": 97
@@ -26761,7 +26761,7 @@
                             "pokemon": "blastoise"
                         },
                         {
-                            "chance": 30,
+                            "chance": 40,
                             "level": {
                                 "max": 99,
                                 "min": 97
@@ -26769,7 +26769,7 @@
                             "pokemon": "feraligatr"
                         },
                         {
-                            "chance": 5,
+                            "chance": 15,
                             "level": {
                                 "max": 99,
                                 "min": 97
