@@ -191,6 +191,24 @@ class BattleEffects {
 	 * @param {BattlePoke} defender
 	 * @param {BattleMove} move
 	 * @param {String} modifier
+	 * @returns {any}
+	 */
+	getValue(attacker, defender, move, modifier) {
+		var result = undefined;
+		for (const e of this.effects) {
+			var mod = e.getValue(attacker, defender, move, modifier);
+			if (mod != null) {
+				result = mod;
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * @param {BattlePoke} attacker
+	 * @param {BattlePoke} defender
+	 * @param {BattleMove} move
+	 * @param {String} modifier
 	 * @param {Number} base
 	 * @param {Number} max
 	 * @returns {Number}
@@ -243,13 +261,15 @@ class BattleEffect {
 	#order;
 	#condition;
 	#modifiers;
+	#values;
 	#flags;
 
-	constructor(type, order, condition, modifiers, flags) {
+	constructor(type, order, condition, modifiers, values, flags) {
 		this.#type = type;
 		this.#order = order;
 		this.#condition = condition;
 		this.#modifiers = modifiers;
+		this.#values = values;
 		this.#flags = flags;
 	}
 
@@ -262,7 +282,14 @@ class BattleEffect {
 		if (json == null || json == undefined) {
 			return null;
 		}
-		return new BattleEffect(type, json.order ?? 0, Condition.parse(json.condition), BattleEffect.parseModifiers(json.modifiers), BattleEffect.parseFlags(json.flags));
+		return new BattleEffect(
+			type,
+			json.order ?? 0,
+			Condition.parse(json.condition),
+			BattleEffect.parseModifiers(json.modifiers),
+			BattleEffect.parseValues(json.values),
+			BattleEffect.parseFlags(json.flags)
+		);
 	}
 
 	static parseModifiers(json) {
@@ -273,6 +300,24 @@ class BattleEffect {
 					recursive(map, v, prefix + k + ".");
 				} else {
 					map.set(prefix + k, Modifier.parse(v));
+				}
+			}
+		}
+		var map = new Map();
+		if (json) {
+			recursive(map, json, "");
+		}
+		return map;
+	}
+
+	static parseValues(json) {
+		const recursive = function(map, obj, prefix) {
+			for (const k of Object.keys(obj)) {
+				const v = obj[k];
+				if (typeof v === 'object' && !Array.isArray(v) && v !== null) {
+					recursive(map, v, prefix + k + ".");
+				} else {
+					map.set(prefix + k, v);
 				}
 			}
 		}
@@ -311,6 +356,20 @@ class BattleEffect {
 	getModifier(attacker, defender, move, modifier) {
 		if (this.#modifiers.has(modifier) && this.#condition.checkConditions(attacker, defender, move)) {
 			return this.#modifiers.get(modifier);
+		}
+		return null;
+	}
+
+	/**
+	 * @param {BattlePoke} attacker
+	 * @param {BattlePoke} defender
+	 * @param {BattleMove} move
+	 * @param {String} modifier
+	 * @returns {any}
+	 */
+	getValue(attacker, defender, move, modifier) {
+		if (this.#values.has(modifier) && this.#condition.checkConditions(attacker, defender, move)) {
+			return this.#values.get(modifier);
 		}
 		return null;
 	}
@@ -361,6 +420,9 @@ class Modifier {
 			return Modifier.of(v);
 		} else if (typeof v === "string") {
 			var m = v.match(/^(\+|\-|=)([0-9.]+)(%?)$/);
+			if (m == null) {
+				return (value, base, max) => v;
+			}
 			var op = m[1];
 			var number = parseFloat(m[2]);
 			var percent = m[3];

@@ -82,6 +82,9 @@ class BattleMoveGen4Impl extends BattleMove {
 			return hp.type;
 		}
 		*/
+		if (this.typeOverride) {
+			return this.typeOverride;
+		}
 		if (this.move.name == "weather-ball") {
 			var weather = document.getElementById("current-weather").value;
 			if (weather == "rain") {
@@ -160,6 +163,11 @@ function getDamage(attacker, defender, move) {
 	var weather = document.getElementById("current-weather").value;
 	if (flag("ignore-weather")) {
 		weather = "none";
+	}
+
+	var typeOverride = effects.getValue(attacker, defender, move, "type");
+	if (typeOverride) {
+		move.typeOverride = typeOverride;
 	}
 
 	var v = parseInt(attacker.level * 2 / 5) + 2;
@@ -346,7 +354,7 @@ function getDamage(attacker, defender, move) {
 		return CalcResult.of(attacker.level);
 	}
 	// Unhandled special move
-	if (move.power == 1) {
+	if (power == 1) {
 		return CalcResult.of(-1);
 	}
 	result.modify(v => modifier("damage", v, v));

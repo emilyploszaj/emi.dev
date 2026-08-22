@@ -40546,6 +40546,840 @@
         {
             "accuracy": 100,
             "category": "physical",
+            "effects": [
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "cheri-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=60"
+                    },
+                    "values": {
+                        "type": "fire"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "chesto-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=60"
+                    },
+                    "values": {
+                        "type": "water"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "pecha-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=60"
+                    },
+                    "values": {
+                        "type": "electric"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "rawst-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=60"
+                    },
+                    "values": {
+                        "type": "grass"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "aspear-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=60"
+                    },
+                    "values": {
+                        "type": "ice"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "leppa-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=60"
+                    },
+                    "values": {
+                        "type": "fighting"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "oran-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=60"
+                    },
+                    "values": {
+                        "type": "poison"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "persim-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=60"
+                    },
+                    "values": {
+                        "type": "ground"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "lum-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=60"
+                    },
+                    "values": {
+                        "type": "flying"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "sitrus-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=60"
+                    },
+                    "values": {
+                        "type": "psychic"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "figy-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=60"
+                    },
+                    "values": {
+                        "type": "bug"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "wiki-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=60"
+                    },
+                    "values": {
+                        "type": "rock"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "mago-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=60"
+                    },
+                    "values": {
+                        "type": "ghost"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "aguav-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=60"
+                    },
+                    "values": {
+                        "type": "dragon"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "iapapa-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=60"
+                    },
+                    "values": {
+                        "type": "dark"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "razz-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=60"
+                    },
+                    "values": {
+                        "type": "steel"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "bluk-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=70"
+                    },
+                    "values": {
+                        "type": "fire"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "nanab-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=70"
+                    },
+                    "values": {
+                        "type": "water"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "wepear-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=70"
+                    },
+                    "values": {
+                        "type": "electric"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "pinap-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=70"
+                    },
+                    "values": {
+                        "type": "grass"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "pomeg-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=70"
+                    },
+                    "values": {
+                        "type": "ice"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "kelpsy-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=70"
+                    },
+                    "values": {
+                        "type": "fighting"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "qualot-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=70"
+                    },
+                    "values": {
+                        "type": "poison"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "hondew-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=70"
+                    },
+                    "values": {
+                        "type": "ground"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "grepa-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=70"
+                    },
+                    "values": {
+                        "type": "flying"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "tamato-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=70"
+                    },
+                    "values": {
+                        "type": "psychic"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "cornn-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=70"
+                    },
+                    "values": {
+                        "type": "bug"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "magost-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=70"
+                    },
+                    "values": {
+                        "type": "rock"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "rabuta-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=70"
+                    },
+                    "values": {
+                        "type": "ghost"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "nomel-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=70"
+                    },
+                    "values": {
+                        "type": "dragon"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "spelon-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=70"
+                    },
+                    "values": {
+                        "type": "dark"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "pamtre-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=70"
+                    },
+                    "values": {
+                        "type": "steel"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "watmel-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=80"
+                    },
+                    "values": {
+                        "type": "fire"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "durin-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=80"
+                    },
+                    "values": {
+                        "type": "water"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "belue-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=80"
+                    },
+                    "values": {
+                        "type": "electric"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "occa-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=60"
+                    },
+                    "values": {
+                        "type": "fire"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "passho-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=60"
+                    },
+                    "values": {
+                        "type": "water"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "wacan-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=60"
+                    },
+                    "values": {
+                        "type": "electric"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "rindo-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=60"
+                    },
+                    "values": {
+                        "type": "grass"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "yache-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=60"
+                    },
+                    "values": {
+                        "type": "ice"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "chople-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=60"
+                    },
+                    "values": {
+                        "type": "fighting"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "kebia-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=60"
+                    },
+                    "values": {
+                        "type": "poison"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "shuca-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=60"
+                    },
+                    "values": {
+                        "type": "ground"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "coba-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=60"
+                    },
+                    "values": {
+                        "type": "flying"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "payapa-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=60"
+                    },
+                    "values": {
+                        "type": "psychic"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "tanga-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=60"
+                    },
+                    "values": {
+                        "type": "bug"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "charti-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=60"
+                    },
+                    "values": {
+                        "type": "rock"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "kasib-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=60"
+                    },
+                    "values": {
+                        "type": "ghost"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "haban-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=60"
+                    },
+                    "values": {
+                        "type": "dragon"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "colbur-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=60"
+                    },
+                    "values": {
+                        "type": "dark"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "babiri-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=60"
+                    },
+                    "values": {
+                        "type": "steel"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "chilan-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=60"
+                    },
+                    "values": {
+                        "type": "normal"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "liechi-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=80"
+                    },
+                    "values": {
+                        "type": "grass"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "ganlon-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=80"
+                    },
+                    "values": {
+                        "type": "ice"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "salac-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=80"
+                    },
+                    "values": {
+                        "type": "fighting"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "petaya-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=80"
+                    },
+                    "values": {
+                        "type": "poison"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "apicot-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=80"
+                    },
+                    "values": {
+                        "type": "ground"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "lansat-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=80"
+                    },
+                    "values": {
+                        "type": "flying"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "starf-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=80"
+                    },
+                    "values": {
+                        "type": "psychic"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "enigma-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=80"
+                    },
+                    "values": {
+                        "type": "bug"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "micle-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=80"
+                    },
+                    "values": {
+                        "type": "rock"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "custap-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=80"
+                    },
+                    "values": {
+                        "type": "ghost"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "jaboca-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=80"
+                    },
+                    "values": {
+                        "type": "dragon"
+                    }
+                },
+                {
+                    "condition": {
+                        "attacker": {
+                            "item": "rowap-berry"
+                        }
+                    },
+                    "modifiers": {
+                        "power": "=80"
+                    },
+                    "values": {
+                        "type": "dark"
+                    }
+                }
+            ],
             "extra": [
                 "Power and Type determined by User's held berry; berry is consumed"
             ],
