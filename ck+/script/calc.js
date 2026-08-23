@@ -164,6 +164,14 @@ class CalcResult {
 		}
 	}
 
+	static joined(results) {
+		var rolls = [];
+		for (const r of results) {
+			rolls.push(...r.rolls);
+		}
+		return this.of(rolls.sort((a, b) => a - b));
+	}
+
 	modify(func) {
 		for (var i = 0; i < this.rolls.length; i++) {
 			this.rolls[i] = func(this.rolls[i]);

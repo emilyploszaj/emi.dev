@@ -451,6 +451,43 @@ function rekeyArray(arr, key) {
 	return obj;
 }
 
+function percent(part, total) {
+	return Math.round(1000 * part / total) / 10;
+}
+
+var activeHints = new Set();
+
+function modifyHints(key, down) {
+	var hint = null;
+	if (key == 'a') {
+		hint = "attack";
+	} else if (key == 'd') {
+		hint = "defend";
+	} else if (key == 's') {
+		hint = "speed";
+	}
+	if (hint != null) {
+		var has = activeHints.has(hint);
+		if (has == down) {
+			return;
+		}
+		if (down) {
+			activeHints.add(hint);
+		} else {
+			activeHints.delete(hint);
+		}
+		updateCalc();
+	}
+}
+
+document.addEventListener("keydown", (event) => {
+	modifyHints(event.key, true);
+});
+
+document.addEventListener("keyup", (event) => {
+	modifyHints(event.key, false);
+});
+
 Object.defineProperty(Array.prototype, "contains", {
 	value: function(some) {
 		return this.indexOf(some) != -1;

@@ -140,26 +140,13 @@ function displayCalcPokemon(root, poke, opponent, right) {
 			var indicator = `<div class="move-calc-indicator" style="--type-color:${typeColors.get(move.type) ?? typeColors.get("curse")};"></div>`;
 			var p1 = `<td class="move-calc">${moveLink(poke.moves[i])}${variants}</td>`;
 			var result = engine.getDamage(attacker, defender, BattleMove.of(attacker, move, variantArray[i], false));
-			var rolls = result.rolls;
-			var min = result.min;
-			var max = result.max;
+			var wideResult = result;
 			if (variantArray[i] < 0 && move.roll_variants) {
-				for (var vr = 0; vr < move.variants.length; vr++) {
-					var vRes = engine.getDamage(attacker, defender, BattleMove.of(attacker, move, vr, false));
-					min = Math.min(vRes.min, min);
-					max = Math.max(vRes.max, max);
-				}
+				var results = move.variants.map((v, i) => engine.getDamage(attacker, defender, BattleMove.of(attacker, move, i, false)));
+				wideResult = CalcResult.joined(results);
 			}
-			var minPercent = Math.round(1000 * min / hp) / 10;
-			var maxPercent = Math.round(1000 * max / hp) / 10;
-			var extra = "";
-			if (minPercent >= 100 || (!player && maxPercent >= 100)) {
-				extra += ' ohko';
-			} else if (minPercent >= 50 || (!player && maxPercent >= 50)) {
-				extra += ' thko';
-			}
-			var p2 = moveDisplay(min, max, minPercent, maxPercent, extra, prettyRolls(rolls, myHp, myCurrentHp, opponentCurrentHp, result), move.power)
-			if (max == 0 && move.power == 0) {
+			var p2 = rangeDisplay(wideResult, hp, false, prettyRolls(result.rolls, myHp, myCurrentHp, opponentCurrentHp, result), move.power);
+			if (result.max == 0 && move.power == 0) {
 				if (move.name == "transform") {
 					p2 = '<td class="move-calc"><button onclick="transform(' + right + ')">Transform</button></td>';
 				} else {
@@ -170,25 +157,12 @@ function displayCalcPokemon(root, poke, opponent, right) {
 				p2 = `<td class="move-calc">-</td>`;
 			}
 			var result = engine.getDamage(attacker, defender, BattleMove.of(attacker, move, variantArray[i], true));
-			var rolls = result.rolls;
-			var min = result.min;
-			var max = result.max;
+			var wideResult = result;
 			if (variantArray[i] < 0 && move.roll_variants) {
-				for (var vr = 0; vr < move.variants.length; vr++) {
-					var vRes = engine.getDamage(attacker, defender, BattleMove.of(attacker, move, vr, true));
-					min = Math.min(vRes.min, min);
-					max = Math.max(vRes.max, max);
-				}
+				var results = move.variants.map((v, i) => engine.getDamage(attacker, defender, BattleMove.of(attacker, move, i, true)));
+				wideResult = CalcResult.joined(results);
 			}
-			var minPercent = Math.round(1000 * min / hp) / 10;
-			var maxPercent = Math.round(1000 * max / hp) / 10;
-			var extra = " crit";
-			if (minPercent >= 100 || (!player && maxPercent >= 100)) {
-				extra += ' ohko';
-			} else if (minPercent >= 50 || (!player && maxPercent >= 50)) {
-				extra += ' thko';
-			}
-			var p3 = moveDisplay(min, max, minPercent, maxPercent, extra, prettyRolls(rolls, myHp, myCurrentHp, opponentCurrentHp, result), move.power);
+			var p3 = rangeDisplay(wideResult, hp, true, prettyRolls(result.rolls, myHp, myCurrentHp, opponentCurrentHp, result), move.power);
 			moves += `<tr>`;
 			if (right) {
 				moves += p3 + p2 + p1;
@@ -208,39 +182,45 @@ function displayCalcPokemon(root, poke, opponent, right) {
 	}
 }
 
-function moveDisplay(min, max, minPercent, maxPercent, classes, tooltip, power) {
-	var v = `<td class="move-calc ${classes}"><ruby>${min} - ${max}<rt>${minPercent}% - ${maxPercent}%</rt></ruby>${tooltip}</td>`;
-	if (max == 0 && power == 0) {
+function rangeDisplay(result, hp, crit, tooltip, power) {
+	if (result.max == 0 && power == 0) {
 		return '<td class="move-calc"><ruby><rt>​</rt></ruby></td>';
 	}
 
-	if (true) {
-		var minColor = "var(--nhko-bold)";
-		if (minPercent >= 100) {
-			minColor = "var(--ohko-bold)";
-		} else if (minPercent >= 50) {
-			minColor = "var(--thko-bold)";
-		}
-		var maxColor = "var(--nhko-lite)";
-		if (maxPercent >= 100) {
-			maxColor = "var(--ohko-lite)";
-		} else if (maxPercent >= 50) {
-			maxColor = "var(--thko-lite)";
-		}
-		var minWidth = Math.min(100, minPercent);
-		var maxWidth = Math.min(100 - minWidth, maxPercent - minPercent);
-		v = `
-		<td class="calc-range ${classes.includes("crit") ? "crit" : ""}">
-			<div class="calc-range-percent">${minPercent}% - ${maxPercent}%</div>
-			<div class="range-indicator">
-				<div class="range-always" style="--color:${minColor};--width:${minWidth}%;"></div>
-				<div class="range-roll" style="--color:${maxColor};--width:${maxWidth}%;"></div>
-			</div>
-			<div class="calc-range-absolute">${min} - ${max}</div>
-			${tooltip}
-		</td>`;
+	return `
+	<td class="calc-range ${crit ? "crit" : ""}">
+		<div class="calc-range-percent">${percent(result.min, hp)}% - ${percent(result.max, hp)}%</div>
+		${createRangeIndicator(result, hp)}
+		<div class="calc-range-absolute">${result.min} - ${result.max}</div>
+		${tooltip}
+	</td>`;
+}
+
+/**
+ * @param {CalcResult} result 
+ */
+function createRangeIndicator(result, hp) {
+	var minPercent = percent(result.min, hp);
+	var maxPercent = percent(result.max, hp);
+	var minWidth = Math.min(100, minPercent);
+	var maxWidth = Math.min(100 - minWidth, maxPercent - minPercent);
+	var minColor = "var(--nhko-bold)";
+	if (minPercent >= 100) {
+		minColor = "var(--ohko-bold)";
+	} else if (minPercent >= 50) {
+		minColor = "var(--thko-bold)";
 	}
-	return v;
+	var maxColor = "var(--nhko-lite)";
+	if (maxPercent >= 100) {
+		maxColor = "var(--ohko-lite)";
+	} else if (maxPercent >= 50) {
+		maxColor = "var(--thko-lite)";
+	}
+	return `
+	<div class="range-indicator">
+		<div class="range-always" style="--color:${minColor};--width:${minWidth}%;"></div>
+		<div class="range-roll" style="--color:${maxColor};--width:${maxWidth}%;"></div>
+	</div>`;
 }
 
 function prettyRolls(rolls, myHp, myCurrentHp, killHp, result) {
@@ -272,26 +252,14 @@ function prettyRolls(rolls, myHp, myCurrentHp, killHp, result) {
 		if (result.recoil > 0) {
 			var min = parseInt(Math.min(killHp, rolls[0]) * result.recoil);
 			var max = parseInt(Math.min(killHp, rolls[rolls.length - 1]) * result.recoil);
-			var minPercent = Math.round(1000 * min / myHp) / 10;
-			var maxPercent = Math.round(1000 * max / myHp) / 10;
-			var extra = "";
-			if (max >= myCurrentHp) {
-				extra = "ohko";
-			}
 			v += "<h1>Recoil:</h1>";
-			v += `<table><tr>${moveDisplay(min, max, minPercent, maxPercent, extra, "", -1)}</tr></table>`;
+			v += `<table><tr>${rangeDisplay(CalcResult.of([min, max]), myCurrentHp, false, "", -1)}</tr></table>`;
 		}
 		if (result.drain > 0) {
 			var min = parseInt(Math.min(killHp, rolls[0]) * result.drain);
 			var max = parseInt(Math.min(killHp, rolls[rolls.length - 1]) * result.drain);
-			var minPercent = Math.round(1000 * min / myHp) / 10;
-			var maxPercent = Math.round(1000 * max / myHp) / 10;
-			var extra = "";
-			if (max >= myCurrentHp) {
-				extra = "ohko";
-			}
 			v += "<h1>Heal:</h1>";
-			v += `<table><tr>${moveDisplay(min, max, minPercent, maxPercent, extra, "", -1)}</tr></table>`;
+			v += `<table><tr>${rangeDisplay(CalcResult.of([min, max]), myCurrentHp, false, "", -1)}</tr></table>`;
 		}
 	}
 	v += "</center></div>";
@@ -499,6 +467,70 @@ function displayPokemon(root, i) {
 	</div>`, 0);
 }
 
+function generateMicroMonOverlay(mon, isPlayer) {
+	var aStages = isPlayer == false ? getStages("player-stages") : getEmptyStages();
+	var dStages = isPlayer == true ? getStages("enemy-stages") : getEmptyStages();
+	var opposingMon = isPlayer ? theirPoke : myPoke;
+	var attacker = BattlePoke.of(true, mon, aStages);
+	var defender = BattlePoke.of(false, opposingMon, dStages);
+
+	var hints = activeHints;
+
+	var overlays = "";
+	if (hints.has("speed")) {
+		var aSpe = attacker.getEffectiveStat("spe");
+		var dSpe = defender.getEffectiveStat("spe");
+		if (aSpe > dSpe) {
+			overlays += `<div class="micro-mon-overlay-faster"></div>`;
+		} else if (dSpe > aSpe) {
+			overlays += `<div class="micro-mon-overlay-slower"></div>`;
+		}
+	}
+	if (hints.has("attack") && hints.has("defend")) {
+		overlays += `
+		<div class="micro-mon-overlay-halves">
+			<div class="micro-mon-overlay-attack">
+				${makeMicroMonRangeOverlay(attacker, defender)}
+			</div>
+			<div class="micro-mon-overlay-defend">
+				${makeMicroMonRangeOverlay(defender, attacker)}
+			</div>
+		</div>`;
+	} else if (hints.has("attack")) {
+		overlays += `
+		<div class="micro-mon-overlay-attack">
+			${makeMicroMonRangeOverlay(attacker, defender)}
+		</div>`;
+	} else if (hints.has("defend")) {
+		overlays += `
+		<div class="micro-mon-overlay-defend">
+			${makeMicroMonRangeOverlay(defender, attacker)}
+		</div>`;
+	}
+	return `<div class="micro-mon-overlays">${overlays}</div>`;
+}
+
+function makeMicroMonRangeOverlay(attacker, defender) {
+	var ranges = "";
+	for (const rawMove of attacker.poke.moves) {
+		var move = BattleMove.of(attacker, movesByName.get(rawMove), -1, false);
+		var result = engine.getDamage(attacker, defender, move);
+		if (move.move.roll_variants) {
+			var results = move.move.variants.map((v, i) => engine.getDamage(attacker, defender, BattleMove.of(attacker, move.move, i, false)));
+			result = CalcResult.joined(results);
+		}
+		if (move.power == 0 && result.max == 0) {
+			ranges += `<div class="micro-calc-spacer"></div>`
+		} else {
+			ranges += `
+			<div class="micro-calc-result">
+				${createRangeIndicator(result, defender.currentHp)}
+			</div>`;
+		}
+	}
+	return ranges;
+}
+
 function updateCalc() {
 	try {
 		displayCalcPokemon(document.getElementById("player"), myPoke, theirPoke, false);
@@ -514,6 +546,7 @@ function updateCalc() {
 				</div>`;
 			}
 			v += `<div class="micro-mon drag-sortable" drag-content="player-${i}" onclick="setPlayer(${i})">
+				${generateMicroMonOverlay(box[i], true)}
 				${img}
 				${inlet}
 			</div>`;

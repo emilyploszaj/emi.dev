@@ -74,6 +74,9 @@
 	--cave-dark: #744417;
 	--cave-darker: #4e2d0d;
 	--cave-light: #a7784c;
+
+	--overlay-attack-border: var(--gender-unknown);
+	--overlay-defend-border: #5e3131;
 }
 
 html {
@@ -1097,6 +1100,22 @@ rt {
 	border-width: 3px;
 }
 
+.hotkey-hint {
+	font-size: 16px;
+	color: var(--dim-text);
+	padding: 8px;
+	cursor: help;
+	background-color: var(--grouping-background);
+}
+
+.hotkey-hint td {
+	max-width: 130px;
+	text-align: center;
+	text-wrap-mode: wrap;
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
 #weather {
 	position: absolute;
 	left: 0px;
@@ -1908,4 +1927,72 @@ rt {
 
 .form-element > .form-element > .form-element > .form-element {
 	background-color: var(--box-background);
+}
+
+
+/* Micro Mon Overlays */
+
+.micro-mon-overlays {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+div[class^='micro-mon-overlay-'] {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+}
+
+.micro-mon-overlay-faster {
+	z-index: 10;
+	border-width: 3px;
+	border-style: dashed;
+	border-color: var(--speed-faster);
+}
+
+.micro-mon-overlay-halves .micro-mon-overlay-attack {
+	right: 50%;
+}
+
+.micro-mon-overlay-halves .micro-mon-overlay-defend {
+	left: 50%;
+}
+
+.micro-mon-overlay-attack, .micro-mon-overlay-defend {
+	z-index: 10;
+	background-color: #00000055;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding-bottom: 6px;
+}
+
+.micro-calc-result {
+	padding-bottom: 2px;
+	padding-left: 6px;
+	width: calc(100% - 16px);
+}
+
+.micro-calc-spacer {
+	padding-bottom: 2px;
+	height: 8px;
+}
+
+.micro-mon-overlay-halves .micro-calc-result {
+	padding-left: 1px;
+	width: calc(100% - 6px);
+}
+
+.micro-calc-result .range-indicator {
+	border: 2px solid var(--overlay-attack-border);
+	height: 4px;
+}
+
+.micro-mon-overlay-defend .micro-calc-result .range-indicator {
+	border-color: var(--overlay-defend-border);
 }
