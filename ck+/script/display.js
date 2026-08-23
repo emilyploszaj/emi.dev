@@ -513,10 +513,14 @@ function generateMicroMonOverlay(mon, isPlayer) {
 function makeMicroMonRangeOverlay(attacker, defender) {
 	var ranges = "";
 	for (const rawMove of attacker.poke.moves) {
-		var move = BattleMove.of(attacker, movesByName.get(rawMove), -1, false);
+		var rMove = movesByName.get(rawMove);
+		if (rMove == null) {
+			continue;
+		}
+		var move = BattleMove.of(attacker, rMove, -1, false);
 		var result = engine.getDamage(attacker, defender, move);
-		if (move.move.roll_variants) {
-			var results = move.move.variants.map((v, i) => engine.getDamage(attacker, defender, BattleMove.of(attacker, move.move, i, false)));
+		if (rMove.roll_variants) {
+			var results = rMove.variants.map((v, i) => engine.getDamage(attacker, defender, BattleMove.of(attacker, rMove, i, false)));
 			result = CalcResult.joined(results);
 		}
 		if (move.power == 0 && result.max == 0) {
