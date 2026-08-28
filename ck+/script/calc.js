@@ -2,13 +2,15 @@ class BattlePoke {
 	#player;
 	#stages;
 	#ability;
+	#active;
 	poke;
 
-	static of(player, poke, stages) {
+	static of(player, poke, stages, active = true) {
 		var v = engine.createBattlePoke();
 		v.#player = player;
 		v.poke = poke;
 		v.#stages = stages;
+		v.#active = active;
 		var a = abilities.byName(poke.ability) ?? {"name": "none"};
 		v.#ability = BattleAbility.of(v, a, a.variants?.[player ? playerAbilityVariant : enemyAbilityVariant] ?? {});
 		return v;
@@ -19,6 +21,9 @@ class BattlePoke {
 	}
 
 	get currentHp() {
+		if (!this.#active) {
+			return this.getStat("hp");
+		}
 		if (this.#player) {
 			return parseInt(document.getElementsByClassName("player-current-hp")[0].value);
 		} else {
@@ -27,6 +32,9 @@ class BattlePoke {
 	}
 
 	get status() {
+		if (!this.#active) {
+			return "none";
+		}
 		if (this.#player) {
 			return document.getElementById("player").getElementsByClassName("status-select")[0].value;
 		} else {
@@ -67,6 +75,9 @@ class BattlePoke {
 	}
 
 	hasScreen(screen) {
+		if (!this.#active) {
+			return false;
+		}
 		if (this.#player) {
 			if (screen == "reflect") {
 				return document.getElementById("player-reflect").checked;

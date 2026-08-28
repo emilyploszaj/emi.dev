@@ -471,8 +471,8 @@ function generateMicroMonOverlay(mon, isPlayer) {
 	var aStages = isPlayer == false ? getStages("player-stages") : getEmptyStages();
 	var dStages = isPlayer == true ? getStages("enemy-stages") : getEmptyStages();
 	var opposingMon = isPlayer ? theirPoke : myPoke;
-	var attacker = BattlePoke.of(true, mon, aStages);
-	var defender = BattlePoke.of(false, opposingMon, dStages);
+	var attacker = BattlePoke.of(true, mon, aStages, false);
+	var defender = BattlePoke.of(false, opposingMon, dStages, false);
 
 	var hints = activeHints;
 
@@ -955,14 +955,14 @@ function getFullTypeDisplay(type) {
 	</div>`, 0);
 }
 
-function getEncounterPoke(poke, header, footer, extraClasses) {
+function getEncounterPoke(poke, header, footer, extraClasses, unownExtra) {
 	if (!poke.types) {
 		poke = pokemonByName.get(poke);
 	}
 	return `
 		<div class="encounter-poke${extraClasses ? " " + extraClasses : ""}">
 			${header ?? ""}
-			${createLink(`#/pokemon/${poke.name}/`, '<img draggable="false" src="' + getPokeImage(poke.name, "medium") + '">')}
+			${createLink(`#/pokemon/${poke.name}/`, '<img draggable="false" src="' + getPokeImage(poke.name, "medium", unownExtra) + '">')}
 			${footer ?? ""}
 			<div class="type-slices">
 				${poke.types.displayMap(t => customLink(`#/type/${t}/`, `class="type-slice" style="background-color: ${typeColor(t)};"`, ""))}

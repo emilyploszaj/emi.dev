@@ -3681,7 +3681,7 @@
                     "type": "global-honey-tree"
                 },
                 {
-                    "pool": "honey-tree.mid",
+                    "pool": "honey-tree.late",
                     "type": "local-honey-tree"
                 }
             ]
@@ -13097,7 +13097,7 @@
                     "type": "global-honey-tree"
                 },
                 {
-                    "pool": "honey-tree.mid",
+                    "pool": "honey-tree.late",
                     "type": "local-honey-tree"
                 }
             ]
@@ -20690,7 +20690,7 @@
                     "type": "global-honey-tree"
                 },
                 {
-                    "pool": "honey-tree.mid",
+                    "pool": "honey-tree.late",
                     "type": "local-honey-tree"
                 }
             ]
@@ -21841,7 +21841,7 @@
                     "type": "global-honey-tree"
                 },
                 {
-                    "pool": "honey-tree.mid",
+                    "pool": "honey-tree.late",
                     "type": "local-honey-tree"
                 }
             ]
@@ -38938,7 +38938,12 @@
             "effects": {
                 "condition": {
                     "attacker": {
-                        "statused": true
+                        "status": [
+                            "brn",
+                            "psn",
+                            "tox",
+                            "prz"
+                        ]
                     }
                 },
                 "modifiers": {

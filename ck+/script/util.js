@@ -65,24 +65,26 @@ function getTinyPokemonDisplay(tp, extra = "") {
 
 function getPokeImage(poke, size, unownExtra = undefined) {
 	var shiny = poke.name && isShiny(poke) ? "shiny" : "normal";
-	if (poke.name) {
-		if (poke.name == "unown" && !unownExtra) {
+	var species = poke.name ?? poke;
+	var form = null;
+	if (species == "unown") {
+		if (unownExtra >= 0 && unownExtra < 7) {
+			form = ["b", "u", "n", "n", "y", "q", "t"][unownExtra];
+		} else {
 			var letter = ((getDv(poke, "atk") & 0b0110) << 5) | ((getDv(poke, "def") & 0b0110) << 3) | ((getDv(poke, "spe") & 0b0110) << 1) | ((getDv(poke, "spa") & 0b0110) >> 1);
 			letter = (letter / 10) | 0;
-			letter = String.fromCharCode(97 + letter);
-			poke = poke.name + "-" + letter;
-		} else {
-			poke = poke.name;
+			form = String.fromCharCode(97 + letter);
 		}
 	}
-	if (unownExtra !== undefined && poke == "unown") {
-		poke += ["-b", "-u", "-n", "-n", "-y", "-q", "-t"][unownExtra];
-	}
 	if (game.name == "pk") {
-		return 'https://img.pokemondb.net/sprites/platinum/' + shiny + '/' + poke + '.png';
+		return 'https://img.pokemondb.net/sprites/platinum/' + shiny + '/' + species + '.png';
 	}
-	// return `./images/pokemon/crystal/${poke}.png`;
-	return 'https://img.pokemondb.net/sprites/crystal/' + shiny + '/' + poke + '.png';
+	// return 'https://img.pokemondb.net/sprites/crystal/' + shiny + '/' + poke + '.png';
+	var path = species;
+	if (form != null) {
+		path += `/${form}`;
+	}
+	return `./images/pokemon/crystal/${path}/${shiny}.png`;
 }
 
 function getTargeting(move) {
@@ -459,6 +461,7 @@ var activeHints = new Set();
 
 function modifyHints(key, down) {
 	var hint = null;
+	key = key.toLowerCase()
 	if (key == 'a') {
 		hint = "attack";
 	} else if (key == 'd') {

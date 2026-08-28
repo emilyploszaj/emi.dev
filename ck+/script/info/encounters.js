@@ -251,7 +251,7 @@ function getEncounterPoolDisplay(pool, time, showLevel) {
 		}
 
 		var footer = (warnings ?? "") + `<div class="wild-calc"><button onclick="calcWild(${pokemonByName.get(pool[i].pokemon).pokedex}, ${level.min})">Calc</button></div>`;
-		v += getEncounterPoke(pool[i].pokemon, header, footer, extraClasses);
+		v += getEncounterPoke(pool[i].pokemon, header, footer, extraClasses, i);
 	}
 	v += '</div>';
 	v += '</div>';
