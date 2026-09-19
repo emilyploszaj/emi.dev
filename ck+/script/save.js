@@ -182,6 +182,19 @@ function readFile(file) {
 					console.log(e);
 				}
 			}
+		} else if (game.name == "ek") {
+			if (file.name.endsWith(".sav")) {
+				try {
+					var parts = readGen3Save(bytes);
+					box = parts;
+					deadBox = [];
+					// deadBox = parts.deadPokemon
+					finishParse("Successfully parsed save!", box, deadBox);
+					return;
+				} catch (e) {
+					console.log(e);
+				}
+			}
 		}
 		if (bytes.length > 32000 && bytes[0x2008] == 99 && bytes[0x2d0f] == 127) {
 			try {
@@ -350,33 +363,7 @@ function readGen4Mon(bytes, offset, party = false) {
 		// 1, "ballHGSS",
 		// 1, "walkingMood"
 	]);
-	var nature = [
-		"hardy",
-		"lonely",
-		"brave",
-		"adamant",
-		"naughty",
-		"bold",
-		"docile",
-		"relaxed",
-		"impish",
-		"lax",
-		"timid",
-		"hasty",
-		"serious",
-		"jolly",
-		"naive",
-		"modest",
-		"mild",
-		"quiet",
-		"bashful",
-		"rash",
-		"calm",
-		"gentle",
-		"sassy",
-		"careful",
-		"quirky",
-	][personality % 25];
+	var nature = getNatureFromOffset(personality % 25);
 	
 	var species = pokemonByPokedex.get(blockA.species);
 	if (species == undefined) {
@@ -486,6 +473,36 @@ function readGen4Mon(bytes, offset, party = false) {
 	return mon;
 }
 
+function getNatureFromOffset(offset) {
+	return [
+		"hardy",
+		"lonely",
+		"brave",
+		"adamant",
+		"naughty",
+		"bold",
+		"docile",
+		"relaxed",
+		"impish",
+		"lax",
+		"timid",
+		"hasty",
+		"serious",
+		"jolly",
+		"naive",
+		"modest",
+		"mild",
+		"quiet",
+		"bashful",
+		"rash",
+		"calm",
+		"gentle",
+		"sassy",
+		"careful",
+		"quirky",
+	][offset];
+}
+
 function getLevelFromExperience(mon, experience) {
 	if (!mon.name) {
 		mon = pokemonByName.get(mon);
@@ -545,6 +562,111 @@ function unshuffleParts(parts, variant) {
 		[3, 2, 1, 0]
 	][variant];
 	return [parts[ordering[0]], parts[ordering[1]], parts[ordering[2]], parts[ordering[3]]];
+}
+
+function readGen3Save(bytes) {
+	var sectionSize = 4096;
+	var saveAIndex = read32(bytes, 0x0000 + sectionSize * 13 + 0x0FFC);
+	var saveBIndex = read32(bytes, 0xE000 + sectionSize * 13 + 0x0FFC);
+	console.log(saveBIndex, saveAIndex);
+	var base = 0 + (saveBIndex > saveAIndex ? 0xE000 : 0);
+	var partySection = -1;
+	var parts = [null, null, null, null, null, null, null, null, null];
+	for (var section = 0; section < 14; section++) {
+		var offset = base + sectionSize * section;
+		var id = read16(bytes, offset + 0x0FF4);
+		if (id == 1) {
+			partySection = section;
+		} else if (id >= 5 && id <= 13) {
+			parts[id - 5] = copySlice(bytes, offset, 3968);
+		}
+	}
+	var pc = parts.flat();
+	var offset = base + partySection * sectionSize;
+	var teamSize = read32(bytes, offset + 0x0234);
+	var team = [];
+	for (var i = 0; i < teamSize; i++) {
+		team.push(readGen3Mon(bytes, offset + 0x0238 + 100 * i));
+	}
+	for (var i = 0; i < 420; i++) {
+		var mon = readGen3Mon(pc, i * 80 + 4);
+		if (mon) {
+			team.push(mon);
+		}
+	}
+	return team;
+}
+
+function readGen3Mon(bytes, offset) {
+	var personality = read32(bytes, offset + 0x00);
+	var ot = read32(bytes, offset + 0x04);
+	var encrypted = copySlice(bytes, offset + 0x20, 48);
+	var decrypted = gen3DecryptMon(encrypted, personality ^ ot, 48);
+	var parts = unshuffleParts([
+		copySlice(decrypted, 12 * 0, 12),
+		copySlice(decrypted, 12 * 1, 12),
+		copySlice(decrypted, 12 * 2, 12),
+		copySlice(decrypted, 12 * 3, 12)
+	], personality % 24);
+	var blockA = parseTemplate(parts[0], 0, [
+		2, "species",
+		2, "item",
+		4, "experience",
+		1, "ppUps",
+		1, "friendship",
+		2, "unused",
+	]);
+	var blockB = parseTemplate(parts[1], 0, [
+		[2, 4], "moves",
+		[1, 4], "pp",
+	]);
+	var blockD = parseTemplate(parts[3], 0, [
+		1, "pokerus",
+		1, "metLocation",
+		2, "origins",
+		4, "ivs",
+		4, "ribbons",
+	]);
+
+	if (blockA.species == 0) {
+		return null;
+	}
+
+	var poke = pokemonByIndex.get(blockA.species);
+
+
+	return {
+		name: poke.name,
+		moves: blockB.moves.map(v => movesByIndex.get(v)?.name).filter(a => a != undefined),
+		item: itemsByIndex.get(blockA.item)?.name ?? "",
+		ability: poke.abilities[(blockD.ivs >> 31) & 0x01],
+		dvs: {
+			hp: (blockD.ivs >> 0) & 0b11111,
+			atk: (blockD.ivs >> 5) & 0b11111,
+			def: (blockD.ivs >> 10) & 0b11111,
+			spa: (blockD.ivs >> 20) & 0b11111,
+			spd: (blockD.ivs >> 25) & 0b11111,
+			spe: (blockD.ivs >> 15) & 0b11111,
+		},
+		nature: getNatureFromOffset(personality % 25),
+		level: getLevelFromExperience(poke, blockA.experience),
+		experience: blockA.experience,
+		// caught: location,
+		// gender: gender,
+	};
+}
+
+function gen3DecryptMon(bytes, mask, size) {
+	var ret = [];
+	for (var i = 0; i < size / 4; i++) {
+		var v = read32(bytes, i * 4)
+		v = v ^ (mask);
+		ret.push((v >> 0) & 0xff);
+		ret.push((v >> 8) & 0xff);
+		ret.push((v >> 16) & 0xff);
+		ret.push((v >> 24) & 0xff);
+	}
+	return ret;
 }
 
 function readN(bytes, offset, size) {

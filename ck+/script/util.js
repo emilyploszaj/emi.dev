@@ -76,7 +76,9 @@ function getPokeImage(poke, size, unownExtra = undefined) {
 			form = String.fromCharCode(97 + letter);
 		}
 	}
-	if (game.name == "pk") {
+	if (game.name == "ek") {
+		return 'https://img.pokemondb.net/sprites/emerald/' + shiny + '/' + species + '.png';
+	} else if (game.name == "pk") {
 		return 'https://img.pokemondb.net/sprites/platinum/' + shiny + '/' + species + '.png';
 	}
 	// return 'https://img.pokemondb.net/sprites/crystal/' + shiny + '/' + poke + '.png';
@@ -294,6 +296,8 @@ function getSwitchPriority(enemy, player, team) {
 			return 1;
 		}
 		return 0;
+	} else if (game.name == "ek") {
+		return getGen3SwitchScore(enemy, player, team);
 	}
 	var prio = 0;
 	if (hasSuperEffectiveMove(enemy, player))  {

@@ -612,6 +612,23 @@ input:checked + .fake-checkbox {
 	margin-right: 20px;
 }
 
+.gen-3 .encounter-poke {
+	position: relative;
+	background-color: var(--grouping-background);
+	padding: 10px;
+	width: 64px;
+	text-align: center;
+	margin: 2px;
+}
+
+.gen-3 .encounter-poke img {
+	image-rendering: pixelated;
+	object-fit: cover;
+	width: 64px;
+	height: 64px;
+	margin-right: 20px;
+}
+
 .encounter-level {
 	left: auto;
 	right: auto;
@@ -1234,6 +1251,15 @@ rt {
 	padding: 0px;
 	width: 80px;
 	height: 80px;
+}
+
+.gen-3 .micro-mon {
+	width: 64px;
+	height: 64px;
+}
+
+.gen-3 .micro-mon img {
+	margin: -3px;
 }
 
 .micro-mon img {

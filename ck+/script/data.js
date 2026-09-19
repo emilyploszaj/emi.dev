@@ -62,6 +62,7 @@ var typeMatchups = new Map();
 var searchResults = new Map();
 var pokemonByName = new Map();
 var pokemonByPokedex = new Map();
+var pokemonByIndex = new Map();
 var pokemonByItem = new Map();
 var pokemonFamilies = new Map();
 var encountersByName = new Map();
@@ -91,6 +92,7 @@ var copyEditedMoves = false;
 var badges = 0;
 var lastTrainer = 17;
 var caughtLandmarks = new Set();
+var itemsByIndex = new Map();
 var itemsById = new Map([
 	[0x03, "brightpowder"],
 	[0x1e, "lucky-punch"],
@@ -194,6 +196,8 @@ function loadData(text) {
 	data = JSON.parse(text);
 	if (game.name == "pk") {
 		loadEngine("script/engine/gen4.js");
+	} else if (game.name == "ek") {
+		loadEngine("script/engine/gen3.js");
 	} else {
 		loadEngine("script/engine/ck+.js");
 	}
@@ -216,12 +220,18 @@ function loadFights(text) {
 
 function initGame() {
 	game = {};
-	if (window.location.search == "?custom"){
+	var search = window.location.search;
+	if (search && search.endsWith("=")) {
+		search = search.substring(0, search.length - 1);
+	}
+	if (search == "?custom"){
 		selectGame();
-	} else if (window.location.search == "?xp" || window.location.search == "?xp=") {
+	} else if (search == "?xp") {
 		selectGame("ck+xp");
-	} else if (window.location.search == "?pk" || window.location.search == "?pk=") {
+	} else if (search == "?pk") {
 		selectGame("pk");
+	} else if (search == "?ek") {
+		selectGame("ek");
 	} else {
 		selectGame("ck+");
 	}
@@ -241,6 +251,9 @@ function selectGame(gameId) {
 	} else if (gameId == "pk") {
 		MAX_DV = 31;
 		fetchData("pk.json");
+	} else if (gameId == "ek") {
+		MAX_DV = 31;
+		fetchData("ek.json");
 	} else {
 		// custom game
 		loadData(localStorage.getItem("calc/custom-data"));
@@ -259,6 +272,10 @@ function updateEngineFlags() {
 		flags.push("ability");
 		flags.push("nature");
 		document.body.classList.add("gen-4");
+	} else if (game.name == "ek") {
+		flags.push("ability");
+		flags.push("nature");
+		document.body.classList.add("gen-3");
 	}
 	setEngineDisplayFlags(flags);
 	document.getElementById("edit-hp-dv").max = `${MAX_DV}`;
@@ -300,6 +317,8 @@ function startup() {
 		var p = j.pokemon[i];
 		pokemonByName.set(p.name, p);
 		pokemonByPokedex.set(p.pokedex, p);
+		// Default to pokedex for index
+		pokemonByIndex.set(p.index ?? p.pokedex, p);
 		searchResults.set(p.name, {link: `#/pokemon/${p.name}/`});
 		for (let j in p.items) {
 			if (!pokemonByItem.has(p.items[j].item)) {
@@ -374,6 +393,9 @@ function startup() {
 	}
 	for (const i of j.items) {
 		itemsByName.set(i.name, i);
+		if (i.index) {
+			itemsByIndex.set(i.index, i);
+		}
 		addSearchResult(i.name, {link: `#/item/${i.name}/`, display: () => prettyItem(i)});
 	}
 	for (let i in j.encounters) {

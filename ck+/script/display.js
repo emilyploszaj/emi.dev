@@ -96,7 +96,7 @@ function displayCalcPokemon(root, poke, opponent, right) {
 		types += " " + prettyType(p.types[1]);
 	}
 	root.getElementsByClassName("poke-types")[0].innerHTML = types;
-	if (game.name == "pk") {
+	if (game.name == "pk" || game.name == "ek") {
 		var ability = abilities.byName(poke.ability);
 		if (ability) {
 			var variants = "";

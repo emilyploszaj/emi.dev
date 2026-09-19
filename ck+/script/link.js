@@ -208,7 +208,7 @@ function itemImage(item) {
 	if (item.startsWith("tm-") || item.startsWith("hm-")) {
 		item = "tm_hm"
 	}
-	if (game.name == "pk") {
+	if (game.name == "pk" || game.name == "ek") {
 		if (item == "berserk-gene") {
 			return `<img class="item-icon" src="./images/items/${item.replace("-", "_")}.png">`;
 		}
