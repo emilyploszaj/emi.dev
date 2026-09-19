@@ -43,10 +43,14 @@ function displayTrainers(split = undefined) {
 	var v = "";
 	if (splits.length > 0) {
 		v += `<div class="split-buttons"><div class="split-header">Splits</div>`;
+		v += `<div class="split-row">`
 		for (const s of splits) {
 			v += `<button class="split-button ${split == s ? "split-button-selected" : ""}" onclick="displayTrainers('${s}')">${fullCapitalize(s)}</button>`;
+			if (s == "e4r1") {
+				v += `</div><div class="split-row">`;
+			}
 		}
-		v += `</div>`;
+		v += `</div></div>`;
 	}
 	for (var i = 0; i < data.trainers.length; i++) {
 		var t = data.trainers[i];

@@ -10,7 +10,7 @@ function getTinyPokemonDisplay(tp, extra = "") {
 	v += '<div class="tiny-poke-header">';
 	v += '<div class="tiny-poke-icon"><img src="' + getPokeImage(tp, "small") + '"></div>';
 	v += '<div class="tiny-poke-info">';
-	v += `<div style="display:flex;flex-wrap:wrap;">${pokeLink(p.name)} <span class="tiny-poke-level">Lvl ${tp.level}</span></div>`;
+	v += `<div style="display:flex;flex-wrap:wrap;">${pokeLink(p.name)} <span class="tiny-poke-level"><span class="meek">Lvl </span>${tp.level}</span></div>`;
 	var typeDisplay = "";
 	for (let t of p.types) {
 		typeDisplay += prettyType(t);

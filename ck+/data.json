@@ -42387,6 +42387,7 @@
         {
             "area": "Cherrygrove City",
             "name": "rival1-1",
+            "split": "falkner",
             "team": [
                 {
                     "item": "berry",
@@ -42402,6 +42403,7 @@
         {
             "area": "Cherrygrove City",
             "name": "rival1-2",
+            "split": "falkner",
             "team": [
                 {
                     "item": "berry",
@@ -42417,6 +42419,7 @@
         {
             "area": "Cherrygrove City",
             "name": "rival1-3",
+            "split": "falkner",
             "team": [
                 {
                     "item": "berry",
@@ -42432,6 +42435,7 @@
         {
             "area": "Route 30",
             "name": "youngster-joey",
+            "split": "falkner",
             "team": [
                 {
                     "item": "pink-bow",
@@ -42447,6 +42451,7 @@
         {
             "area": "Route 30",
             "name": "youngster-mikey",
+            "split": "falkner",
             "team": [
                 {
                     "item": "berry",
@@ -42470,6 +42475,7 @@
         {
             "area": "Route 30",
             "name": "bug-catcher-don",
+            "split": "falkner",
             "team": [
                 {
                     "item": "berry",
@@ -42497,6 +42503,7 @@
         {
             "area": "Route 31",
             "name": "bug-catcher-wade",
+            "split": "falkner",
             "team": [
                 {
                     "item": "berry",
@@ -42545,6 +42552,7 @@
         {
             "area": "Sprout Tower",
             "name": "sage-edmond",
+            "split": "falkner",
             "team": [
                 {
                     "item": "berry",
@@ -42581,6 +42589,7 @@
         {
             "area": "Sprout Tower",
             "name": "sage-nico",
+            "split": "falkner",
             "team": [
                 {
                     "item": "berry",
@@ -42620,6 +42629,7 @@
         {
             "area": "Sprout Tower",
             "name": "sage-chow",
+            "split": "falkner",
             "team": [
                 {
                     "item": "berry",
@@ -42659,6 +42669,7 @@
         {
             "area": "Sprout Tower",
             "name": "sage-troy",
+            "split": "falkner",
             "team": [
                 {
                     "item": "berry",
@@ -42685,6 +42696,7 @@
         {
             "area": "Sprout Tower",
             "name": "sage-jin",
+            "split": "falkner",
             "team": [
                 {
                     "item": "berry",
@@ -42713,6 +42725,7 @@
         {
             "area": "Sprout Tower",
             "name": "sage-neal",
+            "split": "falkner",
             "team": [
                 {
                     "item": "berry",
@@ -42741,6 +42754,7 @@
         {
             "area": "Sprout Tower",
             "name": "sage-li",
+            "split": "falkner",
             "team": [
                 {
                     "item": "berry",
@@ -42778,6 +42792,7 @@
         {
             "area": "Ruins of Alph",
             "name": "psychic-nathan",
+            "split": "falkner",
             "team": [
                 {
                     "item": "berry",
@@ -42805,6 +42820,7 @@
         {
             "area": "Violet City Gym",
             "name": "bird-keeper-abe",
+            "split": "falkner",
             "team": [
                 {
                     "item": "berry",
@@ -42844,6 +42860,7 @@
         {
             "area": "Violet City Gym",
             "name": "bird-keeper-rod",
+            "split": "falkner",
             "team": [
                 {
                     "item": "berry-juice",
@@ -42882,6 +42899,7 @@
         {
             "area": "Violet City Gym",
             "name": "leader-falkner",
+            "split": "falkner",
             "team": [
                 {
                     "item": "berry",
@@ -42950,6 +42968,7 @@
         {
             "area": "Route 32 (gauntlet)",
             "name": "youngster-albert",
+            "split": "bugsy",
             "team": [
                 {
                     "item": "berry",
@@ -42978,6 +42997,7 @@
         {
             "area": "Route 32 (gauntlet)",
             "name": "picnicker-liz",
+            "split": "bugsy",
             "team": [
                 {
                     "item": "berry-juice",
@@ -43006,6 +43026,7 @@
         {
             "area": "Route 32 (gauntlet)",
             "name": "fisher-henry",
+            "split": "bugsy",
             "team": [
                 {
                     "item": "berry",
@@ -43044,6 +43065,7 @@
         {
             "area": "Route 32 (gauntlet)",
             "name": "fisher-ralph",
+            "split": "bugsy",
             "team": [
                 {
                     "item": "berry",
@@ -43083,6 +43105,7 @@
         {
             "area": "Route 32 (gauntlet)",
             "name": "youngster-gordon",
+            "split": "bugsy",
             "team": [
                 {
                     "item": "berry",
@@ -43122,6 +43145,7 @@
         {
             "area": "Route 32 (gauntlet)",
             "name": "bird-keeper-peter",
+            "split": "bugsy",
             "team": [
                 {
                     "item": "stick",
@@ -43161,6 +43185,7 @@
         {
             "area": "Union cave",
             "name": "hiker-daniel",
+            "split": "bugsy",
             "team": [
                 {
                     "item": "berry",
@@ -43187,6 +43212,7 @@
         {
             "area": "Union cave",
             "name": "firebreather-bill",
+            "split": "bugsy",
             "team": [
                 {
                     "item": "pink-bow",
@@ -43215,6 +43241,7 @@
         {
             "area": "Union cave",
             "name": "hiker-russell",
+            "split": "bugsy",
             "team": [
                 {
                     "item": "focus-band",
@@ -43242,6 +43269,7 @@
         {
             "area": "Union cave",
             "name": "firebreather-ray",
+            "split": "bugsy",
             "team": [
                 {
                     "item": "berry",
@@ -43269,6 +43297,7 @@
         {
             "area": "Union cave",
             "name": "hiker-phillip",
+            "split": "bugsy",
             "team": [
                 {
                     "item": "berry-juice",
@@ -43308,6 +43337,7 @@
         {
             "area": "Union cave",
             "name": "pokemaniac-andrew",
+            "split": "bugsy",
             "team": [
                 {
                     "item": "berry",
@@ -43336,6 +43366,7 @@
         {
             "area": "Union cave",
             "name": "hiker-leonard",
+            "split": "bugsy",
             "team": [
                 {
                     "item": "pink-bow",
@@ -43363,6 +43394,7 @@
         {
             "area": "Union cave",
             "name": "pokemaniac-calvin",
+            "split": "bugsy",
             "team": [
                 {
                     "item": "miracleberry",
@@ -43391,6 +43423,7 @@
         {
             "area": "Union cave",
             "name": "pokemaniac-larry",
+            "split": "bugsy",
             "team": [
                 {
                     "item": "berry",
@@ -43430,6 +43463,7 @@
         {
             "area": "Route 33",
             "name": "hiker-anthony",
+            "split": "bugsy",
             "team": [
                 {
                     "item": "berry",
@@ -43469,6 +43503,7 @@
         {
             "area": "Slowpoke well",
             "name": "gruntm-29",
+            "split": "bugsy",
             "team": [
                 {
                     "item": "berry",
@@ -43497,6 +43532,7 @@
         {
             "area": "Slowpoke well",
             "name": "gruntf-1",
+            "split": "bugsy",
             "team": [
                 {
                     "item": "berry",
@@ -43525,6 +43561,7 @@
         {
             "area": "Slowpoke well",
             "name": "gruntm-2",
+            "split": "bugsy",
             "team": [
                 {
                     "item": "berry",
@@ -43563,6 +43600,7 @@
             "area": "Slowpoke well",
             "meta": "cannot change team  for rival afterwards",
             "name": "gruntm-1",
+            "split": "bugsy",
             "team": [
                 {
                     "item": "berry-juice",
@@ -43602,6 +43640,7 @@
         {
             "area": "Azalea town",
             "name": "rival1-4",
+            "split": "bugsy",
             "team": [
                 {
                     "item": "berry",
@@ -43638,6 +43677,7 @@
         {
             "area": "Azalea town",
             "name": "rival1-5",
+            "split": "bugsy",
             "team": [
                 {
                     "item": "berry",
@@ -43674,6 +43714,7 @@
         {
             "area": "Azalea town",
             "name": "rival1-6",
+            "split": "bugsy",
             "team": [
                 {
                     "item": "berry",
@@ -43710,6 +43751,7 @@
         {
             "area": "Azalea Gym",
             "name": "twins-amy-&-may",
+            "split": "bugsy",
             "team": [
                 {
                     "item": "berry",
@@ -43747,6 +43789,7 @@
         {
             "area": "Azalea Gym",
             "name": "bug-catcher-josh",
+            "split": "bugsy",
             "team": [
                 {
                     "item": "berry-juice",
@@ -43786,6 +43829,7 @@
         {
             "area": "Azalea Gym",
             "name": "bug-catcher-al",
+            "split": "bugsy",
             "team": [
                 {
                     "item": "berry",
@@ -43823,6 +43867,7 @@
         {
             "area": "Azalea Gym",
             "name": "bug-catcher-benny",
+            "split": "bugsy",
             "team": [
                 {
                     "item": "berry",
@@ -43862,6 +43907,7 @@
         {
             "area": "Azalea Gym",
             "name": "leader-bugsy",
+            "split": "bugsy",
             "team": [
                 {
                     "item": "gold-berry",
@@ -43934,6 +43980,7 @@
         {
             "area": "Ilex forest",
             "name": "bug-catcher-wayne",
+            "split": "whitney",
             "team": [
                 {
                     "item": "berry",
@@ -43973,6 +44020,7 @@
         {
             "area": "Route 34",
             "name": "cooltrainerf-irene",
+            "split": "whitney",
             "team": [
                 {
                     "item": "berry",
@@ -44013,6 +44061,7 @@
             "area": "Route 34",
             "b2b": true,
             "name": "cooltrainerf-jenn",
+            "split": "whitney",
             "team": [
                 {
                     "item": "berry",
@@ -44054,6 +44103,7 @@
             "b2b": true,
             "meta": "gives soft sand (talk after battle)",
             "name": "cooltrainerf-kate",
+            "split": "whitney",
             "team": [
                 {
                     "item": "berry-juice",
@@ -44093,6 +44143,7 @@
         {
             "area": "Route 34",
             "name": "youngster-ian",
+            "split": "whitney",
             "team": [
                 {
                     "item": "berry",
@@ -44130,6 +44181,7 @@
         {
             "area": "Route 34",
             "name": "youngster-samuel",
+            "split": "whitney",
             "team": [
                 {
                     "item": "berry-juice",
@@ -44181,6 +44233,7 @@
             "area": "Route 34",
             "b2b": true,
             "name": "picnicker-gina",
+            "split": "whitney",
             "team": [
                 {
                     "item": "berry",
@@ -44220,6 +44273,7 @@
         {
             "area": "Route 34",
             "name": "officer-keith",
+            "split": "whitney",
             "team": [
                 {
                     "item": "pink-bow",
@@ -44259,6 +44313,7 @@
         {
             "area": "Route 34",
             "name": "camper-todd",
+            "split": "whitney",
             "team": [
                 {
                     "item": "pink-bow",
@@ -44288,6 +44343,7 @@
             "area": "Route 34",
             "b2b": true,
             "name": "pokefanm-brandon",
+            "split": "whitney",
             "team": [
                 {
                     "item": "light-ball",
@@ -44316,6 +44372,7 @@
             "area": "Goldenrod entrance",
             "meta": "boom trainer",
             "name": "super-nerd-teru",
+            "split": "whitney",
             "team": [
                 {
                     "item": "pink-bow",
@@ -44365,6 +44422,7 @@
             "area": "Goldenrod entrance",
             "b2b": true,
             "name": "pokemaniac-issac",
+            "split": "whitney",
             "team": [
                 {
                     "item": "berry",
@@ -44382,6 +44440,7 @@
             "area": "Goldenrod entrance",
             "meta": "boom trainer",
             "name": "super-nerd-eric",
+            "split": "whitney",
             "team": [
                 {
                     "item": "berry-juice",
@@ -44418,6 +44477,7 @@
         {
             "area": "Goldenrod entrance",
             "name": "pokemaniac-donald",
+            "split": "whitney",
             "team": [
                 {
                     "item": "poison-barb",
@@ -44456,6 +44516,7 @@
         {
             "area": "Goldenrod Gym",
             "name": "beauty-victoria",
+            "split": "whitney",
             "team": [
                 {
                     "item": "berry-juice",
@@ -44505,6 +44566,7 @@
             "area": "Goldenrod Gym",
             "b2b": true,
             "name": "beauty-samantha",
+            "split": "whitney",
             "team": [
                 {
                     "item": "berry-juice",
@@ -44553,6 +44615,7 @@
         {
             "area": "Goldenrod Gym",
             "name": "lass-carrie",
+            "split": "whitney",
             "team": [
                 {
                     "item": "berserk-gene",
@@ -44604,6 +44667,7 @@
             "area": "Goldenrod Gym",
             "b2b": true,
             "name": "lass-bridget",
+            "split": "whitney",
             "team": [
                 {
                     "item": "berry-juice",
@@ -44654,6 +44718,7 @@
         {
             "area": "Goldenrod Gym",
             "name": "leader-whitney",
+            "split": "whitney",
             "team": [
                 {
                     "item": "berry-juice",
@@ -44733,6 +44798,7 @@
         {
             "area": "Route 35",
             "name": "camper-elliot",
+            "split": "morty",
             "team": [
                 {
                     "item": "berry-juice",
@@ -44772,6 +44838,7 @@
             "area": "Route 35",
             "b2b": true,
             "name": "picnicker-kim",
+            "split": "morty",
             "team": [
                 {
                     "dvs": {
@@ -44819,6 +44886,7 @@
         {
             "area": "Route 35",
             "name": "picnicker-brooke",
+            "split": "morty",
             "team": [
                 {
                     "item": "pink-bow",
@@ -44865,6 +44933,7 @@
         {
             "area": "Route 35",
             "name": "firebreather-walt",
+            "split": "morty",
             "team": [
                 {
                     "item": "focus-band",
@@ -44904,6 +44973,7 @@
         {
             "area": "Route 35",
             "name": "camper-ivan",
+            "split": "morty",
             "team": [
                 {
                     "item": "nevermeltice",
@@ -44943,6 +45013,7 @@
             "area": "Route 35",
             "b2b": true,
             "name": "bird-keeper-bryan",
+            "split": "morty",
             "team": [
                 {
                     "item": "berry-juice",
@@ -44982,6 +45053,7 @@
         {
             "area": "Route 35",
             "name": "bug-catcher-arnie",
+            "split": "morty",
             "team": [
                 {
                     "item": "poison-barb",
@@ -45007,6 +45079,7 @@
             "area": "Route 35",
             "b2b": true,
             "name": "officer-dirk",
+            "split": "morty",
             "team": [
                 {
                     "item": "miracleberry",
@@ -45046,6 +45119,7 @@
         {
             "area": "Route 35",
             "name": "juggler-irwin",
+            "split": "morty",
             "team": [
                 {
                     "item": "hard-stone",
@@ -45084,6 +45158,7 @@
         {
             "area": "National park",
             "name": "pokefanf-beverly",
+            "split": "morty",
             "team": [
                 {
                     "item": "miracleberry",
@@ -45122,6 +45197,7 @@
         {
             "area": "National park",
             "name": "schoolboy-jack",
+            "split": "morty",
             "team": [
                 {
                     "item": "berry-juice",
@@ -45161,6 +45237,7 @@
         {
             "area": "National park",
             "name": "lass-krise",
+            "split": "morty",
             "team": [
                 {
                     "item": "berry-juice",
@@ -45200,6 +45277,7 @@
         {
             "area": "National park",
             "name": "pokefanm-william",
+            "split": "morty",
             "team": [
                 {
                     "item": "berry-juice",
@@ -45249,6 +45327,7 @@
         {
             "area": "Route 36",
             "name": "schoolboy-alan",
+            "split": "morty",
             "team": [
                 {
                     "item": "berry-juice",
@@ -45287,6 +45366,7 @@
         {
             "area": "Route 36",
             "name": "psychic-mark",
+            "split": "morty",
             "team": [
                 {
                     "item": "miracleberry",
@@ -45326,6 +45406,7 @@
         {
             "area": "Route 37",
             "name": "twins-ann-&-anne",
+            "split": "morty",
             "team": [
                 {
                     "item": "berry-juice",
@@ -45354,6 +45435,7 @@
         {
             "area": "Route 37",
             "name": "psychic-greg",
+            "split": "morty",
             "team": [
                 {
                     "item": "berry-juice",
@@ -45392,6 +45474,7 @@
         {
             "area": "Burned Tower",
             "name": "rival1-7",
+            "split": "morty",
             "team": [
                 {
                     "dvs": {
@@ -45478,6 +45561,7 @@
         {
             "area": "Burned Tower",
             "name": "rival1-8",
+            "split": "morty",
             "team": [
                 {
                     "item": "miracleberry",
@@ -45555,6 +45639,7 @@
         {
             "area": "Burned Tower",
             "name": "rival1-9",
+            "split": "morty",
             "team": [
                 {
                     "item": "berry-juice",
@@ -45631,6 +45716,7 @@
         {
             "area": "Ecruteak City",
             "name": "kimono-girl-naoko",
+            "split": "morty",
             "team": [
                 {
                     "dvs": {
@@ -45655,6 +45741,7 @@
         {
             "area": "Ecruteak City",
             "name": "kimono-girl-sayo",
+            "split": "morty",
             "team": [
                 {
                     "item": "miracleberry",
@@ -45672,6 +45759,7 @@
         {
             "area": "Ecruteak City",
             "name": "kimono-girl-zuki",
+            "split": "morty",
             "team": [
                 {
                     "dvs": {
@@ -45697,6 +45785,7 @@
         {
             "area": "Ecruteak City",
             "name": "kimono-girl-kuni",
+            "split": "morty",
             "team": [
                 {
                     "item": "miracleberry",
@@ -45714,6 +45803,7 @@
         {
             "area": "Ecruteak City",
             "name": "kimono-girl-miki",
+            "split": "morty",
             "team": [
                 {
                     "item": "miracleberry",
@@ -45731,6 +45821,7 @@
         {
             "area": "Ecruteak City Gym",
             "name": "sage-ping",
+            "split": "morty",
             "team": [
                 {
                     "dvs": {
@@ -45799,6 +45890,7 @@
         {
             "area": "Ecruteak City Gym",
             "name": "medium-martha",
+            "split": "morty",
             "team": [
                 {
                     "item": "leftovers",
@@ -45839,6 +45931,7 @@
             "area": "Ecruteak City Gym",
             "b2b": true,
             "name": "medium-grace",
+            "split": "morty",
             "team": [
                 {
                     "item": "charcoal",
@@ -45878,6 +45971,7 @@
         {
             "area": "Ecruteak City Gym",
             "name": "sage-jeffrey",
+            "split": "morty",
             "team": [
                 {
                     "item": "focus-band",
@@ -45916,6 +46010,7 @@
         {
             "area": "Ecruteak City Gym",
             "name": "leader-morty",
+            "split": "morty",
             "team": [
                 {
                     "item": "gold-berry",
@@ -45988,6 +46083,7 @@
         {
             "area": "Route 38 (gauntlet)",
             "name": "sailor-harry",
+            "split": "chuck",
             "team": [
                 {
                     "item": "berserk-gene",
@@ -46016,6 +46112,7 @@
         {
             "area": "Route 38 (gauntlet)",
             "name": "beauty-olivia",
+            "split": "chuck",
             "team": [
                 {
                     "item": "leftovers",
@@ -46044,6 +46141,7 @@
         {
             "area": "Route 38 (gauntlet)",
             "name": "lass-dana",
+            "split": "chuck",
             "team": [
                 {
                     "item": "focus-band",
@@ -46093,6 +46191,7 @@
         {
             "area": "Route 38 (gauntlet)",
             "name": "beauty-valerie",
+            "split": "chuck",
             "team": [
                 {
                     "item": "no-item",
@@ -46151,6 +46250,7 @@
             "area": "Route 38 (gauntlet)",
             "meta": "you can leave after this fight one time",
             "name": "bird-keeper-toby",
+            "split": "chuck",
             "team": [
                 {
                     "item": "quick-claw",
@@ -46197,6 +46297,7 @@
         {
             "area": "Route 38 (gauntlet)",
             "name": "schoolboy-chad",
+            "split": "chuck",
             "team": [
                 {
                     "item": "quick-claw",
@@ -46225,6 +46326,7 @@
         {
             "area": "Route 39",
             "name": "pokefanf-jaime",
+            "split": "chuck",
             "team": [
                 {
                     "item": "miracleberry",
@@ -46242,6 +46344,7 @@
         {
             "area": "Route 39",
             "name": "pokefanm-derek",
+            "split": "chuck",
             "team": [
                 {
                     "item": "light-ball",
@@ -46259,6 +46362,7 @@
         {
             "area": "Route 39",
             "name": "psychic-norman",
+            "split": "chuck",
             "team": [
                 {
                     "item": "miracle-seed",
@@ -46307,6 +46411,7 @@
         {
             "area": "Route 39",
             "name": "pokefanf-ruth",
+            "split": "chuck",
             "team": [
                 {
                     "item": "leftovers",
@@ -46325,6 +46430,7 @@
             "area": "Route 39",
             "meta": "end of gauntlet",
             "name": "sailor-eugene",
+            "split": "chuck",
             "team": [
                 {
                     "item": "berserk-gene",
@@ -46364,6 +46470,7 @@
         {
             "area": "Route 40",
             "name": "swimmerm-simon",
+            "split": "chuck",
             "team": [
                 {
                     "item": "silverpowder",
@@ -46389,6 +46496,7 @@
             "area": "Route 40",
             "b2b": true,
             "name": "swimmerf-paula",
+            "split": "chuck",
             "team": [
                 {
                     "item": "leftovers",
@@ -46426,6 +46534,7 @@
         {
             "area": "Route 40",
             "name": "swimmerm-randall",
+            "split": "chuck",
             "team": [
                 {
                     "item": "pink-bow",
@@ -46463,6 +46572,7 @@
             "area": "Route 40",
             "b2b": true,
             "name": "swimmerf-elaine",
+            "split": "chuck",
             "team": [
                 {
                     "item": "twistedspoon",
@@ -46490,6 +46600,7 @@
         {
             "area": "Route 41",
             "name": "swimmerm-charlie",
+            "split": "chuck",
             "team": [
                 {
                     "item": "quick-claw",
@@ -46529,6 +46640,7 @@
             "area": "Route 41",
             "b2b": true,
             "name": "swimmerm-kirk",
+            "split": "chuck",
             "team": [
                 {
                     "item": "quick-claw",
@@ -46568,6 +46680,7 @@
         {
             "area": "Route 41",
             "name": "swimmerf-kaylee",
+            "split": "chuck",
             "team": [
                 {
                     "item": "leftovers",
@@ -46608,6 +46721,7 @@
             "area": "Route 41",
             "b2b": true,
             "name": "swimmerf-kara",
+            "split": "chuck",
             "team": [
                 {
                     "item": "miracleberry",
@@ -46645,6 +46759,7 @@
         {
             "area": "Route 41",
             "name": "swimmerm-berke",
+            "split": "chuck",
             "team": [
                 {
                     "item": "miracleberry",
@@ -46677,6 +46792,7 @@
         {
             "area": "Route 41",
             "name": "swimmerm-george",
+            "split": "chuck",
             "team": [
                 {
                     "item": "quick-claw",
@@ -46749,6 +46865,7 @@
             "area": "Route 41",
             "meta": "(left trainer)",
             "name": "swimmerm-mathew",
+            "split": "chuck",
             "team": [
                 {
                     "item": "leftovers",
@@ -46767,6 +46884,7 @@
             "b2b": true,
             "meta": "(right trainer)",
             "name": "swimmerf-denise",
+            "split": "chuck",
             "team": [
                 {
                     "item": "leftovers",
@@ -46824,6 +46942,7 @@
         {
             "area": "Route 41",
             "name": "swimmerf-wendy",
+            "split": "chuck",
             "team": [
                 {
                     "item": "quick-claw",
@@ -46892,6 +47011,7 @@
         {
             "area": "Cianwood city",
             "name": "mysticalman-eusine",
+            "split": "chuck",
             "team": [
                 {
                     "item": "brightpowder",
@@ -46973,6 +47093,7 @@
             "area": "Cianwood city gym",
             "meta": "gauntlet",
             "name": "blackbelt-yoshi",
+            "split": "chuck",
             "team": [
                 {
                     "item": "quick-claw",
@@ -47012,6 +47133,7 @@
             "area": "Cianwood city gym",
             "b2b": true,
             "name": "blackbelt-lao",
+            "split": "chuck",
             "team": [
                 {
                     "item": "blackbelt",
@@ -47051,6 +47173,7 @@
         {
             "area": "Cianwood city gym",
             "name": "blackbelt-nob",
+            "split": "chuck",
             "team": [
                 {
                     "item": "quick-claw",
@@ -47097,6 +47220,7 @@
             "b2b": true,
             "meta": "end of gauntlet",
             "name": "blackbelt-lung",
+            "split": "chuck",
             "team": [
                 {
                     "dvs": {
@@ -47143,6 +47267,7 @@
         {
             "area": "Cianwood city gym",
             "name": "leader-chuck",
+            "split": "chuck",
             "team": [
                 {
                     "item": "nevermeltice",
@@ -47216,6 +47341,7 @@
             "area": "Mt. Mortar",
             "meta": "(gives you tyrogue)",
             "name": "blackbelt-kiyo",
+            "split": "pryce",
             "team": [
                 {
                     "item": "miracleberry",
@@ -47244,6 +47370,7 @@
         {
             "area": "Mt. Mortar",
             "name": "pokemaniac-miller",
+            "split": "pryce",
             "team": [
                 {
                     "item": "quick-claw",
@@ -47283,6 +47410,7 @@
         {
             "area": "Mt. Mortar",
             "name": "super-nerd-markus",
+            "split": "pryce",
             "team": [
                 {
                     "dvs": {
@@ -47327,6 +47455,7 @@
         {
             "area": "Mt. Mortar",
             "name": "super-nerd-hugh",
+            "split": "pryce",
             "team": [
                 {
                     "item": "miracleberry",
@@ -47372,6 +47501,7 @@
         {
             "area": "Route 42",
             "name": "hiker-benjamin",
+            "split": "pryce",
             "team": [
                 {
                     "item": "quick-claw",
@@ -47418,6 +47548,7 @@
         {
             "area": "Route 42",
             "name": "pokemaniac-shane",
+            "split": "pryce",
             "team": [
                 {
                     "item": "quick-claw",
@@ -47457,6 +47588,7 @@
         {
             "area": "Route 42",
             "name": "fisher-tully",
+            "split": "pryce",
             "team": [
                 {
                     "item": "berserk-gene",
@@ -47472,6 +47604,7 @@
             "area": "Route 43",
             "meta": "(right trainer)",
             "name": "pokemaniac-ben",
+            "split": "pryce",
             "team": [
                 {
                     "dvs": {
@@ -47510,6 +47643,7 @@
             "b2b": true,
             "meta": "(left trainer)",
             "name": "pokemaniac-brent",
+            "split": "pryce",
             "team": [
                 {
                     "item": "leftovers",
@@ -47545,6 +47679,7 @@
         {
             "area": "Route 43",
             "name": "pokemaniac-ron",
+            "split": "pryce",
             "team": [
                 {
                     "item": "miracleberry",
@@ -47572,6 +47707,7 @@
         {
             "area": "Route 43",
             "name": "fisher-marvin",
+            "split": "pryce",
             "team": [
                 {
                     "item": "miracleberry",
@@ -47621,6 +47757,7 @@
         {
             "area": "Route 43",
             "name": "picnicker-tiffany",
+            "split": "pryce",
             "team": [
                 {
                     "item": "leftovers",
@@ -47657,6 +47794,7 @@
         {
             "area": "Route 43",
             "name": "camper-spencer",
+            "split": "pryce",
             "team": [
                 {
                     "item": "miracle-seed",
@@ -47698,6 +47836,7 @@
         {
             "area": "Lake of Rage",
             "name": "fisher-andre",
+            "split": "pryce",
             "team": [
                 {
                     "dvs": {
@@ -47734,6 +47873,7 @@
             "area": "Lake of Rage",
             "b2b": true,
             "name": "fisher-raymond",
+            "split": "pryce",
             "team": [
                 {
                     "item": "leftovers",
@@ -47774,6 +47914,7 @@
             "area": "Lake of Rage",
             "b2b": true,
             "name": "cooltrainerm-aaron",
+            "split": "pryce",
             "team": [
                 {
                     "item": "leftovers",
@@ -47813,6 +47954,7 @@
         {
             "area": "Lake of Rage",
             "name": "cooltrainerf-lois",
+            "split": "pryce",
             "team": [
                 {
                     "item": "miracleberry",
@@ -47892,6 +48034,7 @@
         {
             "area": "Rocket Hideout",
             "name": "gruntm-16",
+            "split": "pryce",
             "team": [
                 {
                     "item": "hard-stone",
@@ -47958,6 +48101,7 @@
         {
             "area": "Rocket Hideout",
             "name": "gruntm-20",
+            "split": "pryce",
             "team": [
                 {
                     "dvs": {
@@ -47993,6 +48137,7 @@
             "area": "Rocket Hideout",
             "b2b": true,
             "name": "gruntm-21",
+            "split": "pryce",
             "team": [
                 {
                     "item": "quick-claw",
@@ -48038,6 +48183,7 @@
         {
             "area": "Rocket Hideout",
             "name": "scientist-jed",
+            "split": "pryce",
             "team": [
                 {
                     "dvs": {
@@ -48085,6 +48231,7 @@
         {
             "area": "Rocket Hideout",
             "name": "gruntm-19",
+            "split": "pryce",
             "team": [
                 {
                     "item": "pink-bow",
@@ -48124,6 +48271,7 @@
         {
             "area": "Rocket Hideout",
             "name": "gruntm-17",
+            "split": "pryce",
             "team": [
                 {
                     "dvs": {
@@ -48178,6 +48326,7 @@
         {
             "area": "Rocket Hideout",
             "name": "scientist-mitch",
+            "split": "pryce",
             "team": [
                 {
                     "item": "leftovers",
@@ -48208,6 +48357,7 @@
         {
             "area": "Rocket Hideout",
             "name": "gruntm-28",
+            "split": "pryce",
             "team": [
                 {
                     "dvs": {
@@ -48261,6 +48411,7 @@
         {
             "area": "Rocket Hideout",
             "name": "gruntf-5",
+            "split": "pryce",
             "team": [
                 {
                     "dvs": {
@@ -48308,6 +48459,7 @@
         {
             "area": "Rocket Hideout",
             "name": "gruntm-18",
+            "split": "pryce",
             "team": [
                 {
                     "item": "miracleberry",
@@ -48346,6 +48498,7 @@
         {
             "area": "Rocket Hideout",
             "name": "scientist-ross",
+            "split": "pryce",
             "team": [
                 {
                     "item": "focus-band",
@@ -48385,6 +48538,7 @@
         {
             "area": "Rocket Hideout",
             "name": "executivem-4",
+            "split": "pryce",
             "team": [
                 {
                     "item": "miracleberry",
@@ -48465,6 +48619,7 @@
         {
             "area": "Rocket Hideout",
             "name": "executivef-2",
+            "split": "pryce",
             "team": [
                 {
                     "item": "quick-claw",
@@ -48553,6 +48708,7 @@
         {
             "area": "Mahogany town gym",
             "name": "skier-clarissa",
+            "split": "pryce",
             "team": [
                 {
                     "item": "miracleberry",
@@ -48602,6 +48758,7 @@
         {
             "area": "Mahogany town gym",
             "name": "boarder-ronald",
+            "split": "pryce",
             "team": [
                 {
                     "item": "miracleberry",
@@ -48651,6 +48808,7 @@
         {
             "area": "Mahogany town gym",
             "name": "boarder-douglas",
+            "split": "pryce",
             "team": [
                 {
                     "item": "miracleberry",
@@ -48717,6 +48875,7 @@
         {
             "area": "Mahogany town gym",
             "name": "leader-pryce",
+            "split": "pryce",
             "team": [
                 {
                     "item": "nevermeltice",
@@ -48805,6 +48964,7 @@
         {
             "area": "Olivine Lighthouse",
             "name": "sailor-huey",
+            "split": "jasmine",
             "team": [
                 {
                     "item": "miracleberry",
@@ -48864,6 +49024,7 @@
             "area": "Olivine Lighthouse",
             "b2b": true,
             "name": "gentleman-alfred",
+            "split": "jasmine",
             "team": [
                 {
                     "item": "miracleberry",
@@ -48911,6 +49072,7 @@
         {
             "area": "Olivine Lighthouse",
             "name": "gentleman-preston",
+            "split": "jasmine",
             "team": [
                 {
                     "item": "miracleberry",
@@ -48939,6 +49101,7 @@
             "area": "Olivine Lighthouse",
             "b2b": true,
             "name": "bird-keeper-theo",
+            "split": "jasmine",
             "team": [
                 {
                     "item": "miracleberry",
@@ -49015,6 +49178,7 @@
         {
             "area": "Olivine Lighthouse",
             "name": "bird-keeper-denis",
+            "split": "jasmine",
             "team": [
                 {
                     "dvs": {
@@ -49062,6 +49226,7 @@
         {
             "area": "Olivine Lighthouse",
             "name": "lass-connie",
+            "split": "jasmine",
             "team": [
                 {
                     "item": "miracleberry",
@@ -49090,6 +49255,7 @@
         {
             "area": "Olivine Lighthouse",
             "name": "sailor-terrell",
+            "split": "jasmine",
             "team": [
                 {
                     "item": "miracleberry",
@@ -49117,6 +49283,7 @@
             "area": "Olivine Lighthouse",
             "meta": "cant leave after Terrell",
             "name": "sailor-ernest",
+            "split": "jasmine",
             "team": [
                 {
                     "item": "miracleberry",
@@ -49167,6 +49334,7 @@
         {
             "area": "Olivine city gym",
             "name": "leader-jasmine",
+            "split": "jasmine",
             "team": [
                 {
                     "dvs": {
@@ -49255,6 +49423,7 @@
         {
             "area": "Radio Tower",
             "name": "gruntm-3",
+            "split": "clair",
             "team": [
                 {
                     "item": "leftovers",
@@ -49320,6 +49489,7 @@
         {
             "area": "Radio Tower",
             "name": "gruntm-6",
+            "split": "clair",
             "team": [
                 {
                     "item": "miracleberry",
@@ -49384,6 +49554,7 @@
             "area": "Radio Tower",
             "b2b": true,
             "name": "gruntf-2",
+            "split": "clair",
             "team": [
                 {
                     "dvs": {
@@ -49431,6 +49602,7 @@
         {
             "area": "Radio Tower",
             "name": "gruntm-4",
+            "split": "clair",
             "team": [
                 {
                     "dvs": {
@@ -49489,6 +49661,7 @@
         {
             "area": "Radio Tower",
             "name": "gruntm-7",
+            "split": "clair",
             "team": [
                 {
                     "dvs": {
@@ -49564,6 +49737,7 @@
             "area": "Radio Tower",
             "b2b": true,
             "name": "gruntm-8",
+            "split": "clair",
             "team": [
                 {
                     "item": "pink-bow",
@@ -49603,6 +49777,7 @@
         {
             "area": "Radio Tower",
             "name": "gruntm-10",
+            "split": "clair",
             "team": [
                 {
                     "item": "miracleberry",
@@ -49654,6 +49829,7 @@
             "area": "Radio Tower",
             "b2b": true,
             "name": "scientist-rich",
+            "split": "clair",
             "team": [
                 {
                     "dvs": {
@@ -49711,6 +49887,7 @@
         {
             "area": "Radio Tower",
             "name": "executivem-3",
+            "split": "clair",
             "team": [
                 {
                     "dvs": {
@@ -49791,6 +49968,7 @@
         {
             "area": "Radio Tower",
             "name": "gruntm-13",
+            "split": "clair",
             "team": [
                 {
                     "item": "quick-claw",
@@ -49850,6 +50028,7 @@
             "area": "Radio Tower",
             "b2b": true,
             "name": "gruntm-11",
+            "split": "clair",
             "team": [
                 {
                     "item": "miracleberry",
@@ -49897,6 +50076,7 @@
         {
             "area": "Radio Tower",
             "name": "burglar-duncan",
+            "split": "clair",
             "team": [
                 {
                     "item": "miracleberry",
@@ -49964,6 +50144,7 @@
             "area": "Radio Tower",
             "b2b": true,
             "name": "burglar-eddie",
+            "split": "clair",
             "team": [
                 {
                     "dvs": {
@@ -50022,6 +50203,7 @@
         {
             "area": "Radio Tower",
             "name": "rival1-10",
+            "split": "clair",
             "team": [
                 {
                     "dvs": {
@@ -50118,6 +50300,7 @@
         {
             "area": "Radio Tower",
             "name": "rival1-11",
+            "split": "clair",
             "team": [
                 {
                     "dvs": {
@@ -50198,6 +50381,7 @@
         {
             "area": "Radio Tower",
             "name": "rival1-12",
+            "split": "clair",
             "team": [
                 {
                     "dvs": {
@@ -50294,6 +50478,7 @@
         {
             "area": "Radio Tower",
             "name": "gruntm-24",
+            "split": "clair",
             "team": [
                 {
                     "dvs": {
@@ -50353,6 +50538,7 @@
             "area": "Radio Tower",
             "b2b": true,
             "name": "gruntm-14",
+            "split": "clair",
             "team": [
                 {
                     "item": "leftovers",
@@ -50390,6 +50576,7 @@
             "area": "Radio Tower",
             "b2b": true,
             "name": "gruntm-15",
+            "split": "clair",
             "team": [
                 {
                     "item": "charcoal",
@@ -50437,6 +50624,7 @@
         {
             "area": "Radio Tower",
             "name": "scientist-marc",
+            "split": "clair",
             "team": [
                 {
                     "item": "miracleberry",
@@ -50522,6 +50710,7 @@
         {
             "area": "Radio Tower",
             "name": "gruntf-4",
+            "split": "clair",
             "team": [
                 {
                     "item": "leftovers",
@@ -50583,6 +50772,7 @@
         {
             "area": "Radio Tower",
             "name": "executivem-2",
+            "split": "clair",
             "team": [
                 {
                     "item": "miracleberry",
@@ -50671,6 +50861,7 @@
         {
             "area": "Radio Tower",
             "name": "executivef-1",
+            "split": "clair",
             "team": [
                 {
                     "dvs": {
@@ -50751,6 +50942,7 @@
         {
             "area": "Radio Tower",
             "name": "executivem-1",
+            "split": "clair",
             "team": [
                 {
                     "item": "miracleberry",
@@ -50831,6 +51023,7 @@
         {
             "area": "Radio Tower",
             "name": "sage-gaku",
+            "split": "clair",
             "team": [
                 {
                     "item": "nevermeltice",
@@ -50848,6 +51041,7 @@
         {
             "area": "Radio Tower",
             "name": "sage-masa",
+            "split": "clair",
             "team": [
                 {
                     "item": "blackglasses",
@@ -50865,6 +51059,7 @@
         {
             "area": "Radio Tower",
             "name": "sage-koji",
+            "split": "clair",
             "team": [
                 {
                     "dvs": {
@@ -50890,6 +51085,7 @@
         {
             "area": "Route 44",
             "name": "fisher-wilton",
+            "split": "clair",
             "team": [
                 {
                     "item": "leftovers",
@@ -50948,6 +51144,7 @@
         {
             "area": "Route 44",
             "name": "psychic-phil",
+            "split": "clair",
             "team": [
                 {
                     "item": "twistedspoon",
@@ -51036,6 +51233,7 @@
         {
             "area": "Route 44",
             "name": "bird-keeper-vance",
+            "split": "clair",
             "team": [
                 {
                     "dvs": {
@@ -51093,6 +51291,7 @@
         {
             "area": "Route 44",
             "name": "fisher-edgar",
+            "split": "clair",
             "team": [
                 {
                     "item": "focus-band",
@@ -51151,6 +51350,7 @@
         {
             "area": "Route 44",
             "name": "cooltrainerm-allen",
+            "split": "clair",
             "team": [
                 {
                     "dvs": {
@@ -51207,6 +51407,7 @@
             "area": "Route 44",
             "b2b": true,
             "name": "cooltrainerf-cybil",
+            "split": "clair",
             "team": [
                 {
                     "dvs": {
@@ -51284,6 +51485,7 @@
         {
             "area": "Blackthorn city gym",
             "name": "cooltrainerm-mike",
+            "split": "clair",
             "team": [
                 {
                     "dvs": {
@@ -51332,6 +51534,7 @@
             "area": "Blackthorn city gym",
             "b2b": true,
             "name": "cooltrainerm-paul",
+            "split": "clair",
             "team": [
                 {
                     "item": "miracleberry",
@@ -51387,6 +51590,7 @@
         {
             "area": "Blackthorn city gym",
             "name": "cooltrainerf-fran",
+            "split": "clair",
             "team": [
                 {
                     "item": "leftovers",
@@ -51445,6 +51649,7 @@
         {
             "area": "Blackthorn city gym",
             "name": "leader-clair",
+            "split": "clair",
             "team": [
                 {
                     "item": "leftovers",
@@ -51541,6 +51746,7 @@
         {
             "area": "Route 45",
             "name": "hiker-erik",
+            "split": "e4r1",
             "team": [
                 {
                     "item": "leftovers",
@@ -51599,6 +51805,7 @@
         {
             "area": "Route 45",
             "name": "hiker-parry",
+            "split": "e4r1",
             "team": [
                 {
                     "dvs": {
@@ -51665,6 +51872,7 @@
             "area": "Route 45",
             "b2b": true,
             "name": "blackbelt-kenji",
+            "split": "e4r1",
             "team": [
                 {
                     "dvs": {
@@ -51712,6 +51920,7 @@
         {
             "area": "Route 45",
             "name": "camper-quentin",
+            "split": "e4r1",
             "team": [
                 {
                     "item": "miracleberry",
@@ -51786,6 +51995,7 @@
         {
             "area": "Route 46",
             "name": "picnicker-erin",
+            "split": "e4r1",
             "team": [
                 {
                     "item": "miracleberry",
@@ -51863,6 +52073,7 @@
         {
             "area": "Dark Cave",
             "name": "hiker-michael",
+            "split": "e4r1",
             "team": [
                 {
                     "dvs": {
@@ -51938,6 +52149,7 @@
             "area": "Dark Cave",
             "b2b": true,
             "name": "cooltrainerf-kelly",
+            "split": "e4r1",
             "team": [
                 {
                     "dvs": {
@@ -52003,6 +52215,7 @@
         {
             "area": "Dark Cave",
             "name": "cooltrainerm-ryan",
+            "split": "e4r1",
             "team": [
                 {
                     "dvs": {
@@ -52083,6 +52296,7 @@
         {
             "area": "Dragon’s den",
             "name": "cooltrainerm-darin",
+            "split": "e4r1",
             "team": [
                 {
                     "dvs": {
@@ -52146,6 +52360,7 @@
         {
             "area": "Dragon’s den",
             "name": "cooltrainerf-cara",
+            "split": "e4r1",
             "team": [
                 {
                     "item": "leftovers",
@@ -52226,6 +52441,7 @@
         {
             "area": "Dragon’s den",
             "name": "twins-lea-&-pia",
+            "split": "e4r1",
             "team": [
                 {
                     "item": "dragon-fang",
@@ -52254,6 +52470,7 @@
         {
             "area": "Route 27",
             "name": "cooltrainerf-megan",
+            "split": "e4r1",
             "team": [
                 {
                     "item": "leftovers",
@@ -52324,6 +52541,7 @@
             "area": "Route 27",
             "b2b": true,
             "name": "bird-keeper-jose",
+            "split": "e4r1",
             "team": [
                 {
                     "dvs": {
@@ -52349,6 +52567,7 @@
         {
             "area": "Route 27",
             "name": "cooltrainerm-blake",
+            "split": "e4r1",
             "team": [
                 {
                     "item": "quick-claw",
@@ -52408,6 +52627,7 @@
             "area": "Route 27",
             "b2b": true,
             "name": "cooltrainerf-reena",
+            "split": "e4r1",
             "team": [
                 {
                     "item": "leftovers",
@@ -52482,6 +52702,7 @@
         {
             "area": "Route 27",
             "name": "cooltrainerm-brian",
+            "split": "e4r1",
             "team": [
                 {
                     "item": "miracleberry",
@@ -52533,6 +52754,7 @@
             "area": "Route 27",
             "b2b": true,
             "name": "psychic-gilbert",
+            "split": "e4r1",
             "team": [
                 {
                     "item": "miracleberry",
@@ -52591,6 +52813,7 @@
         {
             "area": "Route 26",
             "name": "cooltrainerm-jake",
+            "split": "e4r1",
             "team": [
                 {
                     "item": "leftovers",
@@ -52688,6 +52911,7 @@
             "area": "Route 26",
             "b2b": true,
             "name": "fisher-scott",
+            "split": "e4r1",
             "team": [
                 {
                     "item": "pink-bow",
@@ -52728,6 +52952,7 @@
             "area": "Route 26",
             "meta": "(talk to her from the back?)",
             "name": "cooltrainerf-joyce",
+            "split": "e4r1",
             "team": [
                 {
                     "item": "focus-band",
@@ -52832,6 +53057,7 @@
         {
             "area": "Route 26",
             "name": "cooltrainerm-gaven",
+            "split": "e4r1",
             "team": [
                 {
                     "dvs": {
@@ -52937,6 +53163,7 @@
             "area": "Route 26",
             "b2b": true,
             "name": "cooltrainerf-beth",
+            "split": "e4r1",
             "team": [
                 {
                     "dvs": {
@@ -52984,6 +53211,7 @@
         {
             "area": "Victoary road",
             "name": "rival1-13",
+            "split": "e4r1",
             "team": [
                 {
                     "dvs": {
@@ -53071,6 +53299,7 @@
         {
             "area": "Victoary road",
             "name": "rival1-14",
+            "split": "e4r1",
             "team": [
                 {
                     "dvs": {
@@ -53158,6 +53387,7 @@
         {
             "area": "Victoary road",
             "name": "rival1-15",
+            "split": "e4r1",
             "team": [
                 {
                     "dvs": {
@@ -53245,6 +53475,7 @@
         {
             "area": "Elite 4",
             "name": "elite-four-will-1",
+            "split": "e4r1",
             "team": [
                 {
                     "dvs": {
@@ -53333,6 +53564,7 @@
         {
             "area": "Elite 4",
             "name": "elite-four-koga-1",
+            "split": "e4r1",
             "team": [
                 {
                     "dvs": {
@@ -53437,6 +53669,7 @@
         {
             "area": "Elite 4",
             "name": "elite-four-bruno-1",
+            "split": "e4r1",
             "team": [
                 {
                     "dvs": {
@@ -53516,6 +53749,7 @@
         {
             "area": "Elite 4",
             "name": "elite-four-karen-1",
+            "split": "e4r1",
             "team": [
                 {
                     "dvs": {
@@ -53604,6 +53838,7 @@
         {
             "area": "Elite 4",
             "name": "champion-lance",
+            "split": "e4r1",
             "team": [
                 {
                     "item": "leftovers",
@@ -53685,6 +53920,7 @@
             "area": "S. S. Anne",
             "meta": "gauntlet",
             "name": "firebreather-lyle",
+            "split": "surge",
             "team": [
                 {
                     "item": "leftovers",
@@ -53732,6 +53968,7 @@
         {
             "area": "S. S. Anne",
             "name": "sailor-stanly",
+            "split": "surge",
             "team": [
                 {
                     "item": "quick-claw",
@@ -53782,6 +54019,7 @@
         {
             "area": "S. S. Anne",
             "name": "juggler-fritz",
+            "split": "surge",
             "team": [
                 {
                     "dvs": {
@@ -53840,6 +54078,7 @@
         {
             "area": "S. S. Anne",
             "name": "sailor-jeff",
+            "split": "surge",
             "team": [
                 {
                     "item": "pink-bow",
@@ -53890,6 +54129,7 @@
         {
             "area": "S. S. Anne",
             "name": "pokefanm-colin",
+            "split": "surge",
             "team": [
                 {
                     "dvs": {
@@ -53945,6 +54185,7 @@
         {
             "area": "S. S. Anne",
             "name": "twins-meg-&-peg",
+            "split": "surge",
             "team": [
                 {
                     "item": "focus-band",
@@ -54014,6 +54255,7 @@
         {
             "area": "Vermilion City Gym",
             "name": "gentleman-gregory",
+            "split": "surge",
             "team": [
                 {
                     "dvs": {
@@ -54070,6 +54312,7 @@
             "area": "Vermilion City Gym",
             "b2b": true,
             "name": "juggler-horton",
+            "split": "surge",
             "team": [
                 {
                     "dvs": {
@@ -54128,6 +54371,7 @@
         {
             "area": "Vermilion City Gym",
             "name": "guitarist-vincent",
+            "split": "surge",
             "team": [
                 {
                     "item": "gold-berry",
@@ -54202,6 +54446,7 @@
         {
             "area": "Vermilion City Gym",
             "name": "leader-lt.surge",
+            "split": "surge",
             "team": [
                 {
                     "item": "focus-band",
@@ -54298,6 +54543,7 @@
         {
             "area": "Route 6",
             "name": "pokefanm-rex",
+            "split": "sabrina",
             "team": [
                 {
                     "item": "quick-claw",
@@ -54346,6 +54592,7 @@
             "area": "Route 6",
             "b2b": true,
             "name": "pokefanm-allan",
+            "split": "sabrina",
             "team": [
                 {
                     "dvs": {
@@ -54419,6 +54666,7 @@
         {
             "area": "Saffron City Gym",
             "name": "medium-doris",
+            "split": "sabrina",
             "team": [
                 {
                     "item": "focus-band",
@@ -54477,6 +54725,7 @@
         {
             "area": "Saffron City Gym",
             "name": "psychic-jared",
+            "split": "sabrina",
             "team": [
                 {
                     "item": "miracleberry",
@@ -54527,6 +54776,7 @@
         {
             "area": "Saffron City Gym",
             "name": "medium-rebecca",
+            "split": "sabrina",
             "team": [
                 {
                     "dvs": {
@@ -54586,6 +54836,7 @@
             "area": "Saffron City Gym",
             "b2b": true,
             "name": "psychic-franklin",
+            "split": "sabrina",
             "team": [
                 {
                     "item": "pink-bow",
@@ -54644,6 +54895,7 @@
         {
             "area": "Saffron City Gym",
             "name": "leader-sabrina",
+            "split": "sabrina",
             "team": [
                 {
                     "item": "miracleberry",
@@ -54740,6 +54992,7 @@
         {
             "area": "Route 8",
             "name": "biker-dwayne",
+            "split": "janine",
             "team": [
                 {
                     "item": "soft-sand",
@@ -54799,6 +55052,7 @@
             "area": "Route 8",
             "b2b": true,
             "name": "biker-harris",
+            "split": "janine",
             "team": [
                 {
                     "item": "poison-barb",
@@ -54849,6 +55103,7 @@
         {
             "area": "Route 8",
             "name": "super-nerd-sam",
+            "split": "janine",
             "team": [
                 {
                     "dvs": {
@@ -54916,6 +55171,7 @@
             "area": "Route 8",
             "b2b": true,
             "name": "super-nerd-tom",
+            "split": "janine",
             "team": [
                 {
                     "item": "quick-claw",
@@ -54956,6 +55212,7 @@
             "area": "Route 12",
             "meta": "(gauntlet)",
             "name": "fisher-stephen",
+            "split": "janine",
             "team": [
                 {
                     "item": "quick-claw",
@@ -55007,6 +55264,7 @@
             "area": "Route 12",
             "b2b": true,
             "name": "fisher-kyle",
+            "split": "janine",
             "team": [
                 {
                     "item": "leftovers",
@@ -55057,6 +55315,7 @@
         {
             "area": "Route 12",
             "name": "fisher-martin",
+            "split": "janine",
             "team": [
                 {
                     "item": "leftovers",
@@ -55107,6 +55366,7 @@
         {
             "area": "Route 13",
             "name": "bird-keeper-perry",
+            "split": "janine",
             "team": [
                 {
                     "item": "scope-lens",
@@ -55157,6 +55417,7 @@
         {
             "area": "Route 13",
             "name": "pokefanm-alex",
+            "split": "janine",
             "team": [
                 {
                     "item": "scope-lens",
@@ -55223,6 +55484,7 @@
         {
             "area": "Route 14",
             "name": "pokefanm-carter",
+            "split": "janine",
             "team": [
                 {
                     "dvs": {
@@ -55306,6 +55568,7 @@
             "area": "Route 14",
             "b2b": true,
             "name": "pokefanm-trevor",
+            "split": "janine",
             "team": [
                 {
                     "item": "charcoal",
@@ -55364,6 +55627,7 @@
         {
             "area": "Route 14",
             "name": "bird-keeper-roy",
+            "split": "janine",
             "team": [
                 {
                     "item": "leftovers",
@@ -55433,6 +55697,7 @@
         {
             "area": "Route 15",
             "name": "schoolboy-billy",
+            "split": "janine",
             "team": [
                 {
                     "dvs": {
@@ -55511,6 +55776,7 @@
             "area": "Route 15",
             "b2b": true,
             "name": "teacher-colette",
+            "split": "janine",
             "team": [
                 {
                     "item": "leftovers",
@@ -55588,6 +55854,7 @@
         {
             "area": "Route 15",
             "name": "schoolboy-kipp",
+            "split": "janine",
             "team": [
                 {
                     "item": "leftovers",
@@ -55625,6 +55892,7 @@
             "area": "Route 15",
             "b2b": true,
             "name": "schoolboy-tommy",
+            "split": "janine",
             "team": [
                 {
                     "item": "metal-coat",
@@ -55703,6 +55971,7 @@
             "area": "Route 15",
             "meta": "end of gauntlet",
             "name": "teacher-hillary",
+            "split": "janine",
             "team": [
                 {
                     "item": "charcoal",
@@ -55781,6 +56050,7 @@
             "area": "Fuchsia city gym",
             "meta": "spikes",
             "name": "leader-janine",
+            "split": "janine",
             "team": [
                 {
                     "item": "quick-claw",
@@ -55861,6 +56131,7 @@
         {
             "area": "Route 17",
             "name": "biker-joel",
+            "split": "erika",
             "team": [
                 {
                     "item": "focus-band",
@@ -55947,6 +56218,7 @@
             "area": "Route 17",
             "b2b": true,
             "name": "biker-glenn",
+            "split": "erika",
             "team": [
                 {
                     "dvs": {
@@ -56014,6 +56286,7 @@
             "area": "Route 17",
             "b2b": true,
             "name": "biker-charles",
+            "split": "erika",
             "team": [
                 {
                     "item": "magnet",
@@ -56080,6 +56353,7 @@
         {
             "area": "Celadon City",
             "name": "lass-michelle",
+            "split": "erika",
             "team": [
                 {
                     "item": "hard-stone",
@@ -56136,6 +56410,7 @@
             "area": "Celadon City",
             "b2b": true,
             "name": "picnicker-tanya",
+            "split": "erika",
             "team": [
                 {
                     "dvs": {
@@ -56191,6 +56466,7 @@
         {
             "area": "Celadon City",
             "name": "beauty-julia",
+            "split": "erika",
             "team": [
                 {
                     "dvs": {
@@ -56258,6 +56534,7 @@
             "area": "Celadon City",
             "b2b": true,
             "name": "twins-jo-&-zoe",
+            "split": "erika",
             "team": [
                 {
                     "item": "hard-stone",
@@ -56316,6 +56593,7 @@
         {
             "area": "Celadon City",
             "name": "leader-erika",
+            "split": "erika",
             "team": [
                 {
                     "item": "brightpowder",
@@ -56404,6 +56682,7 @@
         {
             "area": "Route 10",
             "name": "hiker-jim",
+            "split": "brock",
             "team": [
                 {
                     "item": "focus-band",
@@ -56507,6 +56786,7 @@
         {
             "area": "Route 9",
             "name": "picnicker-heidi",
+            "split": "brock",
             "team": [
                 {
                     "dvs": {
@@ -56574,6 +56854,7 @@
             "area": "Route 9",
             "b2b": true,
             "name": "hiker-sidney",
+            "split": "brock",
             "team": [
                 {
                     "dvs": {
@@ -56638,6 +56919,7 @@
             "area": "Route 9",
             "meta": "towards power plant",
             "name": "camper-dean",
+            "split": "brock",
             "team": [
                 {
                     "item": "miracleberry",
@@ -56710,6 +56992,7 @@
         {
             "area": "Route 9",
             "name": "camper-sid",
+            "split": "brock",
             "team": [
                 {
                     "dvs": {
@@ -56785,6 +57068,7 @@
             "area": "Route 9",
             "b2b": true,
             "name": "hiker-tim",
+            "split": "brock",
             "team": [
                 {
                     "dvs": {
@@ -56851,6 +57135,7 @@
         {
             "area": "Route 24",
             "name": "gruntm-31",
+            "split": "brock",
             "team": [
                 {
                     "item": "leftovers",
@@ -56939,6 +57224,7 @@
         {
             "area": "Route 11",
             "name": "youngster-owen",
+            "split": "brock",
             "team": [
                 {
                     "item": "stick",
@@ -56990,6 +57276,7 @@
             "area": "Route 11",
             "b2b": true,
             "name": "youngster-jason",
+            "split": "brock",
             "team": [
                 {
                     "item": "silverpowder",
@@ -57030,6 +57317,7 @@
             "area": "Route 11",
             "b2b": true,
             "name": "psychic-fidel",
+            "split": "brock",
             "team": [
                 {
                     "item": "focus-band",
@@ -57080,6 +57368,7 @@
         {
             "area": "Route 11",
             "name": "psychic-herman",
+            "split": "brock",
             "team": [
                 {
                     "item": "pink-bow",
@@ -57130,6 +57419,7 @@
         {
             "area": "Route 2",
             "name": "bug-catcher-rob",
+            "split": "brock",
             "team": [
                 {
                     "dvs": {
@@ -57216,6 +57506,7 @@
             "area": "Route 2",
             "b2b": true,
             "name": "bug-catcher-ed",
+            "split": "brock",
             "team": [
                 {
                     "item": "quick-claw",
@@ -57294,6 +57585,7 @@
             "area": "Pewter City Gym",
             "meta": "perma sandstorm",
             "name": "camper-jerry",
+            "split": "brock",
             "team": [
                 {
                     "dvs": {
@@ -57368,6 +57660,7 @@
         {
             "area": "Pewter City Gym",
             "name": "leader-brock",
+            "split": "brock",
             "team": [
                 {
                     "item": "sharp-beak",
@@ -57457,6 +57750,7 @@
             "area": "Route 3",
             "meta": "gauntlet",
             "name": "youngster-warren",
+            "split": "misty",
             "team": [
                 {
                     "dvs": {
@@ -57531,6 +57825,7 @@
         {
             "area": "Route 3",
             "name": "firebreather-burt",
+            "split": "misty",
             "team": [
                 {
                     "item": "quick-claw",
@@ -57596,6 +57891,7 @@
         {
             "area": "Route 3",
             "name": "firebreather-otis",
+            "split": "misty",
             "team": [
                 {
                     "dvs": {
@@ -57654,6 +57950,7 @@
         {
             "area": "Mt. Moon",
             "name": "rival2-1",
+            "split": "misty",
             "team": [
                 {
                     "item": "charcoal",
@@ -57734,6 +58031,7 @@
         {
             "area": "Mt. Moon",
             "name": "rival2-2",
+            "split": "misty",
             "team": [
                 {
                     "item": "nevermeltice",
@@ -57814,6 +58112,7 @@
         {
             "area": "Mt. Moon",
             "name": "rival2-3",
+            "split": "misty",
             "team": [
                 {
                     "item": "magnet",
@@ -57894,6 +58193,7 @@
         {
             "area": "Route 4",
             "name": "bird-keeper-hank",
+            "split": "misty",
             "team": [
                 {
                     "item": "soft-sand",
@@ -57935,6 +58235,7 @@
             "b2b": true,
             "meta": "end of gauntlet",
             "name": "picnicker-hope",
+            "split": "misty",
             "team": [
                 {
                     "item": "pink-bow",
@@ -57994,6 +58295,7 @@
             "area": "Route 25",
             "meta": "gauntlet",
             "name": "schoolboy-dudley",
+            "split": "misty",
             "team": [
                 {
                     "dvs": {
@@ -58050,6 +58352,7 @@
             "area": "Route 25",
             "b2b": true,
             "name": "lass-ellen",
+            "split": "misty",
             "team": [
                 {
                     "item": "magnet",
@@ -58100,6 +58403,7 @@
         {
             "area": "Route 25",
             "name": "schoolboy-joe",
+            "split": "misty",
             "team": [
                 {
                     "dvs": {
@@ -58158,6 +58462,7 @@
         {
             "area": "Route 25",
             "name": "lass-laura",
+            "split": "misty",
             "team": [
                 {
                     "item": "leftovers",
@@ -58206,6 +58511,7 @@
             "area": "Route 25",
             "b2b": true,
             "name": "camper-lloyd",
+            "split": "misty",
             "team": [
                 {
                     "item": "quick-claw",
@@ -58263,6 +58569,7 @@
         {
             "area": "Route 25",
             "name": "lass-shannon",
+            "split": "misty",
             "team": [
                 {
                     "item": "magnet",
@@ -58322,6 +58629,7 @@
         {
             "area": "Route 25",
             "name": "super-nerd-pat",
+            "split": "misty",
             "team": [
                 {
                     "item": "leftovers",
@@ -58395,6 +58703,7 @@
             "area": "Route 25",
             "meta": "optional",
             "name": "cooltrainerm-kevin",
+            "split": "misty",
             "team": [
                 {
                     "item": "scope-lens",
@@ -58413,6 +58722,7 @@
             "area": "Cerulean City Gym",
             "meta": "perma rain",
             "name": "swimmerm-parker",
+            "split": "misty",
             "team": [
                 {
                     "item": "quick-claw",
@@ -58474,6 +58784,7 @@
         {
             "area": "Cerulean City Gym",
             "name": "swimmerf-diana",
+            "split": "misty",
             "team": [
                 {
                     "item": "leftovers",
@@ -58536,6 +58847,7 @@
             "area": "Cerulean City Gym",
             "b2b": true,
             "name": "swimmerf-briana",
+            "split": "misty",
             "team": [
                 {
                     "item": "focus-band",
@@ -58586,6 +58898,7 @@
         {
             "area": "Cerulean City Gym",
             "name": "leader-misty",
+            "split": "misty",
             "team": [
                 {
                     "item": "mystic-water",
@@ -58674,6 +58987,7 @@
         {
             "area": "Route 1",
             "name": "schoolboy-danny",
+            "split": "blaine",
             "team": [
                 {
                     "dvs": {
@@ -58741,6 +59055,7 @@
             "area": "Route 1",
             "b2b": true,
             "name": "cooltrainerf-quinn",
+            "split": "blaine",
             "team": [
                 {
                     "item": "leftovers",
@@ -58791,6 +59106,7 @@
         {
             "area": "Route 21",
             "name": "swimmerf-nikki",
+            "split": "blaine",
             "team": [
                 {
                     "item": "focus-band",
@@ -58850,6 +59166,7 @@
             "area": "Route 21",
             "b2b": true,
             "name": "swimmerm-seth",
+            "split": "blaine",
             "team": [
                 {
                     "item": "focus-band",
@@ -58920,6 +59237,7 @@
             "area": "Route 19",
             "meta": "gauntlet",
             "name": "swimmerm-jerome",
+            "split": "blaine",
             "team": [
                 {
                     "dvs": {
@@ -58997,6 +59315,7 @@
         {
             "area": "Route 19",
             "name": "swimmerm-harold",
+            "split": "blaine",
             "team": [
                 {
                     "item": "quick-claw",
@@ -59055,6 +59374,7 @@
         {
             "area": "Route 19",
             "name": "swimmerf-dawn",
+            "split": "blaine",
             "team": [
                 {
                     "dvs": {
@@ -59132,6 +59452,7 @@
         {
             "area": "Route 20",
             "name": "swimmerf-lori",
+            "split": "blaine",
             "team": [
                 {
                     "item": "leftovers",
@@ -59193,6 +59514,7 @@
             "area": "Route 20",
             "meta": "end of gauntlet",
             "name": "swimmerf-nicole",
+            "split": "blaine",
             "team": [
                 {
                     "item": "miracleberry",
@@ -59271,6 +59593,7 @@
             "area": "Cinnabar City Gym",
             "meta": "perma sun",
             "name": "leader-blaine",
+            "split": "blaine",
             "team": [
                 {
                     "item": "charcoal",
@@ -59359,6 +59682,7 @@
         {
             "area": "Viridian City Gym",
             "name": "leader-blue",
+            "split": "blue",
             "team": [
                 {
                     "item": "brightpowder",
@@ -59439,6 +59763,7 @@
         {
             "area": "Mt. Silver",
             "name": "elite-four-will-2",
+            "split": "e4r2",
             "team": [
                 {
                     "item": "mystic-water",
@@ -59543,6 +59868,7 @@
         {
             "area": "Mt. Silver",
             "name": "elite-four-koga-2",
+            "split": "e4r2",
             "team": [
                 {
                     "item": "sharp-beak",
@@ -59631,6 +59957,7 @@
         {
             "area": "Mt. Silver",
             "name": "elite-four-bruno-2",
+            "split": "e4r2",
             "team": [
                 {
                     "dvs": {
@@ -59719,6 +60046,7 @@
         {
             "area": "Mt. Silver",
             "name": "elite-four-karen-2",
+            "split": "e4r2",
             "team": [
                 {
                     "dvs": {
@@ -59807,6 +60135,7 @@
         {
             "area": "Mt. Silver",
             "name": "trainer-red",
+            "split": "e4r2",
             "team": [
                 {
                     "dvs": {
@@ -59895,6 +60224,7 @@
         {
             "area": "Pokémon League",
             "name": "rival2-4",
+            "split": "e4r2",
             "team": [
                 {
                     "item": "quick-claw",

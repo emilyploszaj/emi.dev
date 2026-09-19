@@ -1824,6 +1824,10 @@ rt {
 	padding: 10px 0px 6px 0px;
 }
 
+.split-row {
+	padding: 4px;
+}
+
 .toggled-party-member img {
 	background: repeating-linear-gradient(
 		-45deg,

@@ -178,6 +178,8 @@ var trueNames = [
 	"MiracleBerry",
 	"MysteryBerry",
 	"SecretPotion",
+	"E4R1",
+	"E4R2",
 ];
 var nameFormatting = new Map();
 

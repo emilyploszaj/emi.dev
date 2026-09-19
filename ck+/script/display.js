@@ -875,7 +875,7 @@ function getMoveDisplay(move, level = undefined, extra = {}) {
 			`: ""}
 			<td>${moveLink(move.name)}</td>
 			<td style="text-align:right;">${move.power == 0 ? "—" : move.power}</td>
-			<td style="text-align:right;">${move.accuracy <= 0 ? "—" : move.accuracy}</td>
+			<td style="text-align:right;">${move.accuracy <= 0 ? "—" : move.accuracy + "%"}</td>
 			<td style="text-align:right;">${move.pp}<span class="meek">pp</span></td>
 			${(move.extra && move.extra.length > 0) ? `<td><span class="note tooltip-container">?<div class="tooltip">${move.extra.join("\n")}</div></span></td>` : ""}
 		</tr>
@@ -1051,7 +1051,7 @@ function setMap(xOffset = undefined, yOffset = 0, scale = 48) {
 	writeLocalStorage();
 	var th = 17 * scale;
 	var v = "";
-	if (game.name != "pk") {
+	if (game.name == "ck+") {
 		v += '<button onclick="setMap(0)">Johto</button>';
 		v += '<button onclick="setMap(-17)">Kanto</button>';
 	}
