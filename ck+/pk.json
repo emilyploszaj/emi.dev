@@ -42197,7 +42197,8 @@
                 "Lowers User's Atk and Def"
             ],
             "flags": [
-                "contact"
+                "contact",
+                "recoil"
             ],
             "index": 413,
             "name": "brave-bird",
@@ -42205,6 +42206,7 @@
             "pp": 15,
             "priority": 0,
             "target": "adjacent",
+            "template": "recoil-fourth",
             "type": "flying"
         },
         {

@@ -574,6 +574,23 @@ input:checked + .fake-checkbox {
 	margin-bottom: -5px;
 }
 
+.item-locations-table {
+	border-spacing: 20px 4px;
+}
+
+#full-page .item-locations-table td {
+	padding: 0px;
+}
+
+.item-locations-table tr:first-child td {
+	padding-bottom: 6px;
+	font-weight: bold;
+}
+
+.item-locations-table tr td:first-child {
+	min-width: 188px;
+}
+
 .encounter-poke {
 	position: relative;
 	background-color: var(--grouping-background);
@@ -1943,20 +1960,32 @@ rt {
 }
 
 .form-element {
+	position: relative;
 	padding: 8px;
 	background-color: var(--background);
 }
 
-.form-element > .form-element {
+.form-element  .form-element {
 	background-color: var(--box-background);
 }
 
-.form-element > .form-element > .form-element {
+.form-element  .form-element  .form-element {
 	background-color: var(--background);
 }
 
-.form-element > .form-element > .form-element > .form-element {
+.form-element  .form-element  .form-element  .form-element {
 	background-color: var(--box-background);
+}
+
+.form-element  .form-element  .form-element  .form-element  .form-element {
+	background-color: var(--background);
+}
+
+.form-delete {
+	position: absolute;
+	right: 16px;
+	margin-top: 4px;
+	z-index: 100;
 }
 
 

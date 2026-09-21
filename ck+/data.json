@@ -17232,7 +17232,7 @@
                 {
                     "amount": "renewable",
                     "info": "Buyable in mart",
-                    "item": "thunder-stone"
+                    "item": "thunderstone"
                 },
                 {
                     "amount": "renewable",
@@ -17322,7 +17322,7 @@
                 {
                     "amount": "1",
                     "info": "Talk to bike shop owner in east house",
-                    "item": "bike"
+                    "item": "bicycle"
                 },
                 {
                     "amount": "1",
@@ -18956,6 +18956,9 @@
                 "Sets up rain for 5 turns\nGreatly discourage this move if it would favour the player type-wise, particularly, if the player is a water-type"
             ],
             "index": 240,
+            "machines": {
+                "tm": 18
+            },
             "name": "rain-dance",
             "power": 0,
             "pp": 5,
@@ -19046,6 +19049,9 @@
                 "10% chance to paralyze opponent"
             ],
             "index": 9,
+            "machines": {
+                "tm": 41
+            },
             "name": "thunderpunch",
             "power": 75,
             "pp": 15,
@@ -19087,6 +19093,9 @@
                 "30% chance to flinch opponent"
             ],
             "index": 29,
+            "machines": {
+                "tm": 2
+            },
             "name": "headbutt",
             "power": 70,
             "pp": 15,
@@ -19110,6 +19119,9 @@
                 "50% chance to lower opponent's defense"
             ],
             "index": 249,
+            "machines": {
+                "tm": 8
+            },
             "name": "rock-smash",
             "power": 40,
             "pp": 15,
@@ -19132,6 +19144,9 @@
                 "Sets up harsh sunlight for 5 turns\nGreatly discourage this move if it would favour the player type-wise, particularly, if the player is a Fire-type"
             ],
             "index": 241,
+            "machines": {
+                "tm": 11
+            },
             "name": "sunny-day",
             "power": 0,
             "pp": 5,
@@ -19154,6 +19169,9 @@
                 "Can only be used when asleep, uses another known move randomly"
             ],
             "index": 214,
+            "machines": {
+                "tm": 35
+            },
             "name": "sleep-talk",
             "power": 0,
             "pp": 10,
@@ -19273,6 +19291,9 @@
                 "Becomes semi-invulnerable for a turn, then attacks on the next\nWhile semi-invulnerable, invulnerable to all moves except Gust, Thunder, Twister, and Whirlwind\nGust and Twister will deal double damage\nGreatly encourage this move if the player is flying or underground, and slower than the enemy."
             ],
             "index": 19,
+            "machines": {
+                "hm": 2
+            },
             "name": "fly",
             "power": 70,
             "pp": 15,
@@ -19326,6 +19347,9 @@
                 "If no item is held, steals the opponent's"
             ],
             "index": 168,
+            "machines": {
+                "tm": 46
+            },
             "name": "thief",
             "power": 40,
             "pp": 10,
@@ -19379,6 +19403,9 @@
             "accuracy": 100,
             "extra": [],
             "index": 15,
+            "machines": {
+                "hm": 1
+            },
             "name": "cut",
             "power": 50,
             "pp": 30,
@@ -19399,6 +19426,9 @@
             "accuracy": 100,
             "extra": [],
             "index": 127,
+            "machines": {
+                "hm": 7
+            },
             "name": "waterfall",
             "power": 95,
             "pp": 15,
@@ -19495,6 +19525,9 @@
             "accuracy": 100,
             "extra": [],
             "index": 70,
+            "machines": {
+                "hm": 4
+            },
             "name": "strength",
             "power": 80,
             "pp": 15,
@@ -19506,6 +19539,9 @@
                 "10% chance to freeze opponent"
             ],
             "index": 59,
+            "machines": {
+                "tm": 14
+            },
             "name": "blizzard",
             "power": 120,
             "pp": 8,
@@ -19528,6 +19564,9 @@
                 "Can only hit sleeping targets, user heals 50% damage dealt"
             ],
             "index": 138,
+            "machines": {
+                "tm": 42
+            },
             "name": "dream-eater",
             "power": 100,
             "pp": 15,
@@ -19619,6 +19658,9 @@
                 "Charges on the first turn, then deals damage on the second\nDoes not need to charge in harsh sunlight\nDeals half damage in rain\n80% chance to encourage this move when it's sunny, 90% chance to discourage this move when it's raining"
             ],
             "index": 76,
+            "machines": {
+                "tm": 22
+            },
             "name": "solarbeam",
             "power": 120,
             "pp": 10,
@@ -19641,6 +19683,9 @@
                 "Restores 100% HP and cures status, goes to sleep for 2 turns"
             ],
             "index": 156,
+            "machines": {
+                "tm": 44
+            },
             "name": "rest",
             "power": 0,
             "pp": 5,
@@ -19675,6 +19720,9 @@
                 "Copies opponent's stat changes"
             ],
             "index": 244,
+            "machines": {
+                "tm": 9
+            },
             "name": "psych-up",
             "power": 0,
             "pp": 1,
@@ -19717,6 +19765,9 @@
                 "Raises defense\nDoubles the power of Rollout"
             ],
             "index": 111,
+            "machines": {
+                "tm": 40
+            },
             "name": "defense-curl",
             "power": 0,
             "pp": 3,
@@ -19728,6 +19779,9 @@
                 "Always hits\n80% chance to greatly encourage this move if either enemy's accuracy level has been lowered three or more stages or player's evasion level has been raised three or more stages"
             ],
             "index": 129,
+            "machines": {
+                "tm": 39
+            },
             "name": "swift",
             "power": 60,
             "pp": 20,
@@ -19822,6 +19876,9 @@
                 "If the user is a Ghost type, removes half of its max HP and inflicts a curse on the opponent that will deal 1\/4 HP a turn\nOtherwise, raises attack and defense, lowers speed"
             ],
             "index": 174,
+            "machines": {
+                "tm": 3
+            },
             "name": "curse",
             "power": 0,
             "pp": 3,
@@ -19864,6 +19921,9 @@
             "accuracy": 100,
             "extra": [],
             "index": 218,
+            "machines": {
+                "tm": 21
+            },
             "name": "frustration",
             "power": 102,
             "pp": 20,
@@ -19875,6 +19935,9 @@
                 "Forces the opponent to switch"
             ],
             "index": 46,
+            "machines": {
+                "tm": 5
+            },
             "name": "roar",
             "power": 0,
             "pp": 2,
@@ -19963,6 +20026,9 @@
                 "10% chance to freeze opponent"
             ],
             "index": 8,
+            "machines": {
+                "tm": 33
+            },
             "name": "ice-punch",
             "power": 75,
             "pp": 15,
@@ -19974,6 +20040,9 @@
                 "If the opponent is sleeping, inflicts a nightmare"
             ],
             "index": 171,
+            "machines": {
+                "tm": 50
+            },
             "name": "nightmare",
             "power": 0,
             "pp": 15,
@@ -20102,6 +20171,9 @@
                 "Lowers opponent's evasion"
             ],
             "index": 230,
+            "machines": {
+                "tm": 12
+            },
             "name": "sweet-scent",
             "power": 0,
             "pp": 20,
@@ -20146,6 +20218,9 @@
                 "Lasts 5 turns, doubling in power each turn\nDoubles in damage if the user has used Defense Curl\n80% chance to discourage this move if the enemy is in love, confused, or paralyzed, 80% chance to discourage this move if the enemy's HP is below 25%, 80% chance to greatly encourage this move otherwise"
             ],
             "index": 205,
+            "machines": {
+                "tm": 4
+            },
             "name": "rollout",
             "power": 30,
             "pp": 1,
@@ -20345,6 +20420,9 @@
                 "Toxic poisons opponent\nDiscouraged if player's HP is below 50%"
             ],
             "index": 92,
+            "machines": {
+                "tm": 6
+            },
             "name": "toxic",
             "power": 0,
             "pp": 10,
@@ -20356,6 +20434,9 @@
                 "30% chance to lower opponent's defense"
             ],
             "index": 231,
+            "machines": {
+                "tm": 23
+            },
             "name": "iron-tail",
             "power": 100,
             "pp": 15,
@@ -20378,6 +20459,9 @@
                 "10% chance to burn opponent"
             ],
             "index": 7,
+            "machines": {
+                "tm": 48
+            },
             "name": "fire-punch",
             "power": 75,
             "pp": 15,
@@ -20464,6 +20548,9 @@
                 "10% chance to burn opponent"
             ],
             "index": 126,
+            "machines": {
+                "tm": 38
+            },
             "name": "fire-blast",
             "power": 120,
             "pp": 8,
@@ -20486,6 +20573,9 @@
                 "Can only be used when asleep"
             ],
             "index": 173,
+            "machines": {
+                "tm": 13
+            },
             "name": "snore",
             "power": 60,
             "pp": 15,
@@ -20618,6 +20708,9 @@
                 "Lowers opponent's accuracy\nEncouraged if Player HP is full and enemy HP is above 50%, futher encouraged if player is badly poisoned"
             ],
             "index": 148,
+            "machines": {
+                "hm": 5
+            },
             "name": "flash",
             "power": 0,
             "pp": 5,
@@ -20683,6 +20776,9 @@
                 "Infatuates the opponent\n80% chance to encourage this move during the first turn of player's Pokemon. 80% chance to discourage this move otherwise"
             ],
             "index": 213,
+            "machines": {
+                "tm": 45
+            },
             "name": "attract",
             "power": 0,
             "pp": 5,
@@ -20716,6 +20812,9 @@
                 "Goes first, prevents being attacked for the turn\nGreatly discourage this move if the enemy already used Protect, if the player is locked on, if the player's Fury Cutter is boosted enough, if the player has charged a two-turn move, if the player is affected by Toxic, Leech Seed, or Curse,  80% chance to encourage this move otherwise"
             ],
             "index": 182,
+            "machines": {
+                "tm": 17
+            },
             "name": "protect",
             "power": 0,
             "pp": 10,
@@ -20749,6 +20848,9 @@
                 "Raises evasion\nDismiss this move if enemy's evasion can't raise anymore, greatly encouraged if player is poisoned, greatly discouraged if player HP is below 25%"
             ],
             "index": 104,
+            "machines": {
+                "tm": 32
+            },
             "name": "double-team",
             "power": 0,
             "pp": 3,
@@ -20760,6 +20862,9 @@
                 "For 2-5 turns, prevents the opponent from switching and deals 1\/16 HP at the end of each turn\n50% chance to discourage this move if the player is already trapped.  50% chance to greatly encourage this move if player is either badly poisoned, in love, identified, stuck in Rollout, or has a Nightmare. Otherwise 50% chance to increase use on your pokemon's first turn being out."
             ],
             "index": 250,
+            "machines": {
+                "hm": 6
+            },
             "name": "whirlpool",
             "power": 35,
             "pp": 15,
@@ -20771,6 +20876,9 @@
                 "10% chance to paralyze opponent"
             ],
             "index": 85,
+            "machines": {
+                "mt": 2
+            },
             "name": "thunderbolt",
             "power": 95,
             "pp": 15,
@@ -20782,6 +20890,9 @@
                 "10% chance to burn opponent"
             ],
             "index": 53,
+            "machines": {
+                "mt": 1
+            },
             "name": "flamethrower",
             "power": 95,
             "pp": 15,
@@ -20857,6 +20968,9 @@
                 "Sets up a sandstorm for 5 turns\nGreatly discouraged if the player is immune to Sandstorm damage, or if player's HP is below 50%, else encourage by 50%"
             ],
             "index": 201,
+            "machines": {
+                "tm": 37
+            },
             "name": "sandstorm",
             "power": 0,
             "pp": 10,
@@ -20879,6 +20993,9 @@
                 "10% chance to lower opponent's special defense"
             ],
             "index": 94,
+            "machines": {
+                "tm": 29
+            },
             "name": "psychic",
             "power": 90,
             "pp": 10,
@@ -20962,6 +21079,9 @@
                 "100% chance to confuse opponent"
             ],
             "index": 223,
+            "machines": {
+                "tm": 1
+            },
             "name": "dynamicpunch",
             "power": 100,
             "pp": 5,
@@ -21030,6 +21150,9 @@
                 "User heals 50% of damage dealt"
             ],
             "index": 202,
+            "machines": {
+                "tm": 19
+            },
             "name": "giga-drain",
             "power": 75,
             "pp": 10,
@@ -21053,6 +21176,9 @@
                 "Requires a turn to recharge after being used"
             ],
             "index": 63,
+            "machines": {
+                "tm": 15
+            },
             "name": "hyper-beam",
             "power": 150,
             "pp": 5,
@@ -21086,6 +21212,9 @@
                 "Becomes semi-invulnerable for a turn, then attacks on the next\nWhile semi-invulnerable, invulnerable to all moves except Earthquake, Magnitude, and Fissure\nEarthquake and Magnitude will deal double damage\nGreatly encourage this move if the player is flying or underground, and slower than the enemy."
             ],
             "index": 91,
+            "machines": {
+                "tm": 28
+            },
             "name": "dig",
             "power": 80,
             "pp": 10,
@@ -21106,6 +21235,9 @@
             "accuracy": 100,
             "extra": [],
             "index": 57,
+            "machines": {
+                "hm": 3
+            },
             "name": "surf",
             "power": 80,
             "pp": 15,
@@ -21215,6 +21347,9 @@
                 "20% chance to lower opponent's defense"
             ],
             "index": 247,
+            "machines": {
+                "tm": 30
+            },
             "name": "shadow-ball",
             "power": 80,
             "pp": 15,
@@ -21281,6 +21416,9 @@
                 "100% chance to paralyze opponent"
             ],
             "index": 192,
+            "machines": {
+                "tm": 7
+            },
             "name": "zap-cannon",
             "power": 100,
             "pp": 5,
@@ -21292,6 +21430,9 @@
                 "30% chance to poison opponent"
             ],
             "index": 188,
+            "machines": {
+                "tm": 36
+            },
             "name": "sludge-bomb",
             "power": 90,
             "pp": 10,
@@ -21303,6 +21444,9 @@
                 "100% chance to lower opponent's speed"
             ],
             "index": 196,
+            "machines": {
+                "tm": 16
+            },
             "name": "icy-wind",
             "power": 55,
             "pp": 15,
@@ -21460,6 +21604,9 @@
                 "Goes first, prevents being attacked for the turn\nGreatly discourage this move if the enemy already used Protect, if the player is locked on, if the player's Fury Cutter is boosted enough, if the player has charged a two-turn move, if the player is affected by Toxic, Leech Seed, or Curse,  80% chance to encourage this move otherwise"
             ],
             "index": 197,
+            "machines": {
+                "tm": 43
+            },
             "name": "detect",
             "power": 0,
             "pp": 5,
@@ -21471,6 +21618,9 @@
                 "Sharply raise's the opponent's attack, confuses opponent\n80% chance to encourage this move during the first turn of player's Pokemon. 80% chance to discourage this move otherwise"
             ],
             "index": 207,
+            "machines": {
+                "tm": 34
+            },
             "name": "swagger",
             "power": 0,
             "pp": 15,
@@ -21492,6 +21642,9 @@
                 "100% chance to lower opponent's accuracy"
             ],
             "index": 189,
+            "machines": {
+                "tm": 31
+            },
             "name": "mud-slap",
             "power": 20,
             "pp": 10,
@@ -21544,6 +21697,9 @@
                 "Doubles in damage each turn it is used back to back\n80% chance to discourage this move if the enemy is in love, confused, or paralyzed, 80% chance to discourage this move if the enemy's HP is below 25%, 80% chance to greatly encourage this move otherwise"
             ],
             "index": 210,
+            "machines": {
+                "tm": 49
+            },
             "name": "fury-cutter",
             "power": 15,
             "pp": 20,
@@ -21610,6 +21766,9 @@
                 "Survive all damage on 1 HP until the end of the turn\nWill occur before attacks\nGreatly discourage this move if the enemy already used Protect, Greatly discourage this move if the enemy's HP is full, 80% chance to greatly encourage this move if the enemy has Reversal"
             ],
             "index": 203,
+            "machines": {
+                "tm": 20
+            },
             "name": "endure",
             "power": 0,
             "pp": 10,
@@ -21685,6 +21844,9 @@
                 "10% chance to freeze opponent"
             ],
             "index": 58,
+            "machines": {
+                "mt": 3
+            },
             "name": "ice-beam",
             "power": 95,
             "pp": 10,
@@ -21707,6 +21869,9 @@
                 "10% chance to raise defense"
             ],
             "index": 211,
+            "machines": {
+                "tm": 47
+            },
             "name": "steel-wing",
             "power": 80,
             "pp": 25,
@@ -21736,6 +21901,9 @@
                 "30% chance to paralyze opponent"
             ],
             "index": 225,
+            "machines": {
+                "tm": 24
+            },
             "name": "dragonbreath",
             "power": 60,
             "pp": 20,
@@ -21769,6 +21937,9 @@
                 "Hits and deals double damage opponents in the semi-invulnerable turn of Dig\nMove is greatly encouraged if the player is underground and the enemy is faster"
             ],
             "index": 89,
+            "machines": {
+                "tm": 26
+            },
             "name": "earthquake",
             "power": 100,
             "pp": 10,
@@ -21788,6 +21959,9 @@
             "accuracy": 100,
             "extra": [],
             "index": 216,
+            "machines": {
+                "tm": 27
+            },
             "name": "return",
             "power": 102,
             "pp": 20,
@@ -21821,6 +21995,9 @@
                 "Varies in type and damage based on the user's DVs"
             ],
             "index": 237,
+            "machines": {
+                "tm": 10
+            },
             "name": "hidden-power",
             "power": 1,
             "pp": 15,
@@ -21907,6 +22084,9 @@
                 "30% chance to paralyze opponent\n100% accurate in rain, 50% accurage in sun\nHits opponents in the semi-invulnerable turn of Fly\nMove is greatly encouraged if the player is flying and the enemy is faster\n90% chance to discourage this move when it's sunny"
             ],
             "index": 87,
+            "machines": {
+                "tm": 25
+            },
             "name": "thunder",
             "power": 120,
             "pp": 5,

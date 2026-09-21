@@ -71,6 +71,11 @@ var movesByName = new Map();
 var movesByIndex = new Map();
 var movesByLearnset = new Map();
 var movesByTMHM = new Map();
+var movesByMachine = {
+	tm: new Map(),
+	hm: new Map(),
+	mt: new Map(),
+};
 var itemsByName = new Map();
 var encounterPools = new Map();
 var landmarksByIndex = new Map();
@@ -360,6 +365,15 @@ function startup() {
 			delete m.template;
 			Object.assign(m, template);
 		}
+		if (m.machines?.tm != null) {
+			movesByMachine.tm.set(m.machines.tm, m.name);
+		}
+		if (m.machines?.hm != null) {
+			movesByMachine.hm.set(m.machines.hm, m.name);
+		}
+		if (m.machines?.mt != null) {
+			movesByMachine.mt.set(m.machines.mt, m.name);
+		}
 		movesByName.set(m.name, m);
 		if (m.index) {
 			movesByIndex.set(m.index, m);
@@ -545,4 +559,13 @@ function validateData() {
 			console.error(`Item ${k} does not exist`);
 		}
 	}
+}
+
+function getMachineMove(item) {
+	if (item.name) {
+		item = item.name;
+	}
+	var parts = item.split("-");
+	var m = movesByMachine[parts[0]]?.get(parseInt(parts[1]));
+	return movesByName.get(m);
 }

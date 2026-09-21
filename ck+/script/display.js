@@ -668,7 +668,14 @@ function getPokemonLearnsetDisplay(p) {
 function getPokemonTmHmDisplay(p) {
 	return `
 		<table class="move-table">
-			${p.tmhm.displayMap(m => getMoveDisplay(movesByName.get(m)))}
+			${p.tmhm
+				.map(m => movesByName.get(m))
+				.sort(compareBy([
+					m => m.machines?.tm ?? 99999,
+					m => m.machines?.hm ?? 99999,
+					m => m.machines?.mt ?? 99999,
+				]))
+				.displayMap(m => getMoveDisplay(m, getMachineName(m), {machine: true}))}
 		</table>
 	`;
 }
@@ -760,19 +767,7 @@ function getFullItemDisplay(item) {
 	var v = "<h3>" + itemImage(item) + fullCapitalize(item) + "</h3>";
 	var it = itemsByName.get(item);
 	v += "<p>" + it.description + "</p>"
-	var locs = landmarksByItem.get(item);
-	if (locs) {
-		v += "<p>Locations:</p>";
-		for (var i = 0; i < locs.length; i++) {
-			var loc = locs[i];
-			for (var j = 0; j < loc.items.length; j++) {
-				if (loc.items[j].item == item) {
-					v += "<div>" + landmarkLink(loc) + ":</div>";
-					v += getItemLocationDescription(loc.items[j]) + "<br>";
-				}
-			}
-		}
-	}
+	v += getItemLocationsDisplay(item);
 	if (pokemonByItem.has(item)) {
 		var list = pokemonByItem.get(item);
 		v += "<p>Wild Held Item (" + list.length + "):</p>";
@@ -785,11 +780,51 @@ function getFullItemDisplay(item) {
 	return v;
 }
 
-function getItemLocationDescription(desc) {
-	return `
-		<div>${itemLink(desc.item)} <span class="meek">x${desc.amount}</span></div>
-		<div class="meek">${desc.info}</div>
-	`;
+function getItemLocationsDisplay(itemName) {
+	var locs = landmarksByItem.get(itemName);
+	if (locs) {
+		return getItemLocationsTable(locs, {}, i => i.item == itemName);
+	}
+	return "";
+}
+
+function getLocationItemDisplay(location) {
+	return getItemLocationsTable([location], {location: false});
+}
+
+function getItemLocationsTable(locs, hide = {}, predicate = i => true) {
+	var v = "";
+	var matrix = [];
+	for (var i = 0; i < locs.length; i++) {
+		var loc = locs[i];
+		for (var j = 0; j < loc.items.length; j++) {
+			var li = loc.items[j];
+			if (predicate(li)) {
+				var arr = [];
+				if (hide.item !== false) {
+					arr.push(itemLink(li.item));
+				}
+				arr.push(`<div class="meek">${li.amount}</div>`);
+				if (hide.location !== false) {
+					arr.push(landmarkLink(loc));
+				}
+				arr.push(`<div class="meek">${li.info}</div>`);
+				matrix.push(arr);
+			}
+		}
+	}
+	v += tablify(matrix, {
+		tableClass: "item-locations-table",
+		header: `
+		<tr>
+			${hide.item !== false ? `<td>Item</td>` : ""}
+			<td>Amount</td>
+			${hide.location !== false ? `<td>Location</td>` : ""}
+			<td>Description</td>
+		</tr>`,
+		join: (r, c) => c == 0,
+	});
+	return v;
 }
 
 function getFullMoveDisplay(move) {
@@ -811,8 +846,19 @@ function getFullMoveDisplay(move) {
 		}
 	}
 	target += "</div></div>";
+	var machine = "";
+	var locations = "";
+	if (move.machines?.tm != undefined || move.machines?.hm != undefined || move.machines?.mt != undefined) {
+		machine = `<span class="meek">${getMachineName(move)}</span>`;
+		for (const machine of ["tm", "hm", "mt"]) {
+			if (move.machines[machine] != undefined) {
+				var num = move.machines[machine] < 10 ? `0${move.machines[machine]}` : move.machines[machine];
+				locations += getItemLocationsDisplay(`${machine}-${num}`);
+			}
+		}
+	}
 	return `
-		<h3>${getMoveName(move.name)}</h3>
+		<h3>${getMoveName(move.name)} ${machine}</h3>
 		${move.extra ?
 			move.extra.displayMap(e => `<p>${e.split("\n").displayMap(l => `<div>${l}</div>`)}</p>`)
 		: ""}
@@ -829,6 +875,7 @@ function getFullMoveDisplay(move) {
 		` : ""}
 		<h3>Targeting</h3>
 		${target}
+		${locations}
 		${byLearnset ? `
 			<p>By Learnset (${byLearnset.length}):</p>
 			<div class="learnset-pool">
@@ -852,12 +899,38 @@ function getFullMoveDisplay(move) {
 	`;
 }
 
+function getMachineName(move) {
+	function padNumber(n) {
+		if (n < 10) {
+			return "0" + n;
+		} else {
+			return "" + n;
+		}
+	}
+	if (move.name == undefined) {
+		move = movesByName.get(move);
+	}
+	if (move.machines) {
+		if (move.machines.tm) {
+			return "TM" + padNumber(move.machines.tm);
+		} else if (move.machines.hm) {
+			return "HM" + padNumber(move.machines.hm);
+		} else if (move.machines.mt) {
+			return "MT" + padNumber(move.machines.mt);
+		}
+	}
+	return "-";
+}
+
 function getMoveDisplay(move, level = undefined, extra = {}) {
 	if (move == undefined) {
 		return `<tr>undefined</tr>`;
 	}
 	if (level != undefined) {
-		level = `<span class="meek">Lvl </span>${level}`;
+		if (extra.machine) {
+		} else {
+			level = `<span class="meek">Lvl </span>${level}`;
+		}
 	}
 	if (extra.ignoredByWilds) {
 		level = `

@@ -6,7 +6,7 @@ const FLOWCHART_FORM = {
 				name: {
 					display: "Name",
 					type: "string",
-					initializer: (path) => String.fromCharCode(97 + (parseInt(path.split(".")[0])))
+					initializer: (path) => String.fromCharCode(97 + (parseInt(path.split(".")[1])))
 				},
 				type: {
 					display: "Type",
@@ -39,10 +39,19 @@ const FLOWCHART_FORM = {
 	},
 	root: {
 		display: "Flowchart",
-		type: "list",
-		of: "node"
+		type: "object",
+		fields: {
+			nodes: {
+				display: "Nodes",
+				type: "list",
+				of: "node"
+			}
+		},
 	},
-	extract: (v) => rekeyArray(v, "name"),
+	extract: (v) => {
+		v.nodes = rekeyArray(v.nodes, "name");
+		return v;
+	},
 	onupdate: (v) => document.getElementById("flowchart-output").value = JSON.stringify(v),
 }
 
@@ -57,6 +66,10 @@ function debugForm() {
 
 function addFormElement(id, path) {
 	activeForms.get(id).addListElement(path);
+}
+
+function removeFormElement(id, path) {
+	activeForms.get(id).removeListElement(path);
 }
 
 function updateForm(id) {
@@ -91,6 +104,9 @@ class TemplateForm {
 	}
 
 	extractChild(el) {
+		if (el.classList.contains("form-list-entry")) {
+			el = el.children[1];
+		}
 		if (el.classList.contains("form-object")) {
 			return this.extractObject(el);
 		} else if (el.classList.contains("form-list")) {
@@ -120,6 +136,9 @@ class TemplateForm {
 	 * @param {HTMLElement} el 
 	 */
 	extractList(el) {
+		if (el.classList.contains("form-list-entry")) {
+			el = el.children[1];
+		}
 		var list = [];
 		for (const c of el.children) {
 			var extracted = this.extractChild(c);
@@ -176,14 +195,19 @@ class TemplateForm {
 		this.listAdds.set(path, (index) => {
 			var child = Object.assign({}, obj)
 			child.type = obj.of;
-			return this.composeFormChild(this.subpath(path, "" + index), child)
+			var p = this.subpath(path, "" + index);
+			return `
+			<div class="form-list-entry">
+				<button onclick="removeFormElement('${this.id}', '${p}')" class="form-delete">Delete</button>
+				${this.composeFormChild(p, child)}
+			</div>
+			`;
 		});
 		var child = Object.assign({}, obj)
 		child.type = obj.of;
 		return `
 		<div id="${this.getId(path)}" class="form-element form-list">
 			<div class="form-title">${obj.display}</div>
-			${this.listAdds.get(path)(0)}
 			<button onclick="addFormElement('${this.id}', '${path}')" class="form-add">Add...</button>
 		</div>`;
 	}
@@ -191,9 +215,20 @@ class TemplateForm {
 	addListElement(path) {
 		var list = document.getElementById(`form-${this.id}:${path}`);
 		var addButton = list.children[list.children.length - 1];
+		var index = list.children.length - 2;
+		while (document.getElementById(`form-${this.id}:${this.subpath(path, index)}`)) {
+			index++;
+		}
 		addButton.outerHTML = `
-			${this.listAdds.get(path)(list.children.length - 2)}
+			${this.listAdds.get(path)(index)}
 		` + addButton.outerHTML;
+		this.update();
+	}
+
+	removeListElement(path) {
+		var el = document.getElementById(`form-${this.id}:${path}`).parentElement;
+		el.outerHTML = "";
+		this.update();
 	}
 
 	composeFormString(path, obj) {

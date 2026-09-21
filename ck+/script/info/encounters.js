@@ -91,9 +91,7 @@ function getEncounterDisplay(pools) {
 	}
 	if (landmark && landmark.items.length > 0) {
 		v += "<lb></lb><details><summary>Items</summary>";
-		for (var j = 0; j < landmark.items.length; j++) {
-			v += getItemLocationDescription(landmark.items[j]) + "<lb></lb>";
-		}
+		v += getLocationItemDisplay(landmark);
 		v += "</details>";
 	}
 	v += '<br style="clear:both;"/></div>';

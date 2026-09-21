@@ -171,10 +171,14 @@ function fullCapitalize(s) {
 	s = s.toLowerCase();
 	if (nameFormatting.has(s)) {
 		return nameFormatting.get(s);
-	} else if (s.startsWith("tm-")) {
-		return s.replace("tm-", "TM");
-	} else if (s.startsWith("hm-")) {
-		return s.replace("hm-", "HM");
+	} else if (s.startsWith("tm-") || s.startsWith("hm-")) {
+		var name = s.replace("tm-", "TM").replace("hm-", "HM");
+		var move = getMachineMove(s);
+		if (move?.name) {
+			return `${name}<span class="meek"> ${fullCapitalize(move.name)}</span>`;
+		} else {
+			return name;
+		}
 	}
 	return s.replace(/[-_]/g, " ").replace(/\w\S*/g, (word) => (word.replace(/^\w/, (c) => c.toUpperCase())));
 }
@@ -485,6 +489,60 @@ function modifyHints(key, down) {
 		}
 		updateCalc();
 	}
+}
+
+function compareBy(comparisons) {
+	if (!Array.isArray(comparisons)) {
+		comparisons = [comparisons];
+	}
+	return (a, b) => {
+		for (const comparison of comparisons) {
+			var am = comparison(a);
+			var bm = comparison(b);
+			if (am != bm) {
+				return am - bm;
+			}
+		}
+		return 0;
+	}
+}
+
+// Turns an array of arrays into a table
+// Like HTML, outer array is rows, inner is columns
+// Settings
+//  * `join` - Whether to merge identical adjacent vertical cells, boolean or (r, c) predicate
+//  * `header` - Header row text
+//  * `tableClass` - Table class
+function tablify(matrix, settings = {}) {
+	const SKIP = "~skip~";
+	var v = `<table>`;
+	if (settings.tableClass) {
+		v = `<table class="${settings.tableClass}">`;
+	}
+	if (settings.header) {
+		v += settings.header;
+	}
+	for (var r = 0; r < matrix.length; r++) {
+		v += `<tr>`;
+		for (var c = 0; c < matrix[r].length; c++) {
+			if (matrix[r][c] === SKIP) {
+				continue;
+			}
+			var height = 1;
+			if (settings.join == true || (settings.join != undefined && settings.join(r, c))) {
+				for (er = r + 1; er < matrix.length; er++) {
+					if (matrix[er][c] == matrix[r][c]) {
+						height++;
+						matrix[er][c] = SKIP;
+					}
+				}
+			}
+			v += `<td${height > 1 ? ` rowspan=${height}` : ""}>${matrix[r][c]}</td>`;
+		}
+		v += `</tr>`;
+	}
+	v += `</table>`;
+	return v;
 }
 
 document.addEventListener("keydown", (event) => {

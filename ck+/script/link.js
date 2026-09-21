@@ -186,6 +186,14 @@ function itemLink(item) {
 		return "<div>-</div>";
 	}
 	item = item.replace(" ", "-");
+	if (item.startsWith("tm-") || item.startsWith("hm-")) {
+		var parts = item.split("-");
+		var num = parseInt(parts[1]);
+		var move = movesByMachine[parts[0]]?.get(num);
+		if (move) {
+			return createLink(`#/move/${move}/`, prettyItem(item));
+		}
+	}
 	return createLink(`#/item/${item}/`, prettyItem(item));
 }
 
@@ -206,7 +214,12 @@ function itemImage(item) {
 	}
 	item = item.replace(" ", "-");
 	if (item.startsWith("tm-") || item.startsWith("hm-")) {
-		item = "tm_hm"
+		var move = getMachineMove(item);
+		if (move?.type) {
+			item = `tm-${move.type}`;
+		} else {
+			item = "tm_hm";
+		}
 	}
 	if (game.name == "pk" || game.name == "ek") {
 		if (item == "berserk-gene") {
