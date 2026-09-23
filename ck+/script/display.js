@@ -188,7 +188,7 @@ function rangeDisplay(result, hp, crit, tooltip, power) {
 	}
 
 	return `
-	<td class="calc-range ${crit ? "crit" : ""}">
+	<td class="calc-range tooltip-container ${crit ? "crit" : ""}">
 		<div class="calc-range-percent">${percent(result.min, hp)}% - ${percent(result.max, hp)}%</div>
 		${createRangeIndicator(result, hp)}
 		<div class="calc-range-absolute">${result.min} - ${result.max}</div>
@@ -230,40 +230,55 @@ function prettyRolls(rolls, myHp, myCurrentHp, killHp, result) {
 	if (rolls.length == 0) {
 		return "";
 	}
-	var v = '<div class="rolls">';
-	v += "<center><h1>Rolls:</h1>";
-	v += `<table><tr>`;
+
 	var kills = 0;
+	var rollText = "<table><tr>";
 	for (var i = 0; i < rolls.length; i++) {
 		if (rolls[i] >= killHp) {
 			kills++;
-			v += `<td class="crit">${rolls[i]}</td>`;
+			rollText += `<td class="crit">${rolls[i]}</td>`;
 		} else {
-			v += `<td>${rolls[i]}</td>`;
+			rollText += `<td>${rolls[i]}</td>`;
 		}
 		if ((i + 1) % 8 == 0 && i + 1 < rolls.length) {
-			v += `</tr><tr>`;
+			rollText += `</tr><tr>`;
 		}
 	}
-	v += `</tr></table>`;
-	kills = Math.round(1000 * kills / rolls.length) / 10;
-	v += `${kills}% chance to OHKO`;
+	rollText += `</tr></table>`;
+
+	var extras = "";
 	if (result) {
 		if (result.recoil > 0) {
 			var min = parseInt(Math.min(killHp, rolls[0]) * result.recoil);
 			var max = parseInt(Math.min(killHp, rolls[rolls.length - 1]) * result.recoil);
-			v += "<h1>Recoil:</h1>";
-			v += `<table><tr>${rangeDisplay(CalcResult.of([min, max]), myCurrentHp, false, "", -1)}</tr></table>`;
+			extras += `<br>
+			<div>
+				<div>Recoil</div>
+				<table>${rangeDisplay(CalcResult.of([min, max]), myHp, false, "", -1)}</table>
+			</div>`;
 		}
 		if (result.drain > 0) {
 			var min = parseInt(Math.min(killHp, rolls[0]) * result.drain);
 			var max = parseInt(Math.min(killHp, rolls[rolls.length - 1]) * result.drain);
-			v += "<h1>Heal:</h1>";
-			v += `<table><tr>${rangeDisplay(CalcResult.of([min, max]), myCurrentHp, false, "", -1)}</tr></table>`;
+			extras += `<br>
+			<div>
+				<div>Drain</div>
+				<table>${rangeDisplay(CalcResult.of([min, max]), myHp, false, "", -1)}</table>
+			</div>`;
 		}
 	}
-	v += "</center></div>";
-	return v;
+
+	return `
+	<div class="tooltip">
+		<center>
+			<div>Rolls</div>
+			<div class="rolls-list">
+				${rollText}
+			</div>
+			<div class="meek">${Math.round(1000 * kills / rolls.length) / 10}% chance to OHKO</div>
+			${extras}
+		</center>
+	</div>`;
 }
 
 function displayResiduals(root, left, right) {

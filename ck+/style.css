@@ -2,7 +2,7 @@
 	--background: #222222;
 	--grouping-background: #111111;
 	--box-background: #333333;
-	--tooltip-backgroudn: #191919;
+	--tooltip-background: #191919;
 	--text: #eeeeee;
 	--dim-text: #AAAAAA;
 	--crit-text: #e59393;
@@ -1049,12 +1049,14 @@ input:checked + .fake-checkbox {
 }
 
 .calc-range-percent {
+	text-align: center;
 	font-size: 20px;
 	overflow: hidden;
 	white-space: nowrap;
 }
 
 .calc-range-absolute {
+	text-align: center;
 	font-size: 16px;
 	overflow: hidden;
 	white-space: nowrap;
@@ -1122,6 +1124,12 @@ input:checked + .fake-checkbox {
 .rolls td {
 	padding: 0px 6px;
 	font-size: 16px;
+}
+
+.rolls-list td {
+	font-size: 16px;
+	min-width: 20px;
+	text-align: center;
 }
 
 .rolls .move-calc {
@@ -1808,7 +1816,8 @@ rt {
 	right: -100vw;
 	margin: auto;
 	padding: 6px;
-	background-color: var(--tooltip-backgroudn);
+	background-color: var(--tooltip-background);
+	pointer-events: none;
 }
 
 .tooltip-container:hover > .tooltip {
