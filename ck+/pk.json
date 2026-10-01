@@ -29293,9 +29293,6 @@
                     "condition": {
                         "attacker": {
                             "name": "pikachu"
-                        },
-                        "move": {
-                            "category": "special"
                         }
                     },
                     "modifiers": {
